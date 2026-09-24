@@ -1,0 +1,162 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "B09",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T22:24:49.408Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "68cb72ed8ead2c540903519c393822a3d85df16fa0d497214fb6b8282b722df0",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2007,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2007,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 280,
+        "output_tokens_details": {
+          "thinking_tokens": 32
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0080275,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP3mVpXHHzB2TJY4myLL",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsICCpABCBIYAipAl9VpS+PZWpfjTWcmD9DQPtnoosjAKpSlWIaoinlvv03DvbauNSeADYwv9QBHMTNTP02a1eawfkuSbtNVm7dgWTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAa/G1tUGEgw4ZaWYslu5xo1KStoaDCKh3Fpm4acL1uv+4yIwuL6QHDzGJLrCJ49NKwbMLiQyqD3BH1DAi/AMSpsB3XzOLI/zkcXu3Y5mASdmod/FKl+gXW17osYjA85MmHc2M9pynXkgpVbVG1gOQZaM7Rqtj/18iXARhya+q1EpgdUdbfzk56+Wp2y36rr+kD0E5klPwCJb+7jeRZQMy4UKLr+badM3ITXe51eMhx41zJhZxhgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01K58r3W9BFQTkX9ajgBT2La",
+            "name": "exa_search",
+            "input": {
+              "query": "AI patient intake form generates clinical note for physicians"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013r8SYFYEqQZkKDHvx3rWGn",
+            "name": "exa_search",
+            "input": {
+              "query": "AI medical history intake software private practice HIPAA"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_019hPfa43koFAmciiSPrM62W",
+            "name": "brave_search",
+            "input": {
+              "query": "AI patient intake form clinical note generator private practice"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BXx7wbxMUzqURQnThtDWKd",
+            "name": "brave_search",
+            "input": {
+              "query": "AI intake software HIPAA compliant physicians pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2007,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2007,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 280,
+          "output_tokens_details": {
+            "thinking_tokens": 32
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "66d574e047b5bfae30964daff7473f8dfd65675e1d6b2827b0cc666bd87d2c69",
+      "usage": {
+        "input_tokens": 8405,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2007,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2196,
+        "output_tokens_details": {
+          "thinking_tokens": 307
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0391714,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP3mvnCZu2FTERmqeuzZ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eu0ICpABCBIYAipALJg7uYWpeA7b+ymfVtF66bTSjCpIfpHYO8iNfwM+Yf6PIW8oxdWb8BxWxThZ0JUWy5kWlQe9N/4De04J+89gpTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAbnG1tUGEgwT7FwhZIc7SyZyYioaDAxRv2932KjD+Vc++iIwF2xEDyTQ4mESYRCK2m06lBgb5N22Ifjcp3fGP5XMqsSZNnk/T9yeKljqJn5GHfnDKokH3aaUdRv8fQesTicXOEsyCiSRrBfccklv9jmRwNEUCbtcbi6naNWehfaRg+BTv4RYLRVvtK0Bq5G7nfUiLOAaSngCwqbQ3N986/phiw4TkcesWZqZHzY0JXkgFGczucUsibKpJR+VV/zm0RFohQGpb8m45zDyMlmQ+yKz+pIcbFojE6pBEgtKzpqVphJ/wtQDl/Fy/q1es5BF2ALQ9jEnLZr3dqXOpNPMj9GztEkZ5Ir+1cTeJtItQj6BNOcsc9Gmv95Qag+8I7h2ee51TOpxT0O0ILZJTHD1CGRsrB76bKemy9V3R9R3Ajd9rFAHK6+4mrYoweniYDfD+RRGtghxeI6vPPtbJRaOYE3Ynhlrf0Z9eDxETEnLX69hmLazmy67zfTRW1od676fbUN4v/b89SyF1WLEYmEQ5DaP4CXKcvznaF1uS3Csf+ZEWLoZNIod4iopEEz3Rxah/VjeY+tSMGvm+uvF8F0OltyYzx/iMMjejQWd2AYEbqbE6XAMKiyJ5yOj8XEUUPYxi8XkIZon6Z26OJY/uxasqLMtclu717EYESjIGDXjfciiP3+Of4KA/tbixCi5V61GYfxpb/gPLCXaAV7qDGClLkJsGvWFPbBneGH25mntAoA9yq9AZ5buA4u3KeloBRp7H3I3BvIxJy4Tx2rnIgZTctiSKiga3ubVZ3YHZxFO79UT8AXpyKjpFIVsnPKLyBQR+mku8WOiG4uY8dokmMpyKnN40GjjkkODv+Tber+fhbZ+GFuoF+Ox3A/lm6acJH/jdfjw67J+OK6EyePaaxzy2SuCxNcc4MOAAaCnEP1Gd4XzHGFH09Ew4NbjgKTb1Fg237Nxbqe3+h0z5qLrw8BKNI0pMVx1dF0b9rdqhYp+8UCaezO9Et5/nXx/nT/a6i6oTXAvCxGnA409GzdWKuWNa9EE6Ew2EisOSt8SoG4TEeel/CmUCNDybi/pLy70kECUjEtu08vdCfwdcgS4G94cfqzX6fbZv1wZ/nw1NLlgx5w239GXd8u9sh5ldON2A94A5dNKVlJGUD4FwKAAjznyqbZ7PtWEdsOlEdPnse+Vpcp7ucwZdeiyeNgliZP813tSCYKWUJgJnpOq2nzW1bsV+l20I33BU8CrV3jF7QavT1tWrbBQtxz2jL/hldecpB/RUE+xR+yvVCNT0jFkQiWmW4EXHoJdNYzEi8+FIeaj/A0YAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"B09\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The physician remains the professional of record who reviews, edits, and signs the generated note (as seen in competitor positioning: 'You make every clinical decision and own the final note' - clairemed.ai). The tool drafts documentation but does not itself diagnose, prescribe, or bill as a licensed provider, and does not hold or move patient funds.\",\n      \"source_url\": \"https://clairemed.ai/\"\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"No single third-party platform dependency is described that could revoke access to a core function; the idea can be built on standard cloud/LLM infra with EHR integrations that are commonly offered via sanctioned APIs (e.g., FHIR-based EHR integrations used by competitors like IntakeAI, Bonami X AI).\",\n      \"source_url\": \"https://aipatientintake.com/\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Idea is pure software (forms, AI note generation); no physical inventory is required to operate.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No capital-intensive hardware, manufacturing, or facilities are required; comparable products (Claire, Sylvia, IntakeAI, SmartMedHx) are single-team SaaS offerings.\",\n      \"source_url\": \"https://smartmedhx.ai/product/\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T8\",\n      \"evidence\": \"Because the product collects and processes protected health information (PHI) for private practice physicians, it must meet HIPAA requirements: Business Associate Agreements, secure hosting, audit logging, and access controls, as seen across every competitor in this space (BastionGPT, Rooks, Hathr.ai, clairemed.ai all advertise HIPAA compliance/BAA as a precondition to launch).\",\n      \"obligations\": [\n        \"Execute Business Associate Agreements (BAAs) with the practice-customers and any subprocessors (cloud hosting, AI model providers) handling PHI\",\n        \"Implement HIPAA Security Rule safeguards: encryption at rest/in transit, access controls, audit logging, breach notification procedures\",\n        \"Draft HIPAA-compliant privacy policy and patient consent/authorization language for the intake process\",\n        \"Establish data retention and minimum-necessary use policies for PHI collected via the intake form\",\n        \"If operating in Canada or other jurisdictions per competitor examples, address equivalent regimes (PHIPA, PIPEDA, Quebec Law 25)\"\n      ]\n    },\n    {\n      \"id\": \"T4\",\n      \"evidence\": \"Selling into private practice physicians typically requires demos and practice-by-practice sales relationships, as evidenced by multiple competitors offering 'Book a demo' / 'Book a Call' as the primary conversion path rather than self-serve signup.\",\n      \"obligations\": []\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"Claire (clairemed.ai)\",\n      \"url\": \"https://clairemed.ai/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"AI clinical partner that guides intake, structures history, and prepares a physician-owned draft note; HIPAA/PHIPA/PIPEDA compliant.\"\n    },\n    {\n      \"name\": \"Sylvia (allosylvia.ai)\",\n      \"url\": \"https://allosylvia.ai/en/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Pre-visit form and history collection generating a clinical pre-note automatically in the EMR, built by a physician.\"\n    },\n    {\n      \"name\": \"IntakeAI (aipatientintake.com)\",\n      \"url\": \"https://aipatientintake.com/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"AI agent captures structured clinical data via intake conversation and delivers a diagnosis draft before the provider visit; HIPAA compliant, SOC 2 Type II.\"\n    },\n    {\n      \"name\": \"SmartMedHx\",\n      \"url\": \"https://smartmedhx.ai/product/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"AI-guided structured interviews for pre-visit documentation, built for solo practitioners and clinics.\"\n    },\n    {\n      \"name\": \"MayaMD\",\n      \"url\": \"https://mayamd.ai/clinical-ai-agent\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Clinical AI agent automates patient intake notes, generates structured consult note in EMR before appointment.\"\n    },\n    {\n      \"name\": \"Rooks\",\n      \"url\": \"https://rooks.ai/\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": null,\n      \"evidence\": \"HIPAA-compliant intake form builder with BAA included, converts PDF intake packets into live forms.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"AI patient intake form generates clinical note for physicians\",\n      \"AI medical history intake software private practice HIPAA\"\n    ],\n    \"brave\": [\n      \"AI patient intake form clinical note generator private practice\",\n      \"AI intake software HIPAA compliant physicians pricing\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8405,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2007,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2196,
+          "output_tokens_details": {
+            "thinking_tokens": 307
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

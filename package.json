@@ -13,7 +13,9 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "record:fixtures": "tsx scripts/record_fixtures.ts",
-    "report:planted": "tsx scripts/report_planted.ts"
+    "report:planted": "tsx scripts/report_planted.ts",
+    "variant:promote": "tsx scripts/variant_promote.ts",
+    "estimate": "tsx scripts/estimate_run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

@@ -149,6 +149,21 @@ export class Db {
     return rows.map(agentSafeIdea);
   }
 
+  /** Ids of ideas with status active. Live runs select these only. */
+  activeIdeaIds(): string[] {
+    return (this.raw.prepare("SELECT id FROM ideas WHERE status = 'active' ORDER BY id").all() as { id: string }[]).map((r) => r.id);
+  }
+
+  getIdeaStatus(id: string): string | null {
+    return (this.raw.prepare("SELECT status FROM ideas WHERE id = ?").get(id) as { status: string } | undefined)?.status ?? null;
+  }
+
+  /** Paul only (npm run variant:promote). Moves a proposed or archived variant to active. */
+  setIdeaStatus(id: string, status: "active" | "proposed_variant" | "archived"): void {
+    const r = this.raw.prepare("UPDATE ideas SET status = ? WHERE id = ?").run(status, id);
+    if (r.changes !== 1) throw new StoreError(`idea ${id} not found`);
+  }
+
   /** Latest verdict per stage for every idea: { ideaId: { kill_gate: 'pass', ... } }. */
   latestVerdicts(): Record<string, Partial<Record<Stage, string>>> {
     const rows = this.raw
@@ -187,8 +202,8 @@ export class Db {
       }
       const id = input.id ?? this.nextIdeaId();
       this.raw
-        .prepare("INSERT INTO ideas (id, parent_id, idea, customer, source_url, verbatim_quote, seed_source) VALUES (?, ?, ?, ?, ?, ?, ?)")
-        .run(id, input.parent_id ?? null, input.idea, input.customer ?? null, input.source_url ?? null, input.verbatim_quote ?? null, input.parent_id ? "agent_variant" : null);
+        .prepare("INSERT INTO ideas (id, parent_id, idea, customer, source_url, verbatim_quote, seed_source, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
+        .run(id, input.parent_id ?? null, input.idea, input.customer ?? null, input.source_url ?? null, input.verbatim_quote ?? null, input.parent_id ? "agent_variant" : null, input.parent_id ? "proposed_variant" : "active");
       return id;
     });
     const id = tx.immediate();
@@ -382,7 +397,7 @@ export class Db {
 }
 
 /** Schema version a fresh store is at after schema.sql. Bump when adding migrations/NNN_*.sql. */
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 4;
 
 /** Migrations for stores created by an earlier schema. 002 is in code; 003+ are SQL files in migrations/. */
 function migrate(raw: Database.Database): void {

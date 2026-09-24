@@ -20,7 +20,7 @@ export interface CreateRunOptions {
 
 export function createRun(db: Db, opts: CreateRunOptions): RunRow {
   const prompts = opts.prompts ?? loadPrompts();
-  const ideaIds = opts.ideaIds ?? db.listAgentSafeIdeas().map((i) => i.id);
+  const ideaIds = opts.ideaIds ?? db.activeIdeaIds();
   const run = db.createRun({
     id: opts.id,
     stages: opts.stages,

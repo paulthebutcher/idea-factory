@@ -17,6 +17,7 @@ CREATE TABLE ideas (
   set_name       TEXT,                        -- discovery | backtest
   test_role      TEXT,
   notes          TEXT,
+  status         TEXT NOT NULL DEFAULT 'active', -- active | proposed_variant | archived (migration 004)
   created_at     TEXT NOT NULL DEFAULT (datetime('now'))
 );
 CREATE TRIGGER ideas_immutable BEFORE UPDATE OF idea ON ideas
@@ -51,7 +52,7 @@ CREATE TABLE decisions (
 );
 
 -- Kill rules and operability tests. Agents may propose; only Paul activates (npm run rule:activate).
--- test_case_ids: {"must_trigger":[], "must_not_trigger":[], "observe":[]}. observe rows are reported, never asserted.
+-- test_case_ids: {"must_trigger":[], "must_not_trigger":[], "observe":[], "reasons":{id: why}}. observe rows are reported, never asserted.
 -- Rule text history: R001 and T2 were rewritten and T8 added by migrations/003 (Checkpoint 1, D006).
 CREATE TABLE rules (
   id              TEXT PRIMARY KEY,           -- R001, T2, T3...
@@ -128,6 +129,7 @@ CREATE TABLE comparisons (
   result       TEXT NOT NULL,                 -- A | B | tie (tie when the two orders disagree)
   rationale_json TEXT NOT NULL,
   model        TEXT NOT NULL,
+  stage_result_id TEXT REFERENCES stage_results(id), -- trace events for this comparison (migration 004)
   created_at   TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -153,10 +155,12 @@ INSERT INTO decisions (id, text, rationale) VALUES
 
 INSERT INTO rules (id, kind, text, test_case_ids, status, proposed_by, activated_at) VALUES
  ('R001','kill_rule','The business cannot operate without an ongoing regulatory obligation that needs standing legal or compliance capacity: a license or registration with ongoing regulator supervision or exams (money transmission, investment adviser, broker-dealer, insurance producer, licensed professional practice); acting as the professional of record who bears liability for each output (signing tax returns, giving legal, medical, or investment advice); or holding or moving customer funds. Setup work that a one-time legal consult can resolve does not trigger this rule; it triggers T8.','{"must_trigger":["H01"],"must_not_trigger":["A02","O03","B09","H02"],"observe":["A07"]}','active','paul',datetime('now')),
- ('T2','hard_test','A core function depends on one third party that can revoke access, and the use is not permitted by a sanctioned API or the platform''s terms. Violating the terms is sufficient; enforcement history and competitors operating the same way are irrelevant.','{"must_trigger":["A09","P06","H03"],"must_not_trigger":["A01","H04"],"observe":["B08"]}','active','paul',datetime('now')),
- ('T3','hard_test','The operator must buy, store, or ship physical inventory, with no fully outsourced fulfillment path.','{"must_trigger":[],"must_not_trigger":["A11"]}','active','paul',datetime('now')),
+ ('T2','hard_test','A core function depends on one third party that can revoke access, and the use is not permitted by a sanctioned API or the platform''s terms. Violating the terms is sufficient; enforcement history and competitors operating the same way are irrelevant.','{"must_trigger":["P06","H03"],"must_not_trigger":["A01","H04"],"observe":["A09","B08"],"reasons":{"A09":"T2 requires a revocable dependency plus use not permitted by terms. A DOM filter on the user''s own page may meet neither. The original concern was interface fragility, which T2 does not test.","B08":"Samples split 1 of 3. Substack has no content API, but public RSS feeds are a sanctioned syndication path; whether a cross-publication digest and search exceeds permitted use is unresolved. Observe until the terms question is settled."}}','active','paul',datetime('now')),
+ ('T3','hard_test','The operator must buy, store, or ship physical inventory, with no fully outsourced fulfillment path.','{"must_trigger":[],"must_not_trigger":["A11"],"reasons":{"A11":"T3 exempts ideas with a fully outsourced fulfillment path. Swag fulfillment APIs (SwagUp, Swag.com) provide one, so A11 does not meet T3 as written; the planted expectation was wrong, not the model."}}','active','paul',datetime('now')),
  ('T4','soft_test','Closing the first customer requires field sales, enterprise procurement, or a sales team.','{}','active','paul',datetime('now')),
  ('T5','soft_test','Each customer transaction needs human service or support that cannot be automated at scale.','{}','active','paul',datetime('now')),
  ('T6','soft_test','No plausible path to a paying customer within 90 days of launch.','{}','active','paul',datetime('now')),
  ('T7','hard_test','Obvious capital or physical infrastructure requirement beyond one person (hardware manufacturing, defense procurement, fleets, facilities).','{"must_trigger":["P07","P08"],"must_not_trigger":[]}','active','paul',datetime('now')),
  ('T8','soft_test','Launch requires regulatory setup that a one-time legal consult can resolve (BAA templates, HIPAA security program, privacy terms, COPPA consent, state registrations, e-file provider applications). Record what the consult would need to cover.','{"must_trigger":["B09","H02"],"must_not_trigger":[]}','active','paul',datetime('now'));
+INSERT INTO rules (id, kind, text, test_case_ids, status, proposed_by) VALUES
+ ('T9','soft_test','A core function depends on an undocumented interface (page markup, private endpoints) that can change without notice.','{"must_trigger":["A09"],"must_not_trigger":["A01"]}','proposed','paul');

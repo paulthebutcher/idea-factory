@@ -129,6 +129,11 @@ const INJECTION_PATTERNS: RegExp[] = [
 
 export const MIN_QUERIES_PER_ENGINE = 2;
 
+// Baseline items every software business needs. Never a T8 obligation.
+export const T8_BASELINE = /\b(privacy (policy|notice|terms)|terms of (service|use)|\btos\b|gdpr|ccpa|cpra|cookie (consent|banner|policy)|data processing (agreement|addendum|terms)|\bdpa\b)\b/i;
+// Ongoing obligations. When R001 fired they belong there and are not repeated under T8.
+export const T8_ONGOING = /\b(ongoing|annual|periodic|renewal|exams?|examinations?|money transmit|msb registration|bsa|aml program|surety bond|licens(e|ing|ure) (with|and|from|under|requirements?)|state licens|investment adviser|broker.dealer|insurance producer)\b/i;
+
 function formatRules(rules: AgentSafeRule[]): string {
   if (rules.length === 0) return "(none)";
   return rules.map((r) => `- ${r.id} (${r.kind.replace("_", " ")}): ${r.text}`).join("\n");
@@ -304,14 +309,28 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
     trace.add("runner_override", { kind: "pass_to_kill", from: "pass", to: "kill", reason: "a kill rule or hard test failed with cited evidence", rules_fired: rulesFired });
   }
 
-  // T8 flags must name the specific obligations (Checkpoint 1 decision 2).
-  for (const f of parsed.flags.filter((f) => f.id === "T8")) {
+  // T8 flags must name specific one-time obligations beyond the baseline every software business
+  // needs, and must not repeat ongoing obligations that belong to R001. Baseline items are dropped,
+  // ongoing items are dropped when R001 fired, and a T8 flag with nothing left is removed.
+  const flags = parsed.flags.flatMap((f) => {
+    if (f.id !== "T8") return [f];
     const named = f.obligations.map((o) => o.trim()).filter(Boolean);
-    if (named.length === 0) {
-      runner.notes.push("T8 flag names no obligations");
-      trace.add("runner_note", { note: "t8_flag_without_obligations", evidence: f.evidence });
+    const baseline = named.filter((o) => T8_BASELINE.test(o));
+    const ongoing = rulesFired.includes("R001") ? named.filter((o) => !T8_BASELINE.test(o) && T8_ONGOING.test(o)) : [];
+    const kept = named.filter((o) => !baseline.includes(o) && !ongoing.includes(o));
+    if (baseline.length || ongoing.length || named.length === 0) {
+      trace.add("runner_note", { note: "t8_obligations_filtered", named, dropped_baseline: baseline, dropped_ongoing_r001: ongoing, kept });
+      if (named.length === 0) runner.notes.push("T8 flag named no obligations");
+      if (baseline.length) runner.notes.push(`T8: dropped ${baseline.length} baseline item(s)`);
+      if (ongoing.length) runner.notes.push(`T8: dropped ${ongoing.length} ongoing item(s) already covered by R001`);
     }
-  }
+    if (kept.length === 0) {
+      runner.notes.push("T8 flag removed: no one-time obligation beyond the baseline");
+      trace.add("runner_override", { kind: "t8_flag_removed", reason: named.length ? "only baseline or R001-covered items" : "no obligations named", evidence: f.evidence });
+      return [];
+    }
+    return [{ ...f, obligations: kept }];
+  });
 
   // Injection scan over everything the tools returned.
   const injectionSeen = [...parsed.injection_seen];
@@ -335,7 +354,7 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   runner.self_found = selfFound;
   if (selfFound) trace.add("runner_note", { note: "self_found", detail: "a competitor matches the business this backtest row describes" });
 
-  const payload: KillGatePayload = { ...parsed, verdict, injection_seen: injectionSeen, runner };
+  const payload: KillGatePayload = { ...parsed, flags, verdict, injection_seen: injectionSeen, runner };
   return record(verdict, payload, rulesFired, selfFound, variantId);
 }
 
