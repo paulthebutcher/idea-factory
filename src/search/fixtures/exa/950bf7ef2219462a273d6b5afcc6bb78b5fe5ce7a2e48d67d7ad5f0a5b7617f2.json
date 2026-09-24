@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "tool tracks API deprecations and auto-generates code migration PRs",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T22:31:25.218Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "tool tracks API deprecations and auto-generates code migration PRs",
+    "results": [
+      {
+        "title": "API drift watch — get migration PRs before vendor APIs break your code",
+        "url": "https://apidrift.co/",
+        "snippet": "API drift watch — get migration PRs before vendor APIs break your code\n\nNow watching Stripe, OpenAI, Twilio · more vendors weekly\n\n# Get migration PRs before vendor APIs break your code.\n\nWe watch your dependencies' changelogs, find the lines in your repo that use deprecated calls, and open a pull request with the suggested fix — every PR includes a diff, the reasoning, and a link to the canonical doc.\n\nStart 14-day free trial → Install the GitHub App\n\nCard on file, $29/mo on day 15 unless you cancel. Unlimited repos and vendors per installation.\n\nReal PRs we've shipped\n\nStripePR →charges.create is legacy — migrate to paymentIntents.create OpenAIPR →createChatCompletion is gone — use openai.chat.completions.create\n\n## How it works\n\n01\n\n### Install the GitHub App\n\nGrant read access to repos that use the dependencies you care about. We only ever open pull requests — never push to your default branch.\n\n02\n\n### We watch upstream changes\n\nWhen a vendor publishes a deprecation, breaking change, or new API version, we ingest it within hours and identify the exact lines in your code that are affected.\n\n03\n\n### Review a PR, merge or close\n\nA pull request lands in your repo with the proposed diff, the LLM's reasoning, and a link to the canonical changelog entry. You stay in control of every merge.\n\n## Why us\n\n### Built by a team that lives inside the changelog firehose.\n\nWe use AST analysis (not regex) to find affected code, so we catch aliased imports, destructured calls, and wrapper ",
+        "published": null
+      },
+      {
+        "title": "mendapi/mendapi",
+        "url": "https://github.com/mendapi/mendapi",
+        "snippet": "# mendapi/mendapi\n\nDependabot for APIs — detect upstream API breaking changes, scan your codebase for impact, generate the fix PR. Code never leaves your machine.\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 0\n- License: GNU Affero General Public License v3.0\n- Homepage: https://mendapi.com\n- Default branch: main\n- Created: 2026-07-28T16:00:46Z\n\n## Languages\n\n- Go\n- JavaScript\n- PHP\n- Python\n- Ruby\n- TypeScript\n\n## Topics\n\n- ai-agents\n- api\n- breaking-changes\n- claude\n- cli\n- codemod\n- cursor\n- dependabot\n- developer-tools\n- mcp\n- mcp-server\n- openapi\n\n---\n\n## README\n\n# mendapi\n\n> **Dependabot, but for every API you depend on.**\n> We watch your upstream API providers for breaking changes, scan your codebase for impact, and open the fix PR before your integration breaks.\n\n## 30 seconds to your first result\n\n```bash\n# In any repo — zero config, zero npm dependencies\nnpx mendapi sync                          # one network call: fetch the change feed\nnpx mendapi scan --out impact.json        # local only, from here on\nnpx mendapi fix --from-report impact.json\n```\n\n`sync` pulls the upstream API change feed into a local SQLite database. It is the only command that touches the network, and you run it once (then whenever you want fresher data).\n\n`scan` reports every upstream breaking change that actually hits your code — file, line, and symbol — scored for confidence. `fix` drafts the migration as a reviewable diff, without touching a single file until you pass `--apply`. Neit",
+        "published": null
+      },
+      {
+        "title": "GitHub - rtsdque/sentinel: Watches Stripe's changelog, interprets breaking changes with an LLM, scans your codebase for affected usages, and opens a fix PR before the sunset date. · GitHub",
+        "url": "https://github.laiyagushi.com/rtsdque/sentinel",
+        "snippet": "GitHub - rtsdque/sentinel: Watches Stripe's changelog, interprets breaking changes with an LLM, scans your codebase for affected usages, and opens a fix PR before the sunset date. · GitHub\n\n## Folders and files\n\n| Name | Name | Last commit message | Last commit date |\n| --- | --- | --- | --- |\n| Latest commit History 9 Commits 9 Commits | | | |\n| .github | .github | | |\n| data/ stripe | data/ stripe | | |\n| drizzle | drizzle | | |\n| src | src | | |\n| test | test | | |\n| .env.example | .env.example | | |\n| .gitignore | .gitignore | | |\n| CONTRIBUTING.md | CONTRIBUTING.md | | |\n| LICENSE | LICENSE | | |\n| README.md | README.md | | |\n| docker-compose.yml | docker-compose.yml | | |\n| drizzle.config.ts | drizzle.config.ts | | |\n| package-lock.json | package-lock.json | | |\n| package.json | package.json | | |\n| tsconfig.json | tsconfig.json | | |\n| View all files | | | |\n\n# Sentinel\n\nWatches vendor API changelogs, detects breaking changes before they hit customer codebases, scans a customer repo for affected usages, generates reviewable fix diffs, and opens a PR — before the sunset date, not after something breaks in production.\n\n## Quickstart (zero setup, 60 seconds)\n\nSee it detect a real breaking change with no account, API key, or database — just Node:\n\n```\ngit clone https://github.laiyagushi.com/rtsdque/sentinel.git\ncd sentinel\nnpm install\nnpx tsx src/cli.ts stripe --track acacia\n```\n\nThat's it — this scrapes Stripe's real changelog and prints a fully structured breaking-change",
+        "published": "2026-07-28T00:00:00.000Z"
+      },
+      {
+        "title": "TurboRx/APIShift-Bot",
+        "url": "https://github.com/TurboRx/APIShift-Bot",
+        "snippet": "# TurboRx/APIShift-Bot\n\nEnterprise API Auto-Migration Engine & GitHub Bot (Deterministic AST Engine with Hybrid AI Fallback)\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 2\n- License: Other\n- Homepage: https://apishift-bot.pages.dev/\n- Default branch: main\n- Created: 2026-08-10T11:00:17Z\n\n## Languages\n\n- HTML\n- JavaScript\n- TypeScript\n\n## Topics\n\n- api-migration\n- ast\n- babel\n- cloudflare-workers\n- developer-tools\n- github-bot\n- hono\n- openapi\n- typescript\n\n## Top Contributors\n\n- TurboRx (49 contributions)\n- dependabot[bot] (2 contributions)\n\n---\n\n## README\n\n# APIShift Bot 🚀\n\n> **Self-Maintaining APIs for Engineering Teams — Autonomous API Migration Engine.**\n> Automatically detect breaking API changes, diff OpenAPI/Swagger specifications, and open automated code refactoring Pull Requests with $0.00 AI token cost deterministic AST transformations and Hybrid AI fallback.\n\n---\n\n## 🌟 The Vision: Self-Maintaining APIs\n\n> _\"API providers shouldn't just announce breaking changes; they should apply them. Updating dependency versions in package files doesn't fix broken code usage when APIs evolve.\"_\n\nAPIShift fills the missing application layer connecting API vendors (Stripe, Twilio, OpenAI, Resend, Supabase) directly to customer codebases:\n\n1. **Zero-AI-Token Cost Core**: 100% type-safe, deterministic Babel AST rewriter (`< 15ms` execution latency, $0 token cost).\n2. **Hybrid AI Fallback**: LLM provider integrations (OpenAI, Anthropic, Gemini) for non-standard refactorings.\n",
+        "published": null
+      },
+      {
+        "title": "apipatch v0.8.2",
+        "url": "https://pypi.org/project/apipatch/0.8.2/",
+        "snippet": "# apipatch v0.8.2\n\nAutonomous AI Agent that detects and fixes deprecated API calls in Python, JS, TS via LLM-powered Pull Requests\n\n- Author email: Morad Moqbel <moradyunes2@gmail.com>\n- License: MIT\n- Python: >=3.9\n- Package URL: https://pypi.org/project/apipatch/\n\n## Project URLs\n\n- Bug-Tracker: https://github.com/MoradMoqbel/apipatch/issues\n- Homepage: https://github.com/MoradMoqbel/apipatch\n- Repository: https://github.com/MoradMoqbel/apipatch\n\n## Keywords\n\napi, deprecation, breaking-changes, refactoring, ai-agent, codemod, github, autonomous, llm, openai, pydantic, migration, typescript, javascript, dependabot\n\n## Optional Dependencies\n\n| Package | Constraint | Extra |\n| --- | --- | --- |\n| openai | >=1.0.0 | ai |\n| anthropic | >=0.18.0 | ai |\n| google-genai | >=0.1.0 | ai |\n| boto3 | >=1.28.0 | ai |\n| pytest | >=7.0.0 | dev |\n\n---\n\n## Description\n\n# ⚡ ApiPatch \n> **Autonomous AI Agent for API Breaking Changes & Self-Maintaining Codebases** \n \nLicense: MIT \nPython 3.9+ \nPyPI version \nOpen Source \nTests: Passing \n \n--- \n \n## 🛑 The Problem \n \nOver **30% of cloud outages and broken builds** are caused by silent, third-party API breaking changes. When vendors release major SDK updates (OpenAI v1.0+, Pydantic v2, Stripe SCA/PaymentIntents, LangChain LCEL, React hooks, Next.js App Router…), engineering teams spend days hunting broken calls and rewriting legacy code. \n \nTools like **Dependabot** and **Renovate** only bump version numbers in `requirements.txt` or `package.json`",
+        "published": null
+      }
+    ]
+  }
+}

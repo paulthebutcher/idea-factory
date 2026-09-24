@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "automatically detect third-party API breaking changes and auto-generate code fixes",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T22:30:19.457Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "automatically detect third-party API breaking changes and auto-generate code fixes",
+    "results": [
+      {
+        "title": "mendapi/mendapi",
+        "url": "https://github.com/mendapi/mendapi",
+        "snippet": "# mendapi/mendapi\n\nDependabot for APIs — detect upstream API breaking changes, scan your codebase for impact, generate the fix PR. Code never leaves your machine.\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 0\n- License: GNU Affero General Public License v3.0\n- Homepage: https://mendapi.com\n- Default branch: main\n- Created: 2026-07-28T16:00:46Z\n\n## Languages\n\n- Go\n- JavaScript\n- PHP\n- Python\n- Ruby\n- TypeScript\n\n## Topics\n\n- ai-agents\n- api\n- breaking-changes\n- claude\n- cli\n- codemod\n- cursor\n- dependabot\n- developer-tools\n- mcp\n- mcp-server\n- openapi\n\n---\n\n## README\n\n# mendapi\n\n> **Dependabot, but for every API you depend on.**\n> We watch your upstream API providers for breaking changes, scan your codebase for impact, and open the fix PR before your integration breaks.\n\n## 30 seconds to your first result\n\n```bash\n# In any repo — zero config, zero npm dependencies\nnpx mendapi sync                          # one network call: fetch the change feed\nnpx mendapi scan --out impact.json        # local only, from here on\nnpx mendapi fix --from-report impact.json\n```\n\n`sync` pulls the upstream API change feed into a local SQLite database. It is the only command that touches the network, and you run it once (then whenever you want fresher data).\n\n`scan` reports every upstream breaking change that actually hits your code — file, line, and symbol — scored for confidence. `fix` drafts the migration as a reviewable diff, without touching a single file until you pass `--apply`. Neit",
+        "published": null
+      },
+      {
+        "title": "mendapi — Self-maintaining APIs. Your code never leaves your machine.",
+        "url": "https://mendapi.com/",
+        "snippet": "mendapi — Self-maintaining APIs. Your code never leaves your machine.\n\n# Your APIs break. mendapi heals them.\n\nUpstream APIs ship breaking changes without asking. mendapi tells you which ones hit your code — file and line, in under 30 seconds on a typical service repo — and drafts the fix as a reviewable diff. All of it on your machine: the scanner makes zero network calls, and the test suite proves it.\n\nDrag the particles · scroll to converge\n\nLocal-first\n\n### Scans run on your machine\n\nThe scanner executes locally or in your CI and makes zero network calls by default. Our test suite mechanically enforces that no networking primitive exists in the scan path.\n\n### Source code cannot be uploaded\n\nIf you opt in to hosted reporting, only a whitelisted payload leaves: file names, line numbers, symbols. Snippets and source are structurally impossible to upload. Secrets are redacted on every path.\n\n### Open source, self-hostable\n\nThe scanner is AGPL-licensed. Every claim above is a grep away. Enterprise runs fully self-hosted — your infrastructure, your rules.\n\n## Detect. Scan. Mend.\n\n### Watch upstream\n\nWe monitor 20+ providers — Stripe, OpenAI, AWS, Shopify, and more — across release feeds and changelogs, classifying every change: breaking, deprecation, additive.\n\n### Scan locally\n\nRun `npx mendapi sync` once to pull the change feed, then `npx mendapi scan`. In under 30 seconds for repos up to ~2,000 files you get file-and-line impact: which breaking changes actually hit your cod",
+        "published": null
+      },
+      {
+        "title": "stroland02/Sync",
+        "url": "https://github.com/stroland02/Sync",
+        "snippet": "# stroland02/Sync\n\nSelf-maintaining API integrations — watches the third-party APIs your code calls and opens CI-verified pull requests when one breaks, drifts, or wastes money.\n\n- Stars: 5\n- Forks: 0\n- Watchers: 5\n- Open issues: 0\n- License: Apache License 2.0\n- Default branch: main\n- Created: 2026-07-24T22:23:08Z\n\n## Languages\n\n- CSS\n- Dockerfile\n- HTML\n- JavaScript\n- Python\n- Shell\n- TypeScript\n\n## Topics\n\n- ai-agents\n- api-monitoring\n- breaking-changes\n- codemod\n- dependency-management\n- developer-tools\n- langgraph\n- openapi\n- python\n- tree-sitter\n\n## Top Contributors\n\n- stroland02 (2381 contributions)\n- sebastianroland-cell (19 contributions)\n\n---\n\n## README\n\n \n\n# Sync\n\n### Self-maintaining API integrations\n\n**Sync watches the third-party APIs your code calls. When one breaks, drifts, or starts costing you money, it opens a pull request that fixes your code — already verified green by your own CI.**\n\nPython 3.12\nLangGraph\nPostgres 16\nLicense: Apache-2.0\nStatus: pre-alpha\n\n \n\n**The operator console — every screen in one pass.** *This is the design mock, not shipped code.*\nWhat is built today · the mock\n\n \n\n```\nvendor ships a breaking change  →  Sync finds every call site that depends on it\n                                →  patches them\n                                →  runs your CI\n                                →  opens a PR carrying the evidence\n```\n\n## Run it\n\nEvery command here runs in an ordinary terminal — no coding agent, no prefix. Every path ends at\nthe same c",
+        "published": null
+      },
+      {
+        "title": "Since.dev — Make Your Software Self-Repairable",
+        "url": "https://since.dev/",
+        "snippet": "Since.dev — Make Your Software Self-Repairable\n\n# Make your software self-repairable.\n\nSince.dev watches your APIs, packages, SDKs, and models, then turns supported dependency changes into repair PRs.\n\nA change becomes a way forward.\n\nDependency change An API has moved.\n\nSupported repair A draft PR is ready.\n\nIllustrative workflow\n\nSince the last change. Reduced motion\n\nFor the dependencies behind what you build.\n\nnpm\n\nGitHub\n\nPyPI\n\nRust\n\nOpenAPI\n\nRubyGems\n\n## Less chasing changes. More moving forward.\n\nConnect your GitHub repository. See what changed, find the affected code, and review a supported repair.\n\n01 Watch Spot the external change. 02 Impact Find the code it touches. 03 Repair Prepare a small, supported fix. 04 Review Your CI. Your final call.\n\n### The SDK changed. Now you know.\n\nA scheduled check finds a release and its official migration guide.\n\nPreviously observed 19.0.0 09:00 Latest observed 20.0.0 10:15\n\nMigration guide: `send` → `messages.create`\n\nIllustrative workflow. Fictional package and observations.\n\nNext step\n\nSupported patches and draft PRs by Since.dev. Tests run in your repository. You choose what ships.\n\n## Your code has dependencies. We keep an eye on them.\n\n### An endpoint moved. Your product shouldn’t have to stop.\n\nConnect a documented API change to the calls that use it. Review a supported endpoint, parameter, or version fix.\n\nEndpoint deprecated Example `/v1/messages``/v2/messages` src/integrations/messages.ts Review the supported migration\n\nS",
+        "published": null
+      },
+      {
+        "title": "Aakash2408/ripple",
+        "url": "https://github.com/Aakash2408/ripple",
+        "snippet": "# Aakash2408/ripple\n\nSelf-maintaining APIs\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 1\n- Default branch: main\n- Created: 2026-07-29T08:07:46Z\n\n## Languages\n\n- Dockerfile\n- HTML\n- Java\n- Procfile\n- Python\n- TypeScript\n\n---\n\n## README\n\n# 🌊 Ripple — Self-Maintaining APIs\n\n> When you change an API, Ripple finds every consumer and opens PRs to fix them. Automatically.\n\n### 🌐 **Live Landing Page** · **Install GitHub App** · **Dashboard**\n\nInstall GitHub App\nDemo: Python\nDemo: Node\nDemo: Java\nDashboard\n\n## The Problem\n\nYou change `POST /users` to require a new field. Three teams find out when their code breaks in production on Friday night.\n\n## The Solution\n\nRipple detects breaking API changes, finds every consumer, generates the fix, and opens a PR — in seconds, not days.\n\n```\n🌊 RIPPLE — API Change Propagation\n\n⚠️  1 breaking change detected:\n  POST /payments — added required field 'idempotency_key' (string)\n\n🔍 Found 3 consumers (Python SDK, Node SDK, Java SDK)\n🔧 Generated 3 fixes (validated ✓)\n📤 Opened 3 PRs\n\n✅ Done in 15 seconds.\n```\n\n## Install\n\n**Option 1: GitHub App (recommended)**\n\nInstall on your org — Ripple auto-triggers on every push:\n\n👉 **Install Ripple**\n\nThat's it. Push a breaking change to any API spec and fix PRs appear in consumer repos.\n\n**Option 2: Run from source**\n\n```bash\ngit clone https://github.com/Aakash2408/ripple.git\ncd ripple\npip install -r requirements.txt\n\n# Detect breaking changes\npython -m app.cli diff old.yaml new.yaml\n\n# Find consum",
+        "published": null
+      }
+    ]
+  }
+}

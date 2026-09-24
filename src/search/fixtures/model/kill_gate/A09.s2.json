@@ -2,44 +2,44 @@
   "stage": "kill_gate",
   "idea_id": "A09",
   "model": "claude-sonnet-5",
-  "recorded_at": "2026-09-24T20:29:51.436Z",
+  "recorded_at": "2026-09-24T22:27:05.295Z",
   "calls": [
     {
       "index": 0,
-      "request_digest": "82b118760d4cdad17485d65b492b86ae911b60680472be63b84f90c87841a092",
+      "request_digest": "ecfb132f4dcefbe4109aa6ceaa94ab35774749390f8c2df7c47c942f95bf3d08",
       "usage": {
         "input_tokens": 105,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1685,
+        "cache_read_input_tokens": 2028,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 267,
+        "output_tokens": 278,
         "output_tokens_details": {
-          "thinking_tokens": 11
+          "thinking_tokens": 25
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.003217,
+      "cost_usd": 0.0033956,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfNtzxLGruXZSFGwjMhVG",
+        "id": "msg_011CfP3wWUF9Td6W6JYiPcgj",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "EpQCCpABCBIYAipAfMDdfEi+fREd6Rs++qoc4VMz6dfoy1safHjPSkJAlSGgnVy7rP2GThc5VWu/dEjM5YqZc5TURLpAES/JUjsCUDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAb2Q1tUGEgwaryLaLbGnyFo/IigaDH97glg42NTu12Ou4CIwIkXC7vo2XY1V1IqzNAN/4kYwyn37/MSqjMWSgYWe25JPKjde98J6zBpqukwHdaqHKjF5K0fE2amdv9qpp43na99TbVvKojD6Emv5BCILFlQ9yaQpUzwU9FEjbV6k+04hCjAmGAE="
+            "signature": "EsUCCpABCBIYAipAIeMDQJ8UcCoJJwq4z2lLhjnF/HhXwCMOygXfjdDRe2ZGPBprPpoZCBAg86M+XGCbt4moAfAeODQnB8iQYaLl1jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAbfH1tUGEgzZ+goG8Lrdf6xJV80aDFy+LDZeB1y/K4XDMiIw1dLEj1weKaJkoVz4r4GobCYA17EIo4cqI276/4vZgJjijRZGLXFoL1tR1OGaw/MPKmJoqnKvw1HLzc7bociIyImmiBLfIaY++IgmaFVBQpOK5n02zEVsPnI/p9WhewQbmfEOiITi3UbMdaKoCjU7g+E6uoqlney63VxmzyEvpppqrSigOCctrYshkg7S0+LT/bOKohgB"
           },
           {
             "type": "tool_use",
-            "id": "toolu_01UTQfSAmYXTJdpJfuxoT17a",
+            "id": "toolu_014Bgw4T7Nb8xBBCaE99kUTK",
             "name": "exa_search",
             "input": {
-              "query": "browser extension filters AI-generated spam posts fake reviews Reddit"
+              "query": "browser extension detects AI-generated spam reviews Reddit"
             },
             "caller": {
               "type": "direct"
@@ -47,10 +47,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01H2QR939qjU5BjKVkyLYKFa",
+            "id": "toolu_01TbyZeoimbTYPNCpYRaNdoc",
             "name": "exa_search",
             "input": {
-              "query": "detect AI generated content Reddit comments extension"
+              "query": "extension filters bot posts fake reviews AI content"
             },
             "caller": {
               "type": "direct"
@@ -58,10 +58,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_0115NMsxUDY1TTL7LvVkx6KS",
+            "id": "toolu_01JVzMgc2ruqDEiGCWFDrF56",
             "name": "brave_search",
             "input": {
-              "query": "browser extension detect fake reviews AI spam Reddit"
+              "query": "browser extension AI spam filter Reddit fake reviews"
             },
             "caller": {
               "type": "direct"
@@ -69,10 +69,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_0147fXUhuof2B5Mf2hdMLJxH",
+            "id": "toolu_01Djf1A1G62ziAutVx7jt9bp",
             "name": "brave_search",
             "input": {
-              "query": "Reddit API terms of service browser extension third party access changes"
+              "query": "Reddit API terms of service third party browser extension scraping"
             },
             "caller": {
               "type": "direct"
@@ -86,14 +86,14 @@
         "usage": {
           "input_tokens": 105,
           "cache_creation_input_tokens": 0,
-          "cache_read_input_tokens": 1685,
+          "cache_read_input_tokens": 2028,
           "cache_creation": {
             "ephemeral_5m_input_tokens": 0,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 267,
+          "output_tokens": 278,
           "output_tokens_details": {
-            "thinking_tokens": 11
+            "thinking_tokens": 25
           },
           "service_tier": "standard",
           "inference_geo": "global"
@@ -103,37 +103,37 @@
     },
     {
       "index": 1,
-      "request_digest": "fc85d98a8991e81e0c198b1ffa2180d72e17ce60963e52db63ac5d7c196770e7",
+      "request_digest": "de3e7463010e78e88b1a6f4827d979e00db774f16cd4823cd1465d995abaee57",
       "usage": {
-        "input_tokens": 9936,
+        "input_tokens": 9791,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1685,
+        "cache_read_input_tokens": 2028,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 2595,
+        "output_tokens": 2551,
         "output_tokens_details": {
-          "thinking_tokens": 728
+          "thinking_tokens": 782
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.046159,
+      "cost_usd": 0.0454976,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfNu1XPriDTiXJTAcSLda",
+        "id": "msg_011CfP3wxGWtGgjMSQnPFPqi",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "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"
+            "signature": "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"
           },
           {
             "type": "text",
-            "text": "```json\n{\n  \"idea_id\": \"A09\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The idea is a browser extension that flags/filters content for the end user. It does not file anything on a customer's behalf, does not touch protected health data, does not give licensed advice, and does not require the operator to hold any license.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Multiple existing extensions (SlopSieve, Redd-Eye, RedPal, Slop Goggles, Reddit AI Comment Detector) already do exactly this by running client-side DOM analysis in the user's own browser rather than depending on Reddit's official API. This is the same mechanism used by ad blockers and page-enhancer extensions (e.g., old Reddit Enhancement Suite), which is a well-established and durable pattern not dependent on a revocable API key. Reddit's API crackdown (Developer Terms, 2023/2025 pre-approval requirements) targets programmatic API consumers, not browser content scripts reading rendered pages.\",\n      \"source_url\": \"https://redditinc.com/policies/developer-terms\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Pure software product; no physical goods are bought, stored, or shipped.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"A browser extension with client-side or lightweight server-side ML scoring is buildable by one person; comparable existing extensions are solo/small open-source projects (e.g., Redd-Eye has 2 contributors, one main).\",\n      \"source_url\": \"https://github.com/RootThePlanet/Redd-Eye\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T6\",\n      \"evidence\": \"Nearly all directly comparable competitors found (SlopSieve, Redd-Eye, RedPal, Slop Goggles, Reddit AI Comment Detector) are free, with no visible monetization, suggesting a real risk of no clear path to paying customers within 90 days.\"\n    },\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Not really applicable here since detection is automated, but ongoing model accuracy/tuning support as AI content evolves could require continuous non-automatable maintenance work per user complaint.\"\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"SlopSieve\",\n      \"url\": \"https://slopsieve.com/extension\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free (Chrome/Firefox store listing, no pricing mentioned)\",\n      \"evidence\": \"Browser extension labelling AI/bot-generated posts across X, Bluesky, LinkedIn, Reddit, Hacker News with on-device scoring and dim/hide modes.\"\n    },\n    {\n      \"name\": \"Slop Goggles\",\n      \"url\": \"https://chromewebstore.google.com/detail/slop-goggles-%F0%9F%95%B6%EF%B8%8F/gemkhhjggodnbmnnmboajgaeofkolegn\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free\",\n      \"evidence\": \"Chrome extension that detects and highlights likely AI-generated posts/comments specifically on Reddit.\"\n    },\n    {\n      \"name\": \"Redd-Eye\",\n      \"url\": \"https://github.com/RootThePlanet/Redd-Eye\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free, open source\",\n      \"evidence\": \"Browser extension (Chrome/Firefox) that flags AI content and bot-like accounts on Reddit, runs locally, no data collection.\"\n    },\n    {\n      \"name\": \"RedPal\",\n      \"url\": \"https://redpal.io/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free\",\n      \"evidence\": \"Extension analyzing Reddit comments for AI detection, truth verification, and quality/spam filtering with badges.\"\n    },\n    {\n      \"name\": \"Reddit AI Comment Detector\",\n      \"url\": \"https://chromewebstore.google.com/detail/reddit-ai-comment-detecto/mkpjidfddjkkdpokcnhbjcjfadelpjee\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free\",\n      \"evidence\": \"Custom-trained text classifier extension that highlights/hides likely LLM-written Reddit comments, works on old and new Reddit.\"\n    },\n    {\n      \"name\": \"ReviewLens\",\n      \"url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"Free (store listing)\",\n      \"evidence\": \"Fake review detector for Amazon, Walmart, eBay, Etsy using AI analysis plus Reddit cross-referencing — adjacent to the fake-review-filtering half of the idea.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"browser extension filters AI-generated spam posts fake reviews Reddit\",\n      \"detect AI generated content Reddit comments extension\"\n    ],\n    \"brave\": [\n      \"browser extension detect fake reviews AI spam Reddit\",\n      \"Reddit API terms of service browser extension third party access changes\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+            "text": "```json\n{\n  \"idea_id\": \"A09\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The idea is a client-side browser extension that reads/analyzes rendered page content; it does not hold customer funds, act as a licensed professional of record, or require ongoing regulatory supervision.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"unknown\",\n      \"evidence\": \"Multiple existing extensions (Redd-Eye, RedPal, Slop Goggles, SlopSieve, SlopScout) operate by parsing the rendered Reddit DOM client-side rather than calling Reddit's Data API, and appear to function without enforcement action. Reddit's Data API Terms restrict programmatic API scraping, but a content-script-based extension reading what's already rendered to the user is a different, common and widely-tolerated pattern (similar to ad blockers). No direct evidence found that this specific DOM-reading approach violates Reddit's terms or has been enforced against; therefore this is not a clear, citable failure.\",\n      \"source_url\": \"https://redditinc.com/policies/data-api-terms\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"No physical inventory, storage, or shipping is involved; purely software.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No capital or physical infrastructure beyond a single developer building and shipping a browser extension.\",\n      \"source_url\": null\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T6\",\n      \"evidence\": \"Numerous directly competing extensions (Slop Goggles, Redd-Eye, RedPal, SlopSieve, SlopScout, reddit-llm-comment-detector) already exist and are largely free/open-source, making it unclear there is a viable path to paying customers within 90 days without a differentiated angle or monetization hook.\",\n      \"obligations\": []\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"Slop Goggles\",\n      \"url\": \"https://chromewebstore.google.com/detail/slop-goggles-%F0%9F%95%B6%EF%B8%8F/gemkhhjggodnbmnnmboajgaeofkolegn\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free\",\n      \"evidence\": \"Chrome extension that detects AI-generated posts/comments on Reddit and highlights them.\"\n    },\n    {\n      \"name\": \"Redd-Eye\",\n      \"url\": \"https://github.com/RootThePlanet/Redd-Eye\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free, open source\",\n      \"evidence\": \"Browser extension (Chrome/Firefox) that flags AI content and bot-like accounts on Reddit in real time, runs locally.\"\n    },\n    {\n      \"name\": \"RedPal\",\n      \"url\": \"https://redpal.io/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free\",\n      \"evidence\": \"Extension that analyzes Reddit comments to detect AI-generated content and filter low-quality posts.\"\n    },\n    {\n      \"name\": \"SlopSieve\",\n      \"url\": \"https://slopsieve.com/extension\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free\",\n      \"evidence\": \"Browser extension labelling bot/AI-generated content across X, Bluesky, LinkedIn, Reddit, and Hacker News with badges and hide/dim modes.\"\n    },\n    {\n      \"name\": \"SlopScout\",\n      \"url\": \"https://chromewebstore.google.com/detail/slopscout/hiicncilkepbgpcfoojkkpnkfnpjeean\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free\",\n      \"evidence\": \"Detects and blurs AI-generated slop posts in real time on Reddit and other sites using pattern-based rules.\"\n    },\n    {\n      \"name\": \"ReviewLens\",\n      \"url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"free\",\n      \"evidence\": \"Fake review detector for Amazon, Walmart, eBay, Etsy, cross-referencing Reddit sentiment; adjacent to fake-review detection use case.\"\n    },\n    {\n      \"name\": \"DeceptiScan\",\n      \"url\": \"https://github.com/KartikChouhan03/DeceptiScan\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"open source\",\n      \"evidence\": \"Browser extension detecting AI-generated/fake product reviews on e-commerce sites using NLP model.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"browser extension detects AI-generated spam reviews Reddit\",\n      \"extension filters bot posts fake reviews AI content\"\n    ],\n    \"brave\": [\n      \"browser extension AI spam filter Reddit fake reviews\",\n      \"Reddit API terms of service third party browser extension scraping\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
           }
         ],
         "container": null,
@@ -141,16 +141,16 @@
         "stop_sequence": null,
         "stop_details": null,
         "usage": {
-          "input_tokens": 9936,
+          "input_tokens": 9791,
           "cache_creation_input_tokens": 0,
-          "cache_read_input_tokens": 1685,
+          "cache_read_input_tokens": 2028,
           "cache_creation": {
             "ephemeral_5m_input_tokens": 0,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 2595,
+          "output_tokens": 2551,
           "output_tokens_details": {
-            "thinking_tokens": 728
+            "thinking_tokens": 782
           },
           "service_tier": "standard",
           "inference_geo": "global"

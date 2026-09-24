@@ -1,0 +1,162 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "B09",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T20:27:22.513Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "1b1d57954ca953c5db2040d4a0a170f3499d9612a7979dc29adc51c62dd74742",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 1664,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1664,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1201,
+        "output_tokens_details": {
+          "thinking_tokens": 953
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.01638,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNtoFVZAQBWKpuGf8Zrr",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VUBuRhBuv2wMNuft764buu",
+            "name": "exa_search",
+            "input": {
+              "query": "AI patient intake form generates clinical note private practice doctors"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018KWGvek9bpAe76dJM4kNif",
+            "name": "exa_search",
+            "input": {
+              "query": "AI medical history intake software startup HIPAA business associate"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014jWiaft4fhCeVUU5CZ8gkA",
+            "name": "brave_search",
+            "input": {
+              "query": "AI patient intake form generate SOAP note software"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Vwyeq5itiCQJhpyuuuYnqB",
+            "name": "brave_search",
+            "input": {
+              "query": "AI intake form medical history startup pricing private practice"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 1664,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1664,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1201,
+          "output_tokens_details": {
+            "thinking_tokens": 953
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "181c325a767514fc4f90880e2179245aadf86367b8314b4f7908ccf1298aa61f",
+      "usage": {
+        "input_tokens": 9734,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1664,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2455,
+        "output_tokens_details": {
+          "thinking_tokens": 787
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0443508,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNtpWXiikoWK5Gc3eWEb",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"B09\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"Multiple single/small-team companies (Rooks, FaceMed, SmartMedHx, Aduvera, Claio) operate this exact model as HIPAA-compliant SaaS vendors under Business Associate Agreements. The physician remains the covered entity who reviews and signs off on the note; the vendor is a business associate handling PHI under a BAA, which is standard practice for 'selling software to regulated customers' and does not make the operator itself a licensed/regulated healthcare provider, filer, or advice-giver.\",\n      \"source_url\": \"https://rooks.ai/\"\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"No single revocable third-party dependency is inherent to the idea; LLM API providers (OpenAI, Anthropic, etc.) offer BAAs and permitted healthcare-data use, and EHR integrations are typically done via published APIs used by many competitors.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Purely software/SaaS product; no physical inventory, storage, or shipping involved.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No capital-intensive hardware, manufacturing, fleet, or facility requirement; comparable products (SoapNoteAI, Mentalyc, PatientNotes.ai) are run as small SaaS teams.\",\n      \"source_url\": \"https://patientnotes.ai/resources/medical-practice-startup-costs\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T4\",\n      \"evidence\": \"Selling into private practices often benefits from direct outreach/demos (e.g., 'Book a Demo' CTAs seen on Bonami X AI and IntakeAI), suggesting some manual sales motion may be needed to close early customers.\"\n    },\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Clinical documentation tools generally require onboarding support, EHR integration setup, and occasional human review/troubleshooting for accuracy and compliance, which may not fully automate at scale.\"\n    },\n    {\n      \"id\": \"T6\",\n      \"evidence\": \"Multiple live competitors (Rooks, FaceMed, Aduvera, SmartMedHx) already have working products and pricing, indicating a plausible path to a first paying customer within 90 days via a narrow niche or fast pilot.\"\n    }\n  ],\n  \"competitors\": [\n    {\"name\": \"Rooks\", \"url\": \"https://rooks.ai/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"HIPAA-compliant AI patient intake form builder with BAA included, built by a small team.\"},\n    {\"name\": \"FaceMed\", \"url\": \"https://facemed.ai/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI-powered multimodal patient intake that generates chart-ready summaries for physicians.\"},\n    {\"name\": \"SmartMedHx\", \"url\": \"https://smartmedhx.ai/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI-powered interview tool for medical history collection, HIPAA-compliant, built for solo providers and clinics.\"},\n    {\"name\": \"Aduvera\", \"url\": \"https://www.aduvera.ai/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI medical scribe that turns patient intake conversations into structured, EHR-ready notes.\"},\n    {\"name\": \"IntakeAI\", \"url\": \"https://aipatientintake.com/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI agent conducts intake conversations, syncs structured data to EHR, delivers diagnosis draft before visit.\"},\n    {\"name\": \"Mentalyc\", \"url\": \"https://www.mentalyc.com/blog/soap-note-generator\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"AI SOAP/intake note generator for therapists, HIPAA-safe.\"},\n    {\"name\": \"Phreesia\", \"url\": \"https://www.insighthealth.ai/blog/automated-patient-intake\", \"relationship\": \"adjacent\", \"pricing\": \"$250-$1000+/month per practice\", \"evidence\": \"Largest incumbent vendor in patient intake space, indicating established market and pricing benchmarks.\"}\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"AI patient intake form generates clinical note private practice doctors\",\n      \"AI medical history intake software startup HIPAA business associate\"\n    ],\n    \"brave\": [\n      \"AI patient intake form generate SOAP note software\",\n      \"AI intake form medical history startup pricing private practice\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 9734,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1664,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2455,
+          "output_tokens_details": {
+            "thinking_tokens": 787
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -14,6 +14,8 @@ export interface KillGateTestOptions {
   budgetUsd?: number;
   /** Recorded sample to replay (fixture <idea>.s<sample>). Omit to replay the unsuffixed fixture <idea>. */
   sample?: number;
+  /** Directory holding the model transcripts when it differs from the search fixture dir (e.g. an archive). */
+  modelFixtureDir?: string;
 }
 
 /**
@@ -30,7 +32,7 @@ export async function runKillGateReplay(db: Db, ideaId: string, opts: KillGateTe
   if (claim !== "claimed") throw new Error(`could not claim task ${task.id}: ${claim}`);
   const trace = new TraceCollector();
   const search = createSearchClients({ mode: "replay", fixtureDir, trace });
-  const model = createModelClient({ mode: "replay", fixtureDir });
+  const model = createModelClient({ mode: "replay", fixtureDir: opts.modelFixtureDir ?? fixtureDir });
   const fixtureName = opts.sample ? sampleFixtureName(ideaId, opts.sample) : ideaId;
   return runKillGate({ db, runId: run.id, taskId: task.id, ideaId, agent, search, model, trace, prompts, fixtureName });
 }

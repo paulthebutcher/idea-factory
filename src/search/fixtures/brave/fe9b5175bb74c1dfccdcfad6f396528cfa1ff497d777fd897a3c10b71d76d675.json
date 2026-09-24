@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "AI agent tracks API breaking changes opens pull request fix",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-24T22:30:20.003Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "AI agent tracks API breaking changes opens pull request fix",
+    "results": [
+      {
+        "title": "GitHub - Bigyan1313/api-guardian: Watches an API's OpenAPI spec for breaking changes, finds the code that breaks, patches it with an AI agent, tests the patch, and opens a pull request. · GitHub",
+        "url": "https://github.com/Bigyan1313/api-guardian",
+        "snippet": "<strong>Watches an API&#x27;s OpenAPI spec for breaking changes, finds the code that breaks, patches it with an AI agent, tests the patch, and opens a pull request</strong>. - Bigyan1313/api-guardian",
+        "published": null
+      },
+      {
+        "title": "What AI Tool Catches Breaking API Changes? | TestSprite",
+        "url": "https://www.testsprite.com/blog/what-ai-tool-catches-breaking-api-changes",
+        "snippet": "<strong>If the change broke a contract, the failure is specific and structured in a format the AI coding agent can act on directly to propose a fix</strong>. The GitHub Actions integration brings the same coverage into CI.",
+        "published": "2026-06-12T00:00:00"
+      },
+      {
+        "title": "Track AI-driven pull requests | Port",
+        "url": "https://docs.port.io/guides/all/track-ai-driven-pull-requests/",
+        "snippet": "Commit messages often follow a concise, imperative style (e.g., Fix API error handling). ... PR: opened by devin-bot (or the GitHub user assigned to Devin). Commits: author: Devin &lt;bot@devin.ai&gt;. No draft/WIP markers. We will create and configure blueprints to support tracking AI-driven pull requests. This includes setting up the AI coding agent blueprint and enhancing the existing pull request blueprint.",
+        "published": null
+      },
+      {
+        "title": "Agentic Workflows Explained: How AI Agents Are Changing CI/CD Pipelines",
+        "url": "https://www.deployhq.com/blog/agentic-workflows-explained-ai-agents-cicd-pipelines",
+        "snippet": "AI coding agents have moved beyond your terminal. <strong>GitHub&#x27;s Copilot Coding Agent and similar tools now run inside CI/CD pipelines — triaging bugs, writing fixes, and opening pull requests automatically</strong>.",
+        "published": "2026-04-22T06:18:25"
+      },
+      {
+        "title": "How We Built an Autonomous AI Agent That Audited 187 Subprojects and Got PRs Merged by Google Cloud Engineers - DEV Community",
+        "url": "https://dev.to/morad_moqbel/how-we-built-an-autonomous-ai-agent-that-audited-187-subprojects-and-got-prs-merged-by-google-cloud-3iij",
+        "snippet": "Synchronize Dependencies: Upgrading an SDK in code without updating requirements.txt breaks clean container environments. ApiPatch now aligns requirements files alongside code diffs. Maintainer Etiquette: Large repos hate 50-file mega-PRs. Grouping fixes per subproject with clear explanations is what earns maintainer respect. ApiPatch is open-source and available both on PyPI and as an official GitHub Action on the GitHub Marketplace: ... name: ApiPatch Auto-Migration on: [push, pull_request] jobs: modernize: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 - uses: MoradMoqbel/apipatch@v0.9.0 with: mode: &#x27;fix&#x27; api_key: ${{ secrets.GEMINI_API_KEY }} auto_pr: &#x27;true&#x27;",
+        "published": "2026-09-08T07:36:19"
+      }
+    ]
+  }
+}

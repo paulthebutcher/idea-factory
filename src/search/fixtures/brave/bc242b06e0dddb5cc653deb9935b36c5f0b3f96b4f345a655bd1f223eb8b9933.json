@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "\"breaking changes\" API vendor monitor \"pull request\" startup",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-24T22:31:26.254Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "\"breaking changes\" API vendor monitor \"pull request\" startup",
+    "results": [
+      {
+        "title": "How to Prevent Breaking API Changes with API Gateway - API7.ai",
+        "url": "https://api7.ai/blog/detect-breaking-api-changes",
+        "snippet": "If one of the nodes starts to fail, responding faster or slower than usual, it might indicate a change in the underlying backend service&#x27;s processing. Integrate APISIX with monitoring tools like Prometheus using the prometheus plugin. Set up alerts based on metrics, such as an increased rate of 4xx or 5xx errors, which could indicate breaking changes in your API.",
+        "published": "2023-09-11T00:00:00"
+      },
+      {
+        "title": "How to Monitor Third-Party API Changes (Without Reading Release Notes) - ApiNotes Blog",
+        "url": "https://apinotes.io/blog/how-to-monitor-third-party-api-changes",
+        "snippet": "OpenAPI GitHub Action — run validation and diff on every pull request, and block merges that introduce breaking changes · Publishing a machine-readable spec and a real changelog is the single cheapest thing you can do to stop being the vendor in the first paragraph of this article.",
+        "published": "2026-08-13T00:00:00"
+      },
+      {
+        "title": "SaaS API changes without downtime using API integration best practices you can operate | ThinkBot | ThinkBot Agency",
+        "url": "https://thinkbot.agency/blog/api-integration-best-practices-saas-api-changes",
+        "snippet": "<strong>If the vendor publishes an OpenAPI spec or you maintain your own proxy spec, you can automatically detect breaking changes in pull requests</strong>. oasdiff is built for this and supports CLI and GitHub Actions.",
+        "published": "2026-06-22T21:06:38"
+      },
+      {
+        "title": "Why API Breaking Changes Are an Infrastructure Problem, Not a Monitoring Problem - DEV Community",
+        "url": "https://dev.to/1nonlyrus/why-api-breaking-changes-are-an-infrastructure-problem-not-a-monitoring-problem-2mlj",
+        "snippet": "That&#x27;s why this is an infrastructure problem. I built Synchronix to solve this exact problem. <strong>It monitors 50+ API changelogs continuously and opens pull requests with AI-written fixes when breaking changes are detected</strong>.",
+        "published": "2026-09-05T13:55:41"
+      },
+      {
+        "title": "Catching Breaking API Changes Before They Reach Production - DEV Community",
+        "url": "https://dev.to/delimit/catching-breaking-api-changes-before-they-reach-production-4n7k",
+        "snippet": "One approach to preventing these issues is <strong>comparing OpenAPI specifications directly in CI and failing the build when breaking changes are detected</strong>. ... By validating API changes automatically during pull requests, teams can catch compatibility ...",
+        "published": "2026-03-09T22:20:48"
+      }
+    ]
+  }
+}

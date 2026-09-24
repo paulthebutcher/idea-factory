@@ -1,0 +1,237 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "H02",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T22:36:58.244Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "e14686249f11e1b1659f87538a2f8693d6d3edfe9696b86d017e7b0c1253e7a2",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2004,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2004,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 333,
+        "output_tokens_details": {
+          "thinking_tokens": 72
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.00855,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP4hAGHLiRq12bzc1hmY",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EswDCpABCBIYAipAW43Wo8DeL/V35Sjyne9cAUKPlo7D+26+Dqc1mmP9BkYeekRPuRvi2o1IXgSFK6V+e+/vs+ArEoj+0T0Sc9ujUzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYjM1tUGEgx8XcWS8b4F4Q//cXMaDAaJ+lu0hCmohTVvfiIwUcepUwnXO+mITw6LzdiMZnObPlMzoxkqfQ9nXWZk/AG4etAgxg7SqD2ZPuXYOUj7KugBRvlLazrKunCncKeUl7gk7Nos0v+c13UR3TMPxuJvujLfeTzSF5QB1/d7g6r/mL2UYt8BVM/WtvMmX1gcantWhlHGeD565c94W2ALLDs6MHX7BLZN30xvAdacifiNoirOoUoaN718aFl0lHEOkiBFhQ37XMc1k9ls+4LB4l45QMcdgI3Dx0FFhWgtjsikrmfSd5RNAW7fKctAlA6WGD5aToUqL80bsXUYsyvuu5+ieKfvWdCrr6iq51DE9sP3/FFPybncvv5W1rUOnYr0xUT0rKxYa57mHSjpmfYreHs4ZRJObVUHVKrz+BgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014PvhGWCezuGkonMKasUGhh",
+            "name": "exa_search",
+            "input": {
+              "query": "practice management software for independent therapists session notes appointment reminders"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01R4NSLipAu3V2t6KBC7oszE",
+            "name": "exa_search",
+            "input": {
+              "query": "HIPAA compliant appointment reminder text software for therapists"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012SfJLohAoeThgQkHy2FXP5",
+            "name": "brave_search",
+            "input": {
+              "query": "SimplePractice TherapyNotes TheraNest pricing competitors"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_015xx8jF2bzag7TxpEGGejG2",
+            "name": "brave_search",
+            "input": {
+              "query": "therapist practice management app HIPAA BAA requirement"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2004,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2004,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 333,
+          "output_tokens_details": {
+            "thinking_tokens": 72
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "ea1091d571f5220c62a1d30c1243312d6cba9b3f5d85867f3db83de6f1ad0703",
+      "usage": {
+        "input_tokens": 8446,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2004,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 735,
+        "output_tokens_details": {
+          "thinking_tokens": 593
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0246428,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP4hjz4tkVwtfHSSUTpB",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QqMBWQn7LgtwC3XA1C9g9J",
+            "name": "brave_search",
+            "input": {
+              "query": "HIPAA business associate agreement requirement software vendor storing PHI therapist notes"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_015wEAruvcz7N6eSTyNhcPyR",
+            "name": "exa_search",
+            "input": {
+              "query": "business associate agreement obligations HIPAA security rule software vendor"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8446,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2004,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 735,
+          "output_tokens_details": {
+            "thinking_tokens": 593
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "d520bbd4ff4c8d89f11a0dfb139f087e48879bcadb51a6c0a3694a5da72c3286",
+      "usage": {
+        "input_tokens": 13272,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2004,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2968,
+        "output_tokens_details": {
+          "thinking_tokens": 662
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0566248,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP4iaiz38LVzYkFjLEsJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"H02\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The operator is a software vendor (business associate) providing tools to therapists, not the licensed professional of record, not giving medical/legal/financial advice, and not holding or moving customer funds. HHS guidance confirms vendors that store/transmit PHI are 'business associates' who sign a BAA and follow HIPAA Security Rule safeguards, which is standing compliance work but is explicitly the kind of regulatory setup captured by T8 (BAA templates, HIPAA security program) rather than a licensed-practice obligation under R001.\",\n      \"source_url\": \"https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html\"\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Core function (storing notes, sending SMS reminders) can be built on replaceable, sanctioned infrastructure (e.g., cloud hosting, SMS APIs like Twilio/Twilio-compatible providers that offer BAAs), as shown by competitors like GReminders and Apptoto operating this way without relying on a single revocable platform outside its terms.\",\n      \"source_url\": \"https://www.greminders.com/solutions/therapists\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Pure software product; no physical inventory, storage, or shipping is implied by the idea.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"A practice-management SaaS app is buildable by a solo founder with AI agents using standard cloud hosting; no fleets, facilities, or manufacturing required, consistent with dozens of small competitors (EMRFlow Solo, TherapyPM, Sessions Health) that operate at small-team scale.\",\n      \"source_url\": \"https://emrflow.com/solo/\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T8\",\n      \"evidence\": \"Because the app stores session notes and client records (PHI) on behalf of therapist customers and sends appointment reminder texts referencing appointments, the operator is a HIPAA 'business associate' and must execute BAAs with every customer, maintain HIPAA Security Rule administrative/technical/physical safeguards, and handle breach notification duties. Every competitor found (SimplePractice, TherapyNotes, TheraNest, GReminders, Apptoto, Notifyre) advertises BAA execution and HIPAA-aligned security as a baseline requirement, confirming the obligation is real and unavoidable, not merely industry marketing.\",\n      \"obligations\": [\n        \"Execute and maintain a signed Business Associate Agreement (BAA) with each therapist/practice customer\",\n        \"Implement and document HIPAA Security Rule administrative, technical, and physical safeguards (access controls, encryption at rest/in transit, audit logs, risk analysis)\",\n        \"Establish a breach notification process compliant with the HIPAA Breach Notification Rule and applicable state data breach laws\",\n        \"Ensure any subcontractors/sub-processors (e.g., SMS/text and cloud hosting providers) that touch PHI also sign BAAs\",\n        \"Obtain and document appropriate client consent for SMS communications under TCPA and include compliant privacy/consent terms in Terms of Service\"\n      ]\n    },\n    {\n      \"id\": \"T6\",\n      \"evidence\": \"Market is crowded with entrenched, well-funded incumbents (SimplePractice, TherapyNotes, TheraNest, Sessions Health, Therasoft, TherapyAppointment, EMRFlow Solo) already serving 40,000+ practices; differentiating enough to win a first paying solo-therapist customer within 90 days may be harder than typical, though not impossible given many niche entrants continue to launch.\",\n      \"obligations\": []\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"SimplePractice\",\n      \"url\": \"https://www.simplepractice.com/features/appointment-reminders/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"$49–$99/month per solo practitioner tier\",\n      \"evidence\": \"All-in-one EHR/practice management platform for therapists offering session notes, scheduling, and automated appointment reminders.\"\n    },\n    {\n      \"name\": \"TherapyNotes\",\n      \"url\": \"https://www.therapynotes.com\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"$59/month solo, $69+/month per additional clinician\",\n      \"evidence\": \"Clinician-based pricing EHR for solo and group therapy practices with notes, billing, and reminders.\"\n    },\n    {\n      \"name\": \"TheraNest\",\n      \"url\": \"https://www.theranest.com\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"$26.58–$81.58/month per therapist\",\n      \"evidence\": \"Practice management software for therapists with notes, scheduling, and reminders.\"\n    },\n    {\n      \"name\": \"EMRFlow Solo\",\n      \"url\": \"https://emrflow.com/solo/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free tier for up to 5 clients; paid tiers beyond\",\n      \"evidence\": \"Built specifically for solo therapists: scheduling, AI clinical notes, billing, telehealth, HIPAA-aligned.\"\n    },\n    {\n      \"name\": \"GReminders\",\n      \"url\": \"https://www.greminders.com/solutions/therapists\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"Pro plans include HIPAA/BAA\",\n      \"evidence\": \"Automated SMS appointment reminders specifically marketed to therapists, HIPAA compliant with BAA on Pro plans.\"\n    },\n    {\n      \"name\": \"Apptoto\",\n      \"url\": \"https://www.apptoto.com/industries/hipaa\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"Not listed\",\n      \"evidence\": \"HIPAA-compliant appointment reminder and scheduling service for healthcare practices, including mental health providers.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"practice management software for independent therapists session notes appointment reminders\",\n      \"HIPAA compliant appointment reminder text software for therapists\",\n      \"business associate agreement obligations HIPAA security rule software vendor\"\n    ],\n    \"brave\": [\n      \"SimplePractice TherapyNotes TheraNest pricing competitors\",\n      \"therapist practice management app HIPAA BAA requirement\",\n      \"HIPAA business associate agreement requirement software vendor storing PHI therapist notes\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 13272,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2004,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2968,
+          "output_tokens_details": {
+            "thinking_tokens": 662
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "dropship branded merchandise fulfillment API no inventory swag company",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T22:29:53.206Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "dropship branded merchandise fulfillment API no inventory swag company",
+    "results": [
+      {
+        "title": "API Documentation | Brandmerch Developers",
+        "url": "https://brandmerch.com/developers",
+        "snippet": "API Documentation | Brandmerch Developers\n\n# Gifting API\n\nSend branded merchandise programmatically. Integrate gifting into your CRM, sales workflows, or any application with a simple REST API.\n\n## Quick Start\n\nThree steps to send your first gift programmatically.\n\n### Get your API key\n\nGo to Dashboard → Integrations and create an API key. Available on the Stockroom subscription and Business plans.\n\n### Add designs to a collection\n\nGroup the produced designs you want to ship into a collection. The API sends from any design with stock in your warehouse.\n\n### Create a send\n\nPOST to /api/v2/sends with recipient address and design IDs. We handle fulfillment and shipping.\n\n## Authentication\n\nAll API requests require a valid API key passed in the `X-API-Key` header. Keys are scoped to your company and available on the Stockroom subscription and Business plans.\n\n```\ncurl \"https://api.brandmerch.com/api/v1/sends/inventory?collectionId=col_welcome_kits\" \\\n  -H \"X-API-Key: bm_live_your_key_here\"\n```\n\nSHA-256 hashed\n\nKeys are stored as irreversible hashes\n\nCompany-scoped\n\nEach key is tied to one company account\n\nRevocable instantly\n\nRevoke any key from the dashboard immediately\n\n## Base URL\n\n`https://api.brandmerch.com`\n\n## API Endpoints\n\nClick any endpoint to expand the full documentation.\n\nPOST`/api/v1/sends` Create a send\n\nGET`/api/v1/sends/inventory` Check inventory by collection or design IDs\n\nGET`/api/v1/sends/:id` Get send status & tracking\n\n## Error Codes\n\nAll errors return a JS",
+        "published": null
+      },
+      {
+        "title": "Print on Demand API | White Label Print API for Ecommerce",
+        "url": "https://www.contrado.com/print-on-demand-api",
+        "snippet": "Print on Demand API | White Label Print API for Ecommerce\n\nUSD\n\nGo Back Close\n\nAll\n\n- All\n- Custom\n- Artist\n\nRelated:\n\nStores ({{popupVm.storeTotalCount}})\n\nArtists ({{popupVm.artistTotalCount}})\n\n# Contrado Print on Demand API\n\nConnect your store or marketplace to a powerful white labeling print on demand solution that automates product creation, order routing and fulfilment all under your own brand.\n\nGet on board Developer Docs\n\n## How the Integration Works\n\n### Build Your Store\n\nCreate your store and design products with your branding. Set up your catalogue and get ready to sell.\n\n### Connect & Sync\n\nConnect your store via API and sync products seamlessly. Upload designs and send orders from your platform.\n\n### Automate Production and Fulfilment\n\nWe handle printing, packaging, and global shipping while you track orders in real time.\n\n## Built for Brands Ready to Scale\n\nThis print on demand API gives you the infrastructure to launch, automate and grow a white label product business without holding stock or managing fulfilment.\n\n### Launch an Automated Merch Brand\n\nFor creators and designers launching branded collections\n\n### Run a Scalable Dropshipping Operation\n\nFor dropshippers running white label operations\n\n### Offer Personalised Products Online\n\nFor marketplaces offering personalised product catalogues\n\n### Release Limited Drops Without Risk\n\nFor merch stores selling custom products\n\n### Expand Into Premium Custom Product Ranges\n\nFor ecommerce brands scaling beyond man",
+        "published": null
+      },
+      {
+        "title": "SwagUp API: Submit an Order Request | SwagUp Help Center",
+        "url": "https://support.swagup.com/en/articles/6757060-swagup-api-submit-an-order-request",
+        "snippet": "SwagUp API: Submit an Order Request | SwagUp Help Center\n\n# SwagUp API: Submit an Order Request\n\nWritten by Maggie Johnson\n\nAugust 16, 2023\n\nTable of contents\n\n# Step One: Design Selected Products\n\nThe first step is to design the products you chose and make them “account products” (ie - products that are tied to a specific account). This request does not include payment.\n\nOnce you make this request, it will trigger us to start working on mockup designs. You will receive an email notification when they are ready. Part of the request is to include the logo(s) you want to put in your swag. Two(2) logos are the maximum allowed: primary and secondary. To upload your logo(s), there is an available AWS S3 bucket that our system will pull the images from. You can make a PUT request for uploading your logos to this bucket. The AWS S3 bucket is https://swagup-order-req-resources.s3.amazonaws.com. ​ ​\n\nTo submit a product design request you must make a POST request to:\n\nhttps://api.swagup.com/api/v1/account-products/ ​ ​\n\nThere are 2 cases in the request payload structure:\n\n- Submit a design request for pack products\n- Submit a design request for individual products\n\nExample payload for designing a pack:\n\n```\n{  \"pack_items\": [    {      \"base_product\": 62,      \"base_product_sf_id\": \"01t5A000007y45QQAQ\",      \"units_per_pack\": 2,      \"theme_color\": \"neon orange\",      \"theme_color_hex\": \"FF2A23\"    },    {      \"base_product\": 67,      \"base_product_sf_id\": \"01t5A000007y45pQAA\",      ",
+        "published": "2023-08-16T14:21:13.000Z"
+      },
+      {
+        "title": "Flexible Print-on-Demand Dropshipping API from Germany",
+        "url": "https://cockpit.shirtigo.com/en/enterprise-api",
+        "snippet": "Flexible Print-on-Demand Dropshipping API from Germany\n\n# Outsource your merch production with the Shirtigo API\n\nAutomate your merch production and build scalable business models. With the Shirtigo Enterprise API, you can connect your system directly to our state-of-the-art print-on-demand platform.\n\n## Unlimited print-on-demand\n\nAutomate your entire merch process from ordering to shipping. Our Enterprise API offers maximum scalability, real-time transparency and full control over your production.\n\n### Operational Excellence\n\nReliability is Shirtigo's top priority. Every order is carefully checked to ensure that it arrives exactly as ordered. Our complaint rate is only 0.29%.\n\n### Mockup Rendering\n\nCreate high-converting product mockups automatically via the API – fast, consistent, and free. Ideal for large product catalogs or marketplace integrations.\n\n### Order status in real time\n\nKeep every step in view: From order to delivery, you can call up the status of your orders in real time – transparent and reliable.\n\n### Webhooks & Events\n\nReceive proactive updates on all relevant production and shipping events. Perfect for automated workflows and precise status communication.\n\n### Personalization via API\n\nOffer real customization at the touch of a button. Our API enables fully automated personalization processes for names, motifs or texts - efficiently and error-free.\n\n### Diverse integrations\n\nSeamlessly connect Shirtigo with marketplaces and stores such as Shopify, Etsy, Amaz",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://docs.snappy.com/modules/api/v3/base-products/overview",
+        "snippet": "> ## Documentation Index\n> \n> Fetch the complete documentation index at: https://docs.snappy.com/llms.txt\n> Use this file to discover all available pages before exploring further.\n\n# Swag Products: Branded Merchandise Templates\n\n> Browse Snappy's swag catalog - base products and base variants for branded merchandise. Schema, relationships, and V3 endpoints for building a swag store.\n\nSwag in Snappy refers to branded merchandise - items like t-shirts, mugs, hats, and notebooks that customers apply their own logo or design to. Swag is the second of Snappy's two product catalogs (the first being Products & Variants, the curated marketplace catalog).\n\nA Base Product is a swag template - the unbranded item from which customized swag is derived (e.g. \"standard cotton t-shirt\"). Base Products are the swag-catalog counterpart to standard Products.\n\nA Base Variant is a specific orderable version of a Base Product (e.g. \"Standard cotton t-shirt, Medium, Navy\"). Base Variants are the swag counterpart to standard Variants - and as with the marketplace catalog, the variant is the orderable unit.\n\nLooking for the end-to-end integration walkthrough for building a swag store? See the Swag Store API guide.\n\nThe Base Product and Base Variant schemas are intentionally minimal in V3 and will be extended as the swag track matures - customization layers, design assets, and approval flows are planned. Subscribe to the Changelog for updates.\n\n---\n\n## The Base Product Object\n\n| Field | Type | Descrip",
+        "published": null
+      }
+    ]
+  }
+}

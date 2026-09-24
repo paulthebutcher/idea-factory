@@ -1,0 +1,162 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A07",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T20:26:31.957Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "427f6f7329399a596982619cefc59df6662f44f79d151166a2b428ae0b10c4fe",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1683,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 549,
+        "output_tokens_details": {
+          "thinking_tokens": 300
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0060366000000000005,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNtk2pyaGFuVu9VEiE2F",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EqAJCpABCBIYAipAOldxkD+o3J8TEJXWMd9zU2Cex/cufeSejEBMYQ/cQr8XZdz0WBgFv85xzvyG5cL1tilnkamYVPu4iqvh+VLA6zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAfaO1tUGEgxyfCB6Z7PGRgZHJzcaDMrAxP7d4todDyyKtiIwbdbhiDw8+PK/neypnWbIHivNMn25OVZyx1FcXMws6NG21sOsfAjQs6AvaTR3GbP+KrwH1fvKIMjNOQQ/32o5p+pocxu4UNNKVXe+EPDQN2QRl3SGwuGOymBUB5dk91B4Ez8WEydRyPESK7LBBDThICeAIXtWPFcufyMNYVTQUcgPNooBVYuNnTn+NIeb4DE3bIVrDwLTAyBK6RgbZXGtI6HdVTUajl9a2JR88lKkpXsudjmDtmvkKFlsMEER8jH0yyahcbmKDe3U+GnDfg1Hfgx7PiPB0SBOs/+VZic3NWdwaFwwziMoT8Ut5pVkhnde2qH+eO2ycSAizbAfvwf8tyZFuQwi7IvKHuEtPF9W8PilgzOYiMqPfQcZqy8EbC8a6ONCw1K79WUlIjCKtA+0BqVbObw2vzjnU9KqNb0zOpnE7zu0bijziAVPeUB+BNYpT8Z4FhgdfJMf6W4nZsrpPzfk7oBUM8W0vVtR7N9cxeVBwuv6Ff6dqbQVcwXvqFGL9QF72x07Lnr2JjJrDHFrKBAfciYf673i1vscTPSXrQod5YhKuvNS9t4ZPBRqcDlGsHcWbJ7o3a0txvyfFJmHLGahC3lciWWwjv6/ocsz1m2zztJ5PSnJ2Qqf5vzupvRF6UlL9fK4p7q8A5kxKjzdlOtVi7Cy67KmIp55HN7OR6ZR+dqozp+r6HhpcHb6jGhYJW+pmim9ZwZThvJ9e/Ouc6Ee2HhKz1Xr59EzBzvquq2rIp2xxUtRhSQQhBL9zW3MytGFLHkeCXQr74E15hiYjDHf0ZooBLVwha3uJvm3z9lh8DrpQSI3KIha+lBWRh4BcKE4eCGTkQ1xgwat71U9/W+vjh1VfnyhLw1X3ze1JMXXXDgEVAbDe9xQ5hYZ2AUl+SqiZV52g7RALM09yWi9bYj9mPTx5lw1S7Di+fvc4M9PBR3wUmnWcr3V7mo24q4CKzXTkmQRulgn2Pwe+r34AaA1FXi03Bt301hNVhf8fJz9bJ2AkFveA1LWzuHG0Td6O4KOxXCStqnpS6TbPBV3gg5oSIrVM1KvTexWf2zhdPBM8QOIUgEeGNwwU7o6NTUSSiOA4/uqRKDX50gPtyRgHGG0+pTTFpsLHTvCdj+PkjsbHBUh/tFUys6UhcY7xYdfWspkSJtIS7DPq1s7UqavIxJ7HN6t8jQanaBp4CCjZE0IL9tF5s6BRqTwx0x7ZI8/YgJ/4TkppChpXSfp+96gY8OB1eviIEIjJB8zSkQ7a8yEEIvx0xom10aVxG6oxv5YIS3uR1t5nBd8GaPqqzilwkJqz/2nNaCCGBzLAkeei3uFIppBzhkNSNv9AQiy1ncYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01YZZtc7pLSyneYCA4k7dqRH",
+            "name": "exa_search",
+            "input": {
+              "query": "tax filing software for American expats with US investments living in Europe"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NAaUEFUSEixHoDs6qsLtKK",
+            "name": "exa_search",
+            "input": {
+              "query": "self-serve expat tax filing product US citizens abroad brokerage accounts"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012m27eTeb8JPHqiF1orHKK4",
+            "name": "brave_search",
+            "input": {
+              "query": "expat tax filing software US citizens abroad"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Dr5b7PVeNNS3SU9x4f3Vcy",
+            "name": "brave_search",
+            "input": {
+              "query": "TurboTax for American expats tax software"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1683,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 549,
+          "output_tokens_details": {
+            "thinking_tokens": 300
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "83d5eca345f3c1f2471325d2485869e9887b85af9e4be7fa4de73b30622f66d8",
+      "usage": {
+        "input_tokens": 9309,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1683,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 3048,
+        "output_tokens_details": {
+          "thinking_tokens": 1140
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.049434599999999995,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNtkv1EoeatoH8WVZd95",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A07\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The idea is explicitly framed as 'self-serve tax filing' software (a TurboTax-quality product), meaning the customer reviews and files their own return; the operator is selling software to a regulated taxpayer rather than acting as the regulated preparer/filer. Existing direct comparables (Expatfile, MyExpatTaxes, H&R Block DIY) operate as software companies with the taxpayer as the e-filer of record, confirming this model does not require the operator to be a licensed preparer or hold a filing license.\",\n      \"source_url\": \"https://expatfile.tax/\"\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"unknown\",\n      \"evidence\": \"IRS e-file access requires becoming an IRS Authorized e-file Provider, which is a sanctioned program (not a terms-of-service violation), so this does not clearly fail T2. However, whether the one-person operator can independently obtain and maintain this authorization at scale, and how host-country e-filing/APIs work, is not fully confirmed by the search evidence.\",\n      \"source_url\": \"https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Pure software/SaaS product; no physical inventory, storage, or shipping is implied or required by the idea.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No hardware, fleets, or facilities are required; comparable competitors (Expatfile, MyExpatTaxes, ETO) operate as small/lean software teams.\",\n      \"source_url\": \"https://www.myexpattaxes.com/\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Every direct competitor found (MyExpatTaxes, Expatfile, ETO, H&R Block) offers 'live human support' or a 'Tax Professional review' add-on, suggesting that purely automated self-serve filing is insufficient for many PFIC/FBAR/cross-border edge cases and some human support is needed to close and retain customers at scale.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"evidence\": \"Not required for initial sales; product is consumer self-serve and priced per return (e.g., $115-$639), sold via direct-to-consumer marketing rather than enterprise procurement.\"\n    },\n    {\n      \"id\": \"T6\",\n      \"evidence\": \"Multiple existing players (Expatfile, MyExpatTaxes, Atamatax, ETO) show a fast, direct path to first paying customers is plausible within 90 days given established demand and simple per-return pricing models.\"\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"Expatfile\",\n      \"url\": \"https://expatfile.tax/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Not specified in snippet; per-return self-serve pricing\",\n      \"evidence\": \"Self-serve e-file software specifically for US expats, e-files federal return and FBAR directly with IRS.\"\n    },\n    {\n      \"name\": \"MyExpatTaxes\",\n      \"url\": \"https://www.myexpattaxes.com/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"$115–$639 per return depending on tier\",\n      \"evidence\": \"DIY expat tax software with investment/Schedule D support, FBAR, FATCA, plus optional professional review.\"\n    },\n    {\n      \"name\": \"H&R Block DIY Expat Tax Filing\",\n      \"url\": \"https://www.hrblock.com/expat-tax-preparation/diy-expat-tax-filing-online/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"$119 + $99/state + $49/FBAR (Employees); $169 base for Investor & self-employed\",\n      \"evidence\": \"Self-serve online expat tax software including an 'Investor & self-employed' tier covering brokerage/investment income.\"\n    },\n    {\n      \"name\": \"Atamatax\",\n      \"url\": \"https://www.atamatax.com/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Not specified\",\n      \"evidence\": \"Software specifically targeting PFIC/Form 8621/FBAR issues for US expats holding foreign brokerage investments, closely matching the described product.\"\n    },\n    {\n      \"name\": \"Nomadic.Tax\",\n      \"url\": \"https://nomadic.tax/for/us-expats-in-europe\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Fixed, transparent pricing (amount not specified)\",\n      \"evidence\": \"AI-assisted US tax filing product specifically for Americans living in Europe with foreign investment accounts.\"\n    },\n    {\n      \"name\": \"ExpatTaxOnline (ETO)\",\n      \"url\": \"https://www.expattaxonline.com/us-tax-self-preparation-software/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Not specified\",\n      \"evidence\": \"Self-prep software for US citizens abroad with e-file to IRS and live chat support.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"tax filing software for American expats with US investments living in Europe\",\n      \"self-serve expat tax filing product US citizens abroad brokerage accounts\"\n    ],\n    \"brave\": [\n      \"expat tax filing software US citizens abroad\",\n      \"TurboTax for American expats tax software\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 9309,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1683,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3048,
+          "output_tokens_details": {
+            "thinking_tokens": 1140
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

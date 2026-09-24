@@ -1,0 +1,157 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A11",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T20:34:46.866Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "c225ef37c5c093484645e8f82e0d7d398c09fce4d7c02a16dec61e72f4a17997",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 1679,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1679,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 251,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0069175,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNuNoJAE8bw9vJZkhFkT",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01VWo1daWaXr4MEi9WS2CiKB",
+            "name": "exa_search",
+            "input": {
+              "query": "automated swag sending triggered by Stripe new customer signup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01KXSQ53nYENBEukdWJTXWNf",
+            "name": "exa_search",
+            "input": {
+              "query": "branded welcome swag box service for SaaS customers automated"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01M3K6TW7BEj6avD8dTstG2o",
+            "name": "brave_search",
+            "input": {
+              "query": "Stripe integration send swag to new customers"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01L2aomHxX2zYRuoarEiG8yM",
+            "name": "brave_search",
+            "input": {
+              "query": "automated swag fulfillment platform API SaaS onboarding gift"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 1679,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1679,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 251,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "9a64f83fe404cd8e827e64b44271ccf6a1c048bad6cab2346870a33b3cb11ee9",
+      "usage": {
+        "input_tokens": 9164,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1679,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2985,
+        "output_tokens_details": {
+          "thinking_tokens": 1161
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0485138,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNuPJ5HxYU1MZef5vna6",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A11\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The operator is selling an automation/software service that triggers physical mailings; it does not file on behalf of customers, handle protected health data, give licensed advice, or need to hold a regulatory license. Selling to SaaS companies (regulated or not) does not trigger R001.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Stripe publishes a public, documented webhook/API for 'new customer' events (e.g., docs.stripe.com/get-started/api-request, Zapier's 'New Customer' trigger for Stripe) explicitly intended for third-party integrations, so the core dependency is a sanctioned, ToS-permitted API rather than an unauthorized scrape or private channel.\",\n      \"source_url\": \"https://docs.stripe.com/get-started/api-request\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Multiple existing platforms (SwagUp, Swag.com, Boxaroo, mula, Roody, BlinkSwag) already offer fully outsourced swag warehousing, printing, and shipping via API/Zapier, letting a solo operator build the Stripe-trigger layer on top of an existing fulfillment API rather than personally buying, storing, or shipping inventory.\",\n      \"source_url\": \"https://swag.com/automation\"\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No facility, fleet, or manufacturing capital is required; the physical fulfillment can be fully delegated to third-party swag/print/fulfillment APIs, so the automation business itself needs no infrastructure beyond software and API contracts.\",\n      \"source_url\": null\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Physical shipping requires collecting/validating mailing addresses, handling delivery failures, customs for international shipments, and occasional customer support for lost/damaged swag — friction that isn't fully automatable at scale.\"\n    },\n    {\n      \"id\": \"T4\",\n      \"evidence\": \"Selling to SaaS founders/marketing teams for a recurring operational tool may require some outbound sales or founder-led demos to land first paying logo customers, though self-serve signup via Stripe/Zapier-style flow is plausible.\"\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"SwagUp\",\n      \"url\": \"https://www.swagup.com\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Custom/quote-based\",\n      \"evidence\": \"Offers 'Send Swag' automations triggered by HRIS/CRM events (new hire, birthday) with Zapier connectivity, and has a direct Stripe-SwagUp Zapier integration.\"\n    },\n    {\n      \"name\": \"Swag.com\",\n      \"url\": \"https://swag.com/automation\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Custom/quote-based\",\n      \"evidence\": \"Provides a swag automation API explicitly for triggers like lead follow-up and onboarding, i.e., automated gift/swag sends tied to business events.\"\n    },\n    {\n      \"name\": \"Boxaroo\",\n      \"url\": \"https://boxaroo.co/en-global/pages/automate-employee-welcome-packs\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"Custom, 100-unit minimum\",\n      \"evidence\": \"Automates welcome pack shipping globally once a business event (new hire) fires, using their own warehousing — a close analog to shipping swag on a Stripe signup trigger.\"\n    },\n    {\n      \"name\": \"mula.\",\n      \"url\": \"https://www.gomula.com/onboarding\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"From ~€3.79/box\",\n      \"evidence\": \"Fully automated onboarding box platform connecting to HRIS/CRM with hands-off storage, packing, and worldwide shipping — same operating model proposed in A11.\"\n    },\n    {\n      \"name\": \"Giftsenda\",\n      \"url\": \"https://www.giftsenda.com/saas-gifting-platform-solution/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Pay-per-claimed-gift\",\n      \"evidence\": \"Markets specifically to SaaS companies for automated, CRM-integrated swag/gift sends to customers and leads, closely matching A11's target customer and trigger mechanism.\"\n    },\n    {\n      \"name\": \"BlinkSwag\",\n      \"url\": \"https://blinkswag.com/global-swag-fulfillment-playbook/\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"Custom\",\n      \"evidence\": \"API-driven swag fulfillment that auto-triggers onboarding kits when new hire/customer events occur in connected systems like Salesforce/HubSpot.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"automated swag sending triggered by Stripe new customer signup\",\n      \"branded welcome swag box service for SaaS customers automated\"\n    ],\n    \"brave\": [\n      \"Stripe integration send swag to new customers\",\n      \"automated swag fulfillment platform API SaaS onboarding gift\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 9164,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1679,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2985,
+          "output_tokens_details": {
+            "thinking_tokens": 1161
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

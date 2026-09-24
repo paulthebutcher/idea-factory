@@ -2,44 +2,44 @@
   "stage": "kill_gate",
   "idea_id": "A01",
   "model": "claude-sonnet-5",
-  "recorded_at": "2026-09-24T20:42:37.919Z",
+  "recorded_at": "2026-09-24T22:30:16.808Z",
   "calls": [
     {
       "index": 0,
-      "request_digest": "80522e65f7e3dcc862c0eea6839ed2925a8b13e0734233fbdc6a6e33fb421780",
+      "request_digest": "fcee274aff0f34cb44e59027671a65fef08450a01426f59247c78795b42ee10f",
       "usage": {
         "input_tokens": 105,
-        "cache_creation_input_tokens": 1703,
+        "cache_creation_input_tokens": 2046,
         "cache_read_input_tokens": 0,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 1703,
+          "ephemeral_5m_input_tokens": 2046,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 281,
+        "output_tokens": 292,
         "output_tokens_details": {
-          "thinking_tokens": 34
+          "thinking_tokens": 23
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.0072775,
+      "cost_usd": 0.008245,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfNuyWco8215chFCAABbh",
+        "id": "msg_011CfP4BapKnib1bTAaQnVe8",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "EtMCCpABCBIYAipAylsXyAQHMNbEMqRIEKM7G2XDA8/A2GpQNcNo9e5LCho23RoE92nfhy+Lg7SuB6kAuYmrOVzr2RMxy466TWnxezIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAbyW1tUGEgxPIMlKeXUXPk5GPlEaDFQux8iRSJfmk9McSSIww/8/C+piJF8xZF4QwS5CIKwGtDsaSGabxUmfx/hvxnpEMmRCRSkxhD14Qzig3rXLKnBvKrxd0ZbCj8bUx6TZwKT+qe9+0ciciKIvGi0krMzsYUAhn/YwDki4ZESfHLS6sIzwId+piUHAUBIAitgZQMO1Yf5wmfEH9pjTm7zqSV7yR+7Cp8s4s5b3/Bg5S+CPMDVeF/p0M+9I4+GBOHXf8nMNGAE="
+            "signature": "ErcCCpABCBIYAipAhbuKScm5ZwfdPCa5YvrL6v3/B3betwJ5MQPY5InCUeGS2bPvSGgXCSn08OtAAo6Nol+7JIBmrBp8eUW5CqL8YjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAffI1tUGEgznw6v2nQkYxxdw59caDImvsaRk1spkiCgIYCIwrInqmF0LvSHaRVSsTXf1l4WNW5xsIU/46PBTzvHbxJ6YttdX28k+qyJhhRpn3VCXKlSLN9SpcnKKfNapqUHwBhw5yf+6rz02uWjOwSrkjYU3r29Ts9hSbB0T0Vxqxf/49kRRTiQjmmqdl1TEEFX0BS55qEUuPU2NYvxGpiUX6g0i249i6lEYAQ=="
           },
           {
             "type": "tool_use",
-            "id": "toolu_01QNTgcTeMd8gvTHdoKCxgDj",
+            "id": "toolu_01YLE1awWhNC46vAD1LCTdYm",
             "name": "exa_search",
             "input": {
-              "query": "agent that automatically opens pull requests to fix breaking API changes in codebases"
+              "query": "agent that opens pull requests to fix breaking API changes in codebases"
             },
             "caller": {
               "type": "direct"
@@ -47,10 +47,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01XZide3UpEAytHuKNNPPGmc",
+            "id": "toolu_01VaS2BQbiE5ABYwfJ9XokHj",
             "name": "exa_search",
             "input": {
-              "query": "tool that tracks API deprecations and updates code automatically"
+              "query": "automatically detect third-party API breaking changes and auto-generate code fixes"
             },
             "caller": {
               "type": "direct"
@@ -58,10 +58,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01WKmDMETzpBPTxQPS2aipHm",
+            "id": "toolu_01URffU6Ef3x3kRyiTeUbCg4",
             "name": "brave_search",
             "input": {
-              "query": "API breaking change detector auto pull request"
+              "query": "AI agent tracks API breaking changes opens pull request fix"
             },
             "caller": {
               "type": "direct"
@@ -69,10 +69,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01TSP9cjvx3mHZ8LTBNd7Lz6",
+            "id": "toolu_01DUKPfFMzFE2yRqi5ZDB2Ef",
             "name": "brave_search",
             "input": {
-              "query": "dependabot for API changes automated PR"
+              "query": "\"breaking changes\" API dependency bot GitHub PR automation startup"
             },
             "caller": {
               "type": "direct"
@@ -85,15 +85,15 @@
         "stop_details": null,
         "usage": {
           "input_tokens": 105,
-          "cache_creation_input_tokens": 1703,
+          "cache_creation_input_tokens": 2046,
           "cache_read_input_tokens": 0,
           "cache_creation": {
-            "ephemeral_5m_input_tokens": 1703,
+            "ephemeral_5m_input_tokens": 2046,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 281,
+          "output_tokens": 292,
           "output_tokens_details": {
-            "thinking_tokens": 34
+            "thinking_tokens": 23
           },
           "service_tier": "standard",
           "inference_geo": "global"
@@ -103,106 +103,37 @@
     },
     {
       "index": 1,
-      "request_digest": "39e2b6f3fe3fbc4d93b64f0d042287cf0b986fa80c51582ffe13d99311b7c577",
+      "request_digest": "760a04ea3ba995384d25931044525117a4b109277ed8fdd7ad4fc3a28242542b",
       "usage": {
-        "input_tokens": 9451,
+        "input_tokens": 9746,
         "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1703,
+        "cache_read_input_tokens": 2046,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 278,
+        "output_tokens": 2570,
         "output_tokens_details": {
-          "thinking_tokens": 0
+          "thinking_tokens": 582
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.0220226,
+      "cost_usd": 0.045601199999999995,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfNuz2g4YBexguPdvnpNG",
+        "id": "msg_011CfP4C6WWdFuUW194Smj88",
         "type": "message",
         "role": "assistant",
         "content": [
           {
-            "type": "text",
-            "text": "This idea is technically feasible via GitHub Apps (a sanctioned, permitted integration path), doesn't require the operator to be a regulated party, doesn't need physical inventory, and doesn't require capital-intensive infrastructure. Multiple existing competitors (Nalvis, mendapi, apidrift.co, Since.dev, DepWatch, Ripple, Sync, BreakShield) validate feasibility and market demand."
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
           },
-          {
-            "type": "tool_use",
-            "id": "toolu_01VoHmpqKwZt3bDA3FmCMzTt",
-            "name": "brave_search",
-            "input": {
-              "query": "GitHub App API terms of service permitted automated code scanning pull requests"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_01NHTeJ2BFJpCHxYHq4DXZec",
-            "name": "exa_search",
-            "input": {
-              "query": "GitHub app single point of failure revoke access third party integration risk"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          }
-        ],
-        "container": null,
-        "stop_reason": "tool_use",
-        "stop_sequence": null,
-        "stop_details": null,
-        "usage": {
-          "input_tokens": 9451,
-          "cache_creation_input_tokens": 0,
-          "cache_read_input_tokens": 1703,
-          "cache_creation": {
-            "ephemeral_5m_input_tokens": 0,
-            "ephemeral_1h_input_tokens": 0
-          },
-          "output_tokens": 278,
-          "output_tokens_details": {
-            "thinking_tokens": 0
-          },
-          "service_tier": "standard",
-          "inference_geo": "global"
-        },
-        "diagnostics": null
-      }
-    },
-    {
-      "index": 2,
-      "request_digest": "5f6572e91220c74371b964d813000013cbf4c9d57d530433b64fd2b70c1d02c6",
-      "usage": {
-        "input_tokens": 13489,
-        "cache_creation_input_tokens": 0,
-        "cache_read_input_tokens": 1703,
-        "cache_creation": {
-          "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 0
-        },
-        "output_tokens": 1959,
-        "output_tokens_details": {
-          "thinking_tokens": 0
-        },
-        "service_tier": "standard",
-        "inference_geo": "global"
-      },
-      "cost_usd": 0.0469086,
-      "response": {
-        "model": "claude-sonnet-5",
-        "id": "msg_011CfNuzW5aQeFUeg1DWLwSw",
-        "type": "message",
-        "role": "assistant",
-        "content": [
           {
             "type": "text",
-            "text": "```json\n{\n  \"idea_id\": \"A01\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The operator is selling software (a monitoring/PR-drafting agent) to engineering teams. It does not file on the customer's behalf in a regulatory sense, does not handle protected health data, and does not require holding any license to operate. This is software sold to potentially regulated customers, which the rule explicitly exempts.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Core function relies on GitHub Apps (a sanctioned, documented integration path with granular permissions, webhooks, and installation tokens per GitHub's own developer docs) plus public vendor changelogs/OpenAPI specs. This is the standard, permitted way multiple competitors (Nalvis, mendapi, apidrift.co, Since.dev, Ripple, BreakShield, Sync) already operate. Revocation risk exists (as with any GitHub App) but is not prohibited use of an unsanctioned API -- it's the intended integration surface.\",\n      \"source_url\": \"https://docs.github.com/en/apps/using-github-apps/authorizing-github-apps\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"No physical inventory of any kind is required; the product is purely software (SaaS/GitHub App) reading changelogs and code, and writing PRs.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No capital or physical infrastructure requirement beyond standard cloud compute; multiple single-founder/small teams already ship this exact product (mendapi, Ripple, BreakShield, Nalvis) using GitHub Apps and LLM-based codemods.\",\n      \"source_url\": \"https://github.com/mendapi/mendapi\"\n    }\n  ],\n  \"flags\": [\n    { \"id\": \"T4\", \"evidence\": \"Selling into engineering teams at startups/SMBs is largely self-serve (GitHub Marketplace / GitHub App install flow) as evidenced by competitors offering free tiers and $14-29/mo self-signup, so field sales is not required, but larger SMB/enterprise accounts may still need light sales touch.\" },\n    { \"id\": \"T5\", \"evidence\": \"False-positive PRs or edge-case codebases may require support/triage per customer as codebases and API usage patterns vary, though most competitors position this as largely automated with human-in-the-loop PR review only.\" },\n    { \"id\": \"T6\", \"evidence\": \"Multiple near-identical products already live and monetizing (apidrift.co charging $29/mo, Nalvis with paid tiers from $14/mo) indicating a fast path to a first paying customer is plausible within 90 days.\" }\n  ],\n  \"competitors\": [\n    { \"name\": \"Nalvis\", \"url\": \"https://nalvis.dev/\", \"relationship\": \"direct\", \"pricing\": \"Free GitHub Action; hosted watcher from $14/mo\", \"evidence\": \"Watches API providers, finds affected call sites, opens reviewable fix PRs in CI.\" },\n    { \"name\": \"mendapi\", \"url\": \"https://mendapi.com/\", \"relationship\": \"direct\", \"pricing\": \"Open source (AGPL), local-first, enterprise self-hosted\", \"evidence\": \"Dependabot for APIs: detects upstream breaking changes, scans codebase for impact, generates fix PR.\" },\n    { \"name\": \"apidrift.co\", \"url\": \"https://apidrift.co/\", \"relationship\": \"direct\", \"pricing\": \"14-day free trial, $29/mo after\", \"evidence\": \"Watches dependencies' changelogs, finds deprecated call lines in repo, opens PR with suggested fix via GitHub App.\" },\n    { \"name\": \"Since.dev\", \"url\": \"https://since.dev/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Watches APIs/packages/SDKs/models, turns dependency changes into repair PRs reviewed via customer's CI.\" },\n    { \"name\": \"DepWatch\", \"url\": \"https://depwatchai.com/\", \"relationship\": \"adjacent\", \"pricing\": \"Free to start\", \"evidence\": \"Monitors APIs for breaking changes and deprecations, sends migration reports, but appears alert/report-based rather than auto-PR.\" },\n    { \"name\": \"Ripple\", \"url\": \"https://github.com/Aakash2408/ripple\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Detects breaking API changes, finds every consumer, generates fix, opens PR via GitHub App install.\" },\n    { \"name\": \"BreakShield CI\", \"url\": \"https://breakshield-ci.vercel.app\", \"relationship\": \"direct\", \"pricing\": \"Free GitHub App\", \"evidence\": \"Catches breaking API changes in PRs using AST analysis with AI auto-fix generating fix PRs.\" },\n    { \"name\": \"Sync\", \"url\": \"https://github.com/stroland02/Sync\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Watches third-party APIs, opens CI-verified pull requests when one breaks or drifts (pre-alpha).\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"agent that automatically opens pull requests to fix breaking API changes in codebases\",\n      \"tool that tracks API deprecations and updates code automatically\",\n      \"GitHub app single point of failure revoke access third party integration risk\"\n    ],\n    \"brave\": [\n      \"API breaking change detector auto pull request\",\n      \"dependabot for API changes automated PR\",\n      \"GitHub App API terms of service permitted automated code scanning pull requests\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+            "text": "```json\n{\n  \"idea_id\": \"A01\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The business does not hold or move customer funds, does not act as a licensed professional of record (no tax, legal, medical, or investment advice), and requires no license or regulator-supervised registration to scan code and open PRs.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Core function (opening PRs in customer codebases) depends on the GitHub API/GitHub Apps, which is a sanctioned, documented integration path explicitly designed for third-party bots (e.g., Dependabot, Copilot Coding Agent, and multiple competitors like Ripple and mendapi use GitHub Apps this way). No terms-of-service violation is inherent in the idea as written.\",\n      \"source_url\": \"https://github.com/Aakash2408/ripple\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"No physical inventory, goods, or shipping involved; the product is purely software/agent-based.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"Requires only compute for scanning/LLM inference and standard cloud infra, well within one-person-plus-AI-agents capability, as evidenced by numerous solo/small-team GitHub projects already doing this (mendapi, Ripple, Sync, api-guardian) with minimal team size shown in repo contributor counts.\",\n      \"source_url\": \"https://github.com/mendapi/mendapi\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T8\",\n      \"evidence\": \"The service requires read/write access to customer private source code repositories to scan usages and open PRs, which necessitates data handling terms, a data processing/security addendum, and possibly a code-access/privacy policy before onboarding customers with proprietary codebases.\",\n      \"obligations\": [\n        \"Data processing agreement / addendum covering handling of customer source code and repository access\",\n        \"Privacy policy and terms of service covering scope of code access, retention, and third-party LLM data flows (if any code is sent to an LLM)\",\n        \"GitHub App permissions scoping and security review disclosure for repository access\"\n      ]\n    },\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Some PRs may require human judgment to validate correctness of automated fixes for edge-case breaking changes, which could require support interaction per customer beyond full automation, though most competitors position this as CI-verified and reviewable diffs rather than requiring live support.\",\n      \"obligations\": []\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"Nalvis\",\n      \"url\": \"https://nalvis.dev/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"Free GitHub Action; hosted watcher from $14/mo\",\n      \"evidence\": \"Watches API providers, finds call sites affected by breaking changes, opens a reviewable fix PR.\"\n    },\n    {\n      \"name\": \"mendapi\",\n      \"url\": \"https://mendapi.com/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Dependabot for APIs — detects upstream breaking changes, scans codebase for impact, opens the fix PR.\"\n    },\n    {\n      \"name\": \"Ripple\",\n      \"url\": \"https://github.com/Aakash2408/ripple\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Detects breaking API changes, finds every consumer, generates fix, opens PR via GitHub App install.\"\n    },\n    {\n      \"name\": \"Sync\",\n      \"url\": \"https://github.com/stroland02/Sync\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Watches third-party APIs code calls, opens CI-verified PRs when one breaks, drifts, or wastes money.\"\n    },\n    {\n      \"name\": \"Since.dev\",\n      \"url\": \"https://since.dev/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Watches APIs, packages, SDKs, models and turns supported dependency changes into repair PRs.\"\n    },\n    {\n      \"name\": \"Delimit\",\n      \"url\": \"https://delimit.ai\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": null,\n      \"evidence\": \"Catches breaking API changes on every PR with severity-graded comments and migration guides; focused on detection/merge-gate rather than auto-fix PRs.\"\n    },\n    {\n      \"name\": \"api-guardian\",\n      \"url\": \"https://github.com/Bigyan1313/api-guardian\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Watches OpenAPI spec for breaking changes, patches code with AI agent, tests patch, opens PR.\"\n    },\n    {\n      \"name\": \"ApiPatch\",\n      \"url\": \"https://dev.to/morad_moqbel/how-we-built-an-autonomous-ai-agent-that-audited-187-subprojects-and-got-prs-merged-by-google-cloud-3iij\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Open-source GitHub Action that auto-migrates code for API/SDK changes and opens auto-PRs; already merged into real projects.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"agent that opens pull requests to fix breaking API changes in codebases\",\n      \"automatically detect third-party API breaking changes and auto-generate code fixes\"\n    ],\n    \"brave\": [\n      \"AI agent tracks API breaking changes opens pull request fix\",\n      \"\\\"breaking changes\\\" API dependency bot GitHub PR automation startup\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
           }
         ],
         "container": null,
@@ -210,16 +141,16 @@
         "stop_sequence": null,
         "stop_details": null,
         "usage": {
-          "input_tokens": 13489,
+          "input_tokens": 9746,
           "cache_creation_input_tokens": 0,
-          "cache_read_input_tokens": 1703,
+          "cache_read_input_tokens": 2046,
           "cache_creation": {
             "ephemeral_5m_input_tokens": 0,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 1959,
+          "output_tokens": 2570,
           "output_tokens_details": {
-            "thinking_tokens": 0
+            "thinking_tokens": 582
           },
           "service_tier": "standard",
           "inference_geo": "global"
