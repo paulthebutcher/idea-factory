@@ -139,25 +139,74 @@ function formatRules(rules: AgentSafeRule[]): string {
   return rules.map((r) => `- ${r.id} (${r.kind.replace("_", " ")}): ${r.text}`).join("\n");
 }
 
-/** Extract the first JSON object from model text, tolerating code fences and surrounding prose. */
+/**
+ * Escape raw control characters that appear inside JSON string literals (models sometimes emit a
+ * literal newline or tab inside a long markdown string). Characters outside strings are untouched.
+ */
+export function repairJsonControlChars(json: string): string {
+  let out = "";
+  let inString = false;
+  let escaped = false;
+  for (const ch of json) {
+    if (inString) {
+      if (escaped) {
+        escaped = false;
+        out += ch;
+        continue;
+      }
+      if (ch === "\\") {
+        escaped = true;
+        out += ch;
+        continue;
+      }
+      if (ch === '"') {
+        inString = false;
+        out += ch;
+        continue;
+      }
+      const code = ch.charCodeAt(0);
+      if (code < 0x20) {
+        out += ch === "\n" ? "\\n" : ch === "\r" ? "\\r" : ch === "\t" ? "\\t" : `\\u${code.toString(16).padStart(4, "0")}`;
+        continue;
+      }
+      out += ch;
+      continue;
+    }
+    if (ch === '"') inString = true;
+    out += ch;
+  }
+  return out;
+}
+
+function parseLenient(candidate: string): unknown {
+  try {
+    return JSON.parse(candidate);
+  } catch (e) {
+    const repaired = repairJsonControlChars(candidate);
+    if (repaired !== candidate) return JSON.parse(repaired);
+    throw e;
+  }
+}
+
+/** Extract the first JSON object from model text, tolerating code fences, surrounding prose and raw control characters inside strings. */
 export function extractJson(text: string): unknown {
   const trimmed = text.trim();
   try {
-    return JSON.parse(trimmed);
+    return parseLenient(trimmed);
   } catch {
     /* fall through */
   }
   const fence = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
   if (fence) {
     try {
-      return JSON.parse(fence[1].trim());
+      return parseLenient(fence[1].trim());
     } catch {
       /* fall through */
     }
   }
   const start = trimmed.indexOf("{");
   const end = trimmed.lastIndexOf("}");
-  if (start >= 0 && end > start) return JSON.parse(trimmed.slice(start, end + 1));
+  if (start >= 0 && end > start) return parseLenient(trimmed.slice(start, end + 1));
   throw new Error("no JSON object found in model output");
 }
 
