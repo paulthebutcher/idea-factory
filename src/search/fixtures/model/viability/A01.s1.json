@@ -1,0 +1,420 @@
+{
+  "stage": "viability",
+  "idea_id": "A01",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T23:05:49.760Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "8b66ad2e64ff769794e96d799b9c5947b5c10604dfbce7923f09d548cf5d0bbe",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2295,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2295,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 363,
+        "output_tokens_details": {
+          "thinking_tokens": 90
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0093715,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP6tnQD8F2PwZCNf68ko",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Ev0DCpABCBIYAipAyzCIZIJ4zT1aaSwOREcO1xyEftp8ZNoGLyBEiPac31Sab+2Rw/JzT8lEcNKrT2iOIYhK2AMeEgOAyEdCgUhT5DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcvZ1tUGEgyVBY22EHKovD5iCsgaDFu+RTko+hl9TUb6eSIwvniHHAyMqFWG+T6mi7YQ6ELM1kLWJ9xMv9oQVt+NW7G0m/H9Fjyh0eJ0Ta8XGUbmKpkCebTiTkakluVL2J+/GTPauXKf3n2dV6IOpyzbC1m2xpNxACjUpYrmzd4/XZgsIiCxQfJBQPClL/UFhjd4ess5Vz4OCLRec0smh8aMl/M9C1gZhL4/vdtmq3ak+oIlk0g1QaMy8AIPi+a5D6nA/EWxnFT63nxLqeD8Z0gQvLYLo6OD0BrlhW1qGP6jZCCk2RCfVBlokDHk8iR0EOKwQ9ZJlH38WQUchV4360Z+xFMQRL3zsMHlCliY06SgPVh5s5NAkmcSpwWWK6gHxte1T3BJ4pIh4n7e4qUPpg5CN9WMynVkhYSTG9r7GqXaYPcs2Fj3KCxm7tjB0jiL0JqjAyPxr+fwm+4N+BQhRAeqdpzzSXErwIDUY9dDzUgYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PfuCqf6abUtUdgPKkAUDSt",
+            "name": "brave_search",
+            "input": {
+              "query": "Nalvis.dev pricing GitHub Action API breaking changes"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01W7xur9vTgBEsNkFxDMEMUE",
+            "name": "brave_search",
+            "input": {
+              "query": "since.dev API breaking changes tracker pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014EnPPYVq2oKZ65YJEHdDi4",
+            "name": "brave_search",
+            "input": {
+              "query": "\"breaking change\" API dependency update pull request pain \"Stripe\" OR \"Twilio\" developer forum"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01N469rr3QhAakefkGcxYVe1",
+            "name": "exa_search",
+            "input": {
+              "query": "developer frustrated third-party API breaking change broke production no warning"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2295,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2295,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 363,
+          "output_tokens_details": {
+            "thinking_tokens": 90
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "6b6e7df6fccfe4839a0d0553120750199518f153f669c7d957158f1dac154b34",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6319,
+        "cache_read_input_tokens": 2295,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6319,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 372,
+        "output_tokens_details": {
+          "thinking_tokens": 143
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0199805,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP6uUmatWg3WsZYzK2hr",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsQECpABCBIYAipAyRn4e1/xaBL+jYgIMyenQaDK+oYnALFT87ehdktGJiY0dayeo8PzKEp0MRyixZ39iNWfyyeWjXEK8+IUvodV8TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdbZ1tUGEgyMhj2fUcvBrWmm1AcaDAnFfrrA7NFG1xbdtCIwHHgQsy+xhv/TCCqjSj4fluUn1sceNUVHCxjX/dhzA6tuTk5/2V6oGAoZGkd1k8UIKuACyDWlTbP1VcEUcr7nmsEQKw8aUUK5ypVFohnK/MgNYzoqcmke5l8UFZdcOc9OSJWF3gUYFIfkKvs+TXvaGvYYMV09W7oqLtW6GPHyxMa36qC7Br4NBJHr7jG821fCRUfQor3a4bKSpOYRaAOyWf/tpGUjc7FncRRyy63aVIHqFAh3y9ACTU+fM9x25f4+C/ww5PEevMqCpzBGyZaBcNi3oOQ4V+OWkxKtsukaRiaP9ZoafxY0AvFVTG06D6yoPeG+wvUYuZUAelQt+fA5k01asxzBZdxNdaMnH1PBhLRGXUfa1Xm+MB8PO7MS9QjXuvMrvBiqvw0suY7vdZCmXmGeXEC2rT5vBce4zEjoqv9EDrkKphGYunPheCNDrQHD6eXrW32TJ8vxJPm0P/+f+9hlyBujBTc8U7UZtwDjfLtC78i9a9VvhludIaH+xG7n61tSnpD8PTz0c8JGgKpPSPIGAxgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01AHc9uHgQDztZQFgAEwA24K",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://nalvis.dev/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LgKwNdp5tpF6zpLvGEFwGJ",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://since.dev/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0167JYhDKEfo5TKsXuXbjY5D",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://mendapi.com/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017CyAU87wSwsL6bhYfgh5Gg",
+            "name": "brave_search",
+            "input": {
+              "query": "Product Hunt launch cost customer acquisition developer tool"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 6319,
+          "cache_read_input_tokens": 2295,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6319,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 372,
+          "output_tokens_details": {
+            "thinking_tokens": 143
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "8970eac31bc709fe3aade503d909a7119e190ca4567491d86616af0fc0feb648",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 9667,
+        "cache_read_input_tokens": 8614,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 9667,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 646,
+        "output_tokens_details": {
+          "thinking_tokens": 443
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0323543,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP6uq3jh6oqrBFjT9tkg",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018oab5YKZgiSc7fe2TC2kMH",
+            "name": "brave_search",
+            "input": {
+              "query": "since.dev pricing Pro plan price per month"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01ERaNL8J9gBdR64xDf1qSif",
+            "name": "brave_search",
+            "input": {
+              "query": "GitHub Marketplace app customer acquisition cost startup developer tool"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BQYLbetVFYEgYB84HpqLjm",
+            "name": "brave_search",
+            "input": {
+              "query": "mendapi Ripple api-guardian ApiPatch github breaking change agent launch"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 9667,
+          "cache_read_input_tokens": 8614,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 9667,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 646,
+          "output_tokens_details": {
+            "thinking_tokens": 443
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "01ca8cac512f791315b6a1ba3796bded110ce7ec4a6425ce8e6c0e4c345b52c5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3591,
+        "cache_read_input_tokens": 18281,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3591,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 607,
+        "output_tokens_details": {
+          "thinking_tokens": 473
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0187077,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP6vZTPoZUwxaR2PUNuJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016dnkPV8Ga3obENh9tbuScQ",
+            "name": "brave_search",
+            "input": {
+              "query": "SOC 2 requirement code access startup tool enterprise customers github app compliance"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012yNw5B5FdW7DW6LwwyBok5",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.ycombinator.com/rfs"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3591,
+          "cache_read_input_tokens": 18281,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3591,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 607,
+          "output_tokens_details": {
+            "thinking_tokens": 473
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "e9cbf98c03e34c2910a7d0b65ed0677eac7d6f80096ee413f1300897d856552f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4138,
+        "cache_read_input_tokens": 21872,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4138,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 7245,
+        "output_tokens_details": {
+          "thinking_tokens": 1666
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0871734,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP6wDC2M9r8t7QRFhXDX",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A01\",\n  \"payer\": {\n    \"who\": \"Engineering leads / CTOs at startups and SMBs that depend on many third-party APIs (the team, not an individual developer)\",\n    \"price_hypothesis\": \"$14-$150/mo per organization for a hosted watcher-plus-PR service, tiered by number of connected repos/providers, anchored to Nalvis's hosted tier ($14/mo) and Since.dev's Pro/Studio tiers ($149/mo for 15 repos)\",\n    \"comparable_url\": \"https://nalvis.dev/\"\n  },\n  \"competitors\": [\n    {\"name\": \"Nalvis\", \"url\": \"https://nalvis.dev/\", \"pricing\": \"Free GitHub Action (open-source engine); hosted watcher from $14/mo, pre-launch/waitlist as of research date\", \"pricing_url\": \"https://nalvis.dev/\"},\n    {\"name\": \"Since.dev\", \"url\": \"https://since.dev/\", \"pricing\": \"Free tier (1 repo, 25 hosted AI credits, no repair PRs); Pro tier (5 repos, bring-your-own-model, automatic repair PRs, price not disclosed on page); Studio $149/mo ($1,490/yr), 15 repos\", \"pricing_url\": \"https://since.dev/\"},\n    {\"name\": \"mendapi\", \"url\": \"https://mendapi.com/\", \"pricing\": \"CLI scanner is free/open-source (AGPL) on npm; hosted monitoring is waitlist-only, no price published\", \"pricing_url\": \"https://mendapi.com/\"},\n    {\"name\": \"ApiPatch\", \"url\": \"https://github.com/MoradMoqbel/apipatch\", \"pricing\": \"Open-source agent, published on PyPI/GitHub, no pricing model found (appears to be a portfolio/demo project)\", \"pricing_url\": \"https://pypi.org/project/apipatch/\"},\n    {\"name\": \"Ripple\", \"url\": \"https://github.com/Aakash2408/ripple\", \"pricing\": \"NOT FOUND (GitHub repo, no pricing page located)\", \"pricing_url\": \"NOT FOUND\"},\n    {\"name\": \"Sync\", \"url\": \"https://github.com/stroland02/Sync\", \"pricing\": \"NOT FOUND (GitHub repo, no pricing page located)\", \"pricing_url\": \"NOT FOUND\"},\n    {\"name\": \"api-guardian\", \"url\": \"https://github.com/Bigyan1313/api-guardian\", \"pricing\": \"NOT FOUND (GitHub repo, no pricing page located)\", \"pricing_url\": \"NOT FOUND\"}\n  ],\n  \"competitors_not_found_queries\": [\n    \"Ripple github breaking change agent pricing\",\n    \"Sync stroland02 github pricing\",\n    \"api-guardian Bigyan1313 pricing\"\n  ],\n  \"acquisition_channel\": [\n    {\"channel\": \"GitHub Marketplace / GitHub Action listing\", \"cost_estimate\": \"Free to list; GitHub takes a cut of marketplace transactions once a developer's monthly revenue exceeds $500 (financial onboarding and verified-publisher status required for paid plans)\", \"source_url\": \"https://docs.github.com/en/apps/github-marketplace/selling-your-app-on-github-marketplace/receiving-payment-for-app-purchases\"},\n    {\"channel\": \"Developer content marketing (dev.to posts describing the pain / build story)\", \"cost_estimate\": \"Near-zero cash cost, founder time only; this is the exact channel every found competitor (mendapi, ApiPatch, individual devs) is already using to generate demand-side proof and inbound interest\", \"source_url\": \"https://dev.to/mendapi/your-api-provider-shipped-a-breaking-change-heres-how-to-find-what-it-breaks-in-your-code-3657\"},\n    {\"channel\": \"Product Hunt launch\", \"cost_estimate\": \"No listing fee, but opportunity cost estimated at $3,300-$6,000 in founder time at a $50/hr rate for a properly prepared launch\", \"source_url\": \"https://uprowshub.com/campaigns/blog/product-hunt-launch-costs\"}\n  ],\n  \"demand_evidence\": [\n    {\"quote\": \"Twice this year, we got user complaints before we even knew something was broken. The culprit both times? Silent breaking changes from upstream APIs.\", \"url\": \"https://dev.to/kriisht/we-got-burned-by-silent-api-changes-twice-this-year-how-do-you-handle-this-17pl\"},\n    {\"quote\": \"Stripe had quietly changed the structure of their payment_intent.succeeded payload... No announcement. No deprecation warning.\", \"url\": \"https://dev.to/kubabuilds/how-stripe-silently-broke-my-production-app-and-how-i-built-a-fix-p7i\"},\n    {\"quote\": \"Your tests won't catch this because your tests use static fixtures you wrote months ago. Standard monitoring won't catch it\", \"url\": \"https://dev.to/malikad778/how-a-silent-api-update-broke-our-billing-and-how-to-prevent-it-31ob\"}\n  ],\n  \"case_for\": \"The core workflow — watch public changelogs/specs, diff for caller-visible breaking changes, AST-match affected call sites, generate a codemod or AI-drafted patch, open a PR — is exactly the kind of bounded, tool-augmented pipeline that a solo builder with AI coding agents can assemble in six weeks, and multiple independent solo/small teams (Nalvis, mendapi, ApiPatch, Since.dev) have already proven a working MVP is buildable fast and cheaply, several as apparent one/two-person efforts. Demand is corroborated by numerous unprompted developer posts describing exactly this pain across Stripe, Shopify, Twilio, and OpenAI, and distribution is nearly free via GitHub Marketplace and dev.to, the same channels every competitor is already using to acquire early users.\",\n  \"case_against\": \"This niche was independently 'discovered' and shipped by at least seven other builders within roughly the same few months in 2026 (Nalvis, Since.dev, mendapi, ApiPatch, Ripple, Sync, api-guardian), most citing the identical YC RFS as their starting point — meaning a six-week solo build enters a saturated field with no head start and weak differentiation on the core mechanism (OpenAPI/SDK diffing plus codemods is a commodity technique, and mendapi and Nalvis are already open-sourcing their engines for free). The harder problem isn't detection, it's trust: getting a startup to grant a neutral third party write access to open PRs against production code requires security posture (SOC2-type assurances, local-only scanning, no-code-leaves-CI guarantees) that every serious competitor is already emphasizing on their landing page as a primary sell — that credibility-building takes longer than six weeks and is hard to fake as a lone operator. Additionally, the vendors themselves (Stripe's own upgrade/changelog tooling) are moving to solve this natively, which could commoditize or obsolete a third-party layer, and the free/open-source engines from competitors put continuous downward pressure on price, undermining the $14-150/mo anchor.\",\n  \"open_questions\": [\n    \"Will engineering teams actually grant a third-party agent write/PR access to production repositories without an extensive security review, or does this require SOC2/enterprise trust infrastructure before first paying customer?\",\n    \"Given at least 7 near-identical entrants already exist, what specific coverage (which providers/SDKs), speed, or trust guarantee would make a new entrant chosen over Nalvis, mendapi, or Since.dev rather than starting from a checked-out open-source engine and self-hosting?\",\n    \"What conversion rate and price point actually holds once free/open-source engines (mendapi CLI, Nalvis Action) are available for teams to run themselves at zero marginal cost?\",\n    \"How many providers/SDKs need to be covered (vs. the 1-5 each competitor currently supports) before a typical SMB with 5-10 third-party API dependencies finds the tool useful enough to pay?\",\n    \"Do API vendors themselves (Stripe, Shopify) plan to ship this capability natively, and on what timeline, which would remove the reason for a neutral third party to exist?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"Establish a data handling / privacy policy and repo-access scope (what code, metadata, or diffs leave the customer's environment) before requesting GitHub App permissions, since every found competitor markets 'code never leaves your machine' as a core trust claim\",\n        \"kind\": \"one_time\",\n        \"consult_scope\": \"1-2 hour legal/privacy consult to draft a data processing addendum (DPA) and permission-scope disclosure matching GitHub Marketplace app requirements\",\n        \"source_url\": \"https://docs.github.com/en/apps/github-marketplace/selling-your-app-on-github-marketplace/pricing-plans-for-github-marketplace-apps\"\n      },\n      {\n        \"obligation\": \"SOC 2 Type II attestation (or equivalent security posture) typically expected before enterprise/SMB customers grant code-access tooling broad repo permissions\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"Not a one-time legal task; requires ongoing compliance program (policies, audits, evidence collection) generally out of scope for a 6-week solo build\",\n        \"source_url\": \"https://scytale.ai/resources/setting-up-github-for-soc-2-compliance/\"\n      }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Engineering teams have no time to read every API vendor's changelog manually [unsourced generalization, though echoed anecdotally in dev.to threads cited]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"# Evidence Brief: A01 — Neutral Third-Party API Breaking-Change Agent\\n\\n## Idea\\nA neutral third-party agent scans customer codebases, tracks breaking changes across API vendors, identifies affected call sites, and opens PRs with fixes. Source: YC RFS (https://www.ycombinator.com/rfs).\\n\\n## Payer\\nEngineering leads at startups/SMBs juggling many third-party API dependencies. Price hypothesis: $14-150/mo per org, anchored to Nalvis's hosted tier (from $14/mo, https://nalvis.dev/) and Since.dev's Studio tier ($149/mo, https://since.dev/).\\n\\n## Competitors\\nThe kill gate undercounted the field's density. Confirmed via direct fetch:\\n- **Nalvis** (https://nalvis.dev/): free open-source GitHub Action engine + hosted watcher from $14/mo. Pre-launch/waitlist. Covers Algolia, Clerk, Svix at v1; Stripe/Shopify/Twilio 'upcoming.'\\n- **Since.dev** (https://since.dev/): Free / Pro (BYO model key, price not disclosed) / Studio $149/mo for 15 repos. Positions itself as 'self-repairable software' with MCP integration for agents.\\n- **mendapi** (https://mendapi.com/): free, open-source (AGPL), local-only CLI scanner + fixer; hosted monitoring is waitlist-only, no price yet. Explicitly targets fintech (Stripe/Plaid/PayPal) with 'audited auto-fix packs.'\\n- **ApiPatch** (https://github.com/MoradMoqbel/apipatch, https://pypi.org/project/apipatch/): open-source autonomous agent, published on PyPI, framed as a portfolio/demo project (claims PRs merged into Google Cloud subprojects).\\n- **Ripple, Sync, api-guardian**: GitHub repos with no discoverable pricing (NOT FOUND after search).\\n\\nAll of the well-developed entrants (Nalvis, Since.dev, mendapi) appear to have launched or gained visibility within a similar window in 2026, several citing security/trust ('code never leaves your machine,' 'no auto-merge') as their primary differentiator rather than detection technology.\\n\\n## Acquisition channels\\n1. **GitHub Marketplace** — free to list; GitHub takes a platform cut once revenue passes $500/mo, requires verified-publisher onboarding for paid plans (https://docs.github.com/en/apps/github-marketplace/selling-your-app-on-github-marketplace/receiving-payment-for-app-purchases).\\n2. **Dev.to content marketing** — the exact channel mendapi and other builders already use to publish build-story and pain-point posts (https://dev.to/mendapi/your-api-provider-shipped-a-breaking-change-heres-how-to-find-what-it-breaks-in-your-code-3657); near-zero cash cost.\\n3. **Product Hunt launch** — no listing fee but ~$3,300-$6,000 in founder opportunity cost for a properly prepared launch (https://uprowshub.com/campaigns/blog/product-hunt-launch-costs).\\n\\n## Demand evidence\\n- \\\"Twice this year, we got user complaints before we even knew something was broken. The culprit both times? Silent breaking changes from upstream APIs.\\\" (https://dev.to/kriisht/we-got-burned-by-silent-api-changes-twice-this-year-how-do-you-handle-this-17pl)\\n- \\\"Stripe had quietly changed the structure of their payment_intent.succeeded payload... No announcement. No deprecation warning.\\\" (https://dev.to/kubabuilds/how-stripe-silently-broke-my-production-app-and-how-i-built-a-fix-p7i)\\n- \\\"Your tests won't catch this because your tests use static fixtures you wrote months ago. Standard monitoring won't catch it.\\\" (https://dev.to/malikad778/how-a-silent-api-update-broke-our-billing-and-how-to-prevent-it-31ob)\\n\\n## Case for\\nThe pipeline (watch → diff → AST-match → codemod/AI-draft → PR) is a bounded, automatable workflow well-suited to a solo builder using AI agents; several near-solo teams have already shipped working MVPs in this exact space within weeks, proving technical feasibility. Real, recurring, and independently-voiced developer pain exists across major API vendors (Stripe, Shopify, Twilio, OpenAI). Distribution is nearly free via GitHub Marketplace and dev.to — channels competitors are already using successfully to generate visibility.\\n\\n## Case against\\nAt least seven near-identical products (several explicitly derived from the same YC RFS) have appeared within months of each other, several already open-sourcing their core detection engine for free, which puts structural downward pressure on the $14-150/mo price anchor. The real bottleneck isn't detection — it's earning the trust needed for a startup to grant a neutral third party PR-opening access to production code, which every serious competitor addresses with heavy security messaging ('no auto-merge,' 'code never leaves your machine,' local-only scanning) that takes longer than six weeks to establish credibly as a solo operator. Vendors themselves (e.g., Stripe's own upgrade/changelog tooling) are also moving to solve this natively, threatening to commoditize the entire category.\\n\\n## Open questions\\n- Will teams grant write/PR access without extensive security vetting?\\n- What distinguishes a new entrant from Nalvis/mendapi/Since.dev, all of which already exist and partly overlap in provider coverage?\\n- Does the $14-150/mo price hold once free, self-hostable engines are available?\\n- How many providers must be covered before a typical SMB (5-10 API dependencies) sees enough value to pay?\\n- Are API vendors planning native tooling that removes the need for a third party?\\n\\n## Regulatory setup\\n- One-time: draft a data-handling/privacy policy and GitHub App permission-scope disclosure before requesting repo access (1-2 hr legal consult), per GitHub Marketplace requirements.\\n- Ongoing: SOC 2 Type II or equivalent security posture is commonly expected before SMB/enterprise customers grant broad code-access permissions — an ongoing compliance program, not a one-time task, and likely out of scope for a 6-week build.\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 4138,
+          "cache_read_input_tokens": 21872,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 4138,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 7245,
+          "output_tokens_details": {
+            "thinking_tokens": 1666
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

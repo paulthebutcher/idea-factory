@@ -50,7 +50,7 @@ export type KillGateOutputT = z.infer<typeof KillGateOutput>;
 export interface RunnerNotes {
   model_verdict: "pass" | "kill" | null;
   overrides: string[];
-  notes: string[];
+  remarks: string[];
   variant_id: string | null;
   self_found: boolean;
 }
@@ -130,7 +130,7 @@ const INJECTION_PATTERNS: RegExp[] = [
 export const MIN_QUERIES_PER_ENGINE = 2;
 
 // Baseline items every software business needs. Never a T8 obligation.
-export const T8_BASELINE = /\b(privacy (policy|notice|terms)|terms of (service|use)|\btos\b|gdpr|ccpa|cpra|cookie (consent|banner|policy)|data processing (agreement|addendum|terms)|\bdpa\b)\b/i;
+export const T8_BASELINE = /(privacy[ -](policy|notice|terms)|privacy\/terms|terms[ -]of[ -](service|use)|\btos\b|\bgdpr\b|\bccpa\b|\bcpra\b|cookie[ -](consent|banner|policy)|data processing (agreement|addendum|terms)|\bdpa\b)/i;
 // Ongoing obligations. When R001 fired they belong there and are not repeated under T8.
 export const T8_ONGOING = /\b(ongoing|annual|periodic|renewal|exams?|examinations?|money transmit|msb registration|bsa|aml program|surety bond|licens(e|ing|ure) (with|and|from|under|requirements?)|state licens|investment adviser|broker.dealer|insurance producer)\b/i;
 
@@ -184,7 +184,7 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   const promptHash = ctx.prompts.kill_gate.hash;
   const maxIterations = ctx.maxIterations ?? 12;
   let costUsd = 0;
-  const runner: RunnerNotes = { model_verdict: null, overrides: [], notes: [], variant_id: null, self_found: false };
+  const runner: RunnerNotes = { model_verdict: null, overrides: [], remarks: [], variant_id: null, self_found: false };
 
   const record = (verdict: "pass" | "kill" | "error", payload: KillGatePayload, rulesFired: string[], selfFound: boolean, variantId: string | null): KillGateRunResult => {
     trace.add("output", { verdict, rules_fired: rulesFired, self_found: selfFound, payload });
@@ -239,7 +239,7 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
         iteration, model, source: r.source, message_count: messages.length, stop_reason: r.message.stop_reason, usage: r.message.usage, cost_usd: r.costUsd,
         content: r.message.content, ...(r.digestMismatch ? { note: "replayed request differs from the recorded request at this position" } : {}),
       });
-      if (r.digestMismatch) runner.notes.push(`model call ${iteration}: replayed request differs from recording`);
+      if (r.digestMismatch) runner.remarks.push(`model call ${iteration}: replayed request differs from recording`);
 
       const toolUses = r.message.content.filter((b): b is Anthropic.Messages.ToolUseBlock => b.type === "tool_use");
       if (r.message.stop_reason === "tool_use" && toolUses.length > 0) {
@@ -272,7 +272,7 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
     return fail(`output failed validation: ${e instanceof Error ? e.message : String(e)}`, finalText);
   }
   runner.model_verdict = parsed.verdict;
-  if (parsed.idea_id !== idea.id) runner.notes.push(`model reported idea_id ${parsed.idea_id}; expected ${idea.id}`);
+  if (parsed.idea_id !== idea.id) runner.remarks.push(`model reported idea_id ${parsed.idea_id}; expected ${idea.id}`);
 
   // 2. Query coverage: declared in `queries` and actually run (successful tool_result events).
   const ran = (engine: "exa" | "brave") =>
@@ -295,7 +295,7 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   const ignoredFails = parsed.tests.filter((t) => t.result === "fail" && !rulesFired.includes(t.id));
   for (const t of ignoredFails) {
     const why = !hardIds.has(t.id) ? "not an active kill rule or hard test" : "no evidence cited";
-    runner.notes.push(`test ${t.id} marked fail but does not count: ${why}`);
+    runner.remarks.push(`test ${t.id} marked fail but does not count: ${why}`);
     trace.add("runner_note", { note: "fail_not_counted", test: t.id, why });
   }
   let verdict: "pass" | "kill" = parsed.verdict;
@@ -320,12 +320,12 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
     const kept = named.filter((o) => !baseline.includes(o) && !ongoing.includes(o));
     if (baseline.length || ongoing.length || named.length === 0) {
       trace.add("runner_note", { note: "t8_obligations_filtered", named, dropped_baseline: baseline, dropped_ongoing_r001: ongoing, kept });
-      if (named.length === 0) runner.notes.push("T8 flag named no obligations");
-      if (baseline.length) runner.notes.push(`T8: dropped ${baseline.length} baseline item(s)`);
-      if (ongoing.length) runner.notes.push(`T8: dropped ${ongoing.length} ongoing item(s) already covered by R001`);
+      if (named.length === 0) runner.remarks.push("T8 flag named no obligations");
+      if (baseline.length) runner.remarks.push(`T8: dropped ${baseline.length} baseline item(s)`);
+      if (ongoing.length) runner.remarks.push(`T8: dropped ${ongoing.length} ongoing item(s) already covered by R001`);
     }
     if (kept.length === 0) {
-      runner.notes.push("T8 flag removed: no one-time obligation beyond the baseline");
+      runner.remarks.push("T8 flag removed: no one-time obligation beyond the baseline");
       trace.add("runner_override", { kind: "t8_flag_removed", reason: named.length ? "only baseline or R001-covered items" : "no obligations named", evidence: f.evidence });
       return [];
     }

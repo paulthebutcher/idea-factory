@@ -118,7 +118,7 @@ async function main() {
       const s = i + 1;
       if (r.payload.runner.overrides.length) problems.push(`${ideaId} s${s}: runner override: ${r.payload.runner.overrides.join("; ")}`);
       if (r.selfFound) problems.push(`${ideaId} s${s}: self_found = 1`);
-      if (r.payload.runner.notes.some((n) => n.includes("T8"))) problems.push(`${ideaId} s${s}: T8 flag without named obligations`);
+      if (r.payload.runner.remarks.some((n) => n.includes("T8"))) problems.push(`${ideaId} s${s}: T8 flag without named obligations`);
     });
   }
 

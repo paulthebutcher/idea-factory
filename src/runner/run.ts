@@ -8,6 +8,7 @@ import { createModelClient, BudgetExceededError, type ModelClient } from "../mod
 import { TraceCollector } from "../trace.js";
 import { runKillGate, type KillGateRunResult } from "../stages/kill_gate.js";
 import { runViability, type ViabilityRunResult } from "../stages/viability.js";
+import { runCritic, type CriticRunSummary } from "../stages/critic.js";
 
 export interface CreateRunOptions {
   id?: string;
@@ -47,8 +48,7 @@ export interface ExecuteRunOptions {
   prompts?: PromptSet;
   model?: ModelClient;
   onResult?: (r: StageRunResult) => void;
-  /** Critic runner, injected once step 6 exists. Receives the idea ids whose latest viability is complete. */
-  critic?: (ideaIds: string[]) => Promise<void>;
+  onCritic?: (summary: CriticRunSummary) => void;
 }
 
 export type StageRunResult = ({ stage: "kill_gate" } & KillGateRunResult) | ({ stage: "viability" } & ViabilityRunResult);
@@ -58,6 +58,7 @@ export interface ExecuteRunSummary {
   status: RunRow["status"];
   spentUsd: number;
   results: StageRunResult[];
+  critic?: CriticRunSummary;
 }
 
 /**
@@ -74,6 +75,7 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
   const ideaIds = (JSON.parse(run0.config_json).idea_ids as string[] | undefined) ?? db.activeIdeaIds();
   const results: StageRunResult[] = [];
   let status: RunRow["status"] = "complete";
+  let critic: CriticRunSummary | undefined;
 
   const overBudget = () => {
     const run = db.getRun(runId)!;
@@ -106,9 +108,18 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
       db.createTasks(runId, "viability", passes.filter((id) => !existing.has(id)));
       if (!(await runStage("viability"))) status = "budget_exceeded";
     }
-    if (status === "complete" && stages.includes("critic") && opts.critic) {
+    if (status === "complete" && stages.includes("critic")) {
+      const completes = latestIs("viability", "complete");
       if (overBudget()) status = "budget_exceeded";
-      else await opts.critic(latestIs("viability", "complete"));
+      else if (completes.length >= 2) {
+        critic = await runCritic({
+          db, runId, ideaIds: completes, agent: opts.agent, model, prompts,
+          beforeCall: () => {
+            if (overBudget()) throw new BudgetExceededError(`budget reached before critic call (spent $${db.getRun(runId)!.spent_usd.toFixed(4)})`);
+          },
+        });
+        opts.onCritic?.(critic);
+      }
     }
   } catch (e) {
     if (e instanceof BudgetExceededError) status = "budget_exceeded";
@@ -119,7 +130,7 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
   }
   if (status === "complete" && overBudget() && db.listTasks(runId, "open").length > 0) status = "budget_exceeded";
   db.finishRun(runId, status);
-  return { runId, status, spentUsd: db.getRun(runId)!.spent_usd, results };
+  return { runId, status, spentUsd: db.getRun(runId)!.spent_usd, results, critic };
 }
 
 function parseArgs(argv: string[]): Record<string, string> {
@@ -138,7 +149,6 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const stages = (args.stages ?? "kill_gate").split(",").map((s) => s.trim()) as Stage[];
   for (const s of stages) if (!["kill_gate", "viability", "critic"].includes(s)) throw new Error(`unknown stage ${s}`);
-  if (stages.includes("critic")) console.error("note: critic runs through scripts once step 6 lands; this command runs kill_gate and viability");
   const ideaIds = args.ideas ? args.ideas.split(",").map((s) => s.trim()) : undefined;
   const budgetUsd = args.budget ? Number(args.budget) : ENV.runBudgetUsd;
   const db = openDb(PATHS.db);
@@ -147,6 +157,10 @@ async function main() {
   const summary = await executeRun(db, run.id, {
     agent: `script:${process.pid}`, searchMode: ENV.searchMode, modelMode: ENV.modelMode, fixtureDir: PATHS.fixtures,
     onResult: (r) => console.log(`  ${r.stage} ${r.payload.idea_id}: ${r.verdict}${r.stage === "kill_gate" && r.rulesFired.length ? " [" + r.rulesFired.join(",") + "]" : ""} $${r.costUsd.toFixed(4)}`),
+    onCritic: (c) => {
+      console.log(`  critic: ${c.ideaIds.length} ideas, ${c.rounds} rounds, ${c.comparisons.length} comparisons, $${c.costUsd.toFixed(4)}`);
+      for (const s of c.standings) console.log(`    #${s.rank} ${s.ideaId}  score ${s.score} (W${s.wins} T${s.ties} L${s.losses} bye${s.byes})  opp ${s.opponentScore}`);
+    },
   });
   console.log(`run ${summary.runId} ${summary.status}: ${summary.results.length} results, spent $${summary.spentUsd.toFixed(4)}`);
   db.close();

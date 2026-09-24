@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "\"breaking change\" API dependency update pull request pain \"Stripe\" OR \"Twilio\" developer forum",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-24T23:05:51.374Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "\"breaking change\" API dependency update pull request pain \"Stripe\" OR \"Twilio\" developer forum",
+    "results": [
+      {
+        "title": "API upgrades | Stripe Documentation",
+        "url": "https://docs.stripe.com/upgrades",
+        "snippet": "<strong>Upgrading to a new major release can require updates to existing code</strong>. Each monthly release includes only backward-compatible changes, and uses the same name as the last major release.",
+        "published": null
+      },
+      {
+        "title": "Stripe versioning and support policy | Stripe Documentation",
+        "url": "https://docs.stripe.com/sdks/versioning",
+        "snippet": "When we release a new SDK version for new features or bug fixes, we increment one of these three version components depending on the type of change introduced. Major. We increment the major version component when the version contains breaking changes that are backwards incompatible with the latest version: to add a required parameter, change a type, property, method, or parameter.",
+        "published": null
+      },
+      {
+        "title": "Introducing Stripe’s new API release process",
+        "url": "https://stripe.com/blog/introducing-stripes-new-api-release-process",
+        "snippet": "To help you understand what’s changing in each new API version (and why), we’ve also redesigned our developer changelog. While the previous version of our changelog listed all updates to the Stripe API, you asked for more help understanding which changes apply to your specific API version. ... Understand how changes impact your integration with concise summaries of API, SDK, and platform updates · Easily adopt breaking changes and upgrade to newer API versions with step-by-step upgrade guidance",
+        "published": "2024-10-01T07:00:00"
+      },
+      {
+        "title": "twilio-java/CHANGES.md at main · twilio/twilio-java",
+        "url": "https://github.com/twilio/twilio-java/blob/main/CHANGES.md",
+        "snippet": "- <strong>Make `TemplateSid` parameter public for Verification resource and `DefaultTemplateSid` parameter public for Service resource</strong>. **(breaking change)** ... - [PR #653](https://github.com/twilio/twilio-java/pull/653): bump jackson dependency version.",
+        "published": null
+      },
+      {
+        "title": "twilio-node/CHANGES.md at main · twilio/twilio-node",
+        "url": "https://github.com/twilio/twilio-node/blob/main/CHANGES.md",
+        "snippet": "- <strong>Change ESimProfiles `Eid` parameter to optional to enable Activation Code download method support **(breaking change)**</strong> ... - [PR #748](https://github.com/twilio/twilio-node/pull/748): update url-parse dependency.",
+        "published": null
+      }
+    ]
+  }
+}

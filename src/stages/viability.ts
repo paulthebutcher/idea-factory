@@ -43,7 +43,7 @@ export type ViabilityOutputT = z.infer<typeof ViabilityOutput>;
 export interface ViabilityRunnerNotes {
   missing: string[];
   unsourced_moved: { field: string; url: string }[];
-  notes: string[];
+  remarks: string[];
 }
 
 export type ViabilityPayload = Omit<ViabilityOutputT, never> & {
@@ -131,7 +131,7 @@ export async function runViability(ctx: ViabilityContext): Promise<ViabilityRunR
   const promptHash = ctx.prompts.viability.hash;
   const maxIterations = ctx.maxIterations ?? 25;
   let costUsd = 0;
-  const runner: ViabilityRunnerNotes = { missing: [], unsourced_moved: [], notes: [] };
+  const runner: ViabilityRunnerNotes = { missing: [], unsourced_moved: [], remarks: [] };
 
   const record = (verdict: ViabilityRunResult["verdict"], payload: ViabilityPayload): ViabilityRunResult => {
     trace.add("output", { verdict, missing: payload.runner.missing, unsourced_moved: payload.runner.unsourced_moved, payload: { ...payload, brief_md: undefined } });
@@ -213,7 +213,7 @@ export async function runViability(ctx: ViabilityContext): Promise<ViabilityRunR
   } catch (e) {
     return fail(`output failed validation: ${e instanceof Error ? e.message : String(e)}`, finalText);
   }
-  if (parsed.idea_id !== idea.id) runner.notes.push(`model reported idea_id ${parsed.idea_id}; expected ${idea.id}`);
+  if (parsed.idea_id !== idea.id) runner.remarks.push(`model reported idea_id ${parsed.idea_id}; expected ${idea.id}`);
 
   // 2. URL sourcing. Every URL in the output must have come back from a tool in this call.
   const retrieved = retrievedUrls(trace);
