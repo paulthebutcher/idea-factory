@@ -1,0 +1,580 @@
+{
+  "stage": "viability",
+  "idea_id": "A11",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T23:16:06.953Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "7af2c3b014e7490b099ecd1e67eec286fb1b4332a90e7dee559183b6ca7b12cf",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2107,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2107,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 447,
+        "output_tokens_details": {
+          "thinking_tokens": 103
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0097415,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7gFUPch7sWij2pmCGZ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EogECpABCBIYAipAGLro3iot2n/FVnPbxYpvbeXRJynk1BJ7ZCVDgrBT3daC5BAFkZxNSaJ0JBhN7xqeD9ickLxSz0nVZ9M9e2YM+TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAbTe1tUGEgx2nrKNm0SP00U04GAaDBefQHtOHa1ISBXpISIwJ8PUtCRp8s4LvetHmA+DlSFsHGYGcP/uBhvsr/SYIma+3oC+GT9UquR/BVrv8bVsKqQCp5rH5ONe+fT3mTpPLqYQRy+6qjHS0XT5CiH+aSH2icCoT+TIFXnkCo5WecDXdOun5DOFRfSLJ3AYeEabbBBrKOjhg2o3N6JLxOomlZ8hrlY+f4OsDx89zfPKG/baJZCnHsHQHSjRC9GEHhDDse9c8YFjX/aNJ0BLHUMXB2Vbum5JmaKiKbHZmNY8VhFktaaAnmaDf7LmxC5D4yxY9ndMe0ucjdboxr2bAiM/kDoAHLhrsx28a4TJPHTfzYsPU6o6N1WLYIqRkwEpN45j0OfQXu3NUP+7zgQ1uG0bc04ci7gZloNn3OC7XbhtreCQxncuvc73RWPTahl1+PxxmSTQfkES/3d2g/TrPEKVeV1WeDBaRfOMVZUZdoW76AVpzyuWF4HPBxgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JgfWpHzctjPLG3xYaMij89",
+            "name": "brave_search",
+            "input": {
+              "query": "SwagUp pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WxEuk2XcFfwScmwUbQeSbB",
+            "name": "brave_search",
+            "input": {
+              "query": "Swagmagic pricing plans"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VcQPffzfTYa4LhMUfjaZaP",
+            "name": "brave_search",
+            "input": {
+              "query": "BlinkSwag pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VJx3QcbV5qQm6qq89xQbYF",
+            "name": "brave_search",
+            "input": {
+              "query": "Stitchi pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012NBM9gaSonfSoX7RysHmQw",
+            "name": "brave_search",
+            "input": {
+              "query": "\"swag\" \"welcome package\" new customer stripe automation pain point forum"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RHnCtGb1XJxtBxT67nnJHG",
+            "name": "exa_search",
+            "input": {
+              "query": "founder complains sending swag to customers manually annoying"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2107,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2107,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "thinking_tokens": 103
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "c64f0231ffe2c29922e94ae64a49a8dd9b848039a7f45352d102f7fb4a46a836",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7328,
+        "cache_read_input_tokens": 2107,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 7328,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 820,
+        "output_tokens_details": {
+          "thinking_tokens": 505
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0269454,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7gsseSBMsVr6N6upgZ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011DnJe1sX5WqjxkdJuu7wQv",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.swagup.com/pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0172aeWtbZk6YrX6EZvAjC4M",
+            "name": "brave_search",
+            "input": {
+              "query": "Sendoso Stripe integration trigger new customer"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0129gaLRecDDEcP9TMgjEeEK",
+            "name": "brave_search",
+            "input": {
+              "query": "\"new customer\" swag automatically Stripe zapier"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01ByUkE7ZiisdAPMpSCMLMhn",
+            "name": "brave_search",
+            "input": {
+              "query": "Google Ads cost per click \"corporate gifting\" keyword"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GwUjHm2MWpfFk9BU7p4ymn",
+            "name": "exa_search",
+            "input": {
+              "query": "SaaS founder wishes swag sent automatically to new customers welcome"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 7328,
+          "cache_read_input_tokens": 2107,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 7328,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 820,
+          "output_tokens_details": {
+            "thinking_tokens": 505
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "47aad414d8ad6fa792634927b33efd00578ca9d1804dec0eb4a9f32c4e88fdd7",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 10000,
+        "cache_read_input_tokens": 9435,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 10000,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "thinking_tokens": 294
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.032151,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7hyhQmYAPQak443P1e",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpAICpABCBIYAipAaO3n/sySxBDEnDihuq7rzhtWd45srZvRV6stSRhUeYFRT+RF7Wc27VLn9WKNhd2Whllqgwbnp9lFYFqo4JSItjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAc7e1tUGEgxndTFBf2PM4KHgbjoaDO4FvGrh7HR6vTEtDyIw7r0mSgWTtBn41E6D/DNY5kUjcBcHpEv0X1UILd+VZfpie0PprpB/oCt6wISQDtHpKqwG8SibI3NU2MS+cz2Gh/FazvNBYmYZvhpecuMR/2gxm1vzjPTjEdrjgczvJzsHiJK3VeYvE4fEv4ihOxtsHnb6WaTwnm/qux0GnIXT63NoyHXgQXjVXSrRUlirE1kV0jQkhV58LZsBRPu3gZ69YrH+p4cM08WKdomoN1qsMgn5FFk7K8NZ9jizCnsqMbJinEbp2YRPHXjA32FGZ93+XxTrbSk/lweh3+QGtaDtIDmWyNTePvoIAXGZcq3DDR1B1svFZ7FBM1d34s1/r9nGSnCKhiTVtq1yWpY/g5eWgjtm2hoIKQMSoxwx8c5HeQaP5hA/We0CLFUcA8cUHKYZJvipBVgyzIlI9dZJC8bX9pp7s3HMDAiYxXA/jQNa0ABlGakWBgCaBR7iQna29KGFZnEwwSPka8zma2MVUWxJlK+wwhdws+JviGdmdZkSGicaF15c0b3JVlAYk6FGWIUyfeqvTs+Duts8I47ow6jWTRv7Nps89mMkLZWrUDDvwU6nz1sD2/qOu7L62/0phdkAutBc2TVnw2mO78XotudvKhEu3cBklmd74X0G33SgVliwuXLTZDLQkc61bYI2lBVInUfr557MLxsbPKC6aWdX7okfLneYusPc6i3texWkWn1avHf/Rr6CrSV9/hwuk2E5qGnojlwAqD0yBQJTAk/b5IZ34StZojxiw88+e4Z/tAUUkhQd/KBp+qsLP4G5aVy6rGjwKOuBgxbH+WQ2/cNITLr4AM451GnD0BLgiCV7t7I4X16fBR/1lCF93RpjvspwBG7bvif7+3lXh/yRvF0vdBziGRbtiv4uK6k6rXLog01x/Yg9/lLJqheEZ6V91xa4OOGjDmJy2APXtZWHZQ1N8gdIrL2tEng2hVHb08AeL+XibfNbS/7LynI/t0E25E/NnRdf71xkf5ZkwRuTp66EgnZbyepebF+MWCwk8ewmlCEIfjLqkfU3zigk3q2bQ06tJGgpsHzPqwUbv2tw5gu/QnStW9Qd0May0EZWL/RPykL6vorEXsRLXkEEr8HTd0ykXfYQavMNljfgJzpOEX1g1WjDvLxEQe3WAoNxHUSLPdgYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WwubxfKeM8Tr1nwH4FWWNP",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.casestudies.com/company/printfection/case-study/endcrawl-boosts-swag-giveaways-with-printfection-shipping-90-packages-at-once"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017sQqJ4vE9o3i5nSqdCdY49",
+            "name": "brave_search",
+            "input": {
+              "query": "Stripe App Marketplace listing requirements cost developer"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01AHV21yqwgZXDuP6reNY8CY",
+            "name": "brave_search",
+            "input": {
+              "query": "Z-Swag SaaS onboarding kits pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 10000,
+          "cache_read_input_tokens": 9435,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 10000,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "thinking_tokens": 294
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "09635539eb386c93a14c54f1928dd4cbbb9dcaa2364a50303697dd9ea802c343",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3131,
+        "cache_read_input_tokens": 19435,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3131,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 285,
+        "output_tokens_details": {
+          "thinking_tokens": 154
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0145685,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7iW6GFApTecjjbGXTU",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpAFCpABCBIYAipA27n/G/aGw3uxm23oAu61c7SsnqpFeYteCTWs5REWKTj0MLbfW2fbZ7CA7u/aaCMYZ07dqcizz+nQjIosp1UukjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdPe1tUGEgwPNP4ybe0wm9MRe18aDPWEOXCSps5Fu5wNtCIwujehvu9NgA6pwxrH16ETPrhRkh/NqwdjpbCz4OE4ovomgxLx0g5pLolxe7lEM+MPKqwD7O6fxfckLf71ZI9sKUYdRshrZ7wIHCqf5mhjrcgNZ86TGhSjFLnt6zWD57VABPDrD/9bW12Qo2ba6ewnU4WZuL+iGsm2IjVCrBbtvuUYfIvuzD3/RFjMg5maRcBpOoYQnoUZq23lQXbrAjfIy1u5+b/M7l27Vf7J8HUA07lqbWai3Q34goT5AfXfL12fl22iOqZnY0ahniAG7fbAEKH/kjnBZUmJ3qRTgd1v7mf8KT6zPgYoRHtYi3FA7ukSS0vzGBQnf4mPgsTNet4bclKa8l5qo3ZLw0YoIK/rfMHjKyB3oto3ZKjACYak5KqRxBhRTus39Z9EslOp2CLsxIADm3tcP4HrjpPGy82QSr8K3je1ScdyXIKp0Yqr0206gux8DA82daMYiYVwTOECcoWuxN7bFXqdz7+d0CdZ8qiGlDr30KpdIWHoYqtZ2GZY34YeapmWc7Rzh+KEzOO2pNwo65lIa0MyCsFre8Y4HTM07F19kKKxexQhAaGoN5+exLzZxLsQT6XEgV38oZr0na9El/T5h+b0LNnp0/eeDcYyZPtAW+3XsYt2wGCBWgMYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01K7dryTFaaAY8TXSQMzxRq4",
+            "name": "brave_search",
+            "input": {
+              "query": "\"swag\" CPC google ads keyword cost estimate corporate gifts"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0116k1x2qRqb24frVMw7XuSQ",
+            "name": "brave_search",
+            "input": {
+              "query": "Zapier app directory listing free submit app cost"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3131,
+          "cache_read_input_tokens": 19435,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3131,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 285,
+          "output_tokens_details": {
+            "thinking_tokens": 154
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "8618815d9b11ec9e81da7df8f45b3c0e4b27632b537d343cbcff046a806199fa",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1177,
+        "cache_read_input_tokens": 22566,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1177,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 162,
+        "output_tokens_details": {
+          "thinking_tokens": 93
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.009079700000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7ipR69kPnry1RiiPwi",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EuwDCpABCBIYAipAnGCIz6FGb46kgVuAjQfkPhgzDUU6LpEPynJW8qAiC4HrOs1zsrNUhkKYdl7TT0BOdBrnFBewY8+o6uzWALwjWTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdfe1tUGEgy8y4J3jjjrOk5y8d0aDK3SUuDObAvkq6I88iIw/ZgNjPzKWxVYhrbU1zGEQ1nYoVc8bfHvNS+/0fluKkRV6g7ayZde2JYFez3o43rWKogCv+vkR3P6DtmGWkwHBYU7z7vOE8j1L+g2T+2fpLd6qnKE/3410UGeH9R3SXPGZxW19iblQot5KaJWvlG26fGx3g5cRsFWQAO1OP+1vvr1S1OelhVIAkbMXj9HwnRh3DGv9uokwcbAMFHaW4hM+bTf2ISRO1CgRxhqpev5Mwh7dG/LgF7mZ3uVs9f1Mn1uNYNGaw6AEG0dlql4FRGJhaABLD8Jwko5/U2pq6na4F1cVwbBlU7r4cf9PhVXJMDdFhjTNltVwjh9CNkMf7BivJ5KJX+iHsTEPaoZp0T1kuOPv3aTz8nK6dQfaw5gMJ11VPv9Oc2BAYjMYylR32j9tCY/JJGwy0i8qR8LGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WvTyPH3rE9eyNzWU13EsQM",
+            "name": "brave_search",
+            "input": {
+              "query": "WordStream average CPC B2B software Google Ads benchmark"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1177,
+          "cache_read_input_tokens": 22566,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1177,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 162,
+          "output_tokens_details": {
+            "thinking_tokens": 93
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "d8b474ae95757b3efea3c58f65e2b7e898d1331c8f9592741f20354e003ed007",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1248,
+        "cache_read_input_tokens": 23743,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1248,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 86,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0087326,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7j3CHXGTzXtQ3dZCsM",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Good, enough evidence. Now compiling the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01EktaU2d3kat8NgNGWMYwEv",
+            "name": "brave_search",
+            "input": {
+              "query": "Stitchi pricing per kit cost SaaS technology page"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1248,
+          "cache_read_input_tokens": 23743,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1248,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 86,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "0b093826e0decb114f8b299dcbbc72ff2768e056214d10cbc66bfc8777be7886",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 894,
+        "cache_read_input_tokens": 24991,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 894,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 5005,
+        "output_tokens_details": {
+          "thinking_tokens": 250
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.057287199999999996,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7jD2P74nSTGv7FErE4",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Es0GCpABCBIYAipAlrvBZt6gfG74HjqkzuPD3dKl1Gd2/JT5oB7703REOpe57cSMuosYsHOSeBKg1hjc8Lj+J+zPvEi+0PmlS4OcADIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAd/e1tUGEgyBv/tcWqcCbAevtIIaDE+PLW01VyLe/oy9byIw9GktgU71C55AdbK7EEDsInPSNNl2OtqVCUZQ3WxhBAkE0WQulMnHNn9L8k7DMUacKukEb0pihMbGqjA0GqM5b9wvFxxM2h5OSu/wzdN304DbRmI0kMyt7PoDlCvowW5/M/CG32pA+DiJAfOQrhpugnuC+5wnMRgOB90O58KszndDR9Gcl44vkQhXmnxhLEstBnwT5LiWAkvbryQ/uVYqNDE6s2ctNuqyknwL+XV4fO8vOrhUmqRzicuPFQM2A1ehxZUYRgtVnjMzXZbBAkSFJLSAYOS5NGkhQXXmHwHOtzkJVS7MkyTZ5ltjlQvQS0E6zXjW8/uySMwmUdQoytB9mK0clhHf5tptudnG+4uT0llSUPo9/1Kw28dCRpiURuzEhGXqUkcCLr/SF1NW9xuLbOUJSEY3lte8ZXcsQ9U5aWXh9/RyJQGHwkLiHQS9w9E1f1GoFdmKAgAHkzSPzDCqo4tTsMpFtdLDnArgbjOvD3/T46VzMWo2I1bM21DYcIDcAKBN7brRszoX3sin/ueb7EvcvtyTBoakq7L+3FtseTYgN95SoKdcqHR6aYmzbXn4sfsmyA45yIRYXfGhlXbb63BzMoKVP/mZ11fNFYh0pft8sbCDg1Ng5MpCmAjARV7i/OsY0EbmBJMF7RE2Kbmw4TXob13Hurn2bk8Qv0+39pHMHS1vbT7g6O4R5vTlS41qMNn8HP5PUeB0urhUPxaGjiwTrAPNNTz02ttt/b91Kehp1BvmRDxdM7kbiKsrW9L+byDdAEfJCyiuXd3PRDG2bqHWC9gkerF+zDyQiqWrVcK1F1Id0lErRj4vptVwL5fASP1gJO4Ry1nEb5gTRRfJmrIMu2oEamZtLQ51/LqOrOZt2ga+vUWzC7e7RLIYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A11\",\n  \"payer\": {\n    \"who\": \"SaaS founders / marketing or customer-success teams paying for a swag-automation subscription plus per-item/shipping costs\",\n    \"price_hypothesis\": \"Freemium-to-subscription model anchored on SwagUp's tiers: $99/mo (Silver), $499/mo (Gold), $999/mo (Platinum), on top of per-item product and shipping costs, with a free 'pay per order' entry tier\",\n    \"comparable_url\": \"https://www.swagup.com/pricing\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"SwagUp\",\n      \"url\": \"https://www.swagup.com/pricing\",\n      \"pricing\": \"Free to start (pay per order); Silver $99/mo, Gold $499/mo, Platinum $999/mo (annual, paid monthly), plus per-item storage/fulfillment fees\",\n      \"pricing_url\": \"https://www.swagup.com/pricing\"\n    },\n    {\n      \"name\": \"Swagmagic (Stadium)\",\n      \"url\": \"https://www.swagmagic.com/price\",\n      \"pricing\": \"No free plan/trial; custom quote via 'talk to sales', tiered around print-on-demand shop access and gifting catalog\",\n      \"pricing_url\": \"https://www.g2.com/products/stadium-i-snackmagic-i-swagmagic/pricing\"\n    },\n    {\n      \"name\": \"BlinkSwag\",\n      \"url\": \"https://blinkswag.com/features/automation/\",\n      \"pricing\": \"Platform access free ($0 edition on G2); cheapest catalog item ~$5, most items priced higher\",\n      \"pricing_url\": \"https://www.g2.com/products/blinkswag/pricing\"\n    },\n    {\n      \"name\": \"Z-Swag\",\n      \"url\": \"https://zswag.com/guides/customer-onboarding-kits-for-saas\",\n      \"pricing\": \"Not published; positions itself explicitly as running 'SaaS customer onboarding kit programs for companies with 50-5000 new customers per quarter'\",\n      \"pricing_url\": \"https://zswag.com/guides/customer-onboarding-kits-for-saas\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Google Ads (search, B2B SaaS / corporate gifting keywords)\",\n      \"cost_estimate\": \"Blended B2B/SaaS CPC roughly $3.33–$6.29 per click; overall Google Ads average CPC $5.42 in 2026\",\n      \"source_url\": \"https://www.kampaio.com/blog/b2b-saas-google-ads-benchmarks-2026\"\n    },\n    {\n      \"channel\": \"Zapier / Stripe App Marketplace listing (organic integration discovery)\",\n      \"cost_estimate\": \"Listing itself is free, but requires meeting Stripe's app review and marketplace pricing-transparency requirements before going live\",\n      \"source_url\": \"https://docs.stripe.com/stripe-apps/review-requirements\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"Endcrawl co-founder found ordering, storing and shipping swag by hand 'incredibly time-consuming' and a distraction from running the business.\",\n      \"url\": \"https://www.casestudies.com/company/printfection/case-study/endcrawl-boosts-swag-giveaways-with-printfection-shipping-90-packages-at-once\"\n    },\n    {\n      \"quote\": \"We were looking for a welcome kit for new customers... to build a strong brand connection early on.\",\n      \"url\": \"https://www.swagup.com/customer-stories/swag-success-why-top-supporters-deserve-the-best\"\n    },\n    {\n      \"quote\": \"We then automatically send them a welcome box... using SwagUp. SwagUp has a Zapier API where you can add a new customer, send them a swag box.\",\n      \"url\": \"https://podup.substack.com/p/gifting-made-easy\"\n    }\n  ],\n  \"case_for\": \"A solo operator with AI agents could build a thin orchestration layer (Stripe webhook → address-collection link → existing fulfillment API like SwagUp/Sendoso/Printfection) in well under six weeks, since the hard parts (warehousing, printing, global shipping) are already solved and resellable by incumbents; evidence from Hampton/Grant Hushek and Endcrawl shows the underlying trigger-based automation pattern (new customer → swag box) already works operationally and saves real founder time, so the wrapper's job is packaging that as a plug-and-play Stripe-specific product with less setup than generic platforms.\",\n  \"case_against\": \"The category is already crowded with well-funded, full-stack platforms (SwagUp, Swagmagic, BlinkSwag, Stitchi, Z-Swag) that already offer Stripe/Zapier/CRM-trigger automation, warehousing, and global fulfillment — the 'wrapper' has no proprietary fulfillment relationships, so its margins are squeezed by wholesale/dropship costs plus platform fees, and its differentiation (a Stripe-specific trigger) is a checkbox feature competitors can and do ship (e.g., existing Sendoso/SwagUp Stripe/Zapier integrations found on Pipedream and Tray.io); the physical-goods supply chain (customization, inventory, address collection, international customs — as shown by the Greece customs complaint) is inherently high-friction for a one-person AI-run company with no ops staff to handle exceptions, damaged shipments, or returns.\",\n  \"open_questions\": [\n    \"Is there a defensible wedge (e.g., cheaper/faster/more Stripe-native UX) that isn't already offered by SwagUp's existing Zapier integration, or is this a distribution/marketing play rather than a product gap?\",\n    \"Would the solo founder resell an existing fulfillment platform's API (thin margin, low ops burden) or hold inventory/vendor relationships directly (higher margin, high ops burden)?\",\n    \"What is the real per-package all-in cost (product + customization + pack + ship + customs) at low volume, and does it support a viable price point after platform fees?\",\n    \"How many SaaS companies actually want a *per-signup* automatic swag trigger (high volume, low-value customers) versus a manual/curated send for high-value accounts only, given products are typically priced $60-$220/kit (per Merchloop/PerkUp) which may not make sense for every new $29/mo SaaS signup?\",\n    \"Can international shipping, customs, and address-collection be handled reliably by a one-person operation without a support team, given documented customs friction for even small giveaway shipments?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"Collecting and storing recipients' mailing addresses and possibly clothing sizes (PII) triggers data privacy obligations (e.g., GDPR/CCPA) for both the service and its SaaS customers\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"One-time privacy/data-handling review to confirm data retention, consent, and cross-border transfer practices for address/PII collected via redeem links\",\n        \"source_url\": null\n      },\n      {\n        \"obligation\": \"International shipments of branded merchandise are subject to customs duties, VAT, and commercial invoice requirements even when items are given away for free\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"No formal legal consult found in sources; operational customs/logistics guidance likely sufficient rather than legal counsel\",\n        \"source_url\": \"https://www.linkedin.com/posts/konstantinosmargaritis_this-is-for-my-contacts-in-greece-im-very-activity-7267195642064613376-uixJ\"\n      }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Zapier app directory listing itself is free (inferred from general Zapier partner program norms, not a fetched pricing statement specific to app submission cost) [unsourced]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"# Evidence Brief: A11 — Stripe-Triggered Welcome Swag Service\\n\\n## Idea\\nA service that hooks into Stripe (new signup/subscription event) and automatically ships a branded welcome/swag package to the new customer, aimed at SaaS founders and marketing teams.\\n\\n## Payer\\nMost likely payer: the SaaS company itself (founder or marketing/CS team), paying a subscription plus per-item/shipping costs. Anchor comparable: SwagUp's published tiers — free to start (pay-per-order), then Silver $99/mo, Gold $499/mo, Platinum $999/mo (annual, paid monthly), plus separate storage and fulfillment fees. Source: https://www.swagup.com/pricing\\n\\n## Competitors\\n- **SwagUp** — free-to-start, $99–$999/mo tiers + fulfillment fees. https://www.swagup.com/pricing\\n- **Swagmagic (Stadium)** — no free plan, custom quote via sales. https://www.g2.com/products/stadium-i-snackmagic-i-swagmagic/pricing\\n- **BlinkSwag** — free platform tier, catalog items from ~$5 up. https://www.g2.com/products/blinkswag/pricing ; https://perkupapp.com/post/a-comprehensive-review-of-blinkswag\\n- **Z-Swag** — positions itself explicitly for 'SaaS companies running 50-5000 new customers per quarter' — i.e., already targeting this exact segment and volume. https://zswag.com/guides/customer-onboarding-kits-for-saas\\n- **Stitchi, Swag.com** — named by kill gate as direct/adjacent competitors; explicit pricing pages not found in this pass (search results for 'Stitchi pricing' returned an unrelated ETL product called 'Stitch').\\n\\nCritically, at least one incumbent (SwagUp) **already has a documented Stripe/Zapier-triggered automated welcome-box workflow** in production use (Hampton/Grant Hushek case), and Sendoso has Stripe connectors available via Pipedream/Tray.io — meaning the specific 'Stripe trigger → swag' mechanic proposed here is not a gap in the market but an existing, marketed feature of incumbents.\\n\\n## Acquisition Channel\\n- **Google Ads (search)**: blended B2B/SaaS CPC ~$3.33–$6.29; general average CPC $5.42 in 2026. Source: https://www.kampaio.com/blog/b2b-saas-google-ads-benchmarks-2026\\n- **Stripe/Zapier App Marketplace listing**: nominally free distribution, but subject to Stripe's app review and marketplace pricing-transparency rules before going live. Source: https://docs.stripe.com/stripe-apps/review-requirements\\n\\n## Demand Evidence\\n- Endcrawl co-founder found manual swag ordering/shipping 'incredibly time-consuming,' detracting from running the business — solved by adopting Printfection. https://www.casestudies.com/company/printfection/case-study/endcrawl-boosts-swag-giveaways-with-printfection-shipping-90-packages-at-once\\n- BurnRate's CEO: 'We were looking for a welcome kit for new customers... to build a strong brand connection early on.' https://www.swagup.com/customer-stories/swag-success-why-top-supporters-deserve-the-best\\n- Hampton's automation lead describes an existing production workflow: 'We then automatically send them a welcome box of Hampton gear using SwagUp... SwagUp has a Zapier API where you can add a new customer, send them a swag box.' https://podup.substack.com/p/gifting-made-easy\\n\\n## Case For\\nA solo builder using AI agents could assemble a thin Stripe-webhook-to-fulfillment-API wrapper quickly, since the capital-intensive parts (warehousing, printing, global logistics) are already outsourceable to existing platforms; real founders (Endcrawl, BurnRate, Hampton) confirm both the pain (manual shipping is a time sink) and that the trigger-based automated-swag pattern already delivers value once implemented.\\n\\n## Case Against\\nThe exact mechanic — Stripe/CRM event triggers an automated branded swag send — is already a marketed, working feature of well-capitalized incumbents (SwagUp+Zapier, Sendoso+Stripe via Tray.io/Pipedream, and Z-Swag explicitly targeting SaaS onboarding kits at scale). A one-person company has no proprietary manufacturing, warehousing, or customs-handling advantage, and physical fulfillment (customs, address changes, damaged goods, returns) is high-touch and low-margin — as illustrated by a real customs breakdown even for a free giveaway shipment. Without a defensible wedge beyond 'we also connect to Stripe,' this risks being a reseller layer on top of platforms that already sell direct to the same buyer.\\n\\n## Open Questions\\n- Is there a real product/UX gap versus SwagUp's existing Stripe/Zapier flow, or is this purely a go-to-market/positioning play?\\n- Build vs. resell: thin API wrapper (low margin, low ops) vs. owning inventory/vendor relationships (higher margin, high ops burden unsuited to a 1-person AI-run company)?\\n- What is the true all-in per-package cost at low volume, and does the resulting price support a profitable subscription after platform/fulfillment fees?\\n- Does automatic-per-signup swag make economic sense for low-ACV SaaS customers, given typical kit costs of $60–$220 (Merchloop/PerkUp), or does it only make sense for higher-ACV/enterprise signups (undermining the volume/self-serve pitch)?\\n- Can international shipping/customs exceptions be handled without a support team, given documented friction even in small giveaway shipments?\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 894,
+          "cache_read_input_tokens": 24991,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 894,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5005,
+          "output_tokens_details": {
+            "thinking_tokens": 250
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

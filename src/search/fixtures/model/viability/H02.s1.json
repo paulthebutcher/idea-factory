@@ -1,0 +1,559 @@
+{
+  "stage": "viability",
+  "idea_id": "H02",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T23:17:41.354Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "2cd888a1e818531a47991f354192a4a1e4984ddcbe3083d8939a540af15ad6ed",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2141,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2141,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 410,
+        "output_tokens_details": {
+          "thinking_tokens": 144
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0094565,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7oAoYyGbtSLjcX6Y93",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvsECpABCBIYAipAyO+HE42WvQSr3zQnvEyo/o8rkCiY34vdyZ87V4vneQDVq8iKWs+Ad0AAgRyut1KihgSkn9YNRsKC5Ho+khFGuDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAZPf1tUGEgzgnrdPvqkiEGyhulIaDCopgolC+QbkqiWMRyIw7nZjl+OpP7TEYM1f8EqVeAdycDt+F8a0pJiHEXG+wd3bdVweHLzmmD3T3JnNfGRAKpcDOAb5hXVDy+nDvP2zo9G0EHUjhk4y6T0EJmJzXqS1jXVuepCGLv7hBKDyX2fPJiVie0b4VyB+hIqyzLM2mMgxnN9ezja45Wa6WIJCbYdI4Bk0fB6gFvAIqDWXjdm7n/2E8n7/fGIlvDinre4zYD682vwHoeg9FUh1zMS8tF1GPnlqXS+NDJjda3VS+WfVS2wK/cYQORAFLouGFCZg8hzy2p0n1f8Tiz3mNlELFiYaPmRNRsCoS2atEXnCPd5G6IY+fhdVvnDd274M4MFjZEIxdgwqPJZTYvc14qMxwY22Ysj9x7e1myOXZrHFMayTC0RXeJ7M82JU8m9ORHYFJR8hetPsWlTQE3S/gGL7tlVo3+gHLCLTAEl/mr3TvoSw+VhSUZH2xNMiabOvB+TxFIXtJmFanuGhCqGL3e5MQPMYLHcp/d2SHATqHeEyXm9FfR1ivqPm8hk3kj9OEo1+rhLW/bqirGbMwU1AKCXDS7suCvhg5Yp/oftsYG9s7rh5F/uo6DUD5C4GQdbwb4PXrGBJlRt9dg4NXVIYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012NwsNr4wsx34uznizGjHiB",
+            "name": "brave_search",
+            "input": {
+              "query": "therapist frustrated with SimplePractice OR TherapyNotes reddit"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Do6C4FBq5R3YhPRDxuwwFr",
+            "name": "brave_search",
+            "input": {
+              "query": "SimplePractice pricing plans monthly cost"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RKdSY5GtpN9e6aG3hLPbWa",
+            "name": "exa_search",
+            "input": {
+              "query": "therapist private practice complains about EHR software too expensive or clunky"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012uFZVacFhgovyqrqQesjaD",
+            "name": "brave_search",
+            "input": {
+              "query": "HIPAA compliant SaaS BAA requirement small startup cost"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2141,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2141,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 410,
+          "output_tokens_details": {
+            "thinking_tokens": 144
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "af89ff986c5949a0ed666629bb849a68b275cf059a3e712c795a36bdfb88466f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6706,
+        "cache_read_input_tokens": 2141,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6706,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 370,
+        "output_tokens_details": {
+          "thinking_tokens": 103
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0208972,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7oibUu9yCikAvJXdiN",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpIECpABCBIYAipAYkjgE9KxZQI+zflQScYJQhVhxsNYZVBlO5qj32afUTUiTm4WJaNuYhRav3llAt+AhNdCmO0H5iVQivxNhxcqCDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAZrf1tUGEgxdYIRopwfkT2t53+caDLHFk3sLCsdmevkObSIw/QgsFA1LpRMHkasn7b/S0Y09tY6G1DE9JVVl4cWT8KoMF4hTKHyWb2bbqlnhFkO4Kq4Cc8tnapc/ro2TRwrfWR3kW6UdVGgAzMbFazbR/y+i86GEQ4BY/UqhI+jzf+CZkR/6sw4ENzotYG4N2V9oKNKNtlYGuUF0Q+SgP0Y90GybrgHGn4GBQyCqKWBxMS41jRcXOdTUrPPitKhvSDtgihoS6WEn98zncVvoR1GV6ouZaXkMbiFNjRfeFqwppmEatXaBk5wnmjWAPfVs0DaRzqk6X7kNFjV0VVf890bLRiPaCZn/ZKD0yBVOClBu0egOb5G2HsBUT6fFRic6FqQZJrje3Ng0Jhk0P0qLha4A551bcJLAdrUqczq9dEYXlTACRLIvlTDkgRV0IVNJqIzZpficwlu4RkGQb5i1pizPxA6tY4nf1IfafdbgnMOn+H/VbQp2solNo4jCtqNpCQKrfm4YAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0168Qx3i69gmD24yzCJd1hby",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/therapists/comments/1gpw56i/i_cant_stand_simplepractice/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012RwsJdWg9hy4LWADNPVNxx",
+            "name": "brave_search",
+            "input": {
+              "query": "Google Ads cost per click \"therapy practice management software\""
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016Y8TU3uy37NQr6npjc5d8T",
+            "name": "brave_search",
+            "input": {
+              "query": "GReminders pricing per month"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01EL3iMk3DotghNRjwt75WPq",
+            "name": "brave_search",
+            "input": {
+              "query": "TherapyNotes pricing solo practitioner per month official"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 6706,
+          "cache_read_input_tokens": 2141,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6706,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 370,
+          "output_tokens_details": {
+            "thinking_tokens": 103
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "83dfcd98a12eca5fd640f41735d6c92d0a9ff7eaeababe4423e22eaf9067383e",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2050,
+        "cache_read_input_tokens": 8847,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2050,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 363,
+        "output_tokens_details": {
+          "thinking_tokens": 151
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0105284,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7pAjbkkFG8myRUtK9f",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EqsFCpABCBIYAipAzy8HceEbYFaQ41KMFwswQgoUaYRqpEHofjdcn5/DDl8m9loByw9PsQoDw/bpDYcMTLRdnmoreaf+9XUh8LSDBjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAaHf1tUGEgwh4eNSXcIbHqxhHPQaDIEd1+qvuRM98nS5qSIwgQ+tLCkLvFWD2H0dDbDpsANrER8+Z0rABzazkrJkT0Slyet41BfTSsu6fDSizCM/KscD+VR4fFFI/fT/MVbwlw3T6ELLa4eN+JFmXUxkirN8X/jPdB4/y21yvHr/6NdV/NSTV82TZbkq3p3w7h3vbNhSaB906JCBfXzLFszPlNi/aVPDQEtudvIGgTADYgNoiayls6vR3y7RGcNcukU0vGDNVAPyfKzqyABQ7h4812Tpi5RHYA498ZSS8kIbRoApYOnx0w1otf1jLIBenveuAhOeBcxx3PDRcKRD4dgdz1MZkJAm7enQ273pJ2rPwl9unl3HW2O1pi0sf319w5OI9d4R5WaCcYxoefzypp0z4BXLD56iD2GhgEi6TbpSmrG15/BjZ8gOvX2BTMb6epPTVoh/ihmDbVqV/NXOPHABVwCDfYfE543iuuHJq9JhThtzuXMxZhYw0pCniHuIf1D1AFVreP4FVGTKFDYx5iXxrVPtIr3LAAgcz9h9v8b4Rj9yHW1KYqy5gJBLQFc3kHyzqYjW9pxXb6fOOho6xnQdhbYi7YJPFhM7W6/FbDnME55NjU3DIH7bzDgbVGS2BA8kw/Mpjnar4i102fZAiBRXtPMXUTNx3WitO8YSg0pMPOGdMHe/pRBuJXeLX1jXnUpoRNasnuEjvOL1r2sYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01XVkw4v7XUUbv6zCesdkpWM",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://oasys.health/blog/simplepractice-reviews"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SSq744TQir6mefGAGynof9",
+            "name": "brave_search",
+            "input": {
+              "query": "\"private practice\" therapist Facebook group marketing cost Google Ads client acquisition"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SNAe9gPF1nNTyrDHga8tFk",
+            "name": "brave_search",
+            "input": {
+              "query": "reddit therapists \"just need\" simple note taking app \"appointment reminders\" cheap"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2050,
+          "cache_read_input_tokens": 8847,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2050,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 363,
+          "output_tokens_details": {
+            "thinking_tokens": 151
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "267b786c3a365738f8fdf7df3a585ff0688140bc56c40fa173e863f3067d87c6",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4631,
+        "cache_read_input_tokens": 10897,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4631,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 500,
+        "output_tokens_details": {
+          "thinking_tokens": 360
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0187609,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7pcHzaoNF69VErbeju",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtkKCpABCBIYAipAHmnCV4xaqtA3oHmsWAia9jSDoKMPUxoePXip05RmThvXroIx0RksEPlGLuyY7rVdEh2ig8bOupmpypjVKJn0PTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAarf1tUGEgwo19ySI5wiGjc3eZUaDNOILz5s3rEWnzT2kiIwd9eJg7awG8tWVyrFrNeDoqR3glYCvI+4Fe2IidwUktfxiDDiGoPXUgevfAc0+XtUKvUIOpFE2BonyI9B9lcO6pCMvNxrZC8QQhKREmMcva+zBxATSLzP86GpoLj7KsKMk7pc39idZyKoKRMPlvUW1qVSdquSRhVRXyUaiTcQ8KguJNsRSXb32oZAQGP7bRCwpO0i4N1cSXPN7wqZ0+vzdKHigF4hkiGECG5N3TTJLixbT1XIInd8QxhgiIqcoO7c8vtN7jz6gPwc7sCBpSYvLe+R0kqCIeuw+IazEG76Ayl6QbFU66xQPqtJzRwr/fe0Ofd9ePFpQN8QVf/qjaOXf4gug0raMpSojZyrMR68kxMUmLQ4ZF27ms6G3h6b4VTUPJmLUtimQSCjMQfNZkbHoo3ivn50Y7Nf5ItGey2WZ45nHH2jJ9SFoSQcXUsxFlKN8Z+tU+dElMR/FDYd2ldIJZNiNvUX3ge9ZVOZp4y2ZDzcB/NsIV25+nDFU9+fOtOPCb41uRuMzEQAJSBWIMVvv+F12wZtkJ+0A6AzxQCq8fgmMcclCisBk8aQHQIuWXgyZLaIkMmaHtLC2N7iq5kURMlTeuQrUqs6tdwvis57cfcZ7x8fw1UAuNKS4XdNl3uQeKVv64S7sTywThBRkrnrCwMN3BVA2rMDssQ6vBEKYOOTKr5nphtvGFgcWfF49ZSMX042bwvkvKyuaTG8LHPXGy0+5DbH2WLvxKt2IrSVE9DbKWOrDoHqA52iUBNkuZ5BXgMnRxfpnjbwsLXgqvrTAO4tO+mndV3HcGhNTBMTqevC08FEBOHXxdgG8nRoZGs77dkIZIkM+2uot8HnbRHYIu4nR5QXEYrpSWzEi03VNXjWgceoek0kDYy78nKsDp62jsWn6U/RGaVsKV4dr2pV+/UQYnGrt0RtW2Bq7zMJYj85IiRYRcO6N5ziuLPMBmLBemmN2y/IQ1YqT+5fu9JLcl0U9EnpjmtEP0PpVNWUCSqfFYvCbY1i65Bh1s3ddFgzKWlspgpqWWv/MBxQRUxg3iTzQdGaGFKVW2P/h83IOJkXWRjyPTSw0Xx6EkUh1xiOFEma5XjApn/vLcL/d1BSSMXJMPtL4UiDTXm7PoAQqXyJLt9qA54MHMdAbp0WYuRDUu4DpD6R35Yf/+p/UaJFTGL99iLIL3aXe0+jmsCkayRN8TpmHVrnv5/zkNFahjTAgZBUCtJhduPJD6MuklQC7Z1GjVo8zpMjDwQJorCdLXh3eCwcsTbgpZMNH17vEWcJLNRHwtHj1wywljml/SRSWsLBCuUS3u8czH9g8jQIY8LXeBify8utfAcB8Iogpw3DcCPVoQPT9xaqG43EHtTvH6uACrc8vF+LLYqORpw6Xe1BoSRY0sUukb4TVv7b5gFLhz1xDp5teks16bGRVr+k6SGPg0YNCQbxoNFAeVqcMUji1kaRrL3LaVdiK7wsU1LsG4+JRSIwpiYmcPz4IiuBFAqTAszp50GnMjx00ADewD+8zG+nOtraRRASaJAhox5COrCqi2E1L2sDBMs6cdIwQ+zqZY0vv0jRlvXLylbRJ4z14YER7lgqZxgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013LDTZ2g7p4ezJFZmXPmV8o",
+            "name": "brave_search",
+            "input": {
+              "query": "reddit r/therapists \"SimplePractice\" \"too expensive\" OR \"overkill\" quote"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01HC8WR6YrB75QCqhTCFWL4q",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.therapynotes.com/pricing/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 4631,
+          "cache_read_input_tokens": 10897,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 4631,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 500,
+          "output_tokens_details": {
+            "thinking_tokens": 360
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "4f91b0a428ab3ab464f47102fdba8d0704857d2556bcdbd59c82fe5d9bf3f2c3",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1592,
+        "cache_read_input_tokens": 15528,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1592,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1110,
+        "output_tokens_details": {
+          "thinking_tokens": 963
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0181896,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7qAcC4JAPdkeMjf9oS",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LjmtHEywzqLExmQPdTEFCf",
+            "name": "brave_search",
+            "input": {
+              "query": "Google Ads cost per click \"EHR software\" OR \"practice management software\" keyword CPC"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CsNyRMSBsGsD3mbWTJ2uEn",
+            "name": "brave_search",
+            "input": {
+              "query": "Capterra G2 cost per lead software listing healthcare SaaS pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1592,
+          "cache_read_input_tokens": 15528,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1592,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1110,
+          "output_tokens_details": {
+            "thinking_tokens": 963
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "3af7e2eea1aea2a6eee67a3025f32359494989db15a6e3ce4519f13d896e215c",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2078,
+        "cache_read_input_tokens": 17120,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2078,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 339,
+        "output_tokens_details": {
+          "thinking_tokens": 245
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.012013,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7rCbXjLGVLSgAGmT4j",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpIHCpABCBIYAipAWrZOhkzn3+Zhai3OzktTVQKOYMww2gxXfAqQj0Iix3wQ+PW7F3Fp0DNfGchOahcmIzA2+oiERWaXMxN0EGTDdjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAb3f1tUGEgw6IDhaOJxLX+Uw1egaDLyZjfdYWCab9UJH/yIwki3w1kG0c1AYkH+XKsjx4ArgbzcdvheoHTk3gPPSYiy+TVn5zH13ZylxToq48+RsKq4FT1jeIEgjgYHrAcPPXJr4nLydHpIZLaKfb+5EYEZKmZ+XnJNKwffqJ9nqU8ben6JrYs1JPQvPxWLRepz0XPayiJ5XJNXpyCFnTpebllb4dxE43gMo2s8ZEjdEqJKlRicVrpzj/3B6tDGfN7arMEKTyrXHims0rt5r4XAbN3W7MA+pfoJ7eTKeYW0r95yMh02zhXM6qzr3MRgwlsBBpCpMdNe5WOqiN5ZnBSC++PkUJh3/mhEDGmlc/EBOin3HKTD+2a1f1wrB6KTfY9i3kyCxsfRi7On/ygXlC2U2JD6osmcBAI3j401XxaiC65sjzoMGFMOfoe9K/Fb5dT2utJM9O/UCfceYPlgE5/xT8tXjeYNBuRUfXgVJJ60i3bC41zyYyGe0n2LQ/pn9G5vZZbonij7jCIsuIG6gUGqXKr2/1ZiHEAdKv/33g2XEeYy9cXBV95q0TaqLBK9bIS4ZDmnQ6jnLNvC7Z7HzkIoZOxqIJaE8WTR6oBwX7fsPiZ/JOZ/q8gfrhZoB2nXTBCevM6sj+22HECYfB3R9rBFojlzcyTCtUNVn7nJFKn1K/1xmvCnTEmB30FPN00W9PORMURnUK5VTWYdqwpB3Ndgx8zsnUSuif0IN4KsaebRxSf64QLhX94c0Hrl/yKLJk6w2wdCn3W286fPZLxRkR5O31bpqyqmcDdBKfYQ0KkUUEdV7XC2XVu+Z40mQ5uDm0P8yP6e4hRDNzZoJtJrrO2yg9fkhUxzHEDcsX5dVYwuCCyNDgVa8Nt09SZs6o//uE/asFwgGqEvYG9ns9zMhc6hl2xOOBWoSmNchdC2eQyRzztzNEDLZjuG46GMHWSJjMbIW1XC/cOQqJD9jNwYj8UvcCI03+OoIiZcJjiBkN6+r6rbwHAJLUIsaGmbPtpOvoxv6t3EYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Vj7mXA5c37MDNrR9i8ixQc",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.invisionaz.com/feeds/blog/hipaa-compliance-cost-timelines-healthcare-saas-startups"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2078,
+          "cache_read_input_tokens": 17120,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2078,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 339,
+          "output_tokens_details": {
+            "thinking_tokens": 245
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "b8115297e709e24fc95bbabe3223c301d4090ac2e00f8ab21e0a47c86bfd5e3d",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3402,
+        "cache_read_input_tokens": 19198,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3402,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 5304,
+        "output_tokens_details": {
+          "thinking_tokens": 337
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0653886,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7rYA1aJ8SNDMWyruDT",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eq0JCpABCBIYAipA4wsq0JDeufCOq81vqYHSwcRBh5W8GkWAF9D8tB4LcBemH6nWNdflaIxuznjewGyyugecydzYGN10BWrveAHLCjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcTf1tUGEgyGUhO6OaL9AF7nSmAaDAHIdFY+gbgCxikKhyIwhdqz+Gx6TYka37AR1muayzgr/QQpYsjTKuKNh8T7WTdTU7zPtHyhaLOOow2+u3MfKskHuAWaDka5sHrUCXLu5jpw9pdRbSiXMh9GIZ0SG/a/MVC/Ou8NRtFQ7+IaUXHDrvxHi40dU0a0tOSRY7DHirUlS3LFWkY6qke53YKmvmiNM87dPap6EFNOTkGMi/YhNpbgFgk8mXcattnIW4c2R+2D1VYDoKkseMgT9KApmvvaQdU2U/1iBIqRHeOtisZ0qNXVhZaz2pIe0PNJ17r1WOeHmAsP8Fh7JT1038G3+f2cpXYXu4FJ8pZ4Bjm3ZIfySLtLJ0uRNGVd94gKJqtbUIrh2l7jUQRS2njyxc9wqYAnDEEgmRs13+1iz9cVnQFr9E0nZO7Ply7K61/9iffO8FjdzjheW+FwyvqMOcgU9Ym7AiNWGY778861osbfI98kfG2NojOolPmWr94x36lhufTlvjhZy5ZialLn2fTftETMBgCM+C+UlQqk4PLsd5hvAcPwTdaZA71V8vOIyyFfOUUK/KRf/4TELAWGzMwnNQcEfaelDDUmYaGtGY/cllmMc+kJyJ0AUEWlAtN6hD3y/qKvtjNFY9cRo+is8O3uit+lYe3QUYXCUK/4KMjlkx1Yk3P0AcRfSGFigUndAxoZjhDxyt1dbH4u8ZvwuS8QwKlmfauRc4nOP3EkkDs+bzGu82u5rAzdm0McG2xL8Kf5PkQdh1b5P/DJfQKgJr2Pb6GLJoBRc4OWsCFI19tkUtQ6RDUXfwSWR8vhja96vHyndn/3Y/z4RI+gDd0E0ccSJTTFEtr0nVEqi5OKTnAnvSfv5LtwPGqa3Cn/D9P/o7bhZ9Zvdku0sp/0TL6hcM4rE8/2Am1XsnhDYlrt1q7m/syX6kcpcVO8OcMEcWGBheONxlGY9P2IiiFY8lg92Nd5sEgxy3FT4SffU/KaTym+O8R3x10hC7Tyvdp3HnMjMyxXbhx39Or8chkmKr4BeLaKHzUheHMVMWhBDnqKlBi28jcFO+HDmfUqc0pYxEDNivO81+ESPvo+68L+zdczwd0Jli0IXEWQBkpC4Bq2ktcYIvqwOGYdFNkdaToDP73ZYyTRKKjk7Lw1+c8lkhvNKPJidc/mPVlZEidxJrwjTvmxSPaLybUe47QK04rxBOGx12N+AoRkdE0JaA1USuFhEzHzJ7DO3NRJGc/n1C+ZnaYKIo7dfTRvCNbdf8gB6sPmTWiwmjtvkdisvA/DlVoMQmdjHEdNaYVfo0oHbH4dIF37zRAfbA4dRipRuSVHA5AF7YmzA/nEAw6+v0yxxp3E+446JBW8A8TuvhUl0C8vZ9lBGn8Z7m1kChhqE0QH2d22GAE="
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"H02\",\n  \"payer\": {\n    \"who\": \"The individual therapist or small-group practice owner (they pay out of pocket or as a business expense, not the client)\",\n    \"price_hypothesis\": \"$29-$69/mo per solo clinician, anchored between SimplePractice's Starter tier and TherapyNotes' solo rate; a notes+reminders-only product without insurance billing would likely have to price below the $69/mo TherapyNotes solo rate to look like a bargain\",\n    \"comparable_url\": \"https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options\"\n  },\n  \"competitors\": [\n    { \"name\": \"SimplePractice\", \"url\": \"https://www.simplepractice.com/\", \"pricing\": \"$49-$99/mo (older sources cite a $29 Starter tier); + ~2.7-3.25% card processing, $0.04/SMS reminder add-on\", \"pricing_url\": \"https://support.simplepractice.com/hc/en-us/articles/115005956266-Subscription-plan-and-pricing-FAQs\" },\n    { \"name\": \"TherapyNotes\", \"url\": \"https://www.therapynotes.com/\", \"pricing\": \"$69/mo solo; $79/mo first clinician + $50/mo per additional in group plans\", \"pricing_url\": \"https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options\" },\n    { \"name\": \"TheraSoft\", \"url\": \"https://practice-software.therasoft.com/\", \"pricing\": \"$69/mo all-in (per kill-gate data)\", \"pricing_url\": \"https://practice-software.therasoft.com/\" },\n    { \"name\": \"TheraFocus\", \"url\": \"https://therafocus.com/solo-therapists\", \"pricing\": \"$199/mo (per kill-gate data)\", \"pricing_url\": \"https://therafocus.com/solo-therapists\" },\n    { \"name\": \"GReminders\", \"url\": \"https://www.greminders.com/pricing\", \"pricing\": \"Free basic scheduling/email; paid SMS reminder plans start ~$7.95-$10/mo per user\", \"pricing_url\": \"https://www.g2.com/products/greminders/pricing\" }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    { \"channel\": \"Software directory paid listings (Capterra pay-per-click)\", \"cost_estimate\": \"$500/mo minimum for a vendor pay-per-click listing\", \"source_url\": \"https://blastra.io/blog/g2-capterra-vendor-pricing-compared/\" },\n    { \"channel\": \"Organic participation in therapist communities (r/therapists, ~200k+ member subreddit where EHR comparisons are a recurring thread)\", \"cost_estimate\": \"Near-zero cash cost, but high time cost and against subreddit self-promotion norms; effectiveness unverified [unsourced]\", \"source_url\": \"https://www.reddit.com/r/therapists/comments/1eqj1on/alternatives_to_simple_practice/\" }\n  ],\n  \"demand_evidence\": [\n    { \"quote\": \"I'm finding keeping SP for my non-insurance clients a bit overkill with what it offers/what services I actually use and the monthly cost\", \"url\": \"https://www.reddit.com/r/therapists/comments/1eqj1on/alternatives_to_simple_practice/\" },\n    { \"quote\": \"SimplePractice (criminal how much they charge)... TherapyNotes... pretty good and cheap\", \"url\": \"https://www.reddit.com/r/therapists/comments/12bven5/therapynotes_vs_simplepractice/\" },\n    { \"quote\": \"It is really expensive for what it offers\", \"url\": \"https://oasys.health/blog/simplepractice-reviews\" }\n  ],\n  \"case_for\": \"A solo builder using AI agents could plausibly ship a narrow notes+reminders tool in six weeks because the feature surface is genuinely small (structured note templates, a client record CRUD, and a Twilio-style SMS reminder cron) compared to what full EHRs offer (insurance billing, claims, superbills, telehealth, client portals). Reddit threads show a segment of solo, private-pay-only therapists who feel SimplePractice/TherapyNotes are 'overkill' and resent the cost for features they don't use (https://www.reddit.com/r/therapists/comments/1eqj1on/alternatives_to_simple_practice/), suggesting room for a cheaper, single-purpose alternative sold directly at a price point ($15-30/mo) undercutting the $49-99/mo incumbents.\",\n  \"case_against\": \"This is a mature, well-served market with entrenched, VC/PE-backed incumbents (SimplePractice was acquired by private equity in 2024 per https://www.upheal.io/blog/why-therapists-switch-to-upheal) that already bundle notes, scheduling, reminders, billing, telehealth and a client portal for $29-99/mo, and cheap reminder-only tools like GReminders already exist from $8/mo (https://www.g2.com/products/greminders/pricing). The complaints found are almost entirely about a) price creep and b) *group-practice scaling* problems (supervision, intern billing, couples records) - not about a lack of a notes+reminders product for solo therapists, meaning the demand evidence supports a cheaper/simpler alternative more than it supports this exact feature set as a wedge. Critically, this product touches PHI (session notes, client records) and must operate as a HIPAA Business Associate: it needs a signed BAA with every customer, a documented risk assessment, encrypted storage, and audit logging from day one - obligations that carry real cost and time (a pre-seed-stage HIPAA compliance program alone is estimated at $8,000-$25,000 in year one: https://www.invisionaz.com/feeds/blog/hipaa-compliance-cost-timelines-healthcare-saas-startups). A single person on a six-week build timeline is unlikely to complete that compliance work credibly, and a security incident or lack of a BAA is an existential risk in this category, not a cosmetic one.\",\n  \"open_questions\": [\n    \"Would therapists actually switch away from an incumbent (with existing client history/data) for a cheaper notes+reminders-only tool, or is switching cost (data migration, client portal continuity) the real barrier, not price?\",\n    \"Is the real underlying demand for 'cheaper/simpler' best served by notes+reminders alone, or does it require at minimum basic billing/superbills, which the complaints suggest matter as much as notes?\",\n    \"Can a one-person operation legitimately execute and maintain a HIPAA BAA program (risk assessment, breach protocols, ongoing vendor BAAs with SMS/hosting providers) on an ongoing basis, not just at launch?\",\n    \"What is the actual cost and reliability of sending HIPAA-compliant SMS reminders (Twilio requires its own BAA and specific configuration) at solo-practice volume, and does that materially change unit economics?\",\n    \"What CAC is realistic for reaching solo therapists outside of paid directory listings, e.g. do therapist Facebook groups, state associations, or grad-school listservs convert to signups at a lower cost than the $500/mo Capterra floor?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      { \"obligation\": \"Sign a Business Associate Agreement (BAA) with every therapist/practice customer, since the app stores and transmits PHI (session notes, client records) on their behalf\", \"kind\": \"ongoing\", \"consult_scope\": \"Legal review of a standard BAA template plus per-customer execution process; the InVision breakdown estimates $500-$2,000 per BAA drafting/review\", \"source_url\": \"https://www.konfirmity.com/blog/hipaa-for-saas\" },\n      { \"obligation\": \"Conduct a HIPAA risk analysis and implement Security Rule controls (encryption, access control, audit logging, MFA)\", \"kind\": \"one_time to start, then ongoing (annual re-assessment)\", \"consult_scope\": \"Fractional CISO/compliance consultant gap analysis and policy drafting, estimated $3,000-$15,000, within a total pre-seed year-one compliance budget of $8,000-$25,000\", \"source_url\": \"https://www.invisionaz.com/feeds/blog/hipaa-compliance-cost-timelines-healthcare-saas-startups\" },\n      { \"obligation\": \"Obtain BAAs from any subprocessors touching PHI, notably the SMS/reminder provider and cloud host\", \"kind\": \"one_time per vendor, reviewed ongoing\", \"consult_scope\": \"Vendor contract review to confirm HIPAA-eligible service tier and signed BAA (e.g., Twilio offers a BAA only on certain products/configurations)\", \"source_url\": \"https://www.hipaajournal.com/hipaa-compliance-for-saas/\" },\n      { \"obligation\": \"Breach notification procedures and workforce training\", \"kind\": \"ongoing\", \"consult_scope\": \"Policy documentation as part of the same initial compliance engagement; recurring annual training costs $20-$60/user/year\", \"source_url\": \"https://www.invisionaz.com/feeds/blog/hipaa-compliance-cost-timelines-healthcare-saas-startups\" }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Effectiveness of organic Reddit/community engagement as a acquisition channel for this specific product is unverified\",\n    \"Twilio-based SMS reminder unit cost and reliability at solo-practice volume was not directly sourced for this brief\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## H02 — Practice-management app for independent therapists (notes + client records + SMS reminders)\\n\\n### Payer\\nThe therapist or small-group practice owner pays directly, typically as a monthly software subscription business expense. Anchoring to TherapyNotes' published solo rate of $69/mo (https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options), a narrower notes+reminders-only product would need to price meaningfully below that, likely $29-$69/mo, to be an attractive alternative rather than a lateral move.\\n\\n### Competitors\\nThis is a crowded, mature category:\\n- **SimplePractice** — $49-$99/mo across tiers (some third-party sources cite a lower $29 Starter tier), plus ~2.7-3.25% card processing and $0.04/SMS add-on fees (https://support.simplepractice.com/hc/en-us/articles/115005956266-Subscription-plan-and-pricing-FAQs)\\n- **TherapyNotes** — $69/mo solo; $79 + $50/additional clinician for groups (https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options)\\n- **TheraSoft** — $69/mo all-in\\n- **TheraFocus** — $199/mo\\n- **GReminders** (reminders-only, adjacent) — free basic tier, paid plans from ~$8-10/mo (https://www.g2.com/products/greminders/pricing)\\n\\nSimplePractice was acquired by private equity in 2024 and has raised prices annually since (https://www.upheal.io/blog/why-therapists-switch-to-upheal), which is fueling some switching interest but toward other full EHRs, not toward stripped-down tools.\\n\\n### Acquisition channel\\n- Paid software directory listings (Capterra) start at a **$500/mo minimum** for pay-per-click placement (https://blastra.io/blog/g2-capterra-vendor-pricing-compared/) — a meaningful fixed cost for a six-week solo build.\\n- Organic engagement in therapist communities like r/therapists is free in cash terms but unproven in conversion and constrained by self-promotion norms; the subreddit is where most real EHR comparison discussion already happens (https://www.reddit.com/r/therapists/comments/1eqj1on/alternatives_to_simple_practice/).\\n\\n### Demand evidence\\nReal therapists on Reddit describe SimplePractice as \\\"overkill\\\" and resent paying for features they don't use (https://www.reddit.com/r/therapists/comments/1eqj1on/alternatives_to_simple_practice/), and call SimplePractice's pricing \\\"criminal\\\" relative to TherapyNotes (https://www.reddit.com/r/therapists/comments/12bven5/therapynotes_vs_simplepractice/). A competitor's aggregated practice interviews echo the same: \\\"It is really expensive for what it offers\\\" (https://oasys.health/blog/simplepractice-reviews). Notably, none of the sourced complaints are about a *missing* notes+reminders product — they're about price and about group-practice scaling friction (supervision sign-off, intern billing, couples records).\\n\\n### Case for\\nThe feature set (notes, client records, SMS reminders) is narrow enough that a solo builder with AI agents could plausibly ship a working version in six weeks, and there is a documented segment of price-sensitive, private-pay solo therapists actively unhappy with incumbent pricing for features they don't use.\\n\\n### Case against\\nThe market is saturated with entrenched, well-funded incumbents already covering this feature set (and more) from $29-99/mo, plus cheap point-solutions for reminders alone from $8/mo. The pain evidence collected points more toward \\\"too expensive for what I use\\\" and group-practice scaling issues than toward an unmet need for a minimal notes+reminders app. Most importantly, this product handles PHI and must operate as a HIPAA Business Associate — requiring signed BAAs with every customer, a documented risk assessment, and secure/audited infrastructure from day one. Independent estimates put a credible year-one HIPAA compliance program at $8,000-$25,000 even for the smallest startups (https://www.invisionaz.com/feeds/blog/hipaa-compliance-cost-timelines-healthcare-saas-startups), which is difficult to reconcile with a six-week, one-person build timeline, and a compliance failure in this category carries outsized legal and reputational risk.\\n\\n### Open questions\\nSee `open_questions` field — chiefly whether price alone (vs. switching costs, feature gaps like billing, and compliance overhead) is the real lever, and whether a one-person operation can sustain ongoing HIPAA obligations (not just launch-day ones).\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3402,
+          "cache_read_input_tokens": 19198,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3402,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5304,
+          "output_tokens_details": {
+            "thinking_tokens": 337
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

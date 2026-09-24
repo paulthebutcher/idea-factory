@@ -1,0 +1,697 @@
+{
+  "stage": "viability",
+  "idea_id": "A09",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T23:14:25.088Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "fb035b3f1f91f09a5d004f44633be7f781278f0648a74dfa3e865d099e412c43",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2263,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2263,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 351,
+        "output_tokens_details": {
+          "thinking_tokens": 63
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0091715,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7YnDMGYiy1L8n87qoU",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eq0DCpABCBIYAipAl3uHo4z13Ev2K7YFuV4S2S86yW46aI3qhRHS0LM67sJ2Tj5fwd3/uXn7clFAPs7BXLqWum5QPPEU2aI54ZbdiDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAc/d1tUGEgwm9Ne7WMJLP1MSt30aDACWbzprWbZzakg8dyIwjt8Li6qrQxX2qBif9ZStxxUom9V5BpLQVOeGi0mD4eEZRXsFidi9nZBgFCRwpCLrKskBtbH5AJAx8qejum1/7RMO/JvacKMGswDnuV0nDF3OM39TVJOvQWAlhlJsigy/esKGRZf/L6XB143RBovIb5enwYqVuTj7UgT6zYMPb4/f/z/n0x51H6z8vzUNAPBo/M+LR+WMHlm4O8DYwqTGdeloDxBIVEgfNbDQ+KG/+yzzAhW51gA7bbo0BThbbu+eNHPEIuYsRv5HjUbaVrwDPd639uiuo+y1VBSlFaVt/r+aXgF0kYDzeYLwDueTyfq6FAnJYnwGJ6iy43XeGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CGd7ezUeewXHdbuwtgTnr4",
+            "name": "brave_search",
+            "input": {
+              "query": "Reddit AI spam filter extension fake reviews detector pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PA536ThnqexVeB1BcTvkPG",
+            "name": "brave_search",
+            "input": {
+              "query": "\"AI generated\" reddit posts annoying \"wish there was a\" extension"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01DvgXWnuT9c7QVDo7n6Mw4u",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://redpal.io/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UHTSjFkSPbVFoepifuJLAa",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2263,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2263,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 351,
+          "output_tokens_details": {
+            "thinking_tokens": 63
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "9c7e10ffc2e92941efb1da51f0585353e31a79f4984b91a3bf332af30b9f4b5f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5485,
+        "cache_read_input_tokens": 2263,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5485,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 476,
+        "output_tokens_details": {
+          "thinking_tokens": 219
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.018929099999999997,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7Z9MqvFetNmaoVb5PU",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtAGCpABCBIYAipADkdq/kA3HpKCP3JdWcODKoHhGml3dHjj8vKXrqHSwUL9ZMOWdoRNDdZpko9KwhtKExXYL2UaodUflqQnBDtaYjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdbd1tUGEgzU8tWU4OnNaFEqRtYaDHpwagmTM7c8FAFtGyIwODp9eaxcRjHOekTUgCRDmSYsonrpQHs/3l+t8VL5CM2AK3Q08m4X7H4iEtLPI/CsKuwEjVIMhQ4FBoxywrydjZS3nkHH2v4gSAKUzPV0wN2tQS/bkVRmB+CELPOxf5N5V1BI3W6MZUuBu4TVMitlGk31xPsAwp9KOwvN8YNRfLvXW0x3JqbLKPA1Vpf41VRskEyHafWHcz01QtFd9rcYQwLDzBZ1FtWgAqUn5p2dgBnKw1DNlmcsOarFnbrDAoGpjRN30Npzzr5MocKpyJEhUW+ZNpyFnXfLvtT6idZY5MU8J4SknqgjEuHI75ofBiYG5oxDKAoBRKN03ucwe/1X+nSqTPN7ShaX9FEqVf/Kk1A6vLuU+O0kp3n4vT4wDesJevevja22FhGNwX1jrF5ZJ3xnz6FIFqbWJq/EaByqUotkHIb49+sGFlp7XL6+PC/PvAj+68LvAd1TfcB/CDSkM5ltC0ewZF9m+UHfnrous9hREjm8/VIp+JG8SpT6PYu4GF+hqW2MU9vtxeQ60NhCy9obc2n22Ft+N6KqOC4PAh6ZX6x6wn09ZOjpRS2ThZtwh2ksRr/ONjNezTM8LvMZK6oXxvYZmoInDK/IZujgQXIt+2NRizfof649SYpl6fxj+O2yON1sbQsActmEcBJqCH11dw5jyv0gKQNDBWMxxfulbsnGnt+HSQ5euGcwCqg9vtJvQSKnSrTJXiVLl5mQxxF1I8xhsM5Od60kHeZgU0oNwXdIg+rHj0gmiQQZfyGq42EBMOUPguitxiB3iQCtqLI32G6VwyeJzUbT6iI73yt/nhAsFqIzG98gluyCuGQWrLg+uZM/5omhVF+C/RJXSm5nV7EH+fiFpJY4ngCIsO+gaQGhnK77NffL9GoDyeEYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VYsz2AWM2W7nFpte7h2cgR",
+            "name": "brave_search",
+            "input": {
+              "query": "\"reddit\" \"AI generated\" comments \"can't tell\" annoying complaint quote"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011XYnmMFCv4A2ptBF3pBvuh",
+            "name": "brave_search",
+            "input": {
+              "query": "Fakespot shut down 2025 Mozilla"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_015vdPV4GFwGMLHn3ZnsrM2G",
+            "name": "brave_search",
+            "input": {
+              "query": "Reddit ads cost per click 2025"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LXZSSnb76jmuBuWPswyryC",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://news.ycombinator.com/item?id=45500937"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5485,
+          "cache_read_input_tokens": 2263,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 5485,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 476,
+          "output_tokens_details": {
+            "thinking_tokens": 219
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "cef6a4751dbbd5c8af421ea38e9739fab9338c0dd5d10d58aa2105c27a5661da",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3033,
+        "cache_read_input_tokens": 7748,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3033,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 343,
+        "output_tokens_details": {
+          "thinking_tokens": 138
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0125661,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7Zhpy6ExRMxAFoD1z4",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EroFCpABCBIYAipAoAw/YmNT53ypLo4S2PZk+hJ1E4c03AzFvt3PMxZT8OEs2R7cxBqZIPiRuenpa7wKTCkFNqnf/3kpbW+5ot4rITIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdzd1tUGEgywQMjrKUQh/Uu25vQaDKG8i/TUYxbcCrSkdSIwmfDgG+g+/duFN8gecF7I/e2jq21V//P73I+zS6jsLwEagO+gDH0/D4afDKSE3lK4KtYDKNIvMAftk913SL1I6+N8hF8Mc0qaHVFcKhR4wnx8d+MPvNFkGJsvAXupkAfyHqhlpm/TO5UEvbeciRyBJNuefl5AXKFoBwSQqxdzI8ww9j5kCebv3/xcjGWDgP3Q0MrYHn+FijZx19sFLGTYrCr8rGyaOC5yxJoZ6y9lsMVxnfRSZQvwxNC4DDuU3QrP4UawWLgwxIutg4IosySxrDtBidQlH5mYz+kI78M2fBBE+WdEn0xvrc637n18poWLqpECv4oCpkf/FeYsElxvoV5mAW1hNP0AZdO0xjLRRDrQJA0ZaPO8BKTG5+lryUSCLO3muFySWotFH+9jFnelAYR07GB6F9RE9uns1p3I0+B/TsihYeL+E6lihU2x4WLp6n+kYL9VT2WtbyS8d7d8WVWFku4f+eiuKwyQWuLcls5nCzzA0ccx+IEi/mr/4aQ0SqR7xfpWf1+HECAYArl5WbXfNbxOz5mOLwdeVymk0xE3ws6p4wO83uAco18pPTaDSRp4kZHIpijqv0u6yS7O3Nlv3YRfdfUrqyweN/6N99w38C3ufHGNr5Ea5hIOlrbOFAsbgwiJA0pje+HA21s38guqDy4ueMHsGSjwHwrkCt0Se9x9h4B2j8QYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CC8KPyVT7XPxvi1mSjeNBu",
+            "name": "brave_search",
+            "input": {
+              "query": "\"spam filter for ai content on reddit\" hacker news"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01XfK7pJDn5vQhWQhHQ71nqs",
+            "name": "brave_search",
+            "input": {
+              "query": "reddit AI bot comments detection extension complaint \"sick of\""
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WDE75ceTS7FiGCCBhnn558",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://addons.mozilla.org/en-US/firefox/addon/redd-eye/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3033,
+          "cache_read_input_tokens": 7748,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3033,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 343,
+          "output_tokens_details": {
+            "thinking_tokens": 138
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "f1544ca3a073f8b94cfda7d14770a9f5dd92fa277d1408e797a94953279c23e4",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2808,
+        "cache_read_input_tokens": 10781,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2808,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 637,
+        "output_tokens_details": {
+          "thinking_tokens": 406
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0155502,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7a6cAWMHudGnb6A7vi",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eo8LCpABCBIYAipAH3fenaFiuR8k6ODTDU04Ldxu0hyaiXQJqdmZG70d9DMdOb1uy3vylxaqpcKS3fq+EIkscAwXiPpFIxpZayiq4DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeXd1tUGEgxDNLcRUCWf/OSyr7EaDA1zEC0zhlbtQq1/wyIwb9qc7KkHwohwBoUaLO5nM+KIhIhetnf4NDhmQvlEfpvi9SiTUWrEg3uQGgTTNLddKqsJxUEOi7G4ntP5/iYBLXTb/dWzm7Oi0Lckqecum1tGaeHKPRdBrSojyRXKbIZyMswQtrOL2emXFrjHB1e6xnrj5KabtNrUL3F4lKzqcsjSn0U/km6S02+E5IIOm4j4e6r81Z7yHLYvZB5enhX+GNZgUhcP161POO8YpGdw6n/H0LvakOW/MJaRlbu9zuTHSm7QFoE4kzl9Olkq0ac/INSBP/DuTz5UdVvzKaiWTVZbQZzHQgrQJaG0rHaD1pu3oaS348/kP82JFLQuAGNhmIQSBLWWwLmQ2ILFPQTDcbMB60nBfDskmKWf/cZUhUIpUrKWj5VR9eHI5xq+2MKyLLG5ouK4YMfZL1/j89go5Uef5eK7DBYKed33QTeVa6DFt8yhp5UNvzwvvl2eNlQALfQIw8XWe0R4nH40PKvKEPU2km5ewNipZ40K8T5fHaf0j833zSaNXrY5ikmlOFwkQFsSH/Phg8RDHjEBPAAWZZwQ2O1/Y0ex2X8s3RJNgWG7NcLw5Zy7S/yDOc6q+Bb0tzXIrwBCULbT3xs8PnQHQ4ztgzCT2Eek3lv1wTybI6WdZxveD60vQa6Oa7dZu+qbsBqnB2xefHUeW61zPQZ7uhQvDC3RHjhNum0Y8C5iKZog8nNEJwBBh7Dub4GdT5GOoJgAEel1yXKtHymh6fBGCEZ15ded9xR4NaUyAJd3ssJvJaFSjL+g7tW/LP54IFxTktbzcAzUZEbc5eQ9lZ+6BXsoslzeuw/kpTr2URa1dCpQT+BVi60Q+bBINBEjmCT4iy3vdanDgTOWmXMpJn1UhXVC6zaoSPhlY5t2U2fLwRp7wLE3hgCpuKGDjNXp0q9iOMvtPrtWCv5K0x+AWOrNkyU5ign/z1+gmvpLg5CHgugvCC45GV4DiclU6ekdIi/g5ZCBBenoNvtOS3kOqgRSC/hCbm0TNQpjhnppxZr4F4eM5Qs0ShogBo+waHq9FeYkjMKEmwSRA1NU+PwoN3PO27QK9ldh7/IbwxBe20vHKDbiZUU6LlDbsi9ahJHhJ8Bt5cjiWnnaej/SWuMilk90pQX6pLR1LrnlQlERZ9+ERRKH26pagogakYWTAm4X0TFwwayJnpEjvEGo+JhSCWHZCAdkIuKV2jDs839070yELp5WlFCK73J77UjzJuRjMRGgc4LVCCOOG/3Ty1EYh7twwfYonbSfjJ+BSLBnDJpXm3Ne5Ar6kA9Be7UuHLqSRLVy+SunISIOX/s3qh6PLTKiw5EwScVKNh+3BdR2dvw2k9TSPoirBPQ+iTkr8rmm1Y0oe8d48UsD8m9f97dlCdu8pe3pUfhuH9UlNcKztgODMuKKiqCxeWVPLM0LVBBkPMEzrrrC+QVFQLL5FJE6Pnuxkd/buFwPUPvPVPUaFU2q8xFLbzk8NxY9xCVILR2k6F08jozZC66NDjGuyoMHo6Cp07xT8Hw9QBxFhn8niXCvROWvWiyyy28grchhzj2jRcV3f8ietTfRbezpBBn1Smbp7d69zAysxv9WkH3VYwnJ35DJZqljkG8Uf4qCRLWjaBgo3Ja6202ZgqN1+PFl1zRD/F0CXE7VKPdDgCabtt4QRxgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WAjK1TdXnTeQy2xDd1hsXv",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/webdev/comments/1j6ii67/i_created_a_script_to_spot_ai_bots_on_reddit_try/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01HhNFHUuNnaBYKfUUoSBAaK",
+            "name": "brave_search",
+            "input": {
+              "query": "GPTZero pricing plans monthly subscription"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017HJRgqZb8pgXCBa82ZacVH",
+            "name": "brave_search",
+            "input": {
+              "query": "browser extension \"premium\" \"$4.99/month\" content filter chrome web store"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2808,
+          "cache_read_input_tokens": 10781,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2808,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 637,
+          "output_tokens_details": {
+            "thinking_tokens": 406
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "232e5f3ea7d33de82767c1474f83819cd080972dd20f3509392fc8a86b74a90f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1833,
+        "cache_read_input_tokens": 13589,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1833,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 684,
+        "output_tokens_details": {
+          "thinking_tokens": 551
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.014144299999999999,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7amU28x9Tx7cvUf3bQ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CxwNWj5fVJd3CqUc3huPq2",
+            "name": "brave_search",
+            "input": {
+              "query": "Chrome Web Store developer program policy privacy policy requirement user data"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01K9kT8nXFhXQPebU2KzbWUN",
+            "name": "brave_search",
+            "input": {
+              "query": "Reddit API terms browser extension modify content ban third party"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1833,
+          "cache_read_input_tokens": 13589,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1833,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 684,
+          "output_tokens_details": {
+            "thinking_tokens": 551
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "27a5708db6a9899db06b0c00244988a721c15e2cb87b05979c40ff6a18dd95eb",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2583,
+        "cache_read_input_tokens": 15422,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2583,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 418,
+        "output_tokens_details": {
+          "thinking_tokens": 350
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0137259,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7bWtCn9Q9Nz7icGC55",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtMICpABCBIYAipA4OmkcgfgmKwtq7KVdwCCqI9+O4oh2ketg7WJ3VJhWY8bGYkpM9JoojCNwYMM86ckRwCOSQBf5Qi77Db3luZFCzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAfjd1tUGEgweGEf+8S+7KGRA5H4aDGfw5gLHdiiQ2hhmziIwTwqbdF9QfTwYI9cJwaEz9Uf+Rwt56AovpBrfYhmgYWIRDi6Qd5v5NJvkkUv0l1mzKu8G2PiTCfgbrKV+v3cDMJtck16LCuqRsm0u+4VBDpEzHCmCY/Tn4w7uzdApnNIuNH2xSR+sNFUtfr/sV2tScx3PF1zE5v58FVvOlkWE5cpGjZFOR/BpN9gMdRQ0ziHqS8AGwq4Zrlv0UvwDi6D/i/7Q7aXBaQLEnvtLMxBdLLbZ6D4/y/TFAhhEWvmvTRyyDhHNbpRnHwvGUhqNqnNbkfuu0dyMQqNNJWpzgJdcVTrqd1uDAXeucoq03SObJowd3AvSAUsdhg0tlZO3hPDsOXme+Ug0kCRQTIW3Tcs1IyppcJjtGdM+ASUoGLvUPFwLicmjXb6DlCkC5U8AXD6K2ieRN6ivPQMmARz2zEpvAfZzCqD05hmbmK5GYN+LkxOxah3aM7gFcj98GHQhe4KsZT/pU4/FV2dBLqQSjLKQvjTBZOvBW3+cGJnakpN28kPgjnuOnlwJ7RQbPOxr31/ZdWvlbSmL76IWe/UbUjuBtZ4I/IYejuOWx1AcfDhxBpsT+Fq5fZEWRZXNT1FMWKcM6kGLt5Eh5AphmCFd6sUtAMlsl39O1N0bhHITjfkFhuONi0PL2rRLV8oQ08iuHeqhL/rY+QXOJOBWoYujBryb46t/EjxH5CeUs5+evy3hVprKe/+pyjv79M/IyRFZJ04lpHpkgaR9S19jWP4cbCE/t4R38K7eiLASwxnZW225huMEAATQiRSyIbJwoFL19I2SvMJgWNxsiuMf1/bhtnGlItgdB9w6SskNVJUUPGlpxL3NTG5MSVg3eThN/HBhsmAjLm+7aIu5QsGjZobVH6FO/kAw2oCnqJzi4bBEfeRR/eqNj0TSNzTACQ5feoTEQnhRO2Rr+R0QEUqroQiuL5ZryF/gZCtOgrz5w06PaQYofE2jHuTMVMD59es8nX+wES/hl5T77V0LqUYdMWFM0tFPvjht0S+pH9IG+mPIZk0Tdmi5UuUzGEcCvLB0NM5BSC+1OHRCWD8KMp5NgNwyeB7tRAr7JTtkdfJ9R/LZ9IFL8mHVB+Q7XvW2VlNmYO4+v5Lq1Oicm/mEG09L23m2DfpTeX/LjO/NeJffCEjQinZk1Ku6FzZ1DQY2IRR1Ze5kZcH7XcfcakLNs0ZWD25eN9yHWgMvmarQU6kg8pa/RcKv4l9X/agBLxqZEk5SwkqIYv4OUZywGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0138fYtgWeAE1XiGUaeDNYMM",
+            "name": "brave_search",
+            "input": {
+              "query": "Chrome Web Store developer registration fee $5 one-time"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2583,
+          "cache_read_input_tokens": 15422,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2583,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 418,
+          "output_tokens_details": {
+            "thinking_tokens": 350
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "eb9d7440cde4dfe29a16208d8df66192e4c03d26d20d978a05a616dd51a5fbae",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1236,
+        "cache_read_input_tokens": 18005,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1236,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 90,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.007595,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7bz3Ldj7v6TGDXkgzB",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Now I have sufficient sourced evidence to compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GeBijoMAj3jPhms4jbXF9D",
+            "name": "brave_search",
+            "input": {
+              "query": "\"AI Post Filter\" reddit chrome addon donation supported"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1236,
+          "cache_read_input_tokens": 18005,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1236,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 90,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 7,
+      "request_digest": "f5a74487e9446752e10f32ceffc862248315dbc6f601b7a6680e01df1cf92f48",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 710,
+        "cache_read_input_tokens": 19241,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 710,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 373,
+        "output_tokens_details": {
+          "thinking_tokens": 312
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.009357200000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7cBxSGdhpQfWDkfv7S",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpIICpABCBIYAipAxLI60chHEQqzyF6visiisayaJa+KYH7uY6PkylIYDQZ+87nEpaw1+/kuV3Kh+Jn7UDrZ+8hbqgXBHvpkhB4ZiTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYDe1tUGEgx1miwLGJPXVqCXnZYaDGh3L3M2B6+KD7eR1yIwafM9qmlO8WXnqvAbZM4z1pGh8MyOhRFyt6K3pUlvRO+TyWhHPhJai7bJvX5Sc2UDKq4G5qEn/XO8ZTiQtitmg8yw7UN4dtLFKRadibZxKSPhhS3BHzCrhAbDPKDiurPMVjvqeY0KZLvMr8QfNqH06D5PxQdj3tFW0DwgMXU4N0oNiz1fVQEUPxI3I3ERhA6tLa6wHJH4VwLOG4KtCl8HHgaxUdYl2mgag7lviUYlUQ7RGQXgyS+qAtiVF2TWxatd/kD8vRFZwOr68a0Fh8NcSWRw1SJ6Pez2L8olaTnDY0EuO47IGYJUOBnFS26EcvyMt00qwbvvTjGWEwFN6QOfMZ5naXnnPPTZMMZ7L96vNWc9+Z5Q/prUY6SSyIeVensDUFXPzK8qu6uYpaSB2X9Wd+OubVUUEJ/c5QJyRhIHDBqD1rOo3I0EIZXAWefn8E4Kgdcm+QPkYT8ENmtH486iQ5ZNX8ZrnAn045lCUycrWqoFUmi+kV+Grd6cnoQWWvk67A1nt+zP4mXgbB8zUaqz8MpQO1OhSaxas55f2UlUnFA9VnGDSTWGKOsWVhVH/ZV9C/sXzRXpv6iR2UKJC8UdxuiNq2ULvXN1HlhZjW3SdAOYf2qbhpVsJ4NQcJZkhjKtcepRsMS0h9+mT3mDIsz51UQs6byJmbnC71K2iOvkbKy3jwnSKfjNVYcH/YaZCJtz9hnbztWlyPBWbK39kgQ6gPFcX3spbXLBLsjxrYre+gB+5uOtUQV5LXuq4QV3bObaV6q0EGfloMM4yUqBJlTIHR3fIb+/1Wh94yjwLTlD8pUaIOSHdg8dNOWUP4vYMxm83XlyDUVHN6XWU+NezFjfO519O6YIbi7oLuHuan5H+0zRG3JA0GrCzhcLsKM+aWQWCBccMbkITN/xO1QPfqZueOyq95Db5okNg90ldQlR1BgwvaNbKnRZtcXw4ot3Yb2xOexexImrHiG0gI1bsRXJehmObeI/AbbcwpAUDTIiGUI2FqB/+IsVXe5sMWJFtBpnUX4sFrCK9YJm60Kmo3eDHEInHhlOAk2D285XfrI2uUsOVwOgmYpkEZH2U00xRMJpBi2TmjSfOU8MjSq6o81299gosn3NDWpEFx+9Js2SEZUMzMK9+G1ELdSGWVwmtoUi6BgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WvzMgRHxRujCkFc6F7umMf",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://gptzero.me/pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 710,
+          "cache_read_input_tokens": 19241,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 710,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 373,
+          "output_tokens_details": {
+            "thinking_tokens": 312
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 8,
+      "request_digest": "cf703990cd929870ee68c265bb34195c10d198a0d0ff95036583ebc1ba596a98",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 708,
+        "cache_read_input_tokens": 19951,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 708,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 5116,
+        "output_tokens_details": {
+          "thinking_tokens": 163
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.056924199999999994,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfP7cbnu5EB8h3G6fwV4w",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EowFCpABCBIYAipAF+exUqoiX2AZ/GqdrgkYf73Ki6CegtaCmZk9YJKWd1IPjlyxdXEwqFN3wRmpuFQcmcp5QRPwkBnyduwTxngmujIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYPe1tUGEgxlRsc5bFYPUqWndW4aDIavka2Ijn7asAzY+SIwOsyD9jR7NPybCCojOz3MiC01iENgFPGfPwn+Z+gT6tSz+tfbag6PGO2EoFZSLaUDKqgDXlGFlMoVPsuodIA/kWloPTpRuWAfzbcXT9+3Vmvr0f1ZHzNmjsY+63cxU2WhAPTeLeoWbbXtagFsROvTM8awom8Tjqf8z5n8I7JVd4xE5OqypSMm4148eCvqxjRGSNyMpvzL0sq0LRiRtLhLCp1HuQcMBD+D1ssVeETVvcGUPmwQHfEXBvZX9SC/O9cBYVlpxh/HRoAGzsHCIhRD3IqxLnQCigsZhXTQ2j1k/tT+yMqT+/AJGMPlg/IZfBOzC2HO8E4n9f+m/jAeccrC+ol1x/mVIgR52m1W8XnL0/dVZc9WnqJOttcrGEqpIRqgNHj0arQu6emFx1KLf3JPMJuUVUMUxH/uTInOsLDXu56QKuZIDeYRGC5ucTRgbenwj87Yj/GQpc4c+bBBUFcI4z+4XaORdxQwWiXUbukgRAOSKF7QOkbAwe774tS7IEEIkbFi7ThQ7aixyUs62PLf/7zZXJ07czAKMPp7chheinkHPQdUbj2r/Los2OefcZmc04PliM45zu28isjCDuPXyQYOrn2g5UDx3c0fU8OER1GIIDqsaSVbcFE4+RgB"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A09\",\n  \"payer\": {\n    \"who\": \"The individual heavy Reddit/review-site reader (consumer, self-pay) — not a business or platform.\",\n    \"price_hypothesis\": \"Freemium browser extension with a paid 'Pro' tier around $3-5/month for real-time cloud-based detection (vs. free local-only detection); anchored to comparable AI-detection SaaS GPTZero's cheapest paid individual tier ($10-15/month) and to typical consumer extension subscriptions (~$4.99/month, e.g. 1Password).\",\n    \"comparable_url\": \"https://aihungry.com/tools/gptzero/pricing\"\n  },\n  \"competitors\": [\n    { \"name\": \"Redd-Eye\", \"url\": \"https://addons.mozilla.org/en-US/firefox/addon/redd-eye/\", \"pricing\": \"Free, open source, no data collection\", \"pricing_url\": \"https://addons.mozilla.org/en-US/firefox/addon/redd-eye/\" },\n    { \"name\": \"RedPal\", \"url\": \"https://redpal.io/\", \"pricing\": \"100% free, privacy-focused, no signup\", \"pricing_url\": \"https://redpal.io/\" },\n    { \"name\": \"NotAI\", \"url\": \"https://github.com/Jaggler3/notai\", \"pricing\": \"Free, open source\", \"pricing_url\": \"https://github.com/Jaggler3/notai\" },\n    { \"name\": \"AI Post Filter\", \"url\": \"https://addons.mozilla.org/en-US/firefox/addon/reddit-ai-post-filter/\", \"pricing\": \"Free, donation-supported\", \"pricing_url\": \"https://addons.mozilla.org/en-US/firefox/addon/reddit-ai-post-filter/\" },\n    { \"name\": \"ReviewLens\", \"url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\", \"pricing\": \"Free; runs locally, no account needed\", \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\" },\n    { \"name\": \"Fakespot (discontinued, ex-market leader)\", \"url\": \"https://blog.mozilla.org/en/mozilla/building-whats-next/\", \"pricing\": \"Was free; shut down by Mozilla July 1, 2025\", \"pricing_url\": \"https://blog.mozilla.org/en/mozilla/building-whats-next/\" }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    { \"channel\": \"Reddit self-serve ads (CPC)\", \"cost_estimate\": \"$0.20–$4.00 per click\", \"source_url\": \"https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost\" },\n    { \"channel\": \"Chrome Web Store organic listing\", \"cost_estimate\": \"$5 one-time developer registration fee, then free distribution\", \"source_url\": \"https://developer.chrome.com/docs/webstore/register\" },\n    { \"channel\": \"Show HN / relevant subreddit posts (r/chrome_extensions, r/firefox, r/ChatGPT)\", \"cost_estimate\": \"$0 cash cost, but multiple competitors (Redd-Eye, RedPal, NotAI, AI Post Filter) already launched this way, so organic reach per post is split among many similar tools\", \"source_url\": \"https://www.reddit.com/r/webdev/comments/1j6ii67/i_created_a_script_to_spot_ai_bots_on_reddit_try/\" }\n  ],\n  \"demand_evidence\": [\n    { \"quote\": \"I've been frustrated seeing Reddit increasingly flooded with bots using AI generated comments to just stir the pot.\", \"url\": \"https://www.reddit.com/r/OpenAI/comments/1j6lakz/i_created_a_script_to_spot_ai_bots_on_reddit_try/\" },\n    { \"quote\": \"Reddit has become terrible... Good luck [with your bot-spotting tool].\", \"url\": \"https://www.reddit.com/r/webdev/comments/1j6ii67/i_created_a_script_to_spot_ai_bots_on_reddit_try/\" },\n    { \"quote\": \"Promoting detectors like this is downright immoral.\", \"url\": \"https://www.reddit.com/r/ChatGPT/comments/1ksozgg/im_building_a_chrome_extension_to_filter_reddits/\" }\n  ],\n  \"case_for\": \"The pain is real and repeatedly independently rediscovered: at least five different builders (Redd-Eye, RedPal, NotAI, AI Post Filter, the r/webdev Tampermonkey script) shipped nearly the same tool within a ~12 month window in 2025-2026, each citing the same frustration with AI-flooded Reddit threads and fake reviews. For a solo builder using AI agents, the technical surface is small and well-precedented: a content script that scores visible text with a heuristic or LLM call and adds a badge/hide toggle, which several hobbyists have already built solo in days (github.com/Jaggler3/notai, github.com/KartikChouhan03/DeceptiScan). Distribution is free and instant via Chrome Web Store/AMO plus organic reposting in AI-skeptic subreddits (r/antiai, r/ChatGPT, r/firefox) that already show engagement with this exact framing. A one-person team could realistically ship, list, and start collecting installs inside six weeks for near-zero cash cost.\",\n  \"case_against\": \"Every named competitor is free, several are open-source, and the best-funded, most credible entrant in the adjacent fake-review space (Fakespot, backed by Mozilla) shut down in July 2025 rather than find a sustainable business model — evidence that this class of product struggles to monetize even with a well-known brand and browser-level distribution (blog.mozilla.org/en/mozilla/building-whats-next). AI-detection accuracy is a known hard/unsolved problem: r/ChatGPT commenters call detector-style tools 'downright immoral' because of false positives, and Reddit's own users argue in r/PetPeeves and r/ArtificialInteligence that people 'can't tell' AI from human text and over-flag real writers — meaning a false-positive-prone extension risks user backlash rather than gratitude. Reddit has also tightened its Data API Terms and can restrict or ban third-party tooling at will (redditinc.com/policies/data-api-terms), creating platform-risk for anything beyond client-side DOM scraping. Finally, willingness-to-pay is unproven: none of the six competitors charge money, so a paywalled version competes directly against multiple free, install-and-forget alternatives already indexed on the same Chrome Web Store/AMO listings the idea would need to rank in.\",\n  \"open_questions\": [\n    \"Would any meaningful fraction of users pay for accuracy/features over the four already-free alternatives, or does 'free and good enough' cap revenue at $0?\",\n    \"What detection accuracy (false positive/negative rate) is achievable client-side without per-request LLM API costs eating any subscription margin, and who absorbs API cost for free-tier users?\",\n    \"Does Reddit's Data API Terms or client-side DOM manipulation policy put a real ban risk on an extension that hides/relabels content at scale?\",\n    \"Is the addressable audience (self-selected 'heavy Reddit readers who are annoyed by AI content') large enough to sustain paid conversion, given several free tools already serve the low-effort segment of that audience?\",\n    \"Would a narrower wedge (e.g., only fake-review detection for a vertical Fakespot left vacant) outperform a general Reddit-plus-review-sites filter, since Fakespot's exit and ReviewLens's traction suggest unmet demand specifically in shopping reviews rather than social content?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      { \"obligation\": \"Chrome Web Store Developer Program: must publish a privacy policy disclosing what user data is collected, used, and shared\", \"kind\": \"one_time\", \"consult_scope\": \"Have a lawyer or template review a short privacy-policy draft before first submission (~1 hour); most named competitors state 'no data collection' to sidestep most obligations\", \"source_url\": \"https://developer.chrome.com/docs/webstore/program-policies/privacy\" },\n      { \"obligation\": \"Chrome Web Store $5 one-time developer registration fee\", \"kind\": \"one_time\", \"consult_scope\": \"No legal consult needed, administrative only\", \"source_url\": \"https://developer.chrome.com/docs/webstore/register\" },\n      { \"obligation\": \"Compliance with Reddit's Data API Terms if the extension calls Reddit's API rather than only reading the rendered DOM\", \"kind\": \"ongoing\", \"consult_scope\": \"One-time legal review of ToS to confirm client-side-DOM-only approach avoids API terms; ongoing monitoring if terms change\", \"source_url\": \"https://redditinc.com/policies/data-api-terms\" }\n    ]\n  },\n  \"unsourced_claims\": [],\n  \"injection_seen\": [],\n  \"brief_md\": \"# Evidence Brief — A09: AI-spam/fake-review filter extension for Reddit and review sites\\n\\n## Idea\\nA browser extension that filters AI-generated spam posts and fake reviews on Reddit and similar sites, for heavy Reddit and review-site readers.\\n\\n## Payer\\nThe individual reader themselves would be the payer — a consumer, self-pay model. No named competitor charges money today (all are free or donation-supported), so any price hypothesis is a bet against the market's current norm. A reasonable anchor: a paid 'Pro' tier at ~$3-5/month for real-time/cloud detection, modeled on GPTZero's cheapest individual paid AI-detection tier ($10-15/month, https://aihungry.com/tools/gptzero/pricing) and on typical consumer extension subscriptions (~$4.99/month).\\n\\n## Competitors\\n- **Redd-Eye** — free, open source, no data collection (https://addons.mozilla.org/en-US/firefox/addon/redd-eye/)\\n- **RedPal** — 100% free, privacy-focused (https://redpal.io/)\\n- **NotAI** — free, open source (https://github.com/Jaggler3/notai)\\n- **AI Post Filter** — free, donation-supported (https://addons.mozilla.org/en-US/firefox/addon/reddit-ai-post-filter/)\\n- **ReviewLens** — free, runs locally, cross-references Reddit for review authenticity (https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei)\\n- **Fakespot** (shut down) — was free, Mozilla-backed, discontinued July 1, 2025 (https://blog.mozilla.org/en/mozilla/building-whats-next/)\\n\\n## Acquisition channel\\n- Reddit self-serve ads: $0.20–$4.00 CPC (https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost)\\n- Chrome Web Store: $5 one-time developer fee, then free organic distribution (https://developer.chrome.com/docs/webstore/register)\\n- Organic subreddit posting (r/chrome_extensions, r/firefox, r/ChatGPT) — free but crowded with near-identical competitor launch posts (https://www.reddit.com/r/webdev/comments/1j6ii67/i_created_a_script_to_spot_ai_bots_on_reddit_try/)\\n\\n## Demand evidence\\n- \\\"I've been frustrated seeing Reddit increasingly flooded with bots using AI generated comments to just stir the pot.\\\" — https://www.reddit.com/r/OpenAI/comments/1j6lakz/i_created_a_script_to_spot_ai_bots_on_reddit_try/\\n- \\\"Reddit has become terrible... Good luck.\\\" — https://www.reddit.com/r/webdev/comments/1j6ii67/i_created_a_script_to_spot_ai_bots_on_reddit_try/\\n- Counter-signal: \\\"Promoting detectors like this is downright immoral.\\\" — https://www.reddit.com/r/ChatGPT/comments/1ksozgg/im_building_a_chrome_extension_to_filter_reddits/\\n\\n## Case for\\nThe pain is real and independently rediscovered by at least five different builders in 2025-2026 alone. The build is small and well-precedented (content script + heuristic/LLM scoring + badge/hide UI), several hobbyists already shipped working versions solo in days. Distribution is free and immediate via Chrome Web Store/AMO and AI-skeptic subreddits that already engage with this exact pitch.\\n\\n## Case against\\nEvery competitor is free or donation-supported; Mozilla's well-funded, well-distributed Fakespot shut down in mid-2025 rather than sustain itself, suggesting this category struggles to monetize even at scale. AI-detection accuracy is unsolved and false positives trigger real backlash (\\\"downright immoral\\\"). Reddit's Data API Terms give the platform unilateral power to restrict or ban third-party tooling. A paid version would have to out-compete several already-installed free alternatives on the same store listings.\\n\\n## Open questions\\n1. Will any meaningful share of users pay when four free alternatives already exist?\\n2. What's achievable detection accuracy, and who eats the LLM API cost for free-tier users?\\n3. Does Reddit's API/ToS create real platform-risk for DOM-level content hiding at scale?\\n4. Is the total addressable niche audience large enough to sustain a paid tier?\\n5. Would a narrower fake-review-only wedge (filling Fakespot's exit) outperform the broader Reddit-plus-reviews framing?\\n\\n## Regulatory setup\\n- Chrome Web Store requires a privacy policy disclosing data practices (one-time; ~1 hr consult) — https://developer.chrome.com/docs/webstore/program-policies/privacy\\n- $5 one-time Chrome developer registration fee — https://developer.chrome.com/docs/webstore/register\\n- Reddit Data API Terms compliance if using the API rather than DOM-only reading (ongoing) — https://redditinc.com/policies/data-api-terms\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 708,
+          "cache_read_input_tokens": 19951,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 708,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5116,
+          "output_tokens_details": {
+            "thinking_tokens": 163
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}
