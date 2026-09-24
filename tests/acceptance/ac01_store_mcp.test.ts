@@ -21,12 +21,15 @@ describe("AC1: store, seed, agent-safe MCP reads", () => {
     db.close();
   });
 
-  it("loads 46 ideas, labels and outcomes, idempotently", async () => {
-    expect(db.countIdeas()).toBe(46);
+  // 46 seed rows plus the four holdout ideas H01-H04 added at Checkpoint 1 (seed_source 'holdout').
+  const IDEA_COUNT = 50;
+
+  it("loads the seed ideas, labels and outcomes, idempotently", async () => {
+    expect(db.countIdeas()).toBe(IDEA_COUNT);
     const { seedIdeas } = await import("../../scripts/seed.js");
     const { SEED_PATH } = await import("./helpers.js");
     seedIdeas(db, SEED_PATH); // second load must not duplicate
-    expect(db.countIdeas()).toBe(46);
+    expect(db.countIdeas()).toBe(IDEA_COUNT);
     const labels = db.raw.prepare("SELECT labeler, COUNT(*) AS n FROM labels GROUP BY labeler ORDER BY labeler").all() as any[];
     const byLabeler = Object.fromEntries(labels.map((l) => [l.labeler, l.n]));
     // Seed file: 41 non-own rows carry operability_label -> research; 3 of 5 own rows -> claude_seed;
@@ -60,11 +63,11 @@ describe("AC1: store, seed, agent-safe MCP reads", () => {
     });
   }
 
-  it("list_ideas returns 46 agent-safe rows with latest verdicts and no hidden fields", async () => {
+  it("list_ideas returns every idea as an agent-safe row with latest verdicts and no hidden fields", async () => {
     const res = await client.callTool({ name: "list_ideas", arguments: {} });
     const body = toolJson(res);
     const ideas: any[] = body.ideas ?? body;
-    expect(ideas.length).toBe(46);
+    expect(ideas.length).toBe(IDEA_COUNT);
     const keys = allKeys(ideas);
     for (const f of HIDDEN_FIELDS) expect(keys.has(f), `hidden field ${f} leaked`).toBe(false);
     const b01 = ideas.find((i) => i.id === "B01");
@@ -73,7 +76,7 @@ describe("AC1: store, seed, agent-safe MCP reads", () => {
     expect(a07).toBeTruthy();
     expect(b01).toHaveProperty("verdicts");
     const text = JSON.stringify(res);
-    for (const leak of ["Zigpoll", "Cydoc", "StackDigest", "WCAG Engine", "over_50k_mrr", "failed_platform", "planted_", "label_conflict", "crowded_market"]) {
+    for (const leak of ["Zigpoll", "Cydoc", "StackDigest", "WCAG Engine", "over_50k_mrr", "failed_platform", "planted_", "label_conflict", "crowded_market", "holdout"]) {
       expect(text.includes(leak), `hidden value ${leak} leaked`).toBe(false);
     }
   });

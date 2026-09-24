@@ -51,6 +51,8 @@ CREATE TABLE decisions (
 );
 
 -- Kill rules and operability tests. Agents may propose; only Paul activates (npm run rule:activate).
+-- test_case_ids: {"must_trigger":[], "must_not_trigger":[], "observe":[]}. observe rows are reported, never asserted.
+-- Rule text history: R001 and T2 were rewritten and T8 added by migrations/003 (Checkpoint 1, D006).
 CREATE TABLE rules (
   id              TEXT PRIMARY KEY,           -- R001, T2, T3...
   kind            TEXT NOT NULL,              -- kill_rule | hard_test | soft_test
@@ -140,19 +142,21 @@ CREATE TABLE annotations (
   created_at      TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
--- Seed rows for decisions and rules.
+-- Seed rows for decisions and rules. Existing stores reach the same state through migrations/*.sql.
 INSERT INTO decisions (id, text, rationale) VALUES
  ('D001','Learning-first framing. A survivor of a market test gets one more cycle, then becomes a standalone project or is parked with a written reason.','Goal is documented 0-to-1 decisions with outcomes; evidence of product judgment.'),
  ('D002','Rule R001: kill any idea that makes Paul the regulated party. Ideas that sell to regulated customers pass.','From Paul''s labels: license tracker yes, WCAG Engine yes, expat tax filing no. Cydoc (B09) died on this line.'),
  ('D003','Merit doubts never kill. They are recorded as pre-registered predictions for the viability stage to confirm or overturn.','Gut calls are hypotheses. Overturned gut calls are the most valuable ledger entries.'),
  ('D004','Operability tests T2 to T7 are starter assumptions. T2, T3 and T7 kill; T4 to T6 flag only until error discovery says otherwise.','Paul accepted the starter assumptions; plans to learn to run sales and support with agents.'),
- ('D005','Competitor search uses Exa (neural) and Brave (keyword). "No competitor found" requires both engines to return no direct competitor.','Exa for conceptual matches, Brave for freshness and exact terms.');
+ ('D005','Competitor search uses Exa (neural) and Brave (keyword). "No competitor found" requires both engines to return no direct competitor.','Exa for conceptual matches, Brave for freshness and exact terms.'),
+ ('D006','R001 kills only ongoing obligations needing standing legal or compliance capacity. One-time legal setup is a T8 flag.','Paul accepts a one-time legal consult and has regulated-industry experience (banking, payments, healthcare clients). The original wording also targeted filing on a customer''s behalf, which missed his intent.');
 
 INSERT INTO rules (id, kind, text, test_case_ids, status, proposed_by, activated_at) VALUES
- ('R001','kill_rule','The business makes the operator the regulated party: filing on a customer''s behalf, handling protected health data, giving licensed advice, or holding a license to operate. Selling software to regulated customers does not trigger this rule.','{"must_trigger":["A07","B09"],"must_not_trigger":["A02","O03"]}','active','paul',datetime('now')),
- ('T2','hard_test','A core function depends on one third party that can revoke access, and the use is not permitted by a sanctioned API or the platform''s terms.','{"must_trigger":["A09","P06","B08"],"must_not_trigger":["A01"]}','active','paul',datetime('now')),
- ('T3','hard_test','The operator must buy, store, or ship physical inventory, with no fully outsourced fulfillment path.','{"must_trigger":["A11"],"must_not_trigger":[]}','active','paul',datetime('now')),
+ ('R001','kill_rule','The business cannot operate without an ongoing regulatory obligation that needs standing legal or compliance capacity: a license or registration with ongoing regulator supervision or exams (money transmission, investment adviser, broker-dealer, insurance producer, licensed professional practice); acting as the professional of record who bears liability for each output (signing tax returns, giving legal, medical, or investment advice); or holding or moving customer funds. Setup work that a one-time legal consult can resolve does not trigger this rule; it triggers T8.','{"must_trigger":["H01"],"must_not_trigger":["A02","O03","B09","H02"],"observe":["A07"]}','active','paul',datetime('now')),
+ ('T2','hard_test','A core function depends on one third party that can revoke access, and the use is not permitted by a sanctioned API or the platform''s terms. Violating the terms is sufficient; enforcement history and competitors operating the same way are irrelevant.','{"must_trigger":["A09","P06","H03"],"must_not_trigger":["A01","H04"],"observe":["B08"]}','active','paul',datetime('now')),
+ ('T3','hard_test','The operator must buy, store, or ship physical inventory, with no fully outsourced fulfillment path.','{"must_trigger":[],"must_not_trigger":["A11"]}','active','paul',datetime('now')),
  ('T4','soft_test','Closing the first customer requires field sales, enterprise procurement, or a sales team.','{}','active','paul',datetime('now')),
  ('T5','soft_test','Each customer transaction needs human service or support that cannot be automated at scale.','{}','active','paul',datetime('now')),
  ('T6','soft_test','No plausible path to a paying customer within 90 days of launch.','{}','active','paul',datetime('now')),
- ('T7','hard_test','Obvious capital or physical infrastructure requirement beyond one person (hardware manufacturing, defense procurement, fleets, facilities).','{"must_trigger":["P07","P08"],"must_not_trigger":[]}','active','paul',datetime('now'));
+ ('T7','hard_test','Obvious capital or physical infrastructure requirement beyond one person (hardware manufacturing, defense procurement, fleets, facilities).','{"must_trigger":["P07","P08"],"must_not_trigger":[]}','active','paul',datetime('now')),
+ ('T8','soft_test','Launch requires regulatory setup that a one-time legal consult can resolve (BAA templates, HIPAA security program, privacy terms, COPPA consent, state registrations, e-file provider applications). Record what the consult would need to cover.','{"must_trigger":["B09","H02"],"must_not_trigger":[]}','active','paul',datetime('now'));

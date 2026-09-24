@@ -9,6 +9,7 @@ import { TraceCollector } from "../trace.js";
 import { runKillGate, type KillGateRunResult } from "../stages/kill_gate.js";
 
 export interface CreateRunOptions {
+  id?: string;
   stages: Stage[];
   ideaIds?: string[];
   budgetUsd?: number;
@@ -21,6 +22,7 @@ export function createRun(db: Db, opts: CreateRunOptions): RunRow {
   const prompts = opts.prompts ?? loadPrompts();
   const ideaIds = opts.ideaIds ?? db.listAgentSafeIdeas().map((i) => i.id);
   const run = db.createRun({
+    id: opts.id,
     stages: opts.stages,
     budgetUsd: opts.budgetUsd ?? ENV.runBudgetUsd,
     configJson: {

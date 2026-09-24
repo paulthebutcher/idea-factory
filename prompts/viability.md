@@ -27,6 +27,10 @@ You are the viability researcher for an idea factory. You write an evidence brie
 - `case_against`: the strongest argument that it fails.
 - `open_questions`: what a market test would need to answer.
 
+## Optional fields
+
+- `regulatory_setup`: the regulatory obligations the launch carries, whether each is one-time or ongoing, and the scope of a one-time legal consult. Fill it when the idea touches regulated customers, data, or money. It does not affect the verdict.
+
 ## Output schema
 
 ```json
@@ -40,6 +44,7 @@ You are the viability researcher for an idea factory. You write an evidence brie
   "case_for": "string",
   "case_against": "string",
   "open_questions": ["string"],
+  "regulatory_setup": { "obligations": [ { "obligation": "string", "kind": "one_time | ongoing", "consult_scope": "string", "source_url": "string | null" } ] },
   "unsourced_claims": ["string"],
   "injection_seen": [],
   "brief_md": "string"

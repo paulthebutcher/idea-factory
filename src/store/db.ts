@@ -381,13 +381,29 @@ export class Db {
   }
 }
 
-/** Additive migrations for stores created by an earlier schema. */
+/** Schema version a fresh store is at after schema.sql. Bump when adding migrations/NNN_*.sql. */
+export const SCHEMA_VERSION = 3;
+
+/** Migrations for stores created by an earlier schema. 002 is in code; 003+ are SQL files in migrations/. */
 function migrate(raw: Database.Database): void {
-  const cols = (raw.prepare("PRAGMA table_info(outcomes)").all() as { name: string }[]).map((c) => c.name);
-  if (!cols.includes("business_name")) {
-    raw.exec("ALTER TABLE outcomes ADD COLUMN business_name TEXT");
+  let version = raw.pragma("user_version", { simple: true }) as number;
+  if (version < 2) {
+    const cols = (raw.prepare("PRAGMA table_info(outcomes)").all() as { name: string }[]).map((c) => c.name);
+    if (!cols.includes("business_name")) raw.exec("ALTER TABLE outcomes ADD COLUMN business_name TEXT");
+    raw.pragma("user_version = 2");
+    version = 2;
   }
-  if ((raw.pragma("user_version", { simple: true }) as number) < 2) raw.pragma("user_version = 2");
+  const dir = path.join(path.dirname(PATHS.schema), "migrations");
+  const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^\d{3}_.*\.sql$/.test(f)).sort() : [];
+  for (const f of files) {
+    const n = Number(f.slice(0, 3));
+    if (n <= version) continue;
+    raw.transaction(() => {
+      raw.exec(fs.readFileSync(path.join(dir, f), "utf8"));
+      raw.pragma(`user_version = ${n}`);
+    })();
+    version = n;
+  }
 }
 
 /** Open (and migrate if empty) the store. WAL mode so two agents can share it. */
@@ -401,7 +417,7 @@ export function openDb(dbPath: string = PATHS.db): Db {
   if (!hasIdeas) {
     const schema = fs.readFileSync(PATHS.schema, "utf8");
     raw.exec(schema);
-    raw.pragma("user_version = 2");
+    raw.pragma(`user_version = ${SCHEMA_VERSION}`);
   }
   migrate(raw);
   return new Db(raw);

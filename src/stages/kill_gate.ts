@@ -29,7 +29,7 @@ export const KillGateOutput = z.object({
       }),
     )
     .default([]),
-  flags: z.array(z.object({ id: z.string(), evidence: z.string().default("") })).default([]),
+  flags: z.array(z.object({ id: z.string(), evidence: z.string().default(""), obligations: z.array(z.string()).default([]) })).default([]),
   competitors: z
     .array(
       z.object({
@@ -302,6 +302,15 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
     verdict = "kill";
     runner.overrides.push(`pass_to_kill: ${rulesFired.join(", ")} failed with cited evidence`);
     trace.add("runner_override", { kind: "pass_to_kill", from: "pass", to: "kill", reason: "a kill rule or hard test failed with cited evidence", rules_fired: rulesFired });
+  }
+
+  // T8 flags must name the specific obligations (Checkpoint 1 decision 2).
+  for (const f of parsed.flags.filter((f) => f.id === "T8")) {
+    const named = f.obligations.map((o) => o.trim()).filter(Boolean);
+    if (named.length === 0) {
+      runner.notes.push("T8 flag names no obligations");
+      trace.add("runner_note", { note: "t8_flag_without_obligations", evidence: f.evidence });
+    }
   }
 
   // Injection scan over everything the tools returned.
