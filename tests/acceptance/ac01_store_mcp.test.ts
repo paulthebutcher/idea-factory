@@ -29,11 +29,12 @@ describe("AC1: store, seed, agent-safe MCP reads", () => {
     expect(db.countIdeas()).toBe(46);
     const labels = db.raw.prepare("SELECT labeler, COUNT(*) AS n FROM labels GROUP BY labeler ORDER BY labeler").all() as any[];
     const byLabeler = Object.fromEntries(labels.map((l) => [l.labeler, l.n]));
-    // 41 non-own rows -> research; 5 own rows -> claude_seed; 46 perplexity; 46 paul_gut_v1
+    // Seed file: 41 non-own rows carry operability_label -> research; 3 of 5 own rows -> claude_seed;
+    // 19 rows carry perplexity_operability; 45 carry paul_gut_v1 (O05 has none).
     expect(byLabeler.research).toBe(41);
-    expect(byLabeler.claude_seed).toBe(5);
-    expect(byLabeler.perplexity).toBe(46);
-    expect(byLabeler.paul_gut_v1).toBe(46);
+    expect(byLabeler.claude_seed).toBe(3);
+    expect(byLabeler.perplexity).toBe(19);
+    expect(byLabeler.paul_gut_v1).toBe(45);
     const outcomes = db.raw.prepare("SELECT COUNT(*) AS n FROM outcomes").get() as any;
     expect(outcomes.n).toBe(14); // backtest rows
   });
