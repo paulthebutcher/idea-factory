@@ -1,0 +1,84 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A01",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-23T00:00:00.000Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_synthetic_1",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_synthetic_1",
+            "name": "exa_search",
+            "input": {
+              "query": "service that monitors third-party API breaking changes and opens pull requests",
+              "num_results": 5
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_synthetic_2",
+            "name": "exa_search",
+            "input": {
+              "query": "automated API migration agent for SDK deprecations",
+              "num_results": 5
+            }
+          }
+        ],
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_synthetic_2",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"idea_id\": \"A01\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"Software for engineering teams; the operator is not a regulated party.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Works across many API vendors through the GitHub App API, which is sanctioned.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Software only.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No physical infrastructure.\",\n      \"source_url\": null\n    }\n  ],\n  \"flags\": [],\n  \"competitors\": [\n    {\n      \"name\": \"Example API change monitor\",\n      \"url\": \"https://example.com/api-monitor\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": null,\n      \"evidence\": \"Alerts only, no PRs.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"service that monitors third-party API breaking changes and opens pull requests\",\n      \"automated API migration agent for SDK deprecations\"\n    ],\n    \"brave\": []\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    }
+  ]
+}

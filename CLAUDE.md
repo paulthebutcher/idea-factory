@@ -25,3 +25,5 @@ Pipeline that runs seed ideas through a kill gate, viability research, and a pai
 - `npm test`: acceptance tests on replayed search fixtures
 - `npm run export:traces`, `npm run render`, `npm run report:calibration`
 - `npm run rule:activate <id>`: Paul only
+- `npm run record:fixtures -- --ideas A07,B09 --cap 3`: record search and model fixtures live into `src/search/fixtures/` with a spend cap; uses a scratch store, never `data/factory.db`
+- `npm run report:planted`: replay the planted cases from fixtures and print the Checkpoint 1 table

@@ -1,0 +1,348 @@
+// Stage 1: kill gate. Runs the model with exa_search and brave_search tools, then applies the runner
+// checks from docs/HANDOFF.md before anything is recorded:
+//   1. output validates against the schema
+//   2. at least 2 Exa and 2 Brave queries appear both in `queries` and as trace events, else `error`
+//   3. `kill` only when a hard test failed with non-empty evidence, else override to `pass`
+//   4. proposed_variant becomes a new idea with parent_id; the original verdict stands
+//   5. backtest rows: self_found when a competitor matches the business the row describes
+// Plus: search results are data. Injection phrases found in tool results are added to injection_seen.
+import Anthropic from "@anthropic-ai/sdk";
+import { z } from "zod";
+import { MODELS, renderTemplate, type PromptSet } from "../config.js";
+import type { Db, AgentSafeRule } from "../store/db.js";
+import type { SearchClients } from "../search/index.js";
+import { normalizeQuery } from "../search/fixtures.js";
+import { BudgetExceededError, type ModelClient } from "../model/client.js";
+import type { TraceCollector, TraceEvent } from "../trace.js";
+
+export const KillGateOutput = z.object({
+  idea_id: z.string(),
+  verdict: z.enum(["pass", "kill"]),
+  tests: z
+    .array(
+      z.object({
+        id: z.string(),
+        result: z.enum(["pass", "fail", "unknown"]),
+        evidence: z.string().default(""),
+        source_url: z.string().nullable().optional().default(null),
+      }),
+    )
+    .default([]),
+  flags: z.array(z.object({ id: z.string(), evidence: z.string().default("") })).default([]),
+  competitors: z
+    .array(
+      z.object({
+        name: z.string(),
+        url: z.string().nullable().optional().default(null),
+        relationship: z.enum(["direct", "adjacent"]).catch("adjacent"),
+        pricing: z.string().nullable().optional().default(null),
+        evidence: z.string().default(""),
+      }),
+    )
+    .default([]),
+  queries: z.object({ exa: z.array(z.string()).default([]), brave: z.array(z.string()).default([]) }).default({ exa: [], brave: [] }),
+  proposed_variant: z.object({ idea: z.string(), reason: z.string().default("") }).nullable().optional().default(null),
+  injection_seen: z.array(z.string()).default([]),
+});
+export type KillGateOutputT = z.infer<typeof KillGateOutput>;
+
+export interface RunnerNotes {
+  model_verdict: "pass" | "kill" | null;
+  overrides: string[];
+  notes: string[];
+  variant_id: string | null;
+  self_found: boolean;
+}
+
+export type KillGatePayload = Omit<KillGateOutputT, "verdict"> & {
+  verdict: "pass" | "kill" | "error";
+  error?: string;
+  raw_output?: string | null;
+  runner: RunnerNotes;
+};
+
+export interface KillGateContext {
+  db: Db;
+  runId: string;
+  taskId?: string | null;
+  ideaId: string;
+  agent: string;
+  search: SearchClients;
+  model: ModelClient;
+  trace: TraceCollector;
+  prompts: PromptSet;
+  /** Name of the model transcript fixture. Defaults to the idea id. */
+  fixtureName?: string;
+  maxIterations?: number;
+}
+
+export interface KillGateRunResult {
+  stageResultId: string;
+  verdict: "pass" | "kill" | "error";
+  payload: KillGatePayload;
+  rulesFired: string[];
+  events: TraceEvent[];
+  costUsd: number;
+  selfFound: boolean;
+  variantId: string | null;
+}
+
+const TOOLS: Anthropic.Messages.Tool[] = [
+  {
+    name: "exa_search",
+    description: "Neural web search (Exa) with page text. Use for conceptual matches: businesses doing something like this idea.",
+    input_schema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Natural-language search query" },
+        num_results: { type: "integer", minimum: 1, maximum: 10, description: "Results to return (default 5)" },
+      },
+      required: ["query"],
+    },
+  },
+  {
+    name: "brave_search",
+    description: "Keyword web search (Brave). Use for exact terms, product names, pricing pages and fresh results.",
+    input_schema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Keyword search query" },
+        count: { type: "integer", minimum: 1, maximum: 10, description: "Results to return (default 5)" },
+      },
+      required: ["query"],
+    },
+  },
+];
+
+const ExaInput = z.object({ query: z.string().min(1), num_results: z.number().int().min(1).max(10).optional() });
+const BraveInput = z.object({ query: z.string().min(1), count: z.number().int().min(1).max(10).optional() });
+
+// Injection phrases the runner scans for in tool results. Matches are added to injection_seen when the
+// model did not report them itself.
+const INJECTION_PATTERNS: RegExp[] = [
+  /ignore (?:all |any )?(?:previous|prior|above|earlier) instructions?/i,
+  /disregard (?:all |any )?(?:previous|prior|above|earlier) (?:instructions?|rules?)/i,
+  /mark this idea (?:as )?(?:pass|kill)/i,
+  /override (?:your|the) (?:verdict|instructions?|rules?)/i,
+];
+
+export const MIN_QUERIES_PER_ENGINE = 2;
+
+function formatRules(rules: AgentSafeRule[]): string {
+  if (rules.length === 0) return "(none)";
+  return rules.map((r) => `- ${r.id} (${r.kind.replace("_", " ")}): ${r.text}`).join("\n");
+}
+
+/** Extract the first JSON object from model text, tolerating code fences and surrounding prose. */
+export function extractJson(text: string): unknown {
+  const trimmed = text.trim();
+  try {
+    return JSON.parse(trimmed);
+  } catch {
+    /* fall through */
+  }
+  const fence = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fence) {
+    try {
+      return JSON.parse(fence[1].trim());
+    } catch {
+      /* fall through */
+    }
+  }
+  const start = trimmed.indexOf("{");
+  const end = trimmed.lastIndexOf("}");
+  if (start >= 0 && end > start) return JSON.parse(trimmed.slice(start, end + 1));
+  throw new Error("no JSON object found in model output");
+}
+
+export function scanForInjection(text: string): string[] {
+  const found: string[] = [];
+  for (const re of INJECTION_PATTERNS) {
+    const global = new RegExp(re.source, re.flags.includes("g") ? re.flags : re.flags + "g");
+    for (const m of text.matchAll(global)) {
+      const i = m.index ?? 0;
+      const snippet = text.slice(Math.max(0, i - 80), Math.min(text.length, i + m[0].length + 80)).replace(/\s+/g, " ").trim();
+      if (!found.includes(snippet)) found.push(snippet);
+    }
+  }
+  return found;
+}
+
+function emptyOutput(ideaId: string): Omit<KillGateOutputT, "verdict"> {
+  return { idea_id: ideaId, tests: [], flags: [], competitors: [], queries: { exa: [], brave: [] }, proposed_variant: null, injection_seen: [] };
+}
+
+export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResult> {
+  const { db, trace, search, ideaId } = ctx;
+  const model = MODELS.kill_gate;
+  const promptHash = ctx.prompts.kill_gate.hash;
+  const maxIterations = ctx.maxIterations ?? 12;
+  let costUsd = 0;
+  const runner: RunnerNotes = { model_verdict: null, overrides: [], notes: [], variant_id: null, self_found: false };
+
+  const record = (verdict: "pass" | "kill" | "error", payload: KillGatePayload, rulesFired: string[], selfFound: boolean, variantId: string | null): KillGateRunResult => {
+    trace.add("output", { verdict, rules_fired: rulesFired, self_found: selfFound, payload });
+    const row = db.recordStageResult({
+      runId: ctx.runId, ideaId, stage: "kill_gate", verdict, payload, rulesFired, selfFound, model, agent: ctx.agent, promptHash, costUsd, events: trace.toInputs(), taskId: ctx.taskId ?? null,
+    });
+    return { stageResultId: row.id, verdict, payload, rulesFired, events: trace.events, costUsd, selfFound, variantId };
+  };
+  const fail = (error: string, rawOutput: string | null, partial?: Partial<KillGateOutputT>) => {
+    trace.add("error", { error });
+    const payload: KillGatePayload = { ...emptyOutput(ideaId), ...(partial ?? {}), verdict: "error", error, raw_output: rawOutput, runner };
+    return record("error", payload, [], false, null);
+  };
+
+  const idea = db.getAgentSafeIdea(ideaId);
+  if (!idea) throw new Error(`idea ${ideaId} not found`);
+
+  const active = db.activeRules();
+  const hardRules = active.filter((r) => r.kind === "kill_rule" || r.kind === "hard_test");
+  const softRules = active.filter((r) => r.kind === "soft_test");
+  const hardIds = new Set(hardRules.map((r) => r.id));
+
+  const system = renderTemplate(ctx.prompts.kill_gate.text, {
+    hard_rules: formatRules(hardRules),
+    soft_rules: formatRules(softRules),
+    idea_id: idea.id,
+    idea: idea.idea,
+    customer: idea.customer,
+    verbatim_quote: idea.verbatim_quote,
+  });
+  trace.add("system", { model, prompt_hash: promptHash, system_prompt: system });
+  trace.add("input", { idea, hard_rules: hardRules, soft_rules: softRules, tools: TOOLS.map((t) => t.name) });
+
+  const messages: Anthropic.Messages.MessageParam[] = [
+    { role: "user", content: `Evaluate idea ${idea.id} now. Run the required searches with the tools, then return only the JSON object.` },
+  ];
+  const session = ctx.model.session("kill_gate", ideaId, ctx.fixtureName);
+  let finalText: string | null = null;
+
+  try {
+    for (let iteration = 1; iteration <= maxIterations; iteration++) {
+      const params: Anthropic.Messages.MessageCreateParamsNonStreaming = {
+        model,
+        max_tokens: 16000,
+        system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
+        tools: TOOLS,
+        messages,
+      };
+      const r = await session.call(params);
+      costUsd += r.costUsd;
+      trace.add("model_call", {
+        iteration, model, source: r.source, message_count: messages.length, stop_reason: r.message.stop_reason, usage: r.message.usage, cost_usd: r.costUsd,
+        content: r.message.content, ...(r.digestMismatch ? { note: "replayed request differs from the recorded request at this position" } : {}),
+      });
+      if (r.digestMismatch) runner.notes.push(`model call ${iteration}: replayed request differs from recording`);
+
+      const toolUses = r.message.content.filter((b): b is Anthropic.Messages.ToolUseBlock => b.type === "tool_use");
+      if (r.message.stop_reason === "tool_use" && toolUses.length > 0) {
+        messages.push({ role: "assistant", content: r.message.content });
+        const results: Anthropic.Messages.ToolResultBlockParam[] = [];
+        for (const tu of toolUses) {
+          results.push(await executeTool(search, tu));
+        }
+        messages.push({ role: "user", content: results });
+        continue;
+      }
+      if (r.message.stop_reason === "refusal") return fail("model refused the request", null);
+      if (r.message.stop_reason === "max_tokens") return fail("model output truncated at max_tokens", null);
+      finalText = r.message.content.filter((b): b is Anthropic.Messages.TextBlock => b.type === "text").map((b) => b.text).join("\n");
+      break;
+    }
+  } catch (e) {
+    const message = e instanceof Error ? e.message : String(e);
+    const result = fail(`stage call failed: ${message}`, null);
+    if (e instanceof BudgetExceededError) throw e;
+    return result;
+  }
+  if (finalText == null) return fail(`no final answer after ${maxIterations} model calls`, null);
+
+  // 1. Validate.
+  let parsed: KillGateOutputT;
+  try {
+    parsed = KillGateOutput.parse(extractJson(finalText));
+  } catch (e) {
+    return fail(`output failed validation: ${e instanceof Error ? e.message : String(e)}`, finalText);
+  }
+  runner.model_verdict = parsed.verdict;
+  if (parsed.idea_id !== idea.id) runner.notes.push(`model reported idea_id ${parsed.idea_id}; expected ${idea.id}`);
+
+  // 2. Query coverage: declared in `queries` and actually run (successful tool_result events).
+  const ran = (engine: "exa" | "brave") =>
+    new Set(trace.ofKind("tool_result").filter((e) => (e.content as any)?.engine === engine && (e.content as any)?.ok).map((e) => normalizeQuery(String((e.content as any).query)).toLowerCase()));
+  const declared = (list: string[]) => new Set(list.map((q) => normalizeQuery(q).toLowerCase()));
+  const coverage: Record<string, { declared: number; ran: number; matched: number }> = {};
+  const shortfalls: string[] = [];
+  for (const engine of ["exa", "brave"] as const) {
+    const d = declared(parsed.queries[engine]);
+    const r = ran(engine);
+    const matched = [...d].filter((q) => r.has(q)).length;
+    coverage[engine] = { declared: d.size, ran: r.size, matched };
+    if (matched < MIN_QUERIES_PER_ENGINE) shortfalls.push(`${engine}: ${matched} of the required ${MIN_QUERIES_PER_ENGINE} queries appear both in queries and as trace events (declared ${d.size}, ran ${r.size})`);
+  }
+  trace.add("runner_check", { check: "query_coverage", coverage, ok: shortfalls.length === 0 });
+  if (shortfalls.length > 0) return fail(`insufficient search coverage: ${shortfalls.join("; ")}`, finalText, parsed);
+
+  // 3. Kill legitimacy. Only an active kill rule or hard test that failed with evidence can kill.
+  const rulesFired = parsed.tests.filter((t) => t.result === "fail" && t.evidence.trim().length > 0 && hardIds.has(t.id)).map((t) => t.id);
+  const ignoredFails = parsed.tests.filter((t) => t.result === "fail" && !rulesFired.includes(t.id));
+  for (const t of ignoredFails) {
+    const why = !hardIds.has(t.id) ? "not an active kill rule or hard test" : "no evidence cited";
+    runner.notes.push(`test ${t.id} marked fail but does not count: ${why}`);
+    trace.add("runner_note", { note: "fail_not_counted", test: t.id, why });
+  }
+  let verdict: "pass" | "kill" = parsed.verdict;
+  if (verdict === "kill" && rulesFired.length === 0) {
+    verdict = "pass";
+    runner.overrides.push("kill overridden to pass: no hard test failed with cited evidence");
+    trace.add("runner_override", { from: "kill", to: "pass", reason: "no hard test failed with cited evidence", tests: parsed.tests });
+  }
+  if (verdict === "pass" && rulesFired.length > 0) {
+    runner.notes.push(`model said pass although ${rulesFired.join(", ")} failed with evidence; verdict left as pass`);
+    trace.add("runner_note", { note: "pass_with_failed_hard_test", rules_fired: rulesFired });
+  }
+
+  // Injection scan over everything the tools returned.
+  const injectionSeen = [...parsed.injection_seen];
+  const toolText = trace.ofKind("tool_result").map((e) => JSON.stringify((e.content as any)?.result ?? "")).join("\n");
+  const detected = scanForInjection(toolText);
+  const missed = detected.filter((snippet) => !injectionSeen.some((s) => snippet.toLowerCase().includes(s.toLowerCase()) || s.toLowerCase().includes(snippet.toLowerCase())));
+  if (detected.length > 0) trace.add("runner_check", { check: "injection_scan", detected, reported_by_model: parsed.injection_seen, added_by_runner: missed });
+  for (const m of missed) injectionSeen.push(`[runner-detected] ${m}`);
+
+  // 4. Proposed variant becomes a child idea. The original verdict stands.
+  let variantId: string | null = null;
+  if (parsed.proposed_variant && parsed.proposed_variant.idea.trim()) {
+    const variant = db.createIdea({ idea: parsed.proposed_variant.idea.trim(), customer: idea.customer, parent_id: idea.id });
+    variantId = variant.id;
+    runner.variant_id = variantId;
+    trace.add("runner_note", { note: "variant_created", variant_id: variantId, parent_id: idea.id, reason: parsed.proposed_variant.reason });
+  }
+
+  // 5. Backtest contamination. The runner only learns a boolean.
+  const selfFound = db.matchesBacktestBusiness(idea.id, parsed.competitors.map((c) => ({ name: c.name, url: c.url })));
+  runner.self_found = selfFound;
+  if (selfFound) trace.add("runner_note", { note: "self_found", detail: "a competitor matches the business this backtest row describes" });
+
+  const payload: KillGatePayload = { ...parsed, verdict, injection_seen: injectionSeen, runner };
+  return record(verdict, payload, rulesFired, selfFound, variantId);
+}
+
+async function executeTool(search: SearchClients, tu: Anthropic.Messages.ToolUseBlock): Promise<Anthropic.Messages.ToolResultBlockParam> {
+  try {
+    if (tu.name === "exa_search") {
+      const input = ExaInput.parse(tu.input);
+      const r = await search.exa_search(input.query, input.num_results ?? 5);
+      return { type: "tool_result", tool_use_id: tu.id, content: JSON.stringify(r.results) };
+    }
+    if (tu.name === "brave_search") {
+      const input = BraveInput.parse(tu.input);
+      const r = await search.brave_search(input.query, input.count ?? 5);
+      return { type: "tool_result", tool_use_id: tu.id, content: JSON.stringify(r.results) };
+    }
+    return { type: "tool_result", tool_use_id: tu.id, is_error: true, content: `unknown tool ${tu.name}` };
+  } catch (e) {
+    return { type: "tool_result", tool_use_id: tu.id, is_error: true, content: `${tu.name} failed: ${e instanceof Error ? e.message : String(e)}` };
+  }
+}
