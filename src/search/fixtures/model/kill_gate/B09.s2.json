@@ -1,0 +1,237 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "B09",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T20:27:57.197Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "1b1d57954ca953c5db2040d4a0a170f3499d9612a7979dc29adc51c62dd74742",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1664,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 624,
+        "output_tokens_details": {
+          "thinking_tokens": 378
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0067828,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNtrKUWda2MxRRQXeyL6",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JpAfDhnHLXdgx4pgX5w3ay",
+            "name": "exa_search",
+            "input": {
+              "query": "AI patient intake form generates clinical note for doctors"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01V4WTvBj2FDtjN9F9e4JvdW",
+            "name": "exa_search",
+            "input": {
+              "query": "AI medical scribe intake history taking startup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RKr6Ti439bgCmQxVxJdXB7",
+            "name": "brave_search",
+            "input": {
+              "query": "AI patient intake software private practice HIPAA"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01YGoCSZTTc5mchKbKAFh1BZ",
+            "name": "brave_search",
+            "input": {
+              "query": "\"AI intake\" \"clinical note\" doctor startup pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1664,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 624,
+          "output_tokens_details": {
+            "thinking_tokens": 378
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "c33ba408856b002a5f4b16eec24b44ae8aad0204c935a47bbb6f9779ab591055",
+      "usage": {
+        "input_tokens": 8425,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1664,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 807,
+        "output_tokens_details": {
+          "thinking_tokens": 662
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0252528,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNts4FjoVhxYcrVBT959",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RTNPr5tveSoFob5Y8GqRPb",
+            "name": "brave_search",
+            "input": {
+              "query": "solo founder AI medical scribe HIPAA business associate agreement one person startup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018uLcaGdxvBy6LducFFCuJt",
+            "name": "exa_search",
+            "input": {
+              "query": "AI clinical documentation startup founded by one person bootstrapped HIPAA"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8425,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1664,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 807,
+          "output_tokens_details": {
+            "thinking_tokens": 662
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "de474dfac1826ffcde74ed4ac5c71f5b7bd81cb38c7fb7e54959fc881732aad7",
+      "usage": {
+        "input_tokens": 13476,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1664,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1919,
+        "output_tokens_details": {
+          "thinking_tokens": 395
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.046474800000000004,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNtsyM6gnUFufPJuzdMq",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EswKCpABCBIYAipAzrqf2h6BSEzfeh5yfinSH6SsOXfeVLZAGlFyUzkDHhl1qVgTSeuDVHMy6e2kiE513R0pJni5lg9vGGNtgLrctzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeOP1tUGEgzzO4a2cNIPosmAAVcaDM9z+uwEy1lbWJcUGyIwQx3RVihCjdMZ5h0xbj+ZRKK1Q2EzZ5HiUgXWsvYKT/QOPKnr/LpsrV2W5WUI+P38KugIIciGGqD1ICaHmMgdZ7PhMvgR4L/N6vLm9AazI5yJ8ltTBol9bfVekcVVIe8RzI5CMwiyZ8wEneC/xdVIz7pYZQwDv28wtDQqPdopdIctv6EekGcK5kCqARlbcRq2S0FpgtBd5yQuc/YGo9EewN1s2JGH0VbU3nqLc92ak4wpkDuc6uT84Oi68zbJuNHO1rCmlc4fe6eLmX4k7RrrXppqxy9oH2FUIXLftUDtxrgJjNUOJ26PLNR8Eg6IUiigLG84VGojbBVTPYsjsWjwyq5ABAFEA1zYiqT4Tc0qvJllbtNt+eJAVIhajBZZiQtjSb7MSSGP6z5dIIcQjR4TBhDNHyCTx/st3KnPqbnX+B4WRa+VfEqsiao6ElzVUPzGdqTC341mLVu0asvHpJrLAOG77UedwE4V1svNqEJkp6yAuSSZdKH21ymFIiLleTGFb7U3uc9ka3siGRnye8Ug0Nm8iEz4W/pp1c7wznGJdbsbov4pcSb/TZXu2n7nSFrifp4W0T2HHKsBSKg80jhn3Nev12Ohl6j+nMH2lyGyFIfGoV5Sx6V+JsaIaK4NrBkPqiO8KoZgALZEWIY/TTjMuw5kh+ZxoVgrG6Dv2jd4zFT2A6RiPnH+bo7V7c/xwUbhpFPpC+9cVnOi0PR4es15jIedJCWe+veFrjwskIulCNTNMNYvHH+5LBPJEWb0YinCUSQGOMIHVaW5st1p36sTwUiAx+S1giv9OArSbfLZpsEfAaaAMOI6IxfP2zGulmDNWPT8+dq58xDK2J5uHjj45iwPwgSo3RJa849zCyHsS+2lLwv1/fLNlgn8rpCf5fEyT+l9ONVxLmjlI037csyvrj9iYydb1I/Vm9aVxvbED7r1eoV2IQ4ORDxzPaphySZOuNQ7E3kxtvD/2TaNbiJw8uGXI2qf6P6Ow7y520aixUDv9jeqvhCWBKPNNV7I9gTnSR+lOEMxQSwZaetNoUoyTmjrOQAldiqthzdPXE1CNPMii8228UoHi+JpFnoDVpUJXqwcj9At/u+JEqGsyUxs3Zcvu36kKKm3iZbEhym5iFm9nunV2aWNpGcB/tiGTewbQbnBnA9kjoVsZRp6OP2thgmMIgRTlsUhFJQUhk48xHNDQzVswQY9nBc1syc1JGEis9quny6o69Wbt4/Tamgbx8sG9y9H2s34COqtChViC5RjlEbLJenqxDP/VtBE4HD8resqUW328E9cDsaEuk1apkPeTt8Vrk6E3RldJl7mvRwplrAXyxIbNsnqfef8JvwyvEGOBDP+eQ2urjxgc1DGhM6CYTKEF0/ZdcflOZTBYEtrLcmP+BxHj2fK8cZkG1OeWiOTk34+73+4lhVbNFSzxDagFmngwRSA3+wi1TXlW4/cwfe89M+vzrEY+bOiMI6j6vsRY8Cv5Vc4wlJybRpIOPiY8VY5PbwmTjYEonV81abuoeU2PG4uNAgmiLYdUs9QxZRzqO3pr8gOBx3Im0usluEEuzxy4z5ZjWYrGAE="
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"B09\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The physician remains the regulated party who reviews, edits, and signs every note (e.g., ClaireMed: 'You make every clinical decision and own the final note'). The vendor acts as a standard HIPAA Business Associate handling PHI under a BAA, which is the common, well-established model used by numerous existing single/small-founder companies (Transcribe Health, PMHScribe, Aclaris, Scribely, Around Notes, Spergel Health AI) — none of which become licensed medical providers or file on behalf of patients. This matches the rule's explicit carve-out: 'Selling software to regulated customers does not trigger this rule.'\",\n      \"source_url\": \"https://clairemed.ai/\"\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Core function (LLM-based note generation) can run on any of several interchangeable LLM/ASR API providers; no single revocable platform dependency is structurally required.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Pure software product; no physical inventory or fulfillment required.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No capital/physical infrastructure beyond a software stack and cloud hosting; comparable solo-founder competitors (e.g., Around Notes, Aclaris, PMHScribe) operate at this scale.\",\n      \"source_url\": \"https://blog.aroundnotes.ai/about/\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T4\",\n      \"evidence\": \"Selling into private practices sometimes involves direct outreach/demos (e.g., ClaireMed offers a '30-minute walkthrough'), though several competitors (Freed, Aduvera) support self-serve signup, so this is not universal.\"\n    },\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Notes must be reviewed/edited/signed by the physician before use, and HIPAA compliance (BAAs, security audits, SOC2) requires ongoing operational diligence that could demand support as customer count grows.\"\n    }\n  ],\n  \"competitors\": [\n    {\"name\": \"ClaireMed\", \"url\": \"https://clairemed.ai/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI clinical partner that guides intake, structures history, and prepares a physician-owned draft note; HIPAA/PHIPA/PIPEDA compliant.\"},\n    {\"name\": \"Cydoc\", \"url\": \"https://arxiv.org/pdf/2306.13680\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Peer-reviewed smart patient intake form shown to accelerate medical note writing, closely matching the idea as described.\"},\n    {\"name\": \"Notiro\", \"url\": \"https://notiro.ai/ai-patient-intake/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI patient intake that collects symptoms/history and generates structured notes for EHR submission.\"},\n    {\"name\": \"Aduvera\", \"url\": \"https://www.aduvera.ai/medical-scribe/clinical-note/admission-and-intake/patient-intake-notes\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"AI scribe turning recorded intake encounters into structured, EHR-ready intake notes; HIPAA compliant.\"},\n    {\"name\": \"S10.AI\", \"url\": \"https://s10.ai/new-clinics-startups\", \"relationship\": \"adjacent\", \"pricing\": \"per-provider pricing\", \"evidence\": \"Bundles AI scribe, front-office intake agent, and telehealth for small/new clinics with BAA/SOC2/ISO27001 included.\"}\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"AI patient intake form generates clinical note for doctors\",\n      \"AI medical scribe intake history taking startup\",\n      \"AI clinical documentation startup founded by one person bootstrapped HIPAA\"\n    ],\n    \"brave\": [\n      \"AI patient intake software private practice HIPAA\",\n      \"\\\"AI intake\\\" \\\"clinical note\\\" doctor startup pricing\",\n      \"solo founder AI medical scribe HIPAA business associate agreement one person startup\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 13476,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1664,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1919,
+          "output_tokens_details": {
+            "thinking_tokens": 395
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "automated welcome swag box triggered by new Stripe signup",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T20:45:23.041Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "automated welcome swag box triggered by new Stripe signup",
+    "results": [
+      {
+        "title": "computahbotmail-alt/stripe-onboarding-automation",
+        "url": "https://github.com/computahbotmail-alt/stripe-onboarding-automation",
+        "snippet": "# computahbotmail-alt/stripe-onboarding-automation\n\nn8n workflow: Stripe subscription → welcome email + Notion CRM + Slack + Calendly. Demo from my Fiverr gig.\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 0\n- License: MIT License\n- Default branch: main\n- Created: 2026-04-18T01:38:07Z\n\n## Top Contributors\n\n- hunerbfr (1 contributions)\n\n---\n\n## README\n\n# Stripe New Customer → Full Onboarding Pipeline\n\nA turnkey n8n workflow that fires the moment someone subscribes in Stripe. Sends a welcome email, books them onto your onboarding call, logs to your CRM, and tells your team — all in 4 seconds, no human involved.\n\n> Part of my Fiverr gig series — demo workflows that show what I build.\n> Need this wired into YOUR Stripe account? → Order on Fiverr\n\n---\n\n## What it does\n\n```\nStripe Webhook\n(customer.subscription.created)\n      │\n      ├─────▶ Welcome Email (personalized: plan, name, onboarding link)\n      │\n      ├─────▶ Notion CRM: create customer record\n      │\n      ├─────▶ Slack #new-customers: \"🎉 @jane signed up on Pro ($75/mo)\"\n      │\n      └─────▶ Calendly: send kickoff-call scheduler link\n```\n\nWhen a subscription is created in Stripe, all four branches run in parallel. No delay between signup and follow-up. No chance of your team forgetting about a new paying customer because they were at lunch.\n\n## Why this workflow is worth money\n\nThe gap between \"Stripe charged the card\" and \"customer feels cared for\" is where most SaaS loses churn. This closes it.\n\nBefore: custom",
+        "published": null
+      },
+      {
+        "title": "Trigger Personalized Onboarding Emails from New Stripe Subscriptions with Exa, Firecrawl, and Resend",
+        "url": "https://www.withone.ai/blog/stripe-onboarding-emails-exa-firecrawl/md",
+        "snippet": "# Trigger Personalized Onboarding Emails from New Stripe Subscriptions with Exa, Firecrawl, and Resend\n\n> Poll Stripe for new subscriptions, enrich customers with Exa and Firecrawl, save a local profile, then send a personalized welcome email via Resend.\n\nPublished: 2026-04-07 | Author: One Team\n\nWhen someone subscribes on Stripe, you have a short window to land a personalized, relevant first email. Generic \"welcome to the product\" blasts waste that window. This guide shows you how to turn every new Stripe subscription into a researched, personalized onboarding email using the One CLI -- a single command-line tool that connects to 500+ platforms.\n\nWe'll poll Stripe for subscriptions created in the last 5 minutes, enrich each new customer with Exa (who are they, what company) and Firecrawl (scrape their site), save a local profile under `.one/knowledge/customers/`, and send a personalized welcome through Resend. Then we'll wrap the whole thing in a reusable One flow your local agent can run on a cron.\n\nNo webhooks, no relay -- just a polling loop a local agent can own.\n\n## What You'll Build\n\n- Stripe, Exa, Firecrawl, and Resend connections set up via `one add`\n- A complete CLI workflow: search, knowledge, execute\n- A local knowledge file per customer at `.one/knowledge/customers/.md`\n- A reusable One flow (`.one/flows/stripe-onboarding-emails/flow.json`) that chains all four actions\n\n## Step 1: Install and Set Up\n\n```bash\nnpm i -g @withone/cli\none init\n\n```\n\n`one init` walks y",
+        "published": null
+      },
+      {
+        "title": "Receive Stripe events in your webhook endpoint",
+        "url": "https://docs.stripe.com/webhooks",
+        "snippet": "# Receive Stripe events in your webhook endpoint\n\nListen for events from Stripe on your webhook endpoint so your integration can automatically trigger reactions.\n\n## Start here: Install agent skills\n\nStripe recommends using official skills to integrate with the API using best practices. Follow the instructions below to learn how.\n\n**Tip: Use curl instead of Fetch tools.** Skills are detailed 10–20 KB markdown files. Fetch tools summarize them. `curl -sL` guarantees the full content.\n\n**Using `npx skills`**: Check if `npx` is installed on the system. If `npx` is available, run `npx skills add https://docs.stripe.com --list` to list available skills, then run `npx skills add https://docs.stripe.com --yes --skill <--skill other-skills>` to install individual skills.\n\n**If `npx skills` isn’t available**: You can use curl to fetch the index of available skills, what they do, and their files from `https://docs.stripe.com/.well-known/skills/index.json`. To download a skill and its related files, use curl to download them from `https://docs.stripe.com/.well-known/skills/ `.\n\nFor this article, we recommend using these skills: `stripe-best-practices`\n\n> #### Send events to your AWS account or Azure subscription\n> \n> You can send events directly to Amazon EventBridge or Azure Event Grid as event destinations.\n\nCreate an event destination to receive events at an HTTPS webhook endpoint. After you register a webhook endpoint, Stripe can push real-time event data to your application’s webho",
+        "published": null
+      },
+      {
+        "title": "Welcome Stripe Customers Automation - Automaily",
+        "url": "https://www.automaily.com/examples/welcome-email/",
+        "snippet": "Welcome Stripe Customers Automation - Automaily\n\n# Welcome Your Customers With Automation\n\nOne of the simplest workflows, sending a customer a welcome email when you create there Stripe account Build Welcome Emails Today\n\n### Let us Handle the Welcome email\n\nIn Stripe there is no way to send a customer a welcome email when there account is created, you have to handle this yourself, if you have built your application from scratch this might not be the hardest process to create, however if you want fancy insights, like open rates, clicks, spam reports you need to build all of that at the same time. These are fantastically useful things to know, however the time to build can out way the value\n\nIf you let a 3rd party create your stripe customer there might not be anyway to send custom welcome emails at all! For example Simple Pay for WorkPress.\n\n### Video WalkThrough\n\n### How to Setup a Welcome Email in Automaily\n\nThe following is a quick guide for setting up a Welcome Email workflow for your Stripe customers in automaily\n\nOnce your account is all setup and connected to Stripe, you need to make a New Workflow, use the trigger Stripe Customer Created\n\nYou will get a empty workflow\n\nLets add a action to your workflow press the (+) button in the flow chart to bring up a actions creator menu From here you can choose any delays, conditions and actions, for now we will focus on actions Choose Email\n\n---\n\n#### Write Your Email\n\nThen your free to write your email, select your from addres",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://teamsunday.com/blog/how-to-automate-client-onboarding-gifts-with-your-crm-2026",
+        "snippet": "Skip to main content\n\nEnglish\n\n- English\n- English US\n- Nederlands\n- Deutsch\n- Français\n- Español\n\nGo to platform Contact\n\nBack to Blog Corporate Gifting\n\n# How to automate client onboarding gifts with your CRM (2026)\n\nHow to automate client onboarding gifts: connect your CRM, choose a trigger like customer onboarded, fire a branded box automatically, collect addresses with a redeem link, and ship globally with zero hassle.\n\nNiels Vandecasteele\n\n·June 13, 2026·7 min read\n\nTL;DR\n\nTo automate client onboarding gifts, connect your CRM, pick a trigger like customer onboarded, and send a redeem link so recipients confirm address and size. The platform warehouses stock and ships globally, so every new client gets the same welcome automatically.\n\nKey takeaways\n\n- Automate gifting because remembering a box for every new account is no one's core job, and automation removes inconsistency.\n- Connect your CRM (e.g. HubSpot) and trigger on a real start signal like customer onboarded or license purchased.\n- Fire the gift a few days to a week after signing, not at signature, to reactivate excitement during onboarding.\n- Set a budget rule per deal size and stay generally under 50 euros so the gift reads as gratitude, not influence.\n- Use a redeem link so recipients confirm address and size instead of shipping to stale CRM data.\n- Keep it personal with a handwritten note while the platform handles timing, addresses and global shipping.\n\nTo automate client onboarding gifts: connect your CRM to",
+        "published": null
+      }
+    ]
+  }
+}

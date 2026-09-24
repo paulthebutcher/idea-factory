@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "dependabot for API changes automated PR",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-24T20:42:42.098Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "dependabot for API changes automated PR",
+    "results": [
+      {
+        "title": "Managing Dependabot PRs with dependabot-pr-manager 🤖 - DEV Community",
+        "url": "https://dev.to/tassiofront/managing-dependabot-prs-with-dependabot-pr-manager-b42",
+        "snippet": "Group Dependabot PRs: The merge-dependabot-prs script groups all Dependabot PRs into a single PR, allowing you to review and update the changes before merging.",
+        "published": "2024-12-23T11:36:59"
+      },
+      {
+        "title": "Dependabot · GitHub",
+        "url": "https://github.com/dependabot",
+        "snippet": "Extract information about the dependencies being updated by a Dependabot-generated PR.",
+        "published": null
+      },
+      {
+        "title": "Automating Dependabot Pull Requests - DVLUP",
+        "url": "https://dvlup.com/blog/2026.01.15-automatic-dependabot-prs/",
+        "snippet": "name: &#x27;Dependabot Auto-merge&#x27; on: # This workflow is triggered when a Pull Request is opened for the main branch. pull_request_target: branches: [main] # We need certain permissions to make changes to the repo&#x27;s contents permissions: contents: write pull-requests: write # these are the steps that will occur when the workflow runs jobs: # The name of the job dependabot: # We will run the job on Ubuntu runs-on: ubuntu-latest # but only if Dependabot opened the PR if: ${{ github.actor == &#x27;dependabot[bot]&#x27; }} steps: # Step 1 - We get all the Dependabot&#x27;s metadata - name: Dependabot metadata id: me",
+        "published": "2026-01-15T00:00:00"
+      },
+      {
+        "title": "I have to tell you about Dependabot 🤖 - DEV Community",
+        "url": "https://dev.to/irreverentmike/i-have-to-tell-you-about-dependabot-4705",
+        "snippet": "<strong>Dependabot is an automation service that will automatically create PRs to keep your projects&#x27; dependencies up to date</strong>, and it is fucking wonderful. In just a few, sweet, wonderful minutes, you can install and configure it to automatically keep ...",
+        "published": "2019-05-31T12:26:17"
+      },
+      {
+        "title": "Automating Dependabot with our GitHub app | Nearform",
+        "url": "https://nearform.com/insights/github-dependabot-automation/",
+        "snippet": "<strong>The GitHub App checks that the token has access to the repository and then approves and merges the PR</strong>. This approach eventually worked, and we have put it in place to restore full automation of Dependabot in our repositories.",
+        "published": "2026-05-01T20:00:48"
+      }
+    ]
+  }
+}

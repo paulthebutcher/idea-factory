@@ -1,0 +1,237 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "B08",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T20:33:29.394Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "9da00614b8c1b2476fe6b9de872c47799fd11d7598e95b58eb8b4329712d096d",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1665,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 274,
+        "output_tokens_details": {
+          "thinking_tokens": 33
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.003283,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNuH14fgNKMDAsGtncWt",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Es8CCpABCBIYAipABlC84YTELu4kXzBlyqSsTtGuPH1kZTzP8X+pKMkAvh+rBVAc0gyj12TFPKaUbk8nwcYom7Vxw58NWHvkr0SJfzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAZeS1tUGEgzYLV/E0cNPEuwwlWEaDNA0YhI1lsESMvCuQSIwyss7pfn37niVvVPQ6Zhyg6w8N4KUr6ktoerVpGqVaZFyEQOyW9OFvrnHtXIorY2MKmz2zjUM75Jd9kwA68gql21V+51/hzpNG7mIbDe0zfL2zgD7eBCiGrLzVEbbu4Rc8f0sU7pfQLud1aHIRGd4XmasnXoO6OIpv9Ymsbc9kqSwPpZmvPZqVjjob1/BBgf7Uv6XxXbnfgJM+OizPYUYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Ch5WtpzoLohjL7w3uZsABK",
+            "name": "exa_search",
+            "input": {
+              "query": "AI digest and semantic search tool for Substack newsletters"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NhJ9ZdbXG2MByZ9e4N1Qke",
+            "name": "exa_search",
+            "input": {
+              "query": "analytics tool for Substack newsletter writers"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01V5F7SdJn5K1fpu96ftHZJr",
+            "name": "brave_search",
+            "input": {
+              "query": "Substack newsletter digest AI summarizer app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013NCdShyVSgvJNjwH9gHDjM",
+            "name": "brave_search",
+            "input": {
+              "query": "Substack API terms of service third party access"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1665,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 274,
+          "output_tokens_details": {
+            "thinking_tokens": 33
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "fa3f831a77a387a33644b32e9804d6fcbcd168225c581f9541e1025716477e38",
+      "usage": {
+        "input_tokens": 8776,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1665,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 652,
+        "output_tokens_details": {
+          "thinking_tokens": 530
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.024405,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNuHXmddsbSVN35ycMMJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Tkp3Pg85cbsy4HDLmF8rKX",
+            "name": "brave_search",
+            "input": {
+              "query": "Substack API official documentation developers access"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01E8JTuJtR6VpcnhW7JtCcdu",
+            "name": "exa_search",
+            "input": {
+              "query": "Substack unofficial API scraping newsletter data access risk"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8776,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1665,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 652,
+          "output_tokens_details": {
+            "thinking_tokens": 530
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "62bbfb52201f78fc98f8e0f87ec22e2f28763b0656d56bbbfad8c9266030e255",
+      "usage": {
+        "input_tokens": 13976,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1665,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 3127,
+        "output_tokens_details": {
+          "thinking_tokens": 1127
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.059555,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNuJFoU2A8on1MpAXzPo",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"B08\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The idea is software sold to Substack readers/writers (digest, search, analytics). It does not file on anyone's behalf, does not touch protected health data, and requires no license to operate. Selling software to regulated or unregulated customers alike does not trigger R001.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"Substack publications expose public RSS feeds (a sanctioned syndication mechanism) and Substack lets users export their own subscriber/analytics data as CSV (a sanctioned, user-initiated export). Multiple live competitors (Readless, StackDigest, Metrisub, StackStats, Sublytics, GrowthSignals) already operate an AI digest/analytics business on exactly these permitted surfaces, without depending on the unofficial session-cookie API. Substack's Publisher Agreement even explicitly contemplates 'third-party tools used for automated analysis,' implying a permitted lane for this category, provided the tool doesn't train third-party AI models on the content or retain it improperly. A narrower/riskier version of the idea could instead depend on the unofficial reverse-engineered API (session cookie scraping, seen in some competitor code and in bylineos.com's 'session cookie sync'), which is not permitted and revocable — but the idea as written does not require that specific approach.\",\n      \"source_url\": \"https://substack.com/pa\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Purely digital software product (digest, search, analytics dashboard); no physical goods bought, stored, or shipped.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No manufacturing, fleets, facilities, or defense-scale procurement implied; a semantic search/analytics SaaS is buildable by one person with commodity cloud infra (vector DB, LLM APIs), as demonstrated by solo builders like StackDigest and StackStats.\",\n      \"source_url\": \"https://buildtolaunch.ai/p/why-not-try-how-she-tackled-impossible-tech-and-built-the-semantic-search-tool-for-substack-readers\"\n    }\n  ],\n  \"flags\": [\n    {\n      \"id\": \"T5\",\n      \"evidence\": \"Support around data-import issues (CSV parsing, RSS feed breakage, session/auth quirks for some competitor tools) may require some manual troubleshooting per customer, though most competitors position this as self-serve.\"\n    }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"StackDigest\",\n      \"url\": \"https://buildtolaunch.ai/p/why-not-try-how-she-tackled-impossible-tech-and-built-the-semantic-search-tool-for-substack-readers\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Solo-built semantic search/digest tool specifically for Substack readers, using vector database of newsletters/articles.\"\n    },\n    {\n      \"name\": \"Readless\",\n      \"url\": \"https://www.readless.app/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"AI-powered digest merging Substack, newsletters, and RSS into a single summarized briefing.\"\n    },\n    {\n      \"name\": \"Metrisub\",\n      \"url\": \"https://metrisub.com/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free tier available, paid tiers implied\",\n      \"evidence\": \"Analytics layer for Substack writers via CSV upload: engagement scoring, paid-conversion insights, sponsor media kit.\"\n    },\n    {\n      \"name\": \"StackStats\",\n      \"url\": \"https://stackstats.app/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"$39/year or $79 lifetime\",\n      \"evidence\": \"Local desktop analytics app for Substack writers reading CSV exports, cohort retention, churn risk, superfan detection.\"\n    },\n    {\n      \"name\": \"GrowthSignals\",\n      \"url\": \"https://www.growthsignals.app/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Newsletter analytics from Substack CSV exports: growth drivers, content intelligence, audience segmentation.\"\n    },\n    {\n      \"name\": \"Sublytics\",\n      \"url\": \"https://www.sublytics.org/\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free to start\",\n      \"evidence\": \"AI insights on churn, revenue, content from Substack export uploads; explicitly 'no scraping.'\"\n    },\n    {\n      \"name\": \"bylineos\",\n      \"url\": \"https://bylineos.com/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"SaaS analytics for Substack writers claiming 'live sync' via secure session cookies — a riskier, likely non-sanctioned access pattern versus CSV/RSS-based competitors.\"\n    },\n    {\n      \"name\": \"Summate\",\n      \"url\": \"https://summate.io/\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": null,\n      \"evidence\": \"Personal AI digest across newsletters (including Substack), YouTube, blogs, and RSS feeds — broader multi-source digest tool.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"AI digest and semantic search tool for Substack newsletters\",\n      \"analytics tool for Substack newsletter writers\",\n      \"Substack unofficial API scraping newsletter data access risk\"\n    ],\n    \"brave\": [\n      \"Substack newsletter digest AI summarizer app\",\n      \"Substack API terms of service third party access\",\n      \"Substack API official documentation developers access\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 13976,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1665,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3127,
+          "output_tokens_details": {
+            "thinking_tokens": 1127
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "P06",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-24T20:30:53.384Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "a64fba7431ca6aaf1204e75fb81851dbbd8f9e766af2e96100f65cd5908002bc",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 1692,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1692,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 326,
+        "output_tokens_details": {
+          "thinking_tokens": 74
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0077,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNu5WKizb3W5EtWLTGUp",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsgDCpABCBIYAipA1Q6Fd/hnYzn0kTuBYTQ7348mF66d0aILOUQARRwjAkN4lLi1WD5gBh+cuUC3zw0o8lXZTi6kx9dTq7oQpNl+yzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAfuQ1tUGEgz++R7DvVXR31X5Av0aDHW11nfIHdHTyD2qqyIwNHfzZHVs3g9LYWoxQMuZrH+fGoC7GB2gVWu8ziZqC16vf24jF2IIIp+pxTmIVC7mKuQB3l0QjzKdQzSzJHfwhRhcjQkuG1qCw1HhsLVq/52MzJ+Ma/UNJqHeKefsOAvshdpdpdmdJtesWvkvUq2oYHw/Kc9QoCoPGxNt6N9Zt/dKDUdpcrbL6tIivWsinwWc0OxB3MIK6r9GhBG87rSLlnl1Ojq13yIxhMMTNFKGs7CSXkiK8qGB5MGfwll4rbGfE8cuSIjTi4e8AQ0Y58FH4I7hiHM/sN4s/CeyrPfU0GkpQEHMq5TXdbJnlTXUdNFGnhZckYwjTUKI9x0g8/RYi/Hmwls2w+NMAvfuh2HXLYyNbq+0r45AGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018uAp1jAHn49eMfubryYCAN",
+            "name": "exa_search",
+            "input": {
+              "query": "third-party app shows Facebook group posts chronologically without algorithm"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013wdmQc1usBGhMu4avkd8Jv",
+            "name": "exa_search",
+            "input": {
+              "query": "Facebook API access revoked third party client app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BPheH1wYDbvwWrSUdwo3ao",
+            "name": "brave_search",
+            "input": {
+              "query": "Facebook Graph API groups feed access third party app policy"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Qwt1VAk6tVc2nysQFchwcc",
+            "name": "brave_search",
+            "input": {
+              "query": "app to view Facebook groups chronological feed no algorithm"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 1692,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1692,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 326,
+          "output_tokens_details": {
+            "thinking_tokens": 74
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "9a31a91cbc498f1649b5923c1cc89f6148c7c091958a10f805d08d1358698f78",
+      "usage": {
+        "input_tokens": 8607,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1692,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 392,
+        "output_tokens_details": {
+          "thinking_tokens": 320
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.021472400000000003,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNu63bAhuaRRVaETQj1W",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EqQJCpABCBIYAipA+lXyGg+I3oIBEkgHsN6/7ktTvT3V0lWeYjv5lo99lbP2KH0sBLeOGNrGyF5pqy2wgN6Gd9iq0k8fPOjOwjNEKjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYaR1tUGEgxP7BvKk2kgGjBImP4aDK5MtaWAF7PtvxlgPSIwfOb9OISLDlT+bI2eoFZZSkLGDZUCJPnyCqAtLVPGCqr4d39gPg0SyhN0qmFx13fuKsAHWeGqUUfi6BY2+rwQ+EoXVYJyc22YN10RIMjyKoX/jxEwGBGlbFDIxT9x5EA8mem9TlvE+Rpb+dwQI3Py9EIbZ4mG3W0Qafz4voSpq7ijaRrCl/TB9shkaVGo0M6qKtsgThL54fBIvU3dhLNXTxlLs4Xu54+BshjJzOoRiU8vLJYGzttoGMYH8YnirhYAoMLsx0CJASz3lFBNFUkC3IQTITQo4wguiMNfBZMR55B4AjaiyrFZjl5WusPNj3XaFbpwyCObwJk4YC1c7xT8UVRtgTos+AIwGOgSRlV6kwi0Cht5fg0XsvZ6r53MTzcJjaJNUL2QExwBSbsp0XHUBwcxLdCrDZVrg25eokzScQkZP94ClCMnGBzQ7YtDGSaEafecnd9lEHJQgLhqD+3DroWOM34dyxrvojoy0SUTOBvu1HXAABMtzBd+YqM8mIX2ozDrbFjxCV7qQxiKe4yDfTCWnzSe5bFiX7LFGgZ86cpKVABfxZAG7ajk59gNP1+OusV1qkGH+up8aiSvqKy3dsvMnf6HEqqP4sGlkegTtv/mvO3DjM2iSlU/mFcUEEMEYtW5zHJSAl7lh6nLYXeQ9Lw7OgWOPFDylSjSLVfJivDh1tH5TszHaHj34uw7BDGIt14DmgIsxYgcC2KMkUscHjnh8r4ohcCYLjrvTEJDgIvBYS9msr8c7BIEurv0DBfxbXpym7EqXTZIy6Cd0k+UZSYebGJ53q/G0360DcS0Z19lW1mHXRdCrzFF7vuz6/09xrEpeXlUZHe/AVD7tbcJAojkNnf93bFTkpLTL00FD594nI/NCBFKeasryF+yqH1NKh77SqLhV5DoM7OynOKJe5obNsbLt0V23YS2HirVCtUDWd5eIU1xz3xvgQXRfrdPpC9p7zSfKTlOk0fvsFPi5OyNx5h7NUG4tRrjXf1jgRoi0/Djc2GPSnWM60sVBwXp9AdZuoFFTM/srYNaInfWc7w6mWZ4k4Zf7x7ryDrAS60BlQxRcjzwLxmLufbvThb4+AEhd9ZAjDtZ66yv6PFjLzKIRIXf9I3lDcWKxwmyDCTgm0qXvp0SwCJ5Kv6RFGf4BZLbwnxkfiCIwaFEkbad+ePWXIrGh/+BSTOjEWhEBwA3x+fXnNcrplmANG2yFMH9hcicmj59XQoQlZ1hSoX/8ET/3sliPl9EZ2r57nCmtmUVvmKeHXS00p2jhBKGagIxcze6YNMrq6v7rnQFT7JG57cgvS+c+9fPkmqHxtH1CaHL/0E6zGFMutWMeZI+4KXQocxgGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WkX2fPXvkS3aTGUapLzQgE",
+            "name": "brave_search",
+            "input": {
+              "query": "Facebook groups API discontinued 2024 developers third party apps shut down"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8607,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1692,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 392,
+          "output_tokens_details": {
+            "thinking_tokens": 320
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "a74d0c63ef4f1e06a13175b19695e05454df1b0676f9f6675389b78a7d5fc47a",
+      "usage": {
+        "input_tokens": 9810,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1692,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1697,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0369284,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfNu6VLEPDd1dnvVXayVK",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"idea_id\": \"P06\",\n  \"verdict\": \"kill\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"pass\",\n      \"evidence\": \"The idea is a client app displaying content to the user themselves; it does not file on a customer's behalf, handle protected health data, give licensed advice, or require the operator to hold a license.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"fail\",\n      \"evidence\": \"The core function (retrieving group posts) depends entirely on Facebook's platform access. Meta discontinued the entire Facebook Groups API on April 22, 2024, removing third-party ability to read group feeds. Any workaround (scraping with user session cookies) is not a sanctioned API and violates Facebook's Platform Terms, which prohibit unauthorized automated data collection. This is a single third party (Meta) that can and has already revoked the exact access this idea requires.\",\n      \"source_url\": \"https://techcrunch.com/2024/02/05/meta-cuts-off-third-party-access-to-facebook-groups-leaving-developers-and-customers-in-disarray/\"\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"No physical inventory, storage, or shipping is involved; this is a software content client.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No hardware manufacturing, fleets, or facilities required; a content client is buildable by a solo operator with standard cloud/app infra.\",\n      \"source_url\": null\n    }\n  ],\n  \"flags\": [\n    { \"id\": \"T5\", \"evidence\": \"If built via scraping/session automation instead of API, Facebook's anti-scraping detection and account bans would likely require ongoing manual maintenance and support per user session, which does not scale automatically.\" },\n    { \"id\": \"T6\", \"evidence\": \"Even if a scraping-based MVP could launch within 90 days, sustained access is fragile given Meta's active enforcement against third-party Groups tools, undermining a durable path to paying customers.\" }\n  ],\n  \"competitors\": [\n    {\n      \"name\": \"fbtool (Martin's corner on the web)\",\n      \"url\": \"https://harizanov.com/2026/08/turning-facebook-groups-into-a-daily-digest/\",\n      \"relationship\": \"direct\",\n      \"pricing\": null,\n      \"evidence\": \"Author explicitly built a browser-automation scraper because 'Facebook has no API for groups' and existing scraping services require uploading session cookies to third-party clouds, confirming no sanctioned API path exists.\"\n    },\n    {\n      \"name\": \"Not for You (browser extension)\",\n      \"url\": \"https://notforyou.app/facebook\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"free\",\n      \"evidence\": \"Free extension that switches Facebook's native UI to its own built-in 'Feeds' chronological view (friends/groups/pages) rather than pulling data via an external API, sidestepping the Groups API deprecation by just toggling Facebook's own feature.\"\n    },\n    {\n      \"name\": \"Facebook native 'Feeds' tab\",\n      \"url\": \"https://www.buzzfeednews.com/article/katienotopoulos/facebook-chronological-home-feed\",\n      \"relationship\": \"direct\",\n      \"pricing\": \"free (built into Facebook)\",\n      \"evidence\": \"Facebook itself launched a native chronological 'Feeds' view covering Friends, Groups, and Pages in 2022, directly overlapping with the idea's value proposition.\"\n    },\n    {\n      \"name\": \"fb-groups-sort (Tampermonkey script)\",\n      \"url\": \"https://github.com/jonastheis/fb-groups-sort/\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": \"free/open-source\",\n      \"evidence\": \"A userscript that re-sorts Facebook group posts by date within the existing Facebook web session, avoiding any API dependency.\"\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"third-party app shows Facebook group posts chronologically without algorithm\",\n      \"Facebook API access revoked third party client app\"\n    ],\n    \"brave\": [\n      \"Facebook Graph API groups feed access third party app policy\",\n      \"app to view Facebook groups chronological feed no algorithm\",\n      \"Facebook groups API discontinued 2024 developers third party apps shut down\"\n    ]\n  },\n  \"proposed_variant\": {\n    \"idea\": \"A browser extension or userscript that runs inside the user's authenticated Facebook session (not via the Graph API) to re-sort and filter the native Facebook web UI to show only chronological posts from groups the user belongs to, similar to existing tools like Not for You or fb-groups-sort.\",\n    \"reason\": \"This avoids dependency on the deprecated Facebook Groups API by operating client-side within the user's own browser session against the rendered page, which several existing free tools already do, though it still carries ToS and maintenance fragility risk as Facebook changes its markup.\"\n  },\n  \"injection_seen\": []\n}"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 9810,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 1692,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1697,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

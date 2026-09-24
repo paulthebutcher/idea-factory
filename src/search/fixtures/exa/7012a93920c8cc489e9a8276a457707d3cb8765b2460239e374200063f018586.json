@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "Substack RSS export CSV analytics tools that comply with terms of service",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T20:32:55.317Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "Substack RSS export CSV analytics tools that comply with terms of service",
+    "results": [
+      {
+        "title": "Substack features: publish, grow, and earn in one place",
+        "url": "https://substack.com/features",
+        "snippet": "Substack features: publish, grow, and earn in one place\n\nResources\n\nCreators\n\nExplore\n\nStart publishing\n\nSign in\n\nExplore\n\nCreators\n\nResources\n\nSubstack features\n\n# One place to publish, grow, and make money\n\nSubstack lets you write, send, record, livestream, chat, sell subscriptions, and understand your business without stitching together a stack of tools.\n\nStart publishingExplore the feature guide\n\n#### Publish everywhere\n\nPosts, newsletters, podcasts, video, live streams, and pages all live in one publishing flow.\n\n#### Grow on the network\n\nRecommendations, Notes, leaderboards, referrals, and search help readers find your work on-platform.\n\n#### Own the relationship\n\nKeep your subscriber list, connect your domain, export your data, and only pay when you start earning.\n\nWhy creators choose Substack\n\n## The whole system works together\n\nInstead of separate tools for publishing, email, community, payments, and analytics, Substack connects them in one workflow so every post can help you reach readers and build a business.\n\n#### Audience growth is built in\n\nDiscovery features are part of the product itself, so publishing, sharing, and subscriber growth reinforce one another.\n\n#### Monetization comes standard\n\nFree and paid posts, podcasts, subscriptions, trials, gifting, and group plans are all available without extra systems.\n\n#### You keep your leverage\n\nBring your audience with you, export your data anytime, and build on a publication that is branded as your own.\n\nFeature gui",
+        "published": null
+      },
+      {
+        "title": "Terms of Use",
+        "url": "https://substack.com/tos",
+        "snippet": "Terms of Use\n\n# Terms of Use\n\nEffective date: April 21, 2025\n\nWelcome to Substack! \n\nThese Terms of Use are a binding contract between you and Substack Inc. (“we”, “us”, “our”). It contains the rules and restrictions that govern your use of Substack’s products and services (referred to below simply as “Substack”). If you have any questions, comments, or concerns regarding these Terms or our products and services, please contact us at tos@substackinc.com.\n\nUsing Substack in any way means that you agree to all of these Terms, and these Terms will remain in effect while you use Substack. These Terms include everything in this document, as well as those in the Privacy Policy, Publisher Agreement, Content Guidelines, Support Chatbot Terms, and Copyright Dispute Policy. If you don’t agree to all of the following, you may not use or access Substack in any manner. \n\nYou represent and warrant that you are of legal age to form a binding contract. As detailed further below, you may not and must not use Substack if you are under 16 years old. If you’re agreeing to these Terms on behalf of an organization or entity, you represent and warrant that you are authorized to agree to these Terms on that organization or entity’s behalf and bind them to these Terms (in which case, the references to “you” and “your” throughout this document refer to that organization or entity).\n\nCreating an Account on Substack\n\nYou may be required to sign up for an account and select a password. You promise to pro",
+        "published": "2025-04-21T00:00:00.000Z"
+      },
+      {
+        "title": "jakewlittle-cs/substack-insights-mcp",
+        "url": "https://github.com/jakewlittle-cs/substack-insights-mcp",
+        "snippet": "# jakewlittle-cs/substack-insights-mcp\n\nCredential-free MCP for immutable Substack content history and deterministic publication analytics\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 1\n- License: Apache License 2.0\n- Default branch: main\n- Created: 2026-08-07T17:59:17Z\n\n## Languages\n\n- JavaScript\n- TypeScript\n\n## Topics\n\n- ai-tools\n- local-first\n- mcp\n- model-context-protocol\n- newsletter-analytics\n- rss\n- sqlite\n- substack\n- typescript\n\n## Top Contributors\n\n- jakewlittle-cs (3 contributions)\n- dependabot[bot] (1 contributions)\n\n---\n\n## README\n\n \n \n \n\n \n \n \n \n \n \n \n\n A credential-free MCP server that turns a publication's public archive and official analytics snapshots into durable, explainable intelligence. \n\n \n Quick start ·\n Tools ·\n Official MCP bridge ·\n Architecture ·\n Contributing \n \n\n> [!IMPORTANT]\n> This is an independent, unofficial project. It never signs in to Substack, accepts no Substack cookies, calls no private endpoints, and cannot publish. Use it only with a publication you own, administer, or have permission to archive.\n\n## Why this exists\n\nAn RSS feed tells you what went out. Substack's official MCP can tell you how it performed. Neither gives your assistant a durable, versioned memory that it can query next month.\n\nSubstack Insights MCP joins those pieces locally:\n\n```mermaid\nflowchart LR\n    RSS[Public RSS archive] -->|exact HTML + text| LEDGER[(SQLite ledger)]\n    OFFICIAL[Substack official MCP] -->|timestamped metric snapshot| LEDGER\n    DRAFT[",
+        "published": null
+      },
+      {
+        "title": "Substack Analytics - Free Newsletter Growth Dashboard",
+        "url": "https://substack-csv-analytics.vercel.app/",
+        "snippet": "Substack Analytics - Free Newsletter Growth Dashboard\n\n# Your Substack data, visualized in seconds\n\nSee growth trends, engagement insights, and subscriber patterns that Substack's dashboard doesn't show you. Free, private, no signup.\n\n🔒 Your data never leaves your browser. Works offline.\n\ne.g. yourname.substack.com or yourcustomdomain.com\n\n Yes, that's me Not right - let me re-enter \n\n## How it works\n\n### Export from Substack\n\nGo to your subscriber page and click Export\n\n### Drop your CSV here\n\nWe auto-detect the file type instantly\n\n📈\n\n### See your insights\n\nGrowth, engagement, sources - no waiting\n\n### Engagement Segments\n\nSee your subscribers split into 5 levels: Superfans, Engaged, Moderate, At-Risk, and Inactive. Substack gives you a hidden 0-5 score. We show you the full picture with counts and percentages.\n\n### Newsletter Health Score\n\nA single 0-100 score combining engagement, list quality, growth momentum, and revenue performance. Know instantly whether your newsletter is thriving or needs attention.\n\n### At-Risk Detection Pro\n\nIdentify subscribers showing signs of disengagement before they leave. See how much paid revenue is at risk and get re-engagement suggestions.\n\n### Cohort Retention Pro\n\nA month-by-month heatmap showing which subscriber cohorts stick around and which fade. The kind of analysis platforms like Beehiiv charge $43/month for.\n\n### Source Quality Pro\n\nNot just how many subscribers each channel brings, but how engaged they are and whether they conv",
+        "published": null
+      },
+      {
+        "title": "Substack Exporter – Get this Extension for 🦊 Firefox (en-US)",
+        "url": "https://addons.mozilla.org/en-US/firefox/addon/substack-exporter/",
+        "snippet": "Substack Exporter – Get this Extension for 🦊 Firefox (en-US)\n\n# Substack Exporter by rxliuli\n\nExport Substack posts, comments, notes and subscriptions as Markdown, CSV, HTML or EPUB\n\nSome features may require payment Some features may require payment\n\nAvailable on Firefox for Android™ Available on Firefox for Android™\n\nScan the QR code to open this extension in Firefox for Android\n\nScreenshots\n\nAbout this extension\n\nSubstack Exporter saves Substack newsletters to your computer for offline reading and backup. What it exports \n\n- All posts of a publication, or a single post, as Markdown, HTML or EPUB\n- Comment threads of a post as CSV, with reply structure preserved\n- Notes and Reads of any user profile\n- Your own subscription list\n\n About paid content: posts behind a paywall export in full only for publications your account already subscribes to. The extension uses your existing browser login and cannot bypass paywalls. Details \n\n- Works on substack.com subdomains and custom domains\n- Can download all images in posts, so archives stay readable fully offline. Links in the exported files point to the local copies\n- EPUB export packs a whole publication into one file for Kindle or Kobo\n- Exports run in the background and resume where they stopped after rate limits, network errors or browser restarts\n- Everything is processed locally in your browser. No data is sent to any server\n\n How to use \n\n1. Click the extension icon to open the dashboard. If you are on a Substack page, its ",
+        "published": "2026-08-04T00:00:00.000Z"
+      }
+    ]
+  }
+}

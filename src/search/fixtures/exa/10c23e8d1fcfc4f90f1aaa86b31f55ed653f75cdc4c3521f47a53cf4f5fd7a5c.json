@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "third party app chronological Facebook group feed client",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T20:32:01.271Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "third party app chronological Facebook group feed client",
+    "results": [
+      {
+        "title": "mharizanov/fbtool",
+        "url": "https://github.com/mharizanov/fbtool",
+        "snippet": "# mharizanov/fbtool\n\n- Stars: 1\n- Forks: 1\n- Watchers: 1\n- Open issues: 0\n- Default branch: main\n- Created: 2026-07-26T11:15:10Z\n\n## Languages\n\n- Python\n\n## Top Contributors\n\n- mharizanov (11 contributions)\n\n---\n\n## README\n\n# fbtool — Facebook group monitor & summarizer\n\nTurns Facebook groups you're a member of — including private ones — into a\nperiodic LLM digest, entirely on your own machine. It scrapes with a real\n(logged-in) browser, stores posts and their top comments in SQLite, and\nsummarizes the last *n* days of discussion (OpenAI by default; Anthropic,\nor a local model via Ollama/vLLM, optional).\n\nThis fills a gap existing tools don't: scraping APIs stop at raw data and\nwant your session cookies on their servers, keyword-alert services monitor\nwith their own accounts so they can't get into members-only groups, and\nthe classic DOM scrapers break whenever Facebook reshuffles its markup.\nfbtool captures the feed's GraphQL payloads instead, and your session\nnever leaves your machine.\n\nThe backstory — why the groups are worth reading but the feed isn't — is in\nthe blog post: Turning Facebook groups into a daily\ndigest.\n\nFacebook has no API for groups, so collection is browser automation against\na logged-in account. This is against Facebook's ToS — read\nAccount risk before pointing it at an account you care\nabout.\n\n## How it works\n\nFacebook's rendered DOM is hostile to scraping: timestamps are\ncharacter-shuffled spans, permalinks materialize lazily, and class names are\ngene",
+        "published": null
+      },
+      {
+        "title": "Groups Watcher",
+        "url": "https://chromewebstore.google.com/detail/groups-watcher/haclmflikcbameonpfkeomjpfaokombf",
+        "snippet": "Groups Watcher - Chrome Web Store\n\n# Groups Watcher\n\nCreated by the owner of the listed website. The publisher has a good record with no history of violations. Learn more.\n\n4.4(\n\nShare\n\nExtension Tools 1,000 users\n\nAdd to Chrome\n\n## Overview\n\nMonitor Facebook groups for keywords, get real time notifications, and auto comment on any post, private or public, no admin needed.\n\n⚠️ IMPORTANT NOTICE — PLEASE READ FIRST Due to recent changes by Facebook, we no longer recommend using any kind of automation or Chrome extension with your personal Facebook account, as it could lead to your account being restricted. This is NOT specific to our extension — it affects ALL Chrome extensions that perform automations on Facebook. We highly recommend not using them. ⚠️ If you still need to monitor Facebook groups without putting your account at risk, use our Professional plan instead. It runs entirely on our end using our own accounts, so you stay safe: https://www.groupswatcher.com/ ============== This Chrome extension is for personal use: it runs in your browser while you’re signed into Facebook on your own computer, and it monitors groups you’re a member of. If you’re a business or team and want monitoring without installing an extension, without leaving a computer on 24/7, and with alerts in 60 seconds of new posts, use our Professional plan at https://www.groupswatcher.com/#pricing. The Professional plan is built for businesses looking for leads and brands looking for brand mentions. ✅ Sa",
+        "published": null
+      },
+      {
+        "title": "List Facebook group posts — Social Fetch",
+        "url": "https://www.socialfetch.dev/docs/api/v1/facebook/groups/posts/get",
+        "snippet": "List Facebook group posts — Social Fetch\n\n# List Facebook group posts\n\nList posts from a Facebook group by group URL.\n\n### Headers\n\nGet your API key\n\nx-api-key* string header\n\nAPI key (`sfk_...`)\n\nParameters\n\nurl* string required query\n\nPublic Facebook group URL whose posts should be listed.\n\nmin 1 chars · max 4096 chars\n\nOptional sort order for posts returned from the group feed. `top`: Facebook's default relevance ranking. `recentActivity`: sorted by most recent comment/reaction activity. `chronological`: regular posts sorted by post time, newest first. `chronologicalListings`: Facebook's separate feed of listing-style posts (e.g. items for sale) within the group, sorted by time.\n\none of: top, recentActivity, chronological, chronologicalListings\n\ncursor string optional query\n\nOpaque pagination cursor from a previous response.\n\nmin 1 chars\n\nResponse fields\n\ndata object\n\nEndpoint-specific response payload.\n\ndata. lookupStatus string\n\nWhether the group resolved for this request.\n\none of: found, not_found\n\nPosts returned for the requested group. This array may be empty when the group resolves but no posts are returned.\n\ndata. posts []. id string\n\nStable identifier for the post.\n\nmin 1 chars\n\ndata. posts []. url string\n\nCanonical public URL for this Facebook group post.\n\nmin 1 chars\n\ndata. posts []. text string nullable\n\nText body of the post when available.\n\ndata. posts []. publishedAt string nullable\n\nISO-8601 timestamp for when the post was published, when available.\n\ndata. p",
+        "published": null
+      },
+      {
+        "title": "Turning Facebook groups into a daily digest – Martin's corner on the web",
+        "url": "https://harizanov.com/2026/08/turning-facebook-groups-into-a-daily-digest/",
+        "snippet": "Turning Facebook groups into a daily digest – Martin's corner on the web\n\n# Turning Facebook groups into a daily digest \n\nI have multiple Facebook groups to monitor, and I dislike Facebook. Group discussions have turned into an arena for trolls, propaganda and confident misinformation, and the posts I actually need – announcements, deadlines, the occasional genuine recommendation – sit buried under all that, in whatever order the feed decides to show them. I kept missing the ones with deadlines in them. That bothered me enough to script my way out: a tool that harvests the groups, strips the noise – human and algorithmic – and hands me an actionable summary.\n\nFacebook has no API for groups, and the existing options don’t really solve this. Scraping services hand you raw data and want your session cookies uploaded to their cloud, the paid monitors do keyword alerts from $199/month and can’t get into members-only groups anyway, and the open-source scrapers are mostly abandoned. So I wrote my own.\n\nfbtool logs into Facebook with a real browser and scrolls each group the way a human would. Instead of parsing the page – a war you eventually lose, Facebook reshuffles its markup constantly – it records the data the feed itself loads: exact timestamps, full post text, permalinks, top comments. Everything lands in a local SQLite database, and a model of your choice (OpenAI, Anthropic, or fully local via Ollama/vLLM) turns the recent history into a Markdown digest grouped by topic, wit",
+        "published": "2026-08-13T00:00:00.000Z"
+      },
+      {
+        "title": "johnsturgeon/fb-rss: Facebook Group -> RSS feed - Codeberg.org",
+        "url": "https://codeberg.org/johnsturgeon/fb-rss",
+        "snippet": "johnsturgeon/fb-rss: Facebook Group -> RSS feed - Codeberg.org\n\nFork\n\nFacebook Group -> RSS feed\n\n30 commits 1 branch 0 tags 227 KiB\n\n- Python 87.5%\n- Jinja 6.8%\n- CSS 5.7%\n\nmain\n\nHTTPS\n\nJohn Sturgeon 775db74e71 Fix dashboard displaying incorrect update interval...\n\n```\n- Removed unnecessary conversion from minutes to seconds in template data\n- Dashboard now correctly shows update_interval in minutes\n- Fixes bug where interval was displayed as 216000 minutes instead of 60\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\n```\n\n#### README.md\n\n# Facebook Group RSS Feed Generator\n\nA lightweight Python daemon that generates RSS feeds from Facebook groups.\n\n## Features\n\n- 🔐 Browser-based authentication - No API keys needed, uses Playwright session storage\n- 📡 Multiple groups - Configure unlimited Facebook groups in YAML\n- 🎯 Smart deduplication - Tracks seen posts, only fetches new content\n- 📰 RSS 2.0 feeds - Includes images, proper formatting, matches rss.app structure\n- 🔄 FastAPI + APScheduler - Single server with integrated scheduler\n- 🌐 Built-in web server - FastAPI serves feeds and dashboard\n- 📊 Web dashboard - Clean, dark-themed UI showing feed stats and metadata\n- 🛡️ Graceful shutdown - Handles signals properly, completes operations before exit\n\n## Quick Start\n\n### Prerequisites\n\n- `uv` package manager Installation | uv\n- clone repo\n\n### 1. Install dependencies\n\n```\nuv sync\nuv run playwright install-deps\nuv run playwright install\n\n```\n\n### 2. Authenticate wi",
+        "published": null
+      }
+    ]
+  }
+}

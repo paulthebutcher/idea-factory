@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "Facebook API access revoked third party client app",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-24T20:30:56.005Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "Facebook API access revoked third party client app",
+    "results": [
+      {
+        "title": "Enforcement",
+        "url": "https://developers.facebook.com/docs/development/terms-and-policies/enforcement/",
+        "snippet": "# Enforcement\n\nIf you violate any of our Platform Terms or Developer Policies your app and possibly your account will be enforced upon. Enforcement actions for violations will vary. When enforcing on an app, we consider the severity and nature of the violation, the developer’s policy compliance history, and the violation’s impact on users. Enforcement actions for policy violations may include (but are not limited to) any of the following:\n\n- a warning\n- restricting the app's ability to perform certain actions for a period of time (e.g., posting content)\n- revocation of approved permissions and features\n- deactivation and removal of the application\n- deactivation and deletion of developer account\n\nPlease note, you will still be able to test login for apps that have been restricted. Find more information on app role testing here.\n\n## Violation Details\n\nThe developer appeals page lists all of your apps that have been enforced on and the Terms and Policies they have violated.\n\n## Violation Notifications\n\nWe will communicate information about policy violations through developer notifications and emails.\n\n### Email\n\nEnforcement emails are sent to the email address listed in each app’s Contact Email field in the Settings > Basic panel in the App Dashboard.\n\nIf you did not receive an email, confirm which email you have designated as the contact email for your app and make sure that it is active, can receive new email, and did not flag the email as junk or spam mail. If you manage mul",
+        "published": null
+      },
+      {
+        "title": "Developer Platform",
+        "url": "https://developers.facebook.com/docs/facebook-login/access-tokens",
+        "snippet": "Access Tokens for Meta Technologies | Developer Documentation\n\nFacebook Login\n\nWas this helpful?\n\n# Access Tokens for Meta Technologies\n\nUpdated: Nov 25, 2025\n\nCopy for LLM\n\nView as Markdown\n\nAn access token is an opaque string that identifies a user, app, or Facebook Page and can be used by the app to make Graph API calls. The token includes information about when it expires and which app generated it. Most API calls on Meta apps require an access token for privacy checks. Different types of access tokens support different use cases.\n\n| Access Token Type | Description |\n| --- | --- |\n| App Access Token | App access tokens let you read and modify app settings. Generate one using your Meta app secret via a server-to-server call. |\n| Client Token | Client tokens identify your app when calling app-level APIs from native or desktop apps. Because client tokens are embedded in apps, they are not secret. Find your client token in the Meta App Dashboard. |\n| Page Access Token | Page access tokens let you read, write, and modify data belonging to a Facebook Page. To obtain one, first get a user access token, then exchange it for a Page access token via the Graph API. |\n| System User Access Token | System User access tokens let your app perform programmatic, automated actions on Ad objects or Pages without requiring input from an app user or re-authentication. |\n| User Access Token | User access tokens let your app take actions in real time based on input from the user. You need a User",
+        "published": null
+      },
+      {
+        "title": "User permissions",
+        "url": "https://developers.facebook.com/docs/graph-api/reference/user/permissions/",
+        "snippet": "Graph API User, Permissions\n\nSearch input\n\nGraph API Version\n\nv26.0\n\n# User permissions\n\nReturns a list of granted and declined permissions.\n\n---\n\n### Revoking Permissions\n\nApps can let people revoke permissions that were previously granted. For example, your app could have a settings page that lets someone disable publishing to Facebook. That settings page could also revoke the`publish_actions` permission at the same time.\n\nYou can revoke a specific permission by making a call to a Graph API endpoint:\n\n```\nDELETE /{user-id}/permissions/{permission-name}\n```\n\nThis request must be made with a user access token or an app access token for the current app. If the request is successful, you will receive a response of`true`.\n\n## Reading\n\n### Example\n\nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK Graph API Explorer\n\n```\nGET /v26.0/{user-id}/permissions HTTP/1.1\nHost: graph.facebook.com\n```\n\n```\n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n  // Returns a `Facebook\\FacebookResponse` object\n  $response = $fb->get(\n    '/{user-id}/permissions',\n    '{access-token}'\n  );\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\n  echo 'Graph returned an error: ' . $e->getMessage();\n  exit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\n  echo 'Facebook SDK returned an error: ' . $e->getMessage();\n  exit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */\n```\n\n```\n/* make the API call */\nFB.api(\n    \"/{user-id}/permissions\",\n    function (response) {\n      if ",
+        "published": null
+      },
+      {
+        "title": "Requesting & Revoking Permissions",
+        "url": "https://developers.facebook.com/docs/facebook-login/guides/permissions/request-revoke/",
+        "snippet": "Requesting & Revoking Permissions | Developer Documentation\n\nFacebook Login\n\nWas this helpful?\n\n# Requesting & Revoking Permissions\n\nUpdated: Mar 3, 2026\n\nCopy for LLM\n\nView as Markdown\n\nEach type of login flow has its own method of requesting permissions, depending on your platform and how you choose to integrate Facebook Login:\n\n### Web\n\n- The Facebook JavaScript SDK uses a`scope` option with the FB.login function call.\n- The Login Button uses a`scope` or`data-scope` parameter on the fb:login-button element.\n- A Manually Built Login Flow should add the`scope` parameter to the login dialog URL that they redirect to.\n\n### Mobile Apps\n\n- Android Login can use a number of different classes to request and manage permissions. Please see our login tutorial for Android for more information.\n- iOS Login can use a number of different methods to request permissions. Please see our login tutorial for iOS for more information.\n- Windows Phone uses the scope parameter when launching the URI association.\n\nPlease note that many of the APIs listed above can also be used to ask for additional permissions later during an app’s lifetime, not just at initial login.\n\n## Optimizing Permissions Requests\n\nAs a general rule, the more permissions an app requests, the less likely it is that people will use Facebook to log into your app. In fact, our research shows that apps that ask for more than four permissions experience a significant drop off in the number of completed logins.\n\n### Guidelines\n\nHer",
+        "published": null
+      },
+      {
+        "title": "Handling Errors",
+        "url": "https://developers.facebook.com/docs/graph-api/guides/error-handling/",
+        "snippet": "Handle Errors - Graph API\n\nSearch input\n\nOn This Page\n\nHandling Errors\n\nError Responses\n\nError Codes\n\nAuthentication Error Subcodes\n\nRate Limiting Error Codes\n\n# Handling Errors\n\nRequests made to our APIs can result in several different error responses. The following document describes the recovery tactics and provides a list of error values with a map to the most common recovery tactic to use.\n\n## Error Responses\n\nThe following represents a common error response resulting from a failed API request:\n\n```\n{\n  \"error\": {\n    \"message\": \"Message describing the error\", \n    \"type\": \"OAuthException\", \n    \"code\": 190,\n    \"error_subcode\": 460,\n    \"error_user_title\": \"A title\",\n    \"error_user_msg\": \"A message\",\n    \"fbtrace_id\": \"EJplcsCHuLu\"\n  }\n}\n```\n\n- `message`: A human-readable description of the error.\n- `code`: An error code. Common values are listed below, along with common recovery tactics.\n- `error_subcode`: Additional information about the error. Common values are listed below.\n- `error_user_msg`: The message to display to the user. The language of the message is based on the locale of the API request.\n- `error_user_title`: The title of the dialog, if shown. The language of the message is based on the locale of the API request.\n- `fbtrace_id`: Internal support identifier. When reporting a bug related to a Graph API call, include the`fbtrace_id` to help us find log data for debugging. However, this ID will expire shortly. To help the support team reproduce your issue, p",
+        "published": null
+      }
+    ]
+  }
+}
