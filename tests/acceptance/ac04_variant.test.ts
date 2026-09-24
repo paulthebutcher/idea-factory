@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { freshSeededDb, runKillGateReplay } from "./helpers.js";
+import { freshSeededDb } from "./helpers.js";
+import { runKillGateReplay } from "./kill_gate_helpers.js";
 import type { Db } from "../../src/store/db.js";
 
 // AC4: Kill gate on A07 returns a proposed_variant.

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "idea-factory": {
+      "command": "npx",
+      "args": ["tsx", "src/mcp/server.ts"],
+      "env": { "FACTORY_DB": "data/factory.db" }
+    }
+  }
+}
