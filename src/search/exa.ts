@@ -1,5 +1,5 @@
 import { SEARCH_COST_USD } from "../config.js";
-import { SearchError, type PageResponse, type SearchResult } from "./types.js";
+import { SearchError, withRetry, type PageResponse, type SearchResult } from "./types.js";
 
 const EXA_BASE = "https://api.exa.ai";
 
@@ -10,17 +10,19 @@ function key(): string {
 }
 
 async function post(pathname: string, body: unknown, timeoutMs: number): Promise<any> {
-  const res = await fetch(`${EXA_BASE}${pathname}`, {
-    method: "POST",
-    headers: { "content-type": "application/json", "x-api-key": key() },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(timeoutMs),
+  return withRetry(async () => {
+    const res = await fetch(`${EXA_BASE}${pathname}`, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-api-key": key() },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!res.ok) {
+      const text = (await res.text().catch(() => "")).slice(0, 300);
+      throw new SearchError("exa", `HTTP ${res.status} ${text}`, res.status);
+    }
+    return res.json();
   });
-  if (!res.ok) {
-    const text = (await res.text().catch(() => "")).slice(0, 300);
-    throw new SearchError("exa", `HTTP ${res.status} ${text}`, res.status);
-  }
-  return res.json();
 }
 
 /** Exa search with contents. Returns normalized results and the provider-reported cost when present. */
