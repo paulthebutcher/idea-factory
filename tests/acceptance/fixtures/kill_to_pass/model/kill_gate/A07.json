@@ -1,0 +1,125 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A07",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-23T00:00:00.000Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_synthetic_1",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_synthetic_1",
+            "name": "exa_search",
+            "input": {
+              "query": "tax filing software for American expats"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_synthetic_2",
+            "name": "exa_search",
+            "input": {
+              "query": "US expat tax preparation service"
+            }
+          }
+        ],
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_synthetic_2",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_synthetic_3",
+            "name": "brave_search",
+            "input": {
+              "query": "expat tax filing US citizens abroad software"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_synthetic_4",
+            "name": "brave_search",
+            "input": {
+              "query": "TurboTax for expats alternative"
+            }
+          }
+        ],
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_synthetic_3",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A07\",\n  \"flags\": [],\n  \"competitors\": [\n    {\n      \"name\": \"Example Co\",\n      \"url\": \"https://example.com/product\",\n      \"relationship\": \"adjacent\",\n      \"pricing\": null,\n      \"evidence\": \"Adjacent product.\"\n    }\n  ],\n  \"proposed_variant\": null,\n  \"injection_seen\": [],\n  \"verdict\": \"kill\",\n  \"tests\": [\n    {\n      \"id\": \"R001\",\n      \"result\": \"unknown\",\n      \"evidence\": \"Could not determine whether the operator files returns.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T2\",\n      \"result\": \"pass\",\n      \"evidence\": \"No single revocable platform dependency.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T3\",\n      \"result\": \"pass\",\n      \"evidence\": \"Software only.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T7\",\n      \"result\": \"pass\",\n      \"evidence\": \"No physical infrastructure.\",\n      \"source_url\": null\n    },\n    {\n      \"id\": \"T5\",\n      \"result\": \"fail\",\n      \"evidence\": \"Soft tests never kill, even when marked fail.\",\n      \"source_url\": null\n    }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"tax filing software for American expats\",\n      \"US expat tax preparation service\"\n    ],\n    \"brave\": [\n      \"expat tax filing US citizens abroad software\",\n      \"TurboTax for expats alternative\"\n    ]\n  }\n}\n```"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    }
+  ]
+}

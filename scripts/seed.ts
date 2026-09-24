@@ -25,6 +25,17 @@ interface SeedRow {
 const SEED_LABELERS = ["research", "claude_seed", "perplexity", "paul_gut_v1"];
 
 /**
+ * The business a backtest row describes, taken from the last parenthesised name in known_outcome
+ * that is not a figure or date, e.g. "(Zigpoll)". Null when the text names no business (O05, B06).
+ */
+export function extractBusinessName(knownOutcome: string | null | undefined): string | null {
+  if (!knownOutcome) return null;
+  const groups = [...knownOutcome.matchAll(/\(([^()]{2,60})\)/g)].map((m) => m[1].trim());
+  const candidates = groups.filter((g) => !/\d/.test(g) && !/^(exit|estimated|approx\.?|self-reported)$/i.test(g));
+  return candidates.length ? candidates[candidates.length - 1] : null;
+}
+
+/**
  * Idempotent seed load. Idea rows are inserted once (idea text is immutable). Seed labels are
  * replaced per (idea, labeler) so corrected seed files take effect. Outcomes are upserted.
  * Labels written by paul_annotation are never touched.
@@ -39,8 +50,8 @@ export function seedIdeas(db: Db, jsonlPath: string = PATHS.seed): { ideas: numb
   const deleteLabel = db.raw.prepare("DELETE FROM labels WHERE idea_id = ? AND labeler = ?");
   const insertLabel = db.raw.prepare("INSERT INTO labels (idea_id, labeler, value, reason, note) VALUES (?, ?, ?, ?, ?)");
   const upsertOutcome = db.raw.prepare(
-    `INSERT INTO outcomes (idea_id, outcome, bucket) VALUES (?, ?, ?)
-     ON CONFLICT(idea_id) DO UPDATE SET outcome = excluded.outcome, bucket = excluded.bucket`,
+    `INSERT INTO outcomes (idea_id, outcome, bucket, business_name) VALUES (?, ?, ?, ?)
+     ON CONFLICT(idea_id) DO UPDATE SET outcome = excluded.outcome, bucket = excluded.bucket, business_name = excluded.business_name`,
   );
   let labels = 0;
   let outcomes = 0;
@@ -61,7 +72,7 @@ export function seedIdeas(db: Db, jsonlPath: string = PATHS.seed): { ideas: numb
         labels++;
       }
       if (r.known_outcome && r.outcome_bucket) {
-        upsertOutcome.run(r.id, r.known_outcome, r.outcome_bucket);
+        upsertOutcome.run(r.id, r.known_outcome, r.outcome_bucket, extractBusinessName(r.known_outcome));
         outcomes++;
       }
     }

@@ -55,6 +55,11 @@ interface Transcript {
   calls: RecordedCall[];
 }
 
+/** Fixture name for sample s of an idea: A07.s1, A07.s2, ... */
+export function sampleFixtureName(ideaId: string, sample: number): string {
+  return `${ideaId}.s${sample}`;
+}
+
 export function modelFixturePath(fixtureDir: string, stage: Stage, name: string): string {
   return path.join(fixtureDir, "model", stage, `${name}.json`);
 }
@@ -69,7 +74,9 @@ export function createModelClient(opts: ModelClientOptions): ModelClient {
   const getClient = () => {
     if (!anthropic) {
       if (!process.env.ANTHROPIC_API_KEY) throw new Error("ANTHROPIC_API_KEY is not set (required for live and record modes)");
-      anthropic = new Anthropic();
+      // Keys that are not scoped to a workspace must send the workspace id on every request.
+      const workspaceId = process.env.ANTHROPIC_WORKSPACE_ID;
+      anthropic = new Anthropic(workspaceId ? { defaultHeaders: { "anthropic-workspace-id": workspaceId } } : {});
     }
     return anthropic;
   };

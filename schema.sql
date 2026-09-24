@@ -35,9 +35,10 @@ CREATE TABLE labels (
 
 -- Known outcomes for backtest rows. Hidden from agents.
 CREATE TABLE outcomes (
-  idea_id     TEXT PRIMARY KEY REFERENCES ideas(id),
-  outcome     TEXT NOT NULL,
-  bucket      TEXT NOT NULL,
+  idea_id       TEXT PRIMARY KEY REFERENCES ideas(id),
+  outcome       TEXT NOT NULL,
+  bucket        TEXT NOT NULL,
+  business_name TEXT,                        -- the actual business; drives stage_results.self_found
   recorded_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 

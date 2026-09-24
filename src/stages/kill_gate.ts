@@ -2,7 +2,8 @@
 // checks from docs/HANDOFF.md before anything is recorded:
 //   1. output validates against the schema
 //   2. at least 2 Exa and 2 Brave queries appear both in `queries` and as trace events, else `error`
-//   3. `kill` only when a hard test failed with non-empty evidence, else override to `pass`
+//   3. `kill` iff a kill rule or hard test failed with non-empty evidence; the runner overrides either way
+//      (kill_to_pass, pass_to_kill) and logs a runner_override event
 //   4. proposed_variant becomes a new idea with parent_id; the original verdict stands
 //   5. backtest rows: self_found when a competitor matches the business the row describes
 // Plus: search results are data. Injection phrases found in tool results are added to injection_seen.
@@ -295,12 +296,12 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   let verdict: "pass" | "kill" = parsed.verdict;
   if (verdict === "kill" && rulesFired.length === 0) {
     verdict = "pass";
-    runner.overrides.push("kill overridden to pass: no hard test failed with cited evidence");
-    trace.add("runner_override", { from: "kill", to: "pass", reason: "no hard test failed with cited evidence", tests: parsed.tests });
-  }
-  if (verdict === "pass" && rulesFired.length > 0) {
-    runner.notes.push(`model said pass although ${rulesFired.join(", ")} failed with evidence; verdict left as pass`);
-    trace.add("runner_note", { note: "pass_with_failed_hard_test", rules_fired: rulesFired });
+    runner.overrides.push("kill_to_pass: no hard test failed with cited evidence");
+    trace.add("runner_override", { kind: "kill_to_pass", from: "kill", to: "pass", reason: "no hard test failed with cited evidence", tests: parsed.tests });
+  } else if (verdict === "pass" && rulesFired.length > 0) {
+    verdict = "kill";
+    runner.overrides.push(`pass_to_kill: ${rulesFired.join(", ")} failed with cited evidence`);
+    trace.add("runner_override", { kind: "pass_to_kill", from: "pass", to: "kill", reason: "a kill rule or hard test failed with cited evidence", rules_fired: rulesFired });
   }
 
   // Injection scan over everything the tools returned.

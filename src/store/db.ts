@@ -356,34 +356,38 @@ export class Db {
   // ---------- backtest contamination check ----------
 
   /**
-   * Does any of these competitor names or URLs match the actual business a backtest row describes?
-   * The stage runner only ever receives this boolean. The hidden outcome text stays inside the store.
+   * Does any of these competitor names or URLs match the business a backtest row describes
+   * (outcomes.business_name)? The stage runner only ever receives this boolean.
    */
   matchesBacktestBusiness(ideaId: string, competitors: { name: string; url?: string | null }[]): boolean {
-    const row = this.raw.prepare("SELECT i.set_name, i.test_role, o.outcome FROM ideas i LEFT JOIN outcomes o ON o.idea_id = i.id WHERE i.id = ?").get(ideaId) as
-      | { set_name: string | null; test_role: string | null; outcome: string | null }
-      | undefined;
-    if (!row) return false;
-    const isBacktest = row.set_name === "backtest" || (row.test_role ?? "").startsWith("backtest");
-    if (!isBacktest || !row.outcome) return false;
-    const names = [...row.outcome.matchAll(/\(([^()]{2,60})\)/g)].map((m) => m[1]);
-    if (names.length === 0) return false;
+    const row = this.raw.prepare("SELECT business_name FROM outcomes WHERE idea_id = ?").get(ideaId) as { business_name: string | null } | undefined;
+    if (!row?.business_name) return false;
     const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
-    for (const business of names.map(norm).filter((n) => n.length >= 4)) {
-      for (const c of competitors) {
-        const n = norm(c.name ?? "");
-        const host = (() => {
-          try {
-            return c.url ? norm(new URL(c.url).hostname.replace(/^www\./, "").split(".")[0]) : "";
-          } catch {
-            return "";
-          }
-        })();
-        if ((n && (n.includes(business) || business.includes(n))) || (host && (host === business || business.includes(host)))) return true;
+    const business = norm(row.business_name);
+    if (business.length < 3) return false;
+    for (const c of competitors) {
+      const n = norm(c.name ?? "");
+      if (n && (n.includes(business) || business.includes(n))) return true;
+      if (c.url) {
+        try {
+          const host = norm(new URL(c.url).hostname.replace(/^www\./, "").split(".")[0]);
+          if (host && (host === business || business.includes(host) || host.includes(business))) return true;
+        } catch {
+          /* not a URL */
+        }
       }
     }
     return false;
   }
+}
+
+/** Additive migrations for stores created by an earlier schema. */
+function migrate(raw: Database.Database): void {
+  const cols = (raw.prepare("PRAGMA table_info(outcomes)").all() as { name: string }[]).map((c) => c.name);
+  if (!cols.includes("business_name")) {
+    raw.exec("ALTER TABLE outcomes ADD COLUMN business_name TEXT");
+  }
+  if ((raw.pragma("user_version", { simple: true }) as number) < 2) raw.pragma("user_version = 2");
 }
 
 /** Open (and migrate if empty) the store. WAL mode so two agents can share it. */
@@ -397,7 +401,8 @@ export function openDb(dbPath: string = PATHS.db): Db {
   if (!hasIdeas) {
     const schema = fs.readFileSync(PATHS.schema, "utf8");
     raw.exec(schema);
-    raw.pragma("user_version = 1");
+    raw.pragma("user_version = 2");
   }
+  migrate(raw);
   return new Db(raw);
 }

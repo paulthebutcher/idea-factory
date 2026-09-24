@@ -4,6 +4,7 @@ import { runKillGate, type KillGateRunResult } from "../../src/stages/kill_gate.
 import { createSearchClients } from "../../src/search/index.js";
 import { createModelClient } from "../../src/model/client.js";
 import { TraceCollector } from "../../src/trace.js";
+import { sampleFixtureName } from "../../src/model/client.js";
 import { loadPrompts } from "../../src/config.js";
 import { DEFAULT_FIXTURES } from "./helpers.js";
 
@@ -11,6 +12,8 @@ export interface KillGateTestOptions {
   fixtureDir?: string;
   agent?: string;
   budgetUsd?: number;
+  /** Recorded sample to replay (fixture <idea>.s<sample>). Omit to replay the unsuffixed fixture <idea>. */
+  sample?: number;
 }
 
 /**
@@ -28,5 +31,6 @@ export async function runKillGateReplay(db: Db, ideaId: string, opts: KillGateTe
   const trace = new TraceCollector();
   const search = createSearchClients({ mode: "replay", fixtureDir, trace });
   const model = createModelClient({ mode: "replay", fixtureDir });
-  return runKillGate({ db, runId: run.id, taskId: task.id, ideaId, agent, search, model, trace, prompts });
+  const fixtureName = opts.sample ? sampleFixtureName(ideaId, opts.sample) : ideaId;
+  return runKillGate({ db, runId: run.id, taskId: task.id, ideaId, agent, search, model, trace, prompts, fixtureName });
 }
