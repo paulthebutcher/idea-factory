@@ -7,6 +7,7 @@ import { createSearchClients } from "../search/index.js";
 import { createModelClient, BudgetExceededError, type ModelClient } from "../model/client.js";
 import { TraceCollector } from "../trace.js";
 import { runKillGate, type KillGateRunResult } from "../stages/kill_gate.js";
+import { runViability, type ViabilityRunResult } from "../stages/viability.js";
 
 export interface CreateRunOptions {
   id?: string;
@@ -45,36 +46,69 @@ export interface ExecuteRunOptions {
   fixtureDir: string;
   prompts?: PromptSet;
   model?: ModelClient;
-  onResult?: (r: KillGateRunResult) => void;
+  onResult?: (r: StageRunResult) => void;
+  /** Critic runner, injected once step 6 exists. Receives the idea ids whose latest viability is complete. */
+  critic?: (ideaIds: string[]) => Promise<void>;
 }
+
+export type StageRunResult = ({ stage: "kill_gate" } & KillGateRunResult) | ({ stage: "viability" } & ViabilityRunResult);
 
 export interface ExecuteRunSummary {
   runId: string;
   status: RunRow["status"];
   spentUsd: number;
-  results: KillGateRunResult[];
+  results: StageRunResult[];
 }
 
-/** Execute every open kill_gate task in the run. Stops with budget_exceeded when spend reaches the budget. */
+/**
+ * Execute the run's stages in order: kill gate on the run's ideas, viability on the ideas whose latest
+ * kill-gate verdict is pass, critic on the ideas whose latest viability verdict is complete. Every task
+ * is claimed before it runs. Spend is checked against the budget before each task; reaching it stops
+ * the run with status budget_exceeded.
+ */
 export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions): Promise<ExecuteRunSummary> {
   const prompts = opts.prompts ?? loadPrompts();
   const model = opts.model ?? createModelClient({ mode: opts.modelMode, fixtureDir: opts.fixtureDir });
-  const results: KillGateRunResult[] = [];
+  const run0 = db.getRun(runId)!;
+  const stages = JSON.parse(run0.stages) as Stage[];
+  const ideaIds = (JSON.parse(run0.config_json).idea_ids as string[] | undefined) ?? db.activeIdeaIds();
+  const results: StageRunResult[] = [];
   let status: RunRow["status"] = "complete";
-  try {
-    for (const task of db.listTasks(runId, "open")) {
-      const run = db.getRun(runId)!;
-      if (run.spent_usd >= run.budget_usd) {
-        status = "budget_exceeded";
-        break;
-      }
-      if (task.stage !== "kill_gate" || !task.idea_id) continue;
+
+  const overBudget = () => {
+    const run = db.getRun(runId)!;
+    return run.spent_usd >= run.budget_usd;
+  };
+  const latestIs = (stage: Stage, verdict: string) => ideaIds.filter((id) => db.latestStageResult(id, stage)?.verdict === verdict);
+
+  const runStage = async (stage: "kill_gate" | "viability"): Promise<boolean> => {
+    for (const task of db.listTasks(runId, "open").filter((t) => t.stage === stage)) {
+      if (overBudget()) return false;
+      if (!task.idea_id) continue;
       if (db.claimTask(task.id, opts.agent) !== "claimed") continue;
       const trace = new TraceCollector();
       const search = createSearchClients({ mode: opts.searchMode, fixtureDir: opts.fixtureDir, trace });
-      const r = await runKillGate({ db, runId, taskId: task.id, ideaId: task.idea_id, agent: opts.agent, search, model, trace, prompts });
+      const base = { db, runId, taskId: task.id, ideaId: task.idea_id, agent: opts.agent, search, model, trace, prompts };
+      const r: StageRunResult = stage === "kill_gate" ? { stage, ...(await runKillGate(base)) } : { stage, ...(await runViability(base)) };
       results.push(r);
       opts.onResult?.(r);
+    }
+    return true;
+  };
+
+  try {
+    if (stages.includes("kill_gate")) {
+      if (!(await runStage("kill_gate"))) status = "budget_exceeded";
+    }
+    if (status === "complete" && stages.includes("viability")) {
+      const passes = latestIs("kill_gate", "pass");
+      const existing = new Set(db.listTasks(runId).filter((t) => t.stage === "viability").map((t) => t.idea_id));
+      db.createTasks(runId, "viability", passes.filter((id) => !existing.has(id)));
+      if (!(await runStage("viability"))) status = "budget_exceeded";
+    }
+    if (status === "complete" && stages.includes("critic") && opts.critic) {
+      if (overBudget()) status = "budget_exceeded";
+      else await opts.critic(latestIs("viability", "complete"));
     }
   } catch (e) {
     if (e instanceof BudgetExceededError) status = "budget_exceeded";
@@ -83,8 +117,7 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
       throw e;
     }
   }
-  const run = db.getRun(runId)!;
-  if (status === "complete" && run.spent_usd >= run.budget_usd && db.listTasks(runId, "open").length > 0) status = "budget_exceeded";
+  if (status === "complete" && overBudget() && db.listTasks(runId, "open").length > 0) status = "budget_exceeded";
   db.finishRun(runId, status);
   return { runId, status, spentUsd: db.getRun(runId)!.spent_usd, results };
 }
@@ -105,8 +138,7 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const stages = (args.stages ?? "kill_gate").split(",").map((s) => s.trim()) as Stage[];
   for (const s of stages) if (!["kill_gate", "viability", "critic"].includes(s)) throw new Error(`unknown stage ${s}`);
-  const unsupported = stages.filter((s) => s !== "kill_gate");
-  if (unsupported.length) console.error(`note: stages not built yet in this step and skipped: ${unsupported.join(", ")}`);
+  if (stages.includes("critic")) console.error("note: critic runs through scripts once step 6 lands; this command runs kill_gate and viability");
   const ideaIds = args.ideas ? args.ideas.split(",").map((s) => s.trim()) : undefined;
   const budgetUsd = args.budget ? Number(args.budget) : ENV.runBudgetUsd;
   const db = openDb(PATHS.db);
@@ -114,7 +146,7 @@ async function main() {
   console.log(`run ${run.id}: stages=${stages.join(",")} ideas=${ideaIds?.length ?? "all"} budget=$${budgetUsd} search=${ENV.searchMode} model=${ENV.modelMode}`);
   const summary = await executeRun(db, run.id, {
     agent: `script:${process.pid}`, searchMode: ENV.searchMode, modelMode: ENV.modelMode, fixtureDir: PATHS.fixtures,
-    onResult: (r) => console.log(`  ${r.payload.idea_id}: ${r.verdict}${r.rulesFired.length ? " [" + r.rulesFired.join(",") + "]" : ""} $${r.costUsd.toFixed(4)}`),
+    onResult: (r) => console.log(`  ${r.stage} ${r.payload.idea_id}: ${r.verdict}${r.stage === "kill_gate" && r.rulesFired.length ? " [" + r.rulesFired.join(",") + "]" : ""} $${r.costUsd.toFixed(4)}`),
   });
   console.log(`run ${summary.runId} ${summary.status}: ${summary.results.length} results, spent $${summary.spentUsd.toFixed(4)}`);
   db.close();

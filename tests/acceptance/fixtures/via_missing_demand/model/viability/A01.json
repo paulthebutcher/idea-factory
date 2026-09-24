@@ -1,0 +1,117 @@
+{
+  "stage": "viability",
+  "idea_id": "A01",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-23T00:00:00.000Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_via_1",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_via_1",
+            "name": "exa_search",
+            "input": {
+              "query": "API breaking change monitoring service pricing"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_via_2",
+            "name": "brave_search",
+            "input": {
+              "query": "developer tool for third-party API deprecations pull requests"
+            }
+          }
+        ],
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_via_2",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_via_3",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://example.com/api-monitor/pricing"
+            }
+          }
+        ],
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "synthetic",
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 200,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "cost_usd": 0.004,
+      "response": {
+        "id": "msg_via_3",
+        "type": "message",
+        "role": "assistant",
+        "model": "claude-sonnet-5",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"idea_id\": \"A01\",\n  \"payer\": {\n    \"who\": \"Engineering managers at API-heavy startups\",\n    \"price_hypothesis\": \"$99 per repo per month\",\n    \"comparable_url\": \"https://example.com/api-monitor/pricing\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"Example API Monitor\",\n      \"url\": \"https://example.com/api-monitor\",\n      \"pricing\": \"$99/month\",\n      \"pricing_url\": \"https://example.com/api-monitor/pricing\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"GitHub Marketplace listing\",\n      \"cost_estimate\": \"Free listing, ~$0 CAC\",\n      \"source_url\": \"https://example.com/api-monitor\"\n    }\n  ],\n  \"demand_evidence\": [],\n  \"case_for\": \"Pure software with a GitHub App distribution channel and a recurring, well-understood pain.\",\n  \"case_against\": \"Vendors already publish changelogs and SDK bots; the neutral third party may not be trusted with code access.\",\n  \"open_questions\": [\n    \"Will teams grant write access to a third-party app?\"\n  ],\n  \"regulatory_setup\": null,\n  \"unsourced_claims\": [],\n  \"injection_seen\": [],\n  \"brief_md\": \"# A01 brief\\n\\nComparable pricing: https://example.com/api-monitor/pricing\\n\\nDemand: https://example.com/forum/api-breaking-changes\\n\"\n}"
+          }
+        ],
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "usage": {
+          "input_tokens": 1000,
+          "output_tokens": 200,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    }
+  ]
+}

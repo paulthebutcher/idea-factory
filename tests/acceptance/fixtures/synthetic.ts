@@ -16,10 +16,10 @@ function searchFixture(dir: string, engine: "exa" | "brave", query: string, snip
   writeFixture(dir, { engine, query, params: {}, recorded_at: "2026-09-23T00:00:00.000Z", cost_usd: 0, response: { engine, query, results: [{ title: "Example", url, snippet, published: null }] } });
 }
 
-function writeTranscript(dir: string, ideaId: string, calls: unknown[]) {
-  const file = path.join(dir, "model/kill_gate", `${ideaId}.json`);
+function writeTranscript(dir: string, ideaId: string, calls: unknown[], stage = "kill_gate") {
+  const file = path.join(dir, "model", stage, `${ideaId}.json`);
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, JSON.stringify({ stage: "kill_gate", idea_id: ideaId, model: "claude-sonnet-5", recorded_at: "2026-09-23T00:00:00.000Z", calls }, null, 2) + "\n");
+  fs.writeFileSync(file, JSON.stringify({ stage, idea_id: ideaId, model: "claude-sonnet-5", recorded_at: "2026-09-23T00:00:00.000Z", calls }, null, 2) + "\n");
 }
 
 const base = (ideaId: string) => ({
@@ -97,4 +97,46 @@ for (const [set, verdict, tests] of [
     call(2, msg("msg_synthetic_3", [{ type: "text", text: "```json\n" + JSON.stringify(final, null, 2) + "\n```" }], "end_turn")),
   ]);
 }
-console.log("synthetic fixture sets written: exa_only, pass_to_kill, kill_to_pass");
+// Viability sets for A01. Both share two searches and one fetched page.
+//   via_missing_demand: every field sourced except demand_evidence, which is empty -> fail_evidence (AC6).
+//   via_unsourced_url: payer.comparable_url cites a URL no tool returned -> moved to unsourced_claims (AC7).
+{
+  const e1 = "API breaking change monitoring service pricing";
+  const b1 = "developer tool for third-party API deprecations pull requests";
+  const page = "https://example.com/api-monitor/pricing";
+  const forum = "https://example.com/forum/api-breaking-changes";
+  const viaBase = {
+    idea_id: "A01",
+    payer: { who: "Engineering managers at API-heavy startups", price_hypothesis: "$99 per repo per month", comparable_url: page },
+    competitors: [{ name: "Example API Monitor", url: "https://example.com/api-monitor", pricing: "$99/month", pricing_url: page }],
+    competitors_not_found_queries: [],
+    acquisition_channel: [{ channel: "GitHub Marketplace listing", cost_estimate: "Free listing, ~$0 CAC", source_url: "https://example.com/api-monitor" }],
+    demand_evidence: [{ quote: "Every quarter some vendor breaks our integration and we find out in prod.", url: forum }],
+    case_for: "Pure software with a GitHub App distribution channel and a recurring, well-understood pain.",
+    case_against: "Vendors already publish changelogs and SDK bots; the neutral third party may not be trusted with code access.",
+    open_questions: ["Will teams grant write access to a third-party app?"],
+    regulatory_setup: null,
+    unsourced_claims: [],
+    injection_seen: [],
+    brief_md: "# A01 brief\n\nComparable pricing: " + page + "\n\nDemand: " + forum + "\n",
+  };
+  for (const [set, patch] of [
+    ["via_missing_demand", { demand_evidence: [] }],
+    ["via_unsourced_url", { payer: { ...viaBase.payer, comparable_url: "https://example.com/never-fetched/pricing" } }],
+  ] as const) {
+    const dir = path.join(here, set);
+    searchFixture(dir, "exa", e1, "Example API Monitor: plans from $99/month.", "https://example.com/api-monitor");
+    searchFixture(dir, "brave", b1, "Thread: every quarter some vendor breaks our integration.", forum);
+    writeFixture(dir, { engine: "exa_contents", query: page, params: {}, recorded_at: "2026-09-23T00:00:00.000Z", cost_usd: 0, response: { url: page, title: "Pricing", text: "Starter $99/month per repository. Team $299/month." } });
+    const final = { ...viaBase, ...patch };
+    writeTranscript(dir, "A01", [
+      call(0, msg("msg_via_1", [
+        { type: "tool_use", id: "toolu_via_1", name: "exa_search", input: { query: e1 } },
+        { type: "tool_use", id: "toolu_via_2", name: "brave_search", input: { query: b1 } },
+      ], "tool_use")),
+      call(1, msg("msg_via_2", [{ type: "tool_use", id: "toolu_via_3", name: "fetch_page", input: { url: page } }], "tool_use")),
+      call(2, msg("msg_via_3", [{ type: "text", text: JSON.stringify(final, null, 2) }], "end_turn")),
+    ], "viability");
+  }
+}
+console.log("synthetic fixture sets written: exa_only, pass_to_kill, kill_to_pass, via_missing_demand, via_unsourced_url");

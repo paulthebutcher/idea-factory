@@ -1,6 +1,7 @@
 import type { Db } from "../../src/store/db.js";
 import { createRun } from "../../src/runner/run.js";
 import { runKillGate, type KillGateRunResult } from "../../src/stages/kill_gate.js";
+import { runViability, type ViabilityRunResult } from "../../src/stages/viability.js";
 import { createSearchClients } from "../../src/search/index.js";
 import { createModelClient } from "../../src/model/client.js";
 import { TraceCollector } from "../../src/trace.js";
@@ -35,4 +36,19 @@ export async function runKillGateReplay(db: Db, ideaId: string, opts: KillGateTe
   const model = createModelClient({ mode: "replay", fixtureDir: opts.modelFixtureDir ?? fixtureDir });
   const fixtureName = opts.sample ? sampleFixtureName(ideaId, opts.sample) : ideaId;
   return runKillGate({ db, runId: run.id, taskId: task.id, ideaId, agent, search, model, trace, prompts, fixtureName });
+}
+
+/** Run the viability stage for one idea in replay mode. Uses the latest kill-gate result in db, if any. */
+export async function runViabilityReplay(db: Db, ideaId: string, opts: KillGateTestOptions = {}): Promise<ViabilityRunResult> {
+  const fixtureDir = opts.fixtureDir ?? DEFAULT_FIXTURES;
+  const prompts = loadPrompts();
+  const run = createRun(db, { stages: ["viability"], ideaIds: [ideaId], budgetUsd: opts.budgetUsd ?? 5, searchMode: "replay", prompts });
+  const [task] = db.createTasks(run.id, "viability", [ideaId]);
+  const agent = opts.agent ?? "test";
+  if (db.claimTask(task.id, agent) !== "claimed") throw new Error(`could not claim task ${task.id}`);
+  const trace = new TraceCollector();
+  const search = createSearchClients({ mode: "replay", fixtureDir, trace });
+  const model = createModelClient({ mode: "replay", fixtureDir: opts.modelFixtureDir ?? fixtureDir });
+  const fixtureName = opts.sample ? sampleFixtureName(ideaId, opts.sample) : ideaId;
+  return runViability({ db, runId: run.id, taskId: task.id, ideaId, agent, search, model, trace, prompts, fixtureName });
 }
