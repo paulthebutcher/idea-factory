@@ -23,6 +23,7 @@ function recordedSamples(stage: string, dir = PATHS.fixtures): StageSample[] {
   const out: StageSample[] = [];
   for (const f of fs.readdirSync(mdir).filter((f) => f.endsWith(".json"))) {
     const t = JSON.parse(fs.readFileSync(path.join(mdir, f), "utf8"));
+    if (!Array.isArray(t.calls)) continue; // briefs.json and other non-transcript files
     const model = t.calls.reduce((a: number, c: any) => a + (c.cost_usd ?? 0), 0);
     // Search spend per sample: count tool calls in the transcript and price them at the recorded average.
     let searches = 0;
@@ -68,6 +69,7 @@ function main() {
   const verdicts = new Map<string, string[]>();
   for (const f of fs.readdirSync(path.join(PATHS.fixtures, "model/kill_gate"))) {
     const t = JSON.parse(fs.readFileSync(path.join(PATHS.fixtures, "model/kill_gate", f), "utf8"));
+    if (!Array.isArray(t.calls)) continue;
     const txt = t.calls[t.calls.length - 1]?.response?.content?.find((b: any) => b.type === "text")?.text ?? "";
     const m = txt.match(/\{[\s\S]*\}/);
     let v = "error";

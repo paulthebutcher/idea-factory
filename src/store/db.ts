@@ -397,7 +397,7 @@ export class Db {
 }
 
 /** Schema version a fresh store is at after schema.sql. Bump when adding migrations/NNN_*.sql. */
-export const SCHEMA_VERSION = 4;
+export const SCHEMA_VERSION = 5;
 
 /** Migrations for stores created by an earlier schema. 002 is in code; 003+ are SQL files in migrations/. */
 function migrate(raw: Database.Database): void {
