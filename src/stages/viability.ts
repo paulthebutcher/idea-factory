@@ -134,6 +134,12 @@ export async function runViability(ctx: ViabilityContext): Promise<ViabilityRunR
   const runner: ViabilityRunnerNotes = { missing: [], unsourced_moved: [], remarks: [] };
 
   const record = (verdict: ViabilityRunResult["verdict"], payload: ViabilityPayload): ViabilityRunResult => {
+    // Live search spend counts against the run budget alongside model spend.
+    const searchUsd = search.liveSpendUsd();
+    if (searchUsd > 0) {
+      costUsd += searchUsd;
+      trace.add("runner_note", { note: "search_spend", usd: Number(searchUsd.toFixed(4)) });
+    }
     trace.add("output", { verdict, missing: payload.runner.missing, unsourced_moved: payload.runner.unsourced_moved, payload: { ...payload, brief_md: undefined } });
     const docMd = payload.brief_md?.trim() ? payload.brief_md : null;
     const row = db.recordStageResult({ runId: ctx.runId, ideaId, stage: "viability", verdict, payload, docMd, rulesFired: [], selfFound: false, model, agent: ctx.agent, promptHash, costUsd, events: trace.toInputs(), taskId: ctx.taskId ?? null });

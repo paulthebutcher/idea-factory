@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "automated pull request breaking API change fix GitHub app",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-25T00:34:55.279Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "automated pull request breaking API change fix GitHub app",
+    "results": [
+      {
+        "title": "I Built a GitHub App That Catches Breaking API Changes Before They Ship - DEV Community",
+        "url": "https://dev.to/vyldor/i-built-a-github-app-that-catches-breaking-api-changes-before-they-ship-57p4",
+        "snippet": "<strong>BreakShield CI</strong> is a GitHub App that automatically analyzes every pull request for breaking API changes.",
+        "published": "2026-06-02T15:55:11"
+      },
+      {
+        "title": "Automating Pull Requests in GitHub: A Simple Shell Script to Save You Time | by Vignaraj Ravi | Medium",
+        "url": "https://medium.com/@vignarajj/automating-pull-requests-in-github-a-simple-shell-script-to-save-you-time-31331b8fe143",
+        "snippet": "Install it from https://cli.github.com/&quot; exit 1 fi # Get the current branch name BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD) # PR Type Selection OPTIONS=(&quot;task&quot; &quot;bug&quot; &quot;feature&quot; &quot;hotfix&quot; &quot;fix&quot; &quot;style&quot; &quot;refactor&quot; &quot;test&quot;) echo &quot;Select PR Type:&quot; for i in &quot;${!OPTIONS[@]}&quot;; do echo &quot;$((i+1))) ${OPTIONS[$i]}&quot; done while true; do read -p &quot;Enter a number (1-${#OPTIONS[@]}): &quot; PR_TYPE_INDEX if [[ &quot;$PR_TYPE_INDEX&quot; =~ ^[1-9]$ ]] &amp;&amp; [ &quot;$PR_TYPE_INDEX&quot; -le &quot;${#OPTIONS[@]}&quot; ]; then PR_TYPE=&quot;${OPTIONS[$((PR_TYPE_INDEX-1))]}&quot; break else echo &quot;Invalid choice, please enter a number between 1 and ${#OPTIONS[@]",
+        "published": "2025-02-10T18:08:02"
+      },
+      {
+        "title": "GitHub API Changes | GitHub Developer Guide",
+        "url": "https://developer.github.com/changes/13/",
+        "snippet": "This breaking change was announced on 12-08-2016. Please update your environments accordingly and if you have any questions, get in touch. ... Today we&#x27;re introducing the commit_id input to the create pull request review endpoint. With commit_id, you can specify which commit a review pertains to. This is useful for pull requests with extensive automated reviews that may become invalidated by future pushes.",
+        "published": null
+      },
+      {
+        "title": "Automated Pull Requests - Endor Labs Documentation",
+        "url": "https://docs.endorlabs.com/risk-remediation/automated-pull-requests",
+        "snippet": "<strong>Automatically generate pull requests with dependency upgrades and security fixes</strong>. ... You can set up Remediation PRs in your GitHub environment if you use the Endor Labs GitHub App (Pro) or the Endor Labs GitHub Enterprise Server App.",
+        "published": "2026-06-26T08:16:13"
+      },
+      {
+        "title": "🔥Let’s Do DevOps: GitHub Automated Pull Request Title Fixer🚀",
+        "url": "https://www.letsdodevops.com/p/lets-do-devops-github-automated-pull",
+        "snippet": "This file contains bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters. Learn more about bidirectional Unicode characters ... Next up we have a function that helps us update the PR Title. First, one line 2, we print the new PR title, then on line 4 we do a curl (and catch the response in $CURL), to the GitHub REST API. You can see on line 9 where we’re reading a lot of the information we set earlier, and also the $PULL_REQUEST_NUMBER - we’ll get to that further on in this write-up.",
+        "published": "2024-07-16T14:01:26"
+      }
+    ]
+  }
+}

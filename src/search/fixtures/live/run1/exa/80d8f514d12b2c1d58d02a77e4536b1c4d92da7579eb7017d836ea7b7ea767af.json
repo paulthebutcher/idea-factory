@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "file drop monitoring dashboard did the weekly file arrive from partner",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:35:52.151Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "file drop monitoring dashboard did the weekly file arrive from partner",
+    "results": [
+      {
+        "title": "File Tracker Dashboard | Harmonize",
+        "url": "https://docs.optimizedpayments.com/harmonize/file-tracker-dashboard",
+        "snippet": "File Tracker Dashboard | Harmonize\n\n# File Tracker Dashboard\n\nThe File Tracker Dashboard is an operational monitoring tool that gives you real-time visibility into the status and volume of data files received from each acquirer. It helps payments operations and data teams confirm that files are arriving on schedule, being imported correctly, and carrying the expected transaction volume — across Sales, Authorizations, Fees, and Disputes data.\n\nThis dashboard is split into two tabs: File Monitor for raw file ingestion tracking, and File Metrics for a volume-based view of what's inside those files.\n\n> Default view displays settled data only. Use the Funding Method filter to access conveyed data.\n\nFile Monitor Tab \n\nThe File Monitor tab tracks the arrival and import of raw data files by acquirer, giving you a day-by-day view of file counts and the underlying file-level detail.\n\nFiles by Acquirer (Stacked Bar Chart) \n\n- Y-Axis: Number of files received\n- X-Axis: File Header Date\n- Segments: One color per acquirer\n\n> Use this chart to spot days where an acquirer's file count drops unexpectedly or disappears entirely — this is usually the first signal of a delayed or missing file.\n\nThe chart defaults to Daily granularity over the last 2 weeks, making it easy to identify gaps in the most recent processing cycle.\n\nFile Detail Table \n\nBelow the chart, the detail table shows one row per file received, with the following columns:\n\n| Column | Description |\n| --- | --- |\n| Acquirer | The a",
+        "published": null
+      },
+      {
+        "title": "File Transfer Monitoring & Delivery Alerts",
+        "url": "https://www.files.com/features/file-delivery-monitoring",
+        "snippet": "File Transfer Monitoring & Delivery Alerts — Files.com\n\n# Know When The Right Files Didn’t Show Up\n\nTell Files.com what a correct delivery looks like — which files, in which folder, by when, in what shape — and it watches every window, opening an incident the moment data is missing, late, or malformed. Most file tools only tell you when a transfer fails. They can’t see the partner feed that silently never arrives. Files.com can, because it starts from what was supposed to happen and treats its absence as the failure.\n\n## A Missing File Is The Failure Nobody Catches\n\nIn most file-transfer systems, “failure” means an error code — a transfer threw a 500, a connection dropped, a job errored. By that narrow definition a flow keeps reporting “succeeding” right up until a partner’s nightly file quietly stops coming. There was no transfer, so there was no error, so nothing alerted. Someone finds out days later when a downstream pipeline breaks and has to trace it back to a file that never arrived at 2 AM.\n\nFiles.com flips that around. A failure isn’t an error code. It’s the data you expected not showing up the way you expected it. This feature is called Expectations, and it lets you write down exactly what you expect: which files, from whom, by when, and what they should look like. Most file tools can only tell you a transfer technically completed. Files.com tells you whether the right thing actually happened.\n\n## You Define What “Correct” Means\n\nAn Expectation captures a recurring d",
+        "published": null
+      },
+      {
+        "title": "File-Drop Automations: SFMC Pattern for Daily Imports | Sapota",
+        "url": "https://www.sapotacorp.vn/blog/sfmc-file-drop-automation",
+        "snippet": "File-Drop Automations: SFMC Pattern for Daily Imports | Sapota\n\n# File-Drop Automations: SFMC Pattern for Daily Imports\n\nClient drops a CSV on SFTP at 9am some days, 11am others. Scheduled automations end up importing yesterday's file. File Drop is the fix, and here's the sequence we use on production engagements.\n\nPublished Jan 07, 2026\n\n## Key takeaways\n\n- File Drop starting source triggers automations when a file arrives on SFTP, not on a schedule. Suits the SFTP source that arrives at unpredictable times (9am Mondays, 11am Tuesdays); scheduled automations end up importing yesterday's file when the new one arrives later than expected.\n- Filename patterns let one automation handle multiple daily files. The pattern customer_*.csv triggers on every file matching the pattern; the automation reads the file, imports the data, archives the file. Without patterns, each file type needs its own automation.\n- File Transfer plus Import File split handles the move-and-process pattern cleanly. File Transfer pulls from external SFTP to SFMC's import directory; Import File parses into the DE. Skipping File Transfer produces \"file not found\" errors when SFMC tries to import directly from SFTP.\n- Use File Drop instead of Schedule when timing is unpredictable. Use Schedule when the file arrives at a known time. Mixing them on one automation (Schedule with a \"check if file exists\" step) is harder to maintain and produces operational confusion.\n\nA logistics engagement we picked up had a daily ",
+        "published": "2026-01-07T00:00:00.000Z"
+      },
+      {
+        "title": "File Transfer Monitoring",
+        "url": "https://scheduling.controlm-lowerprod.accenture.com/help/CTMHelp/en-US/Documentation/MFT_Dashboard.htm",
+        "snippet": "File Transfer Monitoring\n\n# File Transfer Monitoring\n\nThe Managed File Transfer domain is the central viewing portal of all file transfers that were executed by File Transfer jobs and MFT Enterprise File Transfers. This enables you to see the progress and details of many file transfers across multiple platforms without having to navigate to individual jobs.\n\nThe data that appears in the MFT Domain is restricted by the authorizations of the user, as defined in the Role Authorizations.\n\nThe Dashboard enables you to view the last 24 hours, find file transfers that failed, were delayed, or canceled, check the host load, count the number of files from a specific business partner, find the biggest file and the earliest transfer. You can interact with entities on the Dashboard or use the Advanced Filter to refine your results.\n\nThe Dashboard shows the following:\n\nFiles by Status: Shows the status of all the file transfers: Completed, In Progress, Failed, Completed with Errors, In queue, and Canceled.\n\nTraffic Load: Shows the volume in GB of file transfers on each host and the number of files that were transferred on each host.\n\nDetails: Shows the total number of hosts, total volume, slow and long file transfers, and total file uploads, downloads, pushes, pulls, based on the filter.\n\nThe following table describes the elements listed in the Details widget.\n\nElements\n\nDescription\n\nUploads\n\n(MFT Enterprise only) Determines the total number of files that were uploaded to the Hub by exter",
+        "published": null
+      },
+      {
+        "title": "File Transfer Monitor (FTM)",
+        "url": "https://docs.itrsgroup.com/docs/geneos/7.3.0/collection/ftm/index.html",
+        "snippet": "File Transfer Monitor (FTM)\n\n## Overview Copied \n\nThe universal File Transfer Monitor or FTM plug-in monitors the arrival of files. This plug-in mainly checks the file existence and its timestamp against the time the file is expected to be available.\n\nFTM is typically employed where an Exchange File Transfer Protocol (FTPs) is used to send the previous day’s trading reports to a client. These reports are expected to arrive at predefined times so that these can be automatically picked up by back office systems for further processing.\n\nThe plugin is available in all platforms supported by the Netprobe as it is file-based monitoring. To view the FTM plugin configuration and settings, see FTM configuration.\n\n## Intended audience Copied \n\nThis guide is intended for experienced Geneos users who want to configure the FTM plugin to monitor the arrival of files, and for users who have completed the recommended Geneos course training.\n\nAs a user, you should be familiar with Unix and Windows file system structure and permissions, log files, and scripting operations.\n\n## Prerequisites Copied \n\nThe following requirements must be met prior to the configuration and setup of the FTM plug-in:\n\n- You must use the supported versions of Active Console, Gateway, and Netprobe. For guidance, see Supported Geneos versions in 6.x Compatibility Matrix.\n- You must have the servers of the Active Console, Gateway, and Netprobe running on the supported operating systems. For guidance, see Operating system",
+        "published": null
+      }
+    ]
+  }
+}

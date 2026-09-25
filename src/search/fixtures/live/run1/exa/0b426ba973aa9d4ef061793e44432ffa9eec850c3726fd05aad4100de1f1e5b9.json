@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "GitHub Apps permissions policy code access third party automation",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:35:03.486Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "GitHub Apps permissions policy code access third party automation",
+    "results": [
+      {
+        "title": "Choosing permissions for a GitHub App",
+        "url": "https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app",
+        "snippet": "# Choosing permissions for a GitHub App\n\nThe permissions of a GitHub App determine what the app can do with GitHub's APIs and what webhooks the app can receive.\n\n## About GitHub App permissions\n\nGitHub Apps don't have any permissions by default. When you register a GitHub App, you can select permissions for the app. The permissions that you select determine what the app can do with GitHub's APIs and what webhooks the app can subscribe to. You should select the minimum permissions required for the app.\n\nAlthough GitHub Apps don't have any permissions by default, they do have implicit permissions to read public resources when acting on behalf of a user. When a user authorizes the app to act on their behalf, the GitHub App can use the resulting user access token to make requests to the REST API and the GraphQL API to read public resources. To learn more about acting on behalf of a user, see Authenticating with a GitHub App on behalf of a user.\n\nApp permissions are classified as repository, organization, enterprise, or account permissions.\n\n- Repository permissions allow your app to access resources related to repositories that are owned by the account where the app is installed.\n- Organization permissions allow your app to access resources related to the organization where the app is installed, if it is installed on an organization account.\n- Enterprise permissions allow the app to manage an enterprise, if it is installed on an enterprise account.\n- Account permissions allow you",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-a-third-party",
+        "snippet": "# Installing a GitHub App from a third party\n\nYou can install GitHub Apps directly from the app owner to use on your account.\n\n## About installing GitHub Apps\n\nThis article describes how to install a GitHub App directly from the app owner instead of from GitHub Marketplace. For more information on installing GitHub Apps from GitHub Marketplace, see Installing a GitHub App from GitHub Marketplace for your personal account and Installing a GitHub App from GitHub Marketplace for your organizations. For more information about installing GitHub Apps that you own, see Installing your own GitHub App.\n\nIn order to use a GitHub App on your resources, you must install the app on your organization or personal account. You can install the same GitHub App on multiple accounts. For example, if you install the app on your personal account and on a few organizations that you own, you'll be able to use the app on your personal repositories, on the organizations where you installed the app, and on repositories owned by those organizations.\n\nWhen you install an app, you grant the app permission to access the organization and repository resources that it requested. During the installation process, GitHub will tell you which permissions the GitHub App requested. For more information about the REST API requests the GitHub App can make with those permissions, see Permissions required for GitHub Apps.\n\nWhen you install an app that requests repository permissions, you will also choose which repositor",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps",
+        "snippet": "# Permissions required for GitHub Apps\n\nFor each permission granted to a GitHub App, these are the REST API endpoints that the app can use.\n\n## About GitHub App permissions\n\nGitHub Apps are created with a set of permissions. Permissions define what resources the GitHub App can access via the API. For more information, see Choosing permissions for a GitHub App.\n\nTo help you choose the correct permissions, you will receive the `X-Accepted-GitHub-Permissions` header in the REST API response. The header will tell you what permissions are required in order to access the endpoint. For more information, see Troubleshooting the REST API.\n\nThese permissions are required to access private resources. Some endpoints can also be used to access public resources without these permissions. To see whether an endpoint can access public resources without a permission, see the documentation for that endpoint.\n\nSome endpoints require more than one permission. Other endpoints work with any one permission from a set of permissions. In these cases, the \"Additional permissions\" column will include a checkmark. For full details about the permissions that are required to use the endpoint, see the documentation for that endpoint.\n\nToken types: UAT = user access token, IAT = installation access token\n\n## Enterprise permissions for \"Enterprise Copilot metrics\"\n\n| Endpoint | Access | Tokens | Additional Permissions |\n| --- | --- | --- | --- |\n| `GET /enterprises/{enterprise}/copilot/metrics/reports/enterpr",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/deciding-when-to-build-a-github-app",
+        "snippet": "# Deciding when to build a GitHub App\n\nWhen building an integration, you should consider using a GitHub App in the following scenarios, instead of an OAuth app, personal access token, or GitHub Actions.\n\n## Using a GitHub App instead of an OAuth app\n\nIn general, GitHub Apps are preferred over OAuth apps.\n\nBoth OAuth apps and GitHub Apps use OAuth 2.0.\n\nOAuth apps can only act on behalf of a user while GitHub Apps can either act on behalf of a user or independently of a user.\n\nFor more information, see Differences between GitHub Apps and OAuth apps.\n\nFor information on how to migrate an existing OAuth app to a GitHub App, see Migrating OAuth apps to GitHub Apps.\n\n### GitHub Apps offer enhanced security\n\nGitHub Apps provide more control over what the app can do. Instead of the broad scopes that OAuth apps use, GitHub Apps use fine-grained permissions. For example, if your app needs to read the contents of a repository, an OAuth app would require the `repo` scope, which would also let the app edit the repository contents and settings. A GitHub App can request read-only access to repository contents, which will not let the app take more privileged actions like editing the repository contents or settings.\n\nGitHub Apps also offer more control over repository access. With a GitHub App, the user or organization owner who installed the app can decide what repositories the app can access. Conversely, an OAuth app can access every repository that the user who authorized the app can acce",
+        "published": null
+      },
+      {
+        "title": "Authorizing GitHub Apps",
+        "url": "https://docs.github.com/en/apps/using-github-apps/authorizing-github-apps",
+        "snippet": "# Authorizing GitHub Apps\n\nYou can authorize a GitHub App to retrieve information about your GitHub account and to make changes on your behalf.\n\n## About authorizing GitHub Apps\n\nApplications that are not owned by you, your organization, or GitHub Marketplace may need to verify your GitHub identity or interact with GitHub on your behalf. These applications can request authorization for a GitHub App to perform these actions. If an application requests authorization, it will redirect you to a GitHub page prompting you to authorize the app.\n\nWhen authorizing the GitHub App, you should ensure you trust the application owner and review the information that the application wants to access. During authorization, you'll be prompted to grant the GitHub App permission to do all of the following:\n\n- Verify your GitHub identity: When authorized, the GitHub App will be able to retrieve your public GitHub profile. The app may also be able to retrieve some private account information. During the authorization process, GitHub will tell you which account information the GitHub App will be able to access.\n- Know which resources you can access: When authorized, the GitHub App will be able to determine which resources you can access that the app can also access. The app may use this, for example, so that it can show you an appropriate list of repositories.\n- Act on your behalf: When authorized, the application may perform tasks on GitHub on your behalf. This might include creating an issue or co",
+        "published": null
+      }
+    ]
+  }
+}

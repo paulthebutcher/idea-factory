@@ -1,0 +1,105 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A11",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:35:57.726Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "6aed4360d2fccbc8991554e6f787271f560d87dd916a1ba1b815678fc6b4aa44",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2120,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2120,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 364,
+        "output_tokens_details": {
+          "thinking_tokens": 100
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.00915,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDmKTb5hw1HcSmpdU5P",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EokECpABCBIYAipAEEiuZdzzC3WwI+FA31A/pNQCom9mCn30e9taMTixwRYj3exdvmod7pzV1VfwzIyJeFklPGrTZxH3H9xvyJebDTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeuD19UGEgwAGg+MuWjlfXbcLpUaDNRR34M4p2Uz8txVyCIwmy0JELeO8sFcSBF0lIQx1Y7bJdujIaRyMaGwPn50nnJ1H3cWC6FQE1yufTDsrVxzKqUC+XkUiSignY2AyYt0UAQCBPZVYnN15A4uLkVve5LFzMiGGZ3DaLwZ4zd3igTzJzutHp+wjZ6oWbRpqfk9U3m9PrmVxFJi2jmg+TvoWzTd6T4Nx5CnAv6SQ4hJMlGZnNLREAPhDsjWjW5zg01Pw2HYC2KJFDl03kB7SFon2JM3PqiQ3RLkPUMN5fuYA4bE9PgGIvgCowoOg2oU6SC/m1qS6Z8Phav9Gs/MfABfQTV0aodRwtzQ2DJ2Ydita9HBCx79f2BEM0XBZqwgvYrG/7zVyDZBp2xTpdNPAYwUP3Z7U8OYMyMzS/KeZyzqm7jjqxuF0PpzhFDIrMfGWfWumPZrMXW/KcDPiOpQ3UqmucSoRe4Vh+c017LDFsd0wo6RHY/AlNspplYYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JinUyNMQHGni2aMGMTZUAq",
+            "name": "exa_search",
+            "input": {
+              "query": "automated swag sending service triggered by Stripe new signup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016sjVjwhwPxL9ZJkE1rnKKf",
+            "name": "exa_search",
+            "input": {
+              "query": "branded welcome swag box service for SaaS new customers API"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JvK5wpfbHKofYeMAeLRoUg",
+            "name": "brave_search",
+            "input": {
+              "query": "Stripe integration swag fulfillment welcome kit automated"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SY5uEKRur9wy6nX8uutyqP",
+            "name": "brave_search",
+            "input": {
+              "query": "swag on demand API fulfillment company Sendoso Postal PrintfulSwag"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2120,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2120,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 364,
+          "output_tokens_details": {
+            "thinking_tokens": 100
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

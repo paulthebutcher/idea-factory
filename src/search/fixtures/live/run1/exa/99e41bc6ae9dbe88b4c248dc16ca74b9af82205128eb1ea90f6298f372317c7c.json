@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "sandboxed hosting for AI-agent generated internal tools startup pricing model",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:35:29.732Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "sandboxed hosting for AI-agent generated internal tools startup pricing model",
+    "results": [
+      {
+        "title": "Agent 37 Cloud - Host any agent behind one API",
+        "url": "https://www.agent37.com/cloud",
+        "snippet": "Agent 37 Cloud - Host any agent behind one API\n\n# Host any agent behind one API.\n\nHermes, OpenClaw, Claude Code, Codex, or your own harness. One API call gives each of your users their own always-on agent sandbox.\n\nHermes OpenClaw Claude Code Codex Custom harness\n\n1. Create a sandbox 2. Message it cURL Python TypeScript\n\ncurl https://api.agent37.com/v1/instances \\ -H \"Authorization: Bearer sk_live_...\" \\ -d '{ \"template\": \"agent37-hermes\" }'\n\nResponse · 200 OK\n\n \"id\": \"ab12cd34ef\",\n\n \"status\": \"running\",\n\n \"template\": \"agent37-hermes\",\n\n \"ports\": [\n\n { \"port\": 3737, \"default\": true,\n\n \"url\": \"https://ab12cd34ef.agent37.app\" },\n\nChat, browsing, code, and files. The default.\n\nPowering agents for\n\nLeniHealth Handled Nestpro Lanyard Health FiveWays Future Bridge Solutions Gedi Foundation\n\n## Pay only for what your agent uses\n\nNo subscription and no plan fee. You top up a prepaid balance, compute meters by the minute while a sandbox runs, and disk meters until you delete it. Set one up below and see what the month costs.\n\nUnit rates\n\nPer minute Per hour\n\nvCPU $0.0011 per vCPU · hour\n\nMemory $0.00096 per GB · hour\n\nDisk $0.00012 per GB · hour\n\nCompute meters only while a sandbox runs. Disk meters from the moment you create it until you delete it, awake or asleep.\n\nShared Dedicated\n\nSandbox size\n\n2 vCPU 4 GB 4 vCPU 8 GB 8 vCPU 16 GB\n\nAwake time 23% · 168 hrs\n\n23\n\nAverage utilization 5%\n\n5\n\nMonthly estimate$0.73\n\nCompute $0.37 Disk $0.36\n\nyou pay for the average, not the peaks\n\n## Ev",
+        "published": null
+      },
+      {
+        "title": "PillDrops — Code Execution Sandbox for AI Agents | Run AI-Generated Code in Firecracker microVMs",
+        "url": "https://pilldrops.com/",
+        "snippet": "PillDrops — AI Agent Sandbox & Code Execution API | Run, Test & Verify AI Code in Isolated microVMs\n\n# Your AI writes software. Give it somewhere to run it.\n\nOne API to execute what your agents produce: Python, Node, headless Chrome, Playwright suites, even a real Android emulator. Every run gets its own hardware-isolated microVM — a hardware boundary, never just a container — with files, preview URLs, pause & resume included. Pay per second of compute.\n\nno card required · first sandbox in under 60 seconds\n\n```\nfrom pilldrops import Sandbox\n\n# Boot an isolated sandbox\nwith Sandbox.create(template=\"python-3.11\") as sb:\n    r = sb.run(\"python -c 'print(2 + 2)'\")\n    print(r.stdout)                    # 4\n\n    sb.upload(\"./data\", \"data\")       # push a directory\n    sb.run(\"pip install pandas\").check()\n    out = sb.run(\"python data/analyze.py\")\n\n# App server + preview URL (your app binds the declared port)\napp = Sandbox.create(template=\"node-20\", ports=[3000])\napp.upload(\"./app.js\", \"app.js\")\napp.run(\"nohup env PORT=3000 node app.js &\")\nprint(app.url)   # https://3000-sb-xxxx.pilldrops.com\n```\n\n```\nimport { Sandbox } from '@pilldrops/sdk'\n\nconst sb = await Sandbox.create({ template: 'python-3.11' })\nconst r  = await sb.run(\"python3 -c 'print(2+2)'\")\nconsole.log(r.stdout)                  // 4\n\nawait sb.upload('./app', 'app')       // push a directory\nawait sb.run('cd app && npm test')\nawait sb.kill()\n\n// App server + preview URL (your app binds the declared port)\nconst app = awa",
+        "published": null
+      },
+      {
+        "title": "Startup Program | Declaw",
+        "url": "https://declaw.ai/startups",
+        "snippet": "Startup Program | Declaw\n\n# Declaw for Startups\n\n$10,000 in Declaw credits. Firecracker sandboxes, security pipeline, audit trail — everything your agent needs to run safely.\n\n## Early-stage AI startups needing a secure runtime\n\nIf your agents work with sensitive data or sell into regulated industries, you need isolation, guardrails, egress controls, and an audit trail from day one — not after your first compliance review.\n\n## Not just credits — a full security runtime\n\nSandbox compute is table stakes. The program includes the entire Declaw security pipeline: isolation, inspection, redaction, blocking, and audit — running inside every sandbox.\n\n### $10,000 in Declaw credits\n\nCovers compute and guardrails inference. Build without worrying about cost for the first 6 months.\n\n### Firecracker microVM sandbox isolation\n\nEvery agent execution runs in a hardware-isolated microVM. ~40ms boot, configurable CPU/memory/disk.\n\n### TLS-intercepting security proxy\n\nA transparent proxy runs inside every sandbox. All outbound traffic is decrypted, inspected, and logged before it leaves the VM.\n\n### PII detection + redaction with rehydration\n\nSSNs, credit cards, emails, phone numbers, API keys — detected and redacted at the boundary. Original values recoverable via rehydration when authorized.\n\n### Prompt injection defense\n\nCatches injection attempts in both inbound prompts and outbound model responses. Blocks before damage is done.\n\n### Per-domain egress policy\n\nL3/L4 IP filtering + L7 domai",
+        "published": null
+      },
+      {
+        "title": "AI Agent Hosting: Persistent, Always-On, from $1.99/mo",
+        "url": "https://www.agent37.com/solutions/ai-agent-hosting",
+        "snippet": "AI Agent Hosting: Persistent, Always-On, from $1.99/mo\n\n# AI agent hosting that stays on when you log off\n\nRun OpenClaw, Hermes, or any Docker image on a persistent, always-on instance. Files and memory survive between tasks. From $3.99/mo managed, or $1.99/mo per instance through one API call.\n\n## What AI agent hosting actually requires\n\nAI agent hosting is infrastructure that keeps an agent alive between tasks: persistent compute, durable memory, and scheduling, rather than the stateless request-and-response model of ordinary web hosting. Agent 37 provides exactly that: persistent, always-on instances for AI agents, from $1.99 a month. An agent is not a website. It holds context, watches things, and acts on its own schedule, so the machine underneath it has to stay on and remember.\n\nMost compute platforms were built for the opposite assumption. Serverless functions freeze or recycle idle processes, so an agent loses everything it was holding in memory and cold-starts back into amnesia exactly when it should be acting. Hyperscaler VMs keep state but bill like it is 2015: an always-on worker on the smallest sensible shape lands near $25 a month before you have wired up storage, schedulers, and networking yourself.\n\nWhat actually runs on agent hosting? Morning briefings compiled from email and calendar before you wake up. An agent that watches a shared inbox and drafts replies. Scheduled checks on prices, feeds, and pipelines that message you the moment something changes. Assi",
+        "published": null
+      },
+      {
+        "title": "Sandbox as a Service | Sandy by Chutes",
+        "url": "https://sandbox-as-a-service.com/",
+        "snippet": "Sandbox as a Service — a sandbox for your AI agent in one API call\n\n# A sandbox for your agent, in one API call\n\n Sign in, copy your key, paste three commands. A minute later your agent has a dedicated virtual machine it can break — and you have not installed an SDK, configured a cluster or spoken to anyone. \n\n- No SDK to install plain HTTP, or an MCP server\n- $5 free no card required\n- $0.09/hour 46% under E2B's rate\n- Own kernel dedicated VM, never shared\n- Preview URLs share what the agent built\n- 24-hour sessions no plan, no upgrade\n\n```\nAPI=https://sandbox-as-a-service.com/v1\nAUTH=\"Authorization: Bearer $AAS_API_KEY\"\nJSON=\"Content-Type: application/json\"\n\n# 1. Create a sandbox\nSBX=$(curl -sS -X POST -H \"$AUTH\" -H \"$JSON\" \\\n  -d '{\"size\":\"small\"}' \\\n  $API/sandboxes | jq -r .id)\n\n# 2. Run a command in it\ncurl -sS -X POST -H \"$AUTH\" -H \"$JSON\" \\\n  -d '{\"command\":\"python3 -c \\\"print(6*7)\\\"\"}' \\\n  $API/sandboxes/$SBX/exec\n\n# 3. Destroy it\ncurl -sS -X DELETE -H \"$AUTH\" $API/sandboxes/$SBX\n```\n\n```\nimport os, requests\n\nAPI = \"https://sandbox-as-a-service.com/v1\"\nheaders = {\"Authorization\": f\"Bearer {os.environ['AAS_API_KEY']}\"}\n\n# Create a sandbox\nsandbox = requests.post(f\"{API}/sandboxes\", headers=headers,\n                        json={\"size\": \"small\", \"timeout_minutes\": 15}).json()\n\n# Run untrusted, model-generated code inside it\nresult = requests.post(f\"{API}/sandboxes/{sandbox['id']}/exec\", headers=headers,\n                       json={\"command\": \"python3 -c 'print(6*7)'\"}",
+        "published": null
+      }
+    ]
+  }
+}

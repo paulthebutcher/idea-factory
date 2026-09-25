@@ -1,0 +1,105 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A10",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:35:49.903Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "7e6690c37cd148b7435946c853c772866a1dd62af13082f7863373a7754709f3",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2138,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2138,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 288,
+        "output_tokens_details": {
+          "thinking_tokens": 24
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.008435,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDktkJLZhSz4D1RHQuz",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "ErUCCpABCBIYAipAi+ph+A/i06iWmSp7fr3vJY1f6KBT96EyJNDaO7tX3mbCK25QMRZz7sS0ODyUpI+Fkei2LWB2jzzmUrOU8d4JfjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeSD19UGEgy4dO6QJNkeuRzxfMsaDMINQbQRuIGVCU0fsSIwSUCiIRaqIPlhxF8Gk6QYK3QxOl50PBBWG1j7pAiKyo8sIZ4b2wlGqVNd3UIQQmaZKlIXte19CLeZyMULxfUBacHG/cgrJm9uRaqG7bPNLl6VHH+wkj9dhHwrXVdVkLeeamZHWp6XmqcZJCkcV4AyYwDFMewgAhkD2wuDAxGX3wMwf5YFGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Q3poYsqpnfmXgVmAwyHYhg",
+            "name": "exa_search",
+            "input": {
+              "query": "SFTP file arrival monitoring alerting partner data files late or malformed"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01R6VhsURQGLjPBPinnxh1UF",
+            "name": "exa_search",
+            "input": {
+              "query": "file drop monitoring dashboard did the weekly file arrive from partner"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016B9firCFUmuQrzSbWLYaHT",
+            "name": "brave_search",
+            "input": {
+              "query": "SFTP monitoring tool alert missing file partner"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012RKKkHXoXycK4Em4SfB532",
+            "name": "brave_search",
+            "input": {
+              "query": "managed file transfer monitoring SLA alerting SFTP"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2138,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2138,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 288,
+          "output_tokens_details": {
+            "thinking_tokens": 24
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

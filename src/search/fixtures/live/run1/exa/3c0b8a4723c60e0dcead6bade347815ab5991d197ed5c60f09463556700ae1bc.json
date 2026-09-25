@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "agent that automatically opens pull requests to fix breaking API changes in codebases",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:34:52.665Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "agent that automatically opens pull requests to fix breaking API changes in codebases",
+    "results": [
+      {
+        "title": "mendapi/mendapi",
+        "url": "https://github.com/mendapi/mendapi",
+        "snippet": "# mendapi/mendapi\n\nDependabot for APIs — detect upstream API breaking changes, scan your codebase for impact, generate the fix PR. Code never leaves your machine.\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 0\n- License: GNU Affero General Public License v3.0\n- Homepage: https://mendapi.com\n- Default branch: main\n- Created: 2026-07-28T16:00:46Z\n\n## Languages\n\n- Go\n- JavaScript\n- PHP\n- Python\n- Ruby\n- TypeScript\n\n## Topics\n\n- ai-agents\n- api\n- breaking-changes\n- claude\n- cli\n- codemod\n- cursor\n- dependabot\n- developer-tools\n- mcp\n- mcp-server\n- openapi\n\n---\n\n## README\n\n# mendapi\n\n> **Dependabot, but for every API you depend on.**\n> We watch your upstream API providers for breaking changes, scan your codebase for impact, and open the fix PR before your integration breaks.\n\n## 30 seconds to your first result\n\n```bash\n# In any repo — zero config, zero npm dependencies\nnpx mendapi sync                          # one network call: fetch the change feed\nnpx mendapi scan --out impact.json        # local only, from here on\nnpx mendapi fix --from-report impact.json\n```\n\n`sync` pulls the upstream API change feed into a local SQLite database. It is the only command that touches the network, and you run it once (then whenever you want fresher data).\n\n`scan` reports every upstream breaking change that actually hits your code — file, line, and symbol — scored for confidence. `fix` drafts the migration as a reviewable diff, without touching a single file until you pass `--apply`. Neit",
+        "published": null
+      },
+      {
+        "title": "Nalvis — Breaking API changes, fixed in your CI",
+        "url": "https://nalvis.dev/",
+        "snippet": "Nalvis — Breaking API changes, fixed in your CI\n\n# When their API changes, your fix is already a pull request.\n\nNalvis watches the providers your SaaS depends on, finds the call sites a breaking change actually touches, and opens a reviewable fix. Deterministic when it can be. Human-reviewed when it can’t.\n\nFree GitHub Action · Hosted watcher from $14/mo · No code sent to an LLM\n\nnalvis · ci runner\n\nWAITING Watching provider specs\n\nalgolia@5 · clerk@5 · svix@1\n\nfix(algolia): migrate initIndex → client.search\n\npending\n\nLaunching with the modern TypeScript stack\n\n- Algolia search SDK v5 v1\n- Clerk auth SDK / API v1\n- Svix webhook OpenAPI v1\n\nUpcoming — not available yet Shopify Twilio Stripe PostHog\n\n## Two paths. One trust boundary.\n\nThe change decides the path. Your source code always stays in CI.\n\n01\n\nStep 01 / 05 active\n\n### Watch\n\nA provider publishes a schema, SDK, or migration change.\n\nSpecs, changelogs and release notes — all public sources.\n\n02\n\nStep 02 / 05 queued\n\n### Diff\n\nWe reduce the release to the changes that can break callers.\n\nOpenAPI and GraphQL diffing, filtered down to caller-visible surface.\n\nopenapi.diff · algolia 3 breaking\n\n- initIndex(indexName): Index removed\n\n- Index.search(query, opts) removed\n\n+ search({ requests: [...] }) added\n\n client.getSettings(...) unchanged\n\n+ requests[].indexName: string added\n\nOnly caller-visible changes survive the reduction: removals, renames, required params, enum shifts.\n\nStep 03 / 05 queued\n\n### Trace locally\n\nThe Ac",
+        "published": null
+      },
+      {
+        "title": "Aakash2408/ripple",
+        "url": "https://github.com/Aakash2408/ripple",
+        "snippet": "# Aakash2408/ripple\n\nSelf-maintaining APIs\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 1\n- Default branch: main\n- Created: 2026-07-29T08:07:46Z\n\n## Languages\n\n- Dockerfile\n- HTML\n- Java\n- Procfile\n- Python\n- TypeScript\n\n---\n\n## README\n\n# 🌊 Ripple — Self-Maintaining APIs\n\n> When you change an API, Ripple finds every consumer and opens PRs to fix them. Automatically.\n\n### 🌐 **Live Landing Page** · **Install GitHub App** · **Dashboard**\n\nInstall GitHub App\nDemo: Python\nDemo: Node\nDemo: Java\nDashboard\n\n## The Problem\n\nYou change `POST /users` to require a new field. Three teams find out when their code breaks in production on Friday night.\n\n## The Solution\n\nRipple detects breaking API changes, finds every consumer, generates the fix, and opens a PR — in seconds, not days.\n\n```\n🌊 RIPPLE — API Change Propagation\n\n⚠️  1 breaking change detected:\n  POST /payments — added required field 'idempotency_key' (string)\n\n🔍 Found 3 consumers (Python SDK, Node SDK, Java SDK)\n🔧 Generated 3 fixes (validated ✓)\n📤 Opened 3 PRs\n\n✅ Done in 15 seconds.\n```\n\n## Install\n\n**Option 1: GitHub App (recommended)**\n\nInstall on your org — Ripple auto-triggers on every push:\n\n👉 **Install Ripple**\n\nThat's it. Push a breaking change to any API spec and fix PRs appear in consumer repos.\n\n**Option 2: Run from source**\n\n```bash\ngit clone https://github.com/Aakash2408/ripple.git\ncd ripple\npip install -r requirements.txt\n\n# Detect breaking changes\npython -m app.cli diff old.yaml new.yaml\n\n# Find consum",
+        "published": null
+      },
+      {
+        "title": "vojtisprime11/BreakShield",
+        "url": "https://github.com/vojtisprime11/BreakShield",
+        "snippet": "# vojtisprime11/BreakShield\n\n🛡️ Free GitHub App that catches breaking API changes in PRs using TypeScript AST analysis. Risk scoring, consumer detection, AI auto-fix (Gemini/OpenAI/Claude/Groq/Perplexity). Zero config, results in 3 seconds.\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 1\n- Homepage: https://breakshield-ci.vercel.app\n- Default branch: main\n- Created: 2026-06-01T16:24:06Z\n\n## Languages\n\n- CSS\n- JavaScript\n- PLpgSQL\n- Shell\n- TypeScript\n\n## Topics\n\n- ai\n- api-breaking-changes\n- api-contracts\n- api-testing\n- api-versioning\n- ast\n- breaking-changes\n- ci-cd\n- code-review\n- developer-tools\n- devops\n- github-app\n- nextjs\n- openapi\n- pull-request\n- semver\n- static-analysis\n- ts-morph\n- typescript\n\n## Top Contributors\n\n- vojtisprime11 (33 contributions)\n\n---\n\n## README\n\n \n\n# 🛡️ BreakShield CI\n\n**Catch breaking API changes before they ship. AI auto-fix included.**\n\nInstall on GitHub\nWebsite\nTypeScript\n\n---\n\nA GitHub App that **automatically detects breaking API changes** in pull requests using **AST analysis** — not LLM guessing.\n\nFinds removed fields, changed types, deleted endpoints, and new required parameters. Shows confidence levels, affected consumers, and risk scores. Then offers **AI-powered auto-fix** with one command.\n\n \n\n---\n\n## ⚡ Quick Start\n\n1. **Install** → github.com/apps/breakshield-ci\n2. **Open a PR** with API changes\n3. **BreakShield analyzes** automatically — posts findings in PR comment\n4. **Type `/fix`** in a comment to generate a fix PR wit",
+        "published": null
+      },
+      {
+        "title": "stroland02/Sync",
+        "url": "https://github.com/stroland02/Sync",
+        "snippet": "# stroland02/Sync\n\nSelf-maintaining API integrations — watches the third-party APIs your code calls and opens CI-verified pull requests when one breaks, drifts, or wastes money.\n\n- Stars: 5\n- Forks: 0\n- Watchers: 5\n- Open issues: 0\n- License: Apache License 2.0\n- Default branch: main\n- Created: 2026-07-24T22:23:08Z\n\n## Languages\n\n- CSS\n- Dockerfile\n- HTML\n- JavaScript\n- Python\n- Shell\n- TypeScript\n\n## Topics\n\n- ai-agents\n- api-monitoring\n- breaking-changes\n- codemod\n- dependency-management\n- developer-tools\n- langgraph\n- openapi\n- python\n- tree-sitter\n\n## Top Contributors\n\n- stroland02 (2381 contributions)\n- sebastianroland-cell (19 contributions)\n\n---\n\n## README\n\n \n\n# Sync\n\n### Self-maintaining API integrations\n\n**Sync watches the third-party APIs your code calls. When one breaks, drifts, or starts costing you money, it opens a pull request that fixes your code — already verified green by your own CI.**\n\nPython 3.12\nLangGraph\nPostgres 16\nLicense: Apache-2.0\nStatus: pre-alpha\n\n \n\n**The operator console — every screen in one pass.** *This is the design mock, not shipped code.*\nWhat is built today · the mock\n\n \n\n```\nvendor ships a breaking change  →  Sync finds every call site that depends on it\n                                →  patches them\n                                →  runs your CI\n                                →  opens a PR carrying the evidence\n```\n\n## Run it\n\nEvery command here runs in an ordinary terminal — no coding agent, no prefix. Every path ends at\nthe same c",
+        "published": null
+      }
+    ]
+  }
+}

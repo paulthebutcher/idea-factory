@@ -236,6 +236,12 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   const runner: RunnerNotes = { model_verdict: null, overrides: [], remarks: [], variant_id: null, self_found: false };
 
   const record = (verdict: "pass" | "kill" | "error", payload: KillGatePayload, rulesFired: string[], selfFound: boolean, variantId: string | null): KillGateRunResult => {
+    // Live search spend counts against the run budget alongside model spend.
+    const searchUsd = search.liveSpendUsd();
+    if (searchUsd > 0) {
+      costUsd += searchUsd;
+      trace.add("runner_note", { note: "search_spend", usd: Number(searchUsd.toFixed(4)) });
+    }
     trace.add("output", { verdict, rules_fired: rulesFired, self_found: selfFound, payload });
     const row = db.recordStageResult({
       runId: ctx.runId, ideaId, stage: "kill_gate", verdict, payload, rulesFired, selfFound, model, agent: ctx.agent, promptHash, costUsd, events: trace.toInputs(), taskId: ctx.taskId ?? null,

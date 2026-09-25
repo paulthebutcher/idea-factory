@@ -1,0 +1,105 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A09",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:35:47.478Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "82bcc1532a43586eac0d66a676353c4cb960d7191803dffeb6cda1884919a617",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2126,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2126,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 280,
+        "output_tokens_details": {
+          "thinking_tokens": 35
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.008325,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDkhNvhRa1A4S1Hv42T",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EuICCpABCBIYAipAra/O/o1u4AOaZQViAtfRDvdI6/ZP+FxF5lbt4Atlo8e/UeEUge7qRajNa0tShki4HCaCxj0+78E/SFdCCFsL5DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeGD19UGEgy1IxU+rH/72sLY0fYaDAKMCsWRhOfwxpH7PSIwLA0Y8l5N3ENZ22R59wsByaxggjzDzNKTxwqvbKvb04sNCVKz3761z+9qE3XEMRCrKn8ghk2E45WMm3wYCJUUWbWERWH2yVS4Ib+1iV5K1W/uMCKCXduYeRG5IDbiJA2VZ8lS6Ii1sdsnmZRnYlUjo+bb5K7WDqnt2Kw6R6zmDZhbneDD6RyVw2VDt8l5SlzxQMHendXD/KYHsD91rXZtVAhWH9klor1ixkSArHcOlB8/GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013yfQeLYMWeEZf4xbenZgo1",
+            "name": "exa_search",
+            "input": {
+              "query": "browser extension detect AI-generated spam content Reddit"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RbDLL3q14WLaUKbhwcqPd2",
+            "name": "exa_search",
+            "input": {
+              "query": "browser extension filter fake reviews AI detection"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01TDqzymW8JD9RMGKLpqDBtU",
+            "name": "brave_search",
+            "input": {
+              "query": "browser extension spam filter AI content Reddit"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01XojQcf9efhRbGAriQtAwtr",
+            "name": "brave_search",
+            "input": {
+              "query": "Reddit API terms of service third party extension scraping content"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2126,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2126,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 280,
+          "output_tokens_details": {
+            "thinking_tokens": 35
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

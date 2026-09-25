@@ -1,0 +1,237 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A05",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:35:15.757Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "5fef6bd17c35a65e71479f650a087c8d97fbf6d14c892b3a13360b62176819a5",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2130,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2130,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 266,
+        "output_tokens_details": {
+          "thinking_tokens": 11
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.008195,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDiPtec4UWjK9XGTFir",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpQCCpABCBIYAipAfMDdfEi+fREd6Rs++qoc4VMz6dfoy1safHjPSkJAlSGgnVy7rP2GThc5VWu/dEjM5YqZc5TURLpAES/JUjsCUDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcGD19UGEgxJ5W1/eCqnNeAnzEkaDO6txzhKjgz5mnanUSIw65ZETtKQYQZomc+crpycTiK5fd6zuOWiTk+FMQyCV+7mZS7OBVhBXJyLkmW4lacxKjFbkzSIfKaTKKZaCrT9Z6ydHTpcVaD+UQxf2e0rZEjiM8jY7lbKe8uB8t2R+g1FmTdDGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01S6grDkT9S5A7JB3oKD28f2",
+            "name": "exa_search",
+            "input": {
+              "query": "hosting platform for internal tools built by AI agents shareable with colleagues"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_015wg1dm6WEF22CmcLsuZbak",
+            "name": "exa_search",
+            "input": {
+              "query": "deploy and share small internal tools no-code agent generated apps"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01YRJ24uHxo6kyqxmZtaqpTo",
+            "name": "brave_search",
+            "input": {
+              "query": "hosting platform internal tools built by AI agents"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016y6mtGy7fSW768wxXB5fUW",
+            "name": "brave_search",
+            "input": {
+              "query": "\"internal tools\" hosting share like a google doc platform"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2130,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2130,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 266,
+          "output_tokens_details": {
+            "thinking_tokens": 11
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "80214069ceee6a098cc86a299acf32fcff619847fe072e5081fcf98b03dc5dc8",
+      "usage": {
+        "input_tokens": 8586,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2130,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 509,
+        "output_tokens_details": {
+          "thinking_tokens": 362
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.022688,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDiywmjusKkNBFiGbP5",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EoUKCpABCBIYAipA0RAzT065IlH0xtvWxMWO1kLQpPeV51EKdHxKKXEt3YbpPQgschyGEV533CqsutCA8ASk5wK/MZhDhcaMwQ0tvDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAc+D19UGEgx4W0yuLIHv7eDrg4waDL3YmawX4OjGsYoXSCIwtoKlxiJ1L+IZsMKmOSoHBeMU5AQsuV479Gwxb2P2QPfYzM9w6u8Vq7VI+wzfLwWEKqEIxzDaiNCkk+EZbZGc6KsvnOgcHDWC1rq02YL6sE6E2RGuC/m/Wjx/UbQBQUmmYBdR8g2xLjAcnMuonNW5y5vVjC2XaSZhQhbsrzIuqs/lxsHR9q62Kga93/d6c2iJnJ66tLYd7n1FrfFueS3Fs5cZowPpz6b5Xg0BpHp57rVeI2GVGdPp+SfpKLTshrc01t6Zc5t30luwzsT+7VsluKZd5s4ZCIOzB7F+mFqcDQuBRhsw6NokNqkAnyuxsZFe1ToHfnzz9+EW2UVuBZWDtrsEWjQOxVFMwTa6qybH9YPRaDHCXhkd7WyVNhYRfOCtzrguvA4ZpcmH+rqND8McI/O6NClrL5djGpmxeaziTtxKivKBE4tfmAPG9iRxF/dPEjFOln6yaRjy9iKbOuRc/w9L4jk/lOPCP9/9okkYcBR8pqfla+yvKcdVDRs5GfxxFzEppZjAM6vrA+sYquSSll1/NdbexlEMZ4beO7fx5kkr+S8JZkdSK3jlwVi+RRYTOkmvAYLREBV7i0waibGie8Sqgy5tUCa8/LHXf7EsRz0fJg2dITIB8nSnN10d0zh+gt14JdKn6ifk8bA5ZPt7nIqFPUngxOW/Qm3FA2en0vY3ZB/KUKeb5UFs767jlyi2y4/t7B/MgTZFEXiu1x8pc1UZWVNs27PXb24mmavj4Jmc5Q9J2t1LyvDs66UYcu+Nh1XAUFzpJaBoTi68gM/M5MJGCMJXmvyByDA/DxMyy0XOCF+nRzTPs1rv4J5Qr/OinqEGFTyPPjhuORAbbEW6GJxX043of8vHPqWMZYr+FVfy0B4mDpksQsGXZKpX6u1E8pQOtOmPqRu7FIkJ+8dKU72lyY8HxaYfujB7KQWYK1MLJqD0SNQQh81gB6bymIiuDn3H6cwAuLuhhdosoQnfGu7BMn7pVJS6cak1wqEgQVozwGV/NeP9YDXxxGRuOBkhnKMji9AmvFNzAT1xtupni8vcn3NmZKsF5dSO3fgfrj3MovO72Bvmqb03YvlBwL/kiEKSFK/h2oml37c1L6i2yIArHk6ETFl6AV4LahJmQWvMuwqxAEASQ7t1Yf58eD66ZTnEs359N/AQizCSqO9OuLCVQeP4W4ceqRlkuXE0MfM9eYOEqoH7pYfrfBtdZ5X8ybEppA9b/8cRfu7hVhuUhe39evJ5PDd91J2X5lV4815dmq8torBJQhP8tgPFBk7aXmnqYIqMUnyX6LUz92RakmHFO3aN/3eKWA1x0b+cPqmtd20W5Mgn9kOkQaD3GcuHh1VuyTjsiY28HpXO9wVc8g8s0zVq188BNw+oHunyGqXQaC7I+RjsJYDAl22avEqq+DEryV1aJcE9zYQbY3QLR1x9E0pxj7acGF0bvjvKo8ZgzMq8W2WWQXluPqSyLwyE49Tq6BgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017uZn4pXy34moYfWZHUQYZr",
+            "name": "brave_search",
+            "input": {
+              "query": "\"display.dev\" pricing OR \"9pm.ai\" pricing internal tools hosting"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01HgwGRwfxaPXDLbX2UVuDvG",
+            "name": "exa_search",
+            "input": {
+              "query": "sandboxed hosting for AI-agent generated internal tools startup pricing model"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8586,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2130,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 509,
+          "output_tokens_details": {
+            "thinking_tokens": 362
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "f65cd7f14c7cc8ba069b33b69e49203b5a8a11497ceb9438929240b62d94425d",
+      "usage": {
+        "input_tokens": 13124,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2130,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1591,
+        "output_tokens_details": {
+          "thinking_tokens": 336
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.042584,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDjdj8GWDCjtB1c1ktM",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EqsJCpABCBIYAipA8ikzgEpw/XHmgMb6eKF191hs+6c2wFJdsYvYpHr5aeXobQRD3a1+x2U4URlEpVaP27Pq30LAJoKw9mYdgjmndTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdeD19UGEgwqg0oNNqS3r0LGWHkaDJU1yKkk9gEMuPpKTiIwFbmhJhzRjLArA1nhQHDBZ7xQvTHP4DW+qOlRw6i/K/qbP1kjSVvUbSifud3UVUSTKscH7hkMQf4pT4sGkFM6xIol90LvukTTz2rwt1UQo3Il1e5iC2tf0J2UcxWbTO7Dvsg6CKzW2x1nThrpznHX5K2NeSFLAkmAFYSW7LsuQSkQ67FTKpC4x9Y9t5i7T/JUjbW8WCG9f7GOepz41t7p/89Qw5zi+Qz1FGW80k51zZjxo0n4SUAEmXmfsakTxAXQkUM76QJ/XCYX2wL9gMkSJzJskKNCHz7OAt/P27yFgIVMVic3GkmPqzXc/QW9R5+ZE5MZlbYRwEw6ALdE0GwocgIvjqO48dS7xI6rAVv2ejcEsGeFgTKAu2Clrv8tLCsI21Wx+JUNelCYnceFaLJ+IUxJu3luDTAM8ziWDfuEvkbOebq9JzFeUjyF8ZJ361l4sBAhtyjtcwYThDU9jeIMoQ9afyjfHCqtjp9kUZES/L3IC5qjEocl033w+Sbt+2XIPYMpjCKoADDzYJbH1PNWvFax3x78rwi082Wykm00gZeJEjx+7J51uwobNRpEF/Z7/s6xKcw47wljsR4Y/rvUHv36AmR15roK34ySuieM5nIctWDBpXScDuX3Drlc/9WpVVTHdQkJCy4zpNmx9WZbq/5wPp1pgd17ScN3S/HrR6RnAb/TT/QaPaVyVfVcjYISWKSJdV/VRGLoRXbhXGTzGfZuoHEhedPc+8znFeMsM9nUxSHODmvtnZVlKrRYFy8l5xpVxT61Ka9QvJEUyjglWH/Z1DxeQ7Ob6Bcn1tZfP+aGWuo8sdwnG3/Zo9WjHFE/AwZHH4ExsXbYFROgIFOEXPBEr60VZ35csu2kcKRANQe3M4lsKEB+/l6YbKei1bCvD/Ck07rxJ7Q3PE9G5plL50X+8FLosw7DOzeVJ1eww3q3DLWi8rYU6RFKo7bi62EunjKgrmYMEmFu/rdD+f2lUuBKz5hDftIckSGQPQbL/ozwdE14hPPmHGfUtTUEyMUe2ZVOIheff5B2PGLzRsUpY/ZOK+PPxPUhPmkHvVEB/jSY/6nHUM1S5YDvyOjg1B60W+6GYhSR0UNMgbsToJ6+bSCIkcwyzAu62gk2H9LRbP800xKCvd0QKX36itYYnjJf7bImP90JJlBD52DVhbS8rKFJBxLZtgoRfk2jJQxWxBVv7YdL1PiA1PJSt7fwNyasLG+XrIrcPizEZDSu5NKOr28RIdwPCcT8TawGMbwshkdjOzLplNOFrkFVbJUNx6+bF09bsxvi6hmxgp4zs8+IBUYugQIDnXDDrwWVDTOdbMYcy0diRoIx1cIAzZRzXgNJ0/16uYwED12XBRgB"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A05\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"No professional-of-record liability, no license/registration, no custody of customer funds. Platform is infra hosting, not advice or money movement.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"pass\", \"evidence\": \"No single revocable third-party API dependency violating terms; can run on standard cloud/sandbox infra (e.g., Firecracker microVMs, own compute) as competitors like Perch and PillDrops do.\", \"source_url\": \"https://pilldrops.com/\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"Purely digital hosting service; no physical inventory to buy, store, or ship.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"Comparable competitors (Volly, Perch, display.dev, 9pm.ai) run as small teams/solo projects on commodity cloud infra, no capital-intensive hardware or facilities required.\", \"source_url\": \"https://volly.so/\" }\n  ],\n  \"flags\": [\n    { \"id\": \"T5\", \"evidence\": \"Enterprise buyers may want SSO/access-control setup help and security assurances (seen in Volly's 'security and access' pain point), which could require some manual onboarding support at scale.\", \"obligations\": [] },\n    { \"id\": \"T6\", \"evidence\": \"Multiple close competitors (display.dev at $49/mo flat, Volly, 9pm.ai) show fast path to a paying customer is plausible within 90 days.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"Volly\", \"url\": \"https://volly.so/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Deploys and shares AI-agent-built internal tools with one login, directory, and access control — nearly identical positioning.\" },\n    { \"name\": \"Perch\", \"url\": \"https://github.com/mandarwagh9/perch\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Agent-native cloud where agent deploys tool and team opens it 'like a Google Doc,' sandboxed — matches idea almost verbatim.\" },\n    { \"name\": \"display.dev\", \"url\": \"https://display.dev/pricing\", \"relationship\": \"direct\", \"pricing\": \"$49/month flat, Pro plan, unlimited viewers\", \"evidence\": \"Publishes agent-generated HTML/artifacts behind company auth for colleague sharing.\" },\n    { \"name\": \"9pm.ai\", \"url\": \"https://9pm.ai/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Deploys apps built by AI coding agents (Claude, Codex, Cursor) and returns a live shareable URL.\" },\n    { \"name\": \"Orb\", \"url\": \"https://byorb.app/\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"Hosts shareable interactive artifacts created by agents (Hermes/OpenClaw), with commenting and shareable links.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"hosting platform for internal tools built by AI agents shareable with colleagues\",\n      \"deploy and share small internal tools no-code agent generated apps\",\n      \"sandboxed hosting for AI-agent generated internal tools startup pricing model\"\n    ],\n    \"brave\": [\n      \"hosting platform internal tools built by AI agents\",\n      \"\\\"internal tools\\\" hosting share like a google doc platform\",\n      \"\\\"display.dev\\\" pricing OR \\\"9pm.ai\\\" pricing internal tools hosting\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 13124,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2130,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1591,
+          "output_tokens_details": {
+            "thinking_tokens": 336
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}
