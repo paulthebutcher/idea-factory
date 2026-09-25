@@ -1,0 +1,607 @@
+{
+  "stage": "viability",
+  "idea_id": "A18",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T12:49:12.684Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "f37d9bb7f5a490e277a982687a313298bf24d6f2e7f714305c438647de7f5c23",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2118,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2118,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 356,
+        "output_tokens_details": {
+          "thinking_tokens": 46
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.008859,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQBXRTdAmQeFvErxPTjr",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvcCCpABCBIYAipA1jcl8ITEyxVc94xXJqCFZigq8ihq5M9IGJ4K9sgy1nosPfORj3McPtJYsyptaa19CnKdDZ4MhBiXB01x/BPtKDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcva2dUGEgwQTn//IDR7VwmOPFUaDP1DwtPC5R4XEZ7zPyIwi7Wwx7YTemLkJ11XmQVoRlSJGPOxgasbzl8T8IguKg9i5O2CiP9FH6dAuKcXqSLtKpMBvJ3q5viWWpPo5+xGzKwh4Cu1HDFeQskEo/i0kFoqKe3mpGwExotX776dS1AcGYgkfnCoKNeI/6WJ862MhvF1SMl/noSWdlTOzesWp8dQ2mYzOwP5AuhKKyly0rMZqVQPTv3V7fRQg76yBfgpNINmo2zqWhnL4nD1MCy4Uy9qsHsHkPUsQf6ADWfxAEWfNsqWQFhyGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01937Z5ZNTaddGpmkDXxNcJH",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://gapzero.app/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01B5Q43nFvziSy2D1A4x3dax",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.kickresume.com/en/online-ai-career-coach/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SSDybynoeq9oZjiP75QvDU",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://resalign.com/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VU9LSR9dbxMeXkKjrTi2bQ",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://coachgpt.com/tools/resume-gap-explainer"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PfdjwGP1iVaYHht6y1qfP8",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://news.ycombinator.com/item?id=37203948"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2118,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2118,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 356,
+          "output_tokens_details": {
+            "thinking_tokens": 46
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "035926a427ae1cd6d5429dfc4624ba7c98c77ea7c50b50bb408cf94e91e45ced",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 7432,
+        "cache_read_input_tokens": 2118,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 7432,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 390,
+        "output_tokens_details": {
+          "thinking_tokens": 187
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0229076,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQBh9cAqzpK6v6d5dYuG",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvcFCpABCBIYAipAITe/owsZ1BbkNRiqhuxQJpjzpR4t4HVXdWe4yU862sQphDX9mNDeBhL4ixiqS6M+xC15gY77VM3O+FzbywKG6DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdHb2dUGEgw9RbKKHcfUFsDrddIaDPSQ54B7u/nbelTSpiIwST2lFkUVC/cT4psOfNT8tkcc4/NcQy/UMjmq9MuCOxDVR7u6N+8mETy3/cbb13ktKpME50SuZyaJSsgV3UdARBmTChWA9CfO4Cy4yILx12ndruI3CB7KPdVkhPay1z4WWDv8Mbg/GTl0kXZT9vvCz2IExvXn2OIt/6H7/nLaMmUysZBbFh9iV5iYxn/rXCo0LQPbwL8hOvPN3WJZ7S2jFy0F7noZo9rBTxFY78j/z1g9K6E2NBH3HHpvo7GYvFtID/T+bmfaQdWm9hL46MYMmDFCX8yIEL4NMu9QdkTAApuU4jVn3c4ZBFZdiRlBVY8Y47zMgNGt3T6IBBfA2Gvz4T2TtnSTWjP/CGMJZ57YrsFZgRBc/aIdRlXSMAjEh6y0OCsk8C/otbCisO2iGJzgK2EE7l3xCLSxPuHeVRaOXVSh4Mu/vDDfU3iv25H2Z26xF2Re86XKBlKqGouLGdZViBIFfKHYyAlQ1u2lIKMVK7n1Ep9KPwPq91tEDIU2gcNogIwAPoRquF/tRgGJg6JF9HNqwSUitmw2NzWDGgEYon3oe/gLbiGDa0Ps9yzZqUWC4C6TfpK8ph6ED4wsGXiTHuaus+f2IXLf35xG28DEpJHeTFOeDfkEzsZ4DUKEcj0UTe51PXVmJEJP0H8oU0F6krEKHLsDVAJVs4k/JMvzmW50dT8TgC4us/B+prH1UUPXIhKYbXUwsV6TYU7BKF6CBeLpbmftJt14ICgA/yATRKqaoKj5TO+iZSPpNi22qMVL3dF40gMYGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GU2MkLFSrv6G6txrYin7at",
+            "name": "brave_search",
+            "input": {
+              "query": "reddit \"employment gap\" resume \"don't know how to explain\" job search anxiety"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0181eESyvRmPxePVrtp8hwz2",
+            "name": "brave_search",
+            "input": {
+              "query": "\"resume gap\" cost per click google ads career coaching keyword"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_019CLKrnYizmzRcggDkWWUnG",
+            "name": "exa_search",
+            "input": {
+              "query": "career gap resume anxiety forum quote \"gap in my resume\""
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 7432,
+          "cache_read_input_tokens": 2118,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 7432,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 390,
+          "output_tokens_details": {
+            "thinking_tokens": 187
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "d371b38fb59f7faac6aa4a39444fab8aa8419180553f96f896c294919c3a3fff",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 12786,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 12786,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 218,
+        "output_tokens_details": {
+          "thinking_tokens": 84
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.034149,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQD4BR1wHVnsh49ryVAa",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtcDCpABCBIYAipARzZa4Lzo69HCwctKlp2oVqdq1iwKe1Qp+cgEiTHLt1QED1qhx5JypJG6Sue3XbyEZ0oLLv2CAoaQlkyR4XAm9jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYfk2dUGEgxnK1JwnDfNttl0OeYaDBCTbyn3orHLeZxkwiIwgiXb0KC5VhkMeBAupRxyr/wGr2d3pvBKtMIt8Ji/gGVoCvCCgnfB3EahCJ5dXWgTKvMBsTD/iVKTacxbUWM2naiyPrEJZHv0XlkOJrqoDoi28q+kWdnVJdyNefRYScuTkjLILfB03hNqCo5NuZqEsgOtTOIsQKDfeggh6zBlvWf1rvVpBez42gbOjjf4BWUtKsjY9zh2nXuhim7q1eR3l829KGhCQPhMbjNrDqtMbf4qwCSSQ7pB4eoZc6w8MpVsuuUTXNKwT96Q6TGGupCmyop5B8yw+5c+xAdw0U5H4uF0S4xgMKYh/zXAWgrcOCqbbg1PmqLQPfSuk7J5kj8THJMdxN+G2KIFD8TI+0btu/ccI8H2sCFEgvQGHo+qBmJq/GvGNQhjGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01B4CfVCAdorhYfrDST3XwqM",
+            "name": "brave_search",
+            "input": {
+              "query": "average cost per click \"career coaching\" OR \"resume\" google ads industry benchmark 2024"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_015E6fZfqrgCCQrSdnt7DsQ8",
+            "name": "brave_search",
+            "input": {
+              "query": "WeGoUp Coach career pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 12786,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 12786,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 218,
+          "output_tokens_details": {
+            "thinking_tokens": 84
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "a49116f259aa99451c814e29d3124dbd07aaf865e4a13cfe61bfef02ae028d2f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1137,
+        "cache_read_input_tokens": 12786,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1137,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 127,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.006673700000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQD8yFQudkLbQeDdqLvV",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01LN5R3L21bb9pww9si6Uda8",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://wegoup.ai/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014J9Wa1kQygxoyx2RCBdJss",
+            "name": "brave_search",
+            "input": {
+              "query": "\"cost per click\" job seekers keyword google ads career average CPC wordstream"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1137,
+          "cache_read_input_tokens": 12786,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1137,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 127,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "939bc57dceb91cf89f05aad2a57bcc5bfd461dfe711306964006fc81ee04a3f4",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 18192,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 18192,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 108,
+        "output_tokens_details": {
+          "thinking_tokens": 32
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.046564,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFLGivcMp57YwNxEmt6",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Er8CCpABCBIYAipAwKhbIjoqQblTcrjiQN4NhBQzR28qx8wE4pOyJfuHVXrC9mlzpPXeuXIl3ZQ61IP37+FUHSWxFfRKzCyVn83TbDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAf/x2dUGEgwH3u3vg/0GEYntJswaDGFjcnMJjvyeQ7eoHyIwFpRusQpGtb+5zD4tKMIQ+dixHsI+ILkqDGgz1VeYO5LCMiZXlTqE3pjMKerAr7aHKlzklzE5sIJTghoUojdR8EWWABCAG8GJ3qvGW7SzbUi7oIMp87phZ8adjvxwMbGLmpk5lT3qFv6khTGAbKzw/d9ZK0G/gYxjLl/VZWEkBSTj07lOlOvT/Y0autrFhBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01F4Vn8PChWjZDmadJcEWyBq",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.wordstream.com/blog/2025-google-ads-benchmarks"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 18192,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 18192,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 108,
+          "output_tokens_details": {
+            "thinking_tokens": 32
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "a1c77fd59c638b5d9de9e53a66c43691405ec8b33be00e4c714d5d3168b5f43d",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3083,
+        "cache_read_input_tokens": 18192,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3083,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 109,
+        "output_tokens_details": {
+          "thinking_tokens": 37
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0124399,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFLRtqGrxPzSwF8UYbR",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eu0CCpABCBIYAipAcTVwx+nTELnvSlNrzyDv0OcfDuWql+PrUWtHj7MZ04t2gS80Acf9QfkMFjNwtPLbesUCdSoiqbA/Xm0ugZW9tDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYHy2dUGEgzToBqu7B1EiB6zDQoaDPOSUblxUNIqyrtgWyIwc9IDNfN37m+OXuLxfsbGXL86R3o2shv21O6g/MmthI7oN/stYD8Bzz2cPurF22xIKokBoMYNOdVXud8pmH8Euar3Wi5BVEhuodL0dDH6txGVEF5ryyZfvwtqMPcEfXxU2Ft5KiV2kJtKExc5Y3ssqWXJaPTw6Jl3xVX8GdvHn+KlOSFamYX4HakMHkjtapX0R22EFmAPWb0DbU82eZmBmQleZmraB/bnpQKSVB3l1H088YwxeyBIenbeF+EYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Kv1YSgPGojBraCFWTM1GmJ",
+            "name": "brave_search",
+            "input": {
+              "query": "wordstream 2025 \"Career & Employment\" average cost per click \"$\""
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3083,
+          "cache_read_input_tokens": 18192,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3083,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 109,
+          "output_tokens_details": {
+            "thinking_tokens": 37
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "d36089433e20a4894838638b625ba6f29d060994213599257860a0acf5e9447f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 449,
+        "cache_read_input_tokens": 21275,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 449,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 663,
+        "output_tokens_details": {
+          "thinking_tokens": 544
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0120115,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFLgTBNmr9QY88WLTe3",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01H5oAL7d33omw56HXQCuW4Q",
+            "name": "brave_search",
+            "input": {
+              "query": "ResAlign AI pricing plan"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0118oL1hLVVH6WaSeGzEaj8H",
+            "name": "brave_search",
+            "input": {
+              "query": "CoachGPT pricing subscription career coach"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 449,
+          "cache_read_input_tokens": 21275,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 449,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 663,
+          "output_tokens_details": {
+            "thinking_tokens": 544
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 7,
+      "request_digest": "3991c604c9fbf31e495da3faa81489672174e5e01ef6f67c33c833aad0c8434f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2131,
+        "cache_read_input_tokens": 21724,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2131,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 6020,
+        "output_tokens_details": {
+          "thinking_tokens": 1430
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0698763,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFMNRG5APRkuZGCfwCp",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A18\",\n  \"payer\": {\n    \"who\": \"The individual job seeker (B2C, self-pay), not employers or recruiters\",\n    \"price_hypothesis\": \"Freemium with a paid tier around $8–$24/month, anchored to Kickresume's 'Online AI Career Coach' Premium pricing ($24/mo monthly, $18/mo quarterly, $8/mo annual) and WeGoUp Coach's planned $9.99/mo Pro tier\",\n    \"comparable_url\": \"https://www.kickresume.com/en/online-ai-career-coach/\"\n  },\n  \"competitors\": [\n    { \"name\": \"GapZero\", \"url\": \"https://gapzero.app/\", \"pricing\": \"Free to use; 'Pro feature' gated chat coach implies a paid tier exists but price not published\", \"pricing_url\": \"https://gapzero.app/\" },\n    { \"name\": \"Kickresume AI Career Coach\", \"url\": \"https://www.kickresume.com/en/online-ai-career-coach/\", \"pricing\": \"Free tier + Premium $24/mo (monthly), $18/mo (quarterly), $8/mo (annual)\", \"pricing_url\": \"https://www.kickresume.com/en/online-ai-career-coach/\" },\n    { \"name\": \"ResAlign AI\", \"url\": \"https://resalign.com/\", \"pricing\": \"Free and paid subscription plans exist; specific price not published on site\", \"pricing_url\": \"https://resalign.com/terms\" },\n    { \"name\": \"WeGoUp Coach\", \"url\": \"https://wegoup.ai/\", \"pricing\": \"Free (3 analyses/mo); Pro $19.99 discounted to $9.99/mo; Teams $49/mo — product is Pre-Alpha, targeting Q3 2026 launch\", \"pricing_url\": \"https://wegoup.ai/\" },\n    { \"name\": \"CoachGPT Resume Gap Explainer\", \"url\": \"https://coachgpt.com/tools/resume-gap-explainer\", \"pricing\": \"NOT FOUND (page requires sign-in to see pricing/plans)\", \"pricing_url\": \"NOT FOUND\" }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    { \"channel\": \"Google Search Ads (Career & Employment category)\", \"cost_estimate\": \"Cost-per-lead ~$117.92 in 2024, then fell ~46.7% YoY (implying roughly $60–$65 per lead in 2025); CPC benchmark data separate but this category saw CPC rise like most industries\", \"source_url\": \"https://www.wordstream.com/blog/2024-google-ads-benchmarks\" },\n    { \"channel\": \"Facebook/Meta Lead Ads (Career & Employment category)\", \"cost_estimate\": \"Lowest-cost category among those measured: ~$12.30 cost per lead\", \"source_url\": \"https://localiq.com/blog/facebook-advertising-benchmarks/\" }\n  ],\n  \"demand_evidence\": [\n    { \"quote\": \"There's a huge gap of 5 years in my CV... when I'm interviewing for my next job... that could be a huge red flag\", \"url\": \"https://forums.redflagdeals.com/34-900k-net-worth-unemployed-more-than-1-year-how-deal-resume-gap-2592868/\" },\n    { \"quote\": \"How do I explain the 5-year gap in my resume due to mental health issues?\", \"url\": \"https://theindependent.sg/sg-woman-attending-a-job-interview-asks-how-do-i-explain-the-5-year-gap-in-my-resume-due-to-mental-health-issues/\" },\n    { \"quote\": \"I don't have $100–$150 per hour to spend on a career coach... but I do have a subscription to ChatGPT\", \"url\": \"https://every.to/working-overtime/i-hired-chatgpt-as-my-career-coach\" }\n  ],\n  \"case_for\": \"The core workflow — parse a resume, identify gaps, benchmark against target-role and salary data, and output a staged roadmap — is a well-bounded, mostly-text pipeline (upload → LLM extraction → gap scoring → generated plan) that a solo builder can assemble in six weeks using off-the-shelf LLM APIs and agent orchestration, with near-zero marginal cost per user. Multiple live competitors (GapZero, Kickresume, ResAlign, WeGoUp) validate that this exact feature set is buildable solo/by small teams and that users are willing to upload resumes to try it for free, giving a fast, cheap way to test paid conversion via a freemium wedge (e.g., $8–$10/mo, matching Kickresume's discounted and WeGoUp's Pro price points) without needing a marketplace, two-sided supply, or ongoing human labor.\",\n  \"case_against\": \"The space is already crowded with at least four free-or-freemium direct competitors solving the identical problem, some (GapZero) explicitly using government salary data (BLS/ONS/Eurostat) that a lone builder would need to source and maintain to match credibility — raising build scope beyond a thin LLM wrapper. The product addresses a short, one-time need (job search until re-employed), which caps recurring revenue and LTV, while Career & Employment paid acquisition is comparatively expensive (~$62–$118 cost per lead via Google per WordStream) relative to a sub-$25/mo price point, meaning payback requires either very high conversion or reliance on unpaid/organic channels that are harder to control. There is also reputational/legal exposure: 'calculating the best trajectory' for people whose gaps often stem from sensitive causes (mental health, caregiving, disability, per the Reddit/Quora/SG examples found) means bad or generic advice from an under-resourced LLM pipeline could cause real harm and user backlash, and the target users are often financially strained job seekers, historically a low-willingness-to-pay segment.\",\n  \"open_questions\": [\n    \"Will users pay specifically for 'gap-focused' framing, or do they expect this as a free feature bundled inside a broader resume/career tool (as Kickresume and GapZero already do)?\",\n    \"What is the actual free-to-paid conversion rate achievable for a narrow, single-use tool versus the broader career platforms it competes with?\",\n    \"Can a solo operator source or approximate credible labor-market/salary data (BLS, ONS, Eurostat) without infringing licensing terms or misrepresenting authority, given GapZero already markets this as a differentiator?\",\n    \"Is retention/repeat use possible at all, or does each customer churn the moment they land a job, forcing continuous new-customer acquisition?\",\n    \"Would the 'better version' — a narrower, cheaper add-on to an existing resume builder rather than a standalone paid product — outperform the standalone version on unit economics?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      { \"obligation\": \"GDPR/CCPA-compliant handling of uploaded resumes and (potentially) sensitive data disclosed to explain gaps (e.g., health, caregiving)\", \"kind\": \"ongoing\", \"consult_scope\": \"One-time consult (2–4 hrs) with a privacy-focused attorney to draft a compliant privacy policy, data retention/deletion policy, and ToS; ongoing obligation to actually delete/not resell data as competitors advertise\", \"source_url\": \"https://gapzero.app/\" }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Average conversion rate from free to paid tier for career/resume SaaS tools [unsourced]\",\n    \"That gap-affected job seekers have below-average willingness to pay for subscription tools [unsourced]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## A18 — Resume Gap Reframing & Career Trajectory Tool\\n\\n**Idea:** A tool that reframes a resume with employment gaps and recommends a realistic next-career trajectory, for job seekers with career gaps.\\n\\n### Payer\\nThe end job seeker pays directly (B2C). Price hypothesis: freemium model with paid tier in the $8–$24/month range, anchored to Kickresume's Online AI Career Coach pricing ($24/mo monthly, down to $8/mo annual) — https://www.kickresume.com/en/online-ai-career-coach/. A newer entrant, WeGoUp Coach, is pricing an equivalent Pro tier at $9.99/mo (https://wegoup.ai/).\\n\\n### Competitors\\nAt least five products already do this or something adjacent:\\n- **GapZero** (free, GDPR-compliant, deletes data post-analysis) — https://gapzero.app/\\n- **Kickresume AI Career Coach** (free + $8–24/mo Premium) — https://www.kickresume.com/en/online-ai-career-coach/\\n- **ResAlign AI** (free + paid plans, price unpublished) — https://resalign.com/\\n- **WeGoUp Coach** (free + $9.99/mo Pro, currently pre-alpha) — https://wegoup.ai/\\n- **CoachGPT Resume Gap Explainer** (pricing gated behind login, NOT FOUND) — https://coachgpt.com/tools/resume-gap-explainer\\n\\nThis is a crowded niche with functioning free alternatives already live.\\n\\n### Acquisition Channel\\n- Google Search Ads in the \\\"Career & Employment\\\" category: cost-per-lead was $117.92 in 2024, falling ~46.7% YoY into 2025 (source: https://www.wordstream.com/blog/2024-google-ads-benchmarks, trend confirmed in https://www.wordstream.com/blog/2025-google-ads-benchmarks).\\n- Facebook/Meta lead ads in the same category are comparatively cheap: ~$12.30 cost per lead (https://localiq.com/blog/facebook-advertising-benchmarks/).\\nBoth suggest paid acquisition is workable but not cheap relative to a sub-$25/mo price tag; payback depends heavily on conversion rate, which is unverified.\\n\\n### Demand Evidence\\nReal people describe acute anxiety and identity-related pain from resume gaps across forums:\\n- \\\"There's a huge gap of 5 years in my CV... which could be a huge red flag\\\" — https://forums.redflagdeals.com/34-900k-net-worth-unemployed-more-than-1-year-how-deal-resume-gap-2592868/\\n- \\\"How do I explain the 5-year gap in my resume due to mental health issues?\\\" — https://theindependent.sg/sg-woman-attending-a-job-interview-asks-how-do-i-explain-the-5-year-gap-in-my-resume-due-to-mental-health-issues/\\n- \\\"I don't have $100–$150 per hour to spend on a career coach... but I do have a subscription to ChatGPT\\\" — https://every.to/working-overtime/i-hired-chatgpt-as-my-career-coach (illustrates willingness to substitute cheap AI tools for expensive human coaching)\\n\\n### Case For\\nThe workflow (parse resume → identify gaps → benchmark against target role/salary → generate staged roadmap) is a bounded, mostly-text LLM pipeline buildable solo in six weeks with near-zero marginal cost. Multiple live competitors prove the feature set is buildable at small-team/solo scale and that users freely upload resumes to try such tools, offering a low-cost way to test a freemium paid tier at Kickresume/WeGoUp price points.\\n\\n### Case Against\\nAt least four free-or-freemium direct competitors already exist, some using licensed government salary data (BLS/ONS/Eurostat) that raises the real build bar above a thin LLM wrapper. The need is largely one-time (ends at re-employment), capping LTV, while Career & Employment paid acquisition costs ($62–$118 CPL via Google) are high relative to an $8–$24/mo price. The subject matter often touches sensitive causes of gaps (health, caregiving, disability — evidenced in the demand quotes), creating real harm/reputational risk if a lightly-supervised AI gives poor 'trajectory' advice, in a customer segment that is often financially strained and price-sensitive.\\n\\n### Open Questions\\n1. Will users pay specifically for gap-framing, or expect it bundled free into broader resume tools (as most competitors already do)?\\n2. What free-to-paid conversion is realistically achievable for this narrow use case?\\n3. Can a solo operator source credible salary/labor-market data without licensing issues, matching GapZero's BLS/ONS/Eurostat integration?\\n4. Is there any retention/repeat-use mechanism, or is this fundamentally a one-and-done tool requiring continuous new-customer acquisition?\\n5. Would a narrower add-on to an existing resume builder outperform a standalone paid product on unit economics — the evidence suggests this may be the case, but that would be a different idea than the one specified.\\n\\n### Regulatory Setup\\nHandling uploaded resumes (and potentially sensitive personal data explaining gaps, e.g., health/caregiving) triggers GDPR/CCPA obligations. GapZero already advertises 'GDPR compliant, data deleted after analysis' as a competitive claim (https://gapzero.app/), setting a market expectation. One-time consult (~2–4 hrs) with a privacy attorney to draft privacy policy/ToS/data retention rules; ongoing obligation to actually implement deletion and non-resale practices.\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2131,
+          "cache_read_input_tokens": 21724,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2131,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 6020,
+          "output_tokens_details": {
+            "thinking_tokens": 1430
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

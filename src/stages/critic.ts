@@ -10,7 +10,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { MODELS, renderTemplate, type PromptSet } from "../config.js";
 import type { Db } from "../store/db.js";
-import { BudgetExceededError, type ModelClient } from "../model/client.js";
+import { BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
 import { TraceCollector } from "../trace.js";
 import { extractJson } from "./kill_gate.js";
 
@@ -201,7 +201,7 @@ export async function runCritic(ctx: CriticContext): Promise<CriticRunSummary> {
       ctx.onComparison?.(row);
       return row;
     } catch (e) {
-      if (e instanceof BudgetExceededError) throw e;
+      if (e instanceof BudgetExceededError || e instanceof FatalApiError) throw e;
       // A tournament with a missing comparison cannot be ranked (the hole would read as a bye), so
       // record the error trace and abort the tournament.
       const message = e instanceof Error ? e.message : String(e);

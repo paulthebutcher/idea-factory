@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "local runner replicates CI environment step-through debugging",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:36:33.375Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "local runner replicates CI environment step-through debugging",
+    "results": [
+      {
+        "title": "Photobombastic/pipestep",
+        "url": "https://github.com/Photobombastic/pipestep",
+        "snippet": "# Photobombastic/pipestep\n\nInteractive CI pipeline debugger. Step through GitHub Actions workflows locally with Docker.\n\n- Stars: 20\n- Forks: 0\n- Watchers: 20\n- Open issues: 4\n- License: MIT License\n- Default branch: main\n- Created: 2026-02-27T21:30:56Z\n\n## Languages\n\n- Python\n\n## Topics\n\n- ci-cd\n- cli\n- debugging\n- developer-tools\n- devtools\n- docker\n- github-actions\n\n---\n\n## README\n\n# PipeStep\n\n**A debugger for your CI pipeline.**\n\nStep through GitHub Actions workflows locally with Docker. Pause before each step, inspect the environment, drop into a shell, modify variables, re-run failed steps — without pushing and waiting.\n\n \n \n \n\n## The Problem\n\nThe CI debugging loop:\n\n1. Commit a fix\n2. Push to GitHub\n3. Wait 2-5 minutes for the runner\n4. Watch it fail\n5. Read the logs, guess what went wrong\n6. Repeat\n\nA single debugging session eats 30-60 minutes. PipeStep lets you step through the pipeline locally, inspect the container at each stage, and fix issues before you push.\n\n## Install\n\n```bash\n# Prerequisites: Docker Desktop running, Python 3.11+\npip install pipestep\n# or from source:\npython3.11 -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt\n\n# Pre-pull the base image\ndocker pull ubuntu:22.04\n```\n\nRequires Python 3.11+ and Docker Desktop running.\n\n## Quick Start\n\n```bash\n# Point it at any GitHub Actions workflow in your project\npipestep run .github/workflows/ci.yml\n# or from source:\npython cli.py run sample_workflow.yml\n```\n\n## Controls\n\n| Key | Actio",
+        "published": null
+      },
+      {
+        "title": "actdbg v0.1.1",
+        "url": "https://pypi.org/project/actdbg/",
+        "snippet": "# actdbg v0.1.1\n\nRun GitHub Actions workflows locally with a real debugger: breakpoints, step-through, shell at the failure point, re-run one step without re-running the job.\n\n- Author email: Sophie Nguyen <sophie.nguyenthuthuy@gmail.com>\n- License: MIT\n- Python: >=3.10\n- Package URL: https://pypi.org/project/actdbg/\n\n## Project URLs\n\n- Homepage: https://github.com/sophie-nguyenthuthuy/actdbg\n\n## Keywords\n\ngithub-actions, ci, debugger, act, local-ci\n\n## Dependencies\n\n| Package | Constraint |\n| --- | --- |\n| PyYAML | >=6 |\n\n## Optional Dependencies\n\n| Package | Constraint | Extra |\n| --- | --- | --- |\n| pytest | >=8 | dev |\n\n## Download Stats\n\n- Last day: 0\n- Last week: 10\n- Last month: 73\n\n## Version History\n\n| Version | Uploaded | Type | Yanked |\n| --- | --- | --- | --- |\n| 0.1.0 | 2026-08-09T03:06:02.187399Z | sdist | no |\n| 0.1.1 | 2026-08-09T03:11:23.100270Z | sdist | no |\n\n---\n\n## Description\n\n# actdbg\n\nci\nPyPI\nPython\nLicense: MIT\n\n**Run your GitHub Actions workflow locally — with a debugger.**\n\n`act` runs workflows locally; `actdbg` lets you *debug* them. Pause between\nsteps, drop into a shell at the exact failure point, and re-run one step\nwithout re-running the whole job.\n\n```\n$ actdbg run .github/workflows/ci.yml -j test\n── step 4/6: Test\n  │ testing version 1.2.3\n  │ FAIL: fix.marker missing\n  ✗ failed (exit 1)\n\n[actdbg] step 4 (Test) failed with exit 1\n  try: `shell` to poke around, `retry` after fixing, `rerun` for a clean replay\n(actdbg) shell          # bash ins",
+        "published": null
+      },
+      {
+        "title": "kiwi-07/ciwalk",
+        "url": "https://github.com/kiwi-07/ciwalk",
+        "snippet": "# kiwi-07/ciwalk\n\nRun GitHub Actions locally in Docker with pause / inspect / retry debugging\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 0\n- License: MIT License\n- Default branch: main\n- Created: 2026-07-15T08:01:30Z\n\n## Languages\n\n- Python\n- Shell\n\n## Top Contributors\n\n- kiwi-07 (13 contributions)\n\n---\n\n## README\n\n# ciwalk\n\nCI\nLicense: MIT\n\nRun your CI pipeline locally, **pause at any step**, drop into a live shell to inspect or fix state, then **retry / continue** — no more commit-push-pray.\n\nciwalk demo: pause, fix, retry\n\n```bash\nuv tool install ciwalk   # or: pipx install ciwalk\nciwalk run examples/broken-ci.yml --pause-on-fail\n```\n\n## Why\n\nCI feedback is still mostly blind: edit YAML → commit → push → wait → read logs → guess. Tools like `act` run Actions locally but are still all-or-nothing. `ciwalk` keeps the container alive, opens a shell at the failure point, and lets you resume.\n\n## Install\n\n**Requires:** Python 3.11+ and Docker (daemon running).\n\n### From PyPI (recommended, after release)\n\n```bash\nuv tool install ciwalk\n# or\npipx install ciwalk\n# or\npip install ciwalk\n```\n\n### From GitHub (no wait for PyPI)\n\n```bash\nuv tool install git+https://github.com/kiwi-07/ciwalk.git\n# or\npipx install git+https://github.com/kiwi-07/ciwalk.git\n```\n\n### From a clone (dev)\n\n```bash\ngit clone https://github.com/kiwi-07/ciwalk.git && cd ciwalk\npip install -e \".[dev]\"\n```\n\n### Standalone binary\n\nGitHub Releases (starting with `v0.1.0`) attach a platform binary you can dow",
+        "published": null
+      },
+      {
+        "title": "README.md",
+        "url": "https://github.com/mrvlyouknowwho/walkflow/blob/main/README.md",
+        "snippet": "# README.md\n\n- Branch: main\n- Repository: mrvlyouknowwho/walkflow\n\n---\n\n# walkflow\n\n**Step through your GitHub Actions workflow locally — before you push.**\n\nYou know the loop: edit a `.yml`, commit, push, wait for the runner, watch it fail on step 6, tweak, push again. `walkflow` breaks that loop. It runs your workflow's steps **on your machine, one at a time**, and pauses between them so you can look around, fix things, and continue — no commit, no push, no waiting.\n\n```\n┌─ step 4/7: run migrations\n│    $ ./scripts/migrate.sh\n│  [enter] run · [s]hell · [k] skip · [q] quit >\n```\n\nHit `s` and you're dropped into a shell **in the workspace, with every environment variable the previous steps exported** — the exact state step 4 would see. Poke around. `exit`. Run the step. If it fails:\n\n```\n│  step failed. [r]etry · [s]hell · [c]ontinue · [q]uit >\n```\n\nRetry lets you edit the command in `$EDITOR` and run it again immediately. The inner loop that used to be \"push and pray\" is now seconds long.\n\n## A session\n\n```console\n$ walkflow\nwalkflow — .github/workflows/ci.yml · job 'build'\n\n▶ job build — 6 step(s)\n\n┌─ step 1/6: checkout\n│  uses: actions/checkout@v4 — not executable in host mode, skipping.\n\n┌─ step 2/6: install deps\n│    $ npm ci\n│  [enter] run · [s]hell · [k] skip · [q] quit >           # ⏎\n│  running in /home/me/app\n└─ ok\n\n┌─ step 3/6: run tests\n│    $ npm test\n│  [enter] run · [s]hell · [k] skip · [q] quit >           # ⏎\n│  running in /home/me/app\nFAIL src/auth.test.ts  ",
+        "published": null
+      },
+      {
+        "title": "redwoodjs/local-ci",
+        "url": "https://github.com/redwoodjs/local-ci",
+        "snippet": "# redwoodjs/local-ci\n\nRun GitHub Actions locally — pause on failure, retry in place, and keep caches on your machine.\n\n- Stars: 726\n- Forks: 17\n- Watchers: 726\n- Open issues: 4\n- License: Other\n- Homepage: https://local-ci.dev\n- Default branch: main\n- Created: 2026-02-09T20:24:25Z\n\n## Languages\n\n- CSS\n- JavaScript\n- Rust\n- Shell\n- TypeScript\n\n## Topics\n\n- act-alternative\n- ai-agent\n- ci-cd\n- developer-experience\n- devtools\n- github-actions\n- local-runner\n\n## Top Contributors\n\n- peterp (443 contributions)\n- justinvdm (45 contributions)\n- github-actions[bot] (37 contributions)\n- simoncrypta (10 contributions)\n- dependabot[bot] (5 contributions)\n- jokull (1 contributions)\n- pi0neerpat (1 contributions)\n- wroever (1 contributions)\n\n---\n\n## README\n\n# Local CI\n\n**Run GitHub Actions on your machine. Caching in ~0 ms. Pause on failure. Fix and retry — before you commit, before you push.**\n\n \n \n \n\nLocal CI is a ground-up rewrite of the GitHub Actions orchestration layer that runs entirely on your own machine. It doesn't wrap or shim the runner: it **replaces the cloud API** that the official GitHub Actions Runner talks to, so the same runner binary that executes your jobs on GitHub.com executes them locally, bit-for-bit.\n\nActions like `actions/checkout`, `actions/setup-node`, and `actions/cache` work out of the box — no patches, no forks, no network calls to GitHub. Dependencies that took a couple of minutes to install on GitHub's runners install in a few seconds on the second run bec",
+        "published": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,650 @@
+{
+  "stage": "viability",
+  "idea_id": "B05",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T13:40:14.000Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "d9ba0ae4b771f387e21bfe98ad7f09ee0dbe0726af21346e93a6999baa76c642",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2101,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2101,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 317,
+        "output_tokens_details": {
+          "thinking_tokens": 72
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0084265,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFaBfhkPuAQmU9SjAef",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Er4DCpABCBIYAipA1GNNoL8Qdrv9Q9+fMitwYei9XOOFn6TxrGmTdBcTap4uN5I0o7V6ovoMK92l5JzQTp9YvS6YU5mgH6dPy7P6tjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAbzz2dUGEgz0+8qAOEy2JyOykbcaDF4OabwZabNZrd3G+iIwglpLP5Eb906QQyCWMtYeg3gPoTdk0duumdp3ItPcOjOp1uh8V85EVNfv50qN2EWcKtoBX4NfeoT7VVcuYj2OwemnL4wb+XmOloflgC6iPGBRDRNDXxt6lPyIR3Jdfdx23TjQ4xp8hBSqvXwiwNGJKRelEOk1oZRjkezyuteepeefXDb0CUmXREdTypWFscliYBJV2Cd4aYN34RpinhfMAu6wy4aAWU9ClnrhvJxUK971dWXGG/JL3XJrGsbR+3rqIa1CJX8/NljJv6aZE0N6ou1Ma7FoJYvPGBuNjm9BcUIAP7FhHjDCAUVc/MP4bsIJFz6tyXn/1B1Ia9ZMRemoQG/mhlw++dUpCruRoogYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01EoZ2Kzr4aNGwb7k5hf5xNy",
+            "name": "brave_search",
+            "input": {
+              "query": "Prerender.io pricing plans"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FzHHqYYW7PXZMJzkDiiv8S",
+            "name": "brave_search",
+            "input": {
+              "query": "JavaScript SEO prerendering pain point forum reddit"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016EjDHqZaMgkP3SmENDucYX",
+            "name": "exa_search",
+            "input": {
+              "query": "single page app not indexed by Google crawler complaint"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VmxMNRpdEj3ZJLqXWUVZ3M",
+            "name": "brave_search",
+            "input": {
+              "query": "Prerender.io alternative competitors pricing comparison"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2101,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2101,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 317,
+          "output_tokens_details": {
+            "thinking_tokens": 72
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "0757d2805a5aa4c241edc7473ed0bc586b1f72f2e59e803fdc6664b23422c427",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5845,
+        "cache_read_input_tokens": 2101,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5845,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 425,
+        "output_tokens_details": {
+          "thinking_tokens": 216
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0192867,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFat6Zp5JNdqadPwjci",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtoGCpABCBIYAipAu6m7/AS3qFm7qB8aWJcpiYDWHWBs0ODEz1aeSrTcUzfcWdf0F66gV3pHFY3wveIHQoOufgZMgyGVbxv78qCa7zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcfz2dUGEgyTjrrhvrLTxDSo+dcaDBBjMguBYye5ecKL8iIweOJCm+PyF9xZDCAo3jg6SqlkPQ9/Ca61ZM7rJEj3hz86w9yciIjQMroj/3ETi1QMKvYE3UHX6iK1TMnUn5BJly4WtZ4H/0eSttRARK0UVAYYZyA+qYqQLclJajRqEkMMxyIluH62ZXnkCp6MJQz01Y4K8siF8mEuFYUX7P8KENBVQIUqWHYLCtuKMWl+2Pm+2Gl+toLu9zTrSuspfc6NbqtjDRQl7NZf4ZfD6F+KTbkHibgviksaetIS45cahR0W7TIha1JV9skbYnTePiBRf0GQoCAT/irbXdHvZM83fr+/3q3e66hnOlMtnEko3lZzavMJcyvs0yI8MDSob8Ew7cT0Fs7iDMxJKWRVkkHSSYKmcMGNF/H4e74Aha24gAu1DUeW84jXiDvxQ4g9dsddrMJk3WpNatywot/ZM8BY30WGeMqZskPtT3yjbK+Ej31TatJ875vP/YCJKwOhoVioZhFbw77DUWR+F9p2c+bEiyESgRkn9BlzM3QalTViU1bD+TDr4Wqv9sWgilHgKg9m/wP+ghbEWDPzQiOfdSQDSf38kz6yHEu9kl6rHRdnqE9OWS6bPBc230ZweSgzRpPxQ3hzP7ceuJHYasrSMPhgOC8H9adthOETC30xdp/y+Yu+2F8ynkb2fA+oXdn9peTb79UfJHxQ+DFSXuoFA1YCZVTQvqzJeWe6GdCr0indjrGK+yWI8FjkUwYalEv91knv8g302R3Li1038gfhOoJQeedR70vDDy+Cxd6FdqYYoqQemcR3QvRA//NBNaGSQyhXBonBX61b2E0xh80YF33RVVUJMywGrlEpg8jTsJWu/KHOYJJIi/2ngo/zNeKWNkHDLs2OVACIj2IHOKIE1mi1ZTkcY1CTzS8+xoUpweEbRogUT2Uu/4fc/0vHGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016w3jTeDBV2YUzWBP7ywSCZ",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/SEO/comments/1p13chu/prerendering_service_that_generates_static_html/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01843iDKtkg5CFaCdJCQ6Cdq",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://prerender.io/pricing/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01TAiiBRwg8uga2eLFiiL11q",
+            "name": "brave_search",
+            "input": {
+              "query": "\"javascript seo\" google ads cpc keyword cost"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5845,
+          "cache_read_input_tokens": 2101,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 5845,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 425,
+          "output_tokens_details": {
+            "thinking_tokens": 216
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "1e4d0621bdaab289614b2eb646134b3026739da7c0a8b2229ca18c9a4ca8d334",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3839,
+        "cache_read_input_tokens": 7946,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3839,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 516,
+        "output_tokens_details": {
+          "thinking_tokens": 269
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0163507,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFbJi9f1KfW45AbDgkU",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpMICpABCBIYAipAM4MSGL7Ud6+J0L1OKcH21+OjYvYm5ljk+knhDHTEoBKHpq0fKg07NPXRrKzSZZnTIv/3CgUPjlArqpJZr8eOJTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAc7z2dUGEgwn04lMOibYwnmeOFYaDLGxpY4nIlALMEGGPiIw0RQ0pQCrCJIVSRE3Gqpii58wQ0p0O3NFcxva3g+pO4vy7bxDB2BAaR8Z3UtJwmH2Kq8GF2mO8yivRC/vZ9oUQQ4s7UWEPJU4S1fmetGjpFf8ce1beWymjVbwRqy3bYk5kfzP2JG48GqN0+ZOFBVi2MGFEceJg0TBgMxo7AXfnnOjdAu48ywju0dQ39kk1cG5eJ/qeNBfkbA5n984/VUTX0pdiCm9KkdrHi0y1HwSuYBYinGhK3Y1eBSUIafnoujBWXkANnzYd/eKDfq57PGd1lPi+Ymf/Yb7YXXPUDHlXLTmY5IfdQqM+YRoW7dUYVQXr2ET7YrYSdRdYJh4Oo+9tK8oc8thwRR6jR5N2uFRVtBore6sf0bv0WAnSWCZDVC9rwPrsODz1ABygr13s3b/MvBTu9YvKF0eaelP2tRzl9+MmpSomF/VB1rSlb2Lp52WgQbBBFfrTU2Hem9gJIiP3WGz0dDaAbdDSyLoAavn1BgtN6W6g9etCtaw0iq+rtSMwQbIgX2MQqQUIu+wGaPLulUZRdCZcsrUHhqm9Qoyx4zVXuhu4+kpVtYHbmnIPWAoMZ7plXhlZsTuPqYGATBVZj0FQ+T5jg/7KkqQ39mNj23TE4e88ZDo8PqlWjb30kGfX+qybo20m+kdzJ9fjrnUnOiGvNOFwHVynazMofzV92zREb+uI8elsyrJkEUZ84HrmdVNKNJ7tTpYjVUGCtNlQxbZF4v0JcZmht50jM+TmLvGLJo/Vebeo92Wd2nivr6muGwCCABs5Dpk14CGGkCygJIHrL5fn0h89SZKMp3MWf0dCuQbv49mU8Qienzm8EDPxTHCTd9aTukthGaPpYkDE7zkPpIZhUKMj+xnv14xHCeaXIWMafBzD/8FIBhwFwlIHZTqwQ9lz+X13rO0TfDzcKsNxxm4mX4hiPCcdCKLsorfNCraau74teHT73+6wghC+OxRSnE6YmfaqAbmsD8pKeQWa0GXXeW+ViofRKj9O5a7x37vtU+w26Kib9LMVMhMAZU3f7aYHdY7NzhYISjOoBMEZNyAkAunmGK/sbYqtPvzs4+te396O0/vUw9fvSeVw+iXNOVa2JfCu5nXQrxLIqBwSuHZtqAG7U3wd8plTGTzbuJAygZSSbzimtRS3I0+NyQYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01AFGrvp7G7ygp9SqsH9MaSg",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://old.reddit.com/r/SEO/comments/1p13chu/prerendering_service_that_generates_static_html/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PevMHSqi4gsJ2HM97yqC9H",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/TechSEO/comments/yjzi5l/seo_for_a_javascriptheavy_site/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01F2NKrcm5W7W2uoZHbQNnYT",
+            "name": "brave_search",
+            "input": {
+              "query": "content marketing SaaS customer acquisition cost blog SEO tool"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3839,
+          "cache_read_input_tokens": 7946,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3839,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 516,
+          "output_tokens_details": {
+            "thinking_tokens": 269
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "8838d1191be2a720ae399ce5fecf0b6a4d3938d14920b67cace55285c4aa1bb8",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1759,
+        "cache_read_input_tokens": 11785,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1759,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 447,
+        "output_tokens_details": {
+          "thinking_tokens": 371
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0112285,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFbvVTB44sU2h6pqmhd",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Et4KCpABCBIYAipAGWtuFyamw+3zS2yHmRAl+E+8qsY+P6nWGeVAwYBm8uV67QkLlZzh/QdET6DOu5cnWtJG+7hPiG2IdX9Z9WH+HTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdjz2dUGEgwnLK8BKg6NKqgP3bEaDM/fBD58iyvLibJ30CIwUKOwXCM7yHl+C94oO9JKQvLu++Ynrc2M74VffVoUTfRgkKf4g00kuSTjFNiCeQXaKvoImqWxmtyaIT58MognOJwZnwCTo870iZbskaE90QMNWaqVcUPGWHi+7neDBZ10qyqwz6ROwpN0PorQ2jhEO62oEbtaPeUCEynxSqjcyFpYyZps0YXt+bKjt7S1ZAf3+lJl+IG1bAFVsrQWNJUEtnnDB8Xrh/dCBi0R9+bpiyLmsQ317bgTt8eBlWr5WnvmnP3nD33ZtYDQEePK+iEaDeD2FLjibwugH/h3kbOdGbX0Q/javjOqk9CcBEiXPrnAJwZP/f5/XOotCUcBHZQoB4Oc3Fiz+yXpfPn+Mnbk4yo2QhfT3h208f+USxwc8Pf6jDeTtmUqScgc6LZ2mkyuRg4A37HffXtrU3/sS6d0e/XZ/O6vqx1Q4OrzNCIMn4XJZs5tG0uh7llwiNbjrXlLgHUI1cfd14FiXE+SiXYtYniiYIgj0afobISSAiC5klh7PZh2f/xlE+Q2oa+WVhyGBMeflCMvI05zY//lF08N+Buh60hrXxarq11fEC7cBFy0dZ4EFta+KXiHJHbaMCi57NHfi39VN6U8dYy3W2kd+3CvaOcy3Zqn5Hpemw6xtH9mMiRdheIN5CE0a2e30oe3MzH/psEpLg7X6eeAyaYvKW4QN2CRmmllK+gt74Qw98twOihnlJzshGHFvhyxM8oJU1b6z4NpuDRr7ea2kFfkqXgviTGPU/NL8ByTnd1alRb/VHlvrTYuqImgAnp0dPkSrbePSAr109x0LZorg8q8O3pW3R1tV1VCyxsef97a6xdZmRHLdvAlqLNCummdTLEf2injK7VElus8CQnWXU5L8G7vxi0q/odSMzr/ORpBBDPLw3DjnV8ETTt7jXwt0HSAhRJaJbcn0W1TlzNu/WSRSzgmqnVj7xzeUzSlJ+UancJav5sjVrZ/EqW/2vk3x8HOqw7LC9c3T1beibIEVyIidtp4xP5i6RIPABS1lBSi4ivtEGddswqUCQC+5kAdt4zv4YMTQLaG/peFPjMvPXvu2fhtFCtiU8VxlZwHBDoQvhPytlDPa6IcjKOPytGTJce0qqCRXxPQVwD2/qZKMdg3kSGBu/+k7PuGPqRKKD7PMEQJgpGsWxBOp2lafx5RJvk/LcgOq6m2nE3LYAdabBjv3GVeUw8RJM+XqAEPyxZW9tTfatNpKPt00FWFPRx8bn7qzsu6j5uEYkY/9jguveK9K++2P+MXXYS+sdaTfYEBiD3Sh4KuSa3TXK9nO/3i47tNFEiCis3u1VZJq/vkVoFEVLT6RbyYNNIgReyQ0lEE3B7n+e6Og37GHf0nCt0IJGFlgKmWgg47sNN7qGireZ7c7BviYNkjZepULh3F6tAWvzoP3yizPmn1KRx8hqRm/Ff1X/MZYVxQQmYpOSSE0e73p7ZrEEwWEJvjMVsOvdYyuXgt0lC5ny92IDIrVZIZNs7F9ViEJoIr29yfeAIKpZJiEk6fbDVb+W/pFdd4jYpdCOr6p+0U7A3XmrglC0Z286C2YGZMDEUHZj9699SBnejoggt8ghOguG8zLs0wUqzUGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BkMLQGHT38sTNNQQTexuHq",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.olivermunro.com/writersblog/saas-marketing-statistics"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1759,
+          "cache_read_input_tokens": 11785,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1759,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "thinking_tokens": 371
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "a81c589872c1f6ae74afc21f31cddeb5506938cdbbb1a68c3cebe580c021dc81",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3695,
+        "cache_read_input_tokens": 13544,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3695,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 104,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0129903,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFcTDQQr8ZX7KbzS2aC",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Good, this confirms the CAC figure. Now I have enough for all required fields. Let me compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01TfxavfonwnE6g1fJ6FQ1to",
+            "name": "brave_search",
+            "input": {
+              "query": "\"cloaking\" prerendering Google guidelines risk SEO"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3695,
+          "cache_read_input_tokens": 13544,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3695,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 104,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "f956d2c81e5650136e6b242f67194ec692a39ada288c1e350f15c646c3fdede3",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 924,
+        "cache_read_input_tokens": 17239,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 924,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 88,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0066418,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFcgJhUtKKtYVAqgHN3",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I now have sufficient evidence to compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JgBT7Wv8jUpuckx1EgtXgN",
+            "name": "brave_search",
+            "input": {
+              "query": "Google dynamic rendering deprecated recommendation SSR 2023"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 924,
+          "cache_read_input_tokens": 17239,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 924,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 88,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "3f8f02dc5017d03518d609ff3838853f58ea304cabfc7d2708f8ea33114d6afc",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 775,
+        "cache_read_input_tokens": 18163,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 775,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 105,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0066241,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFctJ1wQF4VYRCp2UE5",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "This is a critical finding for the case against. Now compiling the final brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_017AREbkJ4RsTYnyLiAUptSe",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 775,
+          "cache_read_input_tokens": 18163,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 775,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 105,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 7,
+      "request_digest": "ad3c01049c23e12de82501799f36748f14a2970dbe5cfc2f3184baff4fd5dbfe",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1070,
+        "cache_read_input_tokens": 18938,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1070,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 95,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.007416600000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFd6UWJyKSSa3soY2dP",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I have all the evidence needed now. Compiling the final JSON brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SQyxXZY68jiSvV358XDjwJ",
+            "name": "brave_search",
+            "input": {
+              "query": "encited.com prerendering pricing OR crawled.dev pricing plans"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1070,
+          "cache_read_input_tokens": 18938,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1070,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 95,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 8,
+      "request_digest": "c6d8f9d0b9bb3d20ea724a2c1995cd99e2c35041cab548ccca82b566596e8846",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1016,
+        "cache_read_input_tokens": 20008,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1016,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 4545,
+        "output_tokens_details": {
+          "thinking_tokens": 16
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.051995599999999996,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFdJ41w6hCjoNQumiLq",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpcCCpABCBIYAipA3Bz8EBEGY3NlANdPFMgqICj46yPQJu8mMetwnQGa0FEMziuHWHfrnqqb+YcF3Aj7Rzmwoiv5JGN8+HXKYZ985jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAebz2dUGEgxMgv8rNbWCR2lfEywaDPavCynnTo9bZA3ViCIw19R8P9YN22rqWFUASdXTjQH+1/Z9l5xXIbdhGKERaN+jaoEM9Ml4BPe0i3CnwbyvKjQhiQuNYDKEFraY7lypfzUOVhGNemZl+AeVigsMqrqB4UDDHdmbdfHUtK6GDXOuH4iWq2nEGAE="
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"B05\",\n  \"payer\": {\n    \"who\": \"Marketing/SEO or engineering leads at companies running JavaScript SPAs (React/Angular/Vue) who need their pages indexed by Google and increasingly by AI crawlers (ChatGPT, etc.)\",\n    \"price_hypothesis\": \"$29–49/mo entry tier for low-volume sites (e.g., ~25,000 renders/mo), scaling to $150–350/mo for mid-size sites, anchored to Prerender.io's published Starter plan at $49/mo for 25,000 renders and Growth at $149/mo for 100,000 renders\",\n    \"comparable_url\": \"https://prerender.io/pricing/\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"Prerender.io\",\n      \"url\": \"https://prerender.io/\",\n      \"pricing\": \"Starter $49/mo (25,000 renders, 30-day free trial), Growth $149/mo (100,000 renders), Pro $349/mo (500,000 renders), Enterprise Plus custom\",\n      \"pricing_url\": \"https://prerender.io/pricing/\"\n    },\n    {\n      \"name\": \"SEO4Ajax\",\n      \"url\": \"https://encited.com/blog/prerender-io-alternatives\",\n      \"pricing\": \"Free developer plan, then $29, $99, $199/month annual-commit plans\",\n      \"pricing_url\": \"https://encited.com/blog/prerender-io-alternatives\"\n    },\n    {\n      \"name\": \"Browserless\",\n      \"url\": \"https://encited.com/blog/prerender-io-alternatives\",\n      \"pricing\": \"Unit-based: free 1k units, then $25, $140, $350/month tiers, plus custom enterprise\",\n      \"pricing_url\": \"https://encited.com/blog/prerender-io-alternatives\"\n    },\n    {\n      \"name\": \"DataJelly\",\n      \"url\": \"https://datajelly.com/guides/prerender-alternatives\",\n      \"pricing\": \"$25-100/mo, DNS-only setup\",\n      \"pricing_url\": \"https://datajelly.com/guides/prerender-alternatives\"\n    },\n    {\n      \"name\": \"Prerender Buddy\",\n      \"url\": \"https://aitoolsbakery.com/blog/prerender-io-alternatives/\",\n      \"pricing\": \"Free plan (1 site, 1,000 renders/mo), then $5/mo launch pricing rising to $15/mo regular\",\n      \"pricing_url\": \"https://aitoolsbakery.com/blog/prerender-io-alternatives/\"\n    },\n    {\n      \"name\": \"Encited.com (formerly LovableHTML)\",\n      \"url\": \"https://encited.com/prerender-spa\",\n      \"pricing\": \"14-day free trial, exact tier pricing not published on fetched page\",\n      \"pricing_url\": \"https://encited.com/prerender-spa\"\n    },\n    {\n      \"name\": \"Bunny.net HTML Prerender\",\n      \"url\": \"https://docs.bunny.net/optimizer/html-prerender\",\n      \"pricing\": \"NOT FOUND - pricing not listed on docs page in search results\",\n      \"pricing_url\": \"https://docs.bunny.net/optimizer/html-prerender\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"SEO / content marketing (blog posts, comparison pages like 'Tool A vs Tool B', targeting 'javascript seo' and 'prerendering' keywords)\",\n      \"cost_estimate\": \"Organic search (SEO) channel CAC benchmark: $480–$942 per B2B SaaS customer, dropping to ~$290 long-term; SEO delivers 702% ROI with 7-month break-even for B2B SaaS\",\n      \"source_url\": \"https://www.olivermunro.com/writersblog/saas-marketing-statistics\"\n    },\n    {\n      \"channel\": \"Reddit / developer community engagement (r/SEO, r/TechSEO, r/reactjs, r/angular threads where users actively ask for prerendering solutions)\",\n      \"cost_estimate\": \"[unsourced] no published cost estimate found for organic community engagement as a channel; time cost only, not paid\",\n      \"source_url\": \"https://www.reddit.com/r/SEO/comments/1p13chu/prerendering_service_that_generates_static_html/\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"The semantic HTML is created by JavaScript/React, so Google's crawler receives an empty HTML shell\",\n      \"url\": \"https://www.reddit.com/r/SEO/comments/1p13chu/prerendering_service_that_generates_static_html/\"\n    },\n    {\n      \"quote\": \"I suspect there's some delay in JavaScript loading and sometimes the crawler doesn't get the JavaScript content\",\n      \"url\": \"https://www.reddit.com/r/SEO/comments/185g19h/will_prerendering_an_spa_improve_my_seo/\"\n    },\n    {\n      \"quote\": \"Before Prerender.io, our AngularJS single-page app faced indexing issues\",\n      \"url\": \"https://prerender.io/pricing/\"\n    }\n  ],\n  \"case_for\": \"A solo founder using AI coding agents can plausibly ship a headless-Chrome rendering + caching pipeline (the core tech is well-understood: Puppeteer/Playwright render-and-cache, serve to bot user-agents) in six weeks, since multiple bootstrapped and small-team competitors (SEO4Ajax, Prerender Buddy, DataJelly, Encited) already prove the model works at small scale with thin teams. Demand is real and recurring: Reddit threads from 2022–2025 show developers repeatedly hitting the same JS-SEO indexing problem and asking for exactly this kind of tool, and Google's own documentation confirms Googlebot may not render or index empty JS shells (https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering). Pricing is proven ($29-349/mo tiers), usage-based billing aligns cost to value, and the SEO/content-marketing acquisition channel that fits this technical-buyer audience has a well-documented 702% ROI in B2B SaaS (https://www.olivermunro.com/writersblog/saas-marketing-statistics), meaning a single founder writing 'how to fix JS SEO' content could plausibly generate qualified leads without paid spend.\",\n  \"case_against\": \"The market is already crowded with at least six direct competitors spanning free-to-cheap (Prerender Buddy $5/mo, DataJelly $25-100/mo, Bunny.net as a CDN add-on) up through the incumbent Prerender.io (est. since 2014, $49-349/mo, 72+ reviews on G2), meaning a new entrant competes on price in a race-to-the-bottom category with low differentiation and low switching costs (it's a DNS/reverse-proxy config change to switch providers). More fundamentally, Google itself downgraded dynamic rendering/prerendering from a 'recommended solution' to a 'workaround, not a long-term solution' in 2022, explicitly telling developers to use server-side rendering, static site generation, or hydration instead (https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering, https://www.searchenginejournal.com/google-no-rush-to-switch-away-from-dynamic-rendering/461763/). Modern JS frameworks (Next.js, Nuxt, SvelteKit, Remix) now ship SSR/SSG by default, shrinking the addressable pool of SPAs that actually need a bolted-on prerendering service over time. There's also a standing cloaking-policy risk that customers must manage carefully (serving different HTML to bots vs. users is only safe if content is 'similar enough' per Google's guidelines), which is a support/liability burden for a one-person shop.\",\n  \"open_questions\": [\n    \"How large is the actual remaining pool of JS SPA sites that have NOT already migrated to Next.js/Nuxt/SSR-by-default frameworks, and is that pool growing or shrinking?\",\n    \"What is the real churn rate for prerendering services once a customer migrates their frontend framework (a plausible reason for churn distinct from dissatisfaction)?\",\n    \"Can a single AI-agent-run operator sustain the infrastructure/headless-browser cost and uptime SLA (Prerender.io offers 2-48h SLAs) that enterprise buyers expect, without a support team?\",\n    \"Is the real growth driver in this category now 'AI crawler visibility' (ChatGPT, Perplexity, etc. per Prerender.io's own marketing) rather than classic Google SEO — and if so, does the idea as scoped (search engine crawlers only) miss the more urgent buyer need?\",\n    \"What fraction of demand-evidence complaints (Reddit threads) are from users who tried a paid prerendering tool and were dissatisfied vs. simply looking for a first solution — i.e., what's the real conversion rate from 'has this pain' to 'will pay for a new vendor'?\"\n  ],\n  \"regulatory_setup\": null,\n  \"unsourced_claims\": [\n    \"Organic community engagement (Reddit, forums) as a paid acquisition channel has no published cost-per-lead estimate\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"# Evidence Brief: B05 — Prerendering Service for JS-Heavy SPAs\\n\\n## Idea\\nA prerendering service that serves static HTML snapshots of JavaScript-heavy single-page apps to search engine crawlers, so SPA content gets indexed for SEO.\\n\\n## Payer\\nMarketing/SEO leads and engineers at companies running JS SPAs (React, Angular, Vue) who are losing organic search visibility because crawlers see empty HTML shells. Price hypothesis: $29–49/mo entry tier, scaling to $150–350/mo, anchored to Prerender.io's published pricing (https://prerender.io/pricing/): Starter $49/mo/25k renders, Growth $149/mo/100k renders, Pro $349/mo/500k renders.\\n\\n## Competitors\\nThis is a crowded, mature category. At least seven named direct competitors were found, spanning $5/mo (Prerender Buddy) to $349+/mo (Prerender.io Pro) to custom enterprise pricing (Bunny.net, Prerender.io Enterprise Plus). Prerender.io has operated since 2014 with 72+ reviews on G2. See competitors list for full pricing.\\n\\n## Acquisition Channel\\nSEO/content marketing is the most plausible channel for a technical B2B audience — B2B SaaS SEO delivers CAC of $480–942/customer (dropping to ~$290 long-term) with 702% ROI and 7-month payback (https://www.olivermunro.com/writersblog/saas-marketing-statistics). Organic engagement in developer communities (Reddit r/SEO, r/TechSEO, r/reactjs, r/angular) shows recurring, unprompted demand for this exact solution, though no cost estimate exists for that channel beyond founder time [unsourced].\\n\\n## Demand Evidence\\nMultiple independent 2022–2025 Reddit threads show developers repeatedly hitting JS-SEO indexing problems and explicitly asking for or discussing prerendering as the fix:\\n- \\\"The semantic HTML is created by JavaScript/React, so Google's crawler receives an empty HTML shell\\\" (r/SEO, 2025)\\n- \\\"I suspect there's some delay in JavaScript loading and sometimes the crawler doesn't get the JavaScript content\\\" (r/SEO, 2023)\\n- A named Prerender.io customer, Christoph Hein (Head of SEO, Popken Fashion Group), stated: \\\"Before Prerender.io, our AngularJS single-page app faced indexing issues\\\" (vendor testimonial, https://prerender.io/pricing/)\\n\\n## Case For\\nThe core tech (headless-browser render + cache + bot-detection routing) is well-understood and buildable solo with AI agents in six weeks; several thin competitors already run this model profitably at small scale. Demand is persistent and recurring across multiple years of forum posts. Pricing and channel economics (SEO CAC ~$500-900) are both externally validated.\\n\\n## Case Against\\nThe category is saturated with 6+ direct competitors at every price point, offering low differentiation and low switching costs. More importantly, Google's own guidance downgraded dynamic rendering/prerendering from 'recommended' to a 'workaround, not a long-term solution' in 2022, pointing developers instead toward SSR/SSG frameworks that ship this natively (Next.js, Nuxt, SvelteKit) — shrinking the addressable market over time (https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering). Cloaking-policy risk adds an ongoing support burden unusual for a one-person operation.\\n\\n## Open Questions\\nSee open_questions field — chiefly: is the addressable pool of JS SPAs needing this shrinking as SSR frameworks become default, and is 'AI crawler visibility' now the more urgent unmet need versus classic Google SEO?\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1016,
+          "cache_read_input_tokens": 20008,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1016,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4545,
+          "output_tokens_details": {
+            "thinking_tokens": 16
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

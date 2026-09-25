@@ -1,0 +1,152 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "B01",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:37:10.733Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "a942040b98aa0549a0451b05e4909379c95bd28954a46248ca0f08ff54d3cf89",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2130,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2130,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 252,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.008055,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDrsejgXvkBuHRQAkVf",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_015uWWfvYpsZ2YdWkCU826Ah",
+            "name": "exa_search",
+            "input": {
+              "query": "post-purchase survey tool for e-commerce Shopify why customers buy"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01XPfDTTzfqYT8jzsB1J9pas",
+            "name": "exa_search",
+            "input": {
+              "query": "exit-intent survey abandoned cart reasons ecommerce app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RghjXYYyZX7EM6aaT5hMCp",
+            "name": "brave_search",
+            "input": {
+              "query": "post purchase survey Shopify app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WuwgqHAQycwPWuL5eQw3XG",
+            "name": "brave_search",
+            "input": {
+              "query": "exit intent survey tool ecommerce pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2130,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2130,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 252,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "413b32145652d461f78d5ca9295fdd8ae5f1f384678c8dd40f2dbe58d67ff360",
+      "usage": {
+        "input_tokens": 8578,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2130,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1379,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.031372,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDsMUJhr7sjhmEouL2i",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"idea_id\": \"B01\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"Survey/feedback SaaS does not require money transmission, professional licensure, or acting as liability-bearing professional of record. No regulated activity involved.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"pass\", \"evidence\": \"Tool can run as a Shopify App Store app using standard sanctioned Shopify APIs (checkout extensions, thank-you page blocks, Flow integrations) as used by Zigpoll, Fairing, Compra, Grapevine, etc. Also can operate as embeddable JS widget independent of any single platform. Not solely dependent on one revocable non-permitted integration.\", \"source_url\": \"https://apps.shopify.com/fairing\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"Pure software/survey product; no physical inventory to buy, store, or ship.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"No capital-intensive infrastructure; comparable competitors (Zigpoll, Fairing, Compra) are small SaaS tools buildable by small teams.\", \"source_url\": \"https://www.zigpoll.com/\" }\n  ],\n  \"flags\": [\n    { \"id\": \"T4\", \"evidence\": \"Selling to e-commerce brands may involve some outbound/demo sales for larger merchants, though self-serve Shopify App Store install is plausible for SMBs.\", \"obligations\": [] },\n    { \"id\": \"T6\", \"evidence\": \"Numerous direct competitors (Zigpoll, Fairing, Compra, Grapevine, Analyzify) show fast path to launch and paying customers via Shopify App Store within 90 days is plausible.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"Zigpoll\", \"url\": \"https://www.zigpoll.com/post-purchase-surveys\", \"relationship\": \"direct\", \"pricing\": \"Freemium/paid tiers, no credit card required to start\", \"evidence\": \"Post-purchase and exit-intent surveys for Shopify, trusted by 20,000+ stores.\" },\n    { \"name\": \"Fairing (formerly Enquire)\", \"url\": \"https://apps.shopify.com/fairing\", \"relationship\": \"direct\", \"pricing\": \"Free plan available; paid tiers\", \"evidence\": \"Post-purchase surveys, AI insights, NPS, Shopify Plus certified.\" },\n    { \"name\": \"Compra Surveys\", \"url\": \"https://apps.shopify.com/compra-post-purchase-surveys\", \"relationship\": \"direct\", \"pricing\": \"Free plan available\", \"evidence\": \"Post-purchase, pre-purchase, on-site & link surveys for attribution and drop-off insights.\" },\n    { \"name\": \"Analyzify Purchase Surveys\", \"url\": \"https://apps.shopify.com/analyzify-surveys\", \"relationship\": \"direct\", \"pricing\": \"From $45/month\", \"evidence\": \"Post-purchase attribution and buying decision surveys.\" },\n    { \"name\": \"Simplify Exit Intent Survey\", \"url\": \"https://apps.shopify.com/exit-poll\", \"relationship\": \"direct\", \"pricing\": \"From $9.99/month\", \"evidence\": \"Exit intent popup survey capturing reasons for cart/site abandonment.\" },\n    { \"name\": \"Grapevine\", \"url\": \"https://apps.shopify.com/grapevine\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Shopify-native post purchase, NPS, CSAT, attribution surveys with unlimited responses.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"post-purchase survey tool for e-commerce Shopify why customers buy\",\n      \"exit-intent survey abandoned cart reasons ecommerce app\"\n    ],\n    \"brave\": [\n      \"post purchase survey Shopify app\",\n      \"exit intent survey tool ecommerce pricing\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8578,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2130,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1379,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

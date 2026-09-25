@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "run GitHub Actions locally debugger tool",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:36:34.790Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "run GitHub Actions locally debugger tool",
+    "results": [
+      {
+        "title": "nektos/act: Run your GitHub Actions locally",
+        "url": "https://github.com/nektos/act",
+        "snippet": "# nektos/act\n\nRun your GitHub Actions locally 🚀\n\n- Stars: 71785\n- Forks: 2023\n- Watchers: 71785\n- Open issues: 377\n- License: MIT License\n- Homepage: https://nektosact.com\n- Default branch: master\n- Created: 2019-01-02T19:53:43Z\n\n## Languages\n\n- Go\n- JavaScript\n- Makefile\n- Shell\n\n## Topics\n\n- ci\n- devops\n- github-actions\n- golang\n\n## Top Contributors\n\n- dependabot[bot] (350 contributions)\n- cplee (235 contributions)\n- ChristopherHX (146 contributions)\n- github-actions[bot] (51 contributions)\n- KnisterPeter (44 contributions)\n- jsoref (25 contributions)\n- wolfogre (18 contributions)\n- lufia (8 contributions)\n- mheap (6 contributions)\n- JustinGrote (6 contributions)\n\n---\n\n## README\n\nact-logo\n\n# Overview push Go Report Card awesome-runners\n\n> \"Think globally, `act` locally\"\n\nRun your GitHub Actions locally! Why would you want to do this? Two reasons:\n\n- **Fast Feedback** - Rather than having to commit/push every time you want to test out the changes you are making to your `.github/workflows/` files (or for any changes to embedded GitHub actions), you can use `act` to run the actions locally. The environment variables and filesystem are all configured to match what GitHub provides.\n- **Local Task Runner** - I love make. However, I also hate repeating myself. With `act`, you can use the GitHub Actions defined in your `.github/workflows/` to replace your `Makefile`!\n\n> [!TIP]\n> **Now Manage and Run Act Directly From VS Code!** \n> Check out the GitHub Local Actions Visual Studio C",
+        "published": null
+      },
+      {
+        "title": "github/local-action: A simple utility for running and ...",
+        "url": "https://github.com/github/local-action",
+        "snippet": "# Repository: github/local-action\n\nA simple utility for running and debugging a GitHub Action locally\n\n- Stars: 420\n- Forks: 23\n- Watchers: 3\n- Open issues: 12\n- Primary language: TypeScript\n- Languages: TypeScript (96.8%), JavaScript (3.2%)\n- License: MIT License (MIT)\n- Default branch: main\n- Created: 2023-10-26T14:43:28Z\n- Last push: 2026-05-22T10:34:50Z\n- Contributors: 6 (top: ncalteen, dependabot[bot], pitoniak32, theoephraim, estruyf, RSS1102)\n- Releases: 51\n- Latest release: v7.0.1 (2026-02-18T19:48:32Z)\n\n---\n\n# Local Action Debugger\n\n![GitHub Super-Linter](https://github.com/github/local-action/actions/workflows/linter.yml/badge.svg)\n![Continuous Integration](https://github.com/github/local-action/actions/workflows/continuous-integration.yml/badge.svg)\n![Code Coverage](badges/coverage.svg)\n\nRun custom GitHub Actions locally and test them in Visual Studio Code!\n\nThis command-line tool emulates some **basic** functionality of the\n[GitHub Actions Toolkit](https://github.com/actions/toolkit) so that custom\nactions can be run directly on your workstation.\n\n> [!NOTE]\n> \n> This tool currently only supports JavaScript and TypeScript actions!\n\nThe following table tracks the versions of the GitHub Actions Toolkit that are\ncurrently implemented by this tool.\n\n| Package | Version |\n| --- | --- |\n| [`@actions/artifact`](https://www.npmjs.com/package/@actions/artifact) | `5.0.2` |\n| [`@actions/cache`](https://www.npmjs.com/package/@actions/cache) | `5.0.3` |\n| [`@actions/core`](htt",
+        "published": "2023-10-26T14:43:28.000Z"
+      },
+      {
+        "title": "mizchi/actrun",
+        "url": "https://github.com/mizchi/actrun/",
+        "snippet": "# mizchi/actrun\n\nGitHub Actions compatible local runner\n\n- Stars: 663\n- Forks: 14\n- Watchers: 663\n- Open issues: 2\n- License: Apache License 2.0\n- Default branch: main\n- Created: 2026-03-12T12:38:13Z\n\n## Languages\n\n- AMPL\n- Dockerfile\n- JavaScript\n- Just\n- MoonBit\n- Nix\n- Shell\n- Slim\n- TypeScript\n- WebAssembly\n\n## Topics\n\n- ci\n- github\n- github-actions\n- moonbit\n\n## Top Contributors\n\n- mizchi (302 contributions)\n- ryoppippi (10 contributions)\n- myuron (4 contributions)\n- ubugeeei (2 contributions)\n- hyperfinitism (1 contributions)\n- maehata-fairy (1 contributions)\n\n---\n\n## README\n\n# actrun\n\nA local GitHub Actions runner built with MoonBit. Run and debug GitHub Actions workflows locally with a `gh`-compatible CLI.\n\nactrun keeps its release contract as close as possible to existing GitHub Actions semantics. Workflow YAML and action metadata stay on a GitHub-compatible surface, while WASM support is treated as a self-hosted runner optimization. See docs/public-api.md for the contract boundary and ADR 0001 for the rationale.\n\n## Install\n\n```bash\n# npx (no install required)\nnpx @mizchi/actrun workflow run .github/workflows/ci.yml\n\n# curl (Linux / macOS)\ncurl -fsSL https://raw.githubusercontent.com/mizchi/actrun/main/install.sh | sh\n\n# Docker\ndocker run --rm -v \"$PWD\":/workspace -w /workspace ghcr.io/mizchi/actrun workflow run .github/workflows/ci.yml\n\n# npm global install\nnpm install -g @mizchi/actrun\n\n# Nix (run without installing)\nnix run github:mizchi/actrun -- workflow run .g",
+        "published": null
+      },
+      {
+        "title": "redwoodjs/agent-ci",
+        "url": "https://github.com/redwoodjs/agent-ci",
+        "snippet": "# redwoodjs/local-ci\n\nRun GitHub Actions locally — pause on failure, retry in place, and keep caches on your machine.\n\n- Stars: 781\n- Forks: 17\n- Watchers: 781\n- Open issues: 0\n- License: Other\n- Homepage: https://local-ci.dev\n- Default branch: main\n- Created: 2026-02-09T20:24:25Z\n\n## Languages\n\n- CSS\n- JavaScript\n- Rust\n- Shell\n- TypeScript\n\n## Topics\n\n- act-alternative\n- ai-agent\n- ci-cd\n- developer-experience\n- devtools\n- github-actions\n- local-runner\n\n## Top Contributors\n\n- peterp (444 contributions)\n- justinvdm (45 contributions)\n- github-actions[bot] (38 contributions)\n- simoncrypta (10 contributions)\n- dependabot[bot] (5 contributions)\n- jokull (1 contributions)\n- pi0neerpat (1 contributions)\n- wroever (1 contributions)\n\n---\n\n## README\n\n# Local CI\n\n**Run GitHub Actions on your machine. Caching in ~0 ms. Pause on failure. Fix and retry — before you commit, before you push.**\n\n \n \n \n\nLocal CI is a ground-up rewrite of the GitHub Actions orchestration layer that runs entirely on your own machine. It doesn't wrap or shim the runner: it **replaces the cloud API** that the official GitHub Actions Runner talks to, so the same runner binary that executes your jobs on GitHub.com executes them locally, bit-for-bit.\n\nActions like `actions/checkout`, `actions/setup-node`, and `actions/cache` work out of the box — no patches, no forks, no network calls to GitHub. Dependencies that took a couple of minutes to install on GitHub's runners install in a few seconds on the second run bec",
+        "published": null
+      },
+      {
+        "title": "Photobombastic/pipestep",
+        "url": "https://github.com/Photobombastic/pipestep",
+        "snippet": "# Photobombastic/pipestep\n\nInteractive CI pipeline debugger. Step through GitHub Actions workflows locally with Docker.\n\n- Stars: 20\n- Forks: 0\n- Watchers: 20\n- Open issues: 4\n- License: MIT License\n- Default branch: main\n- Created: 2026-02-27T21:30:56Z\n\n## Languages\n\n- Python\n\n## Topics\n\n- ci-cd\n- cli\n- debugging\n- developer-tools\n- devtools\n- docker\n- github-actions\n\n---\n\n## README\n\n# PipeStep\n\n**A debugger for your CI pipeline.**\n\nStep through GitHub Actions workflows locally with Docker. Pause before each step, inspect the environment, drop into a shell, modify variables, re-run failed steps — without pushing and waiting.\n\n \n \n \n\n## The Problem\n\nThe CI debugging loop:\n\n1. Commit a fix\n2. Push to GitHub\n3. Wait 2-5 minutes for the runner\n4. Watch it fail\n5. Read the logs, guess what went wrong\n6. Repeat\n\nA single debugging session eats 30-60 minutes. PipeStep lets you step through the pipeline locally, inspect the container at each stage, and fix issues before you push.\n\n## Install\n\n```bash\n# Prerequisites: Docker Desktop running, Python 3.11+\npip install pipestep\n# or from source:\npython3.11 -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt\n\n# Pre-pull the base image\ndocker pull ubuntu:22.04\n```\n\nRequires Python 3.11+ and Docker Desktop running.\n\n## Quick Start\n\n```bash\n# Point it at any GitHub Actions workflow in your project\npipestep run .github/workflows/ci.yml\n# or from source:\npython cli.py run sample_workflow.yml\n```\n\n## Controls\n\n| Key | Actio",
+        "published": null
+      }
+    ]
+  }
+}

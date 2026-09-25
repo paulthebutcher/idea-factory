@@ -13,7 +13,7 @@ import { MODELS, renderTemplate, type PromptSet } from "../config.js";
 import type { Db, AgentSafeRule } from "../store/db.js";
 import type { SearchClients } from "../search/index.js";
 import { normalizeQuery } from "../search/fixtures.js";
-import { BudgetExceededError, type ModelClient } from "../model/client.js";
+import { BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
 import type { TraceCollector, TraceEvent } from "../trace.js";
 
 export const KillGateOutput = z.object({
@@ -314,7 +314,7 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   } catch (e) {
     const message = e instanceof Error ? e.message : String(e);
     const result = fail(`stage call failed: ${message}`, null);
-    if (e instanceof BudgetExceededError) throw e;
+    if (e instanceof BudgetExceededError || e instanceof FatalApiError) throw e;
     return result;
   }
   if (finalText == null) return fail(`no final answer after ${maxIterations} model calls`, null);

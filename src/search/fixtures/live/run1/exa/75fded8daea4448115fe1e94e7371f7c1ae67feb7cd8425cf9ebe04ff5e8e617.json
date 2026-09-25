@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "multiplayer AI agent workspace watch redirect handoff live agent session",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:39:26.679Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "multiplayer AI agent workspace watch redirect handoff live agent session",
+    "results": [
+      {
+        "title": "Sawmonabo/ai-sidekicks",
+        "url": "https://github.com/Sawmonabo/ai-sidekicks",
+        "snippet": "# Sawmonabo/ai-sidekicks\n\nMultiplayer agentic coding: a Discord-like shared workspace where people and their AI agents (Claude Code, Codex) build software together — live shared timeline, steerable agents, E2E-encrypted channels, approval-gated cross-machine dispatch, git-worktree flow. Local-first: every agent runs on its owner's machine, on its owner's subscription.\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 2\n- License: Other\n- Default branch: main\n- Created: 2026-04-14T21:17:07Z\n\n## Languages\n\n- HTML\n- JavaScript\n- Python\n- Rust\n- Shell\n- TypeScript\n\n## Topics\n\n- ai-agents\n- approval-workflows\n- cedar-policy\n- claude\n- collaboration\n- desktop-runtime\n- e2e-encryption\n- electron\n- human-in-the-loop\n- multi-agent\n- pty\n- session-management\n- trpc\n- typescript\n- worktrees\n- xstate\n\n## Top Contributors\n\n- Sawmonabo (319 contributions)\n\n---\n\n## README\n\n# AI Sidekicks\n\n```text\n      o\n     .-.\n  .--┴-┴--.\n  | O   O |   >> A collaborative agent operating system for software work.\n  | ||||| |   >> Humans + agents, one session.\n  '--___--'\n```\n\nAI Sidekicks is a desktop runtime where humans and AI agents share live sessions, co-edit code through proper git flow, and collaborate in real time. Think of it as a shared workspace where you can invite teammates, attach multiple AI agents from different providers, and steer their work as it happens — all inside one unified session.\n\n \n \n \n\n---\n\n## Table of Contents\n\n- Why AI Sidekicks\n- Core Concept\n- Key Features\n- Architecture",
+        "published": null
+      },
+      {
+        "title": "AI Agent Coordination & Team Workspace | Waxell",
+        "url": "https://waxell.ai/products/connect",
+        "snippet": "AI Agent Coordination & Team Workspace | Waxell\n\n# Now make them work together.\n\nConnect links Claude, Cursor, OpenAI, and more — shared context, automatic handoffs, one workspace.\n\nWaxell Connect is the coordination layer for the AI tools your team already runs — Claude, Cursor, OpenAI, and more — so they share context, hand off work, and move as one. Your people work in the same space as the agents: what's done, what's in progress, and what needs a human call, all in one place. You stop being the integration layer.\n\n### (& more)\n\n# Now make them work together.\n\nConnect links Claude, Cursor, OpenAI, and more — shared context, automatic handoffs, one workspace.\n\nWaxell Connect is the coordination layer for the AI tools your team already runs — Claude, Cursor, OpenAI, and more — so they share context, hand off work, and move as one. Your people work in the same space as the agents: what's done, what's in progress, and what needs a human call, all in one place. You stop being the integration layer.\n\n### Works With:\n\n# Now make them work together.\n\nYou see every handoff — and nothing ships that you didn't sanction.\n\nYou see every handoff — and nothing ships that you didn't sanction.\n\nWaxell Connect is the coordination layer for the AI tools your team already runs — Claude, Cursor, OpenAI, and more — so they share context, hand off work, and move as one. Your people work in the same space as the agents: what's done, what's in progress, and what needs a human call, all in one plac",
+        "published": null
+      },
+      {
+        "title": "Live view & handoff | BetterWright docs",
+        "url": "https://betterwright.com/docs/live-view",
+        "snippet": "Live view, chat & human handoff | BetterWright docs\n\n# Live view, chat & human handoff\n\nWatch — coach — and when needed, drive — BetterWright's browser from an ordinary web page. This is BetterWright's self-hosted answer to cloud \"session viewer / human-in-the-loop\" products: the agent keeps its persistent, policy-guarded session, and a human can watch it live, message it, take the controls, or complete a step the agent cannot (MFA, a resistant CAPTCHA, a consequential click) — then hand control straight back.\n\nSix surfaces, one server:\n\n| Surface | What it does |\n| --- | --- |\n| `betterwright exec \" \" --live-view` | starts the viewer at step 0 and prints the URL, so you watch the whole run while the agent works |\n| interactive console `--live-view` or `/live` | `--live-view` starts a viewer before the first prompt; `/live` opens one anytime mid-session; `/live stop` closes it; `/new`, `/headed`, and `/headless` re-open the viewer when live is enabled |\n| the chat panel + action bar (chat / ask / handoff) | a collapsible side panel for chatting with the agent; `ask` and `handoff` elevate into an action bar under the toolbar — chips + a reply box for asks, Done / Cancel (and force-enabled browser control) for handoffs |\n| agent `live_view` tool | mid-task watch without pausing: the model can open the viewer whenever the user asks, relay the URL, and keep working (`handoff` still pauses for human hands) |\n| MCP `browser_handoff` | `action: \"start\"` anytime during an MCP session",
+        "published": null
+      },
+      {
+        "title": "MiloMMIN/dsh-agent-board",
+        "url": "https://github.com/MiloMMIN/dsh-agent-board",
+        "snippet": "# MiloMMIN/dsh-agent-board\n\n跨 Agent 工作台:dsh persistent plugin that watches Claude Code / Codex / Kimi Code / Pi / Hermes and continues their work with one click\n\n- Stars: 2\n- Forks: 0\n- Watchers: 2\n- Open issues: 0\n- License: MIT License\n- Default branch: master\n- Created: 2026-08-14T12:34:07Z\n\n## Languages\n\n- JavaScript\n\n## Topics\n\n- ai-agent\n- cordis\n- dsh\n- dsh-plugin\n\n## Top Contributors\n\n- MiloMMIN (8 contributions)\n\n---\n\n## README\n\n# dsh-agent-board\n\n跨 Agent 工作台 —— a persistent plugin for DeepSeek Harness (dsh) that watches every local coding agent (Claude Code, Codex, Kimi Code, Pi, Hermes) and lets you **continue their work with one click**.\n\nIt reads the session stores of the other agents **read-only**, shows what they are doing right now, and hands the work over to a fresh dsh session in the correct workspace — with a structured handoff brief (source agent, task summary, work status, created/last-modified time).\n\n> Community topic: github.com/topics/dsh-plugin\n\n## Features\n\n- **Live cross-agent board** — sidebar panel (⟠) + standalone page at `/agent-view`, auto-refreshing every N seconds\n - Claude Code, Codex, Kimi Code, Pi, Hermes sessions in one list\n - \"正在继续\" (active within the threshold) badge, age, title, working directory, created/last-modified time, per-agent totals\n- **Continue with one click** — click any session row:\n 1. resolves/creates the workspace for that session's root directory (existing workspaces are merged, never duplicated)\n 2. opens a **new se",
+        "published": null
+      },
+      {
+        "title": "Share a Coding Agent Session - Lody",
+        "url": "https://lody.ai/docs/session-handoff/",
+        "snippet": "Share a Coding Agent Session | Lody\n\n# Share a Coding Agent Session\n\nInvite a teammate into an existing Lody coding-agent session to continue the work — conversation, diffs, and worktree — instead of sending a read-only transcript.\n\nA coding agent session handoff in Lody means a teammate opens the same session you already started and continues it. They get the live conversation, the file diffs the agent produced, and the session worktree — not a screenshot, Markdown dump, or ChatGPT-style share link that only lets them read what happened.\n\nThat is the difference from most “share my Claude Code session” workflows: those usually publish a transcript. Lody invites someone into the existing session so they can keep chatting and steering the agent.\n\nWhat “continue” means\n\nWorkspace members who can open the session can keep the conversation going from the same context. Lody does not turn the session into a read-only replay. Sharing still follows machine and project visibility — see permissions below.\n\n## Why a transcript link is not a handoff Copy Anchor Link\n\nPeople already share agent work in several ways. Most of them stop at “look at this.” Handoff is “pick this up.”\n\n| Approach | What the recipient gets | Same live session? | Diffs and worktree |\n| --- | --- | --- | --- |\n| Screenshot | A picture of the chat | No | No |\n| Markdown / transcript export | Static text you can paste elsewhere | No — they start a new chat | No |\n| ChatGPT-style share link | A read-only snapshot of t",
+        "published": null
+      }
+    ]
+  }
+}

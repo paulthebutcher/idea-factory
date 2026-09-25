@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "email alias management tool automatically choose sender alias",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:36:18.198Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "email alias management tool automatically choose sender alias",
+    "results": [
+      {
+        "title": "mkoester/thunderbird_send_as",
+        "url": "https://github.com/mkoester/thunderbird_send_as",
+        "snippet": "# mkoester/thunderbird_send_as\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 3\n- License: GNU General Public License v3.0\n- Default branch: develop\n- Created: 2026-01-07T21:19:02Z\n\n## Languages\n\n- CSS\n- HTML\n- JavaScript\n- Shell\n\n## Top Contributors\n\n- mkoester (3 contributions)\n\n---\n\n## README\n\n# Send As Alias - Thunderbird Extension\n\nAutomatically manage email aliases with support for multiple alias methods:\n- **Plus-addressing**: `user+alias@domain.com` (Gmail, Posteo, etc.)\n- **Own domain**: `alias@yourdomain.com` (domains you own)\n- **Catchall**: `anything@yourdomain.com` (domains with catchall forwarding)\n\n> **Initial setup required:** after installation the extension is inactive until\n> you enable **Reply as Alias** for at least one account in the extension settings\n> and select its alias method — all features are opt-in per account. The\n> settings page opens automatically after installation; see\n> Configuration.\n\n## Features\n\n### Reply as Alias 📧 Per-Account (Opt-In)\n\nAutomatically sets your \"From\" address to match aliases when replying to or forwarding emails.\n\n**Examples:**\n\n*Plus-addressing:*\n- You receive an email sent to `user+shopping@posteo.de`\n- You click Reply → From is set to `user+shopping@posteo.de`\n\n*Own domain:*\n- You receive an email sent to `sales@yourdomain.com`\n- You click Reply → From is set to `sales@yourdomain.com`\n\n**Works with:** Reply, Reply All, and Forward\n\n**Configuration:** Enable per account in extension settings, then select your a",
+        "published": null
+      },
+      {
+        "title": "ChangeSender — Choose Your Outlook Sender Address | Servolutions",
+        "url": "https://servolutions.com/changesender",
+        "snippet": "ChangeSender — Choose Your Outlook Sender Address | Servolutions\n\n# ChangeSender™\n\nExchange Send-As for Outlook\n\nChoose which sender address your emails go out from — per message, in Outlook. Automatic reply address matching, signature switching, and keyboard shortcuts. Essential for anyone managing multiple email identities in Exchange.\n\n 30-day full-featured trial — no credit card Per-seat license, one-time fee Exchange 2000 – 2019, + Exchange SE \n\n### Per-Message Sender Selection\n\nA send-as dropdown appears directly in the Outlook mail form. Select any configured address before sending — no extra steps, no menus to hunt through.\n\n### Automatic Reply Address Matching\n\nWhen you reply to an email, ChangeSender automatically sets the sender address to match the address the original email was received on. No manual selection needed.\n\n### Email Signature Switching\n\nConfigure a different Outlook signature for each sender address. ChangeSender automatically switches the signature when you change the send-as address.\n\n### Per-Address Sent Items Folders\n\nOptionally save sent mail to different Outlook folders depending on which sender address was used. Keep your sent items organized by identity.\n\n### Keyboard Shortcuts\n\nAssign keyboard shortcuts (CTRL-1, CTRL-2, etc.) to your most-used sender addresses for rapid switching without lifting your hands from the keyboard.\n\n### Administrator Controls\n\nAdministrators can restrict which sender addresses each user may choose from, or lock spe",
+        "published": null
+      },
+      {
+        "title": "Send As Alias :: Add-ons for Thunderbird",
+        "url": "https://addons.thunderbird.net/EN-gb/thunderbird/addon/send-as-alias/",
+        "snippet": "Send As Alias :: Add-ons for Thunderbird\n\n# Send As Alias 1.0.8.1 \n\n#### by Mirko K.\n\nAutomatically set From address to match email aliases when replying, with optional alias suggestion and identity creation (after one time setup)\n\n- \n\n- Version 1.0.8.1 Info\n- Last Updated: July 7, 2026\n- Released under GNU General Public License, version 3.0\n\n## About this Add-on\n\nSend As Alias - Thunderbird Extension Automatically manage email aliases for plus-addressing (e.g., [email protected]). For details and examples see https://github.com/mkoester/thunderbird_send_as/blob/main/README.md\n\n### Version 1.0.8.1 Released July 7, 2026 35.5 KiB Works with Thunderbird 128.0 and later \n\n • Reply as Alias now also detects your alias from mail delivery headers (X-Original-To, Delivered-To, Envelope-To), so replies use the right alias even when it doesn't appear in To/CC — e.g. for BCC'd mail or mailing lists. Detected addresses must still match the account's configured alias method. Thanks to the feedback in issue #1! • Fixed recipient matching with multiple To/CC recipients: addresses are now parsed properly instead of matched against the raw header string. • Clearer settings: the three features are now named Reply as Alias, Alias Suggestion, and Identity Creation (existing settings are migrated automatically), column headers have explanatory tooltips, and an account's remaining options collapse while Reply as Alias is disabled for it. • Added a privacy policy and declared in the manifest that ",
+        "published": null
+      },
+      {
+        "title": "Maskwire - A toolbox for your existing email",
+        "url": "https://maskwire.com/",
+        "snippet": "Maskwire - A toolbox for your existing email\n\n# A toolbox for the email you already use. \n\n Maskwire is an IMAP/SMTP proxy between your mail app and your provider. Enable tools for alias replies, sender rewriting, text redaction, and more. \n\nOne tool free. All tools for $3/month.\n\n## Your mail app\n\nKeep the client you use\n\n maskwire Your toolbox \n\n Reply from the receiving alias Rewrite sender addresses Redact matching text Archive instead of delete \n\nExample tools. You choose what runs.\n\n## Your email provider\n\nYour mailbox stays here\n\nConnected over IMAP and SMTP. Tools run as mail passes through.\n\n## No bullshit, tell me what Maskwire does.\n\nYou point your mail app at Maskwire. Maskwire connects to your upstream email server and applies the tools you enable as messages and commands pass through. Your mailbox stays with your provider.\n\nYour upstream login details are encrypted with your public key. The private key is locked with your Maskwire password. When your mail app logs into an IMAP or SMTP session, that password unlocks the credentials so Maskwire can connect on your behalf. Stored credentials alone cannot unlock your mailbox.\n\nMaskwire can process email during that session. This protects stored credentials; it is not end-to-end encryption of email content.\n\n## Choose what your email does.\n\nEnable the utilities you need. Each one has a specific job.\n\n 01 Alias replies 02 Sender rewriting 03 Text redaction 04 Delete protection 05 Unsubscribe rewriting 06 Message age l",
+        "published": null
+      },
+      {
+        "title": "Maskwire | David Mohl",
+        "url": "https://david.coffee/projects/maskwire/",
+        "snippet": "Maskwire | David Mohl\n\n# Maskwire\n\nA transparent email proxy for power users\n\n🌐 Open on Web\n\nIn my blog Join the Discord\n\nMaskwire is a transparent email proxy that enhances existing email services with additional power-user features. It sits between your email client and provider, adding capabilities like seamless alias replies, customizable actions, smart sender selection, and inbox filtering, all without changing how you use email.\n\n## Key Features\n\n✓\n\nReply Seamlessly: Automatically reply from the correct alias (e.g., [email protected]) without manual switching.\n\n✓\n\nCustomize Actions: Make your email client behave consistently. For example, always archive emails instead of deleting them, regardless of the client’s default swipe action.\n\n✓\n\nSmart Sender Selection: Automatically use designated email addresses when composing new emails based on context.\n\n✓\n\nControl Your Inbox Size: Sync only recent emails (e.g., the last 30 days) to your client, keeping it fast and lean.\n\n✓\n\nWorks Everywhere: Use Maskwire with any standard email client and provider that supports IMAP/SMTP.\n\n✓\n\nSecure by Design: Your email provider credentials are encrypted using a key only you possess.",
+        "published": null
+      }
+    ]
+  }
+}

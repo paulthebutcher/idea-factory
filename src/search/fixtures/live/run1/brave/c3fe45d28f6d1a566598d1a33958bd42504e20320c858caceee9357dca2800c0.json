@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "SimpleLogin AnonAddy send from alias mapping recipient",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-25T00:36:19.165Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "SimpleLogin AnonAddy send from alias mapping recipient",
+    "results": [
+      {
+        "title": "SimpleLogin | Open source anonymous email service",
+        "url": "https://simplelogin.io/",
+        "snippet": "Email alias is similar to forward email address: all emails sent to an alias will be forwarded to your inbox. Thanks to SimpleLogin technology, you can also send emails from an alias. For your contact, the alias is therefore your email address.",
+        "published": "2024-11-19T00:00:00"
+      },
+      {
+        "title": "Reverse alias - SimpleLogin Docs",
+        "url": "https://simplelogin.io/docs/getting-started/reverse-alias/",
+        "snippet": "The reverse-alias allows you to reply to the forwarded email: when you reply to the email, you are actually replying to the reverse-alias. <strong>SimpleLogin will then send the email from your alias and your real mailbox address stays hidden</strong>.",
+        "published": null
+      },
+      {
+        "title": "Send emails from your alias - SimpleLogin Docs",
+        "url": "https://simplelogin.io/docs/getting-started/send-email/",
+        "snippet": "1) Click the &quot;Contacts&quot; button on the alias you want to send emails from",
+        "published": null
+      },
+      {
+        "title": "How to Set Up Email Aliases With SimpleLogin or addy.io",
+        "url": "https://privatemailguide.com/posts/how-to-set-up-email-aliases/",
+        "snippet": "When a forwarded message lands in your inbox, replying to it routes back through the service, which rewrites the sender so the recipient sees the original alias. To them, the conversation is entirely with netflix@yourdomain — your real address never appears in either direction. Without this, aliases only protect incoming mail; the moment you reply, your real address leaks. So set this up and use it for any alias you expect to correspond through. Provider-branded aliases (@simplelogin.io, @anonaddy.me) work fine, but a custom domain is more portable and less obviously a “throwaway.” With a custom domain you create aliases like [email protected] on demand.",
+        "published": "2026-05-16T00:00:00"
+      },
+      {
+        "title": "Email Aliasing: SimpleLogin vs addy.io | SumGuy's Ramblings",
+        "url": "https://sumguy.com/simplelogin-vs-anonaddy/",
+        "snippet": "Generate the DKIM keypair with the bundled anonaddy command and publish the public key as a TXT record. Skip that and everything you forward lands in spam. SimpleLogin is more moving parts, and its README is honest about that. Postfix runs on the host, not in a container, with postfix-pgsql so it can query the SimpleLogin database directly for relay domains and transport maps.",
+        "published": "2026-09-06T14:00:00"
+      }
+    ]
+  }
+}

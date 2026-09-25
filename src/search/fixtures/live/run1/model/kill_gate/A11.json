@@ -100,6 +100,63 @@
         },
         "diagnostics": null
       }
+    },
+    {
+      "index": 1,
+      "request_digest": "0201f025927050b8474fa81b6477a4cee7230196664cd2085f55941c0b0e6a22",
+      "usage": {
+        "input_tokens": 8930,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2120,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2035,
+        "output_tokens_details": {
+          "thinking_tokens": 487
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.038634,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDnFBeVrp7FTuxS5DXb",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A11\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"No licensing, professional liability, or custody of customer funds is required to trigger a swag shipment off a Stripe webhook.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"pass\", \"evidence\": \"Stripe publishes public webhook/API access for signup events as part of its standard developer terms; listening to a customer's own Stripe account events via webhooks is a sanctioned integration pattern used by many SaaS tools (e.g., SwagUp, PerkUp integrations).\", \"source_url\": \"https://www.swagup.com/integrations/personio\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"On-demand swag/print-on-demand fulfillment networks (Sendoso Swag on Demand, Printful, Merchloop, BrandMerch API) let a single operator ship branded merchandise with zero owned inventory or warehousing — the whole category runs on fully outsourced fulfillment.\", \"source_url\": \"https://www.sendoso.com/platform/features/swag-on-demand\" },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"No physical infrastructure or capital beyond integrating with existing on-demand fulfillment/print-on-demand vendors is required.\", \"source_url\": null }\n  ],\n  \"flags\": [\n    { \"id\": \"T6\", \"evidence\": \"Crowded competitive space (SwagUp, Sendoso, PerkUp, Reachdesk, Merchloop, BrandMerch, Stitchi, BirdieBox) already selling nearly identical Stripe/HRIS/CRM-triggered welcome-swag automation, which could make first-customer acquisition harder within 90 days despite technical feasibility.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"SwagUp\", \"url\": \"https://www.swagup.com/integrations/personio\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Automates 'new hire/customer swag' triggered by HR/CRM platform events, with zero-touch fulfillment via Zapier/webhooks, matching the described Stripe-triggered welcome swag concept.\" },\n    { \"name\": \"Sendoso (Swag on Demand / Postal)\", \"url\": \"https://www.sendoso.com/platform/features/swag-on-demand\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Offers on-demand swag with no minimum order, full outsourced fulfillment (procurement, storage, packing, shipping) triggered by automation signals.\" },\n    { \"name\": \"PerkUp\", \"url\": \"https://perkupapp.com/features/new-hire-kits\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Automates welcome/onboarding kit fulfillment worldwide via HRIS/CRM integrations, same swag-on-signup mechanic.\" },\n    { \"name\": \"Reachdesk\", \"url\": \"https://merchloop.com/blogs/news/8-best-swag-automation-tools-that-integrate-with-your-hris-2026\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"Provides global gifting/direct mail automation for customer and employee welcome kits, competing in the same automated gifting category.\" },\n    { \"name\": \"Merchloop\", \"url\": \"https://merchloop.com/blogs/news/10-best-on-demand-swag-platforms-for-companies-with-no-minimum-orders-2026\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"On-demand, zero-inventory swag platform with US-based production, usable as a backend fulfillment layer for a Stripe-triggered swag service.\" },\n    { \"name\": \"BrandMerch\", \"url\": \"https://brandmerch.com/developers\", \"relationship\": \"adjacent\", \"pricing\": \"API access on Stockroom/Business subscription plans\", \"evidence\": \"Offers a public gifting API to programmatically send branded merch triggered by any application event, directly enabling a Stripe-signup-triggered integration.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"automated swag sending service triggered by Stripe new signup\",\n      \"branded welcome swag box service for SaaS new customers API\"\n    ],\n    \"brave\": [\n      \"Stripe integration swag fulfillment welcome kit automated\",\n      \"swag on demand API fulfillment company Sendoso Postal PrintfulSwag\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8930,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2120,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2035,
+          "output_tokens_details": {
+            "thinking_tokens": 487
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
     }
   ]
 }

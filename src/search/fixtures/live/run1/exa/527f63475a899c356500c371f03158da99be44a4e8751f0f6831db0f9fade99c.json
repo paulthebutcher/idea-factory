@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "AI test selection CI which tests should block a change",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:36:30.370Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "AI test selection CI which tests should block a change",
+    "results": [
+      {
+        "title": "Predictive Test Selection Guide for CI Pipelines | BrowserStack",
+        "url": "https://www.browserstack.com/guide/predictive-test-selection",
+        "snippet": "Predictive Test Selection Guide for CI Pipelines | BrowserStack\n\n# What Is Predictive Test Selection and How Does It Work?\n\nLearn how predictive test selection scores tests for each code change and how teams evaluate recall, selection rate, false negatives, and CI feedback time.\n\n Written by Grandel Robert \n\n Reviewed by Ashwani Pathak \n\n Last updated: 29 August 2026 9 min read \n\n Table of Contents \n\n- What is Predictive Test Selection?\n- How Does Predictive Test Selection Work?\n- Predictive Test Selection vs Related Methods\n- Where Does Predictive Test Selection Fit in a CI Pipeline?\n- How to Implement Predictive Test Selection?\n- Limitations and Failure Modes\n\n Table of Contents \n\n- What is Predictive Test Selection?\n- How Does Predictive Test Selection Work?\n- Predictive Test Selection vs Related Methods\n- Where Does Predictive Test Selection Fit in a CI Pipeline?\n- How to Implement Predictive Test Selection?\n- Limitations and Failure Modes\n\nKey Takeaways\n\n- Predictive test selection estimates which automated tests are most likely to fail for a particular code change.\n- The method is probabilistic and can miss failures, so it does not guarantee test coverage.\n- Change recall, test recall, selection rate, and feedback time should be measured together.\n- Must-run rules and later full-suite execution provide protection when selected tests miss a regression.\n- Stable test identifiers, reliable execution data, and controlled flaky-test handling improve model input quality.\n\nLar",
+        "published": "2025-10-06T14:01:00.000Z"
+      },
+      {
+        "title": "Smart Test Selection Agent | BrowserStack Docs",
+        "url": "https://www.browserstack.com/docs/automate/playwright/smart-test-selection",
+        "snippet": "Smart Test Selection Agent | BrowserStack Docs\n\nTable of Contents\n\nNo Result Found\n\nGet your setup working faster. Join our Discord for optimisation tips from elite testers. Join our Discord\n\nOn this page\n\n# Smart Test Selection Agent\n\nLearn how to use BrowserStack’s Smart Test Selection to run tests relevant to your code changes, get faster feedback, and increase test efficiency.\n\n## What is Smart Test Selection?\n\nSmart Test Selection uses AI to identify and run tests impacted by recent code changes. Instead of executing the entire test suite after every change, you can run a relevant subset of tests to get faster feedback on your builds\n\nSmart Test Selection is currently in beta.\n\n- Supports BrowserStack Automate (Selenium and Playwright) and App Automate (Appium).\n- Works for both CI/CD and local runs through the BrowserStack SDK.\n\n## How Smart Test Selection Works\n\nThe Smart Test Selection agent analyzes the relationship between the metadata of your code changes, such as file names, file paths, commit authors, etc. and historical test execution results to identify which tests are most likely to fail.\n\nYou can run tests selected by the AI agent in one of the following modes:\n\n- `relevantFirst`: Runs the selected tests first, followed by the remaining suite. This mode ensures faster feedback on critical issues with full coverage\n- `relevantOnly`: Runs only the selected tests and skips the rest. This mode maximizes efficiency and reduces execution time, infrastructure costs\n",
+        "published": null
+      },
+      {
+        "title": "Predictive Test Selection",
+        "url": "https://develocity.ai/product/predictive-test-selection/",
+        "snippet": "Gradle Technologies is now Develocity — read the announcement →\n\n# Predictive Test Selection\n\nPredictive Test Selection runs only the tests relevant to a change and skips the rest — recording why every test was selected or skipped.\n\nTry Predictive Test Selection Free Request a Demo\n\nFeature overview\n\n## Predictive Test Selection\n\nPredictive Test Selection uses a machine-learning model that learns from your organization's own build history to run only the tests relevant to a given change. During each build, the Develocity agent fingerprints what the change touched, scores every candidate test against the model, runs the selected subset of tests, and records each test's outcome and why each test was selected or skipped in its Build Scan. Because test execution time scales with the size of the change rather than the size of the overall test suite, developer feedback remains fast — even as AI multiplies the tests your pipelines have to run.\n\n### See also\n\n- View documentation (opens in new tab)\n- View pricing\n\n### Works great with\n\n- Test Distribution\n- Build Cache\n\n## Run only the tests needed to verify a change\n\n- On each build the Develocity agent fingerprints inputs, identifying what changed, and scores tests against a prediction model to determine which need to be run to verify the change.\n- The fingerprint reuses the task-input snapshot Build Cache already computes, so it catches toolchain bumps, generated files, and environment shifts a tool like Git-diff never sees.\n- The",
+        "published": null
+      },
+      {
+        "title": "docs/continuous-integration/use-ci/run-tests/ti-overview.md",
+        "url": "https://github.com/harness/developer-hub/blob/main/docs/continuous-integration/use-ci/run-tests/ti-overview.md",
+        "snippet": "# docs/continuous-integration/use-ci/run-tests/ti-overview.md\n\n- Branch: main\n- Repository: harness/developer-hub\n\n---\n\n---\ntitle: Test Intelligence™ overview\ndescription: Reduce unit test time by running only relevant unit tests.\nsidebar_position: 2\nhelpdocs_topic_id: 428cs02e6u\nhelpdocs_category_id: 29nai2tbs6\nhelpdocs_is_private: false\nhelpdocs_is_published: true\nredirect_from:\n - /docs/continuous-integration/use-ci/set-up-test-intelligence/set-up-test-intelligence\n - /docs/continuous-integration/use-ci/set-up-test-intelligence/\n - /docs/continuous-integration/use-ci/run-tests/set-up-test-intelligence\n - /docs/continuous-integration/use-ci/run-tests/test-intelligence/set-up-test-intelligence\n - /docs/category/test-intelligence\n---\n\nimport Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';\n\nTesting is an important part of Continuous Integration (CI). Testing safeguards the quality of your product before shipping. However, test cycles often involve many tests, and it can take a significant amount of time for the tests to run. Additionally, the tests that run might be irrelevant to the code changes that triggered the build, and running all unit tests every time the code changes is expensive and time-consuming.\n\nHarness Test Intelligence (TI) improves unit test time by running only the unit tests required to confirm the quality of the code changes that triggered the build. You can also use parallelism (test splitting) with TI to further optimize your test times.\n\nY",
+        "published": null
+      },
+      {
+        "title": "Targeted Test Selection Approach in Continuous Integration",
+        "url": "https://arxiv.org/html/2509.10279v1",
+        "snippet": "Targeted Test Selection Approach in Continuous Integration\n\narXiv is now an independent nonprofit! Learn more×\n\n# Targeted Test Selection Approach in Continuous Integration\n\nPavel Plyusnin Affiliation: T-Technologies Email: p.plyusnin@tbank.ru Aleksey Antonov Affiliation: T-Technologies Email: alek.antonov@tbank.ru Vasilii Ermakov Affiliation: T-Technologies Email: v.y.ermakov@tbank.ru Aleksandr Khaybriev Affiliation: T-Technologies Email: a.khaybriev@tbank.ru Margarita Kikot Affiliation: T-Technologies Email: m.kikot@tbank.ru Ilseyar Alimova Affiliation: T-Technologies Email: i.alimova@tbank.ru Stanislav Moiseev Affiliation: T-Technologies Email: s.moiseev@tbank.ru\n\n###### Abstract\n\nIn modern software development change-based testing plays a crucial role. However, as codebases expand and test suites grow, efficiently managing the testing process becomes increasingly challenging, especially given the high frequency of daily code commits.\n\nWe propose Targeted Test Selection (T-TS), a machine learning approach for industrial test selection. Our key innovation is a data representation that represent commits as Bags-of-Words of changed files, incorporates cross-file and additional predictive features, and notably avoids the use of coverage maps.\n\nDeployed in production, T-TS was comprehensively evaluated against industry standards and recent methods using both internal and public datasets, measuring time efficiency and fault detection. On live industrial data, T-TS selects only 1",
+        "published": "2025-09-12T00:00:00.000Z"
+      }
+    ]
+  }
+}

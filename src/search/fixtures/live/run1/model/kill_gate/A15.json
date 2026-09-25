@@ -1,0 +1,157 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A15",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:36:28.389Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "24b51acff1663d2f7968dcbba8ebd262616decb48b6066f8e3c9d1297fa6b392",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2131,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2131,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 254,
+        "output_tokens_details": {
+          "thinking_tokens": 9
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0080775,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDokiw9TZ9MCtBea5Yc",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EoYCCpABCBIYAipAOUew/8pErPWPRyY8Mtnjzx9qmXN5dFT1nr3AKqUDK+MHrLrmqYHMasgJzO4n1yHBV3k18d7rAe57al0XbvY91zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYqE19UGEgz5yOfpvBt6jtLYsBIaDHK/V3vn3qIUx/sz7yIwnlc20pOkKR+tO6Lp1DCmmvafWA5Mli1r6WH6npnzlhnvgsyFEb73WaRNpi1mMS5rKiOBOpry0pNwWaN4tYJmy0tCGJIvfJxpbYh82stegYn24/I5LRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01KtsfKeTxUwGLkxwGf5YTLV",
+            "name": "exa_search",
+            "input": {
+              "query": "LLM tool CI pipeline predicts flaky tests blocking"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UwU2P1QQYoEMLWLs6n3f3L",
+            "name": "exa_search",
+            "input": {
+              "query": "AI test selection CI which tests should block a change"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UrkdZYD9VHyToXG83j4pCj",
+            "name": "brave_search",
+            "input": {
+              "query": "flaky test detection CI tool AI"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01TPP2DptvQNZanYWLM64cqj",
+            "name": "brave_search",
+            "input": {
+              "query": "predictive test selection CI pipeline startup pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2131,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2131,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 254,
+          "output_tokens_details": {
+            "thinking_tokens": 9
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "01f954a80741e73d01c9b7b7102b06f6c8b614c7c551aefd39eaaa430b68faaf",
+      "usage": {
+        "input_tokens": 9484,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2131,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1406,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.033454199999999996,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDpBAMLXoeLnLqog2fj",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"idea_id\": \"A15\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"No professional licensing, funds custody, or regulated advice is involved; tool only advises on test suite blocking/flakiness within CI, an internal engineering decision.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"pass\", \"evidence\": \"Tool integrates via standard CI APIs (GitHub Actions, CircleCI, Harness, etc.) using public webhooks/plugin mechanisms; no evidence this requires violating any platform's terms of service. Competitors like Develocity, Harness, BrowserStack operate this way via sanctioned integrations.\", \"source_url\": \"https://develocity.ai/product/predictive-test-selection/\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"Pure software/SaaS product analyzing CI logs and test metadata; no physical inventory involved.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"Runs as a lightweight service/CI plugin; no capital-intensive hardware or facilities needed, comparable to existing single-vendor tools (ci-sherlock-agent, flakehunter) built by small teams.\", \"source_url\": \"https://github.com/slavkurochkin/ci-sherlock-agent\" }\n  ],\n  \"flags\": [\n    { \"id\": \"T4\", \"evidence\": \"Selling to engineering teams at companies often requires convincing eng leadership and may involve procurement for larger orgs, though self-serve motion is plausible for smaller teams.\" , \"obligations\": [] },\n    { \"id\": \"T6\", \"evidence\": \"Multiple established and open-source competitors (Develocity, Harness Test Intelligence, BrowserStack Smart Test Selection, ci-sherlock-agent) show demand and a viable path to launch and first customers within 90 days via self-serve CI marketplace listings.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"Develocity (Gradle Technologies)\", \"url\": \"https://develocity.ai/product/predictive-test-selection/\", \"relationship\": \"direct\", \"pricing\": \"Enterprise/contact sales\", \"evidence\": \"ML-based predictive test selection that scores and selects relevant tests per change, recording rationale in Build Scans.\" },\n    { \"name\": \"Harness Test Intelligence\", \"url\": \"https://github.com/harness/developer-hub/blob/main/docs/continuous-integration/use-ci/run-tests/ti-overview.md\", \"relationship\": \"direct\", \"pricing\": \"Part of Harness CI platform\", \"evidence\": \"Runs only unit tests relevant to code changes to speed up CI feedback.\" },\n    { \"name\": \"BrowserStack Smart Test Selection\", \"url\": \"https://www.browserstack.com/docs/automate/playwright/smart-test-selection\", \"relationship\": \"direct\", \"pricing\": \"Included in BrowserStack Automate/App Automate plans\", \"evidence\": \"AI agent identifies tests impacted by code changes to run subset for faster feedback.\" },\n    { \"name\": \"Testhide\", \"url\": \"https://testhide.com/\", \"relationship\": \"direct\", \"pricing\": \"Free self-hosted; Cloud from $49/mo\", \"evidence\": \"CI/CD platform with embedded ML models for flakiness prediction and root-cause classification.\" },\n    { \"name\": \"ci-sherlock-agent\", \"url\": \"https://github.com/slavkurochkin/ci-sherlock-agent\", \"relationship\": \"direct\", \"pricing\": \"Open source\", \"evidence\": \"LLM-based GitHub Actions tool correlating failures with PR diffs and tracking flaky test patterns over time, built by a solo developer.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"LLM tool CI pipeline predicts flaky tests blocking\",\n      \"AI test selection CI which tests should block a change\"\n    ],\n    \"brave\": [\n      \"flaky test detection CI tool AI\",\n      \"predictive test selection CI pipeline startup pricing\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 9484,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2131,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1406,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

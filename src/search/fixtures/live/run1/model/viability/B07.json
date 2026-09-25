@@ -1,0 +1,910 @@
+{
+  "stage": "viability",
+  "idea_id": "B07",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T13:40:47.296Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "2a33395978b20efafb8e73490bdd8d782308f82739e4fc4efea2a2b1f1505788",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2125,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2125,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 310,
+        "output_tokens_details": {
+          "thinking_tokens": 74
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0084165,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFcdhgppzkxwuSrBb2N",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsUDCpABCBIYAipAE4fdNgRZTOXlZgLjAoG1c015arIGD3ImDAFpeBi2ri9rjL4sV4NON2Z+x9sUW4CSgcjf+AIEevhfKeesekOKaTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAd3z2dUGEgxPTztnKAoYfIJ/O+QaDHC9ZY799N759zgp7yIwdvL/pVcnMCyMaPgsuaBEZBgBBQrONrejv6q1xGUOnLKbJX8hc7O3JbCrQdTQc8/RKuEBcX0bgPv8u/NaeYeJXXOflxHLGv8bkmHKocCI34Ae3d+Dbauc+TNVL72+WW01l0VqAbJNgm++c8cVsGeQEeupokB0ZLmY8JqwcCcQvLBxPEN0rb273C4fd2IeeAkbYvoh9xA9YiVvD3fDxKuw2EwdQjOO+lsLFqntY07JNeLHNEGb7BOS48I+EOgt71WNbDrZnsH8MTOqDBrZPTE/rBe0x0XVUGdBZW5HuG6IZWIIPFm6/A+kG2kZAcfVRW0KBve2ApQsq8wbMZ5BuXttkMiHoDY/2HEW/+wUJqxt2PCDaIWKGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PMusVKdP28h1VPYPmjHi3M",
+            "name": "brave_search",
+            "input": {
+              "query": "Dinolingo pricing subscription"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BfhjKCSyFujDwLh9nuijhk",
+            "name": "brave_search",
+            "input": {
+              "query": "expat parents children learn local language app frustration forum"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UMCXEvUqH4jwLu5YAeLfMW",
+            "name": "brave_search",
+            "input": {
+              "query": "KokoFun app pricing subscription"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QDyq3cpTW53m7sVMkFib1E",
+            "name": "brave_search",
+            "input": {
+              "query": "COPPA children's app compliance requirements language learning app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2125,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2125,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 310,
+          "output_tokens_details": {
+            "thinking_tokens": 74
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "cb67eeced2c4107e42f17630bfd2c84deedc12e00120ef68576a0793d8fd5b70",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3931,
+        "cache_read_input_tokens": 2125,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3931,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 396,
+        "output_tokens_details": {
+          "thinking_tokens": 131
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0142165,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFd3QhzfgNNQ3nVcTBZ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtMECpABCBIYAipAoREhoF029ZRyDA/K+C18AA4heJ0Dke1XwgwuEdluEAd3BuzT46nv3pBp3oZ7dUSU93UYJNm/dCVffo3Bp1l3VDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeTz2dUGEgypxYx0W6GlS1NHLRgaDC+T+1cHitlQdd/nmiIwuzJOv1vUcVuJuGhMS3qRIFUD+bJw7BM0MITf3MWpCOQ4rQmpvhW2uKhKRDsCVON2Ku8CO1/hZ9dF/pNZSX41WB4diJMq2xAuW7uQsRwJ1Ju4isJFc8z8TXiC4l5lI90Wo1wvbHGgxyHQ6tcOpEMK4CiGc1EPEgh7oBCzurYKqWHWGRQflaR0OB/Vnohomc3xkmrlOLIGCruraHoLEw4oFQ2NbO4v8uFWdO1blKUFtfhMbj0ikkvbfJv+/8ytAWHVHuzXP+MF9RdxPotcz4B5vTAEs6BQ8cLXqtOJMtbgQZyoQCsaiTkNUl/VcjYQoBgG/jbffgqGYHdK6dcGCl9uWIbE8pEyxZCQGZ7c8LSo2UYJDn99XeQ541F42HG3TYPHiLh+9XE5UD14yikfIqEtsmHTG3k4KjJ4aiWuV1kiSab0qodJ072ZedpiNIFVsuBmJChs5Cw0RJ7bSkIb7ZpJL8/SqlucvxhkFEVDgYmKrt7RoPXqdpuLQLAIo5zFXlW1tfkyZn9qEpfaM46nOC80yOwxgpFHWxXQptKzjkSmTtUCSRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014JU88CYVzozGrExS5zdjHm",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://polder.substack.com/p/im-shutting-down-my-profitable-saas"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GefC1kRQnWS1oEznjFgX51",
+            "name": "brave_search",
+            "input": {
+              "query": "user acquisition cost per install kids education app Facebook ads CPI 2024"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016vHHFQJ955gp5UUt7rDETY",
+            "name": "brave_search",
+            "input": {
+              "query": "EveryLingo app pricing subscription cost"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014HWqQe7W1SxNP7MZuYisNf",
+            "name": "brave_search",
+            "input": {
+              "query": "\"language learning app\" kids churn reason review complaint"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3931,
+          "cache_read_input_tokens": 2125,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3931,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 396,
+          "output_tokens_details": {
+            "thinking_tokens": 131
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "6177a43db8c24dc41454c69f00fdc47b35eec5462ae1cc1fce1f09abc043826c",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3117,
+        "cache_read_input_tokens": 6056,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3117,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 187,
+        "output_tokens_details": {
+          "thinking_tokens": 49
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0108777,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFdgHEeWQgsnUskkyEK",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EooDCpABCBIYAipAZQYYWPud0WY5n/mn6leW0yU2WEZmEYF/NFnx1ELUae7birC4BQihIjJLfVyDQF4+VP9859YnMXZHxQN5MCO4zjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAezz2dUGEgwVU0vIc7kHhLnQ9AYaDMVJ+8/nXTQSAQFN4iIw9d82Ft3vIj+D4FKtEweZkYmgf/MUSE1jn5Rz96nf6aBzSBjQJHbFLuDCNn46rHpLKqYBynk/xCxfSvNTkNkNk+wL4aYMRcN0Ujshh1i2q/iKdOnWrJVWMQRSwKmW2aNlaiIWRkQwdbgYw6emnqn+U8eoUY+jq6z15FvVyuf6Z1HxyiRuyWJ5nBPl0oSAVLczy1cfaKBPj95FUI6Bwy7H5UpNViwaCBe/zEvDbnLA3NrTlYpJ4GfkCMgqhi9ZtjZ9DK8ArO033S3irOcVRMdMxkVwOGV2Y1WbMRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01N5tWFPp8PxvuSpqwKATTD1",
+            "name": "exa_search",
+            "input": {
+              "query": "im shutting down my profitable SaaS 11 paying customers churned polder"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BgryK7mtxfrVpQZrR4gvAD",
+            "name": "brave_search",
+            "input": {
+              "query": "\"expat\" \"language app\" kid stopped using app review app store 1 star"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3117,
+          "cache_read_input_tokens": 6056,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3117,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 187,
+          "output_tokens_details": {
+            "thinking_tokens": 49
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "6b0876b05bc5bccbd17cebf67935a66382847cb3c6d052539fcd94ee4cc72af3",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3435,
+        "cache_read_input_tokens": 9173,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3435,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 166,
+        "output_tokens_details": {
+          "thinking_tokens": 37
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0120861,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFe8W4jMntk6fLPWJBJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eu0CCpABCBIYAipAyFoQN9d5wNMpT++UeTRKJuQPtcRIP/GHoYaw/CtpH9x3tW4o/cWCh9jCjmv9YFy+Pieye4DXU7OnFaM0k3fGVzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAfLz2dUGEgwNlhv9e8mSxNvSIlQaDIWmbGo5HXBTG9YDBiIwL5xSEcKyhEM/tU4pyz4uT+R4fugOXH+Lf3Y6l1q2Xcs+xZ8HtuCPsUg7eipjvCcjKokBdqF19bftoZSZinsq2x3yrmZbZPA+37aQFdxZ0lrv3VmulNx6nncY6xdERJpddQiP3nG7d9iz/gaVIbks90kAzHDU0ZB/I53IDwKebk38iTfMipoe4RHMi9Ug3rUM9lzxVDcmXwNKS3bFPyMgXEe+DPZs0q0w8LndNwPaEU/2zw28mwl+pa/SBVkYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BU6uhJp5C5H6kJhaxiMApQ",
+            "name": "brave_search",
+            "input": {
+              "query": "polder.substack.com shutting down profitable saas"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011yPaAC9BzqdpexLNCcq4x9",
+            "name": "brave_search",
+            "input": {
+              "query": "expat parent review app store \"language app\" child bilingual kids struggle"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3435,
+          "cache_read_input_tokens": 9173,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3435,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 166,
+          "output_tokens_details": {
+            "thinking_tokens": 37
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "fe79fe863fbd7f20a2dce8a330f2876b35e279ce3d039b32e9ef5df582d131c8",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1857,
+        "cache_read_input_tokens": 12608,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1857,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 564,
+        "output_tokens_details": {
+          "thinking_tokens": 388
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.012808100000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFeRBRUsut6U11uLBBK",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvwKCpABCBIYAipAVM2/4Q0/3k/XHsrmvG4/jF43zvcaosC5grzXastBQKsDkV4GRv5FmJMgaSc51WBdLnenvQ/oiN9Hvzh05D3zKTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAfnz2dUGEgwWWvDuW5h3WF26fukaDLB8f2G9rzoiLNAcYCIwRKbDkVfT8zUPzmle7pWzbENm1mOUlPGCvnJc1S1tn5J2vEQkj/BxxSo/EvDCHZw9KpgJZUWwyXQCBiOYSc8u+sQXH3bB0ERHoSdiXs1zzWugTzBS7g1ZJ8BmbPfY3CuLmABSrKeLGlpSjmKBwwE76hXzWwJN11xG8Rawm9nGhu+5agrURD+mm4HqYqmIA3y8n0FVQYZQ27Pe+88fTl/5RA1bY+ULfhvkybtBvKZoKG6Z5lKzRsY0EpF/0oYApUPv/PgnU9+zUmpOybqVTIMJ2Wa9eralPdWmBRHpWVs3A2njZ5Z1hJS+7yA/HmYXRSAinJHKK2NfUhoC2qTFzPl1jpDqOmlid7/ifGEpDHcKwwdHhJoN6uqoff49cwLB8idnOF1ePQeeYlfZH2imHF35S7wr/4t5pY1hEXCio5rj9L6NopfdI8hBhwotXyXGN72FkFVJdFfpCTqU+DrxC6f4JFvTvQhumRCCexJctfksADbajs0TRlBuufe8tWGj6bNTRAVYXqtWIo/7FYUpq/9i1yBenSGfMQmbc0TV6vkz1LPJfaIDrkilTv6yQ8UhryRBYZcfbnkpzxlFdrYybG0PHOYmqnuC9rSn1sCDIZY1qVNj0U4XaOatZinVG81aljUYHW4vBquW3bhiG2Ie9x9GErG+XHb739r3OXrJmI+lRmO6nM+MYxc7PDsQ33oRQoLjyHMk5wP3bFSyl4JjdjpbyuPYwgIK0tKCStLwj58IC9UU516kLj3/LRJhUvr7Y5OF1N6F8CxNjFDkxgr11UWG1p4qReiHWuJTQ8QDovpVyA5ouCphsOtdO5FJoV2DfGUsVJaSJ1B7IpSdLHhP5Qj8N2FsnW+nvQs22tTvEuKwSIGx+/EFpM0xNkXeN/HfbwWkq0WuY5ZiZizQF6HQG4t4sZnVzjTSt0iiPnGcKDc5EA9S0sC7baGUguhFrr0Lqv6xFFue4404/Rh+pU4BE2GsNqfFMcxuq2J132es0Aw9Ahhv6ZNFkNg19jay/HALxsXN+Yq+VV9R6SUWkBHgpCsGJ5DgT4DsNcP6l88hKFSm3iqcfkXQvbwKOpZtJmP1sSMs7VgWAX+ENxTPlP+jKwHVJkl7c+6wX2EVR3oVD8oWeI3jCOWphVS+ZQwEVkWps+mOzr90QyqM0k41A+YZNnCfec6Jg5aWQTtykxPWai0jeiqr56HFPYmkhBXb5Ag4HsMm5pMIoBKMbpXZp7JefZrCGtAwO4AFJUcH2H4EZTwU1Pn+cxf7ojQ5QIP4jIMX1p3I2V97lL0DrKn9WPITLsspbw1WXpcDUEYvY6bC2IYWvpxsSRlZh1ytDKQ2ZrWANv14+DZUiLK3LtQW8KvWSyQbseXbVOugk4mblHWpNd1hG5axKs6MwZ1X+mr2bDZZOYxcUTWdb1cxPXv1qn+2/J+RxzPXjdOP0mwVp3+dVcOGI0PKv/Mip/aRILSysivMWOeJATZLQyjTzd30XikjoyPqIj4YnquYz3f1VN2P9+aIVYMlpkc0g5H93ypcLRYue7cqkxr/CfFVslMI31+SAKWCXTp76pOAt4qABDXYcrnqmL4Nsv8vAtQewcueJUVHbfHSAgvENpkTPbVB3tYxCDEmdn6xLonGdh93coqOGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011uMhcMx95VBScnZw7gJQAW",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/expats/comments/1sde17j/expats_kids/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VevN9WSsu1NqcQfhFupzkh",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/languagelearning/comments/1okb0av/are_you_annoyed_that_your_immigrant_parents_didnt/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1857,
+          "cache_read_input_tokens": 12608,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1857,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 564,
+          "output_tokens_details": {
+            "thinking_tokens": 388
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "00d7005bbe0a4ce8cc0e44af62b68139fd3caf0d7e917f5e56ab50f076b7b20e",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 738,
+        "cache_read_input_tokens": 14465,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 738,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 427,
+        "output_tokens_details": {
+          "thinking_tokens": 245
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.009012,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFewtNgnZPWtC3ErhXK",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtIHCpABCBIYAipA9ldozhdGt2G8RKPVtcVSJ7BBKUsQLd13GVwJehSJAUhovWcQ/n1hPCg16dDgZCmvc9e5xbJs/OSn4wa5kbVL8zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAf/z2dUGEgyYeguGr5yQjLhY070aDLRM65SuzSH6YYI1nyIw27OzMw2Y2K/I32Mn6v59Bvguq1rIdbLC7DdK5kM5Hyc1gEBL5AA0R2e8XeS0yRsfKu4FJwA6cgc+enorP9igMBuxPFIlD6DBC/rt/69GCsQov8wmLmA65B/V8HrusSYQQI50YikWLlH4r0utB9aefpjtxx5nHQfq+hg3MSpALaWatq+P2oiFdxHHEfbf6W7n/J4s2zWdhO1PDwViP7f3r+ifFJ60FtHT9ep1XXqCwTTqwD2ZAjd+dG8Z5Xbmy4pIbnfLkGqQN0ps5CiGzD23OSjadFjFE6uLM6X9frUpw5H4D5n+F64bsxOORZOoqJIsYsU5PAZHj0lgdFd3zuwf3XWZ2lpFwYWfq7ZaqZ9/h3gUXF2cC85SwMgacls4NIGoDi8sWmGKe/o8hCYcmrd+r0SJPn/wyE9PnT4rba6xoTVLKxDD8ch9C5C+OgGDaFJhLjRkPVJNZW4mLiB6FG3UK+IkqqCc76rVccErPwmGldNIf3UA9PBVsdkTuat2OwR/P+hhU8Y6EjMGyLH3ZINifiTxNiLHbKwVX6nttFNibKT8IsmZefvFHrnU5Sz7XcND81yMICmz5mthdX7MemebY8J2ugTevanzcDQaJ76pKiWGt1e3d4voOzu0IclWRcONPw+U3eGmvsHDHSGUoOayfNNjiHan3uSG4COASgJEQZYkb1gm+MRKPjVVLzf0pFwebrSMy+E/6sTaLT+wgNsA0WlwGPulPPDtBIrIyHIjgo+prljTwGg49Z0ecsWla0gOdN8ELzTYdYBVZAkOHDfkMnKP4Dfp/8/YS8YajAaNGPwRF3UmSsPrjnPenHSVHv++8uHjLD1AnBJV9hVPE6wFK0sbU9JKui6LnfXfEi2zMi2k7sE2Kvj0rYdozTTAwHG4/k7SMxLsV4OJ4OuAyR4HSVWnR6YU0YXtybBxYvArqQlunYC+Iw/zo0iAsD3bnBtnnBdeMAJoNvBksfkgkCqgeoFtuLLWLRCakSrm9bIGmWY/1BMJ8IVrXjchfQX+s2ce3PMgJW9Rv9smMkydZSy2rRs+bZ7lS6mFGH8e02bL0hJsGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RMi8xRtz8ohtz2kkjz882c",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://kokofun.com/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01H15uT1oWr3w6Ztg3KjePYT",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.voiczy.com/en"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014m8daN5GmEaWYzFyT369HL",
+            "name": "brave_search",
+            "input": {
+              "query": "mom influencer sponsored post cost micro influencer parenting niche price"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 738,
+          "cache_read_input_tokens": 14465,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 738,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 427,
+          "output_tokens_details": {
+            "thinking_tokens": 245
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "cda1728e9dc617dfc57cb8f89b688d246acf2ba467b5408cf9cbe610b4300ee9",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6472,
+        "cache_read_input_tokens": 15203,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6472,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 348,
+        "output_tokens_details": {
+          "thinking_tokens": 228
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0227046,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFfRCvpCFih9vuQPtMj",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpAHCpABCBIYAipAkN4/SZDF884VYHi05tCSVrCHAFMhelEmVm+PzDEL3fIpJIaFTQaI1iPdC7Uk1gWRwi/qUvKe3MT9m0CcwKE4UDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAYX02dUGEgwdRTQZbVa8ECDXWU0aDPlmrhdwQUCj0r+lPiIwhPvLqYr/WZYVb+aUfqxfSzAJfqOYjvO+TuTmWSeYJfNU7rdcqzVH6TPowedG9Eb5KqwFlzdBivn8L20Rj/Nu94MIJo2cPrIXQPkkQR3kPHP+rbOdFc1PYV/KOd/4mRoMLpNv9GXZ9l/RfJEOkv/PJA27J0aPUGi3zGPkJlYAo8cQ0QqQjRpLugV78YZgGxLkKrQGQZ3/mB2kA0oz1RnimOf23mmgaeLq76zFqqw+htALsCbuSh7PfP9ExN1yZu7egMzfK7kbCHJgrg6jpu67YVgI9bdst2TQNJMC4gkRD8LbDLkVORDguOlWd0Jawd3wiNLXIRK4JLWxcfiDF4oCEf7DMfMh/YE4TIKgiHp0eTdRW80GoUMxE1bzWk4AL8sLmUmMrZK4izM8h0kainUI2gE+K0vQZPhz8uK+ZUYNT8uXHzxPqPZYk4RPmkH1vfJAuo9DriXLOwwtR1Nu3lxahZvoDcJBwXP81vfvsvGW47lVVvRPpPAXAt4y6XS4nZ9B3ZFDSJptQ9eliD9EPWI4S5j1Mvzo21O4vVN78GeY7CtGYu7IyC2geVgT+YOVTXzc8/80YTForziNvgHbARMG5o6NBBa5u2q8RQp9LzglbZKPJHDGtPfyG/ksOwrY1GKhI5Zkb55S0QdZ08MeR713tG5SOt80S67gNnRxoMcRi0Lx5tBll4NyP20h6YXHUuDDqUKspB+jQTMlemeZThaflgzdpKOVWp2+iT1StMjWJGt5cWoAfd12eZgxPu7QqByPq/Sr4XEIlYctftyiatBd8W0f8OQPVe5X1Hbpg0RUpuYlu4/QxTGuClQzkAMV+bTFcrV+BE6kx8+QxDhc5zA3YaoHc1QnFrwyOPzLvVBPhGpPj79jUy7ofT243jhoZTPsT8ILcRZte0o3/0knwbMCgKMYknw3m43TrdXBoOKt2t/uLidq+PTVdUZ5tzcXMFF25t5W+WX9U9bG4AwmgeR3GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01ReZgX3tPm4BhZ3Nq4e4ihF",
+            "name": "brave_search",
+            "input": {
+              "query": "Voiczy app price per month subscription €"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01H6QzKGs88qM4gHYwby9Ecf",
+            "name": "brave_search",
+            "input": {
+              "query": "Migo Language Playground app pricing subscription"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 6472,
+          "cache_read_input_tokens": 15203,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6472,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 348,
+          "output_tokens_details": {
+            "thinking_tokens": 228
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 7,
+      "request_digest": "02dbe48b34f693be26ccf7b67a2b55fc2e4dc96b9b7488ea3c81738a0f688aa6",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2028,
+        "cache_read_input_tokens": 21675,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2028,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 370,
+        "output_tokens_details": {
+          "thinking_tokens": 243
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.013109,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFfyxAw58A4qWKXs2fm",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "ErkHCpABCBIYAipAmMhPzhYDjCIZRTQg99OlQR40zSM43oQG7Z6h57AvPNLtsSWdDEPrZkVRLMBk+g64LTSRVVHTaUiGVXdaZGU/ITIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAY702dUGEgz5gQaGcZUlW2p4OoIaDDIA3xjb5ABYPw1DzCIw+rri5FPDUznZXuFwZ3DhO1lrV22oRQlu98hA+yBnTJRuMgkU7IP6OdUnMbTpKZsCKtUF8qNn2wTWt1S9b8sonLMIq9OtvXNCFkXxyTCBmNe4DFZiR/NZsESZTG7U3I2PozkLLGh8LBZ3UwoOTl/Bshe20bfXbtCsBSjTZeXsvTvpcX92Jd7spPAs59Pqhmn2Kh7w5yS4hCXSgAHkzwKF96b5T1lLLT+baVzSYMfwX7SwjqdUfbpwqA6KATl/kA068+I42o5+MlhijGZ2rxtqsi/iRBqVF4rU5FNypbjES/S7+UemTArknNS+Gyg2/7hIWHY3gwYA8HsgrGe2ZPZqkW4SDyCIov1j2ndtxroxaiDs/aGKjD1f3Op2oWy74oarbWhQj4sX0uXmxzzI3BEgAkI/ZJNlwH4Km1ldpnhsaGxrEw9rPbc359E4LSr1xzBL5KHrhSn640EzMKRVSjuZA9GwhggZV+uaWEZH+BRG+dWZCwmqCjCOzx5W6W3iyNvrssnCJHPvYuBNewIbKjYxSFf7Lf3pN5Go3MVdF+HYGwQAs6dmKJjJ0WIgnfAcoVfrT6Sfi3H2s3hbW2QAf2DGOkj4y5EtS7TwbyUHKbBlomRZ01SqvyRqFQPmTgNB9PeXCvP+r9Oc9JV/mulGRi3vMc4ZIjLYHpOloJNK/E3XULZnhRI4RhvFjS/G1Alxiuh9u4uAWxGbslYl/1mZ5SiJZpoBsqoYQnlVNBM4jsel+vEm6EIEAoaN2Q2V3wraobFHkWvFZEwSfDFvn/A4F7bEeeJPabz5xT6d+wqqOPnpBB84jRb9U4AL8FDzZoJwcL8y+1FtMYPsRfdWx/pAcMsaaGT4e1OLhmJzZT6QJWhUQlEts2p6+yqlsvgvDS1e2YizLW38cdUFGJCDVg3Am6VF3/adWQ9al/mT6/JLb1qlfEBrLXUj0EsHCOqtD7R+b5x29rhqE7UngtiPKuD9AJqS3atTQ7ubEdIuHqRwUeuJGjAEo3QOMdwb/qAnZJcqhPDJM+ryQGdjCpcYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GAa1gmbPcayyYhjuib6gFN",
+            "name": "brave_search",
+            "input": {
+              "query": "Google Play Families policy requirements children's app ads data"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01EUVKT1Hkf4bftqafysW2JQ",
+            "name": "brave_search",
+            "input": {
+              "query": "GDPR-K children data consent EU parental consent age app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2028,
+          "cache_read_input_tokens": 21675,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2028,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 370,
+          "output_tokens_details": {
+            "thinking_tokens": 243
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 8,
+      "request_digest": "ac71997bb2746d46696b16a32bf6a2c5ea9455d5eba9dce45459dee9fc516a12",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2145,
+        "cache_read_input_tokens": 23703,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2145,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 85,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0109571,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFgX4SXdT3VGvZ8sGsp",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Now I have enough evidence to compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FAgen1pgkQW6kwPkJkEbTp",
+            "name": "brave_search",
+            "input": {
+              "query": "Dinolingo reviews churn kids stop using app after weeks"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2145,
+          "cache_read_input_tokens": 23703,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2145,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 85,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 9,
+      "request_digest": "246df6bc9338e44715c09722271f062028bb26ea198ca55a7d9371c0443d8599",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 916,
+        "cache_read_input_tokens": 25848,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 916,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 126,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0087236,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFgjz587ZiyWZTLLHWC",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "This gives good churn/complaint evidence for the competitor. Now compiling the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018yNpWNPRYYH9xzdFdk5AXg",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://apps.apple.com/us/app/dinolingo-kids-learn-languages/id1537076111?see-all=reviews&platform=iphone"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 916,
+          "cache_read_input_tokens": 25848,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 916,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 126,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 10,
+      "request_digest": "4cc177556b4e266c74f9aebd63f45f91e1d7fd4c84f8f46f024bf620df6e5b9f",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3077,
+        "cache_read_input_tokens": 26764,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3077,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 939,
+        "output_tokens_details": {
+          "thinking_tokens": 877
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0224393,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFgxwBzKmqQGWww8mjF",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013bHgVftyv7BeRXVYZzgPpZ",
+            "name": "brave_search",
+            "input": {
+              "query": "KokoFun app subscription price per month app store"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3077,
+          "cache_read_input_tokens": 26764,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3077,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 939,
+          "output_tokens_details": {
+            "thinking_tokens": 877
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 11,
+      "request_digest": "0c6e58a7f187f5de27b7797ad2bf989c892b15e1382ecd033fdd7cc3e38b929e",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1746,
+        "cache_read_input_tokens": 29841,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1746,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 5615,
+        "output_tokens_details": {
+          "thinking_tokens": 1502
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0664872,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfQFi1QoEWNxZ151TKnYc",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"B07\",\n  \"payer\": {\n    \"who\": \"Expat parents (paying for their own children's access, not the child)\",\n    \"price_hypothesis\": \"$5–$20/month per family, anchored to Dinolingo's $19.99/month (or $14.95/mo family plan, $199/year) and Voiczy's ~€21/3 months (~€7/month)\",\n    \"comparable_url\": \"https://dinolingo.com/pricing/\"\n  },\n  \"competitors\": [\n    { \"name\": \"Dinolingo\", \"url\": \"https://dinolingo.com/\", \"pricing\": \"$19.99/month or $199/year; family plan $14.95/mo per Trustpilot\", \"pricing_url\": \"https://dinolingo.com/pricing/\" },\n    { \"name\": \"KokoFun\", \"url\": \"https://kokofun.com/\", \"pricing\": \"Free to start / in-app subscription (exact price not published on site)\", \"pricing_url\": \"https://kokofun.com/\" },\n    { \"name\": \"EveryLingo\", \"url\": \"https://everylingo.app/\", \"pricing\": \"$5.99 one-time 'early adopter' lifetime access\", \"pricing_url\": \"https://everylingo.app/\" },\n    { \"name\": \"Voiczy\", \"url\": \"https://www.voiczy.com/en\", \"pricing\": \"Single subscription plan; gift promo values 3 months at €21 (~€7/month)\", \"pricing_url\": \"https://www.voiczy.com/en\" },\n    { \"name\": \"Migo: Language Playground\", \"url\": \"https://apps.apple.com/ml/app/migo-language-playground/id6760140426\", \"pricing\": \"Free with in-app purchases\", \"pricing_url\": \"https://apps.apple.com/ml/app/migo-language-playground/id6760140426\" }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    { \"channel\": \"Facebook/Instagram paid app-install ads\", \"cost_estimate\": \"Education-category CPI ~$4.70 per install (general app CPI benchmark $1.75–$4.50)\", \"source_url\": \"https://insertaffiliate.com/blog/mobile-app-user-acquisition-cost-benchmarks/\" },\n    { \"channel\": \"Parenting/mom micro-influencer sponsored posts (Instagram/TikTok)\", \"cost_estimate\": \"~$250–$2,000 per post for 10K–100K follower creators; average mom-influencer partnership ~$274.57\", \"source_url\": \"https://influee.co/blog/instagram-influencer-pricing\" },\n    { \"channel\": \"Organic community distribution (r/expats, expat Facebook groups)\", \"cost_estimate\": \"$0 cash cost, but requires founder time; unproven conversion rate [unsourced]\", \"source_url\": \"https://www.reddit.com/r/expats/comments/1sde17j/expats_kids/\" }\n  ],\n  \"demand_evidence\": [\n    { \"quote\": \"We're considering online conversation classes or language programs...but there are so many options out there.\", \"url\": \"https://www.reddit.com/r/expats/comments/1pdxnrb/helping_our_8yearold_son_adjust_to_a_new_language/\" },\n    { \"quote\": \"The existing apps weren't helping our kids make friends or speak with confidence.\", \"url\": \"https://www.voiczy.com/en\" }\n  ],\n  \"case_for\": \"The category is real and repeatedly rebuilt by parents themselves (Voiczy's founders are expats who built it for their own kids), meaning the pain is credible and the content — vocab lists, illustrations, TTS audio, ASR-based repetition scoring — is highly template-able. A solo operator with AI agents could generate curriculum, art, and voice assets across many language pairs cheaply, undercutting incumbents' content-production costs, and reach the niche through low-cost community channels (r/expats, relocation Facebook groups, mom micro-influencers at ~$250/post) rather than expensive paid UA, keeping a 6-week MVP's burn low relative to the $5–$20/month price point comparable apps already charge.\",\n  \"case_against\": \"The seed evidence is a direct, damning signal: in a closely related product, 100% of paying customers eventually churned. Public reviews of the closest competitor (Dinolingo) show even engaged, paying parents report their kids 'zone out' during repetitive video/audio content, suggesting the core mechanic (repetition + picture matching) struggles to hold a young child's attention over time regardless of execution quality. The space is already crowded with well-established, well-funded, or well-differentiated players — Dinolingo (since ~2010s, 3.8K+ App Store ratings), KokoFun (claims 20,000+ families), and Voiczy (live AI voice tutor, founded explicitly on the same 'expat parent' insight) — leaving little room for a 6-week solo build to out-differentiate on either content depth or novelty. Recording children's voices for repetition scoring also triggers COPPA's biometric voiceprint rules and GDPR-K parental-consent requirements, adding real one-time legal and ongoing compliance overhead disproportionate to a lean MVP, and kids' edtech attention/retention is an industry-wide known weak point, not one specific to the churned SaaS.\",\n  \"open_questions\": [\n    \"What are actual D30/D90 retention rates for live competitors like Voiczy or KokoFun, and are they meaningfully better than the churned SaaS in the seed quote?\",\n    \"Would parents' actual unmet need be better served by a non-app format (e.g., live tutoring like Novakid, mentioned by an expat parent) rather than a solo voice/picture app?\",\n    \"What is the real cost and conversion rate of organic expat-community acquisition (Reddit, Facebook groups) versus paid UA, and can this be tested before committing six weeks?\",\n    \"Is the 'expat parent teaching local language' segment large enough on its own, or do successful competitors actually monetize a broader heritage/bilingual-family audience?\",\n    \"Does recording children's voices for pronunciation scoring create compliance risk (COPPA biometric rules, GDPR-K) that a one-person company can realistically manage without dedicated legal support?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      { \"obligation\": \"COPPA compliance (US): verifiable parental consent, no behavioral ads to children, special protection for biometric data including voiceprints\", \"kind\": \"ongoing\", \"consult_scope\": \"One-time legal review of consent flow, data collection, and voice-data handling; ongoing monitoring of ad SDKs and data practices\", \"source_url\": \"https://spellingjoy.com/best-apps/coppa-compliant-education-apps\" },\n      { \"obligation\": \"GDPR-K (EU): parental consent for users under 13–16 depending on member state, verified reasonably\", \"kind\": \"ongoing\", \"consult_scope\": \"One-time legal review of consent age thresholds and verification mechanism across target EU markets\", \"source_url\": \"https://gdpr-info.eu/art-8-gdpr/\" },\n      { \"obligation\": \"Google Play Families Policy: certified ad SDKs only, no personalized ads to children, accurate privacy policy, families self-certification\", \"kind\": \"ongoing\", \"consult_scope\": \"One-time app store submission review; ongoing SDK audits\", \"source_url\": \"https://support.google.com/googleplay/android-developer/answer/9893335?hl=en\" },\n      { \"obligation\": \"Privacy policy disclosing voice-data and child-data handling\", \"kind\": \"one_time\", \"consult_scope\": \"Draft once at launch, update on material changes\", \"source_url\": null }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"KokoFun's specific subscription price could not be confirmed on its site or app stores.\",\n    \"Conversion rate of organic expat-community posting into paying users is not sourced anywhere.\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## B07 — Voice-repetition + picture-game vocabulary app for expat children\\n\\n### Payer\\nExpat parents pay for their child's account. Price hypothesis: $5–$20/month per family, anchored to Dinolingo's published $19.99/month ($199/year, or $14.95/mo family plan) — https://dinolingo.com/pricing/ — and Voiczy's ~€7/month equivalent (https://www.voiczy.com/en).\\n\\n### Competitors\\n- **Dinolingo** — $19.99/mo or $199/yr — https://dinolingo.com/pricing/\\n- **KokoFun** — freemium/subscription, price not published — https://kokofun.com/\\n- **EveryLingo** — $5.99 one-time lifetime (early adopter) — https://everylingo.app/\\n- **Voiczy** — single plan, ~€7/month (per gift-promo valuation) — https://www.voiczy.com/en — *notably, Voiczy is founded by expat parents with the exact same origin story as this idea ('We built Voiczy because the existing apps weren't helping our kids make friends or speak with confidence.')*\\n- **Migo: Language Playground** — free + IAP — https://apps.apple.com/ml/app/migo-language-playground/id6760140426\\n\\n### Acquisition channels\\n- Paid app-install ads: Education-category CPI ~$4.70 (https://insertaffiliate.com/blog/mobile-app-user-acquisition-cost-benchmarks/)\\n- Parenting micro-influencer posts: ~$250–$2,000/post (https://influee.co/blog/instagram-influencer-pricing), average mom-influencer deal ~$274.57 (https://www.momfluence.co/blog/micro-influencer-moms-the-complete-2026-guide-for-brands)\\n- Organic expat communities (r/expats, Facebook groups): $0 cash, unproven conversion — https://www.reddit.com/r/expats/comments/1sde17j/expats_kids/\\n\\n### Demand evidence\\n- \\\"We're considering online conversation classes or language programs...but there are so many options out there.\\\" — r/expats parent of an 8-year-old (https://www.reddit.com/r/expats/comments/1pdxnrb/helping_our_8yearold_son_adjust_to_a_new_language/)\\n- \\\"The existing apps weren't helping our kids make friends or speak with confidence.\\\" — Voiczy founders, expat parents (https://www.voiczy.com/en)\\n\\n### Case for\\nThe pain is credible enough that other expat parents have built near-identical products (Voiczy). Content — vocab, illustrations, TTS/ASR — is highly automatable, letting a solo builder with AI agents produce many language pairs cheaply and reach the niche through low-cost community/influencer channels rather than expensive paid UA, at a price point ($5–$20/mo) that only needs modest volume to sustain a one-person operation.\\n\\n### Case against\\nThe seed evidence — 100% churn of paying customers on a closely related SaaS — is a direct red flag. Dinolingo reviews from paying parents describe children 'zoning out' during repetitive content, suggesting the mechanic itself struggles to hold attention regardless of polish. The space already has entrenched (Dinolingo), scaled (KokoFun, 20,000+ families claimed), and identically-positioned (Voiczy) competitors, leaving thin differentiation room for a 6-week build. Recording children's voices also triggers COPPA biometric and GDPR-K parental-consent obligations, adding compliance overhead disproportionate to a lean MVP, and kids' edtech retention is a known industry-wide weak point.\\n\\n### Open questions\\n1. What retention do live competitors actually see, versus the churned SaaS?\\n2. Would a non-app format (live tutoring, e.g., Novakid) serve the job better?\\n3. What does organic-channel CAC actually look like, and can it be tested pre-build?\\n4. Is 'expat parent teaching local language' large enough as its own segment vs. the broader bilingual/heritage market competitors target?\\n5. Can a solo founder manage the voice-data compliance burden without dedicated legal support?\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1746,
+          "cache_read_input_tokens": 29841,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1746,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5615,
+          "output_tokens_details": {
+            "thinking_tokens": 1502
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

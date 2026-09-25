@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "collaborative AI agent session teammates join redirect task",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:39:28.232Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "collaborative AI agent session teammates join redirect task",
+    "results": [
+      {
+        "title": "Share a Coding Agent Session | Lody",
+        "url": "https://lody.ai/docs/session-handoff/",
+        "snippet": "Share a Coding Agent Session | Lody\n\n# Share a Coding Agent Session\n\nInvite a teammate into an existing Lody coding-agent session to continue the work — conversation, diffs, and worktree — instead of sending a read-only transcript.\n\nA coding agent session handoff in Lody means a teammate opens the same session you already started and continues it. They get the live conversation, the file diffs the agent produced, and the session worktree — not a screenshot, Markdown dump, or ChatGPT-style share link that only lets them read what happened.\n\nThat is the difference from most “share my Claude Code session” workflows: those usually publish a transcript. Lody invites someone into the existing session so they can keep chatting and steering the agent.\n\nWhat “continue” means\n\nWorkspace members who can open the session can keep the conversation going from the same context. Lody does not turn the session into a read-only replay. Sharing still follows machine and project visibility — see permissions below.\n\n## Why a transcript link is not a handoff Copy Anchor Link\n\nPeople already share agent work in several ways. Most of them stop at “look at this.” Handoff is “pick this up.”\n\n| Approach | What the recipient gets | Same live session? | Diffs and worktree |\n| --- | --- | --- | --- |\n| Screenshot | A picture of the chat | No | No |\n| Markdown / transcript export | Static text you can paste elsewhere | No — they start a new chat | No |\n| ChatGPT-style share link | A read-only snapshot of t",
+        "published": null
+      },
+      {
+        "title": "Agent collaboration — aeqi Docs",
+        "url": "https://aeqi.ai/docs/methodology/agent-collaboration",
+        "snippet": "Agent collaboration — AEQI Docs\n\n# Agent collaboration\n\nHow agents talk to humans and to each other. The substrate is Sessions; the gates are mentions and channels; the verbs are exactly two — plus a grammar.\n\n## Two verbs and a grammar\n\n```\nmessage_to(target, body, kind?)\nadd_participant(session_id, target)\n\n```\n\nThat's the whole API. There is no `ask_director`, no `escalate`, no `notify`, no `dm`, no `send`. One verb per intent.\n\n| Mechanism | When |\n| --- | --- |\n| `message_to` | Direct an agent or human; find-or-create the appropriate session and append. |\n| `add_participant` | Pull someone into an existing session (e.g., loop in the CFO on a budget thread). |\n| inline `@`-mentions | Not a verb — a grammar inside any message body. `@alice` auto-subscribes the target as a participant; mentioning an agent also fires its turn. |\n\n`target` resolves to a session per its addressing rule:\n\n- `{session_id}` → that session.\n- `{agent_id}` → the 1:1 session with that agent.\n- `{user_id}` → the 1:1 session with that user.\n- `{role_id}` → the session for that role; routes to whoever currently occupies it.\n- `{idea_id}` → the comments session attached to that idea.\n\n## Multi-participant native\n\nAgents can be in any session; humans can be in any session; one session can have N participants. The participant strip on the session view shows everyone in the room. Adding someone is `add_participant` — an explicit action that emits a system message (\"Carol joined\").\n\n## Mention-gating on cha",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://code.claude.com/docs/en/agent-teams.md",
+        "snippet": "> ## Documentation Index\n> \n> Fetch the complete documentation index at: https://code.claude.com/docs/llms.txt\n> Use this file to discover all available pages before exploring further.\n\n# Orchestrate teams of Claude Code sessions\n\n> Coordinate multiple Claude Code instances working together as a team, with shared tasks, inter-agent messaging, and centralized management.\n\nAgent teams are experimental and disabled by default. Enable them by setting `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` in your settings.json or environment. Without that variable, no team is set up at session start, no team directories are written, and Claude does not spawn or propose teammates. Agent teams have known limitations around session resumption, task coordination, and shutdown behavior.\n\nAgent teams let you coordinate multiple Claude Code instances working together. One session acts as the team lead, coordinating work, assigning tasks, and synthesizing results. Teammates work independently, each in its own context window, and communicate directly with each other.\n\nUnlike subagents, which run within a single session and can only report back to the main agent, you can also interact with individual teammates directly without going through the lead.\n\nThis page describes agent teams as of v2.1.178. With `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` set, spawning a teammate no longer needs a setup step, and cleanup happens automatically when the session exits. Before v2.1.178, you asked Claude to create and name",
+        "published": null
+      },
+      {
+        "title": "AI-Collab-Skill/collab-session-skill",
+        "url": "https://github.com/AI-Collab-Skill/collab-session-skill",
+        "snippet": "# AI-Collab-Skill/collab-session-skill\n\nClaude Code skill for async collaborative brainstorming between human+Claude pairs\n\n- Stars: 4\n- Forks: 0\n- Watchers: 4\n- Open issues: 0\n- Default branch: main\n- Created: 2026-03-14T11:49:17Z\n\n## Languages\n\n- JavaScript\n\n## Top Contributors\n\n- simons-plugins (32 contributions)\n- claude (5 contributions)\n\n---\n\n## README\n\n# Collab Session\n\nAsync collaborative thinking between multiple human+Claude pairs. Each participant works in their own Claude Code session, saving progress to a shared workspace. No merge conflicts by design — and the journey is preserved, not just the conclusion.\n\n## How it works\n\nTwo people (each with their own Claude Code session) work on the same topic asynchronously. Every `/collab save` writes a uniquely-named markdown file — nobody edits anyone else's files. When a colleague runs `/collab join`, all files are assembled into a narrative handoff brief so they can pick up where you left off.\n\n```\nSimon + Claude                         Dan + Claude\n     │                                      │\n     ├─ /collab save                        │\n     │  → simon_20260314T142001Z.md         │\n     │  → git push                          │\n     │                                      │\n     │                    /collab join ──────┤\n     │                    ← git pull         │\n     │                    ← handoff brief    │   (resolves [[wikilinks]] inline)\n     │                                      │\n     │                    ",
+        "published": "2026-03-14T00:00:00.000Z"
+      },
+      {
+        "title": "",
+        "url": "https://docs.overcut.ai/docs/workflows/agent-session",
+        "snippet": "> ## Documentation Index\n> \n> Fetch the complete documentation index at: https://docs.overcut.ai/llms.txt\n> Use this file to discover all available pages before exploring further.\n\n# Multi-Agent Session Action\n\n> Learn how to use the agent.session action to create interactive, multi-agent workflows with coordination, iteration, and user feedback capabilities.\n\nThe `agent.session` action creates an interactive, multi-agent session where multiple AI agents collaborate to achieve complex goals. It features a coordinator agent that orchestrates the work, delegates tasks to specialized agents, and maintains an ongoing conversation that can include user feedback and iteration.\n\n---\n\n## Overview\n\nThe `agent.session` action is designed for complex, multi-step tasks that require coordination between different agents, iteration, and ongoing user interaction. Unlike `agent.run`, it maintains an active session where agents can work together, break down complex problems, and adapt their approach based on feedback and results.\n\n## Multi-Agent Coordination\n\nMultiple agents work together with a coordinator orchestrating the workflow.\n\n## Interactive Sessions\n\nMaintains ongoing conversation with options for user feedback and iteration.\n\n## Complex Task Handling\n\nBreaks down complex problems into smaller, manageable chunks.\n\n## Flexible Execution\n\nSupports iteration, refinement, and adaptive problem-solving approaches.\n\n---\n\n## When to Use Multi-Agent Session\n\n### Perfect For\n\n- Complex, multi",
+        "published": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "P06",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:40:07.938Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "e060f0d259367332b1fde929b5a37efabadd11f65045d7b156bb7b07b815aa21",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2133,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2133,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 294,
+        "output_tokens_details": {
+          "thinking_tokens": 39
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0084825,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE5vdByRqXebyjRBJ3Z",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EuYCCpABCBIYAipAJUf4gdGJauGsvNcZPeS7piYpW2FxxzLXcqqM7uScd4LXiWmo/N4MopfTuVmqTkIZY5342lz6+LYEHpVtDBXoBDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeaF19UGEgwrxkhEc5S5yZztjiQaDDmlo2gyTyQE0eETQSIwUrZSy9ZxT+3wvgqc8O1Mav1XqsAcgPh1G0IqyE/oAW4uzKxVeaHQaBYvjsTY1w0SKoIBD7dJZvxYt09Yr8UbutxbzJShaS/gQX51abruzOW6im/PKKvrmFSo5uzu0QygCiNYtjD8xuV+AoAOfJqMP9gecaaOJiJXT+r6/icL1b4t+O0ClkEaz4d6PRlcJESXo5VdilAVr5r1144/VrocvaYTUmgzKUlQ8+Q2VJNbbqkmxLoBGhgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01N8JHCGaCDVoQ27BgE2qjZ2",
+            "name": "exa_search",
+            "input": {
+              "query": "third-party app shows Facebook group posts chronologically without algorithm"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QUvt9EuFrz969N6LCePPj7",
+            "name": "exa_search",
+            "input": {
+              "query": "Facebook Graph API groups access deprecated third party apps"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GDvvtULR2gZugRHaCv8k5M",
+            "name": "brave_search",
+            "input": {
+              "query": "Facebook group content client app chronological feed"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BCah3AGd6cCHTvS4fa9p5k",
+            "name": "brave_search",
+            "input": {
+              "query": "Facebook Platform Terms third party apps scraping groups violation"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2133,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2133,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 294,
+          "output_tokens_details": {
+            "thinking_tokens": 39
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "ef235fa3f43189f2558369270a665d531d2ae206c376cef42b962e052679654f",
+      "usage": {
+        "input_tokens": 8492,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2133,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1294,
+        "output_tokens_details": {
+          "thinking_tokens": 129
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0303506,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE6Z3SWRD1kRTeb7Mkk",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtkECpABCBIYAipA959S5zhJ9MOqlR21wOk2Wylr7P+IN9dw5z6IP3gtZMVk5gGWmzQjfmk8ReJ1wp972ZT6OJ+0JUcyN42PvC9K6jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAe+F19UGEgwa1hn867iiXdDec6saDAsmNaSHVyT/p04CqCIwWR6LPR4Tnxq/kFHEms0LhZGlTOj6v7hYdhm5D2i08HSEJufttJZ2mqvU8An/0fnQKvUCq6V6TFZpZlABjFcCfCc5rLjiUMrnrQ1ZjeyMnzMyI4vapzDuDqdRUDkdtKcpTKugRDbmWqr55PHwdlXGII4FK0kS2i4aSANY/M+6C8bAmUz9DYBXzt494C1FRAPV3knpWBE1VZHTZzVMVm5NSSw1e7F7Is5xyGOzf8WHSwLoaELC4j1quF97aYLbtb0vergEB91/mmVAVz6cZKlZy231ZSLHhd439KSdpU9fHl4IEqobbUNq0h+PVKZE6PavEFcZehO8zCUhsZLqLfEKKzR31ATCcs2pulAW1kv6opRoxNwugwsQjQQoFsCX+ScTKIwad2DrbOQJi/VT9K6RLVuW4Hf8kXNtHgk6C/TqphxLzBzYTAJWfG4l5Y3h0zVRhsNiW+eWX0JNv+OS99KHpcMUjAucHqYXdBrB575ukiHRRoZJQbUAiFQE00GRV4ISnFKgdLdF5yhZFpTJNmLrEamm36bSoJRiWRg5qonfGvSULfLr9yXxkRgB"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"P06\",\n  \"verdict\": \"kill\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"No licensing, professional liability, or custody of funds involved.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"fail\", \"evidence\": \"Meta deprecated the Facebook Groups API in Graph API v19 (Jan 2024), removing all permissions (groups_access_member_info, publish_to_groups) that let third-party apps read group content, and developers confirmed group admins can no longer even add apps. The only remaining way to get 'content for groups I'm in' is automated scraping/logging in with a bot, which Meta's Automated Data Collection Terms and Platform Terms explicitly prohibit and actively litigate (e.g., Meta v. Bright Data, Meta v. Voyager Labs). The core function — retrieving a user's Facebook group posts — depends entirely on Meta, which has both revoked the sanctioned API path and forbids the only working workaround.\", \"source_url\": \"https://techcrunch.com/2024/02/05/meta-cuts-off-third-party-access-to-facebook-groups-leaving-developers-and-customers-in-disarray/\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"No physical inventory involved.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"No capital/infrastructure requirement beyond a single developer.\", \"source_url\": null }\n  ],\n  \"flags\": [\n    { \"id\": \"T6\", \"evidence\": \"Even if built via scraping, Meta actively detects and blocks such tools, making a durable paying customer base within 90 days unlikely.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"Narro\", \"url\": \"https://narro.info/instead-of/facebook\", \"relationship\": \"adjacent\", \"pricing\": \"Free 14-day trial\", \"evidence\": \"Aggregates public Facebook profiles/pages chronologically, explicitly excludes Groups noise, showing even adjacent attempts avoid Groups due to access restrictions.\" },\n    { \"name\": \"fb-groups-sort (Tampermonkey script)\", \"url\": \"https://github.com/jonastheis/fb-groups-sort/\", \"relationship\": \"direct\", \"pricing\": \"Free/open-source\", \"evidence\": \"A browser userscript that reorders group posts by date — works only via DOM scripting inside the user's own logged-in session, not a real API-based client, and reflects the workaround nature required to get chronological group content.\" },\n    { \"name\": \"fbtool (Martin's corner on the web)\", \"url\": \"https://harizanov.com/2026/08/turning-facebook-groups-into-a-daily-digest/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Author explicitly states 'Facebook has no API for groups' and built a browser-automation scraper logging in with real session cookies to harvest group posts — confirming no sanctioned API path exists.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"third-party app shows Facebook group posts chronologically without algorithm\",\n      \"Facebook Graph API groups access deprecated third party apps\"\n    ],\n    \"brave\": [\n      \"Facebook group content client app chronological feed\",\n      \"Facebook Platform Terms third party apps scraping groups violation\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8492,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2133,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1294,
+          "output_tokens_details": {
+            "thinking_tokens": 129
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "SaaS bootstrapped prerender service single page app SEO",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:37:37.588Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "SaaS bootstrapped prerender service single page app SEO",
+    "results": [
+      {
+        "title": "haku-d/prerender",
+        "url": "https://github.com/haku-d/prerender",
+        "snippet": "# haku-d/prerender\n\nSelf-hosted prerender service for SPAs — serves pre-rendered HTML to bots and crawlers via headless Chromium, disk caching, and sitemap-based cache warming.\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 0\n- Default branch: main\n- Created: 2026-04-10T04:25:50Z\n\n## Languages\n\n- Dockerfile\n- TypeScript\n\n## Topics\n\n- headless-chromium\n- prerender\n- puppeteer\n- seo\n- spa\n- web-crawler\n\n## Top Contributors\n\n- haku-d (2 contributions)\n\n---\n\n## README\n\n# prerender\n\nA self-hosted prerender service for JavaScript-heavy single-page applications (SPAs). It intercepts requests from SEO bots and crawlers, serves pre-rendered HTML from a disk cache, and uses headless Chromium (via Puppeteer) to render pages on demand.\n\n---\n\n## How It Works\n\n1. **Nginx** inspects the incoming `User-Agent`. If it matches a known bot (Googlebot, Bingbot, Twitterbot, etc.), the request is proxied to this service on port `8830`.\n2. The service checks a **disk cache** directory for a pre-rendered `.html` file keyed by the MD5 hash of the canonical URL.\n3. On a **cache miss** (or after the TTL expires), the service launches a headless Chromium tab via Puppeteer, waits for the page to fully hydrate, and saves the minified HTML to disk.\n4. The rendered HTML is returned to the bot with appropriate headers.\n5. A **scheduled job** crawls the site's XML sitemap and pre-warms the cache for all URLs.\n6. Bot request events are persisted to **PostgreSQL** and exposed via an analytics API.\n\n```merma",
+        "published": null
+      },
+      {
+        "title": "Seamless JavaScript Rendering for SEO, AEO, and LLM Visibility",
+        "url": "https://prerender.io/",
+        "snippet": "Seamless JavaScript Rendering for SEO, AEO, and LLM Visibility\n\n# Get your site discovered everywhere search happens.\n\nPrerender.io is an automatic fix for your JavaScript AEO and SEO problems, helping you get found wherever your audience searches: Google, ChatGPT, Reddit, and more. Better rendering means faster indexing, AI visibility, more traffic, and greater revenue potential.\n\nGet a Custom Solution\n\n- No credit card required\n- Set up in minutes\n\nConnect With Our Team\n\n## Experiencing these JavaScript SEO and AEO issues?\n\n## Low referral traffic from AI search and LLM-based search tools\n\n## High numbers of unindexed pages\n\n## Inaccurate content in SERPs\n\n## Link previews that fail to load on social media platforms\n\n## Poor PageSpeed Insights scores\n\nThese JavaScript SEO challenges directly impact your website’s visibility — ultimately limiting how well you reach your audience.\n\n## Results you can see from Prerender.io\n\nAn industry standard since 2014.\n\nBetter crawling\n\n0 x\n\nFaster indexing\n\n0 %\n\nIncrease in traffic\n\n0 %\n\n## How does Prerender.io help my business?\n\nA one-time integration for compounding results.\n\n## 100% better visibility in AI search\n\nAI crawlers struggle to execute JavaScript. Without a rendering solution like Prerender.io, your site’s important information may not show up in AI search results at all.\n\nPrerender.io solves this by converting your pages to HTML, an easier format for crawlers to process. We’ve found that this improves your AI search visibil",
+        "published": "2025-09-01T08:36:27.000Z"
+      },
+      {
+        "title": "How Prerender.io makes money — $2.5M ARR · Kaeda",
+        "url": "https://kaeda.co/cases/prerender-io",
+        "snippet": "How Prerender.io makes money — $2.5M ARR · Kaeda\n\n# Prerender.io\n\n👤 Todd Hooper (Solo dev hit his own JS-SEO wall, fixed it in a weekend, open-sourced it (24k visits day one), then charged from day one.)🌐 site LinkedIn\n\nA solo dev turned a weekend hack into a prerendering service serving 100k+ sites and 2.7B+ pages to crawlers.\n\nCharged day one. A real, urgent problem and a trivial one-line fix built a $2.5M solo business. But infra ran thin and SSR frameworks keep eroding the reason to exist.\n\n01 How the money moves\n\nA JavaScript site is invisible to Google's crawler\n\nAdd one line; Prerender serves crawlers static HTML\n\n02 The numbers\n\n$2.5M ARR Stated founder-stated, at exit\n\n2020-10\n\nthe sentence on the page\n\nHow I Bootstrapped My SaaS Company To $2.5M/Year In 5 Years As A Solo S Starter Story Search… ⌘K\n\n$2.5M ARR at exit founder\n\n100k+ businesses served saas.group\n\n2.7B+ pages to crawlers prerender.io\n\nSolo-built to $2M ARR before the founder's brother joined. saas.group teardown\n\n$2.5M ARR at exit — founder-stated in a Starter Story interview and echoed by acquirer saas.group.\n\nYou have the verdict. Members get the work behind it.\n\nStarter Story — Todd Hooper interview: solo to $2.5M ARR saas.group — Prerender post-acquisition (100k+ businesses, about $1M infra) Prerender.io — pricing (from $49/mo, usage-based) Indie Hackers — Prerender.io product (acquired by saas.group)\n\nRevenue is founder-stated (STATED, not a filing): Todd Hooper cited about $2.5M ARR / roughly $2",
+        "published": null
+      },
+      {
+        "title": "Edge Pre-rendering",
+        "url": "https://crawled.dev/docs/features/prerender",
+        "snippet": "Crawled - home\n\nFeatures Solutions Pricing Docs Blog\n\nLog in Start Free\n\n#### Getting Started\n\n- Introduction\n- Quickstart\n\n#### Features\n\n- Edge Pre-rendering\n- AI SEO Audit\n\n#### Reference\n\n- Plans & Limits\n\n§ Feature / Edge Pre-rendering\n\n# Edge Pre-rendering\n\nCrawled generates and caches rendered HTML snapshots of your public pages, then serves those snapshots to recognised search engines and AI crawlers from the edge. Normal users continue to experience the original website.\n\n## The pre-rendering edge function\n\nCrawled's pre-rendering edge function detects recognised crawler requests, checks for a cached HTML snapshot of the requested page, and serves the pre-rendered version from the edge. Where no snapshot exists, Crawled can generate or request one, cache it, and return crawler-readable HTML.\n\nSame content, two delivery paths.\n\nCrawled is not designed to show different content to crawlers and users. The pre-rendered snapshot should represent the same public content available to users.\n\n## How a request flows\n\n1. Request hits the edge - The pre-rendering edge function inspects the User-Agent.\n2. Recognised crawler? - If yes, Crawled looks up a cached HTML snapshot for that URL.\n3. Cache hit - The pre-rendered snapshot is returned immediately.\n4. Cache miss - Crawled generates a snapshot, caches it for 24 hours, and returns it. Subsequent crawler requests for the same URL are served from cache and don't count against your quota.\n5. Normal users - Pass through to your or",
+        "published": null
+      },
+      {
+        "title": "Pre-rendering for single-page apps (SPAs) | Prerender.io alternative | Encited.com",
+        "url": "https://encited.com/prerender-spa",
+        "snippet": "Pre-rendering and fast edge delivery for single-page websites | Prerender.io alternative | Encited.com\n\n# Make your single-page website indexable by Google and citable by AI \n\nServe fully-rendered HTML to search engines and clean Markdown to AI agents for faster indexing and crawlability, from the edge in milliseconds. Start with a 14-day free trial, no credit card required.\n\nmystore.com/alpine-trek-gtx\n\nFootwear / Trail Alpine Trek GTX 4.8 · 326 reviews $179 In stock 8 9 10 11 12 Add to cart\n\n < title> Alpine Trek GTX | Store</ title>\n\n < meta name=\"description\" content=\"Waterproof trail boots…\" />\n\n < h1> Alpine Trek GTX</ h1>\n\n < p> Waterproof Gore-Tex trail boots with a\n\n wide fit, grippy outsole and all-day\n\n cushioning for long approaches.</ p>\n\nMarkdown for AI agents\n\ntitle: Alpine Trek GTX\n\nprice: $179\n\navailability: In stock\n\nrating: 4.8 (326 reviews)\n\n# Alpine Trek GTX\n\n> Waterproof Gore-Tex trail boots with a wide\n\n> fit, grippy outsole and all-day cushioning.\n\n## Reviews\n\n- \"Kept my feet dry all week on the trail.\" 5/5\n\n- \"The wide fit is the real deal.\" 5/5\n\n- \"Great grip on wet rock.\" 4/5\n\n- \"Runs a half size small for me.\" 4/5\n\n### Fix the on-page issues blocking rankings\n\nCatch broken links, noindex tags, and title and metadata problems across every page, grouped by issue and ready to verify once fixed.\n\n### Analyze crawler behavior on your site\n\nSee which AI agents and search bots crawl your pages, what they fetch, and where they give up.\n\n+380M\n\ncrawler requ",
+        "published": null
+      }
+    ]
+  }
+}

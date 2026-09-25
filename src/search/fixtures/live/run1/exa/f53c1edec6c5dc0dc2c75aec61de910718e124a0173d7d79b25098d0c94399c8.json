@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "single page app not indexed by Google crawler complaint",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T13:40:19.682Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "single page app not indexed by Google crawler complaint",
+    "results": [
+      {
+        "title": "Troubleshoot Google Search crawling errors",
+        "url": "https://developers.google.com/search/docs/crawling-indexing/troubleshoot-crawling-errors",
+        "snippet": "Troubleshoot Google Search Crawling Errors | Google Search Central | Documentation | Google for Developers\n\n# Troubleshoot Google Search crawling errors\n\nHere are the key steps to troubleshooting and fixing Google Search crawling issues for your site:\n\n1. See if Googlebot is encountering availability issues on your site.\n2. See whether you have pages that aren't being crawled, but should be.\n3. See whether any parts of your site need to be crawled more quickly than they already are.\n4. Improve your site's crawl efficiency.\n5. Handle overcrawling of your site.\n\n## See if Googlebot is encountering availability issues on your site\n\nImproving your site availability won't necessarily increase your crawl budget; Google determines the best crawl rate based on the crawl demand, as described previously. However, availability issues do prevent Google from crawling your site as much as it might want to.\n\nDiagnosing:\n\nUse the Crawl Stats report to see Googlebot's crawling history for your site. The report shows when Google encountered availability issues on your site. If availability errors or warnings are reported for your site, look for instances in the Host availability graphs where Googlebot requests exceeded the red limit line, click into the graph to see which URLs were failing, and try to correlate those with issues on your site.\n\nAdditionally, you can also use the URL Inspection Tool to test a few URLs on your site. If the tool returns Hostload exceeded warnings, that means that ",
+        "published": "2025-12-18T00:00:00.000Z"
+      },
+      {
+        "title": "Page (s) not been crawled, not being indexed, and/or sitemap ...",
+        "url": "https://support.google.com/webmasters/community-guide/308723460/page-s-not-been-crawled-not-being-indexed-and-or-sitemap-not-being-processed?hl=en",
+        "snippet": "Page(s) not been crawled, not being indexed, and/or sitemap not being processed? - Google Search Central Community\n\nfalse\n\nSearch\n\nClear search\n\nClose search\n\nGoogle apps\n\nMain menu\n\n2281542896104839949\n\ntrue\n\nSearch Help Center\n\nfalse\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\n83844\n\nfalse\n\nfalse",
+        "published": null
+      },
+      {
+        "title": "When will Single Page App Pages be crawlable/indexable ...",
+        "url": "https://support.google.com/webmasters/thread/98295397/when-will-single-page-app-pages-be-crawlable-indexable-without-any-extra-effort?hl=en",
+        "snippet": "When will Single Page App Pages be crawlable/indexable without any extra effort? - Google Search Central CommunitySkip to main content\n\nSearch Console Help\n\nSign in\n\nGoogle Help\n\n* Help Center\n* Community\n* Search Console\n\n* Privacy Policy\n* Terms of Service\n* Submit feedback\nSend feedback on...\nThis help content & information\nGeneral Help Center experience\nNext\n* Help Center\n* Community\n* Search Console\nfalse\nSearch\nClear search\nClose search\nGoogle apps\nMain menu\n4468067714703848467\ntrue\nSearch Help Center\ntrue\ntrue\ntrue\ntrue\ntrue\n83844\nfalse\nfalse",
+        "published": "2021-02-15T00:00:00.000Z"
+      },
+      {
+        "title": "Google Crawling and Indexing | Google Search Central ...",
+        "url": "https://developers.google.com/search/docs/crawling-indexing",
+        "snippet": "Google Crawling and Indexing | Google Search Central | Documentation | Google for Developers\n\n# Overview of crawling and indexing topics\n\nThe topics in this section describe how you can control Google's ability to find and parse your content in order to show it in Search and other Google properties, as well as how to prevent Google from crawling specific content on your site.\n\nHere's a brief description of each page. To get an overview of crawling and indexing, read our How Search works guide.\n\n| Topics | |\n| --- | --- |\n| File types indexable by Google | Google can index the content of most types of pages and files. Explore a list of the most common file types that Google Search can index. |\n| URL structure | Consider organizing your content so that URLs are constructed logically and in a manner that is most intelligible to humans. |\n| Sitemaps | Tell Google about pages on your site that are new or updated. |\n| Crawler management | Ask Google to recrawl your URLs Managing crawling of faceted navigation URLs Large site owner's guide to managing your crawl budget How HTTP status codes, and network and DNS errors affect Google Search Google crawlers |\n| robots.txt | A robots.txt file tells search engine crawlers which pages or files the crawler can or can't request from your site. |\n| Canonicalization | Learn what URL canonicalization is and how to tell Google about any duplicate pages on your site in order to avoid excessive crawling. Learn how Google auto-detects duplicate co",
+        "published": "2025-12-10T00:00:00.000Z"
+      },
+      {
+        "title": "Page Crawled But Not Indexed: The Real Reasons | DataJelly Blog",
+        "url": "https://datajelly.com/blog/crawled-not-indexed",
+        "snippet": "Page Crawled But Not Indexed: The Real Reasons | DataJelly Blog\n\nApril 2026\n\n# Page Crawled But Not Indexed: The Real Reasons (Not What Google Tells You)\n\n\"Crawled – currently not indexed\" means Google fetched your page and rejected it. In most cases, it has nothing to do with \"content quality.\"\n\nWe see this constantly:\n\n2–5 KB\n\nHTML response\n\n<100\n\nWords of visible text\n\nEmpty\n\n + scripts\n\nResult: Google crawls it, never indexes it, and moves on.\n\nThis isn't a content quality problem. It's a delivery failure.\n\nTable of Contents\n\nReading progress 0%\n\n## The Real Problem\n\n\"Crawled – currently not indexed\" means Google fetched your page and decided it wasn't worth indexing. The Google Search Console message is vague by design — it tells you almost nothing about why.\n\nWe see this constantly on React, Vite, and Lovable builds. The pattern is always the same:\n\nBrowser view\n\n3,000–8,000 words, full UI, interactive components\n\nRaw HTML response\n\n2–5 KB, mostly tags, no usable content\n\nIf your ` ` doesn't contain real text on first response, Google has nothing to evaluate. It crawls the page, sees an empty shell, and drops it.\n\n## What's Actually Happening\n\nGoogle does not fully render every page. It decides whether to invest in rendering based on the initial HTML response. This is the part most people miss.\n\nGoogle's actual flow:\n\n1. 1 Fetch HTML\n2. 2 Evaluate HTML (size, structure, text content)\n3. 3 Decide whether to render JS — this is the cutoff\n4. 4 Attempt render (best effort,",
+        "published": "2026-04-10T22:00:26.000Z"
+      }
+    ]
+  }
+}

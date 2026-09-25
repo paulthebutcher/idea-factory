@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { ENV, MODELS, PATHS, loadPrompts, type Mode, type PromptSet, type Stage } from "../config.js";
 import { openDb, type Db, type RunRow } from "../store/db.js";
 import { createSearchClients } from "../search/index.js";
-import { createModelClient, BudgetExceededError, type ModelClient } from "../model/client.js";
+import { createModelClient, BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
 import { TraceCollector } from "../trace.js";
 import { runKillGate, type KillGateRunResult } from "../stages/kill_gate.js";
 import { runViability, type ViabilityRunResult } from "../stages/viability.js";
@@ -144,7 +144,12 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
     }
   } catch (e) {
     if (e instanceof BudgetExceededError) status = "budget_exceeded";
-    else {
+    else if (e instanceof FatalApiError) {
+      // Credits, key or permission: nothing else in this run can succeed. Stop here; open tasks stay open for a resume.
+      db.finishRun(runId, "error");
+      console.error(`run ${runId} aborted: ${e.message}`);
+      return { runId, status: "error", spentUsd: db.getRun(runId)!.spent_usd, results, critic };
+    } else {
       db.finishRun(runId, "error");
       throw e;
     }

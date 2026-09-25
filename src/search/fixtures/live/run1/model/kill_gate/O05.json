@@ -1,0 +1,237 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "O05",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:39:22.502Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "0cb29afb52d85358c8b5a6dcf3541343b09b4fce72cad3e1488d6b5753387ffd",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2091,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2091,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 279,
+        "output_tokens_details": {
+          "thinking_tokens": 40
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0082275,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE2c1uuzD5ZvyabJtx7",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Et0CCpABCBIYAipAXdg56F2eqA5DEmGEFNowtNPqBXki4PtwsUtOfQR6THOF4UExm/gP/aQX0hswnY1smAquZgbQuxONULsUXTzKqDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAbmF19UGEgwuBBCrbDWmUh8FmRYaDLqwKkekXDe0DDgjiCIwQE0xoKpPrXwTXV1XO5WTdsxY9/B+dzhXBvq+yvaQcdOpWMLlpUM7lJaFzYBJvXiPKno7Tdw/gwMS4BRVTuxGdYIL5zJJyT+RgaQ3RupyivK15aW7BmGRKOqOHeuS8ns6O+NoHXYrzT8NXm7whZUFOo+1YkAZmLcw0pWcomLRysa58siVPzcMW0o/nK8mHNXOS0yROlQuFGnY3I+EQIf9Xj+f62XMRpU/zBIW5RgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Q8BDKaNZkaFeRX8mL2AgMx",
+            "name": "exa_search",
+            "input": {
+              "query": "Foundry Gather friend-sourced prototypes platform"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BmStVa1p1h1FeWUvMDQBZ1",
+            "name": "exa_search",
+            "input": {
+              "query": "friend-sourced prototype building service startup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01EseoTthYCjH9sB2e6a7i9M",
+            "name": "brave_search",
+            "input": {
+              "query": "Foundry Gather prototype builder platform"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RpmNj85i7SoGMbnPWiaxp7",
+            "name": "brave_search",
+            "input": {
+              "query": "\"friend-sourced\" prototypes app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2091,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2091,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 279,
+          "output_tokens_details": {
+            "thinking_tokens": 40
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "72698cec1b44cda12b5b755bba03b18e2e5ec1b3823496a0d135f60a7bb53a28",
+      "usage": {
+        "input_tokens": 6955,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2091,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 412,
+        "output_tokens_details": {
+          "thinking_tokens": 277
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0184482,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE3BLsf7Gf1AYWCrQmq",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsIICpABCBIYAipAOvQ8zpQJC4iNgbE+AJE7G6mJ5+7fvd+egsEPpBxBESa5uulZ3d/mmBCauFGebg0B3h2T7h8gIEy5YsKBIR9FFTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcSF19UGEgyfrPLkxSeYwwoetDUaDOtr5ElAutm/+G7yxSIw0jvrl7ToNddzDGeRiGmHmj+pENWEn+mL+rqghcSnjR/MHPV5lWK8lPlRT4Fp1UpkKt4GD/GKyKJzI0FcBp84hfXSunwVgrmzJ5xJ2/xnagYXy47vUhP2QL5DepK0ZDgO6NZw4otl0SzRsEdyWqNElmIyuA4+Xbs+gRBRiUhE2c7a/TKsBlWyZnepidO7QJcaklspyDTTTfJqtK6gE46a/67JoJD0D8mfifs+D6nUNzPgDP/ZSXX4zLuJoaPZiUxH/7l7SuPq4iERorUeFJCpPy9sS6FohzHeHCB4U1GGueFmiwH4wjfyUHnTBNzhX39hs/5z747w4dWDl16eZK1I3KgwJbJ5vw7+043hZ5kNNWIlATc6ajP4WuEPOQwwmAcWVgCNH/5VEdar16y3sPyEJid3Pe1SUbir+BsmzLVzR/bYgr6DyWQ6iXhyNLrlv63Q61nchCCwNCQ8DSyhlQbi8EbETXHyamLHwhG1ZbnawQGeOoV0wRVkrwKpNdOtFtoeS9f656U+RuzWvoNLA0MfjC1LFXWjRKFo8FkQVLGAYHXvtZrnTI8PvYvvgAl3ixj7uXGAm+Ew5HAh+zZoBmbvQOPI107ZJiUdlyBQ8DWHaSMylrBN/7Lgh7lfbKGxmJyEd/KXghtUNgqQRsywHWHRhyUbVDWHSj3fqeFAORIlD92qkvCKsq6FAKQr7xhqooQr2kaNgy/X15Pd8TTDvkRhTktEXop0Orj/kvijbdy2e5yd73nWdHAmaivcfdOrs6eYJYsSYuqKCcpmCqx5ge4fd5nh6BhGYkLhuUHWCD3L6NYD3MVZzzPJ0ctObZmV0Gq6ZmTJqzVlWMrF9pnWxQGZba7aW0Pot7GEeSJM1RCI7C57udnUDWDd0lyiZXF6Toc7cDwhNOB/AuAvzxiPwE+WqY3Rjm13krQBSuEi5Pdod6nM0gGrRz3cW40jfmxLgiBg3B4NgYiUoC4q02E0XfOlhntq3RtHM11nCQ48JS0XOAwHXZYr0iBCFikVUx02ifgPqN1l0RfR1TyDXtv03EQuYpd2FztV/bMtc7yivKAndDqJw+Vv974beWlJ2Np8ZVeim6Jkh/wSMz5+EymVpI6eLlH/nKRdacw9YvXIlY/upLdhPxgVcJOlFrkYKP+eHfE6BP4NYSYvEELdU3rKRMVyH2xdRnHtXNdEmJrrbpTkazkjMuIaKfKx2M/sSUdL0dj7nRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012UmFVhLnvtieBehsfToeAJ",
+            "name": "exa_search",
+            "input": {
+              "query": "crowdsourced prototype building network for friends startup idea validation"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UM9qTD78awNZSDLwE9pKNB",
+            "name": "brave_search",
+            "input": {
+              "query": "\"Foundry\" \"Gather\" friend sourced prototype network startup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 6955,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2091,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 412,
+          "output_tokens_details": {
+            "thinking_tokens": 277
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "c3266d707d536b43d72ec85f04798c585e17e5e1dc60ad9aa94e1d11a878ca6a",
+      "usage": {
+        "input_tokens": 11527,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2091,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1106,
+        "output_tokens_details": {
+          "thinking_tokens": 142
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0345322,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE3hT7ofFQ5SBL9KKi5",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Er4FCpABCBIYAipALrNMiDzPKLFrHodB0d2vbBpSk+i6gwO+veyPPXA8mq7SWxdTF8PCbY9sjZ2BGNSepv1HJpH+TrzTvKioNGcvYDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAcmF19UGEgwpTn2t0O8EXtxLBlsaDOQ6Q9jatZRHPj9ShCIw+C5yBW8/JJr1gh0CRzQtUYaSPpkv25jHAtTalygev0YUQ60CD9Xsp5577UHPqMIGKtoDP7wQJr2ebcGy4KJpF0qyRHjYjDrgR8rSQsYTkx8ojL0YF18awFNbUo2S1JmAqnjIFjr5W4R244++CJpQMyOkHfVnzDwVdovgciZt3fOzOvI9FSwAzhglrxH7KFX8JM8xVj1D+igTJocqXJopbRcw0iqkK43K6HttnAQmgc0HD5S4AG50lgnbTzJ44uqjJ8JZz1RvT8uFUI1CTQCneXfuHEgT3yHaqJhFIylpcDRwSXRF+56p0dyRy0izrQjaDwalFrJFOZhDiGKZZf7BQjP5giVf/Ny+Q533jTdtOKCfhmJS8Dn0nLQ1sql9S8Cv9yLfUbbxMPPvcOtNUw1oiuwXd0XUyRJ/hpXXSNfdCYIcM80c2eEk++yl4/9RyF/PcDvEB7UwA2h4tV2TH3QhjqdVMSCDE87kztQ/g51Q9tmPWomzjUjrEjwC6xcyAakmTC5ur8MY7MD1lOl44aE9dYdFfHYwDm8lQxyjLsxB8vhoa9hW4r69tLrrakYQcoebmKnMbfyvi1a1orjJQuE+rF1TiaPlJPlnDhF4zDYqOkLd2kKXVV33NOiPY0iIQPcTdYX2p+xDRmyO8lJQfz2rlqRkM1WU4okdpSjXNydCA0UeicGXOiDMzGd5te7vGAE="
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"O05\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"Idea text describes friend-sourced prototype building; no regulated activity (funds custody, licensed advice, professional-of-record liability) is implied.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"unknown\", \"evidence\": \"Idea references 'Foundry' and 'Gather' as tools/platforms but gives no detail on what API or platform dependency the business would rely on for a core function; insufficient specificity to determine a single-vendor revocation risk.\", \"source_url\": null },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"No physical inventory purchase, storage, or shipping is described; 'prototypes' here appear to be software/product prototypes built with digital tools, not physical goods requiring fulfillment.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"No capital-intensive infrastructure (manufacturing, fleets, facilities) is implied by the one-line description.\", \"source_url\": null }\n  ],\n  \"flags\": [\n    { \"id\": \"T6\", \"evidence\": \"The idea is a one-line placeholder ('one-line description to confirm') with no defined customer problem, product, or monetization path, making a 90-day path to a paying customer unverifiable.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"buildapart.io\", \"url\": \"https://buildapart.io/\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"Crowdsourced community-based part fabrication and prototyping, similar 'friend/community-sourced prototype' concept.\" },\n    { \"name\": \"Foundry (foundry-app.com)\", \"url\": \"https://www.foundry-app.com/\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"Social network for builders to post projects/prototypes and find collaborators — closest name match to 'Foundry' referenced in the idea.\" },\n    { \"name\": \"People.Build\", \"url\": \"https://people.build/\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"Platform for finding builders/team to build prototypes together, conceptually similar to 'friend-sourced prototypes'.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"Foundry Gather friend-sourced prototypes platform\",\n      \"friend-sourced prototype building service startup\",\n      \"crowdsourced prototype building network for friends startup idea validation\"\n    ],\n    \"brave\": [\n      \"Foundry Gather prototype builder platform\",\n      \"\\\"friend-sourced\\\" prototypes app\",\n      \"\\\"Foundry\\\" \\\"Gather\\\" friend sourced prototype network startup\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 11527,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2091,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1106,
+          "output_tokens_details": {
+            "thinking_tokens": 142
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

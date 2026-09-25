@@ -1,0 +1,221 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "A18",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:36:48.357Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "170ba577c105a34cc77c3f4efb96e2fb737d7d6913a88f144d371e6c15c232f9",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2120,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2120,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 259,
+        "output_tokens_details": {
+          "thinking_tokens": 18
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0081,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDqEJ8yriMZ1Nd2M3SP",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EqkCCpABCBIYAipAbE9ftC8IChoNLkcbl9EZLTEbAOD6A+QiKXvbgBeADTYm42XUAk5cOsZ/q2twPOoQ1PvLHvg4MczOi3uwXhae0DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAZ6E19UGEgzO19PiRaYnbqornbAaDFKF6j1/Oha2XCDMTiIweft3jtg7yl3e3at2RlIQR27suG/BlCTDNGQEZPMWHIGBoAhXWntP3bifo8GF9SRyKkbttzLwD94kmCtxtGncb7FhClmS7KXG2qUZ833Hkq176OqWe3RDU9AZi8wVtLtYypYKqxwb1tWdarzcQM3aOCt9jc/8TnLTGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01S62x7wc2FrsymiLJ2F5PRL",
+            "name": "exa_search",
+            "input": {
+              "query": "resume tool employment gaps career trajectory recommendation"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LdVdePUkNUncJPihh2nf8t",
+            "name": "exa_search",
+            "input": {
+              "query": "AI resume gap career coaching software"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PEFzQNHvpVivscuEPEmtCN",
+            "name": "brave_search",
+            "input": {
+              "query": "resume gap reframe tool AI career trajectory"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011oZcEt8cRXcaAcMf4pefBy",
+            "name": "brave_search",
+            "input": {
+              "query": "career coaching AI resume employment gap software pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2120,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2120,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 259,
+          "output_tokens_details": {
+            "thinking_tokens": 18
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "d648c295ce0556ee77a8a8b18c30ead97f77c105efcd4637f4288c9abd339c1e",
+      "usage": {
+        "input_tokens": 8456,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2120,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 297,
+        "output_tokens_details": {
+          "thinking_tokens": 237
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.020306,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDqgu3QvJxJMJ7u4NAJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eq8HCpABCBIYAipAL+ZE8PRs+jwriLtEskNp+G97M4QoTneV+SpisKfnhtevSqSoUJ6Kq0q5+A0K4z5RZ7JdkJJs0at7ohlKrskmnjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAaiE19UGEgznxqMTwYpbr6+IRrcaDJdZXKAO6aen5YC9JSIwxkNA4nHWZTX3hLUjsY8LQIVI2GoFO1ApXhfh8WDI4cpvyePAkzCjPOOOYzVceYwoKssFUjnpyNsNKcSR+8dXbONQaoQleIG7jHv+pvc/BWGRJYCtq4zJZW5/UcRw6E/87j+C7WGhTkpHDnY0faxn7By6g06RPDaCoRpXU3eHG1cmOWmRLTff0jl5nIe2HzdybHdc9/jdwigrZ3SjYxjgj7U4IWLCnkVvsXd/5OyU84ZfD4HSnsHpnrg3vBJ3sdb486rapHp0zO/GUGZpSIlHzd16B52uPzKplyZxmVUg7U4k87kav5DjXcVygLyTaZmTzsRaMu1AHG/yl9tfUweaC1Xniro2VYiSUQ9Vf/tSAeKGmJnR8YQWrfVboD768CterVdy8dzWoGsU20AjQaM8++nIjvSJWrJo5ZybZBRxXfOBVkLG6k4rBHnakTIE9mBPO0f2sYOlz6lwLOfZX9q8m8Wi86fEHECEfXm/h3e0NX4GmSG2FNiZGtyJkPz6sToYVejSbwKKQ4pEpgHLoUD9BIfUFoJDY9icdhtfkAizhBRXELxu8R+nzEowxPgy0Uyv0pxn17fjZ9FlxFAG/5ZABbDzapxpsArWrHjHAiThiZzu0FV08qlxwl1SaF0gODKTtKbvJ2mYpIrQkqIcP3lk/HHfhgRuW8JKfRhMCb8bW6ZOrFjx0nrPIDvGulQ/8G1T34uEEJL9qszWZJNm8uspRzXICCsGeZD3GEPHgYgTa1p8WmASniamaDKMvOSd31TfKBo7mKLXwoFMyBvpfp7lo7iqR6PUgDqBq5i5cgWGNIfBt3JScRP7xqUB1q+SectFps+eQY+NN/HbP4LXbRmg3rSH8EuJqRvqmFCi6lBpFwH9MoLTTO5lE4C5Y8Z2r4a+yQDjTMq6qbjbq+AoFG+VrQ8b0PUj0y4vIomakj9w1sVKM6g+kwONPQW0jxRT2NJbF0CdvQTmi38/OF8O9QB6q7fV7LSqj4df9NKE+qvgT0eQ64U6LN6HV0zHjvxmoBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JH4NxTDCM8ywnYpgyWU7pr",
+            "name": "brave_search",
+            "input": {
+              "query": "career coaching license required state law regulation"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8456,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2120,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 297,
+          "output_tokens_details": {
+            "thinking_tokens": 237
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "e469eff4789cb6e1c64a12fbefcd709e14c031ba93518fa2838a5dfba3987bdc",
+      "usage": {
+        "input_tokens": 9524,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2120,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1147,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.030942,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDr5pCTwP9LDnuYxcjR",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A18\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"Career coaching / resume advice is not a licensed profession in the US (unlike therapy/legal/financial advice); no state requires licensure for career coaching, and the tool does not hold funds or bear professional liability for outputs.\", \"source_url\": \"https://paperbell.com/blog/legal-requirements-for-life-coaching/\" },\n    { \"id\": \"T2\", \"result\": \"pass\", \"evidence\": \"No dependency on a single revocable third-party API is inherent to the idea; it can run on standard LLM APIs used by many similar tools (GapZero, Kickresume, CoachGPT) without violating platform terms.\", \"source_url\": null },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"Purely digital resume analysis/recommendation tool; no physical inventory involved.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"Software-only product buildable by a solo founder with AI agents; comparable competitors (GapZero, ResAlign, WeGoUp) are small teams/solo-built tools.\", \"source_url\": \"https://gapzero.app/\" }\n  ],\n  \"flags\": [\n    { \"id\": \"T6\", \"evidence\": \"Numerous live competitors (GapZero, Kickresume AI Career Coach, CoachGPT Resume Gap Explainer, ResAlign, WeGoUp, Kareeo) show a validated path to first paying customers within 90 days via self-serve SaaS/freemium models.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"GapZero\", \"url\": \"https://gapzero.app/\", \"relationship\": \"direct\", \"pricing\": \"Free\", \"evidence\": \"AI career gap analysis and roadmap tool from resume upload, closely matches idea.\" },\n    { \"name\": \"CoachGPT Resume Gap Explainer\", \"url\": \"https://coachgpt.com/tools/resume-gap-explainer\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Tool specifically for generating positive framing for employment gaps.\" },\n    { \"name\": \"ResAlign AI\", \"url\": \"https://resalign.com/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Resume upload, gap identification, and trajectory/roadmap generation.\" },\n    { \"name\": \"Kickresume AI Career Coach\", \"url\": \"https://www.kickresume.com/en/online-ai-career-coach/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"Identifies skill gaps and suggests career path/next steps from resume.\" },\n    { \"name\": \"WeGoUp Coach\", \"url\": \"https://wegoup.ai/\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"AI skill gap analysis and learning path generator, adjacent trajectory planning tool.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"resume tool employment gaps career trajectory recommendation\",\n      \"AI resume gap career coaching software\"\n    ],\n    \"brave\": [\n      \"resume gap reframe tool AI career trajectory\",\n      \"career coaching AI resume employment gap software pricing\",\n      \"career coaching license required state law regulation\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 9524,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2120,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1147,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

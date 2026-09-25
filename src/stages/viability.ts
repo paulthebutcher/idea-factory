@@ -12,7 +12,7 @@ import { z } from "zod";
 import { MODELS, renderTemplate, type PromptSet } from "../config.js";
 import type { Db } from "../store/db.js";
 import type { SearchClients } from "../search/index.js";
-import { BudgetExceededError, type ModelClient } from "../model/client.js";
+import { BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
 import type { TraceCollector, TraceEvent } from "../trace.js";
 import { extractJson, scanForInjection } from "./kill_gate.js";
 
@@ -207,7 +207,7 @@ export async function runViability(ctx: ViabilityContext): Promise<ViabilityRunR
     }
   } catch (e) {
     const result = fail(`stage call failed: ${e instanceof Error ? e.message : String(e)}`, null);
-    if (e instanceof BudgetExceededError) throw e;
+    if (e instanceof BudgetExceededError || e instanceof FatalApiError) throw e;
     return result;
   }
   if (finalText == null) return fail(`no final answer after ${maxIterations} model calls`, null);

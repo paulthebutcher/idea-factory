@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "LLM tool CI pipeline predicts flaky tests blocking",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:36:29.474Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "LLM tool CI pipeline predicts flaky tests blocking",
+    "results": [
+      {
+        "title": "github.com/mdryaaan/flakehunter",
+        "url": "https://pkg.go.dev/github.com/mdryaaan/flakehunter",
+        "snippet": "# github.com/mdryaaan/flakehunter\n\n- Version: v0.1.1\n- Go: 1.22.0\n- License: MIT\n- Repository: https://github.com/mdryaaan/flakehunter\n\n## Links\n\n- SOURCE_REPO: https://github.com/mdryaaan/flakehunter\n\n## Dependencies\n\n| Module | Version |\n| --- | --- |\n| github.com/fatih/color | v1.17.0 |\n| github.com/google/go-github/v66 | v66.0.0 |\n| github.com/olekukonko/tablewriter | v0.0.5 |\n| github.com/spf13/cobra | v1.8.1 |\n| github.com/stretchr/testify | v1.9.0 |\n| golang.org/x/oauth2 | v0.23.0 |\n\n## Indirect Dependencies\n\n| Module | Version |\n| --- | --- |\n| github.com/davecgh/go-spew | v1.1.1 |\n| github.com/google/go-querystring | v1.1.0 |\n| github.com/inconshreveable/mousetrap | v1.1.0 |\n| github.com/mattn/go-colorable | v0.1.13 |\n| github.com/mattn/go-isatty | v0.0.20 |\n| github.com/mattn/go-runewidth | v0.0.9 |\n| github.com/pmezard/go-difflib | v1.0.0 |\n| github.com/spf13/pflag | v1.0.9 |\n| golang.org/x/sys | v0.25.0 |\n| gopkg.in/yaml.v3 | v3.0.1 |\n\n## Versions\n\n| Version | Published | Default |\n| --- | --- | --- |\n| v0.0.0-20260817100000-3405f1b668fa | 2026-08-17T10:00:00Z | |\n| v0.0.0-20260818015128-17fab4bdf0e5 | 2026-08-18T01:51:28Z | |\n| v0.0.0-20260818022530-8f3ef7c7edb5 | 2026-08-18T02:25:30Z | |\n| v0.0.0-20260818022913-8864407befe8 | 2026-08-18T02:29:13Z | |\n| v0.1.0 | 2026-08-18T02:21:38Z | |\n| v0.1.1 | 2026-08-18T02:25:30Z | yes |\n\n---\n\n## README\n\n \n\n# 🔍 flakehunter\n\n**Finds flaky tests in your GitHub Actions CI, uses an LLM to explain why they're flaky, and tells yo",
+        "published": null
+      },
+      {
+        "title": "deghosal-2026/ai-flake-sleuth",
+        "url": "https://github.com/deghosal-2026/ai-flake-sleuth",
+        "snippet": "# deghosal-2026/ai-flake-sleuth\n\nLangGraph agent that fetches CI run history, classifies failures (real bug vs flaky vs infra) by log pattern + cross-run correlation, and proposes quarantine/fix/retry actions for human decision.\n\n- Stars: 2\n- Forks: 0\n- Watchers: 2\n- Open issues: 1\n- License: MIT License\n- Default branch: main\n- Created: 2026-07-18T00:01:57Z\n\n## Languages\n\n- Python\n\n## Topics\n\n- ci\n- devops\n- flaky-tests\n- github-actions\n- langgraph\n- open-source\n- python\n- testing\n\n## Top Contributors\n\n- deghosal-2026 (16 contributions)\n- dependabot[bot] (3 contributions)\n\n---\n\n## README\n\n# ai-flake-sleuth\n\nCI\nLicense: MIT\nPython 3.11+\nPyPI\nRuff\nType checked\nContributor Covenant\nOpenSSF Best Practices\n\n**LangGraph agent that diagnoses flaky CI tests across 12 test frameworks and 5 languages.** Fetches GitHub Actions run history, parses test output from CI logs, classifies failures (real bug vs. flaky vs. infra) using rules + LLM, and produces a CI health report.\n\n> Flaky tests destroy CI trust. When the pipeline is red 30% of the time for random reasons, engineers ignore ALL failures — including real bugs. This agent tells you which tests you can't trust.\n\n---\n\n## Why This Exists\n\nFlaky tests are not a \"nice to fix\" problem. They are a systemic drain on engineering productivity, CI compute budgets, and — most critically — the trust that makes CI worth running at all.\n\n| Data Point | Source |\n|-----------|--------|\n| 51% of developers experience flaky tests weekly | Gruber & ",
+        "published": null
+      },
+      {
+        "title": "ATI: Adaptive Test Intelligence — A Unified Modular Microservice for Flaky Test Detection, Cost-Bounded LLM Repair, and Configurable Autonomy in CI/CD",
+        "url": "https://doi.org/10.5281/zenodo.20804238",
+        "snippet": "# ATI: Adaptive Test Intelligence — A Unified Modular Microservice for Flaky Test Detection, Cost-Bounded LLM Repair, and Configurable Autonomy in CI/CD\n\nZenodo (CERN European Organization for Nuclear Research). Published: 2026-06-22. Preprint. 0 citations.\n\n## Abstract\n\nThis paper presents ATI (Adaptive Test Intelligence), the first system to unify flaky test detection, cost-bounded LLM repair, and configurable autonomy under a single modular REST microservice. ATI comprises 18 modules arranged in a seven-stage pipeline (Generate → Select → Triage → Heal → Detect → Diagnose → Score), of which four invoke large language models (ATG, SHA, RCA, VRH) and 14 are fully deterministic. A frequentist invocation gate (HSP) bounds LLM cost by suppressing calls on stable tests, and a configurable AutonomyMode dial (MANUAL / GATED / SUPERVISED / AUTONOMOUS) controls human-in-the-loop oversight. A live CI/CD harness across eight scenarios and seven error types confirms 100% repair rate at ≈19 s machine MTTR in Autonomous mode, eliminating unbounded human approval latency without degrading repair quality. All modules share a single SQLite persistence layer and are released as open-source under the Apache 2.0 licence.\n\n## Authors\n\n- Kavita Jadhav (LPA Software Solutions (United States)): h-index 1; 2 citations; corresponding author\n\n## Topics\n\n- Software Testing and Debugging Techniques\n- Software System Performance and Reliability\n- VLSI and Analog Circuit Testing",
+        "published": "2026-06-22T00:00:00.000Z"
+      },
+      {
+        "title": "Testhide — CI/CD with 8 embedded AI models",
+        "url": "https://testhide.com/",
+        "snippet": "Testhide — CI/CD with 8 embedded AI models\n\n# Tests fail. AI explains why. \n\n Testhide is a full CI/CD platform where 8 specialized ML models analyze every failure automatically — root cause, flakiness, log patterns, similar failures, Jira auto-link. One pipeline YAML. Zero AI configuration. \n\n → Self-hosted Docker, free forever. → Cloud from $49/mo. → pytest · jest · xUnit · JUnit · Playwright. \n\n ~/testhide / pipeline.yml build #5041 \n\n```\n# ~/testhide/pipeline.yml  —  this is all you write\nname: payments-regression\nsteps:\n  - name: unit_tests\n    type: pytest\n    path: tests/unit/      # ✓ 48 passed, 0 failed\n\n  - name: e2e_payments     # ← failed step\n    type: pytest\n    path: tests/e2e/\n    expected: success\n    actual:   FAIL (exit 2, 47.2s)\n\n  - name: llm_quality_check\n    type: llm_eval\n    prompt_ref: support_quality_v4\n    judge: gpt-4o\n    on_fail: block_pr\n\n# ── stderr (e2e_payments) ──────────────────────\nrequests.exceptions.HTTPError:\n  502 BadGateway /api/v1/charge\n  retry attempt 3 of 3\n```\n\n```\n# Root-Cause Classifier — DistilBERT (fine-tuned)\n# runs automatically on every failed step\n\n→ classification: ENV_FAILURE\n→ confidence:    0.87\n→ alt classes:\n     PRODUCT_BUG   0.09\n     TEST_ISSUE    0.04\n\n# top evidence tokens\n\"502 BadGateway\" · \"retry attempt 3\"\n\"/api/v1/charge\" · \"HTTPError\"\n\n# verdict: infra issue — not your code\n```\n\n```\n# Flakiness Predictor — gradient-boosted ensemble\n# 41 features: temporal, failure history, env, build context\n\n→ verdict:  ",
+        "published": null
+      },
+      {
+        "title": "slavkurochkin/ci-sherlock-agent",
+        "url": "https://github.com/slavkurochkin/ci-sherlock-agent",
+        "snippet": "# slavkurochkin/ci-sherlock-agent\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 0\n- Default branch: main\n- Created: 2026-03-05T02:23:22Z\n\n## Languages\n\n- Python\n\n## Top Contributors\n\n- slavkurochkin (20 contributions)\n\n---\n\n## README\n\n# CI Sherlock\n\n> AI-powered CI failure investigation for GitHub Actions. Understands what changed, why tests broke, and what to fix.\n\nCI Sherlock plugs into any GitHub Actions workflow. After your tests run, it correlates failed tests with the files changed in the PR, asks an LLM to reason about the root cause, posts a summary comment on the PR, and stores history for flaky test detection over time.\n\n---\n\n## What it does\n\n- **Failure analysis** — matches failing tests to changed files in the PR diff\n- **Root cause reasoning** — uses GPT-4o to explain what likely broke and why\n- **Flaky test detection** — tracks retry patterns and failure rates over runs\n- **CI optimization** — surfaces slow tests, missing caches, parallelization opportunities\n- **Dashboard** — Streamlit UI for browsing run history and test health trends\n- **Release readiness score** — composite score based on stability, flake rate, and performance\n\n---\n\n## How it works\n\n```\nPR opened / push\n      │\n      ▼\nGitHub Actions runs your tests (Playwright)\n      │\n      ▼\nci-sherlock analyze\n  ├── Parses Playwright JSON report\n  ├── Fetches PR diff from GitHub API\n  ├── Correlates failures ↔ changed files\n  ├── Asks GPT-4o for root cause + suggestions\n  ├── Writes results to SQLi",
+        "published": "2026-03-05T00:00:00.000Z"
+      }
+    ]
+  }
+}

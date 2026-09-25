@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "runtime guardrail for AI agents trace replay block unsafe execution",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-09-25T00:36:49.855Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "runtime guardrail for AI agents trace replay block unsafe execution",
+    "results": [
+      {
+        "title": "ducminhle1904/TraceGate",
+        "url": "https://github.com/ducminhle1904/TraceGate",
+        "snippet": "# ducminhle1904/TraceGate\n\nAgent harness-as-code for tool-call contracts, replay, and policy gates.\n\n- Stars: 3\n- Forks: 0\n- Watchers: 3\n- Open issues: 0\n- License: MIT License\n- Default branch: main\n- Created: 2026-06-07T02:54:53Z\n\n## Languages\n\n- JavaScript\n- TypeScript\n\n## Top Contributors\n\n- ducminhle1904 (26 contributions)\n\n---\n\n## README\n\n# TraceGate\n\n \n \n \n\ncore npm\ncli npm\nadapters npm\nCI\nlicense\ndocs\n\nTraceGate is a CI-first contract, replay, and policy harness for agent tool calls. It lets\ndevelopers define tool contracts, enforce policy gates, redact trace data, capture JSONL traces,\nrun matrix tests, and replay behavior in CI without replacing their agent framework.\n\nAI agent demos usually fail in the spaces between final answers: the model calls the wrong\ntool, skips evidence, sends a risky action for approval too late, leaks a token into logs, or\nchanges tool behavior after a prompt or model update. TraceGate turns those behaviors into\ncontracts that can be reviewed, tested, and replayed.\n\nTraceGate workflow\n\n## Why TraceGate\n\n- Test tool behavior, not just final text.\n- Validate tool input before execution.\n- Gate side-effecting tools with explicit policy verdicts.\n- Record ordered traces that are useful for debugging and replay.\n- Compare stable behavior in CI while ignoring generated ids and timestamps.\n- Export downstream views to OpenTelemetry, Langfuse, and Braintrust-compatible formats.\n\nTraceGate is intentionally framework-neutral. Use it with OpenAI Age",
+        "published": null
+      },
+      {
+        "title": "amanai v0.3.1",
+        "url": "https://pypi.org/project/amanai/",
+        "snippet": "# amanai v0.3.1\n\nAction Policy Engine for AI agents: policy-as-code for tool-calls — evaluate, enforce (block/warn/approve), and trace agent actions, with the same policy asserted in CI. Plus local guardrails and an offline judge. Pure-Python, zero dependencies.\n\n- Author email: Aji Purnomo <hi@aji.is-a.dev>\n- Python: >=3.10\n- Package URL: https://pypi.org/project/amanai/\n\n## Keywords\n\nagent, ai, guardrails, llm, owasp, pii, policy-as-code, prompt-injection, security, tool-call\n\n## Version History\n\n| Version | Uploaded | Type | Yanked |\n| --- | --- | --- | --- |\n| 0.1.0 | 2026-07-01T06:27:13.312371Z | sdist | no |\n| 0.2.0 | 2026-07-01T14:59:54.276783Z | sdist | no |\n| 0.2.1 | 2026-07-02T00:19:11.192586Z | sdist | no |\n| 0.3.0 | 2026-07-02T01:31:12.068361Z | sdist | no |\n| 0.3.1 | 2026-07-02T03:12:08.810067Z | sdist | no |\n\n---\n\n## Description\n\n# amanai\n\n**Action Policy Engine for AI agents — policy-as-code for tool-calls. Pure-Python, zero dependencies.**\n\nWrite **one policy** for risky agent actions. Amanai evaluates every tool-call\nagainst it before the tool runs, enforces the decision, and records a structured\ntrace as evidence. The same policy file asserts in CI — what you test is what you\nenforce. Decisions are deterministic: no LLM decides whether a high-risk tool runs.\n\n```bash\npip install amanai\n```\n\n## Action Policy Engine\n\nFive verbs: **load** a policy, **evaluate** an action, **protect** a tool,\n**collect** a trace, **assert** it in tests.\n\n```python\nfrom amanai im",
+        "published": null
+      },
+      {
+        "title": "Retrace — The Execution Replay Engine for AI Agents — Retrace",
+        "url": "https://retrace.yashbogam.me/",
+        "snippet": "Retrace — The Execution Replay Engine for AI Agents — Retrace\n\n# Fork any decision.\n\nReplay the future.\n\nOne decorator captures every LLM call your agent makes. When it fails, fork from any step and watch a new path diverge — with runtime guardrails that halt agents before they cascade.\n\n`pip install retrace-sdk`|`npm i retrace-sdk`\n\nWorks with OpenAI· Anthropic· Gemini· Any LLM\n\nagent-trace-0x7f2a\n\nclassify_intent\n\ngenerate_response\n\nvalidate_output\n\n### Record\n\nOne decorator captures every LLM call, tool invocation, and error. Zero config — traces flow in under 2 minutes.\n\n1 line to instrument\n\n### Fork & Replay\n\nBranch from any decision point. Modify the input. Watch the entire agent re-execute from that moment forward.\n\nCascade replay\n\n### Guardrails\n\nRuntime policies that halt agents before they cascade. Cost budgets, loop detection, context overflow — enforced in real-time.\n\n5 policy types\n\n### Eval Gates\n\nCI/CD quality gates that block deploys when agent quality drops. Regression detection against baselines.\n\nPass/fail in pipeline\n\n### Sessions\n\nGroup multi-turn conversations. Visualize cross-agent execution as a DAG with causal ordering.\n\nVector clock correlation\n\n### Semantic Search\n\nFind any span across all traces using natural language. Powered by pgvector HNSW with halfvec embeddings.\n\nSub-100ms retrieval\n\n## They show you what happened. We show you why.\n\nOther tools log metrics. Retrace reasons about your agent's decisions using causal inference, information theo",
+        "published": "2026-03-01T00:00:00.000Z"
+      },
+      {
+        "title": "KorahStone/agent-safety-layer",
+        "url": "https://github.com/KorahStone/agent-safety-layer",
+        "snippet": "GitHub - KorahStone/agent-safety-layer: Runtime safety boundaries for AI agents · GitHub\n\nmain\n\nGo to Branches page\n\nGo to Tags page\n\nGo to file\n\nCode\n\nView commit history for this file.\n\n## Repository files navigation\n\n# agent-safety-layer\n\nProduction-grade safety boundaries for AI agents — policies, runtime limits, execution tracing, replay, and human-in-the-loop approval.\n\n## Why?\n\nAI agents can do dangerous things — delete files, drop databases, send emails, make API calls. This library provides guardrails:\n\n- Block dangerous operations before they execute\n- Sandbox file and network access to allowed paths/hosts\n- Trace everything for debugging and auditing\n- Replay sessions to test policy changes safely\n- Human approval gates for sensitive operations\n\n## Installation\n\n```\npip install agent-safety-layer\n```\n\n## Quick Start\n\n```\nfrom agent_safety_layer import SafetyLayer, Policy, PathBoundary, NetworkBoundary\n\n# Create a safety layer with policies and boundaries\nsafety = SafetyLayer(\n    policies=[\n        # Block dangerous shell commands\n        Policy.block_pattern(r\"rm\\s+-rf\\s+/\", \"No recursive delete from root\"),\n        Policy.block_pattern(r\"DROP\\s+TABLE\", \"No DROP TABLE in production\"),\n        \n        # Require approval for emails\n        Policy.require_approval(\"send_email\", timeout=300),\n    ],\n    boundaries=[\n        # Only allow file access to these paths\n        PathBoundary(allowed_paths=[\"/tmp\", \"/home/user/workspace\"]),\n        \n        # Only allow these",
+        "published": "2026-02-05T18:18:32.000Z"
+      },
+      {
+        "title": "Flames4fun/jamjet",
+        "url": "https://github.com/Flames4fun/jamjet",
+        "snippet": "# Flames4fun/jamjet\n\nThe open-source safety layer for AI agents — block unsafe tool calls, require approval, enforce budgets, audit, replay.\n\n- Stars: 0\n- Forks: 0\n- Watchers: 0\n- Open issues: 0\n- License: Apache License 2.0\n- Homepage: https://jamjet.dev\n- Default branch: main\n- Created: 2026-05-12T14:57:51Z\n- Fork: yes\n\n## Languages\n\n- CSS\n- Dockerfile\n- HTML\n- Java\n- JavaScript\n- Just\n- Python\n- Rust\n- Shell\n- TypeScript\n\n## Top Contributors\n\n- sunilp (360 contributions)\n- dependabot[bot] (12 contributions)\n- Jdubin1417 (1 contributions)\n\n---\n\n## README\n\n \n\n ⚡ JamJet \n\n**The action-control plane for AI agents.** One policy file. One audit trail. Across hooks, guardrails, MCP gateways, SDKs, and custom runtimes.\n\njamjet MCP server\nCI\nPyPI\ncrates.io\nLicense\nGitHub stars\nRust\nPython\nJava\nDocs\nDiscord\n\njamjet.dev · Quickstart · Docs · Examples · Blog · Discord\n\nOpen in GitHub Codespaces\nOpen in Gitpod\n\n \n\n---\n\n> *Write the safety policy once. Run it everywhere your agents can act.*\n\nJamJet sits underneath your agent — Claude Code, OpenAI Agents SDK, MCP clients, LangChain, CrewAI, ADK, custom code — and enforces what prompts cannot:\n\n- 🛡️ **Block unsafe tool calls** at runtime (database deletes, payments, file writes)\n- ✋ **Pause for human approval** on risky actions, durably\n- 💸 **Cap cost** per agent, per run, per project\n- 📒 **Record an audit trail** that survives a regulator's review\n- ⏪ **Replay or resume** crashed runs from the last checkpoint\n\n**Keep your agent frame",
+        "published": null
+      }
+    ]
+  }
+}

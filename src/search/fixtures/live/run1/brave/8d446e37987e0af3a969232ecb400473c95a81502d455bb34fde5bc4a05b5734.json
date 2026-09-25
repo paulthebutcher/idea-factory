@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "Stripe Connect platform merchant of record money transmitter exemption",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-25T00:37:59.061Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "Stripe Connect platform merchant of record money transmitter exemption",
+    "results": [
+      {
+        "title": "Understand the merchant of record in a Connect integration | Stripe Documentation",
+        "url": "https://docs.stripe.com/connect/merchant-of-record",
+        "snippet": "For a connected account created using the Accounts v2 API to be the MoR, it must have the merchant configuration. Otherwise, payments will fail. When you onboard your platform and decide whether to operate as a SaaS platform or as a marketplace, you also define the MoR for your transactions: for most SaaS platforms, connected accounts are the MoRs, and for most marketplaces, the platform is the MoR.",
+        "published": null
+      },
+      {
+        "title": "r/fintech on Reddit: Do I Need a Money Transmitter License for Holding Payouts on My Platform?",
+        "url": "https://www.reddit.com/r/fintech/comments/1jcia7d/do_i_need_a_money_transmitter_license_for_holding/",
+        "snippet": "Smaller fintechs use Stripe Connect. ... You need to do a flow of funds analysis. How you structure the flow of funds determines whether you need an MTL. Anytime the money hits an account that is titled to you (and not FBO), you may be subject to MTL. There are different ways to structure the flow of funds so that it’s not money transmission. For example, Uber is merchant of record for the rider and subcontracts out the work to drivers.",
+        "published": "2025-03-16T10:07:40"
+      },
+      {
+        "title": "Stripe merchant of record: Where Managed Payments fails",
+        "url": "https://freemius.com/blog/stripe-merchant-of-record/",
+        "snippet": "<strong>Standard Stripe and Stripe Tax are not merchant of record products</strong>. In those cases, you remain the legal seller of record. Stripe Tax calculates VAT and sales tax at checkout but leaves registration, filing, and liability with you.",
+        "published": "2026-07-08T15:04:22"
+      },
+      {
+        "title": "Stripe Connect: Online Marketplace Payments Platform",
+        "url": "https://stripe.com/connect/features",
+        "snippet": "Money transmitter licenses (MTL) and registered MSB in the US",
+        "published": null
+      },
+      {
+        "title": "Payment method support for platforms and marketplaces | Stripe Documentation",
+        "url": "https://docs.stripe.com/payments/payment-methods/payment-method-connect-support",
+        "snippet": "The merchant of record determines the Stripe account authorized to create payments with a particular PaymentMethod.",
+        "published": null
+      }
+    ]
+  }
+}

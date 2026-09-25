@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "run CI pipeline locally debug tool",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-25T00:36:35.295Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "run CI pipeline locally debug tool",
+    "results": [
+      {
+        "title": "r/devops on Reddit: How do you debug CI/CD pipelines? Breakpoints?",
+        "url": "https://www.reddit.com/r/devops/comments/13s8jga/how_do_you_debug_cicd_pipelines_breakpoints/",
+        "snippet": "Sounds like a lot of effort over... just using better tooling. ... If you make your own GitLab runner, you can use the web terminal to be able to run arbitrary commands in the pipeline context to get a sense for what&#x27;s failing and troubleshoot jobs. https://docs.gitlab.com/ee/ci/interactive_web_terminal/ ... You can run gitlab-ci in local mode, which is what I do.",
+        "published": "2023-05-26T09:44:27"
+      },
+      {
+        "title": "GitHub - MrPuls/local-ci · GitHub",
+        "url": "https://github.com/MrPuls/local-ci",
+        "snippet": "Web UI: live pipeline graph, ANSI-colored searchable logs, run control (env vars, per-stage/per-job runs, failed-job re-run), desktop notifications, and a built-in YAML editor with live lint — served from a single binary with local-ci ui · Run history with git context (branch + commit per run), plus per-job duration trends and flaky-job detection; inspect from the UI or local-ci runs / local-ci log · Debug shell: local-ci shell &lt;job&gt; drops you into the job&#x27;s exact container environment — image, variables, workspace, cache mounts, and running services",
+        "published": null
+      },
+      {
+        "title": "Debugging CI/CD pipelines | GitLab Docs",
+        "url": "https://docs.gitlab.com/ci/debugging/",
+        "snippet": "You can use a tool like <strong>Rancher Desktop</strong> or similar alternatives to run the job’s container image on your local machine. Then, run the job’s script commands in the container and verify the behavior. You can use GitLab Duo Root Cause Analysis in GitLab Duo Chat to troubleshoot failed CI/CD jobs.",
+        "published": null
+      },
+      {
+        "title": "Introducing the World’s First CI/CD Live Debugging Tool | by Codefresh | Container Hub | Medium",
+        "url": "https://medium.com/containers-101/introducing-the-worlds-first-ci-cd-live-debugging-tool-91bafab5619b",
+        "snippet": "With our latest update, you now have the same amount of power and flexibility when creating a CI/CD pipeline. With Codefresh you can already run your pipelines locally and see them executing on your workstation. This helps a lot when it comes to monitoring a pipeline and allows you to run the pipeline in a fully controlled context (your laptop). As more customers are adopting Codefresh we wanted to help them debug their pipelines in a more user-friendly manner.",
+        "published": "2019-12-04T18:19:38"
+      },
+      {
+        "title": "Debugging Gitlab CI pipelines locally | by CampfireCode | Medium",
+        "url": "https://campfirecode.medium.com/debugging-gitlab-ci-pipelines-locally-e2699608f4df",
+        "snippet": "Instead of making incremental changes to your code and praying the next CI build passes, you can leverage <strong>Gitlab runners</strong> to run CI builds locally and speed up the debugging process.",
+        "published": "2019-06-11T18:18:06"
+      }
+    ]
+  }
+}

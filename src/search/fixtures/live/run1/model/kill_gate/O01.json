@@ -1,0 +1,232 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "O01",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:38:51.764Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "d752156f7cb83ca94b5b632083c48aa2f2249fee0ded40fc19e6803558982345",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2076,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2076,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 269,
+        "output_tokens_details": {
+          "thinking_tokens": 31
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.00809,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPDzKpY61QrJLcyUbyGn",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EswCCpABCBIYAipAoxZ9pIPNMZN88MKo5wDF4eJ+3TZpRTuMrHrh+Ko529gL5woYhkBZcFRNKnq0urtWCckvh/AJE6U3e7+U4kWRjzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAZqF19UGEgxrSJXYOh/Dh4gYU8waDDcxLKfUZeGh+L2cTSIwYncqWrA46DbcaTpTS7BBgDaMbHSljTMqa9oNzsI/YutOhtrNXplPA+vgsItOTIpgKml4DI18FdskeXo01SSMmHWKXsacQjVbp6GTaXHfLXV2240dTnUZ6bSwq3QfjSvwWOgNQEM0Ag9REy2+LcecAh/4U2Hkdd7GWXm4fXQllrEm0VJ/+e1cjk/t1I6SiTvYlYwVDT7jQhiWZmEYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FbGsQbdBS1VAn6VENM6hB6",
+            "name": "exa_search",
+            "input": {
+              "query": "AI social skills practice app for autism pragmatics training"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01GXuHkofM3Au4hc3ytw34ih",
+            "name": "exa_search",
+            "input": {
+              "query": "AI conversation practice tool for social communication skills"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012KdiqaNYi15i8udwJCCNt5",
+            "name": "brave_search",
+            "input": {
+              "query": "AI social skills practice app pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LbEBugge25A5mW2PX8NXwk",
+            "name": "brave_search",
+            "input": {
+              "query": "AI pragmatics therapy tool speech language"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2076,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2076,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 269,
+          "output_tokens_details": {
+            "thinking_tokens": 31
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "443572ab15a179d5e177944f604b4638207d6896cd5ae9687c6687661632f321",
+      "usage": {
+        "input_tokens": 8414,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2076,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 440,
+        "output_tokens_details": {
+          "thinking_tokens": 314
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0216432,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE15GxL3HMN8cob6oFZ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eo8JCpABCBIYAipAaRXn6buBbUZOv4qEPoDx8fbUyuY77SdQJJUDFa8We+sQUsO1QLKd1uHNU5yo9quF117oKrlaRE8/uMlCvl6IWTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAaiF19UGEgzrGX05fhCHean6fdQaDJmrJZhWHNQcCsbubyIw614NspDMshGo9wtGBTDAn8u86QyrwmJ3Xr+ZMZQLfuo20VM/bSfYLwZdAL1lbFbBKqsHVC/HNQr2F267Cwn1pzf5m0OF9fZkPNdQSFdxTGfboq6ffJopdQFY74BJnNTLsvOKvSIBO42YS92EuG3Ik7UMBYSCUltcuiXkjFV+3M/eEUPpDUQA2n7sqpXGC3tDhieUSVgrPOaZ2Ss1EWsAvQZF/HRZBLgT40bkMqNFoUTQSeTtiGdD6g6FFR9rjwlHFXsvuxhJq7QObyBahtalC3flK9fuxkXjGhPealldfhUoxxYr4Z1oXBb+W9kuhRlfH6Tt2Q9AcK/psk+ktNo4hn6OoHJ1VK8mABwMEpeCgSKlOpT72gtsUmws9ZC5Gvf7oV7CQMrKwnptmtatQImKgQjTpZsftYMaZP6HcAmv8y+a8k2vvm01IBMSLe8qE1cAAJxZOHWWCIeH5rJ4Wwwd3MoGA5BXBQKjeW+pQLZUSZ7jzLUTMBFjkM0g91PfiVVGNSP+lFfXH1tucuiJLc/i+zgtO8gNaFZvT5ftxbQ/nfs+IzEQKbExp3vfDQtu2ryQzJdLMuK5CryEIsXdlL70e0kbrdmmOd/wGPwKJHwjj/0MSc7KDFV2VlND4rG7YkuPpKDw8eRIezEJMg5CL314pPCfDnuqrBZuRSzURoOtg2EvurJm7ElhzElNarjsRGHleor98bjiXfas8HrVK/tTMkvdU6n0L7zdxrmLG7ZGig2+NdLBLMacnGUw7RWvX4JL7jAAhmu98XYQtM6U/fm1inB26YxPELkUt9PjahrKrlhCJvHlcs5i1xFcb6tLDDbE9g9+CkUXTIULpQoZwLjvWf3KKYLk38qCNMym6EWmdLPay5s1m9j3YFZF63mi7p7Q8DzT5lUW2r1apVwbNFoKSO7KwHRzzrkkSA7iQ18SzM8h80ayQyV7E9eWBldbhfSc7IhZK6HqtBb718A2MRKaHKwxTOmKUHXubcKfSxmhc6maoOTZoZ4DFWgwimeZboQXBx0rcTqicUeXn1bEy8Nxmw2UZxZ2vPwEx2g5Dot4ZY7X9qTo1AMghenokgEAqL+h4Rz5dB1J8YpMlZvVrZy/7yrEnyK1nKg9magBt5uV6LPemLVXVaw5HdHL0wKdbNLdahLsC4ESkVGW5GhhUKgk7TmyZw0j+td2dKIDyW8gBxdtkivQL3SEDvX7C7yH8aL6cZpltVUJBPtphCJdw6x1V0jtoOwXYs38tMTl4hIpiYg+E7O0INKPt9h/Oone2Pbirz//57ru8E4mVtbd5K2kF41Ldp05Mj7qH5VJJURTGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01DiwWQWvJW6xiDV1rgfitAB",
+            "name": "brave_search",
+            "input": {
+              "query": "\"social skills\" AI app app store subscription pricing autism"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QsLXYe1dACJ5KSB9mmuFVY",
+            "name": "exa_search",
+            "input": {
+              "query": "AI roleplay social skills coach startup funding"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8414,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2076,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 440,
+          "output_tokens_details": {
+            "thinking_tokens": 314
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "a734ff059eafdb01769a4a12c1d1cbdacb8a53b07899bb9c3b04ba298e748178",
+      "usage": {
+        "input_tokens": 13065,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2076,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1520,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.041745199999999996,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE1hDv8mbVkAz8VEdMW",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"idea_id\": \"O01\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"As written, this is a self-serve practice/coaching tool, not a licensed clinical service, professional-of-record function, or fund-holding activity. It does not require signing off on diagnoses or treatment plans.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"pass\", \"evidence\": \"Depends on general-purpose LLM APIs (e.g., OpenAI/Anthropic) for conversation simulation, which are sanctioned public APIs available to many competitors (Yoodli, Cognity, Arrows, Convo, Talkville) with no unique platform lock-in.\", \"source_url\": \"https://yoodli.ai/\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"Pure software product; no physical inventory implied by the idea.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"No infrastructure need beyond standard cloud/LLM API hosting, consistent with numerous single-app competitors (SpringSocial, Nerveless, Banter) built by small teams.\", \"source_url\": null }\n  ],\n  \"flags\": [\n    { \"id\": \"T6\", \"evidence\": \"Crowded but active market (Yoodli, Cognity, Arrows, SpringSocial, Convo, Talkville, Nerveless, Banter, Convine) with live paid subscriptions, suggesting a plausible path to first paying customer within 90 days, though competitive saturation may slow it.\", \"obligations\": [] },\n    { \"id\": \"T5\", \"evidence\": \"If targeted at autism/therapy-adjacent populations (as several direct competitors like Noora and Cognity do), some customers may expect human support/oversight (e.g., parent or clinician check-ins) that is harder to fully automate, though most competitors run as pure self-serve apps.\", \"obligations\": [] }\n  ],\n  \"competitors\": [\n    { \"name\": \"Yoodli\", \"url\": \"https://yoodli.ai/\", \"relationship\": \"adjacent\", \"pricing\": \"Freemium + enterprise\", \"evidence\": \"AI roleplay platform for conversation practice, raised $40M Series B, 900% revenue growth, used by Google, Snowflake.\" },\n    { \"name\": \"Cognity\", \"url\": \"https://thecognity.com/\", \"relationship\": \"direct\", \"pricing\": \"Not listed (freemium implied)\", \"evidence\": \"AI-powered platform teaching autistic individuals pragmatics/social interaction skills via scenario practice and multimodal feedback.\" },\n    { \"name\": \"Arrows (Skill Coach)\", \"url\": \"https://www.ar-rows.com/\", \"relationship\": \"direct\", \"pricing\": \"Not listed\", \"evidence\": \"SaaS platform using generative AI avatars for social skills practice grounded in evidence-based program, targeting neurodiverse users.\" },\n    { \"name\": \"SpringSocial\", \"url\": \"https://www.springsocial.app/\", \"relationship\": \"direct\", \"pricing\": \"Not listed, on-device app\", \"evidence\": \"Neurodivergent-friendly app with 1,000 scenarios for practicing social situations with feedback.\" },\n    { \"name\": \"Noora\", \"url\": \"https://www.heynoora.com/\", \"relationship\": \"direct\", \"pricing\": \"Free (research-funded)\", \"evidence\": \"Stanford-developed AI coach for social conversation skills validated with autistic adolescents/adults.\" },\n    { \"name\": \"Convo\", \"url\": \"https://www.tryconvo.app/\", \"relationship\": \"direct\", \"pricing\": \"Freemium, 10k+ users\", \"evidence\": \"AI voice coach for social anxiety with real-time conversation practice and feedback.\" },\n    { \"name\": \"Talkville\", \"url\": \"https://talkville.app/\", \"relationship\": \"direct\", \"pricing\": \"Free + in-app purchases\", \"evidence\": \"iOS app for practicing small talk/social skills with AI characters and real-time feedback.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"AI social skills practice app for autism pragmatics training\",\n      \"AI conversation practice tool for social communication skills\",\n      \"AI roleplay social skills coach startup funding\"\n    ],\n    \"brave\": [\n      \"AI social skills practice app pricing\",\n      \"AI pragmatics therapy tool speech language\",\n      \"\\\"social skills\\\" AI app app store subscription pricing autism\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 13065,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2076,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1520,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

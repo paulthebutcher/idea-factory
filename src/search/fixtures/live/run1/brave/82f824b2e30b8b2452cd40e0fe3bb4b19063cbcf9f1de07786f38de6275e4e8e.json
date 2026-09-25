@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "\"agent\" \"rollback\" OR \"replay\" AI coding agent production safety Hacker News comment",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-09-25T13:08:49.410Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "\"agent\" \"rollback\" OR \"replay\" AI coding agent production safety Hacker News comment",
+    "results": [
+      {
+        "title": "I gave an AI agent a production rollback button — then spent the hackathon trying to trick it into pressing it - DEV Community",
+        "url": "https://dev.to/prince_panchani_f971a20ec/i-gave-an-ai-agent-a-production-rollback-button-then-spent-the-hackathon-trying-to-trick-it-into-2cha",
+        "snippet": "An unannotated tool matches no tag, so it falls outside the policy instead of into it — safety is opt-in. That&#x27;s backwards. A gate should fail closed: unknown risk means gated until classified. ... Enforce where the side effect happens. The gate here lives in the harness, so it protects a path, not a tool — anything reaching the tool server directly never meets it. That&#x27;s why the server binds loopback and takes a token. Upstream checks are necessary, not sufficient. Make the classification unskippable in code.",
+        "published": "2026-08-31T06:12:20"
+      },
+      {
+        "title": "9 AI coding agent incidents that deleted production data",
+        "url": "https://adversa.ai/blog/ai-coding-agent-incidents/",
+        "snippet": "A developer connected Claude Code to a live Supabase instance with broad access in July 2026, and asked it to analyze the repo and autonomously fix schema and content issues. Roughly ten minutes in, it ran a Prisma migration command that pointed --shadow-database-url at production. Prisma resets the shadow database before replaying migration history against it, so it did exactly what the flag documents.",
+        "published": "2026-08-04T10:57:00"
+      },
+      {
+        "title": "What an AI Agent Production Incident Actually Looks Like | Tessary",
+        "url": "https://tessary.ai/blog/ai-agent-production-incident-response",
+        "snippet": "In July 2025, an AI coding agent working inside Replit deleted a live production database in the middle of a code freeze, then told the person running it that the data couldn’t be recovered. It could be: the user found the rollback path by hand, after the agent’s own account of what happened turned out to be wrong.",
+        "published": "2026-07-20T07:35:06"
+      },
+      {
+        "title": "AI Agent Rollback Strategy: Best Practices 2026 | Fastio",
+        "url": "https://fast.io/resources/ai-agent-rollback-strategy/",
+        "snippet": "If an agent overwrites a critical document with bad content, you don&#x27;t need to panic. You can <strong>call the API to go back to the old version</strong>. This is a built-in safety net that needs no extra code.",
+        "published": "2026-02-13T00:00:00"
+      },
+      {
+        "title": "r/AI_Agents on Reddit: How do you version and roll back your AI agents? git is failing me and I feel like I'm missing something.",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1txmraa/how_do_you_version_and_roll_back_your_ai_agents/",
+        "snippet": "<strong>rollback then just pulls every action for that run id and runs the inverses newest first</strong>. you are not undoing the prompt, you are replaying a ledger backwards.",
+        "published": "2026-06-05T14:35:58"
+      }
+    ]
+  }
+}

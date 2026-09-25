@@ -1,0 +1,375 @@
+{
+  "stage": "kill_gate",
+  "idea_id": "P02",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-09-25T00:39:48.958Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "d1104d6fc034d290d041e6a13a372db657701ce274263412233e6b5faca9554b",
+      "usage": {
+        "input_tokens": 105,
+        "cache_creation_input_tokens": 2129,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2129,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 401,
+        "output_tokens_details": {
+          "thinking_tokens": 140
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0095425,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE4SfeHSvtZmEwCU22y",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "ErgFCpABCBIYAipA9R3dF6Fso95cOSKSyCPtkcR4zhh8RdFAViKEqcADHuw0eQIISDCW2Prx2GvJPZHcWHGGKcwbh48k5PrclK1I2TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAdOF19UGEgzhDXPUYo8VVidvLWMaDJN2YJ8yForWEX5xMCIwJc8HTbHg46dddh7f7Uj7FvyvHkvoZ1eQH417eVev/hU2ZMmAuRdrtFHcZrzoSeo1KtQDTYU6M1Df3Tn3+1JUjDJ6ORe39cCOCcdQQcqtQWg7yt/Fy8gw9w14VpJD6/zGqvi2dE5z/oV3gEwWCed4UTnQ1OrHm9WIkvonCwGW5sntDJwVNmdyPGpaf2d4/AP+blgV15L2tvg/jVveYqWqKpSlR+cCSwJNcavWTSmRzCtkLCCdS+aL7u5Z4jf+chEyUYLJBUGYCLc21DCQHDwnWGS4uL5qo2Kqi0GTS+IGBHy296+OMWwjrU/+1XjXE6XdoVgG+O0+g+2ZeTRaFpHa5nmtRlLy03K18z6MsoTuJBx0jvfigLS2nL+4YupXd2i31zyD7NDLhOXklX4QGwHiAgjbJtVbsTeJuqjPAGIjXtHVB19S7deT/60m4LLh60uRgwtWX96oTiEfrNw8vkrmhra2UM7XRB7JGXBRM12ZIQIJA1Cjm55MApYCYW+5icQVeat8EPVkvKXJ+sUinv1Ali6tYeMGtCnPA2nvRlZvELvu67oXJz2gfLYn+2tBK1Tb8n40augl1gO3zV79FW3iXfDlZ2K3K/ZHFG8iyyfA8F4mzPIVuITG7SMYqDVDMCiJ+r8J27wL95xGi5cV45+SnsQZQIV71vS3DX3yARZ2Qbkr6XgyD6pQGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RCPd5rPYQ5mKjSSfpk62ck",
+            "name": "exa_search",
+            "input": {
+              "query": "privacy-preserving human verification API for calls messages proving human not bot"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Cp7WU7vsobLrPaZr7VcG6f",
+            "name": "exa_search",
+            "input": {
+              "query": "verified human badge dating app marketplace video call proof of humanity"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01318ajoRpRpL2t3Cq4pcBb8",
+            "name": "brave_search",
+            "input": {
+              "query": "human verification API SaaS \"proof of human\" privacy preserving"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LvR5Tn7ynSMs6cUondg86H",
+            "name": "brave_search",
+            "input": {
+              "query": "Worldcoin World ID proof of personhood API pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 105,
+          "cache_creation_input_tokens": 2129,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2129,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 401,
+          "output_tokens_details": {
+            "thinking_tokens": 140
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "115dde7587043a3204ca001b9fef85eb8b4749a1eb1b8e9f1a89d36a083e2211",
+      "usage": {
+        "input_tokens": 8623,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2129,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 223,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0199018,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE51GTLGRNAqp61zS4A",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "This idea is well-populated with existing competitors (World ID, useHUMA, POY Verify, not.bot, NotBot.id) confirming market validity but no unavoidable kill-rule failures for a solo operator building a verification API/SaaS layer."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NsyAH96cYA3oLyF3iKcxdV",
+            "name": "brave_search",
+            "input": {
+              "query": "biometric identity verification company state regulation BIPA compliance requirements"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FU1hZm1CMzZpmJfbVCnz9w",
+            "name": "exa_search",
+            "input": {
+              "query": "identity verification vendor bank KYC compliance regulatory requirements third party vendor"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 8623,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2129,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 223,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "fe5bc0b57c3cf263ec629239854200b4fb6ab2acf0e3353bf7f1ccd649c479d7",
+      "usage": {
+        "input_tokens": 14039,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2129,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 847,
+        "output_tokens_details": {
+          "thinking_tokens": 710
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0369738,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE5PD4UwFkzgwkZrXKH",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PRhKi56ChkMmGaTZskLmF1",
+            "name": "brave_search",
+            "input": {
+              "query": "\"identity verification\" startup \"one person\" bootstrapped API business model"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Wft4BKwfSoz3RmVN5bHroA",
+            "name": "exa_search",
+            "input": {
+              "query": "behavioral biometrics liveness detection startup founder solo build no hardware"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 14039,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2129,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 847,
+          "output_tokens_details": {
+            "thinking_tokens": 710
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "ea0a95362d8cbacb96709143b2e9b70402b5bd2ed2419561b077749060a51608",
+      "usage": {
+        "input_tokens": 18030,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2129,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 134,
+        "output_tokens_details": {
+          "thinking_tokens": 57
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0378258,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE6KSdUvjDay2ndAN9T",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Ep4DCpABCBIYAipArNaxNEE6jIYwwWx4z8OjXxXVs2hFQNTSnanKOTME1X4xhVqsOfKwXySUi4HHcdVf+O2reW9ZCHlVNTkIjGyd7TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAeyF19UGEgxHEEazYHBjOkaeuxMaDOzvRH39rVh4tUpkziIw80rmdjh1pH9oaiAi9hPToftyRl19BcEvSAghJpDT5mH09LYV+nITMXYlDrDO4Eo6KroBaiDjx3cynqDT0Y+gI2ttLJMvxskTWtD5CC5Y33xoquo2v0yIm4STDf3RpnwDdCjQxpzpEzwR1Li3bt3zu9MXT7tFpHNKnZDipq2QwM9tODCqKVxTztPF6YcTgaMWQh/nS95PZFMDWziGMSd7N3EjyetHeEa4sqICvECPz6TpakKGZMPCWJudny9PHq12eUgHzisTlzQZ3a3le9ltjlLyxrASmD92KxmHJRCWJu3jWP8sJl+V53PiRxlBGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CkppqVTGj2ciW8XUD4iWzd",
+            "name": "brave_search",
+            "input": {
+              "query": "Illinois BIPA biometric verification vendor written policy consent requirement compliance startup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 18030,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2129,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 134,
+          "output_tokens_details": {
+            "thinking_tokens": 57
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "b9608cd9942b7c06e3f646ebce1324cb09f5a433380599635c44b2ad7039166f",
+      "usage": {
+        "input_tokens": 19056,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2129,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2029,
+        "output_tokens_details": {
+          "thinking_tokens": 184
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0588278,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfPE6YNW2iXJJeSSU4nLf",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Ep8GCpABCBIYAipA1zlVWvcfe9EazHCog6ezCCQvIcuEg0gLbQpXVvN/pdywBiVNtP8QPkv6FOc3RGuJ0VEjB+KWRcy2Hl5dVGvvTTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjioAfCF19UGEgw6VGE5DQTndlA/D7QaDPOQfkjla8hSWldj9SIwnfJ/A0jj4HUKOdAwA1naUjm8ViTf1bcREH7VjiOYMR8f/WDVub1y5VwxsNAkZZupKrsE1zncMf7d2N/e1GZ2cvSaZBuRj5TEMP7fK3M5sA8F+x9MWnR0g6s4lwzSix2YuE3RVfeiZwxzs9zZscuR6/5Dcl8+2jsL2Nj6flOxlD3YRV9TqT/mhy/X6pZ7fbVQmKNRf1iQeVHEvTEYxW1qYVKMQBnjRjMqOlL+QosEKXwvhzz0enWSSgVUUDiYuanwaabIXPZRO4esz3GpnwMvmsoDQY4Ko/qRTY6m1h1DigHF5MFx7bOd4sYmWKZM3MwpbOCGjdQNZVnO5/hiAN3hJ/5TZ6Hv2AkcblcVS9aw2D/nya2ahCrPr1Qv/YVHaYoDqNNTHx0ijOQ0QWF/w5RUjfztJc15orezK6vMlMN0wzwsMCRaKi5YKe5YNWlFXcXZmc8SOaymYbfmuw1SP/7p+Gfmyrrg+esC6J919l0a+yf1JDFSnypIYJTAIb97KQ70ApAxhXMncD38rpmh1tAticMPOPWGG1jxsTgSxlGJ4kw2Nsj39KhJtMLBKHG27OQxeG5jb5AnaIEgc1Uf+c/G399d8DXhFBZRxSoWkguUi/Cqz0uV2POBd+JNoHestX8GS4QD4CV2xVzTPShITUImmalyAvrsEFM0nkDBVClku87r6WK+/mniUICB76/GHZ/zeE2FNUjRsyGV0RUcv/ep3dtGnB1pdd739ntsr6eSxj4GubWs72Y9o0htuBzLQhpX278ZkS3DkXl8j8Ou5994Tk3LGOt2obNg0RDDz0yhNjwB0QVMVyL8psXnhtQkjRgB"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"P02\",\n  \"verdict\": \"pass\",\n  \"tests\": [\n    { \"id\": \"R001\", \"result\": \"pass\", \"evidence\": \"The company sells a verification signal/API to banks, marketplaces, dating apps and video platforms; it does not hold customer funds, sign as licensed professional of record, or need standing regulator supervision itself — the bank/marketplace customers retain their own compliance obligations for KYC/AML.\", \"source_url\": null },\n    { \"id\": \"T2\", \"result\": \"unknown\", \"evidence\": \"Idea does not specify dependence on a single third-party platform API (e.g., exclusive reliance on Apple/Google biometric APIs or Worldcoin's orb network) that could unilaterally revoke access; competitors like useHUMA, NotBot.id, and Level3ID build proprietary behavioral/liveness engines rather than depending on one gatekeeper, showing a viable non-dependent path.\", \"source_url\": \"https://humaverify.com/\" },\n    { \"id\": \"T3\", \"result\": \"pass\", \"evidence\": \"Software/API verification layer; no physical inventory to buy, store or ship.\", \"source_url\": null },\n    { \"id\": \"T7\", \"result\": \"pass\", \"evidence\": \"Comparable solo/small-team competitors (Level3ID, Idesify, NotBot.id) operate as browser/software-based verification APIs without hardware fleets, manufacturing, or facilities.\", \"source_url\": \"https://www.linkedin.com/in/justingund\" }\n  ],\n  \"flags\": [\n    { \"id\": \"T4\", \"evidence\": \"Target customers are banks, marketplaces, dating apps, and video-call platforms — enterprise integrations of this kind (e.g., Tinder's World ID integration, bank vendor onboarding) typically require security review, procurement, and sales cycles rather than instant self-serve signup.\", \"obligations\": [] },\n    { \"id\": \"T8\", \"evidence\": \"If the verification layer collects any biometric-adjacent signals (facial geometry, voiceprints, keystroke/behavioral biometrics tied to an identifiable person) to serve regulated customers, Illinois BIPA and similar state biometric laws (TX CUBI, WA, and emerging state consumer health/biometric statutes) require a written, publicly posted biometric data policy, defined retention/destruction schedule, and signed consent flows before collection — beyond standard privacy policy/GDPR baseline.\", \"obligations\": [\n        \"Written, publicly available biometric data retention and destruction policy (BIPA Section 15(a))\",\n        \"Biometric-specific informed written consent flow distinct from general ToS (BIPA Section 15(b) and analogous state statutes)\",\n        \"Vendor contract audit clauses ensuring any subprocessors handling biometric data meet the same consent/retention standards\"\n      ] }\n  ],\n  \"competitors\": [\n    { \"name\": \"World ID / World (Worldcoin)\", \"url\": \"https://world.org\", \"relationship\": \"direct\", \"pricing\": \"Free for users; fee-based for developers (World ID 4.0)\", \"evidence\": \"Privacy-preserving proof-of-human protocol integrated into Tinder and other platforms to prove a real, unique human is behind an account or action.\" },\n    { \"name\": \"useHUMA\", \"url\": \"https://humaverify.com/\", \"relationship\": \"direct\", \"pricing\": null, \"evidence\": \"REST API providing persistent, anonymous proof that a user is human via behavioral signal scoring, marketed to prevent AI-agent/bot abuse.\" },\n    { \"name\": \"POY Verify\", \"url\": \"https://poyverify.com/\", \"relationship\": \"direct\", \"pricing\": \"Free for end users\", \"evidence\": \"On-device biometric liveness detection API targeted at chatbots, dating apps, and other platforms needing zero-data-retention human verification.\" },\n    { \"name\": \"not.bot / NotBot.id\", \"url\": \"https://not.bot/verify/\", \"relationship\": \"direct\", \"pricing\": \"Plans from $9.99/mo\", \"evidence\": \"Human verification via biological signals (keystroke dynamics, rPPG) delivering a continuous Human Trust Score via REST API.\" },\n    { \"name\": \"Incognia\", \"url\": \"https://www.linkedin.com/posts/andreferraz_proving-youre-human-shouldnt-require-an-activity-7447043500652810240-uBFC\", \"relationship\": \"adjacent\", \"pricing\": null, \"evidence\": \"Physical Presence Score offering continuous, privacy-preserving attestation of real human device use without biometric enrollment, competing on trust-layer signals.\" }\n  ],\n  \"queries\": {\n    \"exa\": [\n      \"privacy-preserving human verification API for calls messages proving human not bot\",\n      \"verified human badge dating app marketplace video call proof of humanity\",\n      \"identity verification vendor bank KYC compliance regulatory requirements third party vendor\",\n      \"behavioral biometrics liveness detection startup founder solo build no hardware\"\n    ],\n    \"brave\": [\n      \"human verification API SaaS \\\"proof of human\\\" privacy preserving\",\n      \"Worldcoin World ID proof of personhood API pricing\",\n      \"biometric identity verification company state regulation BIPA compliance requirements\",\n      \"\\\"identity verification\\\" startup \\\"one person\\\" bootstrapped API business model\",\n      \"Illinois BIPA biometric verification vendor written policy consent requirement compliance startup\"\n    ]\n  },\n  \"proposed_variant\": null,\n  \"injection_seen\": []\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19056,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 2129,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2029,
+          "output_tokens_details": {
+            "thinking_tokens": 184
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

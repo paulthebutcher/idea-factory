@@ -8,6 +8,15 @@ import { modelCostUsd, sha256, type Mode, type Stage } from "../config.js";
 
 export class BudgetExceededError extends Error {}
 
+/** An API failure that will not clear on retry or on the next task: exhausted credits, bad key, no permission. The run must stop. */
+export class FatalApiError extends Error {}
+
+export function isFatalApiError(e: unknown): boolean {
+  if (!(e instanceof Anthropic.APIError)) return false;
+  if (e.status === 401 || e.status === 403) return true;
+  return e.status === 400 && /credit balance|billing|purchase credits/i.test(e.message);
+}
+
 export class ModelFixtureMissingError extends Error {
   constructor(stage: string, ideaId: string, index: number, file: string) {
     super(`no recorded model response #${index} for ${stage}/${ideaId} (${path.relative(process.cwd(), file)})`);
@@ -91,6 +100,7 @@ export function createModelClient(opts: ModelClientOptions): ModelClient {
       try {
         return await getClient().messages.create(params);
       } catch (e) {
+        if (isFatalApiError(e)) throw new FatalApiError(e instanceof Error ? e.message : String(e));
         const retryable = e instanceof Anthropic.APIConnectionError || (e instanceof Anthropic.APIError && (e.status === 429 || (e.status ?? 0) >= 500));
         if (!retryable || attempt >= retries) throw e;
         await new Promise((r) => setTimeout(r, 5000 * 3 ** attempt));
