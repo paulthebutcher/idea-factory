@@ -207,15 +207,19 @@ export async function runCritic(ctx: CriticContext): Promise<CriticRunSummary> {
         ctx.onComparison?.(row);
       } catch (e) {
         if (e instanceof BudgetExceededError) throw e;
-        trace.add("error", { error: e instanceof Error ? e.message : String(e) });
+        // A tournament with a missing comparison cannot be ranked (the hole would read as a bye), so
+        // record the error trace and abort the tournament.
+        const message = e instanceof Error ? e.message : String(e);
+        trace.add("error", { error: message });
         db.recordStageResult({
           runId: ctx.runId, ideaId: a, stage: "critic", verdict: "error",
-          payload: { kind: "comparison", round, idea_a: a, idea_b: b, error: e instanceof Error ? e.message : String(e) },
+          payload: { kind: "comparison", round, idea_a: a, idea_b: b, error: message },
           model: MODELS.critic, agent: ctx.agent, promptHash: ctx.prompts.critic.hash, costUsd: 0, events: trace.toInputs(),
         });
+        throw new Error(`critic comparison ${a} vs ${b} (round ${round}) failed: ${message}`);
       }
     }
-    if (bye) db.raw.prepare("SELECT 1").get(); // byes are derivable from comparisons; nothing to store
+    void bye; // byes are derivable from comparisons: the idea that did not play the round
   }
 
   const standings = rankFromComparisons(ideaIds, comparisons);

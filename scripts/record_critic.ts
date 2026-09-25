@@ -53,7 +53,8 @@ async function main() {
     spent += usd;
     if (spent > cap) throw new BudgetExceededError(`live spend $${spent.toFixed(4)} exceeded cap $${cap}`);
   };
-  const model = createModelClient({ mode: "record", fixtureDir, onSpend });
+  // reuseExisting: a resumed recording replays the pairs already on disk and only pays for the rest.
+  const model = createModelClient({ mode: "record", fixtureDir, onSpend, reuseExisting: true });
   const run = createRun(db, { stages: ["critic"], ideaIds: ideas, budgetUsd: cap, searchMode: "record", modelMode: "record", prompts });
   try {
     const c = await runCritic({
@@ -63,7 +64,7 @@ async function main() {
     for (const s of c.standings) console.log(`  #${s.rank} ${s.ideaId} score ${s.score} (W${s.wins} T${s.ties} L${s.losses} bye${s.byes}) opp ${s.opponentScore}`);
   } catch (e) {
     if (e instanceof BudgetExceededError) console.log(`stopped: ${e.message}`);
-    else throw e;
+    else console.log(`tournament aborted: ${e instanceof Error ? e.message : e}. Re-run to resume; recorded pairs are reused.`);
   }
   const out = path.join(fixtureDir, "model/critic");
   fs.mkdirSync(out, { recursive: true });

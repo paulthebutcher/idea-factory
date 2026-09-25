@@ -37,6 +37,10 @@ export interface ModelClientOptions {
   fixtureDir: string;
   onSpend?: (usd: number, what: string) => void;
   client?: Anthropic;
+  /** Record mode only: replay a recorded response when the transcript already has one at this position, and go live otherwise. Used to resume an interrupted recording. */
+  reuseExisting?: boolean;
+  /** Extra retries on connection errors on top of the SDK's own. Default 3, waiting 5s, 15s, 45s. */
+  connectionRetries?: number;
 }
 
 interface RecordedCall {
@@ -81,8 +85,21 @@ export function createModelClient(opts: ModelClientOptions): ModelClient {
     return anthropic;
   };
 
+  const retries = opts.connectionRetries ?? 3;
+  async function createWithRetry(params: Anthropic.Messages.MessageCreateParamsNonStreaming): Promise<Anthropic.Messages.Message> {
+    for (let attempt = 0; ; attempt++) {
+      try {
+        return await getClient().messages.create(params);
+      } catch (e) {
+        const retryable = e instanceof Anthropic.APIConnectionError || (e instanceof Anthropic.APIError && (e.status === 429 || (e.status ?? 0) >= 500));
+        if (!retryable || attempt >= retries) throw e;
+        await new Promise((r) => setTimeout(r, 5000 * 3 ** attempt));
+      }
+    }
+  }
+
   async function live(params: Anthropic.Messages.MessageCreateParamsNonStreaming): Promise<{ message: Anthropic.Messages.Message; costUsd: number }> {
-    const message = await getClient().messages.create(params);
+    const message = await createWithRetry(params);
     const costUsd = modelCostUsd(params.model, message.usage);
     liveSpend += costUsd;
     opts.onSpend?.(costUsd, `model:${params.model}`);
@@ -107,6 +124,9 @@ export function createModelClient(opts: ModelClientOptions): ModelClient {
         }
         transcript = JSON.parse(fs.readFileSync(file, "utf8")) as Transcript;
       }
+      if (opts.mode === "record" && opts.reuseExisting && fs.existsSync(file)) {
+        transcript = JSON.parse(fs.readFileSync(file, "utf8")) as Transcript;
+      }
 
       return {
         async call(params) {
@@ -116,9 +136,14 @@ export function createModelClient(opts: ModelClientOptions): ModelClient {
             if (!rec) throw new ModelFixtureMissingError(stage, ideaId, i, file);
             return { message: rec.response, costUsd: rec.cost_usd, source: "fixture", digestMismatch: rec.request_digest !== digest(params) };
           }
+          if (opts.mode === "record" && opts.reuseExisting) {
+            const rec = transcript?.calls[i];
+            if (rec && rec.response?.stop_reason) return { message: rec.response, costUsd: rec.cost_usd, source: "fixture", digestMismatch: rec.request_digest !== digest(params) };
+          }
           const { message, costUsd } = await live(params);
           if (opts.mode === "record") {
             if (!transcript) transcript = { stage, idea_id: ideaId, model: params.model, recorded_at: new Date().toISOString(), calls: [] };
+            transcript.calls = transcript.calls.slice(0, i);
             transcript.calls.push({ index: i, request_digest: digest(params), usage: message.usage, cost_usd: costUsd, response: message });
             fs.mkdirSync(path.dirname(file), { recursive: true });
             fs.writeFileSync(file, JSON.stringify(transcript, null, 2) + "\n");
