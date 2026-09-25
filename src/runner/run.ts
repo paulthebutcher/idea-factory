@@ -49,6 +49,8 @@ export interface ExecuteRunOptions {
   model?: ModelClient;
   onResult?: (r: StageRunResult) => void;
   onCritic?: (summary: CriticRunSummary) => void;
+  /** Tasks (and critic pairs within a round) run this many at a time. Default 1. */
+  concurrency?: number;
 }
 
 export type StageRunResult = ({ stage: "kill_gate" } & KillGateRunResult) | ({ stage: "viability" } & ViabilityRunResult);
@@ -83,19 +85,38 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
   };
   const latestIs = (stage: Stage, verdict: string) => ideaIds.filter((id) => db.latestStageResult(id, stage)?.verdict === verdict);
 
+  const concurrency = Math.max(1, opts.concurrency ?? 1);
   const runStage = async (stage: "kill_gate" | "viability"): Promise<boolean> => {
-    for (const task of db.listTasks(runId, "open").filter((t) => t.stage === stage)) {
-      if (overBudget()) return false;
-      if (!task.idea_id) continue;
-      if (db.claimTask(task.id, opts.agent) !== "claimed") continue;
-      const trace = new TraceCollector();
-      const search = createSearchClients({ mode: opts.searchMode, fixtureDir: opts.fixtureDir, trace });
-      const base = { db, runId, taskId: task.id, ideaId: task.idea_id, agent: opts.agent, search, model, trace, prompts };
-      const r: StageRunResult = stage === "kill_gate" ? { stage, ...(await runKillGate(base)) } : { stage, ...(await runViability(base)) };
-      results.push(r);
-      opts.onResult?.(r);
-    }
-    return true;
+    const tasks = db.listTasks(runId, "open").filter((t) => t.stage === stage && t.idea_id);
+    let next = 0;
+    let stoppedForBudget = false;
+    let failure: unknown = null;
+    const worker = async () => {
+      while (true) {
+        if (failure || stoppedForBudget) return;
+        const task = tasks[next++];
+        if (!task) return;
+        if (overBudget()) {
+          stoppedForBudget = true;
+          return;
+        }
+        if (db.claimTask(task.id, opts.agent) !== "claimed") continue;
+        try {
+          const trace = new TraceCollector();
+          const search = createSearchClients({ mode: opts.searchMode, fixtureDir: opts.fixtureDir, trace });
+          const base = { db, runId, taskId: task.id, ideaId: task.idea_id!, agent: opts.agent, search, model, trace, prompts };
+          const r: StageRunResult = stage === "kill_gate" ? { stage, ...(await runKillGate(base)) } : { stage, ...(await runViability(base)) };
+          results.push(r);
+          opts.onResult?.(r);
+        } catch (e) {
+          failure = e;
+          return;
+        }
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(concurrency, tasks.length) }, worker));
+    if (failure) throw failure;
+    return !stoppedForBudget;
   };
 
   try {
@@ -113,7 +134,7 @@ export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions)
       if (overBudget()) status = "budget_exceeded";
       else if (completes.length >= 2) {
         critic = await runCritic({
-          db, runId, ideaIds: completes, agent: opts.agent, model, prompts,
+          db, runId, ideaIds: completes, agent: opts.agent, model, prompts, concurrency,
           beforeCall: () => {
             if (overBudget()) throw new BudgetExceededError(`budget reached before critic call (spent $${db.getRun(runId)!.spent_usd.toFixed(4)})`);
           },
@@ -151,11 +172,12 @@ async function main() {
   for (const s of stages) if (!["kill_gate", "viability", "critic"].includes(s)) throw new Error(`unknown stage ${s}`);
   const ideaIds = args.ideas ? args.ideas.split(",").map((s) => s.trim()) : undefined;
   const budgetUsd = args.budget ? Number(args.budget) : ENV.runBudgetUsd;
+  const concurrency = args.concurrency ? Number(args.concurrency) : 1;
   const db = openDb(PATHS.db);
-  const run = createRun(db, { stages, ideaIds, budgetUsd, searchMode: ENV.searchMode, modelMode: ENV.modelMode });
-  console.log(`run ${run.id}: stages=${stages.join(",")} ideas=${ideaIds?.length ?? "all"} budget=$${budgetUsd} search=${ENV.searchMode} model=${ENV.modelMode}`);
+  const run = createRun(db, { id: args.id, stages, ideaIds, budgetUsd, searchMode: ENV.searchMode, modelMode: ENV.modelMode });
+  console.log(`run ${run.id}: stages=${stages.join(",")} ideas=${ideaIds?.length ?? "all active"} budget=$${budgetUsd} search=${ENV.searchMode} model=${ENV.modelMode} fixtures=${PATHS.fixtures} concurrency=${concurrency}`);
   const summary = await executeRun(db, run.id, {
-    agent: `script:${process.pid}`, searchMode: ENV.searchMode, modelMode: ENV.modelMode, fixtureDir: PATHS.fixtures,
+    agent: `script:${process.pid}`, searchMode: ENV.searchMode, modelMode: ENV.modelMode, fixtureDir: PATHS.fixtures, concurrency,
     onResult: (r) => console.log(`  ${r.stage} ${r.payload.idea_id}: ${r.verdict}${r.stage === "kill_gate" && r.rulesFired.length ? " [" + r.rulesFired.join(",") + "]" : ""} $${r.costUsd.toFixed(4)}`),
     onCritic: (c) => {
       console.log(`  critic: ${c.ideaIds.length} ideas, ${c.rounds} rounds, ${c.comparisons.length} comparisons, $${c.costUsd.toFixed(4)}`);

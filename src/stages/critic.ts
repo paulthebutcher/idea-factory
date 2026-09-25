@@ -129,6 +129,8 @@ export interface CriticContext {
   /** Called before each model call; throw BudgetExceededError to stop. */
   beforeCall?: () => void;
   onComparison?: (c: ComparisonRow) => void;
+  /** Pairs within a round judged this many at a time. Default 1. Rounds stay sequential. */
+  concurrency?: number;
 }
 
 export interface CriticRunSummary {
@@ -175,51 +177,65 @@ export async function runCritic(ctx: CriticContext): Promise<CriticRunSummary> {
     "INSERT INTO comparisons (run_id, round, idea_a, idea_b, order_ab, order_ba, result, rationale_json, model, stage_result_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
   );
 
+  const concurrency = Math.max(1, ctx.concurrency ?? 1);
+  const judgePair = async (round: number, a: string, b: string): Promise<ComparisonRow> => {
+    const trace = new TraceCollector();
+    trace.add("system", { model: MODELS.critic, prompt_hash: ctx.prompts.critic.hash, round, idea_a: a, idea_b: b });
+    trace.add("input", { round, idea_a: a, idea_b: b, brief_a_chars: briefs.get(a)!.length, brief_b_chars: briefs.get(b)!.length, blinding: "idea ids replaced by Idea A / Idea B" });
+    try {
+      // Order AB: a is Idea A. Order BA: b is Idea A; map the winner back to a/b.
+      const ab = await judge(ctx, trace, `${a}__${b}__ab`, blindBrief(briefs.get(a)!, a, "Idea A"), blindBrief(briefs.get(b)!, b, "Idea B"), "ab");
+      const ba = await judge(ctx, trace, `${a}__${b}__ba`, blindBrief(briefs.get(b)!, b, "Idea A"), blindBrief(briefs.get(a)!, a, "Idea B"), "ba");
+      const orderAb: "A" | "B" = ab.out.winner;
+      const orderBa: "A" | "B" = ba.out.winner === "A" ? "B" : "A";
+      const result: "A" | "B" | "tie" = orderAb === orderBa ? orderAb : "tie";
+      const rationale = { ab: ab.out, ba: ba.out };
+      trace.add("output", { round, idea_a: a, idea_b: b, order_ab: orderAb, order_ba: orderBa, result, rationale });
+      const sr = db.recordStageResult({
+        runId: ctx.runId, ideaId: a, stage: "critic", verdict: "complete",
+        payload: { kind: "comparison", round, idea_a: a, idea_b: b, order_ab: orderAb, order_ba: orderBa, result, rationale },
+        model: MODELS.critic, agent: ctx.agent, promptHash: ctx.prompts.critic.hash, costUsd: ab.cost + ba.cost, events: trace.toInputs(),
+      });
+      const info = insert.run(ctx.runId, round, a, b, orderAb, orderBa, result, JSON.stringify(rationale), MODELS.critic, sr.id);
+      const row = db.raw.prepare("SELECT * FROM comparisons WHERE id = ?").get(info.lastInsertRowid) as ComparisonRow;
+      ctx.onComparison?.(row);
+      return row;
+    } catch (e) {
+      if (e instanceof BudgetExceededError) throw e;
+      // A tournament with a missing comparison cannot be ranked (the hole would read as a bye), so
+      // record the error trace and abort the tournament.
+      const message = e instanceof Error ? e.message : String(e);
+      trace.add("error", { error: message });
+      db.recordStageResult({
+        runId: ctx.runId, ideaId: a, stage: "critic", verdict: "error",
+        payload: { kind: "comparison", round, idea_a: a, idea_b: b, error: message },
+        model: MODELS.critic, agent: ctx.agent, promptHash: ctx.prompts.critic.hash, costUsd: 0, events: trace.toInputs(),
+      });
+      throw new Error(`critic comparison ${a} vs ${b} (round ${round}) failed: ${message}`);
+    }
+  };
+
   for (let round = 1; round <= rounds; round++) {
     const standings = rankFromComparisons(ideaIds, comparisons);
-    const { pairs, bye } = pairRound(standings, played);
-    for (const [a, b] of pairs) {
-      const trace = new TraceCollector();
-      const key = [a, b].sort().join("|");
-      played.add(key);
-      trace.add("system", { model: MODELS.critic, prompt_hash: ctx.prompts.critic.hash, round, idea_a: a, idea_b: b });
-      trace.add("input", { round, idea_a: a, idea_b: b, brief_a_chars: briefs.get(a)!.length, brief_b_chars: briefs.get(b)!.length, blinding: "idea ids replaced by Idea A / Idea B" });
-      let stageResultId: string | null = null;
-      try {
-        // Order AB: a is Idea A. Order BA: b is Idea A; map the winner back to a/b.
-        const ab = await judge(ctx, trace, `${a}__${b}__ab`, blindBrief(briefs.get(a)!, a, "Idea A"), blindBrief(briefs.get(b)!, b, "Idea B"), "ab");
-        const ba = await judge(ctx, trace, `${a}__${b}__ba`, blindBrief(briefs.get(b)!, b, "Idea A"), blindBrief(briefs.get(a)!, a, "Idea B"), "ba");
-        costUsd += ab.cost + ba.cost;
-        const orderAb: "A" | "B" = ab.out.winner; // winner in terms of a (A) / b (B)
-        const orderBa: "A" | "B" = ba.out.winner === "A" ? "B" : "A"; // Idea A was b in this order; express as a/b
-        const result: "A" | "B" | "tie" = orderAb === orderBa ? orderAb : "tie";
-        const rationale = { ab: ab.out, ba: ba.out };
-        trace.add("output", { round, idea_a: a, idea_b: b, order_ab: orderAb, order_ba: orderBa, result, rationale });
-        const sr = db.recordStageResult({
-          runId: ctx.runId, ideaId: a, stage: "critic", verdict: "complete",
-          payload: { kind: "comparison", round, idea_a: a, idea_b: b, order_ab: orderAb, order_ba: orderBa, result, rationale },
-          model: MODELS.critic, agent: ctx.agent, promptHash: ctx.prompts.critic.hash, costUsd: ab.cost + ba.cost, events: trace.toInputs(),
-        });
-        stageResultId = sr.id;
-        const info = insert.run(ctx.runId, round, a, b, orderAb, orderBa, result, JSON.stringify(rationale), MODELS.critic, stageResultId);
-        const row = db.raw.prepare("SELECT * FROM comparisons WHERE id = ?").get(info.lastInsertRowid) as ComparisonRow;
-        comparisons.push(row);
-        ctx.onComparison?.(row);
-      } catch (e) {
-        if (e instanceof BudgetExceededError) throw e;
-        // A tournament with a missing comparison cannot be ranked (the hole would read as a bye), so
-        // record the error trace and abort the tournament.
-        const message = e instanceof Error ? e.message : String(e);
-        trace.add("error", { error: message });
-        db.recordStageResult({
-          runId: ctx.runId, ideaId: a, stage: "critic", verdict: "error",
-          payload: { kind: "comparison", round, idea_a: a, idea_b: b, error: message },
-          model: MODELS.critic, agent: ctx.agent, promptHash: ctx.prompts.critic.hash, costUsd: 0, events: trace.toInputs(),
-        });
-        throw new Error(`critic comparison ${a} vs ${b} (round ${round}) failed: ${message}`);
+    const { pairs } = pairRound(standings, played);
+    for (const [a, b] of pairs) played.add([a, b].sort().join("|"));
+    // Pairs of a round are independent; judge them concurrently, keep the round order stable.
+    const roundRows: ComparisonRow[] = [];
+    let next = 0;
+    const worker = async () => {
+      while (next < pairs.length) {
+        const [a, b] = pairs[next++];
+        roundRows.push(await judgePair(round, a, b));
       }
+    };
+    await Promise.all(Array.from({ length: Math.min(concurrency, pairs.length) }, worker));
+    roundRows.sort((x, y) => x.id - y.id);
+    for (const row of roundRows) {
+      comparisons.push(row);
+      const r = JSON.parse(row.rationale_json);
+      void r;
     }
-    void bye; // byes are derivable from comparisons: the idea that did not play the round
+    costUsd += roundRows.reduce((acc, row) => acc + ((db.getStageResult(row.stage_result_id!)?.cost_usd) ?? 0), 0);
   }
 
   const standings = rankFromComparisons(ideaIds, comparisons);
