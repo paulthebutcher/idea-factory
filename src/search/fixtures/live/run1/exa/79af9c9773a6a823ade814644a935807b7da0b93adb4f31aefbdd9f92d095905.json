@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "B2B SaaS API developer tool customer acquisition cost cold outreach cost per lead",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-10-02T22:46:04.177Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "B2B SaaS API developer tool customer acquisition cost cold outreach cost per lead",
+    "results": [
+      {
+        "title": "Cost Per Lead Calculator API",
+        "url": "https://api.miniwebtool.com/tools/cost-per-lead-calculator/",
+        "snippet": "> For the complete documentation index, see llms.txt.\n\n# Cost Per Lead Calculator API\n\nmarketing 1 credit / call v2026-04-22\n\nCalculate cost per lead and optional funnel metrics.\n\nOne POST adds Cost Per Lead Calculator to your app, site, workflow, or agent — formula, validation, edge cases, and docs already handled.\n\nprefer a UI? Open the Cost Per Lead Calculator on miniwebtool.com →\n\nStart free — get a key → 1,000 credits · no card · 30 seconds\n\n### Endpoint\n\nPOST · 1cr\n\n```\nPOST https://api.miniwebtool.com/v1/tools/cost-per-lead-calculator/run\n\n```\n\n### Request body\n\n| Field | Type | Req. |\n| --- | --- | --- |\n| `spend` | `float` | — |\n| `leads` | `int` | — |\n| `clicks` | `int | None` | — |\n| `customers` | `int | None` | — |\n| `deal_value` | `float | None` | — |\n| `channel` google_search | meta | linkedin | seo | general | `str` | — |\n| `currency` USD | EUR | GBP | CAD | AUD | INR | `str` | — |\n| `precision` | `int` | — |\n\n### Cost & access\n\n- 1 credit per successful call — failed calls refund.\n- Starts on: Free.\n- Max payload: `65536` bytes.\n- Privacy mode: `hash_only`\n- Available on: free, starter, pro, business, scale\n\n### Response envelope\n\n```\n{\n  \"request_id\": \"01K...\",\n  \"tool\": \"cost-per-lead-calculator\",\n  \"tool_version\": \"2026-04-22\",\n  \"credits_used\": 1,\n  \"result\": { ... }\n}\n\n```\n\n### Try it\n\nAPI key *\n\nStored only in this browser tab. Playground test key is prefilled and only works on this page. Get a live key →\n\nspend (float)\n\nleads (int)\n\nclicks (int | None)\n",
+        "published": null
+      },
+      {
+        "title": "GTM Data API for Claude Code & AI Agents | ColdIQ",
+        "url": "https://coldiq.com/",
+        "snippet": "GTM Data API for Claude Code & AI Agents | ColdIQ\n\n# Build your Revenue Engine Inside Claude Code\n\nOne API for all your GTM data. 40+ data providers. 700+ endpoints. Search leads, enrich contacts, find emails, track signals - all from your terminal or favourite coding agent.\n\n## Replace hours of workflow design with 1 prompt.\n\n1. STEP 1\n\n### You describe what you need\n\nNatural language. No filters to configure. No tabs to click.\n2. STEP 2\n\n### The agent calls the right APIs\n\nYou don't pick providers. The agent does - based on fit, cost, and accuracy.\n3. STEP 3\n\n### You get structured, verified data\n\nReady to pipe into your CRM, sequencer, or script.\n\nAsk the ColdIQ Agent to find companies, contacts, emails, phone numbers, or enrichment data....\n\n## Not just the best data. The best playbook to use it.\n\n### 40+ providers. One key.\n\nApollo, PDL, Exa, FullEnrich, Findymail, Wiza, and 34 more. Search, enrich, verify, and sequence without managing 40+ API keys, 40+ billing accounts, and 40+ different response formats.\n\n### Built for the terminal.\n\nMCP server for Claude Code. 100+ published skills. REST API with full OpenAPI spec. Type what you need in natural language or call endpoints directly. Stop clicking through dashboards.\n\n### 275+ clients. $50M+ ARR generated.\n\nEvery skill and workflow is built from the playbooks we developed running GTM for 275+ companies. You don't just get data - you get the targeting logic, enrichment chain, and outbound sequence that converts.\n\n## Skip",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://apify.com/piotrv1001/ai-lead-enrichment-outreach-generator/api",
+        "snippet": "# AI Lead Enrichment & Outreach Generator (`piotrv1001/ai-lead-enrichment-outreach-generator`) Actor\n\nTurn a CSV or Google Sheet of leads into ready-to-send outreach in one run. Scrapes each company's website, detects business signals (hiring, dev focus, B2B SaaS), and generates grounded icebreakers, angles, and value hooks with OpenAI — tied to your own value proposition and fit-scored per lead.\n\n- URL: https://apify.com/piotrv1001/ai-lead-enrichment-outreach-generator.md\n- Developed by: FalconScrape (community)\n- Categories: AI, Lead generation, Automation\n- Stats: 2 total users, 2 monthly users, 100.0% runs succeeded, 1 bookmarks\n- User rating: No ratings yet\n\n## Pricing\n\nfrom $1.32 / 1,000 gpt-4o mini results\n\nThis Actor is paid per event. You are not charged for the Apify platform usage, but only a fixed price for specific events.\nSince this Actor supports Apify Store discounts, the price gets lower the higher subscription plan you have.\n\nLearn more: https://docs.apify.com/actors/running/actors-in-store.md#pay-per-event\n\n## What's an Apify Actor?\n\nAn Actor is a serverless cloud program that runs on the Apify platform. It has two run modes.\nIn Batch mode, an Actor accepts a well-defined JSON input, performs an action which can take anything from a few seconds to a few hours,\nand optionally produces a well-defined JSON output, datasets with results, or files in key-value store.\nIn Standby mode, an Actor provides a web server which can be used as a website, API, or an MCP s",
+        "published": null
+      },
+      {
+        "title": "AI Cold Outreach Personalization (happitap/ai-cold-outreach-personalization) Actor",
+        "url": "https://apify.com/happitap/ai-cold-outreach-personalization/api/openapi",
+        "snippet": "# AI Cold Outreach Personalization (`happitap/ai-cold-outreach-personalization`) Actor\n\nTransform cold outreach with AI-powered personalization. This Actor scrapes lead data from websites and generates highly personalized cold emails, LinkedIn DMs, and WhatsApp messages at scale. Stop sending generic messages—let AI research each lead and craft personalized outreach for you.\n\n- URL: https://apify.com/happitap/ai-cold-outreach-personalization.md\n- Developed by: HappiTap (community)\n- Categories: AI, Lead generation, Automation\n- Stats: 2 total users, 0 monthly users, 0.0% runs succeeded, 2 bookmarks\n- User rating: No ratings yet\n\n## Pricing\n\nfrom $0.01 / 1,000 results\n\nThis Actor is paid per event. You are not charged for the Apify platform usage, but only a fixed price for specific events.\n\nLearn more: https://docs.apify.com/actors/running/actors-in-store.md#pay-per-event\n\n## What's an Apify Actor?\n\nAn Actor is a serverless cloud program that runs on the Apify platform. It has two run modes.\nIn Batch mode, an Actor accepts a well-defined JSON input, performs an action which can take anything from a few seconds to a few hours,\nand optionally produces a well-defined JSON output, datasets with results, or files in key-value store.\nIn Standby mode, an Actor provides a web server which can be used as a website, API, or an MCP server.\n\nApify vocabulary and the platform model are defined once, in the agent quickstart at https://apify.com/agents.md.\n\n## How to integrate an Actor?\n\nIf",
+        "published": null
+      },
+      {
+        "title": "",
+        "url": "https://www.bytemine.ai/integrations/ai-tools",
+        "snippet": "Products\n\nSolutions\n\nResources\n\nPricing Outreach🔥 Hot Cost CalculatorSave $$$ Login Try for Free\n\nAI Tools Integration\n\n# Power your AI agents with\n\nreal-time data\n\nPlug Bytemine APIs directly into Claude, OpenAI, OpenClaw, Anthropic, and more. Feed verified B2B and company data into your AI workflows, agents, and automations.\n\nTry for Free See Use Cases \n\n## Why teams ditch the competition for Bytemine\n\n### Claude & OpenAI Compatible\n\nOur RESTful APIs integrate natively with Claude, OpenAI, and any LLM that supports function calling or tool use. Enrich prompts with verified contact and company data in real time.\n\nFunction calling supportTool use compatibleStructured JSON responses\n\n### AI Agent Data Feeds\n\nBuild autonomous agents that prospect, enrich, and qualify leads using live Bytemine data. Feed your agents B2B contacts and company firmographics on demand.\n\nReal-time data retrieval135M+ B2B contacts10M+ companies\n\n### Enrich Prompts with Live Data\n\nStop feeding your AI stale data. Bytemine APIs return verified, up-to-date contact and company information so your AI outputs are grounded in reality.\n\nDaily-updated recordsVerified emails & mobiles50+ data attributes\n\n### Plug into Any AI Pipeline\n\nWhether you're building with LangChain, CrewAI, AutoGPT, or custom pipelines — our sub-200ms API slots into any architecture. Ready-to-copy code examples in the Developer Hub.\n\nSub-200ms responseBatch & single endpointsCode examples included\n\n### AI-Powered Lead Scoring\n\nCombine ",
+        "published": null
+      }
+    ]
+  }
+}

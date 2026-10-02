@@ -97,6 +97,50 @@ const ExaInput = z.object({ query: z.string().min(1), num_results: z.number().in
 const BraveInput = z.object({ query: z.string().min(1), count: z.number().int().min(1).max(10).optional() });
 const FetchInput = z.object({ url: z.string().min(1) });
 
+/**
+ * A brief rendered from the structured fields, used when the model returns no brief_md. Marked as such
+ * so a reader knows it is the runner's rendering of the model's own structured output, not model prose.
+ */
+export function renderBriefFromFields(ideaId: string, o: Omit<ViabilityOutputT, "brief_md">): string {
+  const lines: string[] = [];
+  lines.push(`# Viability brief: ${ideaId}`);
+  lines.push("");
+  lines.push("_Rendered by the runner from the structured output; the model returned no brief_md._");
+  lines.push("");
+  lines.push(`## Payer`);
+  lines.push(`${o.payer.who || "NOT FOUND"}. Price hypothesis: ${o.payer.price_hypothesis || "NOT FOUND"}${o.payer.comparable_url ? ` (comparable: ${o.payer.comparable_url})` : ""}`);
+  lines.push("");
+  lines.push(`## Competitors`);
+  if (o.competitors.length) for (const c of o.competitors) lines.push(`- ${c.name}: ${c.pricing ?? "pricing NOT FOUND"}${c.url ? ` <${c.url}>` : ""}${c.pricing_url ? ` (pricing: ${c.pricing_url})` : ""}`);
+  else lines.push(`NOT FOUND. Queries: ${o.competitors_not_found_queries.join("; ") || "none"}`);
+  lines.push("");
+  lines.push(`## Acquisition channel`);
+  for (const a of o.acquisition_channel) lines.push(`- ${a.channel}: ${a.cost_estimate}${a.source_url ? ` <${a.source_url}>` : ""}`);
+  lines.push("");
+  lines.push(`## Demand evidence`);
+  for (const d of o.demand_evidence) lines.push(`- "${d.quote}"${d.url ? ` <${d.url}>` : ""}`);
+  lines.push("");
+  lines.push(`## Case for`);
+  lines.push(o.case_for || "NOT FOUND");
+  lines.push("");
+  lines.push(`## Case against`);
+  lines.push(o.case_against || "NOT FOUND");
+  lines.push("");
+  if (o.regulatory_setup?.obligations.length) {
+    lines.push(`## Regulatory setup`);
+    for (const r of o.regulatory_setup.obligations) lines.push(`- ${r.kind}: ${r.obligation}${r.consult_scope ? ` (consult: ${r.consult_scope})` : ""}`);
+    lines.push("");
+  }
+  lines.push(`## Open questions`);
+  for (const q of o.open_questions) lines.push(`- ${q}`);
+  if (o.unsourced_claims.length) {
+    lines.push("");
+    lines.push(`## Unsourced claims`);
+    for (const u of o.unsourced_claims) lines.push(`- ${u}`);
+  }
+  return lines.join("\n") + "\n";
+}
+
 export function normalizeUrl(u: string): string {
   return u.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/#.*$/, "").replace(/\/+$/, "");
 }
@@ -299,6 +343,11 @@ export async function runViability(ctx: ViabilityContext): Promise<ViabilityRunR
   trace.add("runner_check", { check: "completeness", missing, ok: missing.length === 0 });
   const verdict: ViabilityRunResult["verdict"] = missing.length === 0 ? "complete" : "fail_evidence";
 
+  if (!out.brief_md.trim()) {
+    out.brief_md = renderBriefFromFields(idea.id, out);
+    runner.remarks.push("brief_md was empty; rendered from the structured fields");
+    trace.add("runner_note", { note: "brief_rendered_from_fields" });
+  }
   return record(verdict, { ...out, verdict, runner });
 }
 

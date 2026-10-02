@@ -2,7 +2,7 @@
   "stage": "viability",
   "idea_id": "A09",
   "model": "claude-sonnet-5",
-  "recorded_at": "2026-10-02T22:39:13.195Z",
+  "recorded_at": "2026-10-02T22:49:45.818Z",
   "calls": [
     {
       "index": 0,
@@ -15,28 +15,28 @@
           "ephemeral_5m_input_tokens": 2311,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 337,
+        "output_tokens": 455,
         "output_tokens_details": {
-          "thinking_tokens": 52
+          "thinking_tokens": 58
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.0091515,
+      "cost_usd": 0.0103315,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfeDLTyfHSvSv1gsHADkL",
+        "id": "msg_011CfeE92iSmBiyU2jQA9znh",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "EpQDCqQBCBIYAipAFB7gCKFiCBicyOwGpazZNVIZbHMz/UIa6nBousD1UsHuRsPJxtWDySAMc1jVQxZjWUdDhEXZ4oKfYA7ihTrUqzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBj+WA1gYSDFLWq+k4iNU6mDzYnxoMzAVgPdSilNq215UGIjA9Lbain3cvQlvofHI1RwSTZhQ9LX7D4nfI9JGb1NPFbJHF6apsRpsjGw0b6CIUxHUqnAGTc/FSucoxUeusOD+0wcqwldWd9H+u6NCH4k/3FuxaGBLNkFqbZ2W6+lhLh3SeCRnUFuG6016FFcejr9dAvn4XUQy5xWVqZRNpRQOlZrzRPGO01XwoqPUEIt+tYsWx6xN2VPokIeS6ViZxY0SJa65nWkp7avhy8YoqJ/9giblUrRXJbZvzQQTtG3aNEd3NMgQw0PXe+0z41EdX0r4YAQ=="
+            "signature": "EqgDCqQBCBIYAipAE1gVLBRTIyF/k7b/QlobvEgKqkUaJnr9ZTAVFNBIWJue7S39fqf3LS9sgEh+QE9giYxkzLTpDHJ0lccRl5N5NDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBh+qA1gYSDC8Z6+jkVFJrDE5ZdRoMo6jiPufxGCf9+Z4gIjAJHDm3UphooKubxrL9iwTrNoRNbdOrWbs1cqBrudHcApN9Y5PuhVNn/qw2kRDpxwAqsAHbhm5Dv8a9BqZrVryxmlULbGwqbvoef78hhJqzqQwJ3SpALjavGomO1l0wQOlf+pop9KKlLNClFlOuSoT7Z8qZzaj3bGAeyvg0DiDJ+JTOtrQvMTqd1jQcUbAM+KJ4bLes2Av7MEn4vMbp9oMIUwtvwvWTogGCPT9RjUNEYkDr3vRG2u/opZrzXM6IxEfocH92vixEcxYaXT72GTPlt0Dv1UiaZHbjpKxfbZC5S52l+RgB"
           },
           {
             "type": "tool_use",
-            "id": "toolu_01LPgesxMopZhjXQDzhsoUvv",
+            "id": "toolu_01AJdqcEzrJnbS1CBi5F3AUz",
             "name": "fetch_page",
             "input": {
               "url": "https://slopsieve.com/extension"
@@ -47,7 +47,7 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01VybCMQMTxmFYR8pDSSW9jz",
+            "id": "toolu_01JnFzGcUQAs3irYUvj6iHyM",
             "name": "fetch_page",
             "input": {
               "url": "https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk"
@@ -58,10 +58,10 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01TeJw9mXhhRLxPZ9TobY1fp",
+            "id": "toolu_016vBCzKwB4RsccNM7DCg24V",
             "name": "fetch_page",
             "input": {
-              "url": "https://news.ycombinator.com/item?id=45500937"
+              "url": "https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei"
             },
             "caller": {
               "type": "direct"
@@ -69,10 +69,21 @@
           },
           {
             "type": "tool_use",
-            "id": "toolu_01K6qRXy3BndqFLcBECAyt1X",
+            "id": "toolu_012JQrrW2SeGGrUvydoyQHwq",
             "name": "brave_search",
             "input": {
-              "query": "Reddit AI generated spam comments annoying users complain"
+              "query": "reddit AI generated spam comments tired of bots \"sick of\" OR \"tired of\" reddit"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Rt25ML9pxaMUtNN8GZgyU9",
+            "name": "brave_search",
+            "input": {
+              "query": "fake reviews extension chrome web store price Fakespot alternative"
             },
             "caller": {
               "type": "direct"
@@ -91,9 +102,9 @@
             "ephemeral_5m_input_tokens": 2311,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 337,
+          "output_tokens": 455,
           "output_tokens_details": {
-            "thinking_tokens": 52
+            "thinking_tokens": 58
           },
           "service_tier": "standard",
           "inference_geo": "global"
@@ -103,73 +114,62 @@
     },
     {
       "index": 1,
-      "request_digest": "d4ee19067b6d5ee2b44ee8488a160e2dba7ab90fb41c000a3e1a9ecd97e8d171",
+      "request_digest": "c3ddfad50efc869812dcb30cd8b596ff0a2368c099a859da692bb3f26d4e1218",
       "usage": {
         "input_tokens": 2,
-        "cache_creation_input_tokens": 5045,
+        "cache_creation_input_tokens": 9255,
         "cache_read_input_tokens": 2311,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 5045,
+          "ephemeral_5m_input_tokens": 9255,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 400,
+        "output_tokens": 414,
         "output_tokens_details": {
-          "thinking_tokens": 103
+          "thinking_tokens": 212
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.017078700000000002,
+      "cost_usd": 0.0277437,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfeDLkc3TWCP5XeSpbFzX",
+        "id": "msg_011CfeE9RZczFaZNd1anDihe",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "EqkECqQBCBIYAipA6XrZptTy8vOm3vH/xpZyGUZKZhFjGYD1pw5ugu1T7FHQInjYnEP98+88Imx19/1FjbxeMJ1K9v71chgPBxaygjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBk+WA1gYSDDR8fyHopwALhrp7pxoM/Ph+2/9qVfFT5bsfIjCeuRZu6p6Q3HwKJ41MLDSl/VyjMknkfdwvbomNeGv/c4UD7xHDoXv9ll7WQCFKKM8qsQIzkgrxTPg+YQzykMTasRx1sXaaAilEl1i4aL3gBS7nqtQLL9yiRctttj3EtC4ShvxXSkpuMZl7jXQI2+5PcbRay6vBbP91P40ngpYPGhcAaMsuvHHDo9KvnKeCuiWwR4nMBos54XFrp1YikalD+DeILuOEfCx6HkQ/MPsiDMp0h01flolbfLxOUGwmdessvwKus9tO2KBha65XYL+alXT6qV1w0g8nTJBk+OM7QbxSgVFIsD5m9RQKsdbLdar2W4pR9Rwx0OiBLbCFlId7nobqVTg489GBKveCEaLPjZI5u3EwIH6TYowgrU9u2jlqpoOeJU2jBfCGy0eLgrpLA5B4A9UlI6yokXEmsdM6G37x/q5HOnlLBMMvr3Xk4qsEpWPxOkv2QymYnjT0RaUyvQUzLxgB"
+            "signature": "EqIGCqQBCBIYAipAZcP6VHSgknXHzju/8bszw3ZsYkXb690gb0eouIUS0SA2LyF8EDnLn8KON9v9BmrpIvDU0PiF/eUEWb3bkUxF+TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBjuqA1gYSDPmmpf8eGpS9oyfwTBoMviB5kJYSyNK7C5/tIjCRN6VqT5ksvDZGqovXd9/JDtK1kPSY/nvlI4twDIO5IJp7qrKpfLJBvKbxvtMKJDEqqgTzQbPJVI2XZ/d8OPbwzOv1lPel/ztuizRVMthwF1YxV2xjH27zH8Dw541W5sayz3TZRngzLCGpLEf3uA7weEmpNoShCpo2lEgdJcw+dhuYr2gFvlC0IEeqUd/aV6YKucUYvZcpguWMEXHXhc8grjNr3FGuhw1I9QOsF0GZWDbHhmNAoqTrbBszqJHqtzqAsj48MkG8sSH8VHSgVRJOAvB9VFZbDTh/HP7YPcSGwSpee53La+WqM0FtEF3S9mTobQlAd81hNQ9HSBfwCBrqZ/1Yn0KrTH6NdH1mqXBKcw/l9W9yjybkrGyl/9ajnkD5MIB5IE4z9f5l3S//IOUyoVBNu4A4LH8IUtfHAPCs6ZPzOnnj9/X9jdw1PjyDp2knWk3vmDceTiEvz/5GNdbgpfuNU+axh9tT1jHJ6hErVuxYWye5zm6eJ1vChxnV16f40PZi7OfXuhSZYZg20PivELujTrXrXM6OV9PCA01LuhCrIiioq63broTmK5qSFtsUxJM8jStUqcaves5sTa+fZsIVHAkcWEVmeGIQ+jiqIedBwQQ7mP7n4p0HSGXJgCj4nRsWVQqQzIQrkEor70OYKx+C9XDll1Ebty5kEvnGxEHACQxaHZKGOVaOHzBi9eb8FocJsz9QAHb7juNDa/gzt/8XEU83nSx5H3sNh3uRJpMOWzwFVV++dUB9drk4FVCp83RSdN22iEZasiJrz7UNCrxMMvgwyBKmMYJR9RgB"
           },
           {
             "type": "tool_use",
-            "id": "toolu_01LKV4vcfKiyo76PzR1hKEEE",
-            "name": "fetch_page",
-            "input": {
-              "url": "https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_016vyLT533PuVJnF775ZhdKG",
-            "name": "fetch_page",
-            "input": {
-              "url": "https://github.com/RootThePlanet/Redd-Eye"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_01FmMxLU5QZWwADXLTod1bYc",
-            "name": "fetch_page",
-            "input": {
-              "url": "https://github.com/might-as-well/reddit-ai-blocker"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_01XszRvWVjNMeyNW7bBBWraz",
+            "id": "toolu_01R3c5m1VCt8oL8WoBjz3eBm",
             "name": "brave_search",
             "input": {
-              "query": "Reddit ads cost per click 2025 pricing self-serve"
+              "query": "Reddit Ads cost CPM 2025 average cost per click"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016kxZQfVpWiETHsSKsAdD35",
+            "name": "brave_search",
+            "input": {
+              "query": "Redd-Eye github reddit AI detector extension"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01YbrzVPrhVeBHeEdsHSRNg5",
+            "name": "brave_search",
+            "input": {
+              "query": "Chrome Web Store extension user acquisition cost organic install Product Hunt launch"
             },
             "caller": {
               "type": "direct"
@@ -182,15 +182,15 @@
         "stop_details": null,
         "usage": {
           "input_tokens": 2,
-          "cache_creation_input_tokens": 5045,
+          "cache_creation_input_tokens": 9255,
           "cache_read_input_tokens": 2311,
           "cache_creation": {
-            "ephemeral_5m_input_tokens": 5045,
+            "ephemeral_5m_input_tokens": 9255,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 400,
+          "output_tokens": 414,
           "output_tokens_details": {
-            "thinking_tokens": 103
+            "thinking_tokens": 212
           },
           "service_tier": "standard",
           "inference_geo": "global"
@@ -200,63 +200,40 @@
     },
     {
       "index": 2,
-      "request_digest": "968a3a8f92a5fe79a12cb22239b60fbfd6223747b1e4441b976acefcae549097",
+      "request_digest": "d33cf703782b7213bb9799d84b25bf17621fbc2c9aa5a5071f33372a556758dc",
       "usage": {
         "input_tokens": 2,
-        "cache_creation_input_tokens": 5066,
-        "cache_read_input_tokens": 7356,
+        "cache_creation_input_tokens": 3526,
+        "cache_read_input_tokens": 11566,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 5066,
+          "ephemeral_5m_input_tokens": 3526,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 713,
+        "output_tokens": 275,
         "output_tokens_details": {
-          "thinking_tokens": 460
+          "thinking_tokens": 172
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.0212702,
+      "cost_usd": 0.0138822,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfeDM86Ms6fD6taA4KF93",
+        "id": "msg_011CfeE9s4YTrYU2W47GHgLa",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "EvsMCqQBCBIYAipA5GokKCPHq1DUwQNqFZbfIV+T4KMTHWh6mK+A2K58lGr1RAO7fvFfaFmKKWvffIYCXMFWnsj5zREYGnw6hJZdgTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBnOWA1gYSDMh8Z2IwgOrB6eDFbRoMkjsGccdDWTU7RKK7IjAu8DdfEbrDwIxvomlt7Abjlhs+rFB/nmkSDGUhNvva2WTlYNX+GSiILfwc+P/2yLAqgwuMJT/ElIMBSPTyX33gCx7hi1DpYw/QhhK+V6EwdwYGTxzNYXQJChTf8nUJ1M/piNfelsaLze/VO9vhl4VKGwjaj9Lxtk7c3hzFz5TMsfr4YKymH4j+01pFXE47pWmI0Yh+9jZHuHHDkqNdCCOHRE48Ii8jdx/Ku8v6HH/7f5nyEcrd4l78N4+LCEzLYXB3oV5RL+do4vXCLHE6HPCsm/hBOjmZasiWb9c9K2+Kv+s1NZKQ1WVJkvuQ3CQWQ0Gbj8bED9Ga/p10dgidTlfJVLUGEiippMaVvN/9JKhod9XREd6Zq6qMhc+as44DTB4w9ijBW7mjaDJAk5Z7oKYHGlVz2HiT8w+Uo/7lqPduCwEpJh1rBBZi6BGgY/gwBLSa4fGm6s4O75kq51JC9kHzj8ZgttB8pxuym+l7txTxsyPwa7eSocun4iL47MzaxDQY+KpfM2Q97EapQiUtVWB4b622Q1y6VHMHTlwXPVXaugCsR/MQTZ5qxq48Ab7pWRpRzhDL+7VRfYtEq7VCuTZakJ0ZStvWZDdYGTSFCGpJ4QQfXS9Mti+FmullxKPY0KrE8dcdMvjF07sAD2rwqZ1hNddGx2O+lKZPcySZNjE6Kh44lzPYglGegelz0qgqooNvHcDQhAPxdLYh91Cem2Ut4kHvgd8uJdYMkwGOflTGtDvSQUHMKQ1JCj+L+WFwd5l/skIIaD+B44DbhdEwXdXFGYJh+WXtbf92uzh4F/fzQq6QCA0gXkK0esF6/CgFEqQbxJX9v6UTY9qcHkP0lfvZfiyWBOjY+zNQB8ls54cM4ckt7n38FloAzUbDOWWzD7XB+M6cnl7om9zM4b+DyroFJPntECDDKKrynJJilZaOLZIDwBiLU36RJrnbH+qBSV5Pz4TcY9N9CbahXlb8UBjNvxxjbAQ7tQSULr+Fp74nZxBuRaiQbkn/Bxs5CLEfpindLaynQ6C8QrmyH+9X5npGuJD7dwDhdYC3jMOPhE8sEhjYcRkvgg4wrIH0JetP5p1qVq8+WSXw0hS7WsVlCE4I1pS9Ik2JVVkClqdiOPTXl94KBTFcsL0FQgZgWAn+ue/QvqteDeV8X37kefBbVzk3vWzh6f9hQY9rKlRqBqxesURU68+F2sp4x4Wq/4/v7Wi5PuvvXCi72kILP9kQ0antzBhzHxaXJnYerayGu1jnLWsCfFg7vwnbpPZAHZL3E7pLyZ7t0nRymXK2liyl4r1C5HT8Rb6KBVQPYCNWL7dITSfP2Z1xCjW8eh5AjD/z+nc5k1pmAQ8AJ5savmbQZim6v+Z8xlRpkJuhFgVgucyJPJXORd8lFubbQ2WVGTj0E9gh1/hwuuNPHV+bqgFgY0VzPgwyQUv6r8ljQhfg4Nj4QK+d9CchHritMwZyRJqrHRqZN80p+2LB+e5QjgFNfbtEQbjEfUGkgrLy56BmKZwOGkl6AhVKy5hpX3ngpVe6DTjd3gJkcgfJ1ygQXdR9N15V+ggsUGsGreiKlZRKsbgYy5XzEOOR3eLgMazHLUymFvjfrKa7nMw34WHMTp8HzNgQml7s1kX7wQJTQ9XxLWAliDgLAdyXJSKFDTF6cgQYadze6nFbLek+2CEVUP8H9RmyfX+xYYXhLkss58rir0R1HPCkjiqXsUedgH4ljQUB46v5eAH1J3IFQy5ooXQBQdQBhLb8sgJfhdt9U0KQE3UDt/uSxbD9sKEfwIxdZ/h6YzwrywAZUI9RsPDlw1h9wWXdNttJYpQ67ixmA5eF8AywdQihhjAdySXISsv/h+j6zHrMcwPVadhTYhVRWvYhe8LvR7h6ALpmMhkyhZBzksrXLnKco7tEGkFyFNtb5/rN1H4v5CbXdkOLXkD6V8DsE670PMxslArrGAE="
+            "signature": "EucFCqQBCBIYAipAmmgAtNQCS9LtNfaO+R2nCWlyn6KcHTRfJWCSgkvbuyhLXAEgWb4k1+6n4gGZxqhcn4a/NdIiTzpQnEgb//MB8DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBk+qA1gYSDNcUyZcI+KH3UmlCoRoMiLbaK0wI/R4D/1PNIjBcsTBkB8cX/QwHD1bbkgV872tcM4PigrytiICx2joa4y5QD/9bynVTxBOqkjVmuNIq7wN4aE03kn5evxlrPoKAGsEJfRB0U/jkX2jZJQSMLkc2+w8H40aLAEjOq9pt5n/JsuUNDwdnD4JhPHVlre5UrP4o5BXAFfEQAl01wokVTCXGKFbqrOFEPmIgaig1iDRjUVekJbSn5hkI7Dk9/7tLDzFbcxK7C2MtQZprw0uzlUIxP5SgqY30k/Incahx6N4jNjHqXx/S7ALYBs9OfUjI7MwJLS/jsFf9axwlnvkduGLz7+uuNqFWfuktO1XCGU/VVDA2pSW3Npd5mkgrSUsnMATi5KkSX6E3oLXZGeBSPOXL8KGK8WJYiCuUAVaFnyLwzM7rmnerI+3y5rmCUt86KGW3ToEFFPcyMF8vuw5htR3gY+GF2R+JfIuMU6WtiL1NJG0xt2CQuJAR19zgpmX7wG55vW7/ydmxrc1GOBI2M8g0pjxp4ntGuIK6oTAWJ0eqpGJLpXrAC/fVE7SHauR31pQINErJFKST5k0RgxKToNUPDN/xfjIV0WZY88dgPeHtjkEswBOpLzk0UyCTKqrRx6uIv3nUobsM/yN3Nqu78zCQgbpdhYs70Jdj3vqVW9PovgVP90wlQaKFQpX+YfrtoxGFw2sRWDgAlC3LbF02BvPMkh35gAgstHhBUEb5hc1+c1fmmME5/c6URP8/nPsMnpoYAQ=="
           },
           {
             "type": "tool_use",
-            "id": "toolu_015Sbnn7ukn5WuE5sYmnjgk3",
-            "name": "exa_search",
-            "input": {
-              "query": "reddit comment \"AI generated\" spam annoying wish extension filter",
-              "num_results": 5
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_01Qivk2drqFVVeipPfHNF9VK",
+            "id": "toolu_011dyKLhFFWSAQdvVZCHUZRC",
             "name": "fetch_page",
             "input": {
-              "url": "https://www.reddit.com/r/automation/comments/1s2tuwk/is_every_message_going_to_become_ai_spam/"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_01KHukL86LVTP7mHTVu38Fqq",
-            "name": "brave_search",
-            "input": {
-              "query": "Chrome extension customer acquisition cost organic Chrome Web Store SEO"
+              "url": "https://www.reddit.com/r/AskModerators/comments/1vr43d5/what_is_reddit_doing_to_block_ai_bots_and_agents/"
             },
             "caller": {
               "type": "direct"
@@ -269,15 +246,15 @@
         "stop_details": null,
         "usage": {
           "input_tokens": 2,
-          "cache_creation_input_tokens": 5066,
-          "cache_read_input_tokens": 7356,
+          "cache_creation_input_tokens": 3526,
+          "cache_read_input_tokens": 11566,
           "cache_creation": {
-            "ephemeral_5m_input_tokens": 5066,
+            "ephemeral_5m_input_tokens": 3526,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 713,
+          "output_tokens": 275,
           "output_tokens_details": {
-            "thinking_tokens": 460
+            "thinking_tokens": 172
           },
           "service_tier": "standard",
           "inference_geo": "global"
@@ -287,72 +264,54 @@
     },
     {
       "index": 3,
-      "request_digest": "b68ea43436c008483d0a553efedeb21b84bd1bba5e62725a4150fd26e5c8d2bf",
+      "request_digest": "323475cc5f91a63ba23fa4bf17c2956576751a406507bf9ee43416dc5a4c8a0c",
       "usage": {
         "input_tokens": 2,
-        "cache_creation_input_tokens": 4503,
-        "cache_read_input_tokens": 12422,
+        "cache_creation_input_tokens": 356,
+        "cache_read_input_tokens": 15092,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 4503,
+          "ephemeral_5m_input_tokens": 356,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 381,
+        "output_tokens": 4408,
         "output_tokens_details": {
-          "thinking_tokens": 221
+          "thinking_tokens": 203
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.017555900000000003,
+      "cost_usd": 0.047992400000000005,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfeDMnmo9jVPyKyJJKLG2",
+        "id": "msg_011CfeEA75eXhbTBEqBvk8ci",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "thinking",
             "thinking": "",
-            "signature": "ErsGCqQBCBIYAipA+y6GRuljjagzugIzlub3CbUCauHNvIMSocezPDzEFwuXMEuxKOZwnHD/FEbl9WMKsFLMNVc0nqpjXeVNqwW8ATIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBo+WA1gYSDM1iGDixTk0giFNxlhoMBPASsbh/OZK+UtjFIjBarzgNSqMM/WB5rcZzw6UW3IcSMreFKQLU/ghBMADrvLdWRy7kzIB69Akpw4hfqJ8qwwQE5poJirKXQhF9zWVf3R5yZLjy7do64OHeX5ulCraryOa+Q1arnS3js5ZbAGosaol5evHdWwE5No+6LJzTjhqTkVrpJLM2g5FqrTboIU/21fAO+VbVJ7evaoHuxmkxa6unQp9gu9TmLM5ZNlsusUYM1oOtvpliop0pYW6ZyGItCVYzfL3iqkiZcnyIQMVDJc4OobDlmxSxnFjiGchqdlneEAznSNl4hVBDhJe//fDfMmkR/XhS5QkZwTc+X6u/JTJGWfm0liv/1tVmJjLEiPEPwbvL7DCEHE/o8y7DYqSIgQGuF8M7qp5Jk9StGRCXrztIQdzS03BnCUlKPyyCTEEUkYS6hD0AGg1rxhcoZY3j6CIgHRnJysQgnAMZXAhu+UDUFKGCXclSsTuwgv3CY7BFtMfLSzt5Z5BEYI8AHJHPjTmGnY5A/cLjW9Njo7cdw/jmJ7wriwoWEdrgnHuXR1SKhp3Kg/w9FnIIU1ysC3t9QWEZxzBVEGKzbAWStMfSJO2YVu6JdOOe+VZGeonsbPOVuKsPUwTD44S4LTeVBKGPVG57KMetcsl9yxbtgeWfx4OiwBPGQrBZ89LNJJPc6uWQ32ctx/xmNSM25clykJHy3IqPTpLfBGsfYSZh87iOTus4flie4Qp9ZiJqbTz10wsxZ1uW9EpI2kuRc9yHWpsFXP+cLUE2/5qDjkRlKOVWikky0ZIPU43SUGg0KOq7aj90u1bAsTObUO3PbOfzE7KAaM9GPtQOO0eDv7Tg2D0Cwf5ii6EYAQ=="
+            "signature": "Eq8GCqQBCBIYAipAXRiawBB6suqZt9Nf7zaFGzBI4aaVa1ITbSVz7MZ3U5NlbfxfE+RU0V4WX3+WYB56Om9iLHkplpfDBV5cvF67hjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBl+qA1gYSDCGh3Dfu5ROjGYpEIhoMEVJMCnnj6w48c4/zIjDnxMyAmz4MMaDpzB/QCBIee9Jdw2lNG7V8M1yhJjkdrZTZiTxxEYWfE3zCYMg2ea8qtwT4J+sgW3XqoTqH6tiA0Es7Fee8NmaJBOKthQ17n7+uaODYC+uwfvMfI4jB245CjoEnszsnwfGmC0Opy6Z70TyaSu4HPOeO+DNl40SbSz/7s0U9ua91p15J59FT5ZF1+LLKZI/JMMYGzD3TuD8+B4iozy17rIl5psn08SDWc/oE9JM1cYfgt+qz2tsYfL38ftIYDMsOnvSB07r7jKYsHie72D62X4+lcfzYQwBfVlThdSADp/5UFQbjdI7J5wRdPE5CUHHOAwuCGp8EU8DodcS7+JSwR6R4IsrRRjZ8o2Y8+43LZ6Y4AwA8irO48FBWs6ZOBJ9CUfzoaz6wY21Bn6tqIdWZqUlpHazlyK6hluJJslZ5ZxdFS9pxJA5oCRNdLMQO2YLQUrD0RWgzA6CMjgrOTbIVhxDFPjuwRQecAQoNmC6ZRNPSHcSiNa95C0XXEJ450v+49cTdU/CX0yJWffQSmiypWgvRh86caveMGkhp1feX5FzbCS1zodZqRLo1XJ99Ne3+Nifuw0WpUunrlP0HK1DCtma3CI5Tow8E/qcVdHN8BWT97d4im2Qm87vG56P4Qq7O5tHQR+5JiElXjU/UyXEi0sE1S3s/wtMCGiWNVvLN0+V3GORK4LKGunrb3ED6RmTVA+Ir+/BNIYiy1ljBr3L6GQ3kfSq9YPcYYRs6Ce7CNQgswdCT82mu5t+qOlxRw/AYFOy06nWwS980pNWZUWXYD+F4YxjbJpq2+AIEsPGvy8XZfNMYAQ=="
           },
           {
-            "type": "tool_use",
-            "id": "toolu_01B1JFAzoPf8ryXWLMT1XmRZ",
-            "name": "brave_search",
-            "input": {
-              "query": "slopsieve.com pricing plan pro"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_019rdgTkEPGomSt9R3BxiHHB",
-            "name": "fetch_page",
-            "input": {
-              "url": "https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei"
-            },
-            "caller": {
-              "type": "direct"
-            }
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A09\",\n  \"payer\": {\n    \"who\": \"Individual heavy Reddit/review-site users (consumer, self-pay), likely via freemium with a paid \"Pro\" tier for extra sites/features\",\n    \"price_hypothesis\": \"Freemium extension, $1.99–$5/month Pro tier for additional sites or cloud-based scoring, anchored to ReviewGuard's $1.99/month Pro pricing for additional site coverage\",\n    \"comparable_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"SlopSieve\",\n      \"url\": \"https://slopsieve.com/extension\",\n      \"pricing\": \"Free extension; on-device scoring; optional remote scoring features\",\n      \"pricing_url\": \"https://slopsieve.com/extension\"\n    },\n    {\n      \"name\": \"Redd-Eye\",\n      \"url\": \"https://github.com/RootThePlanet/Redd-Eye\",\n      \"pricing\": \"Free, open source, runs locally, no subscriptions\",\n      \"pricing_url\": \"https://addons.mozilla.org/en-US/firefox/addon/redd-eye/\"\n    },\n    {\n      \"name\": \"ReviewGuard\",\n      \"url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\",\n      \"pricing\": \"Free for Amazon; $1.99/month Pro tier unlocks Google Maps, TripAdvisor, full signal breakdown\",\n      \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"\n    },\n    {\n      \"name\": \"ReviewLens\",\n      \"url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\",\n      \"pricing\": \"Free, no account needed, covers Amazon/Walmart/eBay/Etsy with Reddit cross-referencing\",\n      \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Reddit Ads (targeted subreddit placements)\",\n      \"cost_estimate\": \"CPC roughly $0.50–$4.00, CPM roughly $1.50–$15.00 depending on targeting/format\",\n      \"source_url\": \"https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost\"\n    },\n    {\n      \"channel\": \"Product Hunt / Hacker News launch + organic Chrome Web Store SEO\",\n      \"cost_estimate\": \"$0 direct spend; a strong launch can reach ~1,000 installs in a week, organic-only growth takes 3–6 months to reach similar scale\",\n      \"source_url\": \"https://www.extensionradar.com/blog/how-to-get-more-chrome-extension-users\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"People are sick and tired of bots and AI generated text, images\",\n      \"url\": \"https://www.reddit.com/r/AskModerators/comments/1vr43d5/what_is_reddit_doing_to_block_ai_bots_and_agents/\"\n    },\n    {\n      \"quote\": \"Yeah the increase in bots has led me to take time away from reddit\",\n      \"url\": \"https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/\"\n    }\n  ],\n  \"case_for\": \"A solo builder with AI coding agents can ship a lightweight, client-side pattern/heuristic classifier (regex + stylometric signals + account-age/karma heuristics) as a browser extension in well under six weeks — several hobbyists have already done exactly this as side projects (Redd-Eye, reddit-llm-comment-detector, reddit-ai-blocker, SlopSieve), proving the core technical lift is small. Distribution is nearly free: the target users already self-organize in subreddits like r/technology, r/AskModerators, and r/chrome_extensions where the pain is openly and repeatedly discussed, giving a one-person team a natural, low-CAC seeding ground (Reddit threads, Product Hunt, Hacker News) without needing paid acquisition. Because detection models can run on-device, there's no ongoing inference-cost burden, so a free tier can be sustained indefinitely while a thin Pro tier (more sites, cloud scoring, account-flagging community features) tests willingness to pay, mirroring ReviewGuard's $1.99/month model.\",\n  \"case_against\": \"The space is already crowded with at least six free/open-source direct competitors solving the identical problem (Redd-Eye, SlopSieve, reddit-llm-comment-detector, reddit-ai-blocker) plus adjacent fake-review detectors (ReviewGuard, ReviewLens), several of which are also free and run locally — making it hard to justify why a user installs a seventh option, and making paid conversion very difficult when functionally similar free alternatives exist. AI-text detection is also adversarial and unreliable at the heuristic level: both bot content and false-positive accusations against real humans are already a documented complaint (r/TheGirlSurvivalGuide thread shows genuine users being wrongly flagged as bots), which risks the extension actively damaging trust rather than building it. Reddit and review platforms can also change DOM structure or anti-scraping protections at any time, creating ongoing maintenance burden with no revenue to fund it if monetization fails, and platform owners (e.g., Reddit) may have incentives to resist or break third-party content-filtering tools that affect engagement metrics advertisers rely on.\",\n  \"open_questions\": [\n    \"Would users pay anything at all when multiple well-regarded free/open-source alternatives already exist and are actively maintained?\",\n    \"What detection accuracy (false positive/negative rate) is achievable with lightweight on-device heuristics versus the false-accusation backlash seen in communities like r/TheGirlSurvivalGuide?\",\n    \"Does Reddit's platform policy or ToS tolerate third-party extensions that hide/relabel content at scale, and could Reddit block or rate-limit such extensions?\",\n    \"Is there a defensible differentiation (e.g., community-sourced flagging, multi-site coverage, better accuracy) that would pull users away from free incumbents like SlopSieve or Redd-Eye?\",\n    \"What conversion rate from free installs to any paid tier is realistic, given ReviewGuard's $1.99/month anchor has no published install/revenue numbers found in this research?\"\n  ],\n  \"regulatory_setup\": null,\n  \"unsourced_claims\": [\n    \"Specific future-proofing risk from Reddit platform policy changes against content-filtering extensions [unsourced]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## A09 — Browser extension to filter AI-generated spam/fake reviews on Reddit & review sites\\n\\n### Payer\\nLikely the individual heavy Reddit/review-site user, self-paying for a freemium extension. Price hypothesis: free core tier, ~$1.99–$5/month Pro tier for extra sites or cloud scoring, anchored to ReviewGuard's published $1.99/month Pro pricing ([source](https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk)).\\n\\n### Competitors (direct & adjacent)\\n- **SlopSieve** — free, on-device, multi-platform (X, Bluesky, LinkedIn, Reddit, HN) ([link](https://slopsieve.com/extension))\\n- **Redd-Eye** — free, open source, local-only, no telemetry ([link](https://github.com/RootThePlanet/Redd-Eye), [Firefox listing](https://addons.mozilla.org/en-US/firefox/addon/redd-eye/))\\n- **ReviewGuard** — free for Amazon, $1.99/month Pro for Google Maps/TripAdvisor ([link](https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk))\\n- **ReviewLens** — free, covers Amazon/Walmart/eBay/Etsy, cross-references Reddit sentiment ([link](https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei))\\n\\nAt least four free, actively maintained direct competitors already exist for the Reddit-specific use case alone.\\n\\n### Acquisition channel\\n- **Reddit Ads**: CPC ~$0.50–$4.00, CPM ~$1.50–$15.00 ([source](https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost))\\n- **Organic/Product Hunt/HN launch**: $0 spend; strong launch can reach ~1,000 installs in a week; pure organic takes 3–6 months ([source](https://www.extensionradar.com/blog/how-to-get-more-chrome-extension-users))\\n\\n### Demand evidence (beyond seed quote)\\n- \\\"People are sick and tired of bots and AI generated text, images\\\" — [r/AskModerators](https://www.reddit.com/r/AskModerators/comments/1vr43d5/what_is_reddit_doing_to_block_ai_bots_and_agents/)\\n- \\\"Yeah the increase in bots has led me to take time away from reddit\\\" — [r/technology](https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/)\\n- Notably, Reddit's own CEO confirmed to the Financial Times that companies spam Reddit with AI-generated posts because it's training data for AI models, per Slashdot's summary ([source](https://tech.slashdot.org/story/25/06/28/1649245/to-spam-ai-chatbots-companies-spam-reddit-with-ai-generated-posts)) — supporting that the underlying problem is real and platform-acknowledged, not just a vocal minority complaint.\\n\\n### Case for\\nA solo builder with AI coding agents could replicate the core heuristic/classifier approach already proven by multiple hobbyist projects (Redd-Eye, SlopSieve, reddit-llm-comment-detector) within six weeks; the target audience is self-organizing and vocal in specific subreddits, giving near-zero-cost distribution; on-device scoring avoids ongoing inference costs, letting a free tier run indefinitely while testing a thin paid tier.\\n\\n### Case against\\nAt least four free, functioning, similarly-scoped competitors already exist, several open source and actively maintained, making differentiation and willingness-to-pay very hard to establish. AI-detection heuristics are inherently noisy — real users are already being misflagged as bots in some communities, which could make the product actively harmful to its core use case. The extension is also fully dependent on scraping/DOM structures of third-party sites it doesn't control, with real risk that Reddit or review sites alter structure or policy to block such tools, and no clear enforcement mechanism if monetization fails to cover ongoing maintenance.\\n\\n### Open questions\\n- Would users pay when strong free alternatives already exist and are maintained?\\n- What's the real false-positive/negative rate achievable with lightweight heuristics, and how damaging is the false-accusation risk?\\n- Does Reddit's ToS tolerate this kind of content-hiding/relabeling extension at scale?\\n- What differentiator (community flagging, more platforms, accuracy) would pull users from SlopSieve/Redd-Eye specifically?\\n- What's a realistic free-to-paid conversion rate, given no competitor publishes install/revenue numbers?\\n\"\n}\n```"
           }
         ],
         "container": null,
-        "stop_reason": "tool_use",
+        "stop_reason": "end_turn",
         "stop_sequence": null,
         "stop_details": null,
         "usage": {
           "input_tokens": 2,
-          "cache_creation_input_tokens": 4503,
-          "cache_read_input_tokens": 12422,
+          "cache_creation_input_tokens": 356,
+          "cache_read_input_tokens": 15092,
           "cache_creation": {
-            "ephemeral_5m_input_tokens": 4503,
+            "ephemeral_5m_input_tokens": 356,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 381,
+          "output_tokens": 4408,
           "output_tokens_details": {
-            "thinking_tokens": 221
+            "thinking_tokens": 203
           },
           "service_tier": "standard",
           "inference_geo": "global"
@@ -362,164 +321,32 @@
     },
     {
       "index": 4,
-      "request_digest": "4300abd5ce2cda5423f583ed56ac34c13318b79e225096de58dc89b1a3e2c34c",
+      "request_digest": "83e57ffe88014080cd1012a3e6244a3bda11fa8e689f010605f162c99967fda8",
       "usage": {
-        "input_tokens": 2,
-        "cache_creation_input_tokens": 4433,
-        "cache_read_input_tokens": 16925,
+        "input_tokens": 19733,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 4433,
+          "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 199,
-        "output_tokens_details": {
-          "thinking_tokens": 134
-        },
-        "service_tier": "standard",
-        "inference_geo": "global"
-      },
-      "cost_usd": 0.0164615,
-      "response": {
-        "model": "claude-sonnet-5",
-        "id": "msg_011CfeDN7yhJCCqQ4iy3Q6qL",
-        "type": "message",
-        "role": "assistant",
-        "content": [
-          {
-            "type": "thinking",
-            "thinking": "",
-            "signature": "Ev0ECqQBCBIYAipAOGUcee0UEOo9tmQw9yAksMEiQVuQC3qXwyYs4sVuERh8zL5jKXHg6+4dg+SQRX4xQvtHDQGJ6XjVBWuHtTYc9DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBpuWA1gYSDMD/9k497oCjGitPNRoMmlcKP9d7KqAcgM1mIjDJ+kLAJnAASLymAGGAYYyTURpDQhtL+GjSytrqOIdOP9x37bPuQg2Q2vFtLfVvdn8qhQPO6eHxcBRfBZbRFAhP4lt/A00mTvwEl9gRkIyvzg63bgV2EWFfOLlegCoimiw0FGbnVzbtNFMjwuGPUUCAaNVxibtX+4dIKzqN8US5GgIS/vhoHE4iOU2O9Pmn3pK3kozWHBY88ccgix8QYg0m2RdBrqYdt/CCuYYs3VI703Zc1pogEjikYWc8z7QxkFpkf/BaiCITWHqyVCLzvXYQemDr4LFYIcziBma3T3aNmTu7dNx8tk9bKyAQ0pp82ETHt5ImR7rVvNektnjrcwNP3ua1IWCAqwjs2/C9WiOtO2QiUAMFIMHQhwEesQyFQMCWZEOpslLl4lVAKFRZ9AdyxOAQgxzesGK8yaEkY6v+MLALy8i3Agq+CpuubGnPc3yggahmZ8oI0mnCO5iRUziyF1dLFAk0rkWHnauZnkyzQCvi2k0hxjfaqoqKNaIkLHXy1EN89hZAZib9GA4k/XyCX1pr1TesLTEPqRZV+fmto44rmA3W7F7QcXcWgDv1FRj7jRRbBdv1FRgB"
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_017W3D2458mFigqZVkBzFNUv",
-            "name": "brave_search",
-            "input": {
-              "query": "Fakespot shut down 2025 Mozilla"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          }
-        ],
-        "container": null,
-        "stop_reason": "tool_use",
-        "stop_sequence": null,
-        "stop_details": null,
-        "usage": {
-          "input_tokens": 2,
-          "cache_creation_input_tokens": 4433,
-          "cache_read_input_tokens": 16925,
-          "cache_creation": {
-            "ephemeral_5m_input_tokens": 4433,
-            "ephemeral_1h_input_tokens": 0
-          },
-          "output_tokens": 199,
-          "output_tokens_details": {
-            "thinking_tokens": 134
-          },
-          "service_tier": "standard",
-          "inference_geo": "global"
-        },
-        "diagnostics": null
-      }
-    },
-    {
-      "index": 5,
-      "request_digest": "5455d8d127418bc16868c2ef35484d9efb21113314f60d233d0e00205e0c7c27",
-      "usage": {
-        "input_tokens": 2,
-        "cache_creation_input_tokens": 1097,
-        "cache_read_input_tokens": 21358,
-        "cache_creation": {
-          "ephemeral_5m_input_tokens": 1097,
-          "ephemeral_1h_input_tokens": 0
-        },
-        "output_tokens": 84,
+        "output_tokens": 4171,
         "output_tokens_details": {
           "thinking_tokens": 0
         },
         "service_tier": "standard",
         "inference_geo": "global"
       },
-      "cost_usd": 0.0078581,
+      "cost_usd": 0.081176,
       "response": {
         "model": "claude-sonnet-5",
-        "id": "msg_011CfeDNLN5D9mgnGrsmZKeb",
+        "id": "msg_011CfeED54h3Q6gThWGEHDMU",
         "type": "message",
         "role": "assistant",
         "content": [
           {
             "type": "text",
-            "text": "Now I have enough evidence to compile the brief."
-          },
-          {
-            "type": "tool_use",
-            "id": "toolu_01TZn1P1PhnCgyjZUs4kEW96",
-            "name": "brave_search",
-            "input": {
-              "query": "Reddit API terms browser extension scraping content policy third-party"
-            },
-            "caller": {
-              "type": "direct"
-            }
-          }
-        ],
-        "container": null,
-        "stop_reason": "tool_use",
-        "stop_sequence": null,
-        "stop_details": null,
-        "usage": {
-          "input_tokens": 2,
-          "cache_creation_input_tokens": 1097,
-          "cache_read_input_tokens": 21358,
-          "cache_creation": {
-            "ephemeral_5m_input_tokens": 1097,
-            "ephemeral_1h_input_tokens": 0
-          },
-          "output_tokens": 84,
-          "output_tokens_details": {
-            "thinking_tokens": 0
-          },
-          "service_tier": "standard",
-          "inference_geo": "global"
-        },
-        "diagnostics": null
-      }
-    },
-    {
-      "index": 6,
-      "request_digest": "b4dee88ca6ddfee2b3fea469a27c28ac3a6c89c0da0d18a569fe869e9e57d0f9",
-      "usage": {
-        "input_tokens": 2,
-        "cache_creation_input_tokens": 985,
-        "cache_read_input_tokens": 22455,
-        "cache_creation": {
-          "ephemeral_5m_input_tokens": 985,
-          "ephemeral_1h_input_tokens": 0
-        },
-        "output_tokens": 5701,
-        "output_tokens_details": {
-          "thinking_tokens": 231
-        },
-        "service_tier": "standard",
-        "inference_geo": "global"
-      },
-      "cost_usd": 0.0639675,
-      "response": {
-        "model": "claude-sonnet-5",
-        "id": "msg_011CfeDNTp3QkaXy71mwYsDW",
-        "type": "message",
-        "role": "assistant",
-        "content": [
-          {
-            "type": "thinking",
-            "thinking": "",
-            "signature": "EtoHCqQBCBIYAipABJ39DejgWp0Xev0ox3RByptjZrCkXAHJ9TyYgx+7FsrLQuFSLYCwMRYK2Mi+ByoJMbSoXGUwL4v02jtMgpg7kDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBrOWA1gYSDAGYg9EonZsT+2d96hoMw/qFYHRK0rdQs4SQIjCwgkWdx+tmGCo6shlygfU0H3YapSwas92ODkmPmACOPJ/VKpUQKd8/E/ai99QgPJ8q4gXMtj6sYFbaE0YQ57upHmQkUe6gdoi3RegAYPdZhDDR5xemqji2U8zNcOznV8yWMHMW7JT6X9GBT4st/BakPt6fWX6rPkfBL1+ByYPW4VgE/Itmrp7PPk9DacxUIB6Zby6lMn1VVThHbczHkMplBlRAUT+Gw/L9UUqMh+bv338m0ztkRuQV+sepeIrz1HbQEigsTgkfz/MBBP7lacYaAT8IWFSwJ8EF43Oyhkig1/lkYnmOa7paf6x4s0qYGqfwCrL5CgUHGePtPtaky5LZSh9iySpq6WFbUlxeQuRz1f5/sRa2iXrrLRglJrmxe9HEWdhIViK5uB1AWUCgoHNOkA6lTN7/fW2yMYRbPNfLnfdpIGD3ZGjd/kZutSRclsGSFw8fcMoq2ddZ+6XQHbC0FFPQnG2d/er+FYHcCMhBMJMihuEfsfx8MC9b4ZVuaGqNvuIVUxZafum2r20CzbxS03M0nJehU7qa1Vdz1C+xv2GAV5wT7ttIcbNz1Nx3cICAtR5+WYFvC9jMmcPHSGH8Wdw53BiYKOzbpjWXh15ItzRBI6aYIGnJqmm4YcYa/CRoYqxPPVQ4YA6hYq9Y4qUaHoMDz/2/sFaL4gzHzcs23YSUmaOPWTKbmwUg3QaCzGkcUrbUCeNGOlm2RC88OPUmTsGdaDwhizQ5CR9LGi8VgdRdgbk3+MAtD6bpVydINHNByUE6KrU5MWErsTbRSdYcJNbT+A1qcXxNM+Gop/6GKGwNc13Z7lq1M8aw25Ei/DRqonYy9qXiwiG9BP4w+T6QrNunCJhZupyyIaH40/hKvhAvcxWLgyT2cWn1vr62ggzdS7MW5M4ZICZO4RMWkLrRjT40kKVKSTSagz7fiAMn8l4umxBUofpuopugk/9KvxELwUYJn7exO3yHka0XE8duAcA544IppU/0tBtEC3zkM3MPycOEiDDxrGmYs0O0/zBUnwFtjUJdhLfJB2UuyCAzMRiFZwIYAQ=="
-          },
-          {
-            "type": "text",
-            "text": "```json\n{\n  \"idea_id\": \"A09\",\n  \"payer\": {\n    \"who\": \"Individual heavy Reddit/review-site users (consumer, self-funded; no employer or business buyer identified)\",\n    \"price_hypothesis\": \"Freemium with a ~$1.99–$3/month 'Pro' tier for advanced detection/platforms, anchored to ReviewGuard's $1.99/month Pro tier; core AI-detection extensions in this space are released free/open-source, so a paid core product is unlikely to clear $0.\",\n    \"comparable_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"\n  },\n  \"competitors\": [\n    {\"name\": \"SlopSieve\", \"url\": \"https://slopsieve.com/extension\", \"pricing\": \"Free core extension; on-device scoring; optional remote scoring features free\", \"pricing_url\": \"https://slopsieve.com/extension\"},\n    {\"name\": \"Redd-Eye\", \"url\": \"https://github.com/RootThePlanet/Redd-Eye\", \"pricing\": \"Free, open source (MIT), local install only, no store listing yet\", \"pricing_url\": \"https://github.com/RootThePlanet/Redd-Eye\"},\n    {\"name\": \"reddit-ai-blocker\", \"url\": \"https://github.com/might-as-well/reddit-ai-blocker\", \"pricing\": \"Free, open source\", \"pricing_url\": \"https://github.com/might-as-well/reddit-ai-blocker\"},\n    {\"name\": \"reddit-llm-comment-detector\", \"url\": \"https://github.com/trentmkelly/reddit-llm-comment-detector\", \"pricing\": \"Free, open source\", \"pricing_url\": \"https://github.com/trentmkelly/reddit-llm-comment-detector\"},\n    {\"name\": \"slop-filter\", \"url\": \"https://github.com/adamnroman/slop-filter\", \"pricing\": \"Free, open source, covers X/LinkedIn/Reddit/YouTube\", \"pricing_url\": \"https://github.com/adamnroman/slop-filter\"},\n    {\"name\": \"Slop Goggles\", \"url\": \"https://www.producthunt.com/products/slop-goggles\", \"pricing\": \"Free\", \"pricing_url\": \"https://www.producthunt.com/products/slop-goggles\"},\n    {\"name\": \"ReviewGuard - Fake Review Detector\", \"url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\", \"pricing\": \"Free on Amazon; $1.99/month Pro for Google Maps + TripAdvisor + full signals\", \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"},\n    {\"name\": \"ReviewLens\", \"url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\", \"pricing\": \"Free, no paid tier, covers Amazon/Walmart/eBay/Etsy plus Reddit sentiment cross-reference\", \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\"}\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Chrome Web Store organic/SEO listing (zero marketing spend)\",\n      \"cost_estimate\": \"$0 to list; growth examples show 80+ organic installs/day possible with $0 ad spend, but this depends entirely on store search ranking and reviews, which are slow to build\",\n      \"source_url\": \"https://www.reddit.com/r/chrome_extensions/comments/1tvh43v/valuation_check_how_much_is_a_fastgrowing_chrome_extension_with_80_daily_organic_installs_worth/\"\n    },\n    {\n      \"channel\": \"Reddit Ads (self-serve, targeting r/technology, r/AskModerators, r/firefox-style audiences)\",\n      \"cost_estimate\": \"CPC roughly $0.20–$4.00 depending on targeting/competition; self-serve minimum daily spend around $5\",\n      \"source_url\": \"https://www.omneky.com/blog/how-much-does-reddit-ads-cost\"\n    },\n    {\n      \"channel\": \"Product Hunt launch (as competitor 'Slop Goggles' did)\",\n      \"cost_estimate\": \"Low/no direct cost but produced only modest traction (~26 followers, #71 day rank) for a near-identical product\",\n      \"source_url\": \"https://www.producthunt.com/products/slop-goggles\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"The flood of low-effort, AI-generated content that clogs up threads and dilutes meaningful discussion.\",\n      \"url\": \"https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/\"\n    },\n    {\n      \"quote\": \"Recently... the amount of AI generated comments is pretty crazy in some subreddits. It makes the Reddit experience much worse.\",\n      \"url\": \"https://www.producthunt.com/products/slop-goggles\"\n    },\n    {\n      \"quote\": \"I'm annoyed by ai content and bots on reddit. I'm a long time lurker that just wants to enjoy reddit again.\",\n      \"url\": \"https://github.com/RootThePlanet/Redd-Eye\"\n    }\n  ],\n  \"case_for\": \"The pain is real and widely expressed (multiple independent builders — not just the seed poster — have already shipped hobby extensions for exactly this), AI-written Reddit spam is a documented and growing trend covered by mainstream tech press, and the technical scope (DOM-level text scoring, badge/hide UI, on-device heuristics) is small enough that a single operator with AI coding agents could ship a competitive MVP in six weeks by cloning the proven pattern (badge + dim/hide modes) used by SlopSieve and Redd-Eye, then differentiate on detection accuracy, platform coverage, or a cleaner UI, distributing for free via Chrome Web Store SEO with no marketing budget.\",\n  \"case_against\": \"This niche is already saturated with at least six free, functionally similar extensions (SlopSieve, Redd-Eye, reddit-ai-blocker, reddit-llm-comment-detector, slop-filter, Slop Goggles) built largely by solo hobbyists in the same 2025-2026 window, meaning the 'first mover' window is gone and differentiation is hard against free open-source alternatives; the adjacent, better-funded, higher-stakes version of this problem (fake e-commerce reviews) was addressed by Mozilla's Fakespot, which shut down in July 2025 despite brand backing, free distribution in Firefox, and years of operation — suggesting weak monetization even when trust and reach are solved; detection of 'AI-generated' text is adversarial and degrades as LLMs improve and as people deliberately humanize text, producing false positives/negatives that erode trust quickly; and the only visible monetization comparable ($1.99/month Pro tier) targets a tiny fraction of a free-tool-saturated market, making recurring revenue unlikely to justify six weeks of build time.\",\n  \"open_questions\": [\n    \"Can a new entrant differentiate detection accuracy enough to beat free incumbents (SlopSieve, Redd-Eye, slop-filter) that already cover Reddit plus X/LinkedIn/HN?\",\n    \"Would users actually pay for this, given that every existing direct competitor is free, and Fakespot (a funded, trusted brand in the adjacent review-fraud space) failed to sustain itself?\",\n    \"Does Reddit's platform/API policy or anti-automation stance pose a takedown risk to DOM-scraping extensions at scale, distinct from Chrome Web Store policy?\",\n    \"What real conversion rate from 'free install' to 'paid Pro' is achievable in this category, beyond the single $1.99/month ReviewGuard anecdote with no revenue figures disclosed?\",\n    \"Would the actual demand be better served as a feature bundled into an existing larger tool (ad blocker, content filter) rather than a standalone extension, given the crowded single-purpose market?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"Chrome Web Store / Firefox Add-ons developer data-disclosure and privacy policy requirements (what data the extension collects/transmits)\",\n        \"kind\": \"one_time\",\n        \"consult_scope\": \"No legal consult strictly required; competitor filings show this is handled via self-declared store disclosure forms and a hosted privacy policy page\",\n        \"source_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"\n      },\n      {\n        \"obligation\": \"Compliance with Reddit's Data API Terms / Responsible Builder Policy if the extension queries Reddit's API rather than only reading rendered DOM content\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"Not needed if extension only reads client-side rendered DOM; would need a brief ToS review (a few hours, no specialist lawyer) only if API calls are added\",\n        \"source_url\": \"https://redditinc.com/policies/data-api-terms\"\n      }\n    ]\n  },\n  \"unsourced_claims\": [],\n  \"injection_seen\": [],\n  \"brief_md\": \"# Evidence Brief: A09 — AI-content spam filter extension for Reddit/review sites\\n\\n## Idea\\nA browser extension that filters AI-generated spam posts and fake reviews on Reddit and similar sites, for heavy Reddit/review readers.\\n\\n## Payer\\nThe payer would be the individual consumer installing the extension — there is no identified business buyer. Price hypothesis: freemium, anchored to ReviewGuard's $1.99/month Pro tier (https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk). Every *direct* Reddit-focused competitor found (SlopSieve, Redd-Eye, reddit-ai-blocker, reddit-llm-comment-detector, slop-filter, Slop Goggles) is entirely free, which caps the credible price point for this exact idea near $0 unless a paid tier adds clearly superior accuracy or coverage.\\n\\n## Competitors\\nAt least 7 relevant competitors exist:\\n- **SlopSieve** — free, on-device, multi-platform (X, Bluesky, LinkedIn, Reddit, HN) (https://slopsieve.com/extension)\\n- **Redd-Eye** — free, open source, Reddit-only, no store listing yet (https://github.com/RootThePlanet/Redd-Eye)\\n- **reddit-ai-blocker** — free, open source (https://github.com/might-as-well/reddit-ai-blocker)\\n- **reddit-llm-comment-detector** — free, open source (https://github.com/trentmkelly/reddit-llm-comment-detector)\\n- **slop-filter** — free, open source, covers X/LinkedIn/Reddit/YouTube (https://github.com/adamnroman/slop-filter)\\n- **Slop Goggles** — free, launched on Product Hunt, modest traction (#71 day rank, 26 followers) (https://www.producthunt.com/products/slop-goggles)\\n- **ReviewGuard** (adjacent, e-commerce/review focus) — free on Amazon, $1.99/month Pro for more sites (https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk)\\n- **ReviewLens** (adjacent) — fully free, cross-references Reddit sentiment (https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei)\\n\\n## Acquisition channel\\n- Chrome Web Store organic/SEO: $0 cost, with anecdotal examples of 80+ organic installs/day achievable (https://www.reddit.com/r/chrome_extensions/comments/1tvh43v/valuation_check_how_much_is_a_fastgrowing_chrome_extension_with_80_daily_organic_installs_worth/)\\n- Reddit Ads self-serve: CPC $0.20–$4.00, min daily spend ~$5 (https://www.omneky.com/blog/how-much-does-reddit-ads-cost)\\n- Product Hunt launch: low cost but a near-identical competitor (Slop Goggles) got only modest traction this way (https://www.producthunt.com/products/slop-goggles)\\n\\n## Demand evidence\\n- \\\"The flood of low-effort, AI-generated content that clogs up threads and dilutes meaningful discussion.\\\" (https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/)\\n- \\\"The amount of AI generated comments is pretty crazy in some subreddits. It makes the Reddit experience much worse.\\\" (https://www.producthunt.com/products/slop-goggles)\\n- \\\"I'm annoyed by ai content and bots on reddit. I'm a long time lurker that just wants to enjoy reddit again.\\\" (https://github.com/RootThePlanet/Redd-Eye — the builder's own stated motivation, evidence the pain is shared beyond the original HN poster)\\n\\n## Case for\\nThe pain is well documented and independently validated — at least six different solo builders have already shipped extensions addressing almost exactly this idea within the same 12-month window, confirming real, recurring frustration among heavy Reddit users. The technical footprint (DOM text scanning, heuristic/ML scoring, badge/hide UI) is small enough to build in six weeks with AI coding agents, and Chrome Web Store distribution is free, giving a one-person company a plausible, zero-cost launch channel if differentiation (accuracy, UX, platform breadth) is strong enough.\n\n## Case against\nThe space is already crowded with free, nearly identical open-source tools, several shipped by hobbyists in the last year, meaning there is no technical or distribution moat left to claim, and new entrants compete against \"free forever\" alternatives. The closest high-profile, well-resourced comparable — Mozilla's Fakespot, a free fake-review detector integrated directly into Firefox — shut down in July 2025 despite brand trust and built-in distribution, suggesting the category struggles to sustain itself even without needing standalone user acquisition (https://blog.mozilla.org/en/mozilla/building-whats-next/). AI-content detection is also an adversarial, moving target that degrades as generation quality improves, risking false positives that damage trust in the tool. With every direct competitor priced at $0, converting any meaningful fraction of a small niche audience into paying customers looks difficult, undermining the case for six weeks of dedicated build time.\n\n## Open questions\n- Can detection accuracy differentiate enough from the five-plus existing free competitors to earn installs?\n- Would users actually pay, given Fakespot (funded, trusted, Firefox-integrated) failed to sustain itself in the adjacent fake-review space?\n- Is there meaningful takedown/policy risk from Reddit for DOM-based or API-based content extraction at scale?\n- What conversion rate from free install to paid tier is realistic, given only one competitor (ReviewGuard) discloses a paid tier and no revenue data is public?\n- Would this idea be better pursued as a feature bundled into a broader content/ad-filtering tool rather than a narrow standalone extension?\n\"\n}\n```"
+            "text": "```json\n{\n  \"idea_id\": \"A09\",\n  \"payer\": {\n    \"who\": \"Individual heavy Reddit/review-site users (consumer, self-pay), likely via freemium with a paid \\\"Pro\\\" tier for extra sites or features\",\n    \"price_hypothesis\": \"Freemium extension, $1.99–$5/month Pro tier for additional sites or cloud-based scoring, anchored to ReviewGuard's $1.99/month Pro pricing for additional site coverage\",\n    \"comparable_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"SlopSieve\",\n      \"url\": \"https://slopsieve.com/extension\",\n      \"pricing\": \"Free extension; on-device scoring; optional remote scoring features\",\n      \"pricing_url\": \"https://slopsieve.com/extension\"\n    },\n    {\n      \"name\": \"Redd-Eye\",\n      \"url\": \"https://github.com/RootThePlanet/Redd-Eye\",\n      \"pricing\": \"Free, open source, runs locally, no subscriptions\",\n      \"pricing_url\": \"https://addons.mozilla.org/en-US/firefox/addon/redd-eye/\"\n    },\n    {\n      \"name\": \"ReviewGuard\",\n      \"url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\",\n      \"pricing\": \"Free for Amazon; $1.99/month Pro tier unlocks Google Maps, TripAdvisor, full signal breakdown\",\n      \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk\"\n    },\n    {\n      \"name\": \"ReviewLens\",\n      \"url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\",\n      \"pricing\": \"Free, no account needed, covers Amazon/Walmart/eBay/Etsy with Reddit cross-referencing\",\n      \"pricing_url\": \"https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Reddit Ads (targeted subreddit placements)\",\n      \"cost_estimate\": \"CPC roughly $0.50–$4.00, CPM roughly $1.50–$15.00 depending on targeting/format\",\n      \"source_url\": \"https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost\"\n    },\n    {\n      \"channel\": \"Product Hunt / Hacker News launch + organic Chrome Web Store SEO\",\n      \"cost_estimate\": \"$0 direct spend; a strong launch can reach ~1,000 installs in a week, organic-only growth takes 3–6 months to reach similar scale\",\n      \"source_url\": \"https://www.extensionradar.com/blog/how-to-get-more-chrome-extension-users\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"People are sick and tired of bots and AI generated text, images\",\n      \"url\": \"https://www.reddit.com/r/AskModerators/comments/1vr43d5/what_is_reddit_doing_to_block_ai_bots_and_agents/\"\n    },\n    {\n      \"quote\": \"Yeah the increase in bots has led me to take time away from reddit\",\n      \"url\": \"https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/\"\n    }\n  ],\n  \"case_for\": \"A solo builder with AI coding agents can ship a lightweight, client-side pattern/heuristic classifier (regex + stylometric signals + account-age/karma heuristics) as a browser extension in well under six weeks — several hobbyists have already done exactly this as side projects (Redd-Eye, reddit-llm-comment-detector, reddit-ai-blocker, SlopSieve), proving the core technical lift is small. Distribution is nearly free: the target users already self-organize in subreddits like r/technology, r/AskModerators, and r/chrome_extensions where the pain is openly and repeatedly discussed, giving a one-person team a natural, low-CAC seeding ground (Reddit threads, Product Hunt, Hacker News) without needing paid acquisition. Because detection models can run on-device, there's no ongoing inference-cost burden, so a free tier can be sustained indefinitely while a thin Pro tier (more sites, cloud scoring, account-flagging community features) tests willingness to pay, mirroring ReviewGuard's $1.99/month model.\",\n  \"case_against\": \"The space is already crowded with at least four free/open-source direct competitors solving the identical problem (Redd-Eye, SlopSieve, reddit-llm-comment-detector, reddit-ai-blocker) plus adjacent fake-review detectors (ReviewGuard, ReviewLens), several of which are also free and run locally — making it hard to justify why a user installs a seventh option, and making paid conversion very difficult when functionally similar free alternatives exist. AI-text detection is also adversarial and unreliable at the heuristic level: both bot content and false-positive accusations against real humans are already a documented complaint (r/TheGirlSurvivalGuide thread shows genuine users being wrongly flagged as bots), which risks the extension actively damaging trust rather than building it. Reddit and review platforms can also change DOM structure or anti-scraping protections at any time, creating ongoing maintenance burden with no revenue to fund it if monetization fails, and platform owners (e.g., Reddit) may have incentives to resist or break third-party content-filtering tools that affect engagement metrics advertisers rely on.\",\n  \"open_questions\": [\n    \"Would users pay anything at all when multiple well-regarded free/open-source alternatives already exist and are actively maintained?\",\n    \"What detection accuracy (false positive/negative rate) is achievable with lightweight on-device heuristics versus the false-accusation backlash seen in communities like r/TheGirlSurvivalGuide?\",\n    \"Does Reddit's platform policy or ToS tolerate third-party extensions that hide/relabel content at scale, and could Reddit block or rate-limit such extensions?\",\n    \"Is there a defensible differentiation (e.g., community-sourced flagging, multi-site coverage, better accuracy) that would pull users away from free incumbents like SlopSieve or Redd-Eye?\",\n    \"What conversion rate from free installs to any paid tier is realistic, given ReviewGuard's $1.99/month anchor has no published install/revenue numbers found in this research?\"\n  ],\n  \"regulatory_setup\": null,\n  \"unsourced_claims\": [\n    \"Specific future-proofing risk from Reddit platform policy changes against content-filtering extensions [unsourced]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## A09 — Browser extension to filter AI-generated spam/fake reviews on Reddit & review sites\\n\\n### Payer\\nLikely the individual heavy Reddit/review-site user, self-paying for a freemium extension. Price hypothesis: free core tier, ~$1.99–$5/month Pro tier for extra sites or cloud scoring, anchored to ReviewGuard's published $1.99/month Pro pricing (https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk).\\n\\n### Competitors (direct & adjacent)\\n- **SlopSieve** — free, on-device, multi-platform (X, Bluesky, LinkedIn, Reddit, HN) (https://slopsieve.com/extension)\\n- **Redd-Eye** — free, open source, local-only, no telemetry (https://github.com/RootThePlanet/Redd-Eye, https://addons.mozilla.org/en-US/firefox/addon/redd-eye/)\\n- **ReviewGuard** — free for Amazon, $1.99/month Pro for Google Maps/TripAdvisor (https://chromewebstore.google.com/detail/reviewguard-fake-review-d/gffeapklccoefcagamgfgdnfgdehhdhk)\\n- **ReviewLens** — free, covers Amazon/Walmart/eBay/Etsy, cross-references Reddit sentiment (https://chromewebstore.google.com/detail/reviewlens-fake-review-de/ncneomnblmiefoplgpcpkjijkhpafkei)\\n\\nAt least four free, actively maintained direct competitors already exist for the Reddit-specific use case alone.\\n\\n### Acquisition channel\\n- **Reddit Ads**: CPC ~$0.50–$4.00, CPM ~$1.50–$15.00 (https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost)\\n- **Organic/Product Hunt/HN launch**: $0 spend; strong launch can reach ~1,000 installs in a week; pure organic takes 3–6 months (https://www.extensionradar.com/blog/how-to-get-more-chrome-extension-users)\\n\\n### Demand evidence (beyond seed quote)\\n- \\\"People are sick and tired of bots and AI generated text, images\\\" — r/AskModerators (https://www.reddit.com/r/AskModerators/comments/1vr43d5/what_is_reddit_doing_to_block_ai_bots_and_agents/)\\n- \\\"Yeah the increase in bots has led me to take time away from reddit\\\" — r/technology (https://www.reddit.com/r/technology/comments/1llf3an/reddit_is_being_spammed_by_ai_bots_and_its_all/)\\n- Notably, Reddit's own CEO confirmed to the Financial Times that companies spam Reddit with AI-generated posts because it's training data for AI models, per Slashdot's summary (https://tech.slashdot.org/story/25/06/28/1649245/to-spam-ai-chatbots-companies-spam-reddit-with-ai-generated-posts) — supporting that the underlying problem is real and platform-acknowledged, not just a vocal minority complaint.\\n\\n### Case for\\nA solo builder with AI coding agents could replicate the core heuristic/classifier approach already proven by multiple hobbyist projects (Redd-Eye, SlopSieve, reddit-llm-comment-detector) within six weeks; the target audience is self-organizing and vocal in specific subreddits, giving near-zero-cost distribution; on-device scoring avoids ongoing inference costs, letting a free tier run indefinitely while testing a thin paid tier.\\n\\n### Case against\\nAt least four free, functioning, similarly-scoped competitors already exist, several open source and actively maintained, making differentiation and willingness-to-pay very hard to establish. AI-detection heuristics are inherently noisy — real users are already being misflagged as bots in some communities, which could make the product actively harmful to its core use case. The extension is also fully dependent on scraping/DOM structures of third-party sites it doesn't control, with real risk that Reddit or review sites alter structure or policy to block such tools, and no clear enforcement mechanism if monetization fails to cover ongoing maintenance.\\n\\n### Open questions\\n- Would users pay when strong free alternatives already exist and are maintained?\\n- What's the real false-positive/negative rate achievable with lightweight heuristics, and how damaging is the false-accusation risk?\\n- Does Reddit's ToS tolerate this kind of content-hiding/relabeling extension at scale?\\n- What differentiator (community flagging, more platforms, accuracy) would pull users from SlopSieve/Redd-Eye specifically?\\n- What's a realistic free-to-paid conversion rate, given no competitor publishes install/revenue numbers?\\n\"\n}\n```"
           }
         ],
         "container": null,
@@ -527,16 +354,16 @@
         "stop_sequence": null,
         "stop_details": null,
         "usage": {
-          "input_tokens": 2,
-          "cache_creation_input_tokens": 985,
-          "cache_read_input_tokens": 22455,
+          "input_tokens": 19733,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
           "cache_creation": {
-            "ephemeral_5m_input_tokens": 985,
+            "ephemeral_5m_input_tokens": 0,
             "ephemeral_1h_input_tokens": 0
           },
-          "output_tokens": 5701,
+          "output_tokens": 4171,
           "output_tokens_details": {
-            "thinking_tokens": 231
+            "thinking_tokens": 0
           },
           "service_tier": "standard",
           "inference_geo": "global"

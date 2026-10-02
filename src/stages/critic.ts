@@ -13,6 +13,7 @@ import type { Db } from "../store/db.js";
 import { BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
 import { TraceCollector } from "../trace.js";
 import { extractJson } from "./kill_gate.js";
+import { renderBriefFromFields, ViabilityOutput } from "./viability.js";
 
 export const CriticOutput = z.object({
   winner: z.enum(["A", "B"]),
@@ -164,10 +165,17 @@ export async function runCritic(ctx: CriticContext): Promise<CriticRunSummary> {
   const { db } = ctx;
   const ideaIds = [...ctx.ideaIds];
   const briefs = new Map<string, string>();
+  const renderedFallback: string[] = [];
   for (const id of ideaIds) {
     const v = db.latestStageResult(id, "viability");
-    if (!v || v.verdict !== "complete" || !v.doc_md) throw new Error(`idea ${id} has no complete viability brief`);
-    briefs.set(id, v.doc_md);
+    if (!v || v.verdict !== "complete") throw new Error(`idea ${id} has no complete viability result`);
+    if (v.doc_md?.trim()) briefs.set(id, v.doc_md);
+    else {
+      // Older rows stored before the viability stage rendered a fallback: render it here, from the stored payload.
+      const payload = ViabilityOutput.parse(JSON.parse(v.payload_json));
+      briefs.set(id, renderBriefFromFields(id, payload));
+      renderedFallback.push(id);
+    }
   }
   const rounds = swissRounds(ideaIds.length);
   const played = new Set<string>();
@@ -181,7 +189,7 @@ export async function runCritic(ctx: CriticContext): Promise<CriticRunSummary> {
   const judgePair = async (round: number, a: string, b: string): Promise<ComparisonRow> => {
     const trace = new TraceCollector();
     trace.add("system", { model: MODELS.critic, prompt_hash: ctx.prompts.critic.hash, round, idea_a: a, idea_b: b });
-    trace.add("input", { round, idea_a: a, idea_b: b, brief_a_chars: briefs.get(a)!.length, brief_b_chars: briefs.get(b)!.length, blinding: "idea ids replaced by Idea A / Idea B" });
+    trace.add("input", { round, idea_a: a, idea_b: b, brief_a_chars: briefs.get(a)!.length, brief_b_chars: briefs.get(b)!.length, blinding: "idea ids replaced by Idea A / Idea B", brief_rendered_from_fields: [a, b].filter((x) => renderedFallback.includes(x)) });
     try {
       // Order AB: a is Idea A. Order BA: b is Idea A; map the winner back to a/b.
       const ab = await judge(ctx, trace, `${a}__${b}__ab`, blindBrief(briefs.get(a)!, a, "Idea A"), blindBrief(briefs.get(b)!, b, "Idea B"), "ab");

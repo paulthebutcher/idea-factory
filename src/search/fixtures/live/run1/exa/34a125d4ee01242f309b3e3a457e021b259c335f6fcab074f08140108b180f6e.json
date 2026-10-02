@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "Free Pascal Lazarus documentation bad confusing complaint",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-10-02T22:44:29.913Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "Free Pascal Lazarus documentation bad confusing complaint",
+    "results": [
+      {
+        "title": "[Lazarus] fragmented documentation causes lots of frustration",
+        "url": "https://lists.lazarus-ide.org/pipermail/lazarus/2010-October/056110.html",
+        "snippet": "[Lazarus] fragmented documentation causes lots of frustration \n\n# [Lazarus] fragmented documentation causes lots of frustration\n\nGraeme Geldenhuys graemeg.lists at gmail.com (lazarus%40lists.lazarus.freepascal.org) Tue Oct 5 09:27:55 CEST 2010\n\n```\nTo the Lazarus team,\n\nYou guys should really decide what you want to use as a help medium.\nThe wiki OR fpdoc class documentation. I don't use LCL much, so when I\ndo, I need lots help. Pressing F1 in the IDE takes me to the class\ndocumentation where I would expect to see help. Take the TStringGrid\nas an example. There is absolutely NO help in the fpdoc class\ndocumentation, so pressing F1 in the IDE is useless. I had to then\nmanually search through the wiki (luckily I know about the wiki) to\nsee if there is any information. Oh by the way, wiki search support is\ncrap too.\n\nAnyway, lucky for me the wiki contained lots of help on the StringGrid\noptions etc, but that help should really be in the developers \"first\nport of call\" - the medium that is displayed when I pressed F1.\nCurrently that is fpdoc class documentation.\n\nI'd suggest you take some time out of developing nice new features in\nthe IDE, and rather get your house in order. Sort out the damn\ndocumentation mess. I'm pretty sure you guys know how important\ndocumentation is. And currently the little help there is in LCL is\nfragmented too - a double whammy! Some docs in fpdoc class files, some\non wiki, some in blogs etc... Learn from Borland's mistakes; a\nframework needs documentat",
+        "published": null
+      },
+      {
+        "title": "[Lazarus] TProcess, UTF8, Windows",
+        "url": "https://lists.lazarus-ide.org/pipermail/lazarus/2012-April/203245.html",
+        "snippet": "[Lazarus] TProcess, UTF8, Windows \n\n# [Lazarus] TProcess, UTF8, Windows\n\nHans-Peter Diettrich DrDiettrich1 at aol.com (lazarus%40lists.lazarus-ide.org) Sat Apr 14 10:21:46 CEST 2012\n\n```\nJürgen Hestermann schrieb:\n\n> When I use a function that I used before (in Turbo Pascal, Virtual Pascal,\n> Delphi) but now want to use with Free Pascal (Lazarus) then the first\n> thing is to google for it.\n\nHave you ever opened the FPDoc Editor window? In the trunk version the \navailable documentation also is displayed in a hint window, when moving \nthe mouse over source code.\n\n> For CopyFile I find a link to the documentation\n> but it only says:\n> \n> -----------------------------------\n> const SrcFilename: String;\n> const DestFilename: String\n> \n> SrcFilename    The source filename for the Copy\n> DestFilename   The destination filename for the Copy\n> -----------------------------------\n> \n> String is generic so it can be pchar, shortstring or ansistring or ....\n> But what is the encoding? It does not tell me. If the parameter I want\n> to feed in comes from a different source (database, file, ...) where I\n> know the encoding how do I find out to which encoding it has to be\n> converted to?\n\nThe documentation definitely is in a bad state. I already tried to \nimprove it, adding questions about omissions etc. which I couldn't \nanswer myself. But it turned out that the Lazarus team is not willing to \nprovide the missing information, so I stopped any further updates. As \nthe only \"improvement\" a No",
+        "published": null
+      },
+      {
+        "title": "[fpc-pascal] docs",
+        "url": "https://lists.freepascal.org/pipermail/fpc-pascal/2024-October/062547.html",
+        "snippet": "[fpc-pascal] docs \n\n# [fpc-pascal] docs\n\nChristo Crause christo.crause at gmail.com (fpc-pascal%40lists.freepascal.org) Mon Oct 21 10:35:22 CEST 2024\n\n```\nThe official FPC documentation can be accessed from here:\nhttps://www.freepascal.org/docs.html\nThese are obviously reference documentation, not getting started or how-to\ntutorials.\nThe documentation is hosted here:\nhttps://gitlab.com/freepascal.org/fpc/documentation\nIssues reporting mistakes/omissions and merge requests with fixes can be\nsubmitted here.\n\nLazarus documentation is hosted on SourceForge:\nhttps://lazarus-ccr.sourceforge.io/docs/index.html\n\nTutorials for FPC and Lazarus can be added to the wiki (\nhttps://wiki.freepascal.org/Main_Page).\nPerhaps for FPC tutorials take a look at the content of Basic Pascal\nTutorial (https://wiki.freepascal.org/Basic_Pascal_Tutorial)\nand add getting started topics there.\n\nLazarus tutorials are a bit more scattered, but check here to see what is\nexisting: https://wiki.freepascal.org/Category:Tutorials\n\nOn Mon, Oct 21, 2024 at 9:05 AM Gordon Findlay via fpc-pascal <\nfpc-pascal at lists.freepascal.org> wrote:\n\n> I've been programming a long time but when I first took up with Lazarus\n> and FPC there were three issues:\n>\n>  - out of date documentation.\n>  - for many topics (for example in the LCL) there is formal documentation\n> but not tutorial material.\n>  - distros sometimes have quite old versions in their repos. For example\n> my opensuse machine right now is offering Lazarus 2.2.\n>\n",
+        "published": null
+      },
+      {
+        "title": "Misleading documentation of X/Y parameter of TCanvas.TextRect (#27379) · Issues · FPC / Lazarus / Lazarus · GitLab",
+        "url": "https://gitlab.com/freepascal.org/lazarus/lazarus/-/issues/27379",
+        "snippet": "Misleading documentation of X/Y parameter of TCanvas.TextRect (#27379) · Issues · FPC / Lazarus / Lazarus · GitLab\n\nMisleading documentation of X/Y parameter of TCanvas.TextRect\n\n Original Reporter info from Mantis: wp @wpam - **Reporter name:** ## Description: The current documentation of TCanvas.TextRect says: \"Writes Text string within a specified rectangle, according to predefined Style\". And: \"X, Y specify the starting point for writing the &LtPos;var>Text&LtPos;/var> within the rectangle\". As I learned when working with another bug report (#0027363) this is not true in general: the x/y coordinates are respected only for top/left-aligned text. For other alignments/layouts the text position is defined only by the rectangle, not by x/y any more. The attached patch clarifies this in the Lazarus documentation of graphics.xml. ## Additional information: I wonder why the \"Arguments\" section shows up twice in the generated html and chm file. ## Mantis conversion info: - **Mantis ID:** 27379 - **Version:** 1.5 (SVN) - **Fixed in version:** 1.5 (SVN) - **Fixed in revision:** 47566 (#7e93d299dca9bab692bbd8efedd5883dcc3d5290) - **Target version:** 1.4\n\nissue",
+        "published": null
+      },
+      {
+        "title": "Documentation of TOpenOption.ofExtensionDifferent is wrong (#40478) · Issues · FPC / Lazarus / Lazarus · GitLab",
+        "url": "https://gitlab.com/freepascal.org/lazarus/lazarus/-/issues/40478",
+        "snippet": "Documentation of TOpenOption.ofExtensionDifferent is wrong (#40478) · Issues · FPC / Lazarus / Lazarus · GitLab\n\nDocumentation of TOpenOption.ofExtensionDifferent is wrong\n\nOur docs about `ofExtensionDifferent` wrongfully states: \"Allows a file name with an extension which does not match the filters or default extension in a file dialog.\" This is not how Delphi defines it, and also not how it's implemented in pre-Vista dialogs (using OPENFILE structure, the OS sets the corresponding flag). I've now fixed the behaviour of TOpenDialog in commit 7d4a36a2. The flag will be set by TOpenDialog if `DefaultExt` is not an empty string and the extension of `Filename` differs from `DefaultExt`. Users should not set this flag before `Execute` (since it has no meaning in that context), in fact the flag will be cleared upon `Execute`.\n\nissue",
+        "published": null
+      }
+    ]
+  }
+}

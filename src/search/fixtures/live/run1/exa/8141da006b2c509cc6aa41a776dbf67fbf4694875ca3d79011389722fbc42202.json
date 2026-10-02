@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "proof of human verification API pricing for developers",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-10-02T22:45:48.880Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "proof of human verification API pricing for developers",
+    "results": [
+      {
+        "title": "Proof of Human",
+        "url": "https://proofofhuman.ge/",
+        "snippet": "Proof of Human\n\n## AI-powered Digital Identities\n\nDetect Fake and real Trading Volume\n\nProof of Personhood and Access Control\n\nAML, KYC, KYB\n\n## 146 signals are live. \n\n66 EVM 56 REST 21 Solana 0 BTC 0 Tron 0 TON 0 XLM\n\n## Search\n\nSearch for any identity and see the evidence from every imaginable layer.\n\n## You decide what counts as human\n\nEvery detection signal goes through community consensus.\n\n## Dev Ready\n\nSDK, API, Widget for your choice. First 100 scans free.\n\n## Choose your plan\n\nFree\n\n$0\n\n- 100 scans per wallet (lifetime)\n- Standard speed\n- Community signals\n\nGreat for testing & individuals\n\nStartup Most popular\n\n$1,000 /mo\n\n- 100,000 scans included\n- Priority queue\n- $0.015 per extra scan\n- API + SDK access\n\nEnterprise\n\n- Multi-million scan quotas\n- Dedicated support\n- Custom signals & SLAs\n- Private deployments\n\nROADMAP\n\nApr-May 2026 Devnet public launch Colosseum Hackathon submission Detection signals R&D\n\nMay-Jun 2026 Digital Identity Search SDK, Widget, Dev tools\n\nJun-Jul 2026 Bitcoin, Tron, TON, XLM integration Using POH Miner Compute Network for identity job processing",
+        "published": null
+      },
+      {
+        "title": "Pricing | useHUMA",
+        "url": "https://humaverify.com/pricing",
+        "snippet": "Pricing | useHUMA\n\n# Simple plans that scale with you.\n\nOne API call. No CAPTCHA. No friction for your real users.\n\n✓ 14 days of Starter, then Free for ever · No credit card, ever\n\nFree\n\n$ 0\n\nfor ever · no card\n\n- 1,000 verifications / mo\n- Agent Shield · AI agent detection\n- 20 requests / min\n- 1 project\n\nIndie\n\n$ 19\n\n- 10,000 verifications / mo\n- Agent Shield · AI agent detection\n- 30 requests / min\n- Single project\n- REST API access\n\nStarter\n\n$ 49\n\n- 50,000 verifications / mo\n- Agent Shield · AI agent detection\n- Email support\n- Single project\n- REST API access\n\nPro\n\n$ 199\n\n- 500,000 verifications / mo\n- 600 requests / min\n- Agent Shield · AI agent detection\n\nEnterprise\n\n$ 499\n\n- 2,000,000 verifications / mo\n- Dedicated Slack channel\n- Custom terms & invoicing\n- Volume discounts\n- Agent Shield · AI agent detection\n\n## Full plan comparison.\n\n| Feature | Free | Indie | Starter | Pro | Enterprise |\n| --- | --- | --- | --- | --- | --- |\n| Monthly verifications | 1,000 | 10,000 | 50,000 | 500,000 | 2,000,000 |\n| Free trial | not needed | 14 days | 14 days | 14 days | 14 days |\n| Credit card required | No | No | No | No | No |\n| REST API access | ✓ | ✓ | ✓ | ✓ | ✓ |\n| Behavioral signals | ✓ | ✓ | ✓ | ✓ | ✓ |\n| Dashboard analytics | ✓ | ✓ | ✓ | ✓ | ✓ |\n| No CAPTCHA | ✓ | ✓ | ✓ | ✓ | ✓ |\n| Requests per minute | 20 | 30 | 60 | 600 | 3,000 |\n| AI agent detection (Agent Shield) | ✓ | ✓ | ✓ | ✓ | ✓ |\n| Email support | — | ✓ | ✓ | ✓ | ✓ |\n| Dedicated Slack channel | — | — | — | — | ✓ |",
+        "published": null
+      },
+      {
+        "title": "API Documentation - POY Verify Developer Docs",
+        "url": "https://poyverify.com/docs",
+        "snippet": "API Documentation - POY Verify Developer Docs\n\n# API Documentation PRIVATE BETA\n\nEverything you need to integrate human verification into your platform. Two lines of code. Sub-50ms response. Zero data liability.\n\n## Overview\n\nThe POY Verify API provides REST endpoints for verifying humans, stamping content, and querying trust scores. All endpoints return JSON and use standard HTTP status codes.\n\n```\nBase URL: https://api.poyverify.com/v1\n```\n\nAll API calls require authentication via API key. Responses are returned in under 50 milliseconds globally.\n\n## Authentication\n\nAuthenticate all requests by including your API key in the Authorization header:\n\n```\nAuthorization: Bearer poy_live_xxxxxxxxxxxxxxxxxxxx\n```\n\nAPI keys are scoped to your platform with per-key rate limiting and domain restrictions. Get your API key by joining the waitlist.\n\n### JavaScript\n\n```\nnpm install @poyverify/sdk\n```\n\n```\nimport { POYVerify } from '@poyverify/sdk';\nconst poy = new POYVerify('poy_live_xxxxxxxxxxxx');\n// Verify a user is human\nconst result = await poy.verify(userId);\nconsole.log(result.verified); // true\nconsole.log(result.trustScore); // 98.2\n// Stamp content as human-made\nconst stamp = await poy.stamp({\n  content: articleBody,\n  type: 'text'\n});\nconsole.log(stamp.hash); // \"a3f9c2e1...\"\n```\n\n### Python\n\n```\npip install poyverify\n```\n\n```\nfrom poyverify import POYVerify\npoy = POYVerify(api_key=\"poy_live_xxxxxxxxxxxx\")\n# Verify a user is human\nresult = poy.verify(user_id)\nprint(result.verif",
+        "published": null
+      },
+      {
+        "title": "Pricing — Human Verification Built for Platform Economics | VerifyYou",
+        "url": "https://verifyyou.com/pricing",
+        "snippet": "Pricing — Human Verification Built for Platform Economics | VerifyYou\n\n### Human Verification\n\n- Proves unique human identity\n- 15-second flow\n- No documents\n- Privacy-first\n\n### Developer Experience\n\n- Simple REST API\n- Full sandbox\n- Clean docs\n- 1-2 week integration\n\n### Cross-Platform Identity\n\n- One verification, universal\n- Works across partners\n- Prevents multi-accounting\n- Cryptographically enforced\n\n### Security & Compliance\n\n- GDPR\n- CCPA\n- SOC 2 in progress\n- No government documents\n\n### Analytics & Insights\n\n- Real-time tracking\n- Completion rates\n- Fraud detection\n- Custom reporting\n\n### Support\n\n- Email (Standard)\n- Slack (Growth)\n- Dedicated manager (Enterprise)\n- Technical help\n\n### Flexible Integration\n\n- Works with existing tools\n- Complements fingerprinting\n- Layers with existing tools\n- No replacement needed\n\n### Economics That Work\n\n- Survey-friendly\n- Microtask-friendly\n- Community-scale\n- No long-term contracts\n\n## Calculate What Fraud Actually Costs You\n\nMost platforms underestimate the true cost of fake accounts, duplicate respondents, and bot traffic. Let us show you the numbers.\n\n| Feature | VerifyYou | KYC | Device Fingerprinting |\n| --- | --- | --- | --- |\n| Proves unique human | | | |\n| No government ID required | | | |\n| Privacy-first by design | | | |\n| Cross-platform identity | | | |\n| < 15 second verification | | | |\n| Prevents multi-accounting | | | |\n| Works at microtask economics | | | |\n| No biometric templates stored | | | |\n\nIs there a ",
+        "published": null
+      },
+      {
+        "title": "Pricing - lemma.id",
+        "url": "https://lemma.id/pricing",
+        "snippet": "Pricing - lemma.id\n\n# Local verify is free\n\nPasskey continuity costs nothing: unlimited verifies, no card required. Free forever, not a trial. You pay only when your policy requires a human proof or site-block enforcement.\n\nVerify signed presentations locally and enforce on a site-private ID. That part is free. When new-account abuse is the problem, require isHuman on the same integration: fifty cents per user once (verification included), then three cents for each month they renew.\n\n$0 Passkey continuity / local verify, unlimited\n\n$0.50 per human-proof user, once. Verification included\n\n$0.03 per human-proof MAU, starting month two\n\nAdd to your site See Demo\n\n## How billing works\n\nPasskey continuity is free with no user caps. Day-to-day proof checks run on your own servers and are never metered. Billing starts only when your policy requires a human proof: you pay once when the user binds (identity verification included), then a small monthly fee in months where that user renews. Users who already verified on another lemma.id-enabled site skip the ID ceremony at binding.\n\n### Passkey continuity\n\nFree\n\nVerify signed presentations locally and get a stable, site-private ID plus assurance level. Unlimited verifies, no registration or card required. The same integration you'd later use for human proofs, so stepping up never means migrating accounts.\n\n### Human proof binding, verification included\n\n$0.50 / user · one-time\n\nCovers the user's first human-proof credential for your sit",
+        "published": null
+      }
+    ]
+  }
+}

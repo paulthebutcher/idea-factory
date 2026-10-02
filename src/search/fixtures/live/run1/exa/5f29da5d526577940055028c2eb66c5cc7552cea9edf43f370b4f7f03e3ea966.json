@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "I wish my local newspaper let me pick only the sections I care about",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-10-02T22:45:33.988Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "I wish my local newspaper let me pick only the sections I care about",
+    "results": [
+      {
+        "title": "Building a Custom AI Newspaper",
+        "url": "https://www.dailyliving.ai/p/building-a-custom-ai-newspaper",
+        "snippet": "Building a Custom AI Newspaper\n\n# Building a Custom AI Newspaper\n\nI built myself one. An actual newspaper, masthead and section grids and pull quotes, made fresh whenever I ask for it, covering exactly what I care about and nothing I don't.\n\nArnie K\n\nSep 2, 2026\n\n# AI TUTORIAL Building a Custom AI Newspaper\n\nMost mornings, I open five different things before I've had coffee: a news site, a weather app, box scores, my portfolio, whatever AI story broke overnight. Fifteen minutes to piece together what a newspaper used to hand me in one glance.\n\nSo I built myself one. An actual newspaper, masthead and section grids and pull quotes, made fresh whenever I ask for it, covering exactly what I care about and nothing I don't.\n\nThis is the full build. If you read our newsletter issue, you already did stage one: picking your sections and writing the standing prompt. Here's everything past that.\n\nDecide what actually goes in your edition.\n\nBefore you write a single prompt, get specific. Vague sections produce vague output. I use these questions to nail mine down, and you should answer them for yours before you start:\n\n- Local news for which city, specifically?\n- Which sports teams, by name? Not \"sports.\" Mine are the Cardinals and the Suns.\n- National and world news, and does it matter to you whether the sources lean any particular direction?\n- Weather for your city, plus anywhere else that matters (I added Flagstaff, since I have a place up there)\n- Markets, and specifically anything y",
+        "published": "2026-09-02T00:00:00.000Z"
+      },
+      {
+        "title": "falense/openpaper",
+        "url": "https://github.com/falense/openpaper",
+        "snippet": "# falense/openpaper\n\nA personalized newspaper that knows only you will ever read it. Claude Code plugin that turns news sources into broadsheet-style HTML editions.\n\n- Stars: 14\n- Forks: 1\n- Watchers: 14\n- Open issues: 2\n- License: MIT License\n- Default branch: main\n- Created: 2026-06-04T12:46:05Z\n\n## Languages\n\n- CSS\n- Dockerfile\n- JavaScript\n- Jinja\n- Python\n- Shell\n\n## Topics\n\n- claude-code\n- claude-code-plugin\n- jinja2\n- news\n- newspaper\n- python\n\n## Top Contributors\n\n- falense (22 contributions)\n- mhellevang (1 contributions)\n\n---\n\n## README\n\n# OpenPaper\n\nA personalized newspaper that knows only you will ever read it.\n\n \n \n \n\nOpenPaper is a Claude Code plugin that turns any collection of news sources into a single-reader daily newspaper. You point it at URLs, RSS feeds, or topics; it writes Python fetchers that scrape them deterministically, curates the articles to your taste, and renders the result as a broadsheet-style HTML page — complete with blackletter masthead, multi-column grid, halftone images, and animated ink-draw headlines.\n\nThere is no server, no account, no feed algorithm optimizing for engagement. Just your sources, your preferences, and a newspaper laid out for one.\n\n## How it works\n\nThree stages, each with a clear boundary:\n\n1. **Ingest** — Add any news source. An agent analyzes the site and writes a standalone Python fetcher. Fetchers import shared utilities from a base module and run without AI on every subsequent invocation — deterministic, fast, audi",
+        "published": null
+      },
+      {
+        "title": "morten-olsen/editions",
+        "url": "https://github.com/morten-olsen/editions",
+        "snippet": "# morten-olsen/editions\n\n- Stars: 1\n- Forks: 0\n- Watchers: 1\n- Open issues: 4\n- Homepage: http://mortenolsen.pro/editions/\n- Default branch: main\n- Created: 2026-03-09T12:14:01Z\n\n## Languages\n\n- Astro\n- CSS\n- Dockerfile\n- HTML\n- JavaScript\n- MDX\n- TypeScript\n\n## Top Contributors\n\n- morten-olsen (89 contributions)\n\n---\n\n## README\n\n# Editions\n\n**Your news, in magazine form. No algorithms trying to ruin your life.**\n\nRemember magazines? You'd pick one up, read it, reach the last page, and put it down. You felt *informed*, not *anxious*. Nobody had engineered it to make you feel behind, or angry, or unable to stop scrolling.\n\nEditions brings that back. It's a self-hosted news reader that assembles your RSS feeds into finite, curated magazines — shaped by your interests, built on your schedule, and designed to *end*. You read it, you're done, you go outside. Revolutionary concept, apparently.\n\nNo engagement optimization. No unread counts screaming at you. No data leaving your server. No venture capital demanding you become addicted. Just your news, on your terms.\n\n## How it works\n\n### 1. Subscribe to sources\n\nAdd RSS feeds. That's it. Your favorite blogs, news outlets, podcasts — if it has an RSS feed, Editions can read it.\n\n### 2. Define your focuses\n\nCreate topic areas — \"Technology\", \"Climate\", \"Local News\", whatever you care about. An on-device ML model (zero-shot NLI, runs entirely on your server) reads every incoming article and classifies it into your focuses automatically.",
+        "published": null
+      },
+      {
+        "title": "Yournalist - Personal AI News Curator | Personalized News",
+        "url": "https://www.yournalist.ai/",
+        "snippet": "Yournalist - Personal AI News Curator | Personalized News\n\n## Why this matters for you\n\nYournalist learns about things that matter to you, then shows you how exactly world events and news affect you and your lifestyle.\n\n### Pick themes that interest you\n\nTell Yournalist what you care about. The more you share, the better your newsfeed becomes.\n\n### Pick themes that interest you\n\nTell Yournalist what you care about. The more you share, the better your newsfeed becomes.\n\n### Get your digest\n\nReceive daily stories in your web app rewritten for your life, but always 100% factual.\n\n### Get your digest\n\nReceive daily stories in your web app rewritten for your life, but always 100% factual.\n\n### Rate & refine\n\nGive 1-click feedback and watch your Yournalist get smarter (and more personal) every day.\n\n### Rate & refine\n\nGive 1-click feedback and watch your Yournalist get smarter (and more personal) every day.\n\n#### Is Yournalist changing the news?\n\nNo. All stories come from real, verified sources. Yournalist simply rewrites them in your context and style so they’re easier to understand and more relevant.\n\n#### How is my digest personalized?\n\nWe learn from your interests, topics you rate, and your feedback — nothing more. The more you interact, the smarter your personal Yournalist gets.\n\n#### When will I get access?\n\nWe’re inviting early users soon. Join the waitlist to secure early access and help shape the experience.\n\n#### Is Yournalist free?\n\nYes. The first users get full access f",
+        "published": null
+      },
+      {
+        "title": "dmthepm/morning-paper",
+        "url": "https://github.com/dmthepm/morning-paper",
+        "snippet": "# Repository: dmthepm/morning-paper\n\nOwn your algorithm. A print-first personal newspaper your agent composes from sources and preferences you own as files, rendered to PDF by a CLI. Anti-feed; runs on Claude Code and Codex.\n\n- Stars: 4\n- Forks: 0\n- Watchers: 0\n- Open issues: 0\n- Primary language: Python\n- Languages: Python (93.6%), CSS (6.4%)\n- License: MIT License (MIT)\n- Default branch: main\n- Created: 2026-04-13T17:01:59Z\n- Last push: 2026-07-03T18:51:32Z\n- Contributors: 1 (top: dmthepm)\n- Releases: 8\n- Latest release: v0.8.12 (2026-06-27T17:59:58Z)\n\n---\n\n \n \n\n Morning Paper \n\n A real paper every morning, from your private newsroom. \n \n\n---\n\nMorning Paper turns sources and preferences you own into a finite daily edition:\ncalm, source-backed, print-ready, and easy to mark up.\n\nAn agent composes the paper. The `morning-paper` CLI renders it to PDF. Your\nprivate newsroom is the folder where sources, taste, delivery rules, memory,\nand feedback live as files.\n\nIt is not a summarizer for a fixed feed. It is an owned algorithm you can\ninspect: collect candidates from many places, remember what you have already\nseen, filter repeats and low-signal noise, judge what deserves attention\nagainst your taste, then print an edition you can correct.\n\nIt gets better the way an editor gets better. You read the paper, give notes in\nnatural language, and the agent turns stable feedback into durable newsroom\nfiles such as `EDITORIAL.md`, `VISUALS.md`, `SOURCES.md`, `DELIVERY.md`, and\n`TASTELOG",
+        "published": "2026-04-13T17:01:59.000Z"
+      }
+    ]
+  }
+}
