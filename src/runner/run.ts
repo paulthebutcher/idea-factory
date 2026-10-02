@@ -71,7 +71,9 @@ export interface ExecuteRunSummary {
  */
 export async function executeRun(db: Db, runId: string, opts: ExecuteRunOptions): Promise<ExecuteRunSummary> {
   const prompts = opts.prompts ?? loadPrompts();
-  const model = opts.model ?? createModelClient({ mode: opts.modelMode, fixtureDir: opts.fixtureDir });
+  // In record mode a transcript already on disk is replayed, so a resumed run (after a budget stop or
+  // an outage) only pays for calls it has not made before. Critic pairs are keyed by idea pair and order.
+  const model = opts.model ?? createModelClient({ mode: opts.modelMode, fixtureDir: opts.fixtureDir, reuseExisting: opts.modelMode === "record" });
   const run0 = db.getRun(runId)!;
   const stages = JSON.parse(run0.stages) as Stage[];
   const ideaIds = (JSON.parse(run0.config_json).idea_ids as string[] | undefined) ?? db.activeIdeaIds();
