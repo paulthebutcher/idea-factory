@@ -2,7 +2,7 @@
 // and a shortlist of traces most likely to be wrong, chosen by mechanical signals (overrides, unknowns
 // on hard tests, many unsourced URLs, order flips, thin briefs). Reads only agent-visible data plus
 // the run's own results; labels and outcomes stay in report_calibration.
-//   npx tsx scripts/report_run.ts --run live_run_1
+//   npx tsx scripts/report_run.ts --run live_run_1[,live_run_2,...]   (several runs: latest result per idea and stage wins)
 import { openDb } from "../src/store/db.js";
 import { PATHS } from "../src/config.js";
 
@@ -12,12 +12,28 @@ function arg(name: string): string | undefined {
   return i >= 0 && v && !v.startsWith("--") ? v : undefined;
 }
 
-const runId = arg("run");
-if (!runId) throw new Error("--run <run id> is required");
+const runArg = arg("run");
+if (!runArg) throw new Error("--run <run id>[,<run id>...] is required");
+const runIds = runArg.split(",").map((s) => s.trim()).filter(Boolean);
+const runId = runIds.join(",");
 const db = openDb(PATHS.db);
-const run = db.getRun(runId);
-if (!run) throw new Error(`run ${runId} not found`);
-const rows = db.listStageResults({ runId });
+const runs = runIds.map((id) => {
+  const r = db.getRun(id);
+  if (!r) throw new Error(`run ${id} not found`);
+  return r;
+});
+const run = { ...runs[runs.length - 1], budget_usd: runs.reduce((a, r) => a + r.budget_usd, 0), spent_usd: runs.reduce((a, r) => a + r.spent_usd, 0), status: runs.map((r) => `${r.id}:${r.status}`).join(" "), started_at: runs[0].started_at, finished_at: runs[runs.length - 1].finished_at };
+// Latest result per (idea, stage) across the listed runs, so retried tasks count once. Critic rows are all kept.
+const allRows = runIds.flatMap((id) => db.listStageResults({ runId: id }));
+const latest = new Map<string, (typeof allRows)[number]>();
+for (const r of allRows) {
+  if (r.stage === "critic") continue;
+  const k = `${r.idea_id}|${r.stage}`;
+  const prev = latest.get(k);
+  if (!prev || r.created_at > prev.created_at || (r.created_at === prev.created_at && r.id > prev.id)) latest.set(k, r);
+}
+const rows = [...latest.values(), ...allRows.filter((r) => r.stage === "critic")];
+const allCost = allRows.reduce((a, r) => a + r.cost_usd, 0);
 const kg = rows.filter((r) => r.stage === "kill_gate");
 const via = rows.filter((r) => r.stage === "viability");
 const critic = rows.filter((r) => r.stage === "critic");
@@ -31,12 +47,13 @@ const count = (xs: { verdict: string }[]) => {
 };
 
 console.log(`# Run ${runId}\n`);
-console.log(`Status **${run.status}**, budget $${run.budget_usd}, spent $${run.spent_usd.toFixed(2)}, ${run.started_at} to ${run.finished_at ?? "(running)"}. Open tasks: ${db.listTasks(runId, "open").length}.\n`);
+console.log(`Status **${run.status}**, budget $${run.budget_usd.toFixed(2)} (sum of run budgets), spent $${run.spent_usd.toFixed(2)} across ${runIds.length} run(s) (all results incl. superseded retries: $${allCost.toFixed(2)}), ${run.started_at} to ${run.finished_at ?? "(running)"}. Open tasks: ${runIds.reduce((a, id) => a + db.listTasks(id, "open").length, 0)}.\n`);
 console.log("## Counts per verdict and cost per stage\n");
 console.log("| Stage | Results | Verdicts | Cost | Per unit |");
 console.log("|---|---|---|---|---|");
-console.log(`| Kill gate | ${kg.length} | ${count(kg)} | $${sum(kg).toFixed(2)} | $${(kg.length ? sum(kg) / kg.length : 0).toFixed(3)} per idea |`);
-console.log(`| Viability | ${via.length} | ${count(via)} | $${sum(via).toFixed(2)} | $${(via.length ? sum(via) / via.length : 0).toFixed(3)} per idea |`);
+const kgAll = allRows.filter((r) => r.stage === "kill_gate"), viaAll = allRows.filter((r) => r.stage === "viability");
+console.log(`| Kill gate | ${kg.length} ideas (${kgAll.length} attempts) | ${count(kg)} | $${sum(kgAll).toFixed(2)} | $${(kg.length ? sum(kgAll) / kg.length : 0).toFixed(3)} per idea |`);
+console.log(`| Viability | ${via.length} ideas (${viaAll.length} attempts) | ${count(via)} | $${sum(viaAll).toFixed(2)} | $${(via.length ? sum(viaAll) / via.length : 0).toFixed(3)} per idea |`);
 console.log(`| Critic | ${comparisons.length} comparisons, ${standings.length} ranked | ${count(comparisons)} | $${sum(critic).toFixed(2)} | $${(comparisons.length ? sum(critic) / comparisons.length / 2 : 0).toFixed(3)} per call |`);
 console.log(`| **Total** | | | **$${run.spent_usd.toFixed(2)}** | |\n`);
 
