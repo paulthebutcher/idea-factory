@@ -1,0 +1,542 @@
+{
+  "stage": "viability",
+  "idea_id": "A15",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-10-02T22:40:29.276Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "3e543d26359112d16be76755d33ef9e2d296d1c6f27da78697daf91e9f1a5741",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2248,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2248,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 388,
+        "output_tokens_details": {
+          "thinking_tokens": 136
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.009504,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDS2RguzvcAfoS5d7HR",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eu0ECqQBCBIYAipAo3P8jhs1MtH2kTJ5YAwxT/gAL1x8gIxCoUX+lxDr3t6yA4gGcjvJjDX7CSki+6I3TgVx0+m/CLU2aRoarXfhfDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB2+WA1gYSDCa6sHgc19VLQ379PhoMFBRUteF7CpdjFrYgIjB4exp/bwu/u5FbogA0DAZWLKhvBEO5ngtbWY8/cQuJNoJCnYOGZHECJQzOh5fR3Gcq9QKk6fXVadtAMjbVAHSewlI05LvccTmGQ/RotqZo2T/neMewnJeFqwv7Djs7R93KQZZH0vkGp2ZmKcBRMb+rY0j9u+rnjQoRABXPbtM9KXEIsUiN5G3VGxVokE2yHSvrPkFfIf7tOQvR7mJ3M2Wlw5eq//r8Co9onZArN9q1gVJ4mJ13e880iCyZas+CEzOFGRccAwXnIU+2LWjjeljC/RfjTg7Qg1rRjYRE0/xePM5v9khDSFo+jKdIdIkyXkGb6zyftcY2wTXptlA5nlq+UGipVwQPo0OlDrQh3UWW+nQN8lcmd2gjRcgd7XFqv72aLvlGe41gz7O/p8IsYFi0srQGWU5L+MkDAnxN4icX/UN5+b3Bvsk+K50FPe50eSGor+2Cnbf8+6FuI2WatiRjxm3T3sn12T1QnOa8+1pLDn0y4RP72GPqZIFSeZmLE+IN/6dBfd2Jh6NmuJ4DMEdX6YjA9s3RjI+JI7GSEfK+HfhdxeVxkGnvGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Jr5RqqLXqLzvJZNvroBNZ1",
+            "name": "brave_search",
+            "input": {
+              "query": "Develocity predictive test selection pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01ApECry42nRWt42zfHJQVUW",
+            "name": "brave_search",
+            "input": {
+              "query": "flaky tests CI pain \"slows us down\" reddit OR hacker news"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01XEU6EiquqC1wQ57J4wTFQW",
+            "name": "brave_search",
+            "input": {
+              "query": "Testhide pricing flaky test detection"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RWh85geyPxpP8ZNp7y1Q1h",
+            "name": "brave_search",
+            "input": {
+              "query": "GitHub Marketplace app listing cost CI tool acquisition"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2248,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2248,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 388,
+          "output_tokens_details": {
+            "thinking_tokens": 136
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "4f799a55bf1c2f2fefeafaee627b9c01008f6b902b1be983de4d8f7b5c7e78e1",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3929,
+        "cache_read_input_tokens": 2248,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3929,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 399,
+        "output_tokens_details": {
+          "thinking_tokens": 122
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0142661,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDSSkuPF1pPzciPq1u5",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EuMECqQBCBIYAipA+hicZTiAiSz83P0vJklUVLycxCLfuegUezAkLtY3JTFjo3TOC2t9UxsUea1AEi2iDdTpL3Gy5m8TcDfJxzqbczIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB4eWA1gYSDCvXRVAiEuH+58LKwBoMt5BqnJl8sXpkOUdFIjBJ8yY6b3oFmuA5+PifUaTExQPb+qCV2F6Qr0xu1GHH1Z/OrNr7K/ai1pnHLQZWpQsq6wI+QrWYMp8e/kkSkuuPl7LALU2mUkv3IA6ZSL+wWTc21nYJhKQmnR/B+PfaA1gd/piKCEeSqa+HYeRTVKTob/05BQkaQ0Jb6CgR7tT+O8EMFBsP6oxJIHGBcudeJFx9021gtQ4R3x7HZ2bmjYljjLsB6ne4cASOYwsLM37c53K3CNkOy2lfkHlvS5cthU5nCSkB4lCWHfM1rmP1Xtgj7AcUwLkQvmXLXnj8IIbQqE1FjhctkSRf3JsDLydHSwnTwd7oRPlyXKunpm6tOeqRJwba9innjS1duSiAJKSE31f+CxpAy5TtyFba8KNYV+NUdktehUMOAU7IHrCRzM8ITKNmxdgm+p+PUSw0XLu+Xex8ad3YbaYmVDSR/k4ET6QNm8kexrcwihQkBcTTi+RVLazxcvDDNSag78MJWi+WQtUs1fdwaGhb7yeuNh8QrPMx0E6ffnMoBzTV46Xyqn0xGjUs7QmNgVq8j3HIZ0gYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RZ7HYZsjeuw6jy9Prcahtu",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://develocity.ai/pricing/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FoFG8pr67MqvpehF8xsMxq",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://testhide.com/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01TKH4FJ25mJvwE7nKbX5SEh",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://hackernoon.com/we-analyzed-202-million-ci-jobs-in-trunk-flaky-tests-heres-what-we-learned-part-1"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LLP2uWx9tkpCUW5NBvSvSD",
+            "name": "brave_search",
+            "input": {
+              "query": "\"flaky test\" reddit programming annoying merge blocked"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3929,
+          "cache_read_input_tokens": 2248,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3929,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 399,
+          "output_tokens_details": {
+            "thinking_tokens": 122
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "1472bc55b9382b49d4a3acc7569c6e5e803e35a66cf685511df66a5affb804d2",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 11287,
+        "cache_read_input_tokens": 6177,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 11287,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 475,
+        "output_tokens_details": {
+          "thinking_tokens": 278
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0342069,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDSm9hkzrftPzZkEM54",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsQICqQBCBIYAipAooQcuu+hj8rB96uaGFKM151mGAkWRou3pgQUbxs033ozrISi2OqRDSvuUsIEiaYPbpzKuIrspPsYJO0WzohOmjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB5+WA1gYSDFGg304FI63/1VEFoxoMSe1RZY/NaIYSNlFZIjAatzGfLwkfifV+764Aq5ABQ5hAcBVsCOi++XQSOyynAnW5Jxm+yAOMYc0CumOPVm4qzAaZP44z/JF9rm6LPRPwtRvatmbLhzKvA5mlsZWx9OKGL/ZdmLxZNRcBHOiKxkSOf2L6hWcf2KIHdk57wuS+w3DZm6fKZoneKgI7D67JKHvrwNH0HeDTStqKE0/V/VzG3DPfBSLl9XS+OG90u+yQTO97VhyfFfROg9Qfsf/RJPSahs8u11uguK3xYlJfrP8kYsJBSbVgoFb1wtUw6HBJ83CW2v/vjE5T8i8peruccbizgC+WAfwEbUfKzia5perP0sPmqYztWYt7XqtZnJeZ3PcH0jUn7S9JB6ojEV7RctPnl4f1JnGjjfbwq2tjLYs5Qp+l+bZa4dCL4t3e2weTKPGW9/R2GBi7lYCeKAW2UQlP7sfbgt+UEzcVpsBXJqqOXUEsGoWP9pNUvDtZsmPL9imSAC2sGFUS82UAsfs1DolpFXE83Mzb0QiX1y75h1/iYegEnhVWKg1NYjsbsmhfVULzC4YCMen2JO2s4430a8JLUHQ0nrer2SZBgkJJ+ePiHU07aPhPyf98PDUcG1hAVPaRYkl7lyK1T3yQr8Dii4e/9ztAfj3XwcodhYrwgq3TkP69eogtc4TxPqLgxSlbKKW/UcVNXJmYl81qCZ6Ce/FsmCQjWcOpRVIcBHuE0GiDU05WwlpmVppK9XehyZp5+NE2kQSRecAB4+iP6yS5dsxQYe1zizlSDfADeZKgtbuF+TDtWtvUSWppuKNl81LpS3EnKh3xSq98i3DOT2H6QL6/PPLeTNfRI4Io/xBGa5QQhFOXVm8iXTGfxu+t4uN3QYYZz14jBIqgeIhrEoT0KpH7kK4a7kCmh1oUKZsOx8BTuI8cg005G4ta6gsRvBpLeWmVvHHO5cQjamTPqdbOYewf83iAVOAkAl1j+RYE0n/iVuTO8oduD7+2Pm4Pt/LCF/PPv6M3HtGkjO4ecFxL7RJK6JGMNmogiOZlKUxtvc0MtX1Mzhj+f189qEjuT+Quo7wmY+GtjVCd84PuuIhLLGEX4GXimElXiVfsEOf6Jqs5LcuLPy+wZW4n0Gbcwi3ZMAbogh2OFeVMrtp8WW1bq5EVHEwK9JHO8x43POzXt5fBQ3TAByoXlRVSIEGZSMjg2f9jQqvjQcZAk2Emzyk0GAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FX6UtS4cH9tYnJHzfUchuK",
+            "name": "brave_search",
+            "input": {
+              "query": "Develocity \"per committer\" price per year dollar amount"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NxH7ZdDJ1SGxpxnB62afKy",
+            "name": "brave_search",
+            "input": {
+              "query": "Harness Test Intelligence pricing cost"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01DCXGHN1cBeprQvF17RkNn9",
+            "name": "brave_search",
+            "input": {
+              "query": "CI pipeline cost per minute GitHub Actions pricing engineering team CI spend"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 11287,
+          "cache_read_input_tokens": 6177,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 11287,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 475,
+          "output_tokens_details": {
+            "thinking_tokens": 278
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "653f5dc461b57f5c010f19fcf70b401407cf4286e066ce158cd24e93bc9356d2",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2203,
+        "cache_read_input_tokens": 17464,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2203,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 370,
+        "output_tokens_details": {
+          "thinking_tokens": 232
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0127043,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDTD1wr2LKrevapGX1Y",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpcHCqQBCBIYAipATPfmiz08IGF9uASiB0pAijzvoJiK1z3X5quEfrNXRFYChGovU782OElrB50YyT/zeRajIc60H4lVxZPfdUr+YzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB7eWA1gYSDO4b6zNkLR2LQFSxhRoMRj9iCubJY0NWwemSIjDbw1blDkoHgnBrReR8lzJzZ7mVeRHJpF/Jq0X3xURL01p2ibzFtpHkjKo6gWuVNF0qnwVUK8zONkuc+M7eMnzsqMUZorhtT4QvKoqF6rPShQ95yYeJqox67b6DJgltfI/z/cEI+gOQbAhNG7NAK2cejU1rGLBi3vaS3y66nOqo3GMdqZMThzRsDPKIJRNRmrW97PSaB2xIeRrboyoQ3sfhODGJjzYXA7ZxxhvquS+SUAqaGPGUdy8A3B0NHfAgAa70M0EO5A3c+ralbOwErtCdla+WC4flH2lU6WKl4b/4uHvNgIZHwYVmV3/Ne7+i1E6qg4taF8mj33BdAeShLnIHcs6GPaK9tbudLme73p5SACrm4az+F48J9xKB13JVYOeNLvJUEmhtPCAzk6+PbV6rugfj90aZdX9vbd/9b8wL54t2+QA1w4KqB3m/a+VbTerg3C/d/k07xlYHb3xbfsptpWLmIegLYGSbl23p6MLv9xiWNOHH/1x6UrIUHra9tMQEnx1nPU1ZUKS/1qgJ65yLiNubUZIYfSirnku2Ovp78rbb4OluSPaNWQzULoe99C6JKfMt9wP/f8pZl8Wb0GsK1fN7Tvo3nCj5H5JtXQ7HU56mHF1FXY0iYX8leuE1fNRCqAgi0pz267k/vxA6RxW/DAJxXCyEa4E4USHQkkqcgO5Y/5QOK58eosR9O8ETGx92P77me1FGQEzpik7se/LOYOMDvhvi1WMYj44ANQX2+tlif9uaP+R00nYZZNxPDuSl3KEIMAVJieaS//Vj+ZrwepyKA1m7I/ZFm0mBdPk0Ceqy35UOMwGgMSIefDL9XrV1WtlngVN1I+LAoA8UTqVgQOjPuhOUMOmAXLJUbvpVWHRi+y0mljhc1yTkpUmeEJhlthHiLqVTBb2FO9r07NM+lQWW7z0x6WBBOQd2iqjBMLVBfp+2dr8dvhaROlEk488L2RgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01A2amRhfnuV8QKFFAcquWbh",
+            "name": "brave_search",
+            "input": {
+              "query": "developer tools SaaS customer acquisition cost CAC benchmark devtool startup"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01DjXSgiJZaspFBZepCx91pR",
+            "name": "brave_search",
+            "input": {
+              "query": "ci-sherlock-agent github flaky test LLM"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2203,
+          "cache_read_input_tokens": 17464,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2203,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 370,
+          "output_tokens_details": {
+            "thinking_tokens": 232
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "f802565ab3d21baf073b83a60c1900b650f7cd668b024e7182cf64ddbb0bd3e5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2308,
+        "cache_read_input_tokens": 19667,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2308,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2096,
+        "output_tokens_details": {
+          "thinking_tokens": 2021
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0306674,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDTc1Jamxc2mubzFqnY",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012AkF2g5W2oVAHvEaj3mRde",
+            "name": "brave_search",
+            "input": {
+              "query": "\"flaky test\" AI classifier accuracy trust engineers skeptical false negative"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2308,
+          "cache_read_input_tokens": 19667,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2308,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2096,
+          "output_tokens_details": {
+            "thinking_tokens": 2021
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "1eb337654e345fe6e1ea3448a603d78a24c3a37447918e0ea8819dc382b976e5",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3054,
+        "cache_read_input_tokens": 21975,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3054,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 130,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.013334,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDVMJaYviTs9y4MRbMa",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Good, this confirms the trust/false-negative risk point for case_against. I have sufficient evidence now to compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NmHPmzxXS1CjPTZnsA37qS",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://semaphore.io/can-ai-detect-flaky-tests-or-predict-build-failures-in-ci-cd"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3054,
+          "cache_read_input_tokens": 21975,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3054,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 130,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "e99513344757b0559d52d5cb7805c2299bf3f551a8c47bf4ef1e46e7f22d680d",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2919,
+        "cache_read_input_tokens": 25029,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2919,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 5030,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0626073,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDVUebKnGm4JucP8NMy",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Now compiling the final brief.\n\n```json\n{\n  \"idea_id\": \"A15\",\n  \"payer\": {\n    \"who\": \"Engineering/Platform leads at mid-size to large software teams with budget authority over CI tooling (typically Director of Engineering, Platform Eng Manager, or DevEx team)\",\n    \"price_hypothesis\": \"$20-50 per developer per month for an add-on LLM test-triage layer, anchored to Harness's AI Dev Assistant add-on pricing; enterprise buyers of comparable 'predictive test selection' products (Develocity) are priced per-committer-per-year via custom contract rather than published self-serve pricing\",\n    \"comparable_url\": \"https://vendorbenchmark.com/vendors/harness-platform-pricing\"\n  },\n  \"competitors\": [\n    {\"name\": \"Develocity (Gradle Technologies)\", \"url\": \"https://develocity.ai/product/predictive-test-selection/\", \"pricing\": \"Priced per committer per year; no public number, contact sales/free trial\", \"pricing_url\": \"https://develocity.ai/pricing/\"},\n    {\"name\": \"Harness Test Intelligence\", \"url\": \"https://www.harness.io/products/continuous-integration/test-intelligence\", \"pricing\": \"Bundled in Harness CI modules; Harness AI add-ons run $20-50 per developer/month\", \"pricing_url\": \"https://vendorbenchmark.com/vendors/harness-platform-pricing\"},\n    {\"name\": \"BrowserStack Smart Test Selection\", \"url\": \"https://www.browserstack.com/docs/automate/playwright/smart-test-selection\", \"pricing\": \"Included in BrowserStack Automate/App Automate plans\", \"pricing_url\": \"https://www.browserstack.com/docs/automate/playwright/smart-test-selection\"},\n    {\"name\": \"Testhide\", \"url\": \"https://testhide.com/\", \"pricing\": \"Self-hosted Docker free forever; Cloud from $49/mo\", \"pricing_url\": \"https://testhide.com/\"},\n    {\"name\": \"ci-sherlock-agent\", \"url\": \"https://github.com/slavkurochkin/ci-sherlock-agent\", \"pricing\": \"Open source, free\", \"pricing_url\": \"https://github.com/slavkurochkin/ci-sherlock-agent\"}\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\"channel\": \"GitHub Marketplace / CI platform marketplace listing (self-serve discovery inside GitHub Actions ecosystem)\", \"cost_estimate\": \"Free to list; monetization requires a verified publisher account and flat/per-unit pricing plans\", \"source_url\": \"https://docs.github.com/en/apps/github-marketplace/selling-your-app-on-github-marketplace/pricing-plans-for-github-marketplace-apps\"},\n    {\"channel\": \"Developer-tool content marketing / organic discussion (blog posts, HN/Reddit threads about flaky tests)\", \"cost_estimate\": \"Primarily founder time; SMB SaaS CAC benchmark for comparable self-serve dev tools is $200-$700 per customer\", \"source_url\": \"https://ltvcacbook.com/blog/cac-benchmarks-2026\"}\n  ],\n  \"demand_evidence\": [\n    {\"quote\": \"We knew we had flaky tests... but the tool revealed the full extent of the issue.\", \"url\": \"https://hackernoon.com/we-analyzed-202-million-ci-jobs-in-trunk-flaky-tests-heres-what-we-learned-part-1\"},\n    {\"quote\": \"Ability to sort by its impact (blocking PRs) and automatically creating tickets for fix saves a lot of time.\", \"url\": \"https://www.reddit.com/r/programming/comments/1hqsipv/how_to_manage_flaky_tests/\"}\n  ],\n  \"case_for\": \"A solo builder with AI agents can ship a working MVP fast: the core mechanics (ingest JUnit/test-history data, correlate failures with code-change scope, flag statistically flaky tests, recommend a minimal blocking test subset) are already proven out by multiple tiny open-source/indie projects (ci-sherlock-agent, flaketriage, ai-flake-sleuth, flaky-detector-agent) built by individuals, showing the technical lift is within reach of a one-person team. Distribution has a near-zero-cost channel in GitHub Marketplace/CI marketplaces, and the pain is well documented and widely felt (Trunk's analysis of 20.2M CI jobs, multiple r/programming threads) across teams too small to justify Develocity's or Harness's enterprise contracts, leaving room for a cheap, fast, self-serve wedge priced below the enterprise incumbents.\",\n  \"case_against\": \"The space is already crowded with both funded incumbents (Develocity/Gradle, Harness, BrowserStack) and a wave of near-identical indie/OSS clones appearing in the same months (ci-sherlock-agent, flaketriage, ai-flake-sleuth, flaky-detector-agent), suggesting low differentiation and a thin moat — the underlying technique is standard statistical/ML pattern-matching on CI history, not something that strictly requires an LLM, so free OSS alternatives can match the core function. More importantly, the buyer's core requirement is trust: multiple industry sources explicitly warn that an AI test-selector must never silently skip or auto-merge around a real failure, because false negatives let regressions through and destroy the exact trust the tool is meant to restore (Semaphore, qaskills.sh). Earning that trust typically requires months of track record and deep CI telemetry integration (which incumbents already have via build-scan data), not a six-week build, and a new entrant has no historical data to train on when it first installs into a customer's pipeline (cold-start problem also flagged by Semaphore).\",\n  \"open_questions\": [\n    \"Would target teams trust an LLM-based judgment call to actually block/skip tests, or only use it as an advisory signal reviewed by a human (changing the product from autonomous gatekeeper to dashboard)?\",\n    \"How much of this need is already satisfied for free by the growing set of OSS/indie tools (ci-sherlock-agent, flaketriage, ai-flake-sleuth), and would teams pay for a hosted/maintained version of the same idea?\",\n    \"What CI platforms (GitHub Actions, GitLab CI, CircleCI, Jenkins) need native, zero-config integration to reach meaningful distribution, and how much engineering time does each integration take?\",\n    \"What false-negative rate is acceptable before an engineering team will let the tool actually gate merges, and how much historical CI data is needed to reach it (cold-start problem for brand-new installs)?\",\n    \"What is actual willingness to pay from small/mid-size teams who are the likely early customers, versus large enterprises who already have Develocity/Harness contracts?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"If the tool sends source code, test names, or stack traces to a third-party LLM API (OpenAI, Anthropic, etc.), enterprise customers will likely require a Data Processing Agreement and security review before granting pipeline access to their codebase.\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"A single consult to draft a standard DPA/subprocessor list and confirm no code/IP is retained by the LLM vendor beyond API terms; revisit if selling to regulated industries (finance, healthcare) where customer code may count as sensitive data.\",\n        \"source_url\": null\n      }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"A solo founder's realistic time-to-MVP for this feature set is six weeks [unsourced]\",\n    \"Founder time cost for content-marketing acquisition channel is effectively free/opportunity-cost only [unsourced]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## A15: LLM tool in CI to pick blocking test suites and flag flaky tests\\n\\n**Idea as written:** An LLM tool that sits in a CI pipeline, proposes which test suites should block a given change, and flags likely-flaky tests. Target customer: engineering teams with slow or flaky CI. Source: https://news.ycombinator.com/item?id=46345827\\n\\n### Payer\\nLikely payer is an Engineering/Platform Engineering lead with budget authority over CI tooling. Price hypothesis: $20-50/developer/month, anchored to Harness's AI Dev Assistant add-on pricing (https://vendorbenchmark.com/vendors/harness-platform-pricing). The closest direct competitor, Develocity, prices per-committer-per-year but has no public number — it's sold via contact-sales/free-trial (https://develocity.ai/pricing/), implying this category skews toward larger negotiated enterprise deals rather than self-serve SMB pricing.\\n\\n### Competitors\\n- **Develocity (Gradle Technologies)** — Predictive Test Selection, per-committer/year, contact sales (https://develocity.ai/product/predictive-test-selection/, https://develocity.ai/pricing/)\\n- **Harness Test Intelligence** — bundled in Harness CI; AI add-ons $20-50/dev/month (https://www.harness.io/products/continuous-integration/test-intelligence)\\n- **BrowserStack Smart Test Selection** — included in Automate/App Automate plans (https://www.browserstack.com/docs/automate/playwright/smart-test-selection)\\n- **Testhide** — free self-hosted Docker, Cloud from $49/mo, includes a dedicated \\\"Flakiness Predictor\\\" ML model (https://testhide.com/)\\n- **ci-sherlock-agent** — open source, free (https://github.com/slavkurochkin/ci-sherlock-agent)\\n- Additional indie/OSS entrants found during research in the same period: flaketriage, ai-flake-sleuth, flaky-detector-agent — none monetized, suggesting a crowded, low-differentiation space (https://github.com/AleksandrJelohhin/flaketriage, https://dev.to/debashish_ghosal/your-flaky-tests-arent-flaky-1301, https://github.com/golikovichev/flaky-detector-agent)\\n\\n### Acquisition channel\\n1. GitHub Marketplace / CI platform marketplace listing — free to list, self-serve discovery (https://docs.github.com/en/apps/github-marketplace/selling-your-app-on-github-marketplace/pricing-plans-for-github-marketplace-apps)\\n2. Developer content marketing / organic HN & Reddit discussion — cost is mostly founder time; comparable self-serve dev-tool SaaS CAC benchmark is $200-$700/customer (https://ltvcacbook.com/blog/cac-benchmarks-2026)\\n\\n### Demand evidence\\n- \\\"We knew we had flaky tests because we were experiencing failures, but the tool revealed the full extent of the issue.\\\" — Federico, TLM at Trunk, describing adopting an internal flaky-test dashboard (https://hackernoon.com/we-analyzed-202-million-ci-jobs-in-trunk-flaky-tests-heres-what-we-learned-part-1)\\n- \\\"Ability to sort by its impact (blocking PRs) and automatically creating tickets for fix saves a lot of time.\\\" — r/programming thread on managing flaky tests (https://www.reddit.com/r/programming/comments/1hqsipv/how_to_manage_flaky_tests/)\\n- Trunk's analysis of 20.2M CI jobs found flaky tests are a top driver of blocked PRs and lost engineering hours even at Google, Meta, Spotify, and Uber (same HackerNoon source)\\n\\n### Case for\\nA solo builder with AI agents can plausibly ship a working MVP fast, because the core technique — ingest JUnit/test history, correlate failures with the scope of a code change, flag statistically flaky tests, and recommend a minimal blocking subset — has already been proven feasible by several one-person open-source projects launched in the same window (ci-sherlock-agent, flaketriage, ai-flake-sleuth, flaky-detector-agent). Distribution has a near-zero-cost channel via GitHub Marketplace, and the pain is well-documented and widely felt, including at companies too small to justify Develocity's or Harness's enterprise contracts — leaving room for a cheap, fast, self-serve wedge priced below the incumbents.\\n\\n### Case against\\nThe space is already crowded with funded incumbents (Develocity, Harness, BrowserStack) and a wave of near-identical indie/OSS clones appearing in the same months, suggesting thin differentiation — the underlying technique is standard statistical pattern-matching on CI history and doesn't strictly require an LLM, so free alternatives can match the core function (https://semaphore.io/can-ai-detect-flaky-tests-or-predict-build-failures-in-ci-cd). More critically, the buyer's core requirement is trust: industry sources explicitly warn that an AI test-selector must never silently let a real failure through, because false negatives destroy the exact trust the tool is meant to restore (https://qaskills.sh/blog/ai-flaky-test-detection-guide, Semaphore above). Earning that trust typically requires months of track record plus deep CI telemetry integration that incumbents already have, and new installs face a cold-start problem with no historical data to train on — a hard thing to solve in a six-week build.\\n\\n### Open questions\\n- Would teams trust an LLM to actually gate/skip tests, or only use it as an advisory signal?\\n- How much of this need is already met for free by existing OSS/indie tools, and would teams pay for a hosted version?\\n- Which CI platforms need native zero-config integration first, and how much work is each integration?\\n- What false-negative rate is tolerable before a team lets the tool gate merges, and how much historical data is needed to reach it?\\n- What is real willingness to pay from small/mid teams versus enterprises already locked into Develocity/Harness contracts?\\n\\n### Regulatory setup\\nIf the tool sends source code, test names, or stack traces to a third-party LLM API, enterprise customers will likely require a Data Processing Agreement and security review before granting pipeline access to their codebase — an ongoing obligation; a single legal consult to draft a standard DPA/subprocessor disclosure should cover most SMB deals, revisited if selling into regulated verticals.\\n\\n### Unsourced claims\\n- A solo founder's realistic time-to-MVP for this feature set is six weeks [unsourced]\\n- Founder time cost for content-marketing acquisition is effectively free/opportunity-cost only [unsourced]\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2919,
+          "cache_read_input_tokens": 25029,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2919,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5030,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

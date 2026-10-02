@@ -1,0 +1,12 @@
+{
+  "engine": "exa_contents",
+  "query": "https://apidrift.co/",
+  "params": {},
+  "recorded_at": "2026-10-02T22:36:10.856Z",
+  "cost_usd": 0.001,
+  "response": {
+    "url": "https://apidrift.co/",
+    "title": "API drift watch — get migration PRs before vendor APIs break your code",
+    "text": "API drift watch — get migration PRs before vendor APIs break your code\n\nNow watching Stripe, OpenAI, Twilio · more vendors weekly\n\n# Get migration PRs before vendor APIs break your code.\n\nWe watch your dependencies' changelogs, find the lines in your repo that use deprecated calls, and open a pull request with the suggested fix — every PR includes a diff, the reasoning, and a link to the canonical doc.\n\nStart 14-day free trial → Install the GitHub App\n\nCard on file, $29/mo on day 15 unless you cancel. Unlimited repos and vendors per installation.\n\nReal PRs we've shipped\n\nStripePR →charges.create is legacy — migrate to paymentIntents.create OpenAIPR →createChatCompletion is gone — use openai.chat.completions.create\n\n## How it works\n\n01\n\n### Install the GitHub App\n\nGrant read access to repos that use the dependencies you care about. We only ever open pull requests — never push to your default branch.\n\n02\n\n### We watch upstream changes\n\nWhen a vendor publishes a deprecation, breaking change, or new API version, we ingest it within hours and identify the exact lines in your code that are affected.\n\n03\n\n### Review a PR, merge or close\n\nA pull request lands in your repo with the proposed diff, the LLM's reasoning, and a link to the canonical changelog entry. You stay in control of every merge.\n\n## Why us\n\n### Built by a team that lives inside the changelog firehose.\n\nWe use AST analysis (not regex) to find affected code, so we catch aliased imports, destructured calls, and wrapper functions. We never push to your default branch and request only the minimum permissions needed to open pull requests.\n\n✓AST-based detection (ts-morph) — catches false positives regex misses\n\n✓PR-only — minimum GitHub permissions\n\n✓Every PR cites the canonical vendor doc\n\n✓Per-vendor knowledge compounds across the customer base"
+  }
+}

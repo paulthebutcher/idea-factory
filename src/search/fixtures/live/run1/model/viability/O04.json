@@ -1,0 +1,513 @@
+{
+  "stage": "viability",
+  "idea_id": "O04",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-10-02T22:43:07.768Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "a9f4cd4bb2d096d7c47f60dcabc9f04343f30752f248fdb3af4cdf18c5eddcda",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2205,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2205,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 312,
+        "output_tokens_details": {
+          "thinking_tokens": 67
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0086365,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDdnFEuiG8VSmuFfDYc",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Es4DCqQBCBIYAipAoCbUqdqIEwJil5XwzD/kxii9Oc/K1Sfyjl2piPIDk2asGtGIDi4uu1oeJtczxFssMvMXoBmhdr1eqaeyF2IRfTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB+uaA1gYSDLRaQ6qKJXtNuJrSshoM8gimY+nF+WshDOa3IjDjKXMkJPsHLLKOKZtYDIo1FVFAo5C65dc941nrE8hdPYaZeu1WrXby/jP2z50WlrQq1gHNoUNJATdncnLQEQG4k3Q5a/DY4Y6mGkvN6xRl8Sv7N2Mv0HB+3VwAU7K7zwm8psUdK2sd5znZPJEvIdZSh/bIvn/3f/6Hr/8M1EqRt2gJmHs57ww8Ff+DOnt+EwrOBd+52ihxPgZV8lRksLVjNHSgy4tQQcL1i9QrVZUoJt3A4VjJmQ7HFr/mznbFAP9AJYzqpKnRD/F8MMeHtZyGxYAnxC7VAN0e6Iz050mEqJe8N0/GZEif88HkDdsSjC8ylz9YNZT1D75iVc6OoFzg8i7A6ZcsUJfjGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011hHP4imTtGBE5WhfUN6q4n",
+            "name": "brave_search",
+            "input": {
+              "query": "ClaimWizard pricing public adjuster software"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014APnAFpXR52VsysCJEDp4E",
+            "name": "brave_search",
+            "input": {
+              "query": "Claim Titan public adjuster software pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01YGSbMjzzKs6Gt1DPUBK9tG",
+            "name": "brave_search",
+            "input": {
+              "query": "public adjuster intake app homeowner claim pain point forum"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01DkxveeMzkBgXeDqa3T4YmA",
+            "name": "brave_search",
+            "input": {
+              "query": "Wisconsin public adjuster license requirements"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2205,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2205,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 312,
+          "output_tokens_details": {
+            "thinking_tokens": 67
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "6f3085e2d9fb841dd85b17d9b238c549d204315cf5ffff1c609e14c0ba262c40",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3936,
+        "cache_read_input_tokens": 2205,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3936,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 413,
+        "output_tokens_details": {
+          "thinking_tokens": 145
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.014415,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDe8MxaaGBcDF5n1EUd",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Eo8FCqQBCBIYAipAtVKqd91K1+ZkvXSOR45+rJiqTLJn+G8ZW4wLLUjNjUpqKvQ9zLQK0G1itXD8P0ZtczWcGufyPyYhdOACwJcEkzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB/+aA1gYSDJxRGSyBBfAf9sTSyBoMplCi1I29BYZMLcMOIjAdIVzJ3YtEhnn93B6ZdbJBrLZXAru8oUTg5VonvaElmYRfFh1ITMV+mKo9qIFH/JoqlwMDYaXA0rUZKvqywNTX4COAOWu12AxRa+zUVzE4ysK3YBOrfj+sbx3bsi/CVQ1wYvcQQu/dzH8ghbqP9okpCvIgw/zNn6DB8X3NgFb2x+u80Vr9MYdceakGgcVzU5s70HyW8ILmGbMjnEKnGk3PVjNhNof05F8BhWV30zR4wqfWfidXSiTKa9FOoZPHlWUqG6p4qnRtJ/OnG5/H8d+4dWB2TGNTjvhhQKCZ/U2w7lUaU54AgEeoe0M9FUFQl7MshN51oO7BeFF1Kk/cZqdJ0+IEkV/m0Fg2hAA4oZdR5pKqH53ealv5YrtXhNCl/TY0iziazbB82zlDCwdXWvZ7zP3cstR8j2AvKzxkdrfFAP3RsHIMSyZ5q46OF/kPyc2HN/k3HoD3rAZ0NUwdo4uIPCPtcNisFCMFfVXPYwXeUtoq9L4+LkopZgk3IuHRqs3ulvUELGv8chHYL49kIjJYi5RUSC/6JyWd06SpQjATHkFipLtc7/Wd1cifKqd+OKMmx3aftO9SaJ0mDQ5/W1swaDY2KqFSBu7/ahgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UgoPLJcYVKnjdQXrj4kRNq",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://publicadjustingmarketing.com/public-adjuster-intake-process/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01SFF4GFJqrHt79c7N1mEtuF",
+            "name": "brave_search",
+            "input": {
+              "query": "public adjuster Google Ads cost per lead roofing contractor marketing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CRuiyhUA9ryp7pERq4cibM",
+            "name": "brave_search",
+            "input": {
+              "query": "\"public adjuster\" reddit complain software CRM intake manual"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013j6mbxXyz43k2g4zQmpb7X",
+            "name": "brave_search",
+            "input": {
+              "query": "AdjustEdge public adjuster software pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3936,
+          "cache_read_input_tokens": 2205,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3936,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 413,
+          "output_tokens_details": {
+            "thinking_tokens": 145
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "0c336b79b50ab7ad16294972f5455009d06e71d7364aa7ad609ef85e475d8a5c",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5445,
+        "cache_read_input_tokens": 6141,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5445,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 326,
+        "output_tokens_details": {
+          "thinking_tokens": 113
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0181047,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDeZBSy6vbJUmBZYDT1",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "Es8ECqQBCBIYAipAfWpJA7nLpoaXKuKCLB9P5Wgu30uZ6a8VOVcE7MotLUpies8kVgJKfL6W9ANtS74pUSlR3zyxBy1mSPTfgahcuzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBheeA1gYSDFViZZfMMN2TYcCiaBoMSUF6triPTzDN94McIjC3SE/fvTujYLAP9lVkffLuzZv2CBi8+gXY9hDxijdmgddXesAMysaS/2RJ+X/747Mq1wKEpndji2DKYj/vl9u0CYldPeVtp+3wUVsFrzKlJMiePbBHC6mslocBryTFfrPIj1MunL6p3T7lJ1PtScbOyw3jcOR+2VTtif0jAsdGERK4EdQlYDVZZU1aeu42ryTcJgrTbbIFJxDI+LRW3ZfO3sQGbMK38ghcYk3duYC7TrU65hIWcA2UF8sDeSWz7aIZm49/DYTEDOyrbioOaenfmyQANj81qI/oa3GTEWQppVND1A/lFnLkDDKBWdPIpOOkre2RXrhQanAk2emXa1nvbx2VSDw2lROWwJuQIRaXrL77dvD4GebmqVnB+xprEtUdllcQ3AH7DQsbKb9R1s9E4hihBXk0Vx+dGQ2rQHnF25bIH94qiEqEuWUAzprU8yTQ3VtNcNfztqlMqOlhy0lOdI4cF2Gt2fq7bLlVOA0iXr165jEAYI+D/hyB9BJVuViJYhneCZ/mzfvAGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Hykv78RPmWYdyrfU4v49tx",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/CRM/comments/ol3mfu/crm_advice_for_small_public_adjuster/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01RSCKktkby6JPTFw48Bdpkt",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://claimwizard.com/pricing/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_019wLoeo7kdHohZZYQmagbyy",
+            "name": "brave_search",
+            "input": {
+              "query": "Wisconsin data breach notification law insurance personal information"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5445,
+          "cache_read_input_tokens": 6141,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 5445,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 326,
+          "output_tokens_details": {
+            "thinking_tokens": 113
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "70f0aa526cd01efcefa52b69c8b75cb04367bc93bee9cee7326b45c050335319",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2040,
+        "cache_read_input_tokens": 11586,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2040,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 374,
+        "output_tokens_details": {
+          "thinking_tokens": 164
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.011161200000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDeqSFWtcZDwWiMfWkA",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "ErQFCqQBCBIYAipAWFqkv9bLi1qK9nzu8IAiNn7J6kHXEGGVzjxsYIJvJZVWfKIbofw/NU7ItLtGD7+8SZBrKrf2db0z6oNmSb6HtDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBiueA1gYSDIOH16N9fmq358JeFxoMKKU8JesncVwgBYZdIjAGGIf+uYCRGem9GH9xQ2aD6fSAZML8P+mIyGJgBNAPj2bCvUzS7J3rc1jaRvqNeJoqvAMWFib+3NJRV+9QYAMDcCiJvUNBnT9FMG1w77nEdDvG7MwXtnQcH77XeQoaN6A/SS8BkvKcJmWgKuZxVxtq1DulV1JY2Xr6L4JQ6VlayjNQvKfpHfvtpwiPdMokICC2JCO4TT5caQwlY3WuTifR4w1FYDFLdrd4uVtiJ/m4geegd1efZ43SRU4AcWeTPSRmmEMmoonTjoEj7xf7qF0QCATHYG/NRKS8ziSDCP7Og3YPgB8p4EuR1AXw4lpvJMUfV0GNMoD6hrXGmpppU9P9P1vjS3mdjTtU635jVWXZ76VyHnF90jsoSZ/L8Dm1HunVKj2GNKwaimnVvHrX6QR8n8vf9pA+N18YeKw5jp8//gEPDv/b1uPMlvXvLmFdVEcJ5ifk8dTIOl+zwn3BsdwIuDHpebUsY/B2hQK60CidLzaWjsOvw6VbvMYGTYS4V5cXlEv9quZrnKZom3TYS7bczY6LQ8yV52rmb+C9KTzkSd5wiCm2EU7ljtXFllfJrd+h4132H1cX+jeX12jmiKb8JX323bnxOgPnPaQpfivpKkfUmkYK77qsuBlXcPvYG0jfWfmf1ODZB5a3x6kNvWIYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PZnfb9pK5xVaRiV6yBLoRA",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.adjustedge.ai/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Mcf5kbQK5AAXD32veu8Mg9",
+            "name": "brave_search",
+            "input": {
+              "query": "Wisconsin Insurance Data Security Law public adjuster licensee cybersecurity requirements"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CYBrfnmwesh3pTfVuvxZ6f",
+            "name": "brave_search",
+            "input": {
+              "query": "public adjuster \"intake\" app pain point \"FNOL\" extraction AI complaint"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2040,
+          "cache_read_input_tokens": 11586,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2040,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 374,
+          "output_tokens_details": {
+            "thinking_tokens": 164
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "bd861d030e2cfd4d47d41051b2c8a336f4c85158f879e22ded3f1d28321410e9",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2612,
+        "cache_read_input_tokens": 13626,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2612,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 307,
+        "output_tokens_details": {
+          "thinking_tokens": 155
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0123292,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDfEFCCwCHMVVvw7hJz",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsEFCqQBCBIYAipA5ruFv2h0CsDAqhi2fOgkOf9rPXJ1Uk/8C+vCAl9laik/V6qSefzYs8Hql95cw6HCKsNS7BCv+7VpJnYObuaR7zIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBj+eA1gYSDJfGf1I/xVCVW6CkDBoM1mOdZ2WhM2d06R6BIjDpi05ZaiYOM1wq3Ivq/arai/RLIX4g1GzzxuZOmQdzSGh0UDOuG7Kr44IQnofxa1IqyQM8gctz6OoEIXmxT9458r9CsnLgyDaGzigCEhMcODmHxGqzm0uLFhCdCSlkaFfMmtK+Qq4BKYnw72SVZoBedDTAO795x+CYYXhuOv247pblq9hoUAvRo5Vc+JvU3qqiyODTa1zaXADt5HIsP8lyJhDyV0C+b+ktMoMoO+YKHcq18WECCcvfnvePir8qLh3POl9XtufyUjjD5BJz6TZTrkbAQToIp0rT0gsU6rmIPWUYnoX8bfe4sED9vmgjGDsmCaJcJf3L73S98xZUZNWO4Mzga4oBK9L+WFllLoSs05VNR0zhxUi/edncDlXGfIdLS1Ll4Ld+ILyv5h3PsX88e5PEM8N3SJJ1Fn9w/Mup/7qAUuIW9/E/v5UobyyVEeGV3Em17lnOM/vOd4o2p0CIYY2M2UJ/VFcT7U48Oloxu496OnXxB8YP3YQdW7b7svxlRKtqwZdy00VfNFqKLojhw9cUVqk3sizH+QCnMQE+czjTGxh5a5xtoS/uHfPWL53xhIUGC5FPcKYVhiTyQCRqjnKfmoEjvTFfG2Yraelq+1D/nSqSoczdPrWExFpzUk3tYkL7Qx4uwz+IxP7/6jdp+0ze56KK4pHQ7MeTGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01MKzdQEp21YdHCxxKs6AuH6",
+            "name": "exa_search",
+            "input": {
+              "query": "public adjuster reddit CRM advice small public adjuster claims entry manual spreadsheet"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0148HSX9r3ZFaYSL9hcRURjG",
+            "name": "brave_search",
+            "input": {
+              "query": "\"public adjuster\" software review \"waste of time\" OR \"manually enter\" claim data complaint"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2612,
+          "cache_read_input_tokens": 13626,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2612,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 307,
+          "output_tokens_details": {
+            "thinking_tokens": 155
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "6df2d6c4ba134bf8c3745c9f50668457165e3c7cc3c3ffd5a07d13ffc43dbe29",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 3522,
+        "cache_read_input_tokens": 16238,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3522,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "thinking_tokens": 45
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0133366,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDfikSX8Nw8b6MwZo34",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EoQDCqQBCBIYAipAkS3DnEMvDb3cuw7TEkCzZksKJPAkwdvZpz4e7HFwQjbXneUNrUR9FvBpIwOKOCuum+ozdWqgFLkl954zI8hA8TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBlOeA1gYSDNL6sQstJzJW0Xc5FxoMjCttmd+y8+b6jRIeIjA2V9yfEqybmc4j0FikmKkuRkkYWhkxCqYIzPxAyDvgK/jo3lJ2o7+LjoDAG6622wEqjAGKjf3xBlQafhg7Djv7ku/W3MFQbnW78tZmgejcYqlvT9jTbePSceRIYvn4LPZ+A/gWpCXD+LMSpe9t9QNire6+4jnsJpR8Tvpl4baTBhsUPnNDmtm5Yh3bcv3IwlOUDuXT0AXL9lKlkx008cuBK/mIr3U2Zj+MHtFk1f/r1AabxfCZpwBfhjFsOd4dexgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FkVnGZ61umx4PPLrgVbXzS",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.pipedrive.com/en/case-studies/top-tier-public-adjusters-case-study"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 3522,
+          "cache_read_input_tokens": 16238,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 3522,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 128,
+          "output_tokens_details": {
+            "thinking_tokens": 45
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

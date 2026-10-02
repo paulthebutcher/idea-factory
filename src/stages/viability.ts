@@ -14,7 +14,7 @@ import type { Db } from "../store/db.js";
 import type { SearchClients } from "../search/index.js";
 import { BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
 import type { TraceCollector, TraceEvent } from "../trace.js";
-import { extractJson, scanForInjection } from "./kill_gate.js";
+import { extractJson, scanForInjection, repairTurn } from "./kill_gate.js";
 
 const NOT_FOUND = "NOT FOUND";
 const urlOrNull = z.string().nullable().optional().default(null);
@@ -212,11 +212,21 @@ export async function runViability(ctx: ViabilityContext): Promise<ViabilityRunR
   }
   if (finalText == null) return fail(`no final answer after ${maxIterations} model calls`, null);
 
-  // 1. Validate.
+  // 1. Validate. If the text is not parseable JSON at all, give the model one repair turn.
   let parsed: ViabilityOutputT;
   try {
-    parsed = ViabilityOutput.parse(extractJson(finalText));
+    let raw: unknown;
+    try {
+      raw = extractJson(finalText);
+    } catch (parseErr) {
+      const repaired = await repairTurn(session, trace, model, system, TOOLS, messages, finalText, parseErr);
+      costUsd += repaired.cost;
+      finalText = repaired.text;
+      raw = extractJson(finalText);
+    }
+    parsed = ViabilityOutput.parse(raw);
   } catch (e) {
+    if (e instanceof BudgetExceededError || e instanceof FatalApiError) throw e;
     return fail(`output failed validation: ${e instanceof Error ? e.message : String(e)}`, finalText);
   }
   if (parsed.idea_id !== idea.id) runner.remarks.push(`model reported idea_id ${parsed.idea_id}; expected ${idea.id}`);

@@ -1,0 +1,478 @@
+{
+  "stage": "viability",
+  "idea_id": "A13",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-10-02T22:40:36.903Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "2f9a895c2af663439a428f7e10ad7fe0f309d5b9bac26f98475a4df7564c6e24",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2168,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2168,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 409,
+        "output_tokens_details": {
+          "thinking_tokens": 64
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.009514,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDSc31e3Dcs92os6Sqk",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsIDCqQBCBIYAipAA1BZlVMuP9frqErFxHyWoJEy9WA6dStLvK/JERURscOIEvq2bNVexvLL+PNs5dP0jdUIytYZKroZA+KBn6FOojIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB4uWA1gYSDEpcttXmPh6kSmNBcRoML/ieM9ArTCUmP1fvIjCIUyU5XWOlqLZOQ+Xu1Swdp4RaH5Eiy28+Nh0+lI36CmUPhO7eDREPoZLzToC5zE0qygEg6H0PoObw2HcNb0yd9mJR/CSzyZH4usTl/bWgOPH0RllRvQdcdIzl/Ig/mBJoaRJXzP605xKeA4A82vdOIx9Q9MVb1k/RGxCSQSmAhCkgpUdq2MLQnxNOuWUOFcjUta1KJxCm/zm3u267yXyY01zt6iCIzwGgdyhwbdABX7FSKbhoZZ8hxdJsCShukNfSShrGmdUpEmrtMMv4MIJYyvy8AwRrC7QYOpIxECOgjiXWYM5ku4Ylmlu0/UuC26AIXDk3/MDrxC29n+qvGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01HxQLABRW7JQWvoapMpqFdC",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://maskwire.com/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01AnAS8NfJc7D39pKPMyEBXT",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://proxiedmail.com/en/pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_019zoos2j1RQbov1VLVgPUGt",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://simplelogin.io/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Fkm64mRhPNqP8bd368WN7y",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://addy.io"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013NgPfndLzuqK8PJoqRSTwQ",
+            "name": "brave_search",
+            "input": {
+              "query": "\"send from correct alias\" email reply forum pain point"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FqHxD8PDgFJJxCoAMvbVnM",
+            "name": "exa_search",
+            "input": {
+              "query": "frustrated replying from wrong email alias privacy"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2168,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2168,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 409,
+          "output_tokens_details": {
+            "thinking_tokens": 64
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "bdd039e68c3c4334ddf714492f84a084d962b2f0f65da4abb964f37764c5796a",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 12436,
+        "cache_read_input_tokens": 2168,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 12436,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 643,
+        "output_tokens_details": {
+          "thinking_tokens": 384
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0379576,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDT46AdE9pKcgM1cQWw",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsYJCqQBCBIYAipAagYKgjU3z4lepuEFcafy23UyHo5q6xK8MAxC9m8StD03QAlmBL8ilo7ubMrzkc/Vi0m1hgzA/BgFTx1VR/TtTjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB6+WA1gYSDEQJard9vTWoVa2N9hoMaA4bzWyVNEBrzYs3IjDX083bW4Mz5fdzLhVhkpXlFTE5t0UmSnLAAOwwD2GQWnFE6CVCbq0m0SczS1ZGD7MqzgflyetoFHeJHv87ukrXGC5IsyVx+66ThqyZfJWPb7JkvtOLBUjyJ31BrWQ1LURd/cWUtD1+IbW5/Ob5aPBiDMWsSlyvIBiTL7yOWF9i0A2VY4oQGOrbxhI5mkvYsBIxPKwmZ4lZR0+7v0PcFCyISaplIjvt77XUWplJ9lCQhOeC+BjCMjZf0oXRurP4NaG8O0jm+oz1ajMmGiaCMC7Jr3EgfQOQjwXVihH7q03Jhf0THeXWW0Z31hvkdogjcBfRhtZT2ihLFggWfF+lgWJRKA72qsN322RIkAjI3uaG1nwfW/YiIQB0mXTtit/j8SbVysi234nV5Uzg4Q7t++X6l5z1xrJJLCVZJAwNGFYD8fBFUza4nzFnEdPNfloiC2TvYSy7A2jXjc1ETw0l6st2mn8RrCKN0KXUr4dlDrLrZcCPS6lzcFBfY8K0mYZ1oVd4DcGOhscFboIf9szTQ73EaQVdjwPB0s86N6eM18Dvir++f65K8OwjHvdmtLpiQtfIrxQy6HSj/kUe9eEg+sLcRkDpowPFHkQ5hA/PeoK2yUgJvr6SRu2/f8yF1MulBOBwK1VkGdapFAaNO+h+dtHeO3lGA5d4SQEz79B8nzz5VpE3ragZyOpyTDieXF5yn6vTtlXWiYZ9eboKWiCgE8q7pg0Md8f8k53RxtGMnuA8NChiEng8cEPt1PM+Htz23ueHzcazku3Ktr09zqZw6IBU0Ep0iW3ehKT+8xVdQBvCmXE0Mdmt7CWpiz2UtvwBjUNW8BM6xT/brxEJpcEjA6pfWGxuEukmvTVFcjGmV4NdwQXwBe6cy7Q5N2kzl5jIQlE5F2Wd2Hzb/e13uxh5pIhUPaZqOk0DFgAA1GOXYf+hR+jbVt3iHlFWjBupzkcx4soEr/4VzqyUCs5JlMjWQjZWggdHB8uT5NyKlQTNm9VFIe/nyoJGeymU0Qx8xNrn3weVXgvXsfnMh181ObrSX14o99gyz7nb1/TSQuhRr2/XJc6ebwPCKs4I8fvwoyJlLCTsdg47GTd03IPVRGrpnjjv5OINJCWYLVB6h6goLSfzUfxEjj6IZfrfjXU05wmZpRhXpQsH8lA6bOAQnln+9jMPSZoqP7UL/T8f68MIblb6r9yITtq2gzbovl8IYLGeoJOhDQyhW9ty9rPEXjJHOp8nYMuq8JE5rCjWLw+B1wfy0d4Q8N9Kt19lAgmdeuWK7B+qolrH4NQOnBMHwcCUFKiFMzC4jsIgsmJq77Lx+MXC695f41CcdOW5z5d6/NKjQWyvCtpAVhO6npwk4ACGOXC2FRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01EQ9YQ961he7RzU4DbedfRh",
+            "name": "brave_search",
+            "input": {
+              "query": "ProxiedMail Plus plan price per month"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LiD4GB37HQh1cU8rkbJXsJ",
+            "name": "brave_search",
+            "input": {
+              "query": "SimpleLogin pricing premium plan price per month"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01FkjKQWuUkQLFzUavMG4EpT",
+            "name": "brave_search",
+            "input": {
+              "query": "Google Ads cost per click \"email privacy\" OR \"email alias\" keyword CPC"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Rocs4V3NdEJm1modvkgNVu",
+            "name": "exa_search",
+            "input": {
+              "query": "r/privacy reddit email alias send from correct address annoying"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 12436,
+          "cache_read_input_tokens": 2168,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 12436,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 643,
+          "output_tokens_details": {
+            "thinking_tokens": 384
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "91493b07e34675fdeb973d572ddd0205eec0cbb8d79574446ceda29f577ead1c",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5713,
+        "cache_read_input_tokens": 14604,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5713,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 235,
+        "output_tokens_details": {
+          "thinking_tokens": 95
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0195573,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDTo6od7TsX9iqFKuYw",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvADCqQBCBIYAipA2FtXP4CnNEK7aJ+OzY8ZtPm0o12PRLZgc9ORC5Q6Vomzmp1/LTYZFlET2SvWZYIt0OuNNPbpEwG/q4649vTJvTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagB8+WA1gYSDP5vLqUYKIuXB8VmDhoMDBawrSovYhN8xyl4IjC/pci/aLFvB9qaKzHeLIRT6S7w1n5wRk3bgHlIu2yJKl4DUtC8z1GUGhwbVe8uNzAq+AEvsf3Ds/2hak/5tA4j/gCG0sng668BcHmYzblv1p6cNeGXGf4mB4j2dUyZBFeGjSk5eInGif37DpOPGC3BJmkRNDL+1ks4K8H/MVFPetfT/n4Bfy+9YtxIoymIiS8rOmXOpRpDlnaZkzmepiBpB5tn+0XCc2nbgLdQAv6i6iJHDQed7XUIM2w6yXIxcDQ/cAQV/XpRovZDHopzQ/8hwbHeaWz7OWMMsZ42QXS3qLpu2wCRGHoIibBMCkmpqkUOf6nTHt4Jcs8qjoUttUQ2cDefKwFlE2rueZgtddTbOEVjAjhCix1I3JAHClOpcvh3QaAyd5YWZKtClRgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01NkBF3agPu74xbaGx81hYwp",
+            "name": "brave_search",
+            "input": {
+              "query": "r/privacytoolsIO advertising sponsorship cost newsletter privacy guides sponsor price"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01MmQhzQXNGV8vi9xuStUMMs",
+            "name": "brave_search",
+            "input": {
+              "query": "Reddit ads cost per click average 2024"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5713,
+          "cache_read_input_tokens": 14604,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 5713,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 235,
+          "output_tokens_details": {
+            "thinking_tokens": 95
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "11f450b640946f0da0bddc78ce89b71a34fa9b9f71b40126398785ad00442581",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2186,
+        "cache_read_input_tokens": 20317,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2186,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1498,
+        "output_tokens_details": {
+          "thinking_tokens": 1428
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0245124,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDU4ynZS99S9TP5iLRA",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvQhCqQBCBIYAipAGLdsaD7NOegyJWy3NWtNZC/pYN8lfgMbh32TvXOtYSE9gNXDhJTp9r7hykzrXNbbI35q/WnbbtM9VjxZo7bsHDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBheaA1gYSDFjuAxvCNQ+I6K4VixoM/IjTXsRkXzh+Hf5tIjBMM52aoCw2siFVPrhzE3huRS+3dCH1pWcp9xVVn8h6lCB6VxmXZNw71O/NkEJDcGcq/B9mfzfyGYtS9UmqayxjiKoyfE/6YDUiMvtrkk/LIq9YdYYm/lrbrzdPAOIK9EKiyHEiYtLPKmo2HjwEKxIw+M0n5ins2gOTC3Ep+e73dGUgtNJ4Sxw+YcuWujNlggbIGxMqm9tlrEuyMRazsSOUbQW6P3rTIfL8RuqkqKl+ybXnZIayAupkO7G1MyC0LteUfFqlcVEvV1Xe9U8hrZgAHR+kq3Ih7orpp0hakbWJqrfzOmziWyoanVlbBgg4lswXtxs8PFpvX2lc7N28XH7JIa3xpbjeUnFen7KlJI73Bi8OgAPDBSUzx9ZGkUwCWNR4dviE5dZSKOk+y/wtigAsz4H6Wnnsdgfzl7kJXhECyX0fxx8ouLOSN5uxpoK8SXchH/OMhrr2qgLl0SNss4E96kAa60ZIEjU7r4J0YZppT4KQ3B5TzY0wsEWISUQi3vSqfIxUZq2Wt5bAiTldiw4JrHtE4evjtU0gdoCzq14yfcLGbEkqnHWfZiGZhwPgtvIwPPanXzeKP9Y2cU4noDmjzQl0auS8wP2riG8vsDXK6qj8V2MEEzj5gwvFKzWDPyay7DAUqmt1bq8GxX8kFPHIpJmY5HE1QvvsKagyJ8vghngEL2U0XY81OZBjSMHRfkTggVjOa1fxlyE8EmSGvl0rXBzZYiF9yn1uQ/xeGfYbz3U3WopPW3oRA6mv8CMLbPrGnwCi18Ebr7iDUgj5IoJkDq5g0L8ppiRgcLittbf3J4M+aiuxoYY173fwiAzkh59pPLmxrwvzw7MrKyyVG++6JNzNieuXvVODBBXA6EbBDBpNSSxiSt0QOzqy7yPlfPF45LG8tUNZX2YOEjZMsyHxJSgod8w18kH/KjkxFO2G1JoLLuoncdzzYu9ZRNPvMNQhrQDnwceqtoBS1lyC5VS5fzEhpK4jeQ30K9uiQUFuoaqOf+RPjjzoM83UOWAnJn8CfSjYZ0AITNMYQVyA6lKYgJHh9gRH5ROnFrbW6m9Ad5I39GLpiso67lX7L0LtdXdWhtBPa7nU2Ivoqf65dtznDLwmpNv0PZY6CSeT8L3bUOJ9o9qnrvAIaQCMstwkrb13YtrIyg3ul8zuWbOUXTFUWHQT2Ky0RjNG+dOUiGGMNivmR47bLzZsSRpsF886elbZcKHDoQP4XZIC+AxNsilTrFu/BZfg8EVoWa0GxEelqle3G+KkJ7+9yG51DJnwvZQHIu8gzmOYYSJpogJJ2o2h++KvRHLMuGOV+7mVvh04no1zoa/qL8H7HvJXlt+mSCrWtib0gQDSNTNwvovLdJIwuruXKwA/C/p9OrAcpN6DicEdkMdiGXZE/epvGf1bSffrvqrlq8xVjU2Pb7Gb7ce9q+9fT6a4q7zMMs3FPZ9ZT2yriqLw+9heNRYbUtR95tTsORvA8/NTvwrAyCf2VT+S62NCk1y/345XfD5RdmOO2nyaRW+qvMJFFjDR7nhL5DdbnC2PShyTWgL4n8SGSO4/7OlgVMZaLpd7B6ZlqxVEqxkbBwgOZf5mqFAqFE8kYK0VL3Fqwk8nYBUp5fsRhRS4YKiqkvqLXdGAj+VTWwOLMsqSy91L/uGcdYTNCd/NZEXYVf+ZkArHdFCg47y2QJRwKi0lo39tO6taQDbKRJuJkVrieFTFEWk0wJXYsTZpEFKcTr2Q6nW71kOHp38WKaeSYfGpUVL56/nM5k93NdFK0h4K5kA1ixcwGdHPejkRrj2IlbWbZfP2Mcu1kTt8K/zsdbPQ4l4X4JUI05k8xYZhvpBN9FHj5MpsmTV8ca2JEEnPyUY7Ei0b6hTeEh7Ux/+QyuVacL4F/aEyWeXkpzE6YLmuQxqv13Hfe6vlKYp3pdQySYkApzEwd2t5w7IM5zsnaXj1ykSxZiWdGGY9C7w5mMbGIvs/nCO4gc8KlqGzcXPV3PbRXmcHlrDKwUiPm2+3h0MXJpqHgyjXpYJ1RIO78xKfWFXSo7qsnOzJsLArzfiiWP7BlgJPgsxhBXQJv7urkS26EFGu/pOWSjlNsKNbLfYyjcXQThfmR/jW3+moklEo4id6dodOMEXHUSSmcErjDefdxQVTNHMkZ9WXYTd271RO7MlC5qDBHUThURUGk0y6kTYxlBLQKcVekowdiAIr0jMSCmj0JKU1OKxdi0SR1bWULxl6xHGOAAP1JuPLuY5FNuWwCvnUvcm8rLZUpqk0c2fETC1z/PFED7ttLYlFx9EX85y9tCRuT5svku/A2zjdFMMsaK93CgfsLgBtr+uIa0IIF4ivVykbYxmCz75o+yE564oXl2res0ttBXLDZ9MYe4KRDZV2z/M06GAswKyIlPzL5Xf49Kx6Sz7lDsGhQs5OX4Wf9Nx9S3wezEKulX+C7qgez4s7xAQDcHfh1BVBtvuUP2NAAnlyAO5PwnjnpyZAoTmJwVhY+L/EOpBaHCCBqC05unViGCyNNPzLtGRSEsaYZziiAdZQrB7ArYTCdciq3yYapErDEZpN04lqaD5NA2zW0rOLLi28TbRxVVtC880lU8ycnjYQqxV8Y5Q7khHrORMCefLt4/jay1ekCf29O+74imjGjBtK6P4hrXwgQfplLQgHkzF+tJmbsVzLVm8cAMDeZE7KN7zX9lNRNxc46Er4E135kjpoRM09+sbFGVu2CGa9GrloBQUUgVmnruB6bHNEvCuAmiytcVeyQOBSCYcgbr7Fko75aPXgbJhPPR1qQgEAUI3KqJWjOo75yyaVj2TFrg3utYYQhiG6DXvKMW/e4K5c2asDHhbSDSKSji8oOzpTLBtRMt90WQaSEGnO812Qns93+6tAkZ5fOq3kalpPZFnmwPa7dOtAvkPfHqZsX21jNdKrorMxtx8uKNN/gvDfYD3IwDJXwBNyBQxZXV+7WfGdE1B/2ldsXItTJQv5xhzSW4d16FJHbnvRb/1EDZXAtgJqAOBvlQn3WnN/4reMdB8kl7t3j8TMjzDoaFEEvnhPwyP8KskcjVP3Nkb1jE8Dou81PBGVxG1LV20SKODMGrVFD13zB51sBL88umIlJ/uLW+6CZqUAX6XLP3/LZKIVBFnWgtORfOQrcvRLr38cglgfmeGL8xXmvDWxRMw8qT8NW/WIuzi+iy7LpoHSgyMzSwbR49/HhGz0QvS809mAaq0WO5hT4+ZBYKp21P3qvNwotubOm/aORCeOc0LTE1T+qVPQiKAgsUxZiiyhyt+AT/5iPQrMOIpuNg5OjIV42kTKZtK34nu+fFY9gynPy3iJrgX35fGRlSjtnoBhtb2l/TZOWNnP5Kb6SX8TQv0piAeT5kxbh0j3XmKHa6jpWRBB8pMKPu98c11VEQm6xjboQ0afAP5LuGkDaLue+RstHRjwxOZISgfrkHuMJO8vFdAHMN6+Fk4T7IWuzLpOr+Uj9USDtgXWi6kVDrnB93OrzWrgKb9Td9hGSJWP8Nb6FysLHpSb5GuRty7f6pmnEkBvjrast4eb+8IfCFgFqCrodMyiXdOhYaLWFmff3X7fpxIqoQFnoA7W3jx1iNvochf+ulq5VxOzRFXERuRIFyz9o3rEPH84gNhsIW8MxIPUNy4lrwS7C/dZZ/Drdg72duPXE6mHmsNkS4yQzlzBFdvKvEZWafr0gji8d5LKyf1Nwaq67y8hyOeDeenK+KDt2VOQiSFxYmea1QBQHS1a1uzl2GvSgKCNiA6uuK/PLNR6HIOUxUsa2iCzRZ93mUNHgH0Fj4xc6YlGKNGnBMElVWOv3fDiSme59lE4gugGTt9Ep7Kbfrv8tghUqxNm/xJ7h0140L30ts+WPbhceF76gzoIUaMqaY3OuQzAfqaAFYc56xYPsQAQVfQWzMKRJxTV8nOz03F+ppNhd49FFdYFV3k2OIjTs9mP4OIfMy/03cWFzsp/tDCdN2G5NoUkmx5N7KAeK5I7RN5kXcvbdIKfGemJ45XWP3JDSPH+udEYp5YwlYZ66pE31Ks6BzPOJTKzFK/Pwrj9gGOYvBVH0Jr8S1qQuYHQjLzwm2eadBPRAUqAcQSXAkSu5/uIQJyB0d+KfsFR5ZOdIGOwp7imEomPQ4bzYUlKAaYUxMvHrnNOWfm+w8RGbr+U2hBkGJPGvO3XHMlszdsMuGPULBXOS5yy0D7u3uTxpn/2rxKbOV1LoTjLu2GYij0Mh3W4s4cBFGlg2pHhP0Ia8GwjDDYSwI62wI4tvg3DEBmptQJcdORorLnTIrmhBGxuJwDRnzVtVbOhhBoqsyJqDnZQRuYE6z2aCVPoDqwOYIlyU+64zaEOoGSAGyGDxcyQ0lxE1LXnbQQ6eozalTS2iR7bwkwVkkn8Ep29QLOBoT92exsnEc+V++2ba24VGSA3BquO4s9ra1rKBK2ghYRigTJz+zxOBoMcXoBSxVDg8GBP0gjltMtEvs10qLEW16q5DX/u99N7NDqf2iLH4P2kNIaAMkezN1aVpgR1IkZiVzEnpnwtVl15RTalKxr5j8VWxjzGjSXVjM83dCmpdSHnEzgDWMQQF+/g1fbytLaHyG0EsWq5RoSVJ05eO3mk4Igo0Q6tvZmWtwi9UbwK/+zsUvQVvvTiIdTTo6VjtPN6qH1HmFvjiYRmsJQWQleOhp7qTd9VfEtxLi5/gRbfhem9FpIyCvYJ+lYU7G/FYR99t6qYkQNcj43FokuZNLPVe/nMgMsUJNTQnNsE/7c4DDACeVpvaUAcnUX7yy3dQpbpwdOk1yGwTAp8w23d9/wzlpUhcPFdiEQDI9nycdor39+baZOCVMZZV7HIfTOowEEspiv31MLSs02qLsM0kdSJXFF5nXC8pZBGi1tMUcMCj0DWnxdA/y3ZJElqeYHYsLNpmnNd9rMdR8SKZP+U7mgpFe5BPoTs3ACeXJ0M3vHYTWoZciwnGHBbBX/LeXiHjgFhAbV9gs0X/lSPYeRWjWWnj5uVO+NZAZ4fLfdQuvPgWmGM2tAAF7kqlikX8oYif0wuIQtv4Lfo1sor6uJ0BD6ODpubCQIhWgay6ZEFBljCRl58YaodrYoh4nqJ+NL8PHe4RGnMjS/FjOha1DS/PwFSLyjgUveob9rB0nq/Rki7kQjH2dPrGXeBRco+k7kZZ4mTVj+TyES5x8ByYKcnTxdM6F1B49RRtyXRToeNpq2/YkWbGH6pbuJ3GxPJ4CkgAmtO2j+nSSFc7ff6bZnsJw8OYHu4F7HNt1R0A5I3pmh+WKiyT/AkIosvNPVCCa6mZb9u1zgTNbG1eBVDmIGvU27fmEidCp20Wx2KgRTN8DByti9UnsKQ9epFpIxhucCuRqwUu+HjVf9sHUvy614PSp/LSUyUDIU6ugLI2RwClj3zQNoJTuIEDAwxPdx89TongpumZCCXx6Ux/zh9rWP6ROD6wPiEAMy6TuHasJZx3JFZnyseUyRkdH42pdV1nXIS8fn7tr5ti3EypnArMI+aEK5mBQXCyE4MnlyDo3EPr0v1h1B6oqnEZ1NwplIYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01CRFfxukDe4b8A6WnJ3VgnP",
+            "name": "brave_search",
+            "input": {
+              "query": "addons.thunderbird.net \"Send As Alias\" reviews users"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2186,
+          "cache_read_input_tokens": 20317,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2186,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1498,
+          "output_tokens_details": {
+            "thinking_tokens": 1428
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "7f43604d063f038e41c247d9617d07140fccab0a7b3a34049123d31b5393b16c",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2255,
+        "cache_read_input_tokens": 22503,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2255,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 79,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0109321,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDVLcQpzeGziNYztxPf",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Have sufficient evidence. Compiling the brief now."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0198MBadcXyCCC73uwwdkZwD",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://proxiedmail.com/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2255,
+          "cache_read_input_tokens": 22503,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2255,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 79,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "011c9f9e8b5ad5c0adfe5c0950249bfba817ad40f8b372f510728885f283eff3",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2852,
+        "cache_read_input_tokens": 24758,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2852,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 4634,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0584256,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDVSbp7ZdTJZTKLmDB9",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Now I have enough. Compiling the final JSON brief.\n\n```json\n{\n  \"idea_id\": \"A13\",\n  \"payer\": {\n    \"who\": \"Individual privacy-conscious prosumers paying for a personal subscription (not teams or businesses)\",\n    \"price_hypothesis\": \"$1-4/month, anchored to the going rate for alias/reply-correction tooling in this exact niche\",\n    \"comparable_url\": \"https://maskwire.com/\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"Maskwire\",\n      \"url\": \"https://maskwire.com/\",\n      \"pricing\": \"One tool free forever; all tools (including 'Alias replies' - reply to mail sent to a configured alias with sender auto-rewritten) for $3/month\",\n      \"pricing_url\": \"https://maskwire.com/\"\n    },\n    {\n      \"name\": \"addy.io (AnonAddy)\",\n      \"url\": \"https://addy.io\",\n      \"pricing\": \"Free tier (1 recipient, 50MB bandwidth); Lite $1/mo (annual); Pro $3/mo annual or $4/mo monthly - all paid tiers include 'Anonymous Reply + Send From' alias\",\n      \"pricing_url\": \"https://addy.io\"\n    },\n    {\n      \"name\": \"SimpleLogin\",\n      \"url\": \"https://simplelogin.io/\",\n      \"pricing\": \"Free tier (10 aliases); Premium ~$2.99-$4/month ($35.88/year), includes send/reply from alias with no limits\",\n      \"pricing_url\": \"https://simplelogin.io/pricing/\"\n    },\n    {\n      \"name\": \"ProxiedMail\",\n      \"url\": \"https://proxiedmail.com/en/pricing\",\n      \"pricing\": \"Free tier includes 'Replies from proxy-email'; Plus tier (annual) adds 'Sending outbound emails from your proxy emails'; a one-time 'Forever' lifetime plan is also offered (third-party deal pages cite ~$10-$30 lifetime)\",\n      \"pricing_url\": \"https://proxiedmail.com/en/pricing\"\n    },\n    {\n      \"name\": \"Send As Alias (Thunderbird extension)\",\n      \"url\": \"https://addons.thunderbird.net/EN-gb/thunderbird/addon/send-as-alias/\",\n      \"pricing\": \"Free, open-source Thunderbird add-on that auto-sets From address to match the alias a message was received on, including detection via delivery headers\",\n      \"pricing_url\": \"https://addons.thunderbird.net/en-US/thunderbird/addon/send-as-alias/\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Reddit Ads (targeting r/privacy, r/privacytoolsIO-style audiences)\",\n      \"cost_estimate\": \"~$0.50-$4.00 average CPC in the US\",\n      \"source_url\": \"https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost\"\n    },\n    {\n      \"channel\": \"Niche privacy newsletter sponsorship\",\n      \"cost_estimate\": \"Small indie newsletters typically charge $50-$250 per sponsored send\",\n      \"source_url\": \"https://joinbreaker.ai/blog-posts/newsletter-ad-rates\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"The email always sends with a Reply To address from the main domain, not the alias\",\n      \"url\": \"https://help.zoho.com/portal/en-gb/community/topic/reply-to-email-addresses-wrong\"\n    },\n    {\n      \"quote\": \"When I reply to an email received to me@example.com, the mail app selects otherme@example.com, not the default\",\n      \"url\": \"https://discussions.apple.com/thread/252756221\"\n    },\n    {\n      \"quote\": \"The 'from' address is set to main (my admin email). It should be replying from info\",\n      \"url\": \"https://learn.microsoft.com/en-au/answers/questions/5651976/outlook-mac-app-reply-with-the-correct-alias-email\"\n    }\n  ],\n  \"case_for\": \"A solo builder with AI agents could ship a thin IMAP/SMTP (or Gmail/Microsoft Graph API) rewriting proxy in under six weeks because the core logic — map incoming recipient header to outgoing From/Reply-To — is a small, well-specified rules engine, not a novel algorithm; the pain is real and repeatedly documented across Apple, Microsoft, Zoho, and eM Client support forums going back to 2021, meaning there is a standing, recurring support-thread-generating annoyance that a narrow, well-marketed single-purpose tool could capture from users who find existing alias managers (SimpleLogin, addy.io) bundled with forwarding/masking features they don't need and who just want the 'send from correct alias' piece fixed cleanly, potentially as a client-side plugin (like Send As Alias for Thunderbird) extended to Gmail/Outlook webmail via a browser extension, which is a much smaller build than a full mail-proxy.\",\n  \"case_against\": \"This exact feature already ships, today, inside at least five products: Maskwire explicitly sells 'Alias replies' as one of its named tools for $3/month (or free as the one chosen tool), addy.io and SimpleLogin both include reply/send-from-alias in their core free-to-cheap tiers, ProxiedMail includes replies-from-proxy-email even on its free plan, and the open-source Send As Alias Thunderbird extension does the client-side version for free with header-based detection explicitly built to solve the BCC/mailing-list edge case. The market is a commodity feature bundled into broader alias/privacy suites priced at $0-4/month, so a standalone middleware product competes on a razor-thin, already-saturated low-ACV niche where incumbents have free tiers and the willingness-to-pay ceiling is roughly $3-4/month — a price point that makes customer acquisition cost (even cheap Reddit CPCs) hard to recoup without very high retention and volume, and most mail clients/providers (Outlook web, Fastmail, Gmail with 'send mail as') are slowly shipping native from-alias detection, shrinking the addressable gap over time.\",\n  \"open_questions\": [\n    \"Would prosumers pay for a dedicated middleware tool when the same capability is already bundled free or near-free inside SimpleLogin/addy.io/Maskwire, or does the idea only work as a feature inside a broader alias-management product?\",\n    \"Is the real unmet need the IMAP/SMTP proxy architecture (works with any provider) versus client-side plugins (Thunderbird-only) versus provider-native features (Gmail 'Send As', Outlook aliases) — i.e., which integration surface has the least existing competition?\",\n    \"What is actual willingness-to-pay for a single-feature tool versus the $0-4/month bundled alternatives — would users switch providers/add a proxy hop just for this?\",\n    \"How many users maintain enough aliases (10+) that manual correction is painful enough to pay for, versus the majority who have 2-3 aliases and tolerate the friction?\",\n    \"What are the security/trust barriers to asking privacy-conscious users to route IMAP/SMTP credentials through a third-party proxy (Maskwire's own disclosure that this is 'not end-to-end encryption of email content' is a real objection for the target persona)?\",\n    \"Could churn and support costs from mail-client compatibility issues (as seen in the eM Client/Outlook forum threads about broken alias headers) make this expensive to support as a one-person operation?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"If storing or proxying user email credentials and message content for EU/UK residents, the operator is a data controller/processor under GDPR and must have a lawful basis, data processing documentation, and breach notification procedures\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"One-time review of data flows and privacy policy/ToS by a privacy lawyer (a few hours), plus ongoing breach-notification readiness\",\n        \"source_url\": \"https://gdpr-info.eu/art-28-gdpr/\"\n      },\n      {\n        \"obligation\": \"Storing third-party IMAP/SMTP credentials (even encrypted) creates data-breach notification obligations under various US state laws and GDPR if a credential store is compromised\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"One-time consult to define incident response plan; ongoing monitoring\",\n        \"source_url\": null\n      },\n      {\n        \"obligation\": \"Terms of Service / Acceptable Use Policy and Privacy Policy drafting given the tool processes the content of users' private correspondence in transit\",\n        \"kind\": \"one_time\",\n        \"consult_scope\": \"Single legal drafting/review engagement before launch\",\n        \"source_url\": null\n      }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Gmail/Outlook webmail are 'slowly shipping native from-alias detection' — general industry observation, not independently sourced beyond the forum threads cited\",\n    \"Churn/support cost burden estimate for a one-person operation is an inference, not sourced\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"# A13 — Email middleware for correct per-recipient alias sending\\n\\n## Idea\\nMiddleware that watches which alias a message was received on and automatically sends replies/outgoing mail from that same alias, for privacy-conscious prosumers running many email aliases.\\n\\n## Payer\\nIndividual privacy-conscious prosumers paying a personal subscription. Price hypothesis: $1-4/month, anchored to Maskwire's $3/month all-tools price (https://maskwire.com/), which already includes this exact feature as one of six named 'tools' ('Alias replies').\\n\\n## Competitors\\n- **Maskwire** ($3/mo all tools, one free) — an IMAP/SMTP proxy that already ships 'Alias replies' as a named feature. https://maskwire.com/\\n- **addy.io** (Free / $1 Lite / $3-4 Pro) — reply-and-send-from-alias included on all paid tiers. https://addy.io\\n- **SimpleLogin** (Free / ~$3-4/mo Premium) — send/reply from alias with unlimited sends is core to the product. https://simplelogin.io/pricing/\\n- **ProxiedMail** (Free / Plus / Forever lifetime) — 'Replies from proxy-email' included even on the free tier; outbound sending from proxy email on paid tier. https://proxiedmail.com/en/pricing\\n- **Send As Alias** (free, open-source Thunderbird extension) — client-side from-address auto-correction including delivery-header detection for BCC/mailing-list cases. https://addons.thunderbird.net/en-US/thunderbird/addon/send-as-alias/\\n\\n## Acquisition channel\\n- Reddit Ads targeting privacy subreddits: ~$0.50-$4.00 average CPC (https://www.stackmatix.com/blog/how-much-does-reddit-advertising-cost)\\n- Niche privacy newsletter sponsorship: $50-250 per send for small indie newsletters (https://joinbreaker.ai/blog-posts/newsletter-ad-rates)\\n\\n## Demand evidence\\nMultiple independent forum threads (Zoho, Apple, Microsoft, eM Client) over several years document users hitting exactly this pain — mail clients defaulting to the wrong From/Reply-To address when replying to an alias:\\n- \\\"The email always sends with a Reply To address from the main domain, not the alias\\\" — https://help.zoho.com/portal/en-gb/community/topic/reply-to-email-addresses-wrong\\n- \\\"When I reply to an email received to me@example.com, the mail app selects otherme@example.com, not the default\\\" — https://discussions.apple.com/thread/252756221\\n- \\\"The 'from' address is set to main (my admin email). It should be replying from info\\\" — https://learn.microsoft.com/en-au/answers/questions/5651976/outlook-mac-app-reply-with-the-correct-alias-email\\n\\n## Case for\\nThe core logic (map incoming recipient header to outgoing From/Reply-To) is small and well-specified, buildable solo with AI agents in six weeks, especially as a client-side plugin or browser extension rather than a full mail proxy. The pain is real, recurring, and documented across multiple major mail clients for years, suggesting an underserved segment that wants this one fix without a full alias-management suite.\\n\\n## Case against\\nThis exact feature is already shipped and priced by at least five live competitors, including one (Maskwire) that sells it as a named $3/month tool today, and others (addy.io, SimpleLogin, ProxiedMail) that bundle it into their core free-to-cheap alias-forwarding products. The commodity nature and sub-$4/month price ceiling make unit economics tight for a standalone product, and a free, open-source Thunderbird extension already solves the client-side case for free.\\n\\n## Open questions\\nSee `open_questions` field — chiefly whether users would pay for a standalone tool given free/bundled incumbents, which integration surface (proxy vs. plugin vs. provider-native) has real whitespace, and how large the segment with painful (10+) alias counts actually is.\\n\\n## Regulatory setup\\nIf the implementation stores or proxies user email credentials/content, GDPR processor obligations and breach-notification duties apply on an ongoing basis; a one-time legal consult should cover ToS/privacy policy drafting and incident-response planning before launch.\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2852,
+          "cache_read_input_tokens": 24758,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2852,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4634,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "engine": "brave",
+  "query": "\"push and pray\" CI pipeline debugging reddit OR twitter frustrating",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-10-02T22:42:14.956Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "\"push and pray\" CI pipeline debugging reddit OR twitter frustrating",
+    "results": [
+      {
+        "title": "r/github on Reddit: I built a local GitHub Actions debugger with breakpoints — tired of \"push and pray\"",
+        "url": "https://www.reddit.com/r/github/comments/1s08ros/i_built_a_local_github_actions_debugger_with/",
+        "snippet": "yeah that&#x27;s exactly the frustration that led me to build this. <strong>act tries to fully emulate the runner environment</strong> which is why you get those mismatches , different package versions, missing services, etc.",
+        "published": "2026-03-23T08:19:24"
+      },
+      {
+        "title": "r/programming on Reddit: GitHub Actions Is Slowly Killing Your Engineering Team - Ian Duncan",
+        "url": "https://www.reddit.com/r/programming/comments/1s5ja3a/github_actions_is_slowly_killing_your_engineering/",
+        "snippet": "this is exactly where we landed. we run a self hosted actions runner on a mac mini and after way too many &quot;push and pray&quot; debugging sessions the solution was just wrapping everything behind a makefile. the actual GHA yaml is like 10 lines now, it basically just calls make deploy. all the real logic lives in scripts that run the same way on my laptop. not glamorous but it means i can catch 90% of issues before they ever hit CI.",
+        "published": "2026-03-27T22:48:07"
+      },
+      {
+        "title": "r/devops on Reddit: Setting up DevOps pipelines is my worst nightmare",
+        "url": "https://www.reddit.com/r/devops/comments/1k7j1bv/setting_up_devops_pipelines_is_my_worst_nightmare/",
+        "snippet": "if you are not using terraform ... but <strong>its because they do CICD in the same workflow, they dont create proper artifacts, they have no &quot;deployment&quot; process, its always just tries to push to the environment without any version control</strong>...",
+        "published": "2025-04-25T11:53:19"
+      }
+    ]
+  }
+}

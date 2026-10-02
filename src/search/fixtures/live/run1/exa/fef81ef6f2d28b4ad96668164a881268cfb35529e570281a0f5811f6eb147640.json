@@ -1,0 +1,45 @@
+{
+  "engine": "exa",
+  "query": "\"we didn't notice\" file from partner never arrived sftp",
+  "params": {
+    "num_results": 5
+  },
+  "recorded_at": "2026-10-02T22:38:57.460Z",
+  "cost_usd": 0.007,
+  "response": {
+    "engine": "exa",
+    "query": "\"we didn't notice\" file from partner never arrived sftp",
+    "results": [
+      {
+        "title": "DISCOVER - Veriry %File% Age to Confirm Data Transfer? |﻿ MIS Systems",
+        "url": "https://www.edugeek.net/forums/topic/155570-discover-veriry-file-age-to-confirm-data-transfer/",
+        "snippet": "DISCOVER - Veriry %File% Age to Confirm Data Transfer? |﻿ MIS Systems\n\n# DISCOVER - Veriry %File% Age to Confirm Data Transfer? \n\n By JRA September 7, 2016 in MIS Systems \n\n### JRA \n\n Posted September 7, 2016 \n\n### JRA \n\n Posted September 7, 2016 \n\nHi all - just having a bit of a think. A while back something broke that meant Discover didn't do it's data transfer overnight and we didn't notice for a while.\n\n Fixed now, but I was wondering if there was an easy way (say, reference the age of a file) to check as a scheduled task to verify this'd happened daily.\n\n Anyone got any ideas on that? Grateful for any help or suggestions.\n\n \n\n### Greg \n\nYou could write and schedule a script to search Discover.Warehouse.Service.log for problem key words, e.g the word \"ERROR\", and then return the line containing the key word and if the date = time of test then you know that something is wrong.\n\n Example of \"ERROR\" in log file \n\nYou need to be a member in order to leave a comment",
+        "published": "2016-09-07T12:51:17.000Z"
+      },
+      {
+        "title": "Issue with Cloud Storage integration · Issue #464 · drakkan/sftpgo",
+        "url": "https://github.com/drakkan/sftpgo/issues/464",
+        "snippet": "# Issue: drakkan/sftpgo #464\n\n- Repository: drakkan/sftpgo | Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server - S3, Google Cloud Storage, Azure Blob | 12K stars | Go\n\n## Issue with Cloud Storage integration\n\n- Author: [@simonebruzzechesse](https://github.com/simonebruzzechesse)\n- State: closed (completed)\n- Created: 2021-06-24T10:53:36Z\n- Updated: 2021-07-02T06:56:36Z\n- Closed: 2021-06-24T17:37:36Z\n- Closed by: [@drakkan](https://github.com/drakkan)\n\nHi all, we are facing an issue with sftpgo integration with Google Cloud Storage. After configuring a Virtual Folder with Storage type \"Google Cloud Storage\" we assign permissions to a user and everything seems to work fine. The user is able to connect and, according to the permissions, upload or download files. The only issue we are experiencing is related to those folders that are empty, with no folders and files inside. Trying to CD into such folders result in an error with the following description:\n\n`Couldn't stat remote file: No such file or directory`\n\nPlease fine below an example of the configuration required to reproduce the error.\n\nIn this example, Outbound folder is an existing folder in the GCP bucket, as we can see in the image below of the Google Cloud Platform console.\n\n[Image: unnamed (1) | https://user-images.githubusercontent.com/60114646/123250397-4a5d5b00-d4ea-11eb-990d-90b4a9c3630b.png]\n\nWith a sftp user that has all the permissions at bucket level, we can LS into the root folder an",
+        "published": "2021-06-24T10:53:36.000Z"
+      },
+      {
+        "title": "Having trouble signing up on 'Partner Center' - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2352991/having-trouble-signing-up-on-partner-center",
+        "snippet": "Having trouble signing up on 'Partner Center' - Microsoft Q&A\n\n# Having trouble signing up on 'Partner Center'\n\nAnonymous\n\n2022-07-12T04:06:10+00:00\n\nWe are signing up as a Hardware partner on the partner center. We followed the instructions and reached the page where one has to upload a signed file. Screenshot below:\n\nWe download the signable file, use the token we received from an MS recommended partner (GlobalSign) and use it to sign the file. We didn't notice any obvious error up to this step. When we upload the signed file, we always get the following error. Tried multiple times till I recalled Einstein's definition of insanity.\n\nGlobalSign supports says that they have not seen such an issue before and this could be an issue at MS end. This is not an issue with browser, I even tried using signing up with their 'Edge' browser. No dice!\n\nWe are stuck at this step. Not sure what this message means: 'Correlation ID'? We are sure that we are uploading the same file we downloaded. I checked the sha256 sum before signing and after signing (they are different) and there is only one file in my Download folder which I deleted before downloading the new one. There could be issue with certificate but this is not what this message implying.\n\nAny hint on how to debug this issue or where to seek help? I am also happy to hear some kind words 😭.\n\nLocked Question. This question was migrated from the Microsoft Support Community. You can vote on whether it's helpful, but you can't add comm",
+        "published": null
+      },
+      {
+        "title": "Endpoint for 'object-store' not found",
+        "url": "https://github.com/Memset/sftpcloudfs/issues/13",
+        "snippet": "# Endpoint for 'object-store' not found \n\n- State: closed\n- Author: ozone227\n- Created: 2014-04-02T14:18:37Z\n- Updated: 2019-08-04T20:38:00Z\n- Repository: Memset/sftpcloudfs\n- Number: #13\n\n## Labels\n\n- Question\n\n---\n\nWe have sftpcloudfs installed and running on CentOS 6.4, but are having an issue when configuring for Keystone authentication. The following error is being logged:\n\nErrno 5] Endpoint for 'object-store' not found - have you specified a region?: \n\nThe following config file is being used:\n\n```\n# sftpcloudfs configuration file\n#\n\n[sftpcloudfs]\n\n# Authentication URL (eg Memstore, RackSpace Cloud Files, OpenStack)\nauth-url = http://192.168.20.50:5000/v2.0\n\n# Host RSA key used by the server.\nhost-key-file = /etc/sftpcloudfs/rsa_key\n\n# Address to bind.\nbind-address = 192.168.20.50\n\n# Port to bind.\nport = 8022\n\n# SCP support.\n# scp-support = yes\n\n# Memcache server(s) for external cache (eg 127.0.0.1:11211)\n# Can be a comma-separated list.\nmemcache = 192.168.20.50:11211\n\n# Maximum number of workers.\n# max-children = 20\n\n# Large file support.\n# Specify a size in MB to split large files.\n# split-large-files = (empty)\n\n# Hide .part directory from large files\n# hide-part-dir = no\n\n# Log file location.\n# log-file = (empty)\n\n# Enable logging to system logger (daemon facility).\nsyslog = yes\n\n# Show detailed information on logging.\nverbose = yes\n\n# Pid file location when in daemon mode.\n# pid-file = (empty)\n\n# UID to drop privileges when in daemon mode.\n# uid = (empty)\n\n# GID to d",
+        "published": null
+      },
+      {
+        "title": "We won and we didn't notice (The H) [LWN.net]",
+        "url": "https://lwn.net/Articles/457730/",
+        "snippet": "We won and we didn't notice (The H) [LWN.net]\n\n## We won and we didn't notice (The H)\n\n Posted Sep 5, 2011 18:17 UTC (Mon) by endecotp (guest, #36428) In reply to: We won and we didn't notice (The H) by cmccabe Parent article: We won and we didn't notice (The H)\n\n> What you should do is run an application that does inotify on the > NFS server itself, monitoring the local filesystem that backs the > NFS-exported one \n\n That's almost what I did; I learnt how to do multicast networking, and made each writing client announce when they made changes. (It didn't need to be perfectly reliable.) I was trying to make this work with an unmodifed server e.g. a home NAS box. \n\n At that point I discovered the other thing that I alluded to before: if the writing client has appended a few bytes to the end of a large file, the reading client knows only that the file has changed and invalidates its entire cached copy. As you can guess, I didn't realise what was going on at first; once the file was a few tens of megabytes and it got slow I had a bang-head-on-keyboard moment. That project has now been on hold for a couple of years.",
+        "published": "2011-09-05T00:00:00.000Z"
+      }
+    ]
+  }
+}

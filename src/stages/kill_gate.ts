@@ -13,7 +13,7 @@ import { MODELS, renderTemplate, type PromptSet } from "../config.js";
 import type { Db, AgentSafeRule } from "../store/db.js";
 import type { SearchClients } from "../search/index.js";
 import { normalizeQuery } from "../search/fixtures.js";
-import { BudgetExceededError, FatalApiError, type ModelClient } from "../model/client.js";
+import { BudgetExceededError, FatalApiError, type ModelClient, type ModelSession } from "../model/client.js";
 import type { TraceCollector, TraceEvent } from "../trace.js";
 
 export const KillGateOutput = z.object({
@@ -210,6 +210,34 @@ export function extractJson(text: string): unknown {
   throw new Error("no JSON object found in model output");
 }
 
+/**
+ * One repair turn after unparseable final output: append the model's text and the parse error, ask for
+ * the corrected JSON object only. Returns the new text and its cost. Logged as a model_call.
+ */
+export async function repairTurn(
+  session: ModelSession,
+  trace: TraceCollector,
+  model: string,
+  system: string,
+  tools: Anthropic.Messages.Tool[],
+  messages: Anthropic.Messages.MessageParam[],
+  badText: string,
+  parseErr: unknown,
+): Promise<{ text: string; cost: number }> {
+  const errMsg = parseErr instanceof Error ? parseErr.message : String(parseErr);
+  trace.add("runner_note", { note: "json_repair_turn", parse_error: errMsg, bad_output_chars: badText.length });
+  const repairMessages: Anthropic.Messages.MessageParam[] = [
+    ...messages,
+    { role: "assistant", content: badText },
+    { role: "user", content: `That output was not valid JSON (${errMsg}). Return the same content as one valid JSON object and nothing else. Escape every double quote and newline inside string values.` },
+  ];
+  const params: Anthropic.Messages.MessageCreateParamsNonStreaming = { model, max_tokens: 16000, system, tools, messages: repairMessages };
+  const r = await session.call(params);
+  const text = r.message.content.filter((b): b is Anthropic.Messages.TextBlock => b.type === "text").map((b) => b.text).join("\n");
+  trace.add("model_call", { iteration: "repair", model, source: r.source, stop_reason: r.message.stop_reason, usage: r.message.usage, cost_usd: r.costUsd, content: r.message.content });
+  return { text, cost: r.costUsd };
+}
+
 export function scanForInjection(text: string): string[] {
   const found: string[] = [];
   for (const re of INJECTION_PATTERNS) {
@@ -319,11 +347,21 @@ export async function runKillGate(ctx: KillGateContext): Promise<KillGateRunResu
   }
   if (finalText == null) return fail(`no final answer after ${maxIterations} model calls`, null);
 
-  // 1. Validate.
+  // 1. Validate. If the text is not parseable JSON at all, give the model one repair turn.
   let parsed: KillGateOutputT;
   try {
-    parsed = KillGateOutput.parse(extractJson(finalText));
+    let raw: unknown;
+    try {
+      raw = extractJson(finalText);
+    } catch (parseErr) {
+      const repaired = await repairTurn(session, trace, model, system, TOOLS, messages, finalText, parseErr);
+      costUsd += repaired.cost;
+      finalText = repaired.text;
+      raw = extractJson(finalText);
+    }
+    parsed = KillGateOutput.parse(raw);
   } catch (e) {
+    if (e instanceof BudgetExceededError || e instanceof FatalApiError) throw e;
     return fail(`output failed validation: ${e instanceof Error ? e.message : String(e)}`, finalText);
   }
   runner.model_verdict = parsed.verdict;

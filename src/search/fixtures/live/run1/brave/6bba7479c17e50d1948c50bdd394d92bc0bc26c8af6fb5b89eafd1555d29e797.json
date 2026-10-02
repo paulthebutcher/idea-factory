@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "third party API deprecation notice broke production reddit",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-10-02T22:36:11.937Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "third party API deprecation notice broke production reddit",
+    "results": [
+      {
+        "title": "r/Backend on Reddit: How do you detect breaking changes in third-party APIs?",
+        "url": "https://www.reddit.com/r/Backend/comments/1rnfmt4/how_do_you_detect_breaking_changes_in_thirdparty/",
+        "snippet": "We&#x27;ve had a few incidents where a third-party API changed its response structure without notice and broke our integration in production. I&#x27;m curious how other teams handle this. Do you monitor schema changes somehow? Snapshot comparisons? Contract tests? Interested to hear how people deal with this problem. ... When APIs follow strict versioning and deprecation policies it&#x27;s definitely less of a problem.",
+        "published": "2026-03-07T17:22:40"
+      },
+      {
+        "title": "r/programming on Reddit: Deprecations via warnings don’t work for Python libraries",
+        "url": "https://www.reddit.com/r/programming/comments/1pjwozt/deprecations_via_warnings_dont_work_for_python/",
+        "snippet": "It&#x27;s <strong>once your code is calling third-party APIs across the network that deprecate or change old functionality</strong>, or when you have an attitude that all dependencies must be updated when possible, that you&#x27;re likely to start having things break ...",
+        "published": "2025-12-11T12:49:11"
+      },
+      {
+        "title": "r/microservices on Reddit: How to find which services are still calling deprecated api versions before you remove them",
+        "url": "https://www.reddit.com/r/microservices/comments/1rg61rf/how_to_find_which_services_are_still_calling/",
+        "snippet": "Announced the v1 deprecation then gave teams a deadline, sent reminders. Turned it off and obviously something broke. 35 rest api microservices and…",
+        "published": "2026-02-27T13:01:40"
+      },
+      {
+        "title": "r/SaaS on Reddit: Built an integration with a partner API. They deprecated it with 30 days notice. 40% of our customers depended on it.",
+        "url": "https://www.reddit.com/r/SaaS/comments/1s6y9cs/built_an_integration_with_a_partner_api_they/",
+        "snippet": "Yeah, that sucks but the takeaway is solid - if a third party decision can tank your main value prop, you don’t have a product, you have a dependency. Good on you for recovering, but the churn and burnout show why this has to be part of product strategy, not an accident.Practical stuff that helped me: put an abstraction/adapter layer between you and the partner so future changes hit your shim, not the product, negotiate deprecation/notice SLAs in contracts, build simple fallbacks or degraded modes, add tight monitoring and customer-facing status so you can triage fast.",
+        "published": "2026-03-29T15:34:29"
+      },
+      {
+        "title": "How to Handle API Deprecation Notices 2026 | APIScout",
+        "url": "https://apiscout.dev/guides/how-to-handle-api-deprecation-2026",
+        "snippet": "Never do a big-bang migration. Run both the old and new API simultaneously, route 10% of traffic to the new implementation, watch for errors, then ramp up. This approach finds edge cases in production before they become incidents. Not every deprecation notice demands the same response.",
+        "published": "2026-04-03T00:00:00"
+      }
+    ]
+  }
+}

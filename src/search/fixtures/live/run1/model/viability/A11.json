@@ -1,0 +1,483 @@
+{
+  "stage": "viability",
+  "idea_id": "A11",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-10-02T22:39:30.799Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "56000cf5e9a7b79605ed56b387f03e54a991cbfdb17e01db1462f7a3cb687e40",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2247,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2247,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 298,
+        "output_tokens_details": {
+          "thinking_tokens": 71
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0086015,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDMnEnyHsoSD24f5FCj",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "ErwDCqQBCBIYAipASPiKO2JA/niSWe/e1NEB5BbSFYxuyqjuhcciI7PEBqbnRlhRTaEF7n1WXCj2VnKJS2DdIWqEtzqac2B+xxc+EDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBoeWA1gYSDGTXH33PKfiga4p5yxoM3F+VeAa499Sj7256IjDlUCvwXPp714waOepLDvqdpCZkiNVFp9RnEku1kd7pcykw8dzxxpYfTtIQZq6Gm/EqxAE2JNKr2SGbbvW/ZNYtdZ/Ko69tIh69CYZkCGoViDE+8H2TAzjB2wIHpkpCYbZh+Bf9cXxCV2MtEAHzAsrxkHU+5AE1jjZBIVGRIECCf5dNVdKwAiHxMzuMr17lHcla2fxPnPDc7ekf2leGcWzKA4wYOAyR6YIgw/AHM7GM9ftTMUsz5U7ChFN45t++9GnpHUqTGxKZGal5iIiTWdUCSzu31poIxZkFgjvxxxDIN3tgvvFG9deX7Zk5LCEIWBEOCFjzL+UXGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01Vgzs7C4BB482s278sKscaA",
+            "name": "brave_search",
+            "input": {
+              "query": "SwagUp pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01TmxkwusEgngqCStjz8z9HP",
+            "name": "brave_search",
+            "input": {
+              "query": "Sendoso pricing swag on demand"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_012i3DW372wNMoYkcFyxDGAd",
+            "name": "brave_search",
+            "input": {
+              "query": "PerkUp pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01BJtR7wNk8uTJxM5RMGv5Ch",
+            "name": "exa_search",
+            "input": {
+              "query": "Stripe new customer swag welcome package automated founder story"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2247,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2247,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 298,
+          "output_tokens_details": {
+            "thinking_tokens": 71
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "ad5f5df20bdae9474c65f6c77850c002bc138e4efe2befbb01bec733d52110fc",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6296,
+        "cache_read_input_tokens": 2247,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6296,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 611,
+        "output_tokens_details": {
+          "thinking_tokens": 355
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0223034,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDNAnN2CaUm651nYbQ9",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsoKCqQBCBIYAipAV7oCqHVk4R8QAQkBDHVNff2XyvRwMFKnBKwMZZlb3gcAE0cfLHYPYeWY/3iM+Ax2qfEsW9MedcHRMEZcKE5/vzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBqeWA1gYSDDcFTHZlOyt0SW2iAxoMo+xCTXNpQ872krpUIjBweJVpv0NP6rQqm0Jtw49KDkaUMUbtIfGe5+e4iJ3osXUybF+M1TPlGJnhdTt2eqEq0gg0RQOff6jP7ReN0Trj4UqEVNU5no5G5i0zXuc+mjvyW0ExjtZ+EI6TK0dQKGqQvM/TVB6V0wAwNeoHxTXP5nN+9HnK7E45mDtr1gc3+IlYHvrFghx5yhSB1gs2rCxU8/5XJ2qfOtor52Uiik6ka/ioyLFcBh9mRl2I2NKWA6/5myePGBBZRBRxCLUe0TIFKAlHDxtryrFQgL08seGGWzNf5TZ7V4oXqYhBuFpYFAcbmiPQOCVAgWYQjdaFmaQ/ZHPSfU8xkw/hTJFArcGEAB/Mo4rCvK7I35Km2vNx1UDKqe65OJJMjKgpQs7YMrVdQXwc9vQ5FMX5yGCNfR8nfPMWWc59gffiBdfDFDFCs/Sc5Z/B1/UolqWyMEL3yVwEQMfeMdGtWN6/2Zy20fLOSuf5HPhaJaoYap3yxi2St+78gYuqEs59jTcjfDNTBCnUfYDdhRAXndYd1Tcuzd0Tj864jkpVfxwpEBjV1XjC5r7cjUviRVCpSbeJjfLtMZyp+RuR+OYwkAd6QYyrHdb0BN/jkiEh5QtMjNdc0YV9tQpeZnSa/1NoCIZHantCxR847jmfIeQhWZLGi4knvDMvTOCAA4fP30i5TsjpUPYQ6j4r2al7I1JkldQj4bpe2K4L5Q/Vu2h9GkQBbZFwSYTRkzCaXwA07y2ljP1ovJdscUGdCIKC65eYAe2w1529DJ6xAJPJLu02WaouTEIHjbx6o2ZhKSmzgkD/sxgwcIBtrjiSRilj1zPR1eoT7keDhi6Fmo18Wj5bbRMTkSQ58g5ZWVl2jl7JWKZkgmoUPRpuweN7HC6cK5CucSKzYEAIq4RuXiO6+CN+vQo0RBblUskhFeMJbt7Monpdk0/h9etc4isQoUr7LUjRWYWb8jynU+8P0JDiHHM2+Zlh1MMIiZyaXI3TF8s8xTPVZwe1eF6p0fAcrChRAiecOg1Nu/ISN/cn2nt7mnDhOL1wl99WosZCtHXRpBew12eBhR0baeHToP4iOThN4Q9tEmNb1Rup4l8DOPeFyW2HT77HFJoHXkKsFjXCkSjRdNlwidb5aZxhOc3J170d0LjHvaLLwBwjxi/mHBrwOJmPsj/a1daLfik3l73aobK0g/lHsU1U58Je+tew3e4g9sMvnkE3nysCezMyo8mBIsw2vBamClNUTwwa5Qx90CT27DCHPPQl/AJUaQaPbEavfyDHauX81XMjb/5DIMhmMZ/sc19VDd61dPJy3dLcX31iE+e4QoTJN8yl+n5Dc5tXejoo5XFOwWoL/E8SLR4mO1TmWDu7M+4SrwXOglJdxM5hAKesikRgflG5lzbWMEMV7FF9GU1lQ2LXKF4cvxG3xbmn/eday9QsRvdReMQIxYdHMZ+4VCutsz3LJ/ikSge5/zFXnyb58RBb1VNA9H4D18EPMmbi0GAOzdm7OTXfSSjUTHVnzMBFLvZWCajHCVLYnRCUVK1kmgmwo8lJQmwxehgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_019r8YPXEkc7kmSQdRumQfHc",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.swagup.com/pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01WGxrajZgTSfK64LZGxxXt7",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://perkupapp.com/pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QWYnrednZ9Sb7M6HLw2Ewx",
+            "name": "exa_search",
+            "input": {
+              "query": "\"welcome kit\" automatically send swag new customer saas idea wish"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_018GNyHrjs7dGhXG9R5PkDTp",
+            "name": "brave_search",
+            "input": {
+              "query": "cost per acquisition Facebook ads B2B SaaS founders average CPC"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 6296,
+          "cache_read_input_tokens": 2247,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6296,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 611,
+          "output_tokens_details": {
+            "thinking_tokens": 355
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "1dad695e8769d5734ea29b356fd5025beacf5439ab54aa7638d96aa025688cd0",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 10462,
+        "cache_read_input_tokens": 8543,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 10462,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 494,
+        "output_tokens_details": {
+          "thinking_tokens": 303
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0328076,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDNt7Hjq4SR1zRzyZ73",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EtgICqQBCBIYAipAx5JwJLCxPFEzPUGPtF+zulyeHqOZYhZfM4lNl4qO5vU20HMvq/jcb6jxKf+uEWdOH4nsgYZhmYE1ZUF1bWCpETIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBs+WA1gYSDPb2ELIvDjpnG/7kvhoMWfk6nUmpq9+k517PIjDqlAQi6ZMlZ2+MQzO43wnr0+F0CGIiu34LzLw28yOM+fY35rvQpJfKinycXQpYVM4q4AahbIkt8FcojZQOIp9McUd9HQDLmKok1IHxt0JW5MrKOCmBpFffp4dfurh4WCv8HzVGZ0h7/CWAQqriDkBKn0ZuLdIsZuVeHsvH/O+3SZn/LfEH/KvGYzvGjNzzINafKzsr0YTrCaL5/skW7bg//GhAc2UQihKg2o6LTQoRbBf122s5RNFrSanFOBvbZ/NvfKbYn6XMPV9zSLZS2SEAySUIWhuHhfCrFmzLRgoJrqFXdkeZhILJUCDNk/3fGhFTPOa9QPHzxIhW8W3gJgdt6TILgdEs5mD2cOnZvfhRUmJdEE7hRD9BVQnPbzd9LZYyc5/IZLKuMsk4xmRVIoHyRgErZslFyynUjpt9uHKPmcb0OevSq5FjJuwWY0fO4fA9IZF+k3h4ie10vBovR3DElDFMP/mcmYuJnU71ePxvBIBAid5Q5puyRngBENgpKQqWGHaK47bEPBsqVK0KayT/8ygYO+R7E4xmZVXbwi1HBGiQiW1j0WmjZYt+mH3euSpOk02eGT+sFTi4KGnw0ai5fT4ZrUZjDFZbeEmavees8UzLDExmasgwo4Y4jqEb55DnEcPh3lytW2VQzAIwxlspfA75Qbul0vqGgMRYxyGHPksXDE5p4ve58e0zMX0VkHPIfLeb1ejS8S2G+Vmz8LT5QTx8QcqzuBlsNffrOREqbqVAN8JpQRBosR5nLn3pbigeeOIry95gVtTha+W/LsXi/5L8bJPAJQUrIz9EM+6He9EGW+JGBrKSsp+djUsx7XGhiUq1u+HccUULjLSrrQev6YagIzZOV9BYmOrIK1Jtppq2cOFwGFCGpKdw8KAv5+a58OO91I00nJsDGeD7jEhI4OyGUQ2yRImdHZ+/vyvXHB15c7KVxzfvo9Sf85E1bbKWvHEVgdQYnYMcE89I6a85hXvrHD1lPKzIsdyJ+/aNvaSlNfEbq7SZCVBOIBN/KBnjqJfnAMyJ0VpJxpKlDndxNCxwXax6sbLL+Ttc4IDlXxBn8PNv3r73eug0kqdnWjSE0tb65RDnRlNDOL+rBAbhNSBnAcNSrBFeGilWI1PYyPfaBGz1y5eZo9QzvnT4nle+mHUj8VA19iJqvJUe1SRCp33+kHlFWBVEOU2FQAWM7X4YXyAdDtbVd8tD1JdomfXa4iwYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PgiMgdkCoPah4FVizAUiCa",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://news.ycombinator.com/item?id=21372695"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VV3s3MjCjCcerkbAN4AXpm",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.stitchi.com/for/customer-success"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01PPPhQieZuZyWhxzN9zy9u6",
+            "name": "brave_search",
+            "input": {
+              "query": "Zapier app directory listing cost free vs premium app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 10462,
+          "cache_read_input_tokens": 8543,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 10462,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 494,
+          "output_tokens_details": {
+            "thinking_tokens": 303
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "d25351ed52db446a5cd3537effe38cc77a1758a13e4c1d3f000d9fa2a8765c13",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5576,
+        "cache_read_input_tokens": 19005,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5576,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 609,
+        "output_tokens_details": {
+          "thinking_tokens": 477
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.023835,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDPLU4H9T436Gpd8ZNZ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01URRR6odgbGTGPbba3kbP7f",
+            "name": "brave_search",
+            "input": {
+              "query": "Stripe App Marketplace submit app guidelines review process"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01MKHZqRdg6SEfiPr3DLqFE9",
+            "name": "brave_search",
+            "input": {
+              "query": "\"Sendoso\" pricing per year contract minimum $20,000"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5576,
+          "cache_read_input_tokens": 19005,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 5576,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 609,
+          "output_tokens_details": {
+            "thinking_tokens": 477
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "f9837fe83f3645ad28db633b5d9d9f972bde048d6b027cbc1df686b72d9ded5d",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2129,
+        "cache_read_input_tokens": 24581,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2129,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 101,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.011252700000000001,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDQ8TmRsFmQYhuWAARc",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Now I have enough to compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01S71WA4WAttzHmL9n3mk1Dt",
+            "name": "brave_search",
+            "input": {
+              "query": "\"welcome kit\" OR \"swag\" SaaS customer churn reduce onboarding founder tweet \"I wish\" automated"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2129,
+          "cache_read_input_tokens": 24581,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2129,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 101,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "2f70b7b8d260a733c1731adb12b242f1ffb9e40d85786bc63d7ec64a1e7ac781",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 108,
+        "cache_read_input_tokens": 26710,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 108,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 6060,
+        "output_tokens_details": {
+          "thinking_tokens": 1642
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.066216,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDQGZBtgmP6pZQpWf6X",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "```json\n{\n  \"idea_id\": \"A11\",\n  \"payer\": {\n    \"who\": \"SaaS founders and marketing/CS teams who want to send physical welcome gifts to new paying customers\",\n    \"price_hypothesis\": \"SaaS buyers of swag-automation tools pay roughly $80-99/mo for an entry-level plan plus per-item product and shipping costs (e.g. SwagUp's Silver tier is $99/mo paid monthly or $80/mo billed annually), while enterprise-grade players like Sendoso charge $15k-$20k+/year platform fees plus gift spend — suggesting a narrow 'Stripe-trigger-only' tool aimed at small SaaS founders would need to price well under $99/mo self-serve to differentiate, with swag itself costing $30-75 per onboarding kit per Stitchi's published gifting budgets.\",\n    \"comparable_url\": \"https://www.swagup.com/pricing\"\n  },\n  \"competitors\": [\n    {\n      \"name\": \"SwagUp\",\n      \"url\": \"https://www.swagup.com/pricing\",\n      \"pricing\": \"Silver $99/mo (or $80/mo billed annually), Gold $499/mo, Platinum $999/mo, plus per-item storage/shipping fees\",\n      \"pricing_url\": \"https://www.swagup.com/pricing\"\n    },\n    {\n      \"name\": \"Sendoso (Swag on Demand)\",\n      \"url\": \"https://www.sendoso.com/platform/features/swag-on-demand\",\n      \"pricing\": \"Platform fee typically starts around $15,000-$20,000+/year, separate from gift/swag spend; no public price list\",\n      \"pricing_url\": \"https://prospeo.io/s/sendoso-pricing-reviews-pros-and-cons\"\n    },\n    {\n      \"name\": \"PerkUp\",\n      \"url\": \"https://perkupapp.com/features/new-hire-kits\",\n      \"pricing\": \"Quote-based pricing; businesses must contact sales, no public price list\",\n      \"pricing_url\": \"https://www.spotsaas.com/product/perkup/pricing\"\n    },\n    {\n      \"name\": \"Stitchi (CS/retention gifting)\",\n      \"url\": \"https://www.stitchi.com/for/customer-success\",\n      \"pricing\": \"No subscription price published; typical onboarding kit budget cited as $30-75 per recipient\",\n      \"pricing_url\": \"https://www.stitchi.com/for/customer-success\"\n    }\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Stripe App Marketplace listing (free distribution, requires app review)\",\n      \"cost_estimate\": \"No listing fee; cost is developer time to pass Stripe's app review/quality checklist (pricing transparency, UI guidelines) before publication\",\n      \"source_url\": \"https://docs.stripe.com/stripe-apps/review-requirements\"\n    },\n    {\n      \"channel\": \"Paid social ads (Meta/Facebook) targeting SaaS founders\",\n      \"cost_estimate\": \"SaaS vertical average CPC roughly $1.50-$3.50, with qualified-lead costs rising to $150-$250 per MQL/SQL\",\n      \"source_url\": \"https://aimers.io/blog/facebook-ads-cost\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"What solution or vendor are you using to send these out? What metrics do customers have to hit to send out milestone celebrations?\",\n      \"url\": \"https://www.linkedin.com/posts/patrickwalls_wow-the-stripe-team-just-sent-me-two-cans-activity-7131302498820091905-oQ96\"\n    }\n  ],\n  \"case_for\": \"A solo founder with AI agents could build a thin orchestration layer — a Stripe webhook listener plus an order-routing agent — that calls an existing print-on-demand/swag-fulfillment API (e.g. BrandMerch's developer API) rather than holding inventory, keeping fixed costs near zero. The category is validated: multiple funded competitors (SwagUp, Sendoso, PerkUp, Stitchi) already sell 'trigger-based swag on signup/milestone' as a feature, and real buyers (e.g., the LinkedIn commenter asking 'what vendor are you using to send these out?') are actively looking for exactly this workflow. A narrow, self-serve, Stripe-only version priced below SwagUp's $99/mo entry tier could target the long tail of small SaaS founders who are priced out of Sendoso's $15-20k/year enterprise contracts, and agents can handle size/address collection, order placement, and tracking emails without human headcount.\",\n  \"case_against\": \"The hard parts of this business are physical and operational, not computational: sourcing branded merchandise, managing supplier relationships, holding or routing inventory, handling customs/duties for international shipments, and dealing with breakage, wrong sizes, and delivery failures — none of which AI agents remove. Every named competitor (SwagUp, Sendoso, PerkUp, Stitchi, Reachdesk, Merchloop) already offers 'trigger on an event and auto-ship swag' as a built-in feature with mature logistics networks, warehousing, and in some cases Stripe/CRM/HRIS integrations already built — making a thin Stripe-only wrapper a weak differentiator against vendors with years of supply-chain tooling. Sendoso's observed ACV of $15k-$20k+/year signals this is sold with high-touch enterprise sales cycles, not self-serve, which is a poor fit for a lean one-person shop; meanwhile the SaaS founders most likely to want a cheap, narrow tool (very early-stage, low MRR) may not have budget to cover $30-75 per onboarding kit plus a subscription fee, making unit economics fragile without high retention/expansion revenue.\",\n  \"open_questions\": [\n    \"Would a narrower, self-serve product (Stripe webhook -> existing swag-on-demand API, no inventory) find paying customers among very early-stage SaaS founders who can't meet Sendoso/SwagUp minimums or enterprise contract sizes?\",\n    \"What signup-to-shipped-kit conversion rate and retention lift would be needed to justify $30-75 landed cost per kit plus a monthly platform fee?\",\n    \"How would the one-person operator handle international shipping, customs duties, and address/size collection failures without a logistics team?\",\n    \"Is the real unmet need a cheaper/simpler SELF-SERVE tool for small teams, or is it actually a feature gap (native Stripe trigger) inside incumbents like SwagUp/PerkUp that they could add themselves, eliminating the niche?\",\n    \"What is actual willingness to pay for solo SaaS founders versus marketing teams at growth-stage companies who already have budget for Sendoso-level tools?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"Collecting and processing recipients' mailing addresses (PII) tied to Stripe customer records\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"One-time privacy/data-processing review (DPA templates, data retention policy) to confirm compliance with GDPR/CCPA for storing and transmitting customer addresses to fulfillment partners\",\n        \"source_url\": null\n      },\n      {\n        \"obligation\": \"International shipping customs and duties compliance when swag ships cross-border\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"General logistics/customs guidance; SwagUp's own pricing lists a 'Premium Delivery Zone' surcharge for certain countries, implying ongoing per-shipment customs handling rather than a one-time fix\",\n        \"source_url\": \"https://www.swagup.com/pricing\"\n      }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Early-stage SaaS founders have limited budget for recurring swag-kit spend [unsourced]\",\n    \"A thin Stripe-trigger wrapper would be meaningfully cheaper to build than incumbents' native integrations [unsourced]\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"## A11 — Stripe-signup-triggered branded welcome swag\\n\\n**Idea:** Hook into Stripe (or similar) to auto-ship a branded welcome/swag package the moment a new customer signs up.\\n\\n### Payer\\nSaaS founders and marketing/CS teams. Price anchor: SwagUp's entry Silver plan is $99/mo ($80/mo billed annually) ([swagup.com/pricing](https://www.swagup.com/pricing)), while enterprise players like Sendoso run $15k-$20k+/year platform fees ([prospeo.io](https://prospeo.io/s/sendoso-pricing-reviews-pros-and-cons)) plus per-kit spend ($30-75 typical onboarding budget per [Stitchi](https://www.stitchi.com/for/customer-success)).\\n\\n### Competitors\\n- **SwagUp** — $99-$999/mo tiers + storage/shipping fees ([pricing](https://www.swagup.com/pricing))\\n- **Sendoso Swag on Demand** — ~$15k-$20k+/yr platform fee, gift spend separate ([feature page](https://www.sendoso.com/platform/features/swag-on-demand), [pricing estimate](https://prospeo.io/s/sendoso-pricing-reviews-pros-and-cons))\\n- **PerkUp** — quote-based, no public price ([spotsaas](https://www.spotsaas.com/product/perkup/pricing))\\n- **Stitchi** — custom gifting programs, $30-75 onboarding kit budget cited ([stitchi.com](https://www.stitchi.com/for/customer-success))\\n\\nAll of these already advertise 'automated trigger on event' swag delivery, meaning the exact mechanic in this idea (webhook → shipped swag) is not a novel feature gap in the market, just potentially a novel niche (Stripe-only, solo-founder-priced).\\n\\n### Acquisition\\n- **Stripe App Marketplace**: free to list, but requires passing Stripe's app review/quality checklist ([docs.stripe.com](https://docs.stripe.com/stripe-apps/review-requirements))\\n- **Paid social ads**: SaaS-vertical average CPC ~$1.50-$3.50, MQL/SQL cost $150-$250 ([aimers.io](https://aimers.io/blog/facebook-ads-cost))\\n\\n### Demand evidence\\nBeyond the seed HN quote, a LinkedIn commenter reacting to Stripe's own customer-gifting tactic asked: *\\\"What solution or vendor are you using to send these out? What metrics do customers have to hit to send out milestone celebrations?\\\"* ([LinkedIn](https://www.linkedin.com/posts/patrickwalls_wow-the-stripe-team-just-sent-me-two-cans-activity-7131302498820091905-oQ96)) — showing live buyer curiosity about exactly this kind of triggered-gifting workflow, albeit from someone receiving rather than needing to build it.\\n\\n### Case for\\nA solo builder with AI agents could wire a Stripe webhook to an existing swag-fulfillment API (no inventory held), undercutting SwagUp's $99/mo floor and Sendoso's enterprise-only pricing, targeting the long tail of small SaaS founders priced out of incumbents. Agents can automate address collection, order placement, and tracking without added headcount.\n\n### Case against\nThe hard parts — sourcing, warehousing, customs, breakage, address failures — are physical-logistics problems that AI agents don't solve, and every named competitor already ships this exact 'trigger on event' feature with years of supply-chain infrastructure behind it. Sendoso's observed $15k-$20k+/year ACV implies this category sells on enterprise terms, not self-serve, a poor match for a lean one-person build; and the SaaS founders who'd want a cheap narrow tool may lack budget for recurring $30-75/kit spend.\n\n### Open questions for a market test\n- Would a narrow self-serve product find payers among very early-stage founders excluded from Sendoso/SwagUp minimums?\\n- What conversion/retention lift justifies the landed cost per kit plus subscription?\\n- How is international customs/shipping handled solo?\\n- Is this better solved as a feature add-on to an existing swag platform rather than a standalone product?\\n- What's true willingness-to-pay for solo founders vs. growth-stage marketing teams?\\n\\n### Regulatory\\nCollecting and transmitting customer mailing addresses (PII) implies ongoing GDPR/CCPA data-handling obligations (no single source found; standard practice). International shipments imply ongoing customs/duties handling, evidenced by SwagUp's 'Premium Delivery Zone' surcharge ([swagup.com/pricing](https://www.swagup.com/pricing)).\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 108,
+          "cache_read_input_tokens": 26710,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 108,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 6060,
+          "output_tokens_details": {
+            "thinking_tokens": 1642
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

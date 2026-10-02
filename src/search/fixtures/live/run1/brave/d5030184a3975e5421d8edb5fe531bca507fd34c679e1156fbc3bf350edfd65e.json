@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "Perch github internal tools hosting agents",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-10-02T22:37:55.116Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "Perch github internal tools hosting agents",
+    "results": [
+      {
+        "title": "GitHub - olivierdevelops/perch · GitHub",
+        "url": "https://github.com/olivierdevelops/perch",
+        "snippet": "perch is <strong>a cross-platform command runtime for defining, running, and shipping operational tools in a single structured file</strong>. Declare your commands once; run them consistently on macOS / Linux / Windows; expose them through a CLI, REPL, web UI, ...",
+        "published": null
+      },
+      {
+        "title": "GitHub - miniature-pug/perch: A desktop cockpit for running and supervising AI coding agents (Claude, opencode) across parallel git-worktree sessions. · GitHub",
+        "url": "https://github.com/miniature-pug/perch",
+        "snippet": "Each agent plugs in behind a Monitor seam in internal/agent. Two integrations ship today. claude reports through hooks. When you open a Claude session, perch writes a hook configuration with a listener URL and a bearer token into the worktree&#x27;s .claude/settings.json. Claude then posts tool and lifecycle events back, and a PreToolUse event blocks until you approve.",
+        "published": null
+      },
+      {
+        "title": "GitHub - chenweigao/perch: A native Mac workspace for coding agents. SwiftUI, AppKit, native conversations and SSH terminals. · GitHub",
+        "url": "https://github.com/chenweigao/perch",
+        "snippet": "A native Mac workspace for coding agents. SwiftUI, AppKit, native conversations and SSH terminals. - chenweigao/perch",
+        "published": null
+      },
+      {
+        "title": "GitHub - getperch/perch: AWS Native Agent workspace where people and agents collaborate together · GitHub",
+        "url": "https://github.com/getperch/perch",
+        "snippet": "apps/desktop/ Tauri v2 + React desktop client (mobile targets added later, same codebase) packages/core/ Shared Zod schemas: Workspace, Channel, Member, Message, Run, Task, Approval, AuditEvent packages/api-contract/ REST endpoint input/output Zod schemas, shared by client and server packages/ui/ Design system + Perch brand tokens (Claude Design source), all six screens services/api/ Hono REST API Lambda (channels/members/messages/tasks/approvals) + a live event stream Lambda services/agent-runtime/ Durable Execution SDK orchestrator + Strands agent loop services/tools/ One Lambda per tool grant (isolation boundary) services/audit-writer/ Hash-chains audit events into the S3 Object Lock bucket infra/ SST stack definitions (imported by sst.config.ts at the repo root)",
+        "published": null
+      },
+      {
+        "title": "GitHub - JosephIris/perch: perch is a native Win11 workspace for running coding agents (Claude Code first) across your projects. · GitHub",
+        "url": "https://github.com/JosephIris/perch",
+        "snippet": "perch isn&#x27;t a passive terminal host — to wire agents to their chrome it makes a few deliberate, visible changes inside each pane&#x27;s shell: PATH: perch&#x27;s bundled tools/ directory is prepended, so claude, codex, and perch resolve to perch&#x27;s wrappers first. claude.cmd / codex.cmd hand off to perch.exe, which execs the real binary with Claude Code&#x27;s hook settings injected.",
+        "published": null
+      }
+    ]
+  }
+}

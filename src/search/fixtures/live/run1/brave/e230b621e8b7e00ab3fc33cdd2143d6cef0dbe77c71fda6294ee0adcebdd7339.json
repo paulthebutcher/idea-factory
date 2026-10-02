@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "ci-sherlock-agent github flaky test LLM",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-10-02T22:40:47.004Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "ci-sherlock-agent github flaky test LLM",
+    "results": [
+      {
+        "title": "GitHub - golikovichev/flaky-detector-agent: AI agent that detects flaky tests from CI history and proposes fixes via Codex · GitHub",
+        "url": "https://github.com/golikovichev/flaky-detector-agent",
+        "snippet": "Surface flaky tests from CI history. Propose fixes via an LLM agent.",
+        "published": null
+      },
+      {
+        "title": "Your Flaky Tests Aren't Flaky - DEV Community",
+        "url": "https://dev.to/debashish_ghosal/your-flaky-tests-arent-flaky-1301",
+        "snippet": "I built ai-flake-sleuth. LangGraph agent. <strong>Fetches GitHub Actions run history, parses CI logs, classifies each failure as a real bug, a flaky test, or infrastructure noise</strong>.",
+        "published": "2026-07-18T10:45:13"
+      },
+      {
+        "title": "[Bug]: Flaky: llm_request_payload_off_still_carries_prefix_fingerprints reads another test's record under the parallel runtime gate · Issue #11180 · zeroclaw-labs/zeroclaw",
+        "url": "https://github.com/zeroclaw-labs/zeroclaw/issues/11180",
+        "snippet": "agent::turn::provider_call::payload_capture_tests::llm_request_payload_off_still_carries_prefix_fingerprints (added 2026-09-25 in #10990) fails intermittently in the Parallel Runtime Test job (scripts/ci/parallel_runtime_test_gate.sh, zeroclaw-runtime --lib at 16 threads).",
+        "published": "2026-09-26T14:08:00"
+      },
+      {
+        "title": "GitHub - AleksandrJelohhin/flaketriage: Flaky test detection for GitHub Actions — tells flaky tests from real regressions using JUnit XML, test history, failure fingerprinting and diff blame, with optional LLM triage.",
+        "url": "https://github.com/AleksandrJelohhin/flaketriage",
+        "snippet": "FlakeTriage records them and tells flaky tests apart from real regressions, so a retry that turns green is evidence rather than silence. Do I need an LLM or an API key? No. History, fingerprinting, blame and infra signatures handle most failures on their own. The model only sees what those can&#x27;t decide. Does it work outside GitHub Actions? The CLI is CI-agnostic: it only needs JUnit XML and a git checkout, so it runs in any CI system.",
+        "published": null
+      },
+      {
+        "title": "feat: add Vitest configuration with flaky-test support · Issue #439 · dfadler/agent-config",
+        "url": "https://github.com/dfadler/agent-config/issues/439",
+        "snippet": "Node.js flags and external tools can simulate the constrained CPU/memory environment that CI often runs under, which is a common source of flakiness that doesn&#x27;t reproduce locally.",
+        "published": "2026-10-01T15:06:26"
+      }
+    ]
+  }
+}

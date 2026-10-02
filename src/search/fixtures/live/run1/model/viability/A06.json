@@ -1,0 +1,542 @@
+{
+  "stage": "viability",
+  "idea_id": "A06",
+  "model": "claude-sonnet-5",
+  "recorded_at": "2026-10-02T22:37:29.158Z",
+  "calls": [
+    {
+      "index": 0,
+      "request_digest": "d341997b0d67e819c906e1cef6f8379e40fc598dfccd11fb0ff557d7e4115ab3",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2216,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2216,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 369,
+        "output_tokens_details": {
+          "thinking_tokens": 55
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.009234,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDCnnHTWCtgtEVjApjt",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EpwDCqQBCBIYAipA4wAEmy+4EyPaRhSUKY518hI/MzQ6ugu4+OwbIek9KBfqw2g7slGnrmixt6sSZnzTnIyTjm8V0fTwBusNcAC/hTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBp+SA1gYSDEWLJ9BNz5IQXNvqrBoMk8VtQxFeRPNlrGtMIjCoeHeirlXVhZTbILJwBcrmB8TBjvx2jEb1K6GWEV8Rycukl6gfVDbV/FLnt6jZWE0qpAHuJXgMhXZ/OculIJeyYVsaejXbysjP0TCFPC4rj/6Uq1eqfae5nP+ShdGvIhCCvIK2aCDyl1FsSq5esfuwjrbMY9PolHr9KAot/1S4C4ZHvXZhXWLFiH+B+fk5sgb7avKwbHROgd7yyD6o5kUuxPSecgB3PUP8f5QAgsJC+/STyEZLQaJDV33OhKVbKTVcSUV7VY4nGTtyiTAfImiiLVd5WtkfvBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JZosmkRAtvcthXFCHmdoRh",
+            "name": "brave_search",
+            "input": {
+              "query": "Khan Academy Kids pricing"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_019Mejq11kTz1QCL4CJtjP6P",
+            "name": "brave_search",
+            "input": {
+              "query": "Synthesis Tutor for Kids pricing subscription"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0179EAxoVYJqAdWMaUng2BFC",
+            "name": "brave_search",
+            "input": {
+              "query": "Ello reading app pricing subscription"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QeTfTHafVSNMXnhmCnQbya",
+            "name": "brave_search",
+            "input": {
+              "query": "parent frustrated kid screen time learning app reddit \"reading app\" OR \"math app\" for kids"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01KfNmwjpNbzYj853SvuC8gc",
+            "name": "brave_search",
+            "input": {
+              "query": "COPPA compliance requirements app for children under 13"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 2216,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 2216,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 369,
+          "output_tokens_details": {
+            "thinking_tokens": 55
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 1,
+      "request_digest": "24fbd0c2bde2fa207c74cb00555500d275f1b7f4efd189e05341125115ded8b3",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 4494,
+        "cache_read_input_tokens": 2216,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4494,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 395,
+        "output_tokens_details": {
+          "thinking_tokens": 140
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.015632200000000002,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDDCur86zGW5uxrM9fY",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvsECqQBCBIYAipAE0Uq/RfMZAO+dNB1p0W+al/hjluhceW6MkAaFBywm5qKPoe93LC1WeP7+iTDLa0D05KnUeShH3q6Apx1iMObQTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBreSA1gYSDDNUNKEy2pky6QRK3xoMZ8giEuZwB5eLzc2mIjAnWjcRewhWq4lXUwfwEVgQkxF8mQENU4Spp+Bjp8r6p2DP5WpmKIvPKqNgQnNmkvYqgwNMUTv5Sm4m6glZQwilf03e5uHkv117ixjNmIW0tWHq6yCQzoOdqAcFuQeNnltZTVQf+qMne/EJEOHovYPrB0LWNNIphNxHCaf2249WNXdSNGDlBjIeiZB6oG/kkbKond4vpVKRhlFW5BZNwUAE84ZzmyUEKnUEqFlxpTd+JqCTUoe/Iz0n5CPjD39HpsLO2L7eIxv9yHB5XLafUDSmJ2QAYeiQZ9Qi8I2zH49U6fR4AgYtuFF2aNpSuztte90JjXpe1U1L1AM/+IBUVkyw+NQECwYpIFCsho1MzxUkCSZxOz4clgE902gwykdjZRZSz6HNE+ujEQIaDG2GrMT0DuQ4uutmneLGoW1ZwRkywxF0MEMNQLYxX1QlcuyVwsfcAs5SWFZodtRys6HyA//MbDwgOvuGefYH/shIQde0r+h/dN+HjUGdzXItvYqg3Od05q8peWWvVx/VNrMlsc7oxfzatXd+ICIvJFaYM2nTdgu7Or46NiI8JcO0D1kHV9hYfZXu1LUYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01R8tW2q4hm26H4iRnB2uP14",
+            "name": "brave_search",
+            "input": {
+              "query": "mobile app install cost education apps CPI 2024 benchmark"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01QLLN9deVJ7czZomN6Dpb6k",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/daddit/comments/1op79n7/any_good_reading_app_for_kids_that_actually_helps/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01ByodErPr127jdp6d6FmTiz",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.reddit.com/r/learnmath/comments/1tc23ds/best_learning_platform_for_kids_i_compared_a_few/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 4494,
+          "cache_read_input_tokens": 2216,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 4494,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 395,
+          "output_tokens_details": {
+            "thinking_tokens": 140
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 2,
+      "request_digest": "c47a14f962bab92ac8755d4625c46f875f7439338c0de96e6e2d1305caa67d38",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1431,
+        "cache_read_input_tokens": 6710,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1431,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 179,
+        "output_tokens_details": {
+          "thinking_tokens": 38
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0067135,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDDY9FPkW16NwtjgXiG",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvUCCqQBCBIYAipA6eGn8wYjd5pME883QGNngdCw7bETZjh9GHuhWAC3NMa9cdUt4DPEnOdiUn7vhHSgp1d4vxfIXgiiEdBKnaXSojIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBseSA1gYSDNszGGvTo3LrEQuPfhoMbM98usYATYfbvOCuIjCJkLdacymwfqI3lO8TvZNIlwagcpM83AWSpUCkCcztqjgTRoTJwKCKHEc2yu2+u8Uqfno6CTILzSzQ1f8bKflNrlDhYqskHZXfkOpKNhvyp8mOMft0Gq5L29vVCwfUy7NKZs3fE+SzYJTwGtSe8nZTLvumqcy5oHVh30IUsxuNo58nu/YT6ZFxg6my8WSqLSYQUO5hLH/08oq2XS/WUwJbhlmAvX6OVD0lzvMjUgDOoBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01LB8FJx9mead5iRLjyArNGB",
+            "name": "exa_search",
+            "input": {
+              "query": "parent review \"my daughter\" OR \"my son\" learning to read app frustrated expensive tutor"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011SSRtm389QN4ygrgVckzfj",
+            "name": "exa_search",
+            "input": {
+              "query": "\"reading tutor\" cost per hour child parent complaint price"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1431,
+          "cache_read_input_tokens": 6710,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1431,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 179,
+          "output_tokens_details": {
+            "thinking_tokens": 38
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 3,
+      "request_digest": "cc62fe20b419fa668e0b61333ad3a3f45220afba8e2c960726f58393d68cf26d",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 6445,
+        "cache_read_input_tokens": 8141,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6445,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 298,
+        "output_tokens_details": {
+          "thinking_tokens": 173
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.020724700000000002,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDDwLkhsXMUjUfHyQs4",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EvwFCqQBCBIYAipAb2suBLCnVQRPxm7NTgmlAFxz7dwIuxrwPHMc0OyZBiTskmLAdJgu5Ae8ikhR7Kso24s3NDg99BLiYzDFZ5zeMzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBuOSA1gYSDN8oDzkicLrTts5ddxoMEI+auFMJV+kpBTefIjDje6l9KqUibF79g7Bk9GB1TCrXR7gKwtm4NzOczJPzmgmYvn2k+h3iEgYETQ4wCg4qhAQkf7U1ywzjuyR95JO2zCh87lR/jRa0iL8U3vj6NceTTMxpK7gkAHl79gEUPQzEgB+zEw9VHzB2KDzyS8w1y6Gq3r3zeFLbBYGsURB9AE5x3dq1AiYx8MIoZz3KiU5Mb2O/JIhzmijwMTgc/zCFJJI6hMoF9SkOh1G3C+Bm5+i7tJu9W4Z3MHvJZT72Ujwg3fGVX/vzRzA+GPfAfxdv60arHo/7hfrTNr50bW2nXvzEbM+ffeR2YreQQphrKh39oCKtvWlMlmxlsmNzi/mmdXWxxgldETiUZ8a9ATmikT1YtL5UlG3ghog06P3xHNxBz4XBgocxpYI3D0q98nsKMopLun7yswJ4vHjVJUkMYjxOXJC4dOQOaqrjd67z+aYhnmqubC2NfXlc73ZH+Q1fN1PL+KDXTVmf/2fWUhzMESe3bLkUdxIETEar6K2uvzPSgMo3WbQxa4ixK2eF0K2jsw+hYCELscTdi8UzxXhbhBrx2/9JIX5T5Kf/y4AMzTLAaA+MoK1eCY9WaRzWpbindbRt+9TunOi0U6AY7KrDGHFsgfZcpBjfu8O99HvW+OCae7xIers3PyMK0UzUZV5+qHEu6ROovAyGwDTXNg8c+3DnGCRFVVc3dMVdvOFIDLG5R50gTGlRGVKeBhkjnK0miqXF04KOxhix2i8aokuIiy4SfSlW16EYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01UhX6xoNr9zCNpMQqb2gaGg",
+            "name": "brave_search",
+            "input": {
+              "query": "Mentava pricing per month reading app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_011kSn7RMUjTbgfGCJFScVbm",
+            "name": "brave_search",
+            "input": {
+              "query": "\"App Store Search Ads\" cost per install kids education app 2024"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 6445,
+          "cache_read_input_tokens": 8141,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 6445,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 298,
+          "output_tokens_details": {
+            "thinking_tokens": 173
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 4,
+      "request_digest": "01ac85b71bfa2c881464a5843bf6c0bc847d572ef8ec29b872d4740478a7c3ae",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1453,
+        "cache_read_input_tokens": 14586,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1453,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 452,
+        "output_tokens_details": {
+          "thinking_tokens": 289
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0110737,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDEEwuxkzwjv39f4TnC",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "ErgICqQBCBIYAipAPCEDmxCqPOtBQ+uabft/KNMe51p4ZHzJJVwDa1ENXzB3euPv0gRwC7NffbUrdixiU7OIUJTpI2FfPDDIrjP0CjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQwMjNhMDAyOS1kZjJlLTQwY2UtYWEwYy1jMDNiMWQ2NWNjZjiaAREKD2NsYXVkZS1zb25uZXQtNagBveSA1gYSDGk/PRBab8E+uxXY0hoMzxP8+0z0Y6RPgkPJIjD6j+s/6mYuXtOCcqva+p9r5cW/KttA+6BPneon/g3AjYlQhfAJC520yUg5XkgFlo8qwAbxnTZPc4IEawL8mESTtGJ5K1pEbvoyPdFQ3/sdcosi6mVmEL5qdftwGwpWomqno9uDWfUdMb8O1wxSdBwLRTJ1J7RpsgseJLWZpcPQSWdefDQ8GEJdGoKFfP7i1pv7j9j8rELZP7DRFBX6rSK8Tr+rSapzWYSy187Q/eHujCuOm1Po6KTHqhRLQ2onLrWqSU+a3X3yNt8QOADtHmnj7r5sZvvUZunXR3A2lyS1ak+E6DIjYIyxPbLoHE9IW2rAftVn7JDXeKx/RhG4ChM1o5xlGtsrRdnXYIc2szZCVp73CwwoWT+x/Ak/kegk5dBuZpt0NqqEvLbIpnHloM9t5SEJ1gPaC86zSNrk5Dp8gBY+0LGwYfdPIOKAqBK95sAEqIv3mWR+MyNHs6EMcjLw7L3zaaZilIPmZvCnDdNh0c6PC1O2hYP/IGTcj32fBmpREEqWnQzvuJHoao8dhT3Y9O0ytDyKztA4WESgJdyPG1q2a4TN0lCpLD3tVWeOcGaOThzU7S015rzxZsbgZ82JJpV1N80UkXwlMVLwSgtFJ8wB3RNb06YyA1uieI9bIQ0ZzY6SdTJLp5hkpEbItAeIxUKJpIrrMY9UiZov2EDURDMLvCddqwPXDTcQFKN3+SkQCR/+8vfsBzhVXiTHyJj1ZKz4qV4eayL0yadWUozeYbjjSadJVLJN9+MVrn5VoKEZOoa7IwB8ofT6BHj/+/o9V5h6fBZwn4fauSkS1kDRZrxxfg4ojxclEOEXgvCHO1AiQ8mWC43GhTyy8Tuwq+1JBeJMBknfZ1yTBYQTTQiYG1HKjChd+c2elWQQmpvdBFsMa6ByMydPgOo5OOEmqCAXFGVbBF6Uea+AeXiVjrSLYFpOIoVmxr7IBH9jS3izizSi2bqTSZEgLYYw2gednoRgXjYv2rj6ZuHfj1Shgxpcs+4+bEGMd2Su0OnC3QNHIDnXAHjiTNs2CHVcVZlvhHR6D2PMYaU7+PaR3xyB6lIc4jAvYFBX4q59uPYFy+5VoNq1dFepkTNK2019GAgWeOHLyHB/i7H2LmeYLtEQ5BPAJLAycDDBpFWFPpVl73u3Deqi7KZyEpXTSLatEhJVS1C5wbtkGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VfbXcVooDDPven8daRYK7y",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.businessofapps.com/ads/cpi/research/cost-per-install/"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01APRMGvurHDcjCfX69aZWuu",
+            "name": "fetch_page",
+            "input": {
+              "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 1453,
+          "cache_read_input_tokens": 14586,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 1453,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 452,
+          "output_tokens_details": {
+            "thinking_tokens": 289
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 5,
+      "request_digest": "55cb2d1937d947f192186a2ef37c4970909490e7ee0ed94e84414c26d84bb782",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 5215,
+        "cache_read_input_tokens": 16039,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5215,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 74,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0169893,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDEctX5DNJ3kGsygDd4",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Now I have enough evidence to compile the brief."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01VBCjzx8L6JHqGhuvsjpkyS",
+            "name": "brave_search",
+            "input": {
+              "query": "Samio Learning pricing app"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "container": null,
+        "stop_reason": "tool_use",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 5215,
+          "cache_read_input_tokens": 16039,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 5215,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 74,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    },
+    {
+      "index": 6,
+      "request_digest": "2d7581a135cb8f50d210bc9c138e06157b6c9b0d616894d727aee3829c8c5e1a",
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 877,
+        "cache_read_input_tokens": 21254,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 877,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 4672,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "cost_usd": 0.0531673,
+      "response": {
+        "model": "claude-sonnet-5",
+        "id": "msg_011CfeDEk9qH1suzSAwgLdGy",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I now have sufficient sourced evidence across all required fields.\n\n```json\n{\n  \"idea_id\": \"A06\",\n  \"payer\": {\n    \"who\": \"Parents of children ages 4-9 (consumer, out-of-pocket; not schools/districts)\",\n    \"price_hypothesis\": \"~$12-15/month ($120-$140/year) is the going consumer rate for an AI-adaptive reading coach; premium outcome-anchored players charge far more ($500/month), suggesting room for a mid-tier price if efficacy is credible.\",\n    \"comparable_url\": \"https://www.ello.com/lps/reading-app\"\n  },\n  \"competitors\": [\n    {\"name\": \"Ello\", \"url\": \"https://www.ello.com/\", \"pricing\": \"$14.99/month or $139/year\", \"pricing_url\": \"https://www.ello.com/lps/reading-app\"},\n    {\"name\": \"Synthesis Tutor for Kids\", \"url\": \"https://apps.apple.com/us/app/synthesis-math-tutor-for-kids/id6448335635\", \"pricing\": \"$119/year family plan (up to 7 kids); some sources show $95-$300/yr tiers\", \"pricing_url\": \"https://www.synthesis.com/tutor\"},\n    {\"name\": \"Khan Academy Kids\", \"url\": \"https://apps.apple.com/us/app/khan-academy-kids/id1378467217\", \"pricing\": \"100% free, no ads or subscriptions\", \"pricing_url\": \"https://www.khanacademy.org/kids/pricing\"},\n    {\"name\": \"Samio Learning\", \"url\": \"https://samiolearning.com/\", \"pricing\": \"Free app for families; school tiers $4.99/mo (teacher) to $39.99/mo (institution)\", \"pricing_url\": \"https://edtechimpact.com/products/samio-learning/\"},\n    {\"name\": \"Mentava (not in seed list, found during research)\", \"url\": \"https://www.mentava.com/\", \"pricing\": \"$500/month per child after a free trial\", \"pricing_url\": \"https://www.mentava.com/mentava-trial\"}\n  ],\n  \"competitors_not_found_queries\": [],\n  \"acquisition_channel\": [\n    {\n      \"channel\": \"Paid mobile user acquisition (Facebook/TikTok/Google/Apple Search Ads, CPI model)\",\n      \"cost_estimate\": \"Education-category CPI roughly $1.09 (Android) to $3.04-$4.70 (iOS); North America blended app CPI generally $2.50-$5.00\",\n      \"source_url\": \"https://www.businessofapps.com/ads/cpi/research/cost-per-install/\"\n    },\n    {\n      \"channel\": \"Parenting forums / organic word-of-mouth (Reddit r/daddit, r/homeschool, r/Parenting app-recommendation threads)\",\n      \"cost_estimate\": \"Near-zero direct cost, but unpredictable reach; requires product visibility already established to be recommended organically [unsourced cost estimate]\",\n      \"source_url\": \"https://www.reddit.com/r/daddit/comments/1op79n7/any_good_reading_app_for_kids_that_actually_helps/\"\n    }\n  ],\n  \"demand_evidence\": [\n    {\n      \"quote\": \"Ultimately, I decided not to pay $500 a month for the Mentava app for my daughter.\",\n      \"url\": \"https://www.dcoates.com/posts/mentava-review/\"\n    },\n    {\n      \"quote\": \"Tutoring was expensive and inconvenient, the software didn't provide the right kind of instruction.\",\n      \"url\": \"https://www.baltimoremagazine.com/section/educationfamily/pikesville-mom-creates-reading-buddy-to-help-with-literacy/\"\n    },\n    {\n      \"quote\": \"We've been struggling with teaching our third child to read... We've tried a lot of different tools.\",\n      \"url\": \"https://smartparentadvice.com/reading-eggs-review/\"\n    }\n  ],\n  \"case_for\": \"A solo builder using AI agents can realistically ship an adaptive tutoring app in six weeks because the core tech (LLM-driven adaptive content, speech recognition for reading practice) is now commodity API surface, not novel R&D. Demand is proven: parents already pay real tutoring money ($25-$120/hour per Brighterly/ReadFlare data) and even $500/month for Mentava, showing high willingness to pay for perceived personalized, adaptive instruction, and the category is crowded with venture-backed entrants (Ello, Synthesis, Khan Academy Kids) validating a large addressable market. A single operator could target an underserved price point ($10-20/month) or an underserved subject combo (reading+writing+arithmetic in one adaptive product, which none of the named competitors fully bundle) and use low-cost organic channels (parenting subreddits, homeschool forums, app store ASO) to get initial traction before paid UA, keeping burn low enough for a one-person shop.\",\n  \"case_against\": \"The category is saturated with well-funded, free-or-near-free incumbents (Khan Academy Kids is 100% free with 4,000+ activities; Samio is free; several others are freemium), which caps achievable price and makes paid acquisition expensive relative to likely LTV for a one-person operation with no brand trust. Parent-facing kids' edtech also carries real regulatory friction (COPPA parental consent, data-handling obligations) that a solo non-lawyer builder must get right before launch, raising both time cost and legal risk within a 6-week build window. Efficacy claims for reading/arithmetic apps are heavily scrutinized by parents and reviewers (e.g., the Mentava backlash around pedagogy, 'EdTech malpractice' framing) meaning unproven curricula can trigger public reputational damage fast, and child-directed products typically need extended free trials/word-of-mouth cycles (not a 6-week sales motion) to earn parent trust before any payment converts.\",\n  \"open_questions\": [\n    \"Can a single differentiated niche (e.g., full reading+writing+arithmetic bundle, dyslexia-specific adaptivity, or a specific age band like 4-6) be defended against free incumbents like Khan Academy Kids and Samio?\",\n    \"What price point actually converts trial users to paying subscribers for this specific bundle, given the free-to-$500/month range already in market?\",\n    \"What is the real COPPA/legal setup cost and timeline for a solo founder, and can it be completed inside a 6-week build-and-launch window?\",\n    \"What retention/efficacy evidence (not just install numbers) would convince skeptical parent communities (reddit, homeschool forums) that this product actually improves reading/math outcomes?\",\n    \"Is paid UA (CPI ~$2-5) economically viable at a sub-$15/month price point for a single operator with no funding runway, or does the model only work on organic/community channels?\"\n  ],\n  \"regulatory_setup\": {\n    \"obligations\": [\n      {\n        \"obligation\": \"COPPA compliance: verifiable parental consent before collecting personal information from children under 13, clear privacy notice describing data collection/use\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"One-time legal consult to design consent flow, privacy policy, and data-handling practices; ongoing obligation to maintain consent records and data-deletion processes as the product operates\",\n        \"source_url\": \"https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa\"\n      },\n      {\n        \"obligation\": \"State-level student/children's data privacy laws (varies by state, e.g., similar to COPPA but broader) [unsourced specifics]\",\n        \"kind\": \"ongoing\",\n        \"consult_scope\": \"Legal review recommended alongside COPPA consult to confirm scope across target states\",\n        \"source_url\": null\n      }\n    ]\n  },\n  \"unsourced_claims\": [\n    \"Near-zero direct cost of organic parenting-forum acquisition with unpredictable reach\",\n    \"State-level children's data privacy law specifics beyond COPPA\"\n  ],\n  \"injection_seen\": [],\n  \"brief_md\": \"# Evidence Brief: A06 — Adaptive AI Tutor for Young Children (Reading, Writing, Arithmetic)\\n\\n## Idea\\nAn adaptive AI tutor teaching children ages 4-9 reading, writing, and arithmetic, sold directly to parents.\\n\\n## Payer\\nParents pay out of pocket. Price hypothesis: ~$12-15/month or ~$120-140/year, anchored to Ello's published price of $14.99/month or $139/year (https://www.ello.com/lps/reading-app). Note a much higher-priced outlier exists in the category: Mentava charges $500/month per child (https://www.mentava.com/mentava-trial), showing some parents will pay very high prices for perceived personalization, though this provoked public backlash over value (https://www.dcoates.com/posts/mentava-review/).\\n\\n## Competitors\\n- **Ello** — $14.99/mo or $139/yr (https://www.ello.com/lps/reading-app)\\n- **Synthesis Tutor for Kids** — $119/yr family plan up to 7 kids, though some sources cite $95-$300/yr tiers (https://www.synthesis.com/tutor)\\n- **Khan Academy Kids** — 100% free, no ads/subscriptions, 4,000+ activities (https://www.khanacademy.org/kids/pricing)\\n- **Samio Learning** — Free consumer app; school tiers $4.99-$39.99/mo (https://edtechimpact.com/products/samio-learning/)\\n- **Mentava** (found during research, not in seed list) — $500/month per child (https://www.mentava.com/mentava-trial)\\n\\nThe presence of a fully free, well-resourced competitor (Khan Academy Kids) sets a hard price ceiling for undifferentiated offerings.\\n\\n## Acquisition Channel\\n- **Paid mobile UA**: Education-category CPI benchmarks range from ~$1.09 (Android) to $3.04-$4.70 (iOS); North America blended app CPI generally $2.50-$5.00 (https://www.businessofapps.com/ads/cpi/research/cost-per-install/).\\n- **Organic parenting communities**: Reddit threads (r/daddit, r/homeschool, r/Parenting) show parents actively asking for and recommending specific reading/math apps, suggesting a viable zero-paid-spend channel, though reach and conversion are unproven [unsourced cost].\\n\\n## Demand Evidence\\n- \\\"Ultimately, I decided not to pay $500 a month for the Mentava app for my daughter.\\\" (https://www.dcoates.com/posts/mentava-review/) — shows real price sensitivity even among parents clearly invested in solving this problem.\\n- \\\"Tutoring was expensive and inconvenient, the software didn't provide the right kind of instruction.\\\" (https://www.baltimoremagazine.com/section/educationfamily/pikesville-mom-creates-reading-buddy-to-help-with-literacy/) — a parent describing exactly the pain this idea targets.\\n- \\\"We've been struggling with teaching our third child to read... We've tried a lot of different tools.\\\" (https://smartparentadvice.com/reading-eggs-review/)\\n\\n## Case For\\nAI agents can plausibly ship an MVP in six weeks since the core technology (LLM adaptive content, speech recognition for reading practice) is now off-the-shelf. Demand is real and quantifiable: parents pay tutors $25-$120/hour (per multiple tutoring-cost sources) and some pay $500/month for an app. A solo operator targeting an underserved bundle (reading+writing+arithmetic together, or a specific struggling-reader niche) with low-cost organic distribution via parenting communities could reach initial revenue without large paid-UA spend.\\n\\n## Case Against\\nThe market is saturated with free, well-funded incumbents (Khan Academy Kids is completely free; Samio is free) that cap achievable pricing and make paid acquisition (CPI $2.50-$5.00 in NA) hard to justify economically for a single operator with limited runway. Children's edtech also carries COPPA parental-consent and data-handling obligations that must be correctly implemented before any launch, adding legal risk and setup time inside a tight six-week window. Efficacy claims are heavily scrutinized in parent communities — credible-looking competitors like Mentava have faced public \\\"edtech malpractice\\\" critiques over pedagogy, meaning unproven curricula invite reputational risk, and child-product trust typically builds over months, not a six-week sales cycle.\\n\\n## Open Questions\\n1. What specific niche or bundle differentiates this from free incumbents like Khan Academy Kids and Samio?\\n2. What price point actually converts given the free-to-$500/month range already present in the market?\\n3. What is the real cost/timeline of COPPA and related legal setup for a solo founder within six weeks?\\n4. What efficacy evidence would convince skeptical parent communities this product works?\\n5. Is paid UA economically viable at a sub-$15/month price for a single operator, or must growth be organic-only?\\n\\n## Regulatory Setup\\n- **COPPA**: ongoing obligation requiring verifiable parental consent and a clear privacy notice before collecting any personal information from children under 13 (https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa). Recommend a one-time legal consult to design the consent/privacy flow, with ongoing maintenance of consent records and deletion processes.\\n- **State-level children's privacy laws**: likely additional ongoing obligations varying by state; recommend reviewing alongside COPPA consult [unsourced specifics].\\n\"\n}\n```"
+          }
+        ],
+        "container": null,
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 877,
+          "cache_read_input_tokens": 21254,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 877,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4672,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global"
+        },
+        "diagnostics": null
+      }
+    }
+  ]
+}

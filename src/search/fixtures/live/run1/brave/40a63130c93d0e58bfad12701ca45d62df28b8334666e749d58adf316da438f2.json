@@ -1,0 +1,45 @@
+{
+  "engine": "brave",
+  "query": "\"flaky test\" reddit programming annoying merge blocked",
+  "params": {
+    "count": 5
+  },
+  "recorded_at": "2026-10-02T22:40:35.567Z",
+  "cost_usd": 0.005,
+  "response": {
+    "engine": "brave",
+    "query": "\"flaky test\" reddit programming annoying merge blocked",
+    "results": [
+      {
+        "title": "r/programming on Reddit: How to Manage Flaky Tests",
+        "url": "https://www.reddit.com/r/programming/comments/1hqsipv/how_to_manage_flaky_tests/",
+        "snippet": "Tools to help triaging flaky tests + automatically creating tickets. Not all flaky tests are worth fixing, the test that fails once every 10K runs vs once very 10 runs has different effect. Ability to sort by its impact (blocking PRs) and automatically creating tickets for fix saves a lot of time.",
+        "published": "2025-01-01T01:12:29"
+      },
+      {
+        "title": "r/programming on Reddit: The Ultimate Guide to Flaky Tests",
+        "url": "https://www.reddit.com/r/programming/comments/1erlqqh/the_ultimate_guide_to_flaky_tests/",
+        "snippet": "I wouldn&#x27;t make execution of non-unit tests part of a merge request process.",
+        "published": "2024-08-13T23:03:18"
+      },
+      {
+        "title": "r/RedditEng on Reddit: From Fragile to Agile: Automating the fight against Flaky Tests",
+        "url": "https://www.reddit.com/r/RedditEng/comments/1ap4axo/from_fragile_to_agile_automating_the_fight/",
+        "snippet": "Threshold-based failures in develop/main branch: Regular test failures in the develop/main branches often signal the presence of flaky tests. We typically don&#x27;t anticipate tests to abruptly fail in these mainline branches, particularly if these same tests were required to pass prior to the PR merge.",
+        "published": "2024-02-13T16:04:07"
+      },
+      {
+        "title": "r/programming on Reddit: How do you Address and Prevent Flaky tests?",
+        "url": "https://www.reddit.com/r/programming/comments/1chrpom/how_do_you_address_and_prevent_flaky_tests/",
+        "snippet": "What I do love doing is working with people to go from the original commit to current to find where and how it got flaky. It’s kinda mind opening for developers as it starts opening their mind to systems engineering.",
+        "published": "2024-05-01T17:20:46"
+      },
+      {
+        "title": "r/ExperiencedDevs on Reddit: Is it okay for builds to \"fail\" and still merge them?",
+        "url": "https://www.reddit.com/r/ExperiencedDevs/comments/1eu55fh/is_it_okay_for_builds_to_fail_and_still_merge_them/",
+        "snippet": "It’s also ok if you have the occasional flaky test and have to run the build a few times. But you should always run it until you get a passing build before you merge. ... No. Branches that fail should be fixed before merging. My thought is that for anything that doesn&#x27;t pass tests after the merge, if the issue is that tests need to be fixed, the PR should be handed to the QA department and a fire lit to get it fixed ASAP because the tests are now holding up the feature and blocking further related development.",
+        "published": "2024-08-17T00:55:36"
+      }
+    ]
+  }
+}
