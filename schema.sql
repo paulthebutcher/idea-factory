@@ -133,13 +133,17 @@ CREATE TABLE comparisons (
   created_at   TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
--- Paul's annotations from the review app, imported after each session.
+-- Paul's annotations, written directly by the review app (viewer/). One of stage_result_id or
+-- comparison_id is set. blind = 1 when the idea's hidden fields were not revealed at the time.
 CREATE TABLE annotations (
   id              INTEGER PRIMARY KEY,
   stage_result_id TEXT REFERENCES stage_results(id),
+  comparison_id   INTEGER REFERENCES comparisons(id),   -- migration 006
   idea_id         TEXT REFERENCES ideas(id),
+  verdict         TEXT,                       -- agree | disagree | unsure | NULL (note only) (migration 006)
   note            TEXT NOT NULL,
   failure_mode    TEXT,                       -- assigned when annotations are clustered
+  blind           INTEGER NOT NULL DEFAULT 1, -- migration 006
   author          TEXT NOT NULL DEFAULT 'paul',
   created_at      TEXT NOT NULL DEFAULT (datetime('now'))
 );

@@ -99,6 +99,56 @@ export interface TraceEventRow {
   created_at: string;
 }
 
+export interface ComparisonDbRow {
+  id: number;
+  run_id: string;
+  round: number;
+  idea_a: string;
+  idea_b: string;
+  order_ab: "A" | "B";
+  order_ba: "A" | "B";
+  result: "A" | "B" | "tie";
+  rationale_json: string;
+  model: string;
+  stage_result_id: string | null;
+  created_at: string;
+}
+
+export type AnnotationVerdict = "agree" | "disagree" | "unsure";
+
+export interface AnnotationRow {
+  id: number;
+  stage_result_id: string | null;
+  comparison_id: number | null;
+  idea_id: string | null;
+  verdict: AnnotationVerdict | null;
+  note: string;
+  failure_mode: string | null;
+  blind: number;
+  author: string;
+  created_at: string;
+}
+
+export interface AddAnnotationInput {
+  stageResultId?: string | null;
+  comparisonId?: number | null;
+  ideaId?: string | null;
+  verdict?: AnnotationVerdict | null;
+  note?: string;
+  blind: boolean;
+  author?: string;
+}
+
+/** Everything hidden from agents about one idea. Only the review app's explicit reveal path reads this. */
+export interface HiddenIdeaFields {
+  seed_source: string | null;
+  set_name: string | null;
+  test_role: string | null;
+  notes: string | null;
+  labels: { labeler: string; value: string; reason: string | null; note: string | null; created_at: string }[];
+  outcome: { outcome: string; bucket: string; business_name: string | null } | null;
+}
+
 export interface RecordStageResultInput {
   runId: string;
   ideaId: string;
@@ -382,6 +432,95 @@ export class Db {
     return rows.map(({ content_json, ...rest }) => ({ ...rest, content: JSON.parse(content_json) }));
   }
 
+  // ---------- review app (viewer/) reads ----------
+
+  listRuns(): RunRow[] {
+    return this.raw.prepare("SELECT * FROM runs ORDER BY started_at, rowid").all() as RunRow[];
+  }
+
+  /** Task counts by status for one run: { open: 3, done: 40, ... }. */
+  taskCounts(runId: string): Record<string, number> {
+    const rows = this.raw.prepare("SELECT status, COUNT(*) AS n FROM tasks WHERE run_id = ? GROUP BY status").all(runId) as { status: string; n: number }[];
+    return Object.fromEntries(rows.map((r) => [r.status, r.n]));
+  }
+
+  /** Agent-safe ideas plus their lifecycle status (active | proposed_variant | archived). */
+  listIdeasWithStatus(): (AgentSafeIdea & { status: string })[] {
+    const rows = this.raw.prepare("SELECT id, parent_id, idea, customer, source_url, verbatim_quote, status FROM ideas ORDER BY id").all() as Record<string, unknown>[];
+    return rows.map((r) => ({ ...agentSafeIdea(r), status: String(r.status) }));
+  }
+
+  listComparisons(filter: { runId?: string; ideaId?: string } = {}): ComparisonDbRow[] {
+    const where: string[] = [];
+    const args: unknown[] = [];
+    if (filter.runId) (where.push("run_id = ?"), args.push(filter.runId));
+    if (filter.ideaId) (where.push("(idea_a = ? OR idea_b = ?)"), args.push(filter.ideaId, filter.ideaId));
+    const sql = `SELECT * FROM comparisons ${where.length ? "WHERE " + where.join(" AND ") : ""} ORDER BY round, id`;
+    return this.raw.prepare(sql).all(...args) as ComparisonDbRow[];
+  }
+
+  getComparison(id: number): ComparisonDbRow | null {
+    return (this.raw.prepare("SELECT * FROM comparisons WHERE id = ?").get(id) as ComparisonDbRow | undefined) ?? null;
+  }
+
+  /**
+   * Paul only, behind the review app's explicit "reveal" toggle. Never called from stage code, the MCP
+   * server or exports. Returns null when the idea does not exist.
+   */
+  revealIdea(id: string): HiddenIdeaFields | null {
+    const row = this.raw.prepare("SELECT seed_source, set_name, test_role, notes FROM ideas WHERE id = ?").get(id) as Omit<HiddenIdeaFields, "labels" | "outcome"> | undefined;
+    if (!row) return null;
+    const labels = this.raw.prepare("SELECT labeler, value, reason, note, created_at FROM labels WHERE idea_id = ? ORDER BY id").all(id) as HiddenIdeaFields["labels"];
+    const outcome = (this.raw.prepare("SELECT outcome, bucket, business_name FROM outcomes WHERE idea_id = ?").get(id) as HiddenIdeaFields["outcome"] | undefined) ?? null;
+    return { ...row, labels, outcome };
+  }
+
+  // ---------- annotations (the review app's only writes) ----------
+
+  /**
+   * Add an annotation to a stage result or a comparison (exactly one of them). idea_id defaults to the
+   * target's idea for stage results. A verdict without a note is allowed; a note without a verdict too.
+   */
+  addAnnotation(input: AddAnnotationInput): AnnotationRow {
+    const hasSr = !!input.stageResultId;
+    const hasCmp = input.comparisonId !== null && input.comparisonId !== undefined;
+    if (hasSr === hasCmp) throw new StoreError("annotation needs exactly one of stageResultId or comparisonId");
+    if (input.verdict && !["agree", "disagree", "unsure"].includes(input.verdict)) throw new StoreError(`invalid verdict ${input.verdict}`);
+    const note = (input.note ?? "").trim();
+    if (!input.verdict && !note) throw new StoreError("annotation needs a verdict or a note");
+    let ideaId = input.ideaId ?? null;
+    if (hasSr) {
+      const sr = this.getStageResult(input.stageResultId!);
+      if (!sr) throw new StoreError(`stage result ${input.stageResultId} does not exist`);
+      ideaId ??= sr.idea_id;
+    } else if (!this.getComparison(input.comparisonId!)) {
+      throw new StoreError(`comparison ${input.comparisonId} does not exist`);
+    }
+    if (ideaId && !this.raw.prepare("SELECT 1 FROM ideas WHERE id = ?").get(ideaId)) throw new StoreError(`idea ${ideaId} does not exist`);
+    const r = this.raw
+      .prepare("INSERT INTO annotations (stage_result_id, comparison_id, idea_id, verdict, note, blind, author) VALUES (?, ?, ?, ?, ?, ?, ?)")
+      .run(input.stageResultId ?? null, hasCmp ? input.comparisonId : null, ideaId, input.verdict ?? null, note, input.blind ? 1 : 0, input.author ?? "paul");
+    return this.getAnnotation(Number(r.lastInsertRowid))!;
+  }
+
+  getAnnotation(id: number): AnnotationRow | null {
+    return (this.raw.prepare("SELECT * FROM annotations WHERE id = ?").get(id) as AnnotationRow | undefined) ?? null;
+  }
+
+  listAnnotations(filter: { stageResultId?: string; comparisonId?: number; ideaId?: string } = {}): AnnotationRow[] {
+    const where: string[] = [];
+    const args: unknown[] = [];
+    if (filter.stageResultId) (where.push("stage_result_id = ?"), args.push(filter.stageResultId));
+    if (filter.comparisonId !== undefined) (where.push("comparison_id = ?"), args.push(filter.comparisonId));
+    if (filter.ideaId) (where.push("idea_id = ?"), args.push(filter.ideaId));
+    const sql = `SELECT * FROM annotations ${where.length ? "WHERE " + where.join(" AND ") : ""} ORDER BY created_at DESC, id DESC`;
+    return this.raw.prepare(sql).all(...args) as AnnotationRow[];
+  }
+
+  deleteAnnotation(id: number): boolean {
+    return this.raw.prepare("DELETE FROM annotations WHERE id = ?").run(id).changes === 1;
+  }
+
   // ---------- backtest contamination check ----------
 
   /**
@@ -411,7 +550,7 @@ export class Db {
 }
 
 /** Schema version a fresh store is at after schema.sql. Bump when adding migrations/NNN_*.sql. */
-export const SCHEMA_VERSION = 5;
+export const SCHEMA_VERSION = 6;
 
 /** Migrations for stores created by an earlier schema. 002 is in code; 003+ are SQL files in migrations/. */
 function migrate(raw: Database.Database): void {

@@ -27,3 +27,6 @@ Pipeline that runs seed ideas through a kill gate, viability research, and a pai
 - `npm run rule:activate <id>`: Paul only
 - `npm run record:fixtures -- --ideas A07,B09 --cap 3`: record search and model fixtures live into `src/search/fixtures/` with a spend cap; uses a scratch store, never `data/factory.db`
 - `npm run report:planted`: replay the planted cases from fixtures and print the Checkpoint 1 table
+- `npm run viewer`: local review app on http://localhost:4477 (reads the store; writes only `annotations`)
+- `npm run backup:db`: online backup of `data/factory.db` to `~/Documents/idea-factory-backups/`
+- `npm run run:supersede -- <run> <runs>`: Paul only; mark a run superseded and cancel its open tasks

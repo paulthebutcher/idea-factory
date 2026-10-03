@@ -173,7 +173,7 @@ Hidden fields stay out of this export too, so Paul reviews blind to his own gut 
 
 `npm run render` writes `ledger/ideas/<id>.md` with a generated header, kill gate result, viability brief, and critic record.
 
-Review app: `npx skills add https://github.com/ai-evals-course/evals-skills`, then run `/evals-start` pointed at `traces/traces.jsonl`. Build `npm run import:annotations` after the first review session, once the app's annotation file format is known. Open item.
+Review app: `npm run viewer` serves a local React app (`viewer/`) on http://localhost:4477 over the store. Views: runs, idea pipeline, trace timeline per stage result, viability brief with sources and unsourced URLs flagged, critic tournament with both presentation orders, annotations. Hidden fields stay hidden until a per-idea "reveal" toggle; every annotation records whether it was made blind. The app opens the store read-only except for `annotations`, which it writes directly through `Db.addAnnotation` (an annotation targets a `stage_result_id` or a `comparison_id`, with an agree | disagree | unsure verdict and a note). There is no annotation file and nothing to import, so the planned `npm run import:annotations` is retired. Every run, idea, stage result (`/traces/sr_…`) and comparison has its own URL.
 
 `npm run report:calibration` compares kill-gate verdicts and critic rank against `paul_gut_v1`, `research`, and `perplexity` labels, and critic rank against backtest outcome buckets. Print a table. It runs after checkpoint 2 and never feeds back into prompts.
 
@@ -214,7 +214,6 @@ All run on `SEARCH_MODE=replay` with recorded fixtures.
 
 ## Open items (do not block)
 
-- Annotation import format, known after the first review session.
 - Backtest contamination: research will often find the actual business for B rows. Record `self_found`. It is calibration data.
 - Whether T4 to T6 should kill, decided after error discovery.
 - Paul's gut labels have reason codes on "no" (A07 regulatory, the rest merit). Paul may correct them.
