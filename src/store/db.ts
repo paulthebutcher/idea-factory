@@ -54,7 +54,7 @@ export interface TaskRow {
   stage: Stage;
   claimed_by: string | null;
   claimed_at: string | null;
-  status: "open" | "claimed" | "done" | "error";
+  status: "open" | "claimed" | "done" | "error" | "cancelled";
 }
 
 export interface RunRow {
@@ -63,7 +63,7 @@ export interface RunRow {
   config_json: string;
   budget_usd: number;
   spent_usd: number;
-  status: "running" | "complete" | "budget_exceeded" | "error";
+  status: "running" | "complete" | "budget_exceeded" | "error" | "paused" | "superseded";
   started_at: string;
   finished_at: string | null;
 }
@@ -307,10 +307,24 @@ export class Db {
   /** Atomic claim. Succeeds only when the conditional update changes exactly one row. */
   claimTask(taskId: string, claimedBy: string): "claimed" | "already_claimed" | "not_found" {
     const r = this.raw
-      .prepare("UPDATE tasks SET claimed_by = ?, claimed_at = datetime('now'), status = 'claimed' WHERE id = ? AND claimed_by IS NULL")
+      .prepare("UPDATE tasks SET claimed_by = ?, claimed_at = datetime('now'), status = 'claimed' WHERE id = ? AND claimed_by IS NULL AND status = 'open'")
       .run(claimedBy, taskId);
     if (r.changes === 1) return "claimed";
     return this.getTask(taskId) ? "already_claimed" : "not_found";
+  }
+
+  /**
+   * Retire a run that a later run superseded: cancels its open tasks (so claimTask can never hand them out)
+   * and marks the run superseded. Claimed, done and error tasks are left as history. Returns the cancelled count.
+   */
+  supersedeRun(runId: string, supersededBy: string[]): number {
+    if (!this.getRun(runId)) throw new StoreError(`run ${runId} does not exist`);
+    return this.raw.transaction(() => {
+      const r = this.raw.prepare("UPDATE tasks SET status = 'cancelled' WHERE run_id = ? AND status = 'open'").run(runId);
+      this.raw.prepare("UPDATE runs SET status = 'superseded', finished_at = COALESCE(finished_at, datetime('now')) WHERE id = ?").run(runId);
+      this.raw.prepare("UPDATE runs SET config_json = json_set(config_json, '$.superseded_by', json(?)) WHERE id = ?").run(JSON.stringify(supersededBy), runId);
+      return r.changes;
+    })();
   }
 
   setTaskStatus(taskId: string, status: TaskRow["status"]): void {

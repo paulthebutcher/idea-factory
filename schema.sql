@@ -72,7 +72,7 @@ CREATE TABLE runs (
   config_json  TEXT NOT NULL,                 -- models, prompt file hashes, search mode, budget
   budget_usd   REAL NOT NULL,
   spent_usd    REAL NOT NULL DEFAULT 0,
-  status       TEXT NOT NULL,                 -- running | complete | budget_exceeded | error
+  status       TEXT NOT NULL,                 -- running | paused | complete | budget_exceeded | error | superseded
   started_at   TEXT NOT NULL DEFAULT (datetime('now')),
   finished_at  TEXT
 );
@@ -87,7 +87,7 @@ CREATE TABLE tasks (
   stage       TEXT NOT NULL,
   claimed_by  TEXT,                           -- claude | codex | script:<pid>
   claimed_at  TEXT,
-  status      TEXT NOT NULL DEFAULT 'open'    -- open | claimed | done | error
+  status      TEXT NOT NULL DEFAULT 'open'    -- open | claimed | done | error | cancelled
 );
 
 CREATE TABLE stage_results (
